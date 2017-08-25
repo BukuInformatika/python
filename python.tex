@@ -655,6 +655,284 @@ linear model.
 This is a summary of this chapter.
 Here are some references: \cite{xkilby}, \cite{xberen}.
 
+\chapter[Python Multithread Programming]
+{Python Multithread Programming}
+\\}\end{center} \par
+\vspace{14pt}
+\vspace{14pt}
+Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut : \par
+\begin{itemize}
+\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
+\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
+\par
+Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan.  \par
+\noindent 
+\begin{itemize}
+\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted}) \par
+\noindent 
+\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
+\par
+\noindent 
+
+\section{Memulai Thread Baru}
+\\}\end{center \par
+\noindent 
+\hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} : \par
+\noindent 
+\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center} \par
+\vspace{12pt}
+Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window. \par
+Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.   \par
+Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
+\noindent 
+\par
+\noindent 
+Contoh : \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Import thread} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Import time} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Define a function for the thread} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Def print $  \_  $time (threadNamw, delay):} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Count = 0} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} While count <5:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Time.sleep(delay)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Count +=1} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create two thread as follows} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont try:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  thread.start $  \_  $new $  \_  $thread(print $  \_  $time, ( $ " $Thread-1 $ " $, 2, ))} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  thread.start $  \_  $new $  \_  $thread(print $  \_  $time, ( $ " $Thread-2 $ " $, 4,))} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont except:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont ~~ print  $ " $Error: unable to start thread $ " $} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont while 1:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont pass} \par
+\noindent 
+~~~~~~ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:17 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:19 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:19 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:21 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:23 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:23 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1~:  Thu Jan 22 15:42:23 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:25 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:27 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:31 2009}\end{center} \par
+\noindent 
+\begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:35 2009}\end{center} \par
+\vspace{12pt}
+Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
+\vspace{12pt}
+\section{Modul Threading }
+\\}\end{center} \par
+Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
+The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
+\begin{itemize}
+	\item \textbf{t}\textbf{hreading.activeCount() } \par
+	Mengembalikan jumlah objek \textit{thread} yang aktif \par
+	\item \textbf{t}\textbf{hreading.currentThread() } \par
+	Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
+	\item \textbf{t}\textbf{hreading.enumerate() } \par
+	Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
+	\vspace{12pt}
+	Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
+	\item \textbf{run()} \par
+	Metode adalah titik masuk untuk \textit{thread} \par
+	\item \textbf{start()} \par
+	Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
+	\item \textbf{join(}\textbf{[time]}\textbf{)} \par
+	Menunggu benang untuk mengakhiri \par
+	\item \textbf{isAlive()} \par
+	Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
+	\item \textbf{getName()} \par
+	Metode mengambalikan nama\textbf{ }\textit{thread} \par
+	\item \textbf{setName()} \par
+	Metode menetapkan nama\textbf{ }\textit{thread} \par
+	\vspace{12pt}
+\section{Membuat Thread Menggunakan Threading Modul}
+\\}\end{center} \par
+Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
+\item \textbf Mendefinisikan subclass dari \textit{thread} kelas \par
+\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
+\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai \end{itemize}
+\par
+\begin{adjustwidth}
+Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode.\end{adjustwidth}
+\par
+\vspace{12pt}
+\begin{adjustwidth}
+Contoh :\end{adjustwidth}
+\par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont import threading} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont import time} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont exitFlag = 0} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont class myThread (threading.Thread):} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} def $  \_  $init $  \_  $(self, threadID, name, counter) :} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont ~~~~~~ threading.Thread. $  \_  $init $  \_  $(self)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} self.threadID = threadID} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} self.name = name} \par
+\vspace{10pt}
+\vspace{10pt}
+\vspace{10pt}
+\noindent 
+
+
+%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+
+
+\newpage
+
+{\fontsize{9pt}{9pt}\selectfont self.counter = counter} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont def run (self) :} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print  $ " $Starting  $ " $ + self.name} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print $  \_  $time(self.name, self.counter, 5)} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print  $ " $Exiting  $ " $+ self.name} \par
+\vspace{9pt}
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont def print $  \_  $time(threadName, delay, counter):} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont while counter:} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} if exitFlag:} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} threadName.exit()} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} time.sleep(delay)} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont counter -= 1} \par
+\vspace{9pt}
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  $  \#  $ Create new threads} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont thread1 = myThread(1,  $ " $Thread-1 $ " $, 1)} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont thread2 = myThread(2,  $ " $Thread-2 $ " $, 2)} \par
+\vspace{9pt}
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  $  \#  $ Start new threads} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont thread1.start()} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont thread2.start()} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont print  $ " $Exiting Main Thread $ " $} \par
+\vspace{12pt}
+\begin{adjustwidth}
+Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:\end{adjustwidth}
+\par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Starting Thread-2} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Mar 21 09:10:03 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Mar 21 09:10:04 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:04 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Mar 21 09:10:05 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:06 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Mar 21 09:10:07 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Exiting Thread-1} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:08 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:10 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:12 2013} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Exiting Thread=2} \par
+\vspace{12pt}
+\section{Sinkronisasi Thread}
+\\}\end{center} \par
+{T}\textit{hread}\textit{ing }modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
+The \textit{acquire}\textit{ }\textit{(blocking)}\textit{ }metode objek kunci baru digunakan untuk memaksa \textit{thread}\textit{ }untuk menjalankan serempak. Opsional \textit{blocking} parameter memungkikan untuk mengontrol apakah\textit{ thread} menunggu untuk mendapatkan kunci. \par
+Jika \textit{blocking} diatur ke 0, \textit{thread} segera kembali dengan nilai 0 jika kunci tidak dapat diperoleh dan dengan 1 jika kunci dikuisisi. Jika pemblokiran diatur ke 1, blok dan menunggu kunci yang akan dirilis. \par
+The \textit{release()} metode objek kunci baru digunakan untuk melepaskan kunci ketika tidak lagi diperlukan.  \par
+\vspace{12pt}
+\section{Multithreaded Antrian Prioritas}
+\\}\end{center} \par
+The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
+\begin{itemize}
+	\item \textbf{get()} \par
+	\begin{adjustwidth}
+		Menghapus dan mengembalikan item dari antrian\end{adjustwidth}
+	\par
+	\item \textbf{put()} \par
+	\begin{adjustwidth}
+		Menambahkan item ke antrian\end{adjustwidth}
+	\par
+	\item \textbf{qsize()} \par
+	\begin{adjustwidth}
+		Mengembalikan jumlah item yang saat ini dalam antrian\end{adjustwidth}
+	\par
+	\item \textbf{empty()} \par
+	\begin{adjustwidth}
+		Mengembalikan benar jika antrian kosong jika tidak, salah\end{adjustwidth}
+	\par
+	\item \textbf{full()}\end{itemize}
+\par
+\begin{adjustwidth}
+	Mengembalikan benar jika antrian penuh jika tidak, salah\end{adjustwidth}
+\par
+\vspace{12pt}
 \begin{chapreferences}{5.}
 \bibitem{xkilby}J. S. Kilby,
 ``Invention of the Integrated Circuit,'' {\it IEEE Trans. Electron Devices,}
