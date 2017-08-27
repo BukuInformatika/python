@@ -1056,84 +1056,1180 @@ This is a summary of this chapter.
 Here are some references: \cite{xkilby}, \cite{xberen}.
 
 \chapter{CGI Programming}
+\par
+\vspace{14pt}
+Common Gateway Interface atau disingkat CGI merupakan standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip dengan program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML.  \par
+\vspace{12pt}
+CGI (Common Gateway Interface) adalah bentuk dari hubungan interaktif di mana client (browser) bisa mengirimkan suatu masukan kepada server, dan server mengolah masukan tersebut serta mengembalikannya kepada client (browser). Contoh sederhana adalah saat kita menggunakan sebuah mesin pencari. Saat kita menuliskan keyword dan menekan tombol Search maka browser akan mengirimkan keyword tersebut ke server. Keyword tersebut lalu diolah oleh server dan server mengirimkan data hasil pengolahan (yang sesuai dengan keyword yang kita masukkan) ke browser kita. Jadi yang akan kita lihat pada browser adalah  hanya data yang sesuai dengan keyword yang kita masukkan. \par
+\vspace{12pt}
+Untuk dapat menggunakan CGI syarat yang utama adalah server dengan sistem operasi UNIX (beserta variantnya). Namun perlu kita perhatikan bahwa tidak semua server UNIX (gratis) mampu menangani dan melayani CGI. Server-server yang melayani penempatan web yang berlayanan gratis seperti Geocities dan Homepage, tidak akan mengijinkan penggunaan script CGI dalam web kita. Untuk itu kita bisa mencoba Virtual Avenue, Tripod, atau Hypermart. \par
+\vspace{12pt}
+Program CGI ditulis dengan menggunakan bahasa yang dapat dimengerti oleh sistem misalnya C/C++, Fortran, Perl, Tcl, Visual Basic, dan lain-lain. Pemilihan bahasa yang digunakan tergantung dari sistem yang digunakan. Jika bahasa pemrograman yang digunakan seperti C atau Fortran maka program-program yang kita buat harus dikompile terlebih dahulu sebelum dijalankan sehingga pada server akan terdapat source code dan program hasil kompilasi. Berbeda jika bahasa yang digunakan yaitu bahasa script seperti PERL, TCL, atau Unix Shell maka hanya akan terdapat script itu sendiri (tanpa ada source code). Jika dibandingkan saat ini banyak orang yang lebih memilih untuk menggunakan script CGI daripada menggunakan bahasa pemrograman karena lebih mudah untuk di-compile dan dimodifikasi.  \par
+\vspace{12pt}
+Pada awalnya CGI merupakan~salah satu yang mendekati aplikasi server-side programming.  Program CGI yang paling sering digunakan yaitu~C++ dan perl.  CGI merupakan bagian dari web server yang dapat berkomunikasi dengan program lain yang ada di server. Dengan CGI web server dapat memanggil program yang dibuat dari berbagai bahasa pemrograman (Common). Interaksi antara pengguna dengan berbagai aplikasi, misalnya database, dapat dijembatani oleh CGI (Gateway). \par
+\vspace{12pt}
+CGI (Common Gateway Interface) merupakan skrip tertua dalam bidang pemrograman web. Skrip bisa didefinisikan sebagai rangkaian dari beberapa instruksi program. Untuk membuat skrip yang dapat dijalankan pada web diperlukan pengetahuan pemograman. \par
+\vspace{12pt}
+CGI sendiri telah muncul sejak teknologi web diperkenalkan di dunia pada awal tahun 1990, bersama dengan kemunculan CERN, web server pertama di dunia. CGI disediakan sebagai tool atau perlengkapan untuk membuat program web. CGI digunakan untuk membuat program-program tampilan web yang lebih interaktif, koneksi ke basis data, bahkan membuat permainan (game). \par
+\vspace{12pt}
+CGI pada masa-masa awalnya dibuat dengan bahasa C, bahasa yang juga digunakan untuk membuat web server pertama yaitu, CERN. CGI kemudian diadopsi oleh NCSA (National Central for Supercomputing Application) web server, dan hingga kini masih digunakan pada Apache Web Server, web server yang paling banyak digunakan oleh komunitas internet saat ini. \par
+\vspace{12pt}
+Walaupun demikian CGI bisa juga direalisasikan dengan banyak bahasa pemrograman lain. Mulai dari C, Perl, Phyton, PHP, Tcl/Tk, hingga skrip shell pada UNIX/LINUX. \par
+\vspace{12pt}
+CGI seringkali digunakan sebagai mekanisme untuk mendapatkan informasi dari user melalui fill out form, mengakses basis data (database), atau menghasilkan halaman yang dinamis. meskipun secara prinsip mekanisme CGI tidak memiliki lubang keamana, program atau skrip yang dibuat sebagai CGI dapat memiliki lubang keamanan ataupun tidak sengaja). Potensi lubang keamanan yang digunakan dapat terjadi dengan CGI antara lain : \par
+\noindent 
+\begin{myEnumerate}
+	\item Seorang pemakai yang nakal dapat memasang skrip CGI sehingga dapat mengirimkan berkas kata kunci (password) kepada pengunjung yang mengeksekusi CGI tersebut. \par
+	\noindent 
+	\item Program CGI dipanggil berkali-kali sehingga server menjadi terbebani karena harus menjalankan beberapa program CGI yang menghabiskan memori dan CPU cycle dari web server.\end{myEnumerate}
+\par
+\vspace{12pt}
+Sebuah aplikasi web berkomunikasi dengan perangkat lunak client melalui HTTP. HTTP, sebagai protokol yang berbicara menggunakan request dan response menjadikan aplikasi web bergantung kepada siklus ini untuk menghasilkan dokumen yang ingin diakses oleh pengguna. Secara umum, aplikasi web yang akan kita kembangkan harus memiliki satu cara untuk membaca HTTP Request dan mengembalikan HTTP Response ke pengguna. \par
+\vspace{12pt}
+Pada pengembangan web tradisional, kita umumnya menggunakan sebuah web server seperti Apache HTTPD atau nginx sebagai penyalur konten statis seperti HTML, CSS, Javascript, maupun gambar. Untuk menambahkan aplikasi web kita kemudian menggunakan penghubung antar web server dengan program yang dikenal dengan nama CGI (Common Gateway Interface). \par
+\vspace{12pt}
+CGI diimplementasikan pada web server sebagai antarmuka penghubung antara web server dengan program yang akan menghasilkan konten secara dinamis. Program-program CGI biasanya dikembangkan dalam bentuk script, meskipun dapat saja dikembangkan dalam bahasa apapun. Contoh dari bahasa pemrograman dan program yang hidup di dalam CGI adalah PHP. \par
+\noindent 
+Untuk melihat dengan lebih jelas cara kerja CGI, perhatikan gambar berikut: \par
+\vspace{12pt}
+\noindent 
 
-\section{Sample Section}
-Here is some sample text.
 
-\section{Example, Figure and Tables}
-\vskip6pt
-\begin{example}[Optional Example Name]
-	Use Black's law [Equation (6.3)] to estimate the reduction in useful product
-	life if a metal line is initially run at 55$^\circ$C at a maximum line
-	current density.
-\end{example}
+%%%%%%%%%%%%  Figure/Image No:1 here %%%%%%%%%%%%%%
 
-\section{Algorithm}
-This is a sample algorithm.
 
-\section{Summary}
-This is a summary of this chapter.
-Here are some references: \cite{xkilby}, \cite{xberen}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=4.09in,height=1.35in]{./uploads_new/CGI_Programming.docx_DIR/media/image1.jpg}
+	\end{center}
+\end{figure}
+
+
+%%%%%%%%%%%%  Figure/Image No:1 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Yang dapat kita tarik dari gambar di atas: \par
+\noindent 
+\begin{myEnumerate}
+	\item Web Server yang berhadapan langsung dengan pengguna, menerima HTTP Request dan mengembalikan HTTP Response. \par
+	\noindent 
+	\item Untuk konten statis seperti CSS, Javascript, gambar, maupun HTML web server dapat langsung menyajikannya sebagai HTTP Response kepada pengguna. \par
+	\noindent 
+	\item Konten dinamis seperti program PHP maupun Perl disajikan melalui CGI. \par
+	\noindent 
+	\item CGI Script kemudian menghasilkan HTML atau konten statis lainnya yang akan disajikan sebagai HTTP Response kepada pengguna.\end{myEnumerate}
+\par
+\vspace{12pt}
+Meskipun terdapat banyak pengembangan selanjutnya dari CGI, ilustrasi sederhana di atas merupakan konsep inti ketika awal pengembangan CGI. Umumnya aplikasi web dengan CGI memiliki kelemahan di mana menjalankan script CGI mengharuskan web server untuk membuat sebuah proses baru. Pembuatan proses baru biasanya akan menggunakan banyak waktu dan memori dibandingkan dengan eksekusi script, dan karena setiap pengguna yang terkoneksi akan mengakibatkan hal ini terhadap server performa aplikasi akan menjadi kurang baik. \par
+CGI sendiri menyediakan solusi untuk hal tersebut, misalnya FastCGI yang menjalankan aplikasi sebagai bagian dari web server. Bahasa lain juga menyediakan alternatif dari CGI, misalnya Java yang memiliki Servlet. Servlet pada Java merupakan sebuah program yang menambahkan fitur dari server secara langsung. Jadi pada pemrograman dengan Servlet, kita akan memiliki satu web server di dalam program kita, dan pada web server tersebut akan ditambahkan fitur-fitur spesifik aplikasi web kita. \par
+\vspace{12pt}
+\noindent 
+\textbf{KELEBIHAN CGI} \par
+\noindent 
+Kelebihan yang dimiliki CGI antara lain :  \par
+\noindent 
+\begin{myEnumerate}
+	\item Skrip CGI dapat ditulis dalam bahasa apa saja, namun barangkali sekitar 90 $  \%  $ program CGI yang ada di tulis dalam Perl \par
+	\noindent 
+	\item Protokol CGI yang sederhana \par
+	\noindent 
+	\item Kefasihan Perl dalam mengolah teks, menjadikan menulis sebuah program CGI cukup mudah dan cepat. \par
+	\noindent 
+	\item Meski tertua hingga saat ini menurut survey dari Netcraft sekitar 70 $  \%  $ aplikasi di web masih menggunakan CGI. Ini berarti, lebih dari separuh situs Web dinamik yang ada dibangun dengan CGI.\end{myEnumerate}
+\par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+\textbf{KELEMAHAN CGI} \par
+Salah satu kelemahannya ialah kecepatan yang rendah. Untuk menghasilkan keluaran program CGI, overhead yang harus ditempuh cukup besar, Dalam kasus CGI Perl, prosesnya sebagai berikut : \par
+\noindent 
+\begin{myEnumerate}
+	\item Web server terlebih dahulu akan menciptakan sebuah proses baru dan menjalankan interpreter Perl. \par
+	\noindent 
+	\item Perl kemudian mengkompilasi script CGI tersebut, baru kemudian menjalankan skrip.\end{myEnumerate}
+\par
+\vspace{12pt}
+Keseluruhan siklus ini terjadi untuk setiap request. Dengan kata lain, terlalu banyak waktu yang dibuang untuk menciptakan proses dan tidak ada cache skrip yang telah dikompilasi. \par
+\vspace{12pt}
+Namun demikian, mungkin ini tidak lagi menjadi kendala di saat teknologi hardware untuk server sudah sedemikian maju; kecepata prosesor saat ini sudah cukup tinggi. Jika situs web menerima kurang dari sepuluh hingga dua puluh ribu hit CGI per hari, rata-rata mesin web server UNIX yang ada sekarang ini mampu menanganinya dengan baik. \par
+\vspace{12pt}
+\noindent 
+Dalam kasus CGI Perl, prosesnya sbb: \par
+\noindent 
+\begin{itemize}
+	\item Web server terlebih dahulu akan menciptakan sebuah proses baru dan menjalankan interpreter Perl.  \par
+	\noindent 
+	\item Perl kemudian mengkompilasi script CGI tersebut, baru kemudian menjalankan skrip.\end{itemize}
+\par
+\noindent 
+Keseluruhan siklus ini terjadi untuk setiap request. Dengan kata lain, terlalu banyak waktu dibuang untuk menciptakan proses dan tidak ada cache skrip yang telah dikompilasi. \par
+\noindent 
+Jika sebuah situs web menerima kurang dari sepuluh hingga dua puluh ribu hit CGI per hari, rata-rata mesin web server Unix yang ada sekarang ini mampu menanganinya dengan baik. \par
+\noindent 
+Angka ini relatif, bergantung pada: \par
+\noindent 
+\begin{itemize}
+	\item Tingkat pembebanan mesin web server untuk melakukan pekerjaan lain (misalnya, mengirim mail dan menjalankan server database) \par
+	\noindent 
+	\item Aplikasi CGI itu sendiri (sebab beberapa aplikasi CGI berupa skrip tunggal berukuran besar hingga waktu loading-nya cukup lama; umumnya aplikasi CGI yang rumit memecah diri menjadi skrip-skrip terpisah untuk mengurangi waktu loading). \par
+	\noindent 
+	\item Cepat atau lambatnya penampilan halaman web yang diterima klien akan lebih bergantung pada koneksi jaringan.\end{itemize}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Penerapan CGI} \par
+Penerapan CGI yang paling umum adalah dalam pemrosesan . Umumnya, form dipergunakan untuk dua kegunaan~~~utama~.~ Yang  sederhana  adalah~~form~~yang  dipakai  untuk mengumpulkan informasi dari pengguna dan mengirimkanya~ke server. Namun  form~juga bisa dipakai untuk keperluan  yang~~lebih~ "canggih"  seperti timbal balik antara pengguna dan~server,~misalnya  form  yang memberikan sedaftar pilihan dokumen dalam~server kepada pengguna  untuk dipilih. Program CGI di server dibuat untuk~mengolah informasi ini  dan kemudian~~mengirimkan  dokumen - dokumen~~yang~~sesuai  dengan  pilihan pengguna. \par
+\vspace{12pt}
+Contoh nyata penerapan CGI untuk dokumen~~dinamis~~ini  misalnya  suatu "buku tamu". Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapat~menyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewat~e-mail~ke  suatu  alamat. Program~CGI~juga~bisa menampilkan dokumen yang  berisi  informasi  yang \par
+\noindent 
+baru~saja~dikirimkan~ oleh  pengguna  tadi~~sembari~~memberikan  ucapan  terima kasih atas partisipasinya. \par
+\vspace{12pt}
+Penerapan lain dari CGI adalah sebuah gateway.~Artinya~ adalah  program yang~dipergunakan sebagai penghubung  untuk~~mengakses~ informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna.Contoh yang nyata adalah gateway yang menghubungkan~antara~web  server  dengan dengan suatu database server yang besar semacam~oracle~~atau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisa~~memberikan~~query  dalam  SQL (structured query language, yaitu bahasa~yang~dipakai  untuk  melakukan pendefinisian maupun manipulasi terhadap~database)~ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya ke~dalam~bentuk~yang~bisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser. \par
+\vspace{12pt}
+Program CGI pada prinsipnya bisa ditulis~dalam~bahasa  pemrograman  apa saja,~namun~kenyataanya tidak  semua  bahasa~~pemrograman~ cocok  untuk pemrograman CGI. Penerapan CGI dapat sangat~kompleks, dan untuk membuat  suatu program CGI menuntut pengetahuan teknis~yang~~cukup  tinggi  akan pemrograman. \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+\textbf{Keamanan pada CGI} \par
+CGI dapat menimbulkan lubang keamanan, karena program CGI dapat dijalankan di server lokal dari luar sistem (remote) oleh siapa saja. Apabila program CGI tidak didisain dan dikonfigurasi dengan baik, maka akan terjadi lubang keamanan. Kesalahan yang dapat terjadi antara lain: \par
+\noindent 
+\begin{itemize}
+	\item program CGI mengakses berkas (file) yang seharusnya tidak boleh di akses. Misalnya pernah terjadi kesalahan dalam program phf sehingga digunakan oleh orang untuk mengakses berkas password dari server WW. \par
+	\noindent 
+	\item runaway CGI-script, yaitu program berjalan di luar kontrol sehingga mengabiskan CPU cycle dari server WWW\end{itemize}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Lubang Keamanan CGI} \par
+\noindent 
+Beberapa contoh lubang keamanan pada CGI \par
+\noindent 
+\begin{itemize}
+	\item CGI dipasang oleh orang yang tidak berhak \par
+	\noindent 
+	\item CGI dijalankan berulang-ulang untuk menghabiskan resources (CPU, disk): DoS \par
+	\noindent 
+	\item Masalah setuid CGI di sistem UNIX, dimana CGI dijalankan oleh userid web server \par
+	\noindent 
+	\item Penyisipan karakter khusus untuk shell expansion \par
+	\noindent 
+	\item Kelemahan ASP di sistem Windows \par
+	\noindent 
+	\item Guestbook abuse dengan informasi sampah (pornografi) \par
+	\noindent 
+	\item Akses ke database melalui perintah SQL (SQL injection).\end{itemize}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Web Programming }\textbf{Python} \par
+Python adalah bahasa pemrograman dinamis yang mendukung pemrograman berorientasi obyek. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Seperti halnya bahasa pemrograman dinamis, python seringkali digunakan sebagai bahasa skrip dengan interpreter yang teintergrasi dalam sistem operasi. Saat ini kode python dapat dijalankan pada sistem berbasis: \par
+\noindent 
+\begin{itemize}
+	\item Linux/Unix \par
+	\noindent 
+	\item Windows \par
+	\noindent 
+	\item Mac OS X \par
+	\noindent 
+	\item Java Virtual Machine \par
+	\noindent 
+	\item OS/2 \par
+	\noindent 
+	\item Amiga \par
+	\noindent 
+	\item Palm \par
+	\noindent 
+	\item Symbian (untuk produk-produk Nokia)\end{itemize}
+\par
+\vspace{12pt}
+Python didistribusikan dengan beberapa lisensi yang berbeda dari beberapa versi. Lihat sejarahnya di Python Copyright. Namun pada prinsipnya Python dapat diperoleh dan dipergunakan secara bebas, bahkan untuk kepentingan komersial. Lisensi Python tidak bertentangan baik menurut definisi Open Source maupun General Public License (GPL). \par
+\vspace{12pt}
+Python merupakan bahasa pemrograman yang mendukung pengembangan aplikasi berbasis desktop dan juga aplikasi berbasis web. Biasanya kalau berhubungan dengan WEB maka orang akan berfikir framework yang digunakan. Tentunya ada beberapa framework yang bisa digunakan untuk membangun aplikasi web berbasis python ini antara lain adalah Django, Web2py, Cherrypy dan lain-lain. Masing-masing framework memiliki aturan khusus dalam penulisan syntax. Framework tersebut mengadopsi struktur yang sama seperti pemrograman CGI. Untuk lebih jelasnya mari kita pelajari pemrograman CGI. \par
+\vspace{12pt}
+Common Gateway Interface atau disingkat CGI adalah suatu standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip sebuah program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML. \par
+\vspace{12pt}
+Python menyediakan modul CGI yang bisa digunakan untuk membuat aplikasi berbasis web. Tentunya python tidak kalah dengan pemrograman berbasis web lain seperti Java, PHP dan lain2. Mari kita lakukan percobaan untuk membuat web dengan menggunakan python. \par
+\noindent 
+Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa komponen aplikasi diantaranya adalah : \par
+\noindent 
+\begin{myEnumerate}
+	\item Menginstal Program Python \par
+	\noindent 
+	\item Menginstal Program Web Server Seperti Apache2 atau Xampp \par
+	\noindent 
+	\item Setelah kedua program berhasil di instal maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. \par
+	\noindent 
+	\item Buka directory Xampp dan masuk ke folder apache  $  \rightarrow  $ Conf dan cari file httpd.conf \par
+	\noindent 
+	\item Buka file httpd.conf menggunakan notepad \par
+	\noindent 
+	\item Cari baris AddHandler cgi-script .cgi .pl .asp pada file setelah itu tambahkan extensi python seperti ini AddHandler cgi-script .cgi .pl .asp .py \par
+	\noindent 
+	\item Cari baris <Directory /> dan tambahkan ExecCGI pada list Options FollowSymLinks \par
+	\noindent 
+	\item Setelah itu simpan \par
+	\noindent 
+	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python’ \par
+	\noindent 
+	\item Buka Notepad dan ketikkan script dbawah ini : \par
+	\vspace{12pt}
+	\noindent 
+	$  \#  $!/Python27/python \par
+	\noindent 
+	print "Content-type:text/html" \par
+	\noindent 
+	print \par
+	\noindent 
+	print '<html>' \par
+	\noindent 
+	print '<head>' \par
+	\noindent 
+	print '<title>WEB Python </title>' \par
+	\noindent 
+	print '</head>' \par
+	\noindent 
+	print '<body>' \par
+	\noindent 
+	print '<h1><center>Tutorial Web Programming Python Bagian 1 Python</center></h1>' \par
+	\noindent 
+	print \par
+	\noindent 
+	print \par
+	\noindent 
+	print '<h2><center>Selamat Belajar Bagi Para Pecinta Python</h2></center>' \par
+	\noindent 
+	print '</body>' \par
+	\noindent 
+	print '</html>' \par
+	pada script diatas jangan lupa menuliskan posisi directory python.exe ( $  \#  $!/Python27/python) \par
+	\noindent 
+	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) \par
+	\noindent 
+	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya\end{myEnumerate}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Membuat Kamus Menggunakan CGI Python} \par
+Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia seperti gambar dibawah. \par
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:2 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=4.01in,height=1.64in]{./uploads_new/CGI_Programming.docx_DIR/media/image2.jpg}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:2 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+Jika~sudah~save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus.json Sebagai sample bisa gunakan  yang sudah saya buat disini. \par
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:3 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=3.92in,height=2.38in]{./uploads_new/CGI_Programming.docx_DIR/media/image3.jpg}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:3 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\noindent 
+Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. \par
+\noindent 
+$  \#  $!/usr/bin/python \par
+\noindent 
+import cgi \par
+\noindent 
+import~cgitb; cgitb.enable()   \par
+\noindent 
+import simplejson as json \par
+\vspace{12pt}
+\noindent 
+print "Content-type: text/html" \par
+\noindent 
+print \par
+\vspace{12pt}
+\noindent 
+print """ \par
+\noindent 
+<html> \par
+\noindent 
+<head><title>CGI Script</title></head> \par
+\noindent 
+<body> \par
+\noindent 
+~ <h1> Kamus sederhana dengan cgi python</h1> \par
+\noindent 
+~ <form method="post" action="index.cgi"> \par
+\noindent 
+~~~ Bahasa Indonesia<br/> \par
+\noindent 
+~~~ <input type="text" name="kata"/></p> \par
+\noindent 
+~~~ <input type="submit" name="submit" value="Terjemahkan"/></p> \par
+\noindent 
+~ </form> \par
+\noindent 
+~~Bahasa Inggris<br/>   \par
+\noindent 
+""" \par
+\vspace{12pt}
+\noindent 
+form = cgi.FieldStorage()  $  \#  $variable form \par
+\noindent 
+cari $  \_  $kata = form.getvalue("kata")  $  \#  $variable mengambil nilai dari input \par
+\vspace{12pt}
+\noindent 
+location $  \_  $database = open('/home/develop/DW/kamus.json', 'r')  $  \#  $membuka kosa kata bahasa inggris \par
+\noindent 
+bhs $  \_  $inggris = json.load(location $  \_  $database) \par
+\vspace{12pt}
+\noindent 
+if~cari $  \_  $kata:~   \par
+\noindent 
+~~ for bhs $  \_  $indonesia in cari $  \_  $kata.split(' '):  \par
+\noindent 
+~~~~for~arti $  \_  $kata in bhs $  \_  $inggris:    \par
+\noindent 
+~~~~ if arti $  \_  $kata["indonesia"] == bhs $  \_  $indonesia.replace(' ',''): \par
+\noindent 
+~~~~~~~~ hasil = arti $  \_  $kata['inggris']  \par
+\noindent 
+~~~~~~~ break \par
+\noindent 
+~~~ else: \par
+\noindent 
+~~~~~~~~hasil~= "arti kata tidak ditemukan"    \par
+\noindent 
+~~~~~~~~~~~~~~  \par
+\noindent 
+~~~ print """ \par
+\noindent 
+~~~ <input type="text" name="hasil" value=" $  \%  $s"/> \par
+\noindent 
+~~~ </body> \par
+\noindent 
+~~~ </html> \par
+\noindent 
+~~~ """  $  \%  $ cgi.escape(hasil) \par
+\vspace{12pt}
 
 \chapter{Databases Access}
+ \par
+\noindent 
+\textbf{Pengertian Database} \par
+Basis data adalah sekumpulan dari data yang telah disusun sesuai dengan aturan tertentu yang saling berhubungan sehingga memudahkan pengguna dalam mengelolanya juga memudahkan pengguna untuk memperoleh informasi. Selain itu ada juga yang menyebutkan bahwa database sebagai kumpulan file, tabel, atau arsip yang saling terhubung yang disimpan dalam media elektronik.  \par
+\vspace{12pt}
+\noindent 
+\textbf{Manfaat Penggunaan Database} \par
+\noindent 
+\begin{myEnumerate}
+	\item Kecepatan dan Kemudahan \par
+	Database memiliki kemampuan dalam menyeleksi data sehingga menjadi suatu kelompok yang tersusun dengan cepat. Hal inilah yang ahirnya dapat menghasilkan informasi yang dibutuhkan secara cepat pula. Seberapa cepat pemrosesan data oleh database tergantung pada perancangan databasenya. \par
+	\vspace{12pt}
+	\noindent 
+	\item Pemakaian Bersama-sama \par
+	Suatu database bisa digunakan oleh siapa saja dalam suatu perusahaan. Sebagai contoh database mahasiswa dalam suatu perguruan tinggi dibutuhkan oleh beberapa bagian, seperti bagian admin, bagian keuangan, bagian akademik. Kesemua bidang tersebut membutuhkan database mahasiswa namun tidak perlu masing-masing bagian membuat databasenya sendiri, cukup database mahasiswa satu saja yang disimpan di server pusat. Nanti aplikasi dari masing-masing bagian bisa terhubung ke database mahasiswa tersebut. \par
+	\vspace{12pt}
+	\noindent 
+	\item Kontrol data terpusat \par
+	Masih berkaitan dengan point ke dua, meskipun pada suatu perusahaan memiliki banyak bagian atau divisi tapi database yang diperlukan tetap satu saja. Hal ini mempermudah pengontrolan data seperti ketika ingin mengupdate data mahasiswa, maka kita perlu mengupdate semua data di masing-masing bagian atau divisi, tetapi cukup di satu database saja yang ada di server pusat. \par
+	\vspace{12pt}
+	\vspace{12pt}
+	\noindent 
+	\item Menghemat biaya perangkat \par
+	Dengan memiliki database secara terpusat maka di masing-masing divisi tidak memerlukan perangkat untuk menyimpan database berhubung database yang dibutuhkan hanya satu yaitu yang disimpan di server pusat, ini tentunya memangkas biaya pembelian perangkat. \par
+	\vspace{12pt}
+	\noindent 
+	\item Keamanan Data \par
+	Hampir semua Aplikasi manajemen database sekarang memiliki fasilitas manajemen pengguna. Manajemen pengguna ini mampu membuat hak akses yang berbeda-beda disesuaikan dengan kepentingan maupun posisi pengguna. Selain itu data yang tersimpan di database diperlukan password untuk mengaksesnya. \par
+	\vspace{12pt}
+	\noindent 
+	\item Memudahkan dalam pembuatan Aplikasi baru\end{myEnumerate}
+\par
+Dalam poin ini database yang dirancang dengan sangat baik, sehingga si perusahaan memerlukan aplikasi baru tidak perlu membuat database yang baru juga, atau tidak perlu mengubah kembali struktur database yang sudah ada. Sehingga Si pembuat aplikasi atau programmer hanya cukup membuat atau pengatur antarmuka aplikasinya saja. \par
+\vspace{12pt}
+Dengan segudang manfaat dan kegunaan yang dimiliki oleh database maka sudah seharusnya semua perusahaan baik itu perusahaan skala kecil apalagi perusahaan besar memilki database yang dibangun dengan rancangan yang baik. Ditambah dengan pemanfaatan teknologi jaringan komputer maka manfaat database ini akan semakin besar. Penggunaan database sekaligus teknologi jaringan komputer telah banyak digunakan oleh berbagai macam perusahaan, contohnya saja perbankan yang memiliki cabang di setiap kotanya. Perusahaan Bank tersebut hanya memiliki satu database yang disimpan di server pusat, sedangkan cabang-cabangnya terhubung melalui jaringan komputer untuk mengakses database yang terletak di sever pusat tersebut. \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+\textbf{Apa yang dimaksud dengan}\textbf{ field, record, }\textbf{table, file, data  $  \&  $ basis data?} \par
+Field merupakan kumpulan dari karakter yang membentuk satu arti, maka jika terdapat field misalnya seperti KeteranganBarang atau JumlahBarang, maka yang dimunculkan dalam field tersebut harus yang berkaitan dengan keterangan barang dan jumlah barang. Atau field juga bisa disebut sebagai tempat atau kolom yang terdapat dalam suatu tabel untuk mengisikan nama-nama (data) field yang akan di isikan. \par
+\vspace{12pt}
+Record merupakan kumpulan field yang sangat lengkap, dan biasanya dihitung dalam satuan baris. Tabel merupakan kumpulan dari beberapa record dan juga field. File terdiri dari kumpulan field yang menunjukan dari satu kesatuan data yang sejenis. Misalnya seperti file nama siswa berisikan data tentang semua nama siswa yang ada. Data adalah kumpulan fakta atau kejadian yang digunakan sebagai penyelesaian masalah dalam bentuk informasi. Basis data (database) terdiri dari dua kata, yaitu kata basis dan data. Basis merupakan tempat ataupun gudang, maupun wadah. \par
+\vspace{12pt}
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:1 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=4.63in,height=2.0in]{./uploads_new/DATABASE_ACCESS.docx_DIR/media/image1.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:1 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\vspace{12pt}
+Data dapat disebut sebagai kumpulan dari fakta yang mewakili objek, misalnya seperti benda, manusia,barang dan sebagainya yang ditulis ke dalam bentuk angka, huruf, simbol, bunyi, teks, gambar ataupun gabungannya. Jadi dapat disimpulkan bahwa basis data merupakan kumpulan dari data-datayang terorganisasi yang saling berhubungan sedemikian rupa sehingga dapat dengan mudah disimpan, dimanipulasi, dan dipanggil oleh pemakainya. Karakter atau character yang ada didalam database merupakan bagian data yang terkecil, karakter tersebutdapat berupa karakter numerik, huruf ataupun karakter khusus (special characters) yang membentuk suatu item data atau field. \par
+\vspace{12pt}
+\noindent 
+\textbf{Sifat-sifat database / basis data} \par
+\noindent 
+\begin{itemize}
+	\item Internal~~~~~~~~:  kesatuan (integritas) dari file-file yang terlibat \par
+	\noindent 
+	\item Terbagi/share : elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).\end{itemize}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Tipe Database / basis data} \par
+\noindent 
+Tipe Database Terdapat 12 tipe database, antara lain: \par
+\noindent 
+\begin{myEnumerate}
+	\item Operational database: Database ini menyimpan data rinci yang diperlukan untuk mendukung operasi dari seluruh organisasi. Mereka juga disebut subject-area databases (SADB), transaksi database, dan produksi database. Contoh: database pelanggan, database pribadi, database inventaris, akuntansi database. \par
+	\noindent 
+	\item Analytical database: Database ini menyimpan data dan informasi yang diambil dari operasional yang dipilih dan eksternal database. Mereka terdiri dari data dan informasi yang dirangkum paling dibutuhkan oleh sebuah organisasi manajemen dan End-user lainnya. Beberapa orang menyebut analitis multidimensi database sebagai database, manajemen database, atau informasi database. \par
+	\noindent 
+	\item Data warehouse: Sebuah data warehouse menyimpan data dari saat ini dan tahun- tahun sebelumnya - data yang diambil dari berbagai database operasional dari sebuah organisasi. \par
+	\noindent 
+	\item Distributed database: Ini adalah database-kelompok kerja lokal dan departemen di kantor regional, kantor cabang, pabrik-pabrik dan lokasi kerja lainnya. Database ini dapat mencakup kedua segmen yaitu operasional dan user database, serta data yang dihasilkan dan digunakan hanya pada pengguna situs sendiri. \par
+	\noindent 
+	\item End-user database: Database ini terdiri dari berbagai file data yang dikembangkan oleh end-user di workstation mereka. Contoh dari ini adalah koleksi dokumen dalam spreadsheet, word processing dan bahkan download file. \par
+	\noindent 
+	\item External database: Database ini menyediakan akses ke eksternal, data milik pribadi online - tersedia untuk biaya kepada pengguna akhir dan organisasi dari layanan komersial. Akses ke kekayaan informasi dari database eksternal yang tersedia untuk biaya dari layanan online komersial dan dengan atau tanpa biaya dari banyak sumber di Internet. \par
+	\noindent 
+	\item Hypermedia databases on the web: Ini adalah kumpulan dari halaman-halaman multimedia yang saling berhubungan di sebuah situs web. Mereka terdiri dari home page dan halaman hyperlink lain dari multimedia atau campuran media seperti teks, grafik, gambar foto, klip video, audio dll. \par
+	\noindent 
+	\item Navigational database: Dalam navigasi database, queries menemukan benda terutama dengan mengikuti referensi dari objek lain. \par
+	\noindent 
+	\item In-memory databases: Database di memori terutama bergantung pada memori utama untuk penyimpanan data komputer. Ini berbeda dengan sistem manajemen database yang menggunakan disk berbasis mekanisme penyimpanan. Database memori utama lebih cepat daripada dioptimalkan disk database sejak Optimasi algoritma internal menjadi lebih sederhana dan lebih sedikit CPU mengeksekusi instruksi. \par
+	\noindent 
+	\item Document-oriented databases: Merupakan program komputer yang dirancang untuk aplikasi berorientasi dokumen. Sistem ini bisa diimplementasikan sebagai lapisan di atas sebuah database relasional atau objek database. Sebagai lawan dari database relasional, dokumen berbasis database tidak menyimpan data dalam tabel dengan ukuran seragam kolom untuk setiap record. Sebaliknya, mereka menyimpan setiap catatan sebagai dokumen yang memiliki karakteristik tertentu. Sejumlah bidang panjang apapun dapat ditambahkan ke dokumen. Bidang yang dapat juga berisi beberapa bagian data. \par
+	\noindent 
+	\item Real-time databases Real-time: Database adalah sistem pengolahan dirancang untuk menangani beban kerja negara yang dapat berubah terus- menerus. Ini berbeda dari database tradisional yang mengandung data yang terus- menerus, sebagian besar tidak terpengaruh oleh waktu. \par
+	\noindent 
+	\item Relational Database: Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.\end{myEnumerate}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Modul python}\textbf{ untuk mengakses database MySQL} \par
+Untuk mengakses database MySQL dari Python, berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. \par
+\noindent 
+\begin{myEnumerate}
+	\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysql-server. Jangan lupa memasukkan password akun root untuk server MySQL. \par
+	\noindent 
+	\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. Selanjutnya, kita akan masuk ke shell MySQL. Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). \par
+	mysql> create database teman; \par
+	mysql> use teman; \hspace*{1.69in}  \par
+	mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); \par
+	\vspace{12pt}
+	\noindent 
+	\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. \par
+	mysql> create user 'andri'@'localhost' identified by '123456'; \par
+	mysql> grant all on teman.* to 'andri'@'localhost' with grant option; \par
+	\noindent 
+	\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut.\end{myEnumerate}
+\par
+\vspace{12pt}
+Modul terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. \par
+\vspace{12pt}
+\noindent 
+import MySQLdb \par
+\noindent 
+def sambung (host,user,passwd): \par
+\noindent 
+~ mycon=MySQLdb.connect(host,user,passwd) \par
+\noindent 
+~ return mycon \par
+\vspace{12pt}
+\noindent 
+def selectall(mycon, dbname, table): \par
+\noindent 
+~ mycur=mycon.cursor() \par
+\noindent 
+~ mycur.execute('use ' + dbname) \par
+\noindent 
+~ mycur.execute('select * from ' + table) \par
+\noindent 
+~ rows=mycur.fetchall() \par
+\noindent 
+~ a=[] \par
+\noindent 
+~ for i in rows: \par
+\noindent 
+~~~ nama=i[1] \par
+\noindent 
+~~~ alamat=i[2] \par
+\noindent 
+~~~ telepon=i[3] \par
+\noindent 
+~~~ surat=i[4] \par
+\noindent 
+~~~ print(nama + ' ' + alamat + ' ' + telepon + ' ' + surat) \par
+\noindent 
+~~~ a.append(i) \par
+\noindent 
+~ return a \par
+Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat diakses melalui shell python karena belum ada fungsi main yang terdefinsi. Hal ini disebabkan karena rancangan input/ouput masih seadanya. Karenanya, mari masuk ke shell python dengan menjalankan perintah python di terminal. Yang perlu diperhatikan, penggunaan shell python harus dilakukan dari directory di mana modul ini disimpan. Berikut adalah gambaran ketika berada dalam shell python dan menggunakan modul ini. \par
+\noindent 
+>>> from mymodul import * \par
+\noindent 
+>>> mycon=sambung("localhost","andri","123456") \par
+\noindent 
+>>> a=selectall(mycon,"teman","alamat") \par
+\noindent 
+Andri Jl. Sariasih, Sarijadi, Bandung 12450 08123456789 andri@poltekpos.ac.id \par
+\noindent 
+>>> \par
+Di baris pertama, kita meng-import modul dari nama file, untuk selanjutnya meng-import semua fungsi yang ada di dalamnya. Selanjutnya, kita membuat variabel bernama mycon bertipe koneksi ke MySQL (dapat dilihat dengan cara menjalankan perintah type(mycon) dari shell python) dan meng-assigned nilainya dari memanggil fungsi sambung. Selanjutnya, variabel a di-assinged nilainya dari memanggil fungsi selectall. Terlihat bahwa fungsi selectall mencetak nilai yang diperoleh dari operasi select tabel. \par
+\vspace{12pt}
+Dengan ilustrasi ini, diharapkan dapat memberi inspirasi membuat modul python yang digunakan untuk sebuah aplikasi, misalnya dengan menjadikannya sebagai bagian dari hubungan SIGNAL-SLOT pada QT4. Semoga bermanfaat. \par
+\vspace{12pt}
+Dalam era informasi dimana kita hidup sekarang, kita dapat melihat seberapa banyak data dunia berubah. Kita pada dasarnya membuat, menyimpan, dan menarik data, secara ekstensif! Harusnya ada sebuah cara untuk menangani semua itu—itu tidak dapat disebarkan kemana-mana tanpa adanya manajemen bukan? Di sini hadir Database Management System (DBMS). DBMS adalah sebuah sistem software yang memungkinkanmu untuk membuat, menyimpan, memodifikasi, menarik, dan penanganan lainnya terhadap sebuah data dari database. Sistem ini juga bervariasi dalam ukuran, mulai dari sistem kecil yang cukup berjalan pada komputer personal hingga yang lebih besar yang berjalan dalam mainframe. \par
+\vspace{12pt}
+\noindent 
+\textbf{Python Database API} \par
+Python dapat berinteraksi dengan database. Namun, bagaimana itu dapat melakukannya? Python menggunakan apa yang disebut Python Database API dengan tujuan untuk menjadi antarmuka dengan database. API ini mengijinkan kita untuk memprogram database management system (DBMS) yang berbeda. Untuk DBMS yang berbeda itu, bagaimana pun juga, proses yang diikuti pada tingkatan code tetap sama, yaitu sebagai berikut: \par
+\vspace{12pt}
 
-\section{Sample Section}
-Here is some sample text.
-
-\section{Example, Figure and Tables}
-\vskip6pt
-\begin{example}[Optional Example Name]
-	Use Black's law [Equation (6.3)] to estimate the reduction in useful product
-	life if a metal line is initially run at 55$^\circ$C at a maximum line
-	current density.
-\end{example}
-
-\section{Algorithm}
-This is a sample algorithm.
-
-\section{Summary}
-This is a summary of this chapter.
-Here are some references: \cite{xkilby}, \cite{xberen}.
 
 \chapter{Networking}
+ \par
+\noindent 
+\textbf{Pengertian Jaringan} \par
+Jaringan yaitu sekumpulan komputer yang dihubungkan dengan kabel sehingga komputer yang satu dengan komputer yang lainnya dapat saling komunikasi, bertukar informasi sharing file, printer, dan sebagainya. \par
+\vspace{12pt}
+Networking merupakan salah satu cabang ilmu dunia Teknik Informatika yang membahas tentang komunikasi antar komputer. Materi networking yang di berikan di sekolah atau di perkuliahan saat ini sepertinya belum cukup memadai dari yang diharapkan. Bagi mereka yang sangat ingin mendalami tentang ilmu networking bisa mempelajarinya dari artikel-artikel di internet, dan biasanya ketika kita menemukan artikel tentang materi networking yang ingin dipelajari sering sekali ditemukan kata-kata atau istilah-istilah yang belum dimengerti, biasanya kita akan mencari kata-kata tersebut dengan mengetikkan keywordnya di mesin pencari Google. lalu kita akan belajar memahami kata tersebut, setelah kita mengerti kita akan kembali mempelajari materi yang tadi. cara ini tentu tidak efektif. maka dari sebaiknya sebelum kita mempelajari mengenai networking kita pelajari dulu dari yang paling dasar, yaitu istilah-istilah dalam networking. \par
+\vspace{12pt}
+Networking sangat dibutuhkan ,terutama pada zaman yang semakin lama semakin canggih seperti ini ,karena jaringan itu tentu sangat penting untuk berlangsungnya hubungan atau komunikasi antar komputer. misalnya saja untuk berbagi atau sharing printer , tidak mungkin setiap komputer memiliki printer satu-satu makannya dibuatlah jaringan komputer itu untuk berbagi penggunaan printer secara bersama-sama dan juga berfungsi untuk sharing internet ,satu komputer (server) dapat ip address dari isp ,lalu si server itu membagikan koneksi internet ke client-client dikantornya. Jaringan dibagi menjadi 2 yaitu \par
+\noindent 
+\begin{myEnumerate}
+	\item Standalone \par
+	\noindent 
+	\item Network\end{myEnumerate}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{B. Jenis – Jenis}\textbf{ Jaringan Berdasarkan Jangkauan} \par
+\noindent 
+\begin{myEnumerate}
+	\item Local Area Networking (LAN) \par
+	Yaitu Jaringan yang dibatasi oleh area yang relative kecil, umumnya dibatasi oleh area lingkungan seperti sebuah perkantoran di sebuah gedung, atau sebuah sekolah, dan biasanya tidak jauh dari sekitar 1 km persegi. \par
+	\noindent 
+	\item Metropolitan Area Networking (MAN) \par
+	Yaitu Jaringan yang lebih luas dari LAN, MAN biasanya meliputi area yang lebih besar seperti area propinsi, antar gedung. Mengapa MAN itu dikatakan lebih luas dari LAN?, Yah, karena jaringan MAN itu terhubung dari beberapa jaringan LAN yang dihubungkan melalui switch lagi. \par
+	\vspace{12pt}
+	\noindent 
+	\item Wide Area Networking (WAN)\end{myEnumerate}
+\par
+Yaitu Jaringan yang lingkupnya biasanya sudah menggunakan sarana Satelit ataupun kabel bawah laut sebagai contoh keseluruhan jaringan BANK BNI yang ada di Indonesia ataupun yang ada di Negara-negara lain. Menggunakan sarana WAN, Sebuah Bank yang ada di Bandung bisa menghubungi kantor cabangnya yang ada di Hongkong, hanya dalam beberapa menit. Biasanya WAN agak rumit dan sangat kompleks, menggunakan banyak sarana untuk menghubungkan antara LAN dan WAN ke dalam Komunikasi Global seperti Internet. \par
+\vspace{12pt}
+\noindent 
+\textbf{Manfaat Jaringan Komputer} \par
+Berbicara mengenai manfaat dari jaringan komputer. Terdapat banyak sekali manfaat jaringan komputer, antara lain : \par
+\noindent 
+\begin{itemize}
+	\item Dengan jaringan komputer, kita bisa mengakses file yang kita miliki sekaligus file orang lain yang telah diseberluaskan melalui suatu jaringan, semisal jaringan internet. \par
+	\noindent 
+	\item Melalui jaringan komputer, kita bisa melakukan proses pengiriman data secara cepat dan efisien. \par
+	\noindent 
+	\item Jaringan komputer membantu seseorang berhubungan dengan orang lain dari berbagai negara dengan mudah. \par
+	\noindent 
+	\item Selain itu, pengguna juga dapat mengirim teks, gambar, audio, maupun video secara real time dengan bantuan jaringan komputer. \par
+	\noindent 
+	\item Kita dapat mengakses berita atau informasi dengan sangat mudah melalui internet dikarenakan internet merupakan salah satu contoh jaringan komputer. \par
+	\noindent 
+	\item Misalkan dalam suatu kantor memerlukan printer, kita tidak perlu membeli printer sejumlah dengan komputer yang terdapat pada kantor tersebut. Kita cukup membeli satu printer saja untuk digunakan oleh semua karyawan kantor tersebut dengan bantuan jaringan komputer.\end{itemize}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Macam-Macam Jaringan Komputer} \par
+Umumnya jaringan komputer di kelompokkan menjadi 5 kategori, yaitu berdasarkan jangkauan geografis, distribusi sumber informasi/ data, media transmisi data, peranan dan hubungan tiap komputer dalam memproses data, dan berdasarkan jenis topologi yang digunakan. Berikut penjabaran lengkapnya : \par
+\vspace{12pt}
+\noindent 
+A. Berdasarkan Jangkauan Geografis \par
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:1 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=3.82in,height=3.1in]{./uploads_new/3._NETWORKING.docx_DIR/media/image1.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:1 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\noindent 
+\begin{myEnumerate}
+	\item LAN \par
+	Local Area Network atau yang sering disingkat dengan LAN merupakan jaringan yang hanya mencakup wilayah kecil saja, semisal warnet, kantor, atau sekolah. Umumnya jaringan LAN luas areanya tidak jauh dari 1 km persegi. \par
+	\vspace{12pt}
+	Biasanya jaringan LAN menggunakan teknologi IEEE 802.3 Ethernet yang mempunyai kecepatan transfer data sekitar 10, 100, bahkan 1000 MB/s. Selain menggunakan teknologi Ethernet, tak sedikit juga yang menggunakan teknologi nirkabel seperti Wi-fi untuk jaringan LAN. \par
+	\vspace{12pt}
+	Keuntungan dari penggunaan Jenis Jaringan Komputer LAN seperti lebih irit dalam pengeluaran biaya operasional, lebih irit dalam penggunaan kabel, transfer data antar node dan komputer labih cepat karena mencakup wilayah yang sempit atau lokal, dan tidak memerlukan operator telekomunikasi untuk membuat sebuah jaringan LAN. \par
+	Kerugian dari penggunaan Jenis Jaringan LAN adalah cakupan wilayah jaringan lebih sempit sehingga untuk berkomunikasi ke luar jaringan menjadi lebih sulit dan area cakupan transfer data tidak begitu luas. \par
+	\vspace{12pt}
+	\noindent 
+	\item MAN \par
+	Metropolitan Area Network atau MAN merupakan jaringan yang mencakup suatu kota dengan dibekali kecepatan transfer data yang tinggi. Bisa dibilang, jaringan MAN merupakan gabungan dari beberapa jaringan LAN. \par
+	\vspace{12pt}
+	Jangakauan dari jaringan MAN berkisar 10-50 km. MAN hanya memiliki satu atau dua kabel dan tidak dilengkapi dengan elemen switching yang berfungsi membuat rancangan menjadi lebih simple. \par
+	\vspace{12pt}
+	Keuntungan dari Jenis Jaringan Komputer MAN ini diantaranya adalah cakupan wilayah jaringan lebih luas sehingga untuk berkomunikasi menjadi lebih efisien, mempermudah dalam hal berbisnis, dan juga keamanan dalam jaringan menjadi lebih baik. \par
+	\vspace{12pt}
+	Kerugian dari Jenis Jaringan Komputer MAN seperti lebih banyak menggunakan biaya operasional, dapat menjadi target operasi oleh para Cracker untuk mengambil keuntungan pribadi, dan untuk memperbaiki jaringan MAN diperlukan waktu yang cukup lama. \par
+	\vspace{12pt}
+	\noindent 
+	\item WAN\end{myEnumerate}
+\par
+Wide Area Network atau WAN merupakan jaringan yang jangkauannya mencakup daerah geografis yang luas, semisal sebuah negara bahkan benua. WAN umumnya digunakan untuk menghubungkan dua atau lebih jaringan lokal sehingga pengguna dapat berkomunikasi dengan pengguna lain meskipun berada di lokasi yang berbebeda. \par
+\vspace{12pt}
+Keuntungan Jenis Jaringan Komputer WAN seperti cakupan wilayah jaringannya lebih luas dari Jenis Jaringan Komputer LAN dan MAN, tukar-menukar informasi menjadi lebih rahasia dan terarah karena untuk berkomunikasi dari suatu negara dengan negara yang lainnya memerlukan keamanan yang lebih, dan juga lebih mudah dalam mengembangkan serta mempermudah dalam hal bisnis. \par
+Kerugian dari Jenis Jaringan WAN seperti biaya operasional yang dibutuhkan menjadi lebih banyak, sangat rentan terhadap bahaya pencurian data-data penting, perawatan untuk jaringan WAN menjadi lebih berat. \par
+\vspace{12pt}
+\noindent 
+B. Berdasarkan Distribusi Sumber Informasi/ Data \par
+\noindent 
 
-\section{Sample Section}
-Here is some sample text.
 
-\section{Example, Figure and Tables}
-\vskip6pt
-\begin{example}[Optional Example Name]
-	Use Black's law [Equation (6.3)] to estimate the reduction in useful product
-	life if a metal line is initially run at 55$^\circ$C at a maximum line
-	current density.
-\end{example}
+%%%%%%%%%%%%  Figure/Image No:2 here %%%%%%%%%%%%%%
 
-\section{Algorithm}
-This is a sample algorithm.
 
-\section{Summary}
-This is a summary of this chapter.
-Here are some references: \cite{xkilby}, \cite{xberen}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=6.27in,height=3.11in]{./uploads_new/3._NETWORKING.docx_DIR/media/image2.png}
+	\end{center}
+\end{figure}
+
+
+%%%%%%%%%%%%  Figure/Image No:2 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+\begin{myEnumerate}
+	\item Jaringan Terpusat \par
+	Yang dimaksud jaringan terpusat adalah jaringan yang terdiri dari komputer client dan komputer server dimana komputer client bertugas sebagai perantara dalam mengakses sumber informasi/ data yang berasal dari komputer server. Dalam jaringan terpusat, terdapat istilah dumb terminal (terminal bisu), dimana terminal ini tidak memiliki alat pemroses data. \par
+	\vspace{12pt}
+	\noindent 
+	\item Jaringan Terdistribusi\end{myEnumerate}
+\par
+Jaringan ini merupakan hasil perpaduan dari beberapa jaringan terpusat sehingga memungkinkan beberapa komputer server dan client yang saling terhubung membentuk suatu sistem jaringan tertentu. \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+C. Berdasarkan Media Transmisi Data yang Digunakan \par
+\noindent 
+\begin{myEnumerate}
+	\item Jaringan Berkabel (Wired Network) \par
+	Media transmisi data yang digunakan dalam jaringan ini berupa kabel. Kabel tersebut digunakan untuk menghubungkan satu komputer dengan komputer lainnya agar bisa saling bertukar informasi/ data atau terhubung dengan internet. Salah satu media transmisi yang digunakan dalam wired network adalah kabel UTP. \par
+	\vspace{12pt}
+	\noindent 
+	\item Jaringan Nirkabel (Wireless Network)\end{myEnumerate}
+\par
+Dalam jaringan ini diperlukan gelombang elektromagnetik sebagai media transmisi datanya. Berbeda dengan jaringan berkabel (wired network), jaringan ini tidak menggunakan kabel untuk bertukar informasi/ data dengan komputer lain melainkan menggunakan gelombang elektromagnetik untuk mengirimkan sinyal informasi/ data antar komputer satu dengan komputer lainnya. Wireless adapter, salah satu media transmisi yang digunakan dalam wireless network. \par
+\vspace{12pt}
+\noindent 
+D. Berdasarkan Peranan dan Hubungan Tiap Komputer dalam Memproses Data \par
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:3 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=4.74in,height=2.77in]{./uploads_new/3._NETWORKING.docx_DIR/media/image3.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:3 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\noindent 
+\begin{myEnumerate}
+	\item Jaringan Client-Server \par
+	Jaringan ini terdiri dari satu atau lebih komputer server dan komputer client. Biasanya terdiri dari satu komputer server dan beberapa komputer client. Komputer server bertugas menyediakan sumber daya data, sedangkan komputer client hanya dapat menggunakan sumber daya data tersebut. \par
+	\vspace{12pt}
+	\noindent 
+	\item Jaringan Peer to Peer\end{myEnumerate}
+\par
+Dalam jaringan ini, masing-masing komputer, baik itu komputer server maupun komputer client mempunyai kedudukan yang sama. Jadi, komputer server dapat menjadi komputer client, dan sebaliknya komputer client juga dapat menjadi komputer server. \par
+\vspace{12pt}
+\noindent 
+E. Berdasarkan Topologi Jaringan yang Digunakan \par
+\noindent 
+Network Topology/ Topologi jaringan \par
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:4 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=5.29in,height=2.59in]{./uploads_new/3._NETWORKING.docx_DIR/media/image4.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:4 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\vspace{12pt}
+Topologi jaringan adalah bentuk perancangan baik secara fisik maupun secara logik yang digunakan untuk membangun sebuah jaringan komputer. rancangan ini sangat erat kaitannya dengan metode access dan media pengiriman yang digunakan. Topologi yang ada sangatlah tergantung dengan letak geofrapis dari masing-masing terminal, kualitas kontrol yang dibutuhkan dalam komunikasi ataupun penyampaian pesan, serta kecepatan dari pengiriman data. \par
+\noindent 
+\textbf{Apa saja alat-alat penting dalam networking itu ?} \par
+\noindent 
+Macam-macam alat jaringan adalah :  \par
+\noindent 
+\begin{myEnumerate}
+	\item ROUTER  \par
+	Router adalah sebuah alat yang mengirimkan paket data melalui sebuah jaringan atau Internet menuju tujuannya, alat ini sangatlah penting untuk meneruskan jaringan satu ke jaringan lainnya yang berbeda kelas/subnet/ip. melalui sebuah proses yang dikenal sebagai routing. Proses routing terjadi pada lapisan 3 (Lapisan jaringan seperti Internet Protocol) dari stack protokol tujuh-lapis OSI. \par
+	\vspace{12pt}
+	Router berfungsi sebagai penghubung antar dua atau lebih jaringan untuk meneruskan data dari satu jaringan ke jaringan lainnya. Router berbeda dengan switch. Switch merupakan penghubung beberapa alat untuk membentuk suatu Local Area Network (LAN). \par
+	\vspace{12pt}
+	\noindent 
+	\item SWITCH \par
+	Switch adalah perangkat jaringan komputer yang bekerja di OSI Layer 2, Data Link Layer. Switch kerjanya sebagai penyambung atau concentrator dalam Jaringan komputer. Switch mengenal MAC Adressing shingga dia bisa memilah paket data mana yang akan di teruskan/dilanjutkan ke mana. \par
+	\vspace{12pt}
+	\noindent 
+	\item ACCESS POINT\end{myEnumerate}
+\par
+Access point adalah perangkat yang digunakan sebagai pembuat koneksi wireless pada jaringan komputer. Fungsi Access point diantaranya: Sebagai perangkat jaringan yang berfungsi membuat jaringan komputer tanpa kabel, atau biasa disebut WI-FI (Wireless Fidelity) \par
+Belajar Network Programming pada python, melalui fungsi-fungsi TCP/IP, SOCKET, dll. Pada latihan ini, kita akan mencoba mengirim data dari server menuju klien dengan menggunakan Socket pada python. \par
+\noindent 
+\begin{myEnumerate}
+	\item server.py\end{myEnumerate}
+\par
+\noindent 
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:5 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=3.9in,height=1.77in]{./uploads_new/3._NETWORKING.docx_DIR/media/image5.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:5 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\noindent 
+Penjelasan fungsi-fungsi tsb akan dijelaskan dibawah ini: \par
+\noindent 
+\begin{itemize}
+	\item socket.socket(): Membuat socket baru menggunakan alamat yang sudah ada, tipe socket, dan nomor protocol. \par
+	\noindent 
+	\item socket.bind(address): Menyalin/mengikat socket ke alamat yang ada. \par
+	\noindent 
+	\item socket.listen(backlog): Menunggu koneksi yang sudah dibuat dari socket tersebut. backlog merupakan sebuah argumen yang menyatakan batas maximal nomor antrian koneksi dan paling tidak sampai dengan 0; nilai maximum tergantung dari sistem(biasanya 5), dan nilai minimumnya harus mencapai 0. \par
+	\noindent 
+	\item socket.accept(): Nilai yang dikembalikan atau diberikan adalah sepasang(conn, address) dimana conn adalah socket baru yaitu sebuah objek yang biasa digunakan untuk mengirim dan menerima data dari koneksi tersebut dan address adalah alamat yang terikat ke socket pada akhir koneksi. \par
+	\noindent 
+	\item socket.send(bytes[, flags]): Mengiri data ke socket. Socket harus terkoneksi oleh remote Socket. mengembalikan angkat dari bytes yang terkirim. Aplikasi yang bertugas untuk mengecek semua data harus terkirim; hanya jika data ditransimisikan, aplikasi membutuhkan usaha untuk mengirimkan data yang tersisa. \par
+	\noindent 
+	\item socket.close(): Menandakan bahwa socket telah ditutup. semua dari operasi-operasi pada objek socket akan gagal. Remote End tidak akan menerima data lagi (sampai data telah dibersihkan). Socket-socket secara otomatis tertutup ketika dilakukan garbage-collected, tetapi lebih baik untuk close() mereka secara eksplisit.\end{itemize}
+\par
+Untuk bagian Client buat script dibawah ini \par
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:6 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=3.12in,height=1.34in]{./uploads_new/3._NETWORKING.docx_DIR/media/image6.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:6 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+Maka dibawah ini adalah contoh socket diagramnya : \par
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:7 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=2.04in,height=2.54in]{./uploads_new/3._NETWORKING.docx_DIR/media/image7.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:7 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+Jika kita jalankan file server.py pada python akan menghasilkan output seperti ini : \par
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:8 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=5.09in,height=2.26in]{./uploads_new/3._NETWORKING.docx_DIR/media/image8.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:8 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+Sebelumnya pesan diatas tidak akan muncul sebelum kita menjalankan script client.py pada tab terminal lain. \par
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:9 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=4.87in,height=1.7in]{./uploads_new/3._NETWORKING.docx_DIR/media/image9.png}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:9 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+maka setiap kali kita menjalankan script client.py akan terus mengirimkan pesan kepada server maupun client. \par
+\noindent 
+\vspace{12pt}
 
 \chapter{Sending Email}
-
-\section{Sample Section}
-Here is some sample text.
-
-\section{Example, Figure and Tables}
-\vskip6pt
-\begin{example}[Optional Example Name]
-	Use Black's law [Equation (6.3)] to estimate the reduction in useful product
-	life if a metal line is initially run at 55$^\circ$C at a maximum line
-	current density.
-\end{example}
-
-\section{Algorithm}
-This is a sample algorithm.
-
-\section{Summary}
-This is a summary of this chapter.
-Here are some references: \cite{xkilby}, \cite{xberen}.
+\par
+Mail Server adalah perangkat lunak program yang mendistribusikan file atau informasi sebagai respons atas permintaan yang dikirim via email, mail server juga digunakan pada bitnet untuk menyediakan layanan serupa ftp. Selain itu mail server juga dapat dikatakan sebagai aplikasi yang digunakan untuk penginstalan email.  \par
+\vspace{12pt}
+\begin{center}
+	
+	%%%%%%%%%%%%  Figure/Image No:1 here %%%%%%%%%%%%%%
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=4.65in,height=3.26in]{./uploads_new/SENDING_EMAIL.docx_DIR/media/image1.JPG}
+		\end{center}
+	\end{figure}
+	
+	
+	%%%%%%%%%%%%  Figure/Image No:1 Ends Here %%%%%%%%%%%%%%
+	
+	
+\end{center}\vspace{12pt}
+\vspace{12pt}
+Mail Server juga bisa disebut sebagai sebuah komputer yang didedikasikan untuk menjalankan jenis aplikasi perangkat lunak komputer, hal ini dianggap sebagai bagian terpenting dari setiap email sistem. Mail Server biasanya dikelola oleh seorang yang biasanya dipanggil post master. \par
+\vspace{12pt}
+\noindent 
+Tugas Post Master  \par
+\noindent 
+\begin{itemize}
+	\item Mengelola Account \par
+	\noindent 
+	\item Memonitor Kinerja Server \par
+	\noindent 
+	\item Tugas Administratif Lainnya\end{itemize}
+\par
+\vspace{12pt}
+\noindent 
+\textbf{Protokol Pada Mail Server} \par
+\noindent 
+Protokol yang umum digunakan antara lain protokol SMTP, POP3 dan IMAP. \par
+\noindent 
+\begin{myEnumerate}
+	\item SMTP (Simple Mail Transfer Protocol) \par
+	SMTP (Simple Mail Transfer Protocol) digunakan sebagai standar untuk menampung dan mendistribusikan email. \par
+	\vspace{12pt}
+	Simple Mail Transfer Protocol atau SMTP digunakan untuk berkomunikasi dengan server guna mengirimkan email dari lokal email ke server, sebelum akhirnya dikirimkan ke server email penerima. Proses ini dikontrol dengan Mail Transfer Agent (MTA) yang ada dalam server email Anda. Port SMTP Default: \par
+	\noindent 
+	\begin{itemize}
+		\item Port~25 –  Port tanpa dienkripsi \par
+		\noindent 
+		\item Port 426 – Port SSL/TLS, nama lainnya SMTPS\end{itemize}
+	\par
+	\vspace{12pt}
+	\noindent 
+	\item POP3 (Post Office Protocol v3) \par
+	POP3 (Post Office Protocol v3) dan IMAP (Internet Mail Application Protocol) digunakan agar user dapat mengambil dan membaca email secara remote yaitu tidak perlu login ke dalam sistem shelll mesin mail server tetapi cukup menguhubungi port tertentu dengan mail client yang mengimplementasikan protocol POP3 dan IMAP. \par
+	POP3 (Post Office Protocol 3) adalah versi terbaru dari protokol standar untuk menerima email. POP3 merupakan protokol client/server dimana email dikirimkan dari server ke email lokal. Digunakan untuk berkomunikasi dengan email server dan mengunduh semua email ke email lokal (seperti Outlook, Thunderbird, Windows Mail, Mac Mail, dan sebagainya), tanpa menyimpan salinannya di server. Biasanya, dalam aplikasi email terdapat pilihan untuk tetap menyimpan salinan email yang diunduh pada server atau tidak. \par
+	\vspace{12pt}
+	Apabila kita mengakses akun email yang sama dari perangkat berbeda, akan sangat direkomendasikan untuk menyimpan backup. Hal ini perlu dilakukan sebagai langkah antisipasi apabila perangkat kedua tidak bisa mengunduh email, sementara perangkat pertama sudah menghapusnya. \par
+	\vspace{12pt}
+	POP3 adalah protokol komunikasi satu arah, yang artinya data diambil dari server dan dikirimkan ke email lokal di perangkat komputer Anda. Port POP3 Default: \par
+	\noindent 
+	\begin{itemize}
+		\item Port 110 – Port tanpa dienkripsi \par
+		\noindent 
+		\item Port 995 – Port SSL/TLS, nama lainnya POP3S\end{itemize}
+	\par
+	\vspace{12pt}
+	\vspace{12pt}
+	\vspace{12pt}
+	\vspace{12pt}
+	\textbf{Kelebihan Menggunakan POP3} \par
+	\noindent 
+	\begin{itemize}
+		\item Ketika email sudah diunduh melalui aplikasi local mail di komputer, Anda tidak perlu terhubung ke internet apabila Anda ingin membukanya kembali. \par
+		\noindent 
+		\item Kebanyakan tidak ada ukuran limit untuk email yang dikirim dan diterima. \par
+		\noindent 
+		\item Dapat membuka file attachment dengan cepat . \par
+		\noindent 
+		\item Tidak ada ukuran maksimal untuk mailbox, kecuali harddisk komputer Anda penuh.\end{itemize}
+	\par
+	\vspace{12pt}
+	\textbf{Kekurangan Menggunakan POP3} \par
+	\noindent 
+	\begin{itemize}
+		\item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. \par
+		\noindent 
+		\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer. \par
+		\noindent 
+		\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \par
+		\noindent 
+		\item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.\end{itemize}
+	\par
+	\noindent 
+	\item IMAP (Internet Message Access Protocol) \par
+	IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja. \par
+	\vspace{12pt}
+	IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3. \par
+	\vspace{12pt}
+	Dalam IMAP, email disimpan di server. ketika Anda akan mengecek email, local mail akan menghubungi server untuk menampilkan pesan email. Sehingga untuk file pesan email tetap berada di server dan tidak didownload ke email lokal. Port IMAP Default: \par
+	\noindent 
+	\begin{itemize}
+		\item Port 143 – Port tanpa dienkripsi \par
+		\noindent 
+		\item Port 993 – Port SSL/TLS, nama lainnya IMAPS\end{itemize}
+	\par
+	\vspace{12pt}
+	\textbf{Kelebihan Menggunakan IMAP} \par
+	\noindent 
+	\begin{itemize}
+		\item Anda dapat mengakses email dari mana saja melalui perangkat berbeda. \par
+		\noindent 
+		\item Email dapat diakses melalui web browser tanpa aplikasi email. \par
+		\noindent 
+		\item Anda hanya mengunduh pesan yang ingin dibuka, sehingga tidak perlu menunggu semua pesan diunduh. \par
+		\noindent 
+		\item Attachment tidak secara otomatis diunduh oleh IMAP, sehingga email dapat diakses lebih cepat. Anda juga dapat memilih attachment tertentu yang ingin Anda buka.\end{itemize}
+	\par
+	Banyaknya pengguna mobile dewasa ini mengakibatkan IMAP lebih banyak digunakan. Hal ini dikarenakan file dari pesan email tersimpan dalam server dan Anda hanya tinggal mengaksesnya saja. \par
+	\vspace{12pt}
+	\textbf{Kekurangan Menggunakan IMAP} \par
+	\noindent 
+	\begin{itemize}
+		\item Ada beberapa layanan hosting yang tidak mendukung IMAP. \par
+		\noindent 
+		\item Email disimpan pada server sehingga mengurangi disk space hosting. \par
+		\noindent 
+		\item Email dengan IMAP hanya dapat diakses ketika terkoneksi internet.\end{itemize}
+	\par
+	\vspace{12pt}
+	\noindent 
+	\textbf{Server Pada Mail Server dan Penjelasannya} \par
+	\noindent 
+	Pada mail server terdapat 2 server yang berbeda yaitu : \par
+	\noindent 
+	\begin{myEnumerate}
+		\item Outgoing Server (Sending email) : Protocol server yang menangani adalah SMTP (Simple Mail Transfer Protocol) pada port 25. \par
+		\noindent 
+		\item Incoming Server (Receiving email) : Protocol server yang menangani adalah POP3 (Post Office Protocol) pada port 110 atau IMAP (Internet Message Access Protocol) pada port 143.\end{myEnumerate}
+	\par
+	\vspace{12pt}
+	\noindent 
+	Penjelasan dari Server yang menangani outgoing email dan incoming email sebagai berikut : \par
+	\noindent 
+	\begin{myEnumerate}
+		\item SMTP Server : Saat anda mengirimkan email maka email anda akan ditangani SMTP Server dan akan dikirim ke SMTP Server tujuan, baik secara langsung maupun melalui beberapa SMTP Server dijalurnya. Apabila server tujuan terkoneksi maka email akan dikirim, namun apabila tidak terjadi koneksi maka akan dimasukan ke dalam queue dan di resend setiap 15 menit, apabila dalam 5 hari tidak ada perubahan maka akan diberikan undeliver notice ke inbox pengirim. \par
+		\vspace{12pt}
+		\noindent 
+		\item POP3 Server : Jika menggunakan POP3 Server, apabila kita akan membaca email maka email pada server di download sehingga email hanya akan ada pada mesin yang mendownload email tersebut (kita hanya bisa membaca email tersebut pada device yang mendownload email tersebut). \par
+		\vspace{12pt}
+		\noindent 
+		\item IMAP Server : Jika menggunakan IMAP Server, email dapat dibuka kembali lewat device yang berbeda. Fungsinya adalah mengelola email yang disimpan di server, kemudian email tersebut di ambil oleh client, selain itu IMAP juga meneruskan packet data. Kemampuan~ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil/download semua pesan yang ada tanpa kecuali. IMAP adalah suatu  protokol yang umum digunakan untuk pengiriman surat elektronik atau email di Internet. Protokol ini gunakan untuk mengirimkan data dari komputer pengirim surat elektronik ke server surat elektronik penerima. Untuk menggunakan SMTP bisa dari Microsoft Outlook. biasanya untuk menggunakan SMTP di perlukan settingan :\end{myEnumerate}
+	\par
+	\vspace{12pt}
+	\noindent 
+	\begin{itemize}
+		\item Email Address : contoh —> anda@domainanda.com 2. Incoming Mail (POP3, IMAP or HTTP) server : mail.doaminanda.com 3. Outgoing (SMTP) server : mail.domainanda.com 4. Account Name : anda@domainanda.com 5. Password : password yang telah anda buat sebelumnya \par
+		\vspace{12pt}
+		Pada ilustrasi diatas Siti memiliki alamat email siti@a.id menulis email nya di komputer menggunakan Thunderbird atau Evolution. Pada kolom To: dia ketikkan alamat tujuan yaitu hendra@b.id. Setelah siti menekan tombol send, email yang dikirim langsung menuju ke mesin SMTP server milik ISP 1 yang bernama smtp.a.id. \par
+		\vspace{12pt}
+		Pada server smtp.a.id menerima email dari siti (siti@a.id) yang ditujukan kepada hendra (hendra@b.id). Server mengecek smtp.a.id mencek alamat email tujuan yaitu hendra.@b.id. Mesin server smtp.a.id membutuhkan informasi ke server mana email untuk mesin.b.id harus ditujukan. Untuk memperoleh informasi tersebut tentang domain b.id. \par
+		\vspace{12pt}
+		Kemudian pada mesin Name Server ns.b.id memberitahukan mesin smtp.a.id bahwa semua email yang ditujukan kepada b.id harus dikirim kepada mesin smtp.b.id.Setelah memperoleh jawaban dari ns.c.id bahwa email harus dikirm ke mesin smtp.b.id maka mesin smtp.a.id berusaha untuk menghubungi mesin smtp.b.id.Setelah mesin smtp.b.id berhasil dihubungi, mesin smtp.a.id mengirimkan teks email dari Siti (siti@a.id) yang ditujukan kepada Hendra(henra@b.id) ke mesin smtp.b.id \par
+		\vspace{12pt}
+		Hendra (hendra@b.id)yang sedang menjalankan perangkat lunak pembaca email dan mengambil email tersebut dari eail server smtp.b.id barulah email dari Siti (siti@a.id) dapat diunduh melalui PC hendra dan di tampilkan isi emailnya. \par
+		\vspace{12pt}
+		E-mail disampaikan oleh mail client (MUA, mail user agent) ke mail server (MSA, mail submission agent) menggunakan SMTP pada port 587 atau menggunakan traditional port 25. Dari sini, MSA mengirim mail tersebut ke mail transfer agent miliknya (MTA, mail transfer agent). MTA batas harus menemukan host target, dengan menggunakan DNS untuk mencari mail exchange record (MX record) untuk domain penerima. MX record yang kembali berisi nama dari host target. MTA selanjutnya menghubungkan ke exchange server sebagai SMTP client. Ketika MX target menerima pesan yang masuk, akan ditangani oleh mail delivery agent (MDA) untuk pengiriman pesan secara local. \par
+		\vspace{12pt}
+		Analisis: \par
+		Saat PC siti diberi perintah mengirim email ke PC Hendra, kemudian email tersebut terlebih dahulu masuk ke server network dimana dia berada server 1(smtp.a.id), disini server dapat melakukan kegiatan sniffing, Pada server sebelumnya sudah saling terkoneksi dan mendapat authentifikasi dari antar server untuk meneruskan paket email yang akan dikirim protokol yang bekerja pada tahap ini adalah SMTP, kemudian email masuk pada server2 (smtp.b.id).Untuk selanjutnya email dikirim ke PC Hendra (PC Destination) pada tahap ini protokol yang bekerja adalah protokol IMAP. Sehingga dari ilustrasi yang diberikan dapat menggambarkan proses pengiriman email,dan apa saja yang terjadidalam prosesnya. \par
+		\vspace{12pt}
+		Pada proses pengiriman email terjadi kegiatan sniffing yang dilakukan oleh server. Sniffing adalah kegiatan pengendusan traffic data packet pada suatu jaringan. \par
+		\vspace{12pt}
+		Selain itu Prinsip kerja dan Porses Pengiriman Email, email juga dibedakan berdasarkan format isinya, yakni sebagai berikut: \par
+		\vspace{12pt}
+		\noindent 
+		\item Plain Text Email \par
+		Adalah~jenis email yang sisnya diformat menggunakan sistem America  Standart Code for Information Interchange (ASCII). Tulisan yang dibuat dengan format ini tidak dapat dimodifikasi seperti warna, ukuran jenis font dan lain sebagainya. emua sesuai dengan aslinya. Tidak ada pengolahan atau penambahan aksesories. \par
+		\vspace{12pt}
+		\vspace{12pt}
+		\vspace{12pt}
+		\noindent 
+		\item HTML Email\end{itemize}
+	\par
+	Merupakan bahasa standar yang digunakan untuk mengatur tampilan informasi di Internet. Email yang menggunakan format ini umunya dapat disesuaikan dengan selera pengirimnya. Dengan begitu email tersebut dapat ditambahkan macam-macam aksesoris, seperti penggantian jenis font, wat=rna font dan juga besaran font pada tiap bagian surat. \par
+	\vspace{12pt}
+	\noindent 
+	\textbf{Apa Itu Port ?} \par
+	Port adalah socket atau jack koneksi yang terletak di luar unit sistem sebagai tempat kabel - kabel yang berbeda ditancapkan. Port berfungsi untuk mentransmisikan data. Berikut macam - macam port : \par
+	\noindent 
+	\begin{myEnumerate}
+		\item Port Serial \par
+		\noindent 
+		\item Port Pararel \par
+		\noindent 
+		\item Port SCSI (Scuzzy) \par
+		\noindent 
+		\item Port USB \end{myEnumerate}
+	\par
+	\vspace{12pt}
+	\noindent 
+	\textbf{Cara Kerja Mail Server (singkat)} \par
+	Cara kerja mail server mempunyai berbagai macam versi penjelasan mengenai cara kerjanya, dalam artikel ini saya akan menjelaskan 2 versi cara kerja mail server yang sudah saya rangkum dari berbagai sumber. Sebenarnya cara kerja antara versi 1 dan 2 mempunyai inti yang sama, hanya saja penjelasannya yang beda, silahkan anda pilih yang mana. \par
+	\vspace{12pt}
+	\noindent 
+	\textbf{Cara Kerja Mail Server  $  \#  $Versi 1} \par
+	Proses pengiriman e-mail malalui tahapan yang sedikit panjang. Saat e-mail di kirim, maka e-mail tersebut disimpan pada mail server menjadi satu file berdasarkan tujuan e-mail. File ini berisi informasi sumber dan tujuan, serta dilengkapi tanggal dan waktu pengiriman. Pada saat user membaca e-mail berarti user telah mengakses server e-mail dan membaca file yang tersimpan dalam server yang di tampilkan melalui browser user. \par
+	\vspace{12pt}
+	\noindent 
+	\begin{center}
+		
+		%%%%%%%%%%%%  Figure/Image No:2 here %%%%%%%%%%%%%%
+		
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=4.16in,height=1.5in]{./uploads_new/SENDING_EMAIL.docx_DIR/media/image2.gif}
+			\end{center}
+		\end{figure}
+		
+		
+		%%%%%%%%%%%%  Figure/Image No:2 Ends Here %%%%%%%%%%%%%%
+		
+		
+	\end{center}\vspace{12pt}
+	\noindent 
+	\begin{center}Gambar proses cara kerja mail server 1\end{center} \par
+	\vspace{12pt}
+	\noindent 
+	\begin{center}
+		
+		%%%%%%%%%%%%  Figure/Image No:3 here %%%%%%%%%%%%%%
+		
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=3.97in,height=3.26in]{./uploads_new/SENDING_EMAIL.docx_DIR/media/image3.jpg}
+			\end{center}
+		\end{figure}
+		
+		
+		%%%%%%%%%%%%  Figure/Image No:3 Ends Here %%%%%%%%%%%%%%
+		
+		
+	\end{center}\vspace{12pt}
+	\noindent 
+	\begin{center}Gambar proses cara kerja mail server 2\end{center} \par
+	\vspace{12pt}
+	\vspace{12pt}
+	\noindent 
+	\textbf{Gambar proses cara kerja mail server 1} \par
+	\noindent 
+	\textbf{Cara Kerja Mail Server  $  \#  $Versi 2} \par
+	Cara kerja ini saya ambil dari Xmodulo, sebelum memahami proses cara kerja mail server sebaiknya anda mengenal terlebih dahulu singkatan - singkatan dari MUA, MTA, MDA dll. Berikut penjelasannya : \par
+	\vspace{12pt}
+	\noindent 
+	\begin{myEnumerate}
+		\item Mail User Agent (MUA) : MUA adalah komponen yang berinteraksi dengan pengguna akhir secara langsung. Contoh dari MUA yaitu Thunderbird, MS Outlook, Zimbra Desktop. Interface webmail seperti Gmail dan Yahoo juga MUA. \par
+		\noindent 
+		\item Mail Transfer Agent (MTA) : MTA bertanggung jawab untuk mentransfer email dari mail server mengirimkan sampai ke server penerima email. Contoh MTA yaitu sendmail dan postfix. \par
+		\noindent 
+		\item Mail Delivery Agent (MDA) : Dalam surat server tujuan, MTA lokal menerima email masuk dari MTA terpencil. Email tersebut kemudian dikirimkan ke kotak surat pengguna dengan MDA. \par
+		\noindent 
+		\item POP / IMAP : POP dan IMAP adalah protokol yang digunakan untuk mengambil email dari kotak surat penerima server untuk penerima MUA. \par
+		\noindent 
+		\item Mail Exchanger Record (MX) : Record MX adalah entri DNS untuk mail server. Catatan ini menunjuk ke alamat IP ke arah mana email harus ditembak. MX record terendah selalu menang, yaitu, mendapat prioritas tertinggi. Sebagai contoh, MX 10 adalah lebih baik daripada MX 20. Alamat IP dari MX record dapat bervariasi berdasarkan desain dan konfigurasi persyaratan, seperti yang akan dibahas nanti dalam artikel.\end{myEnumerate}
+	\par
+	\vspace{12pt}
+	\noindent 
+	\begin{center}
+		
+		%%%%%%%%%%%%  Figure/Image No:4 here %%%%%%%%%%%%%%
+		
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=6.27in,height=2.16in]{./uploads_new/SENDING_EMAIL.docx_DIR/media/image4.jpg}
+			\end{center}
+		\end{figure}
+		
+		
+		%%%%%%%%%%%%  Figure/Image No:4 Ends Here %%%%%%%%%%%%%%
+		
+		
+	\end{center}\vspace{12pt}
+	Ketika pengirim mengklik tombol kirim, SMTP (MTA) memastikan ujung ke ujung pengiriman email dari pengirim-sisi server ke server tujuan. Setelah mencapai server tujuan, MTA lokal ke server tujuan menerima email, dan di pindahkan ke MDA setempat. MDA kemudian menulis email ke kotak pesan penerima. Ketika penerima memeriksa email, mereka diambil oleh MUA dengan menggunakan protokol seperti POP atau IMAP. \par
+	\vspace{12pt}
 
 \chapter[Python Multithread Programming]
 {Python Multithread Programming}
