@@ -1,0 +1,929 @@
+%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
+
+
+\documentclass[a4paper,12pt]{report}
+
+% Other options in place of 'report' are 1)article 2)book 3)letter
+% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
+
+
+ %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
+
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+
+ %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
+
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
+
+
+\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
+\everymath{\displaystyle}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\newlist{myEnumerate}{enumerate}{9}
+	\setlist[myEnumerate,1]{label=\arabic*)}
+	\setlist[myEnumerate,2]{label=\alph*)}
+	\setlist[myEnumerate,3]{label=(\roman*)}
+	\setlist[myEnumerate,4]{label=(\arabic*)}
+	\setlist[myEnumerate,5]{label=(\Alph*)}
+	\setlist[myEnumerate,6]{label=(\Roman*)}
+	\setlist[myEnumerate,7]{label=\arabic*}
+	\setlist[myEnumerate,8]{label=\alph*}
+	\setlist[myEnumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+	\setlist[itemize]{label=$\cdot$}
+	\setlist[itemize,1]{label=\textbullet}
+	\setlist[itemize,2]{label=$\circ$}
+	\setlist[itemize,3]{label=$\ast$}
+	\setlist[itemize,4]{label=$\dagger$}
+	\setlist[itemize,5]{label=$\triangleright$}
+	\setlist[itemize,6]{label=$\bigstar$}
+	\setlist[itemize,7]{label=$\blacklozenge$}
+	\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+ %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
+
+
+
+
+ %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
+
+
+\rfoot{\thepage}
+
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\setstretch{1.08}
+
+
+ %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
+
+
+\begin{document}
+\sloppy
+\begin{center}{\fontsize{24pt}{24pt}\selectfont \textbf{Python Regular Expressions} \\}\end{center} \par
+\noindent 
+Ekspresi reguler adalah urutan khusus karakter yang membantu Anda mencocokkan atau menemukan string atau rangkaian senar lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola. Ekspresi reguler banyak digunakan di dunia UNIX. \par
+\vspace{12pt}
+\noindent 
+Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul re meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler. \par
+\vspace{12pt}
+\noindent 
+Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai karakter, yang tentunya memiliki arti khusus bila digunakan dalam ekspresi reguler. Untuk menghindari kebingungan saat berhadapan dengan ekspresi reguler, kita akan menggunakan Raw Strings sebagai r'expression '. \par
+\noindent 
+Fungsi Pertandingan \par
+\vspace{12pt}
+\noindent 
+Fungsi ini mencoba mencocokkan pola RE dengan string dengan flag pilihan. \par
+\vspace{12pt}
+\noindent 
+Berikut adalah sintaks untuk fungsi ini - \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  } \par
+
+
+ %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.88in}p{4.38in} }
+\hhline{--}
+\multicolumn{1}{|p{1.88in}}{\textbf{Parameter}} & \multicolumn{1}{|p{4.38in}|}{\textbf{Description}} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{pattern} & \multicolumn{1}{|p{4.38in}|}{Ini adalah ekspresi reguler yang harus disesuaikan.} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{string} & \multicolumn{1}{|p{4.38in}|}{Ini adalah string, yang akan dicari agar sesuai dengan pola pada awal string.} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{flags} & \multicolumn{1}{|p{4.38in}|}{Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:1 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+Fungsi re.match mengembalikan objek yang cocok pada kesuksesan, None on failure. Kami mengelompokkan (num) atau kelompok () fungsi objek pencocokan untuk mendapatkan ekspresi yang sesuai. \par
+
+
+ %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.88in}p{4.38in} }
+\hhline{--}
+\multicolumn{1}{|p{1.88in}}{\textbf{Match Object Methods}} & \multicolumn{1}{|p{4.38in}|}{\textbf{Description}} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{group(num=0)} & \multicolumn{1}{|p{4.38in}|}{Metode ini mengembalikan seluruh kecocokan (atau jumlah subkelompok tertentu)} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{groups()} & \multicolumn{1}{|p{4.38in}|}{Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada)} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:2 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{16pt}
+\noindent 
+ $  \#  $! / Usr / bin / python \par
+\noindent 
+Impor kembali \par
+\vspace{12pt}
+\noindent 
+Line = "Kucing lebih pintar dari pada anjing" \par
+\vspace{12pt}
+\noindent 
+MatchObj = re.match (r '(. *) Adalah (. *?). *', Line, re.M  $  \vert  $ re.I) \par
+\vspace{12pt}
+\noindent 
+jika cocokObj: \par
+\noindent 
+ $  $ $  $ $  $cetak "matchObj.group ():", matchObj.group () \par
+\noindent 
+ $  $ $  $ $  $cetak "matchObj.group (1):", matchObj.group (1) \par
+\noindent 
+ $  $ $  $ $  $Cetak "matchObj.group (2):", matchObj.group (2) \par
+\noindent 
+lain: \par
+\noindent 
+ $  $ $  $ $  $cetak "Tidak ada pertandingan !!" \par
+\vspace{12pt}
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+\noindent 
+MatchObj.group (): Kucing lebih pintar dari pada anjing \par
+\noindent 
+MatchObj.group (1): Kucing \par
+\noindent 
+MatchObj.group (2): lebih pintar \par
+\vspace{12pt}
+\noindent 
+Fungsi Pencarian \par
+\vspace{12pt}
+\noindent 
+Fungsi ini mencari kejadian pertama dari pola RE dalam string dengan flag pilihan. \par
+\vspace{12pt}
+\noindent 
+Berikut adalah sintaks untuk fungsi ini: \par
+\vspace{12pt}
+\noindent 
+Re.search (pola, string, flag = 0) \par
+\vspace{12pt}
+\noindent 
+Berikut adalah deskripsi parameternya: \par
+
+
+ %%%%%%%%%%%%  Table No:3 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.88in}p{4.38in} }
+\hhline{--}
+\multicolumn{1}{|p{1.88in}}{\Centering \textbf{Parameter}} & \multicolumn{1}{|p{4.38in}|}{\Centering \textbf{Description}} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{pattern} & \multicolumn{1}{|p{4.38in}|}{Ini adalah ekspresi reguler yang harus disesuaikan.} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{string} & \multicolumn{1}{|p{4.38in}|}{Ini adalah string, yang akan dicari agar sesuai dengan pola di manapun dalam string.} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{flags} & \multicolumn{1}{|p{4.38in}|}{Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:3 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok (num) atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai. \par
+\vspace{12pt}
+
+
+ %%%%%%%%%%%%  Table No:4 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.88in}p{4.38in} }
+\hhline{--}
+\multicolumn{1}{|p{1.88in}}{\textbf{Match Object Methods}} & \multicolumn{1}{|p{4.38in}|}{\textbf{Description}} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{group(num=0)} & \multicolumn{1}{|p{4.38in}|}{Metode ini mengembalikan seluruh kecocokan (atau jumlah subkelompok tertentu)} & \hhline{--}
+\multicolumn{1}{|p{1.88in}}{groups()} & \multicolumn{1}{|p{4.38in}|}{Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada)} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:4 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+import re \par
+\vspace{12pt}
+\noindent 
+line = "Cats are smarter than dogs"; \par
+\vspace{12pt}
+\noindent 
+searchObj = re.search( r'(.*) are (.*?) .*', line, re.M $  \vert  $re.I) \par
+\vspace{12pt}
+\noindent 
+if searchObj: \par
+\noindent 
+~~ print "searchObj.group() : ", searchObj.group() \par
+\noindent 
+~~ print "searchObj.group(1) : ", searchObj.group(1) \par
+\noindent 
+~~ print "searchObj.group(2) : ", searchObj.group(2) \par
+\noindent 
+else: \par
+\noindent 
+~~ print "Nothing found!!" \par
+\vspace{12pt}
+\noindent 
+searchObj.group() :~ Cats are smarter than dogs \par
+\noindent 
+searchObj.group(1) :~ Cats \par
+\noindent 
+searchObj.group(2) :~ smarter \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Pencocokan Versus Searching \par
+\vspace{12pt}
+\noindent 
+Python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default). \par
+\noindent 
+Contoh \par
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+import re \par
+\vspace{12pt}
+\noindent 
+line = "Cats are smarter than dogs"; \par
+\vspace{12pt}
+\noindent 
+matchObj = re.match( r'dogs', line, re.M $  \vert  $re.I) \par
+\noindent 
+if matchObj: \par
+\noindent 
+~~ print "match --> matchObj.group() : ", matchObj.group() \par
+\noindent 
+else: \par
+\noindent 
+~~ print "No match!!" \par
+\vspace{12pt}
+\noindent 
+searchObj = re.search( r'dogs', line, re.M $  \vert  $re.I) \par
+\noindent 
+if searchObj: \par
+\noindent 
+~~ print "search --> searchObj.group() : ", searchObj.group() \par
+\noindent 
+else: \par
+\noindent 
+~~ print "Nothing found!!" \par
+\vspace{12pt}
+\noindent 
+No match!! \par
+\noindent 
+search~--> matchObj.group() :  dogs \par
+\vspace{12pt}
+\noindent 
+Cari dan Ganti \par
+\vspace{12pt}
+\noindent 
+Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub. \par
+\noindent 
+Sintaksis \par
+\vspace{12pt}
+\noindent 
+Re.sub (pola, repl, string, max = 0) \par
+\vspace{12pt}
+\noindent 
+Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi. \par
+\noindent 
+Contoh \par
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+import re \par
+\vspace{12pt}
+\noindent 
+phone = "2004-959-559  $  \#  $ This is Phone Number" \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Delete Python-style comments \par
+\noindent 
+num = re.sub(r' $  \#  $.* $  \$  $', "", phone) \par
+\noindent 
+print "Phone Num : ", num \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Remove anything other than digits \par
+\noindent 
+num = re.sub(r' $  \textbackslash  $D', "", phone)~~~  \par
+\noindent 
+print "Phone Num : ", num \par
+\vspace{12pt}
+\noindent 
+Phone Num :~ 2004-959-559 \par
+\noindent 
+Phone Num :~ 2004959559 \par
+\vspace{12pt}
+\noindent 
+Regular Expression Modifiers: Option Flags \par
+\vspace{12pt}
+\noindent 
+Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif ( $  \vert  $), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini - \par
+
+
+ %%%%%%%%%%%%  Table No:5 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.57in}p{4.7in} }
+\hhline{--}
+\multicolumn{1}{|p{1.57in}}{\Centering \textbf{Modifier}} & \multicolumn{1}{|p{4.7in}|}{\Centering \textbf{Description}} & \hhline{--}
+\multicolumn{1}{|p{1.57in}}{re.I} & \multicolumn{1}{|p{4.7in}|}{Lakukan pencocokan case-insensitive.} & \hhline{--}
+\multicolumn{1}{|p{1.57in}}{re.L} & \multicolumn{1}{|p{4.7in}|}{Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( $  \textbackslash  $ w dan  $  \textbackslash  $ W), serta perilaku batas kata ( $  \textbackslash  $ b dan  $  \textbackslash  $ B).} & \hhline{--}
+\multicolumn{1}{|p{1.57in}}{re.M} & \multicolumn{1}{|p{4.7in}|}{Membuat  $  \$  $ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  $  \string^  $ cocok dengan awal baris apapun (bukan hanya permulaan string).} & \hhline{--}
+\multicolumn{1}{|p{1.57in}}{re.S} & \multicolumn{1}{|p{4.7in}|}{Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline.} & \hhline{--}
+\multicolumn{1}{|p{1.57in}}{re.U} & \multicolumn{1}{|p{4.7in}|}{Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \textbackslash  $ w,  $  \textbackslash  $ W,  $  \textbackslash  $ b,  $  \textbackslash  $ B.} & \hhline{--}
+\multicolumn{1}{|p{1.57in}}{re.X} & \multicolumn{1}{|p{4.7in}|}{Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  $  \#  $ sebagai tanda komentar.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:5 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Pola Ekspresi Reguler \par
+\vspace{12pt}
+\noindent 
+Kecuali karakter kontrol, (+?.  $  \string^  $  $  \string^  $  $  \$  $ () []  $  \{  $ $  \}  $  $  \vert  $  $  \textbackslash  $), Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik. \par
+\vspace{12pt}
+\noindent 
+Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python - \par
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+import re \par
+\vspace{12pt}
+\noindent 
+phone = "2004-959-559  $  \#  $ This is Phone Number" \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Delete Python-style comments \par
+\noindent 
+num = re.sub(r' $  \#  $.* $  \$  $', "", phone) \par
+\noindent 
+print "Phone Num : ", num \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Remove anything other than digits \par
+\noindent 
+num = re.sub(r' $  \textbackslash  $D', "", phone)~~~  \par
+\noindent 
+print "Phone Num : ", num \par
+\vspace{12pt}
+\noindent 
+Phone Num :~ 2004-959-559 \par
+\noindent 
+Phone Num :~ 2004959559 \par
+\vspace{12pt}
+\noindent 
+<Directory "/var/www/cgi-bin"> \par
+\noindent 
+~~ AllowOverride None \par
+\noindent 
+~~ Options ExecCGI \par
+\noindent 
+~~ Order allow,deny \par
+\noindent 
+~~ Allow from all \par
+\noindent 
+</Directory> \par
+\vspace{12pt}
+\noindent 
+<Directory "/var/www/cgi-bin"> \par
+\noindent 
+Options All \par
+\noindent 
+</Directory> \par
+\vspace{12pt}
+\noindent 
+!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+print "Content-type:text/html $  \textbackslash  $r $  \textbackslash  $n $  \textbackslash  $r $  \textbackslash  $n" \par
+\noindent 
+print '<html>' \par
+\noindent 
+print '<head>' \par
+\noindent 
+print '<title>Hello Word - First CGI Program</title>' \par
+\noindent 
+print '</head>' \par
+\noindent 
+print '<body>' \par
+\noindent 
+print '<h2>Hello Word! This is my first CGI program</h2>' \par
+\noindent 
+print '</body>' \par
+\noindent 
+print '</html>' \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Halo kata! Ini adalah program CGI pertamaku \par
+\vspace{12pt}
+\noindent 
+Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  $  \textbackslash  $ r  $  \textbackslash  $ n  $  \textbackslash  $ r  $  \textbackslash  $ n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. \par
+\vspace{12pt}
+\noindent 
+Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS. \par
+\noindent 
+Header HTTP \par
+\vspace{12pt}
+\noindent 
+Baris Content-type: text / html  $  \textbackslash  $ r  $  \textbackslash  $ n  $  \textbackslash  $ r  $  \textbackslash  $ n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut - \par
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Import modules for CGI handling  \par
+\noindent 
+import cgi, cgitb  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Create instance of FieldStorage  \par
+\noindent 
+form = cgi.FieldStorage()  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Get data from fields \par
+\noindent 
+first $  \_  $name = form.getvalue('first $  \_  $name') \par
+\noindent 
+last $  \_  $name~ = form.getvalue('last $  \_  $name') \par
+\vspace{12pt}
+\noindent 
+print "Content-type:text/html $  \textbackslash  $r $  \textbackslash  $n $  \textbackslash  $r $  \textbackslash  $n" \par
+\noindent 
+print "<html>" \par
+\noindent 
+print "<head>" \par
+\noindent 
+print "<title>Hello - Second CGI Program</title>" \par
+\noindent 
+print "</head>" \par
+\noindent 
+print "<body>" \par
+\noindent 
+print "<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $name) \par
+\noindent 
+print "</body>" \par
+\noindent 
+print "</html>" \par
+\vspace{12pt}
+\noindent 
+<form action="/cgi-bin/hello $  \_  $get.py" method="get"> \par
+\noindent 
+First Name: <input type="text" name="first $  \_  $name">~ <br /> \par
+\vspace{12pt}
+\noindent 
+Last Name: <input type="text" name="last $  \_  $name" /> \par
+\noindent 
+<input type="submit" value="Submit" /> \par
+\noindent 
+</form> \par
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Import modules for CGI handling  \par
+\noindent 
+import cgi, cgitb  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Create instance of FieldStorage  \par
+\noindent 
+form = cgi.FieldStorage()  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Get data from fields \par
+\noindent 
+first $  \_  $name = form.getvalue('first $  \_  $name') \par
+\noindent 
+last $  \_  $name~ = form.getvalue('last $  \_  $name') \par
+\vspace{12pt}
+\noindent 
+print "Content-type:text/html $  \textbackslash  $r $  \textbackslash  $n $  \textbackslash  $r $  \textbackslash  $n" \par
+\noindent 
+print "<html>" \par
+\noindent 
+print "<head>" \par
+\noindent 
+print "<title>Hello - Second CGI Program</title>" \par
+\noindent 
+print "</head>" \par
+\noindent 
+print "<body>" \par
+\noindent 
+print "<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $name) \par
+\noindent 
+print "</body>" \par
+\noindent 
+print "</html>" \par
+\vspace{12pt}
+\noindent 
+<form action="/cgi-bin/hello $  \_  $get.py" method="post"> \par
+\noindent 
+First Name: <input type="text" name="first $  \_  $name"><br /> \par
+\noindent 
+Last Name: <input type="text" name="last $  \_  $name" /> \par
+\vspace{12pt}
+\noindent 
+<input type="submit" value="Submit" /> \par
+\noindent 
+</form> \par
+\vspace{16pt}
+\noindent 
+Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello $  \_  $get.py untuk menangani masukan ini. \par
+\vspace{16pt}
+\noindent 
+Melewati Data Kotak Centang ke Program CGI \par
+\vspace{12pt}
+\noindent 
+Kotak centang digunakan bila lebih dari satu pilihan diperlukan untuk dipilih. \par
+\vspace{12pt}
+\noindent 
+Berikut adalah contoh kode HTML untuk form dengan dua kotak centang - \par
+\vspace{16pt}
+\noindent 
+Melewati Data Tombol Radio ke Program CGI \par
+\vspace{12pt}
+\noindent 
+Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih. \par
+\vspace{12pt}
+\noindent 
+Berikut adalah contoh kode HTML untuk form dengan dua tombol radio  \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Import modules for CGI handling  \par
+\noindent 
+import cgi, cgitb  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Create instance of FieldStorage  \par
+\noindent 
+form = cgi.FieldStorage()  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Get data from fields \par
+\noindent 
+if form.getvalue('subject'): \par
+\noindent 
+~~ subject = form.getvalue('subject') \par
+\noindent 
+else: \par
+\noindent 
+~~ subject = "Not set" \par
+\vspace{12pt}
+\noindent 
+print "Content-type:text/html $  \textbackslash  $r $  \textbackslash  $n $  \textbackslash  $r $  \textbackslash  $n" \par
+\noindent 
+print "<html>" \par
+\noindent 
+print "<head>" \par
+\noindent 
+print "<title>Radio - Fourth CGI Program</title>" \par
+\noindent 
+print "</head>" \par
+\noindent 
+print "<body>" \par
+\noindent 
+print "<h2> Selected Subject is  $  \%  $s</h2>"  $  \%  $ subject \par
+\noindent 
+print "</body>" \par
+\noindent 
+print "</html>" \par
+\vspace{12pt}
+\noindent 
+<form action="/cgi-bin/textarea.py" method="post" target=" $  \_  $blank"> \par
+\noindent 
+<textarea name="textcontent" cols="40" rows="4"> \par
+\noindent 
+Type your text here... \par
+\noindent 
+</textarea> \par
+\noindent 
+<input type="submit" value="Submit" /> \par
+\noindent 
+</form> \par
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Import modules for CGI handling  \par
+\noindent 
+import cgi, cgitb  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Create instance of FieldStorage  \par
+\noindent 
+form = cgi.FieldStorage()  \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Get data from fields \par
+\noindent 
+if form.getvalue('textcontent'): \par
+\noindent 
+~~ text $  \_  $content = form.getvalue('textcontent') \par
+\noindent 
+else: \par
+\noindent 
+~~ text $  \_  $content = "Not entered" \par
+\vspace{12pt}
+\noindent 
+print "Content-type:text/html $  \textbackslash  $r $  \textbackslash  $n $  \textbackslash  $r $  \textbackslash  $n" \par
+\noindent 
+print "<html>" \par
+\noindent 
+print "<head>"; \par
+\noindent 
+print "<title>Text Area - Fifth CGI Program</title>" \par
+\noindent 
+print "</head>" \par
+\noindent 
+print "<body>" \par
+\noindent 
+print "<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content \par
+\noindent 
+print "</body>" \par
+\vspace{12pt}
+\noindent 
+Menggunakan Cookies di CGI \par
+\vspace{12pt}
+\noindent 
+Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? \par
+\vspace{12pt}
+\noindent 
+Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik. \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Contoh dasar \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Joke: apa yang kamu sebut babi dengan tiga mata? Piiig! \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string adalah: \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  $ $  $ $  $ $  $Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan \par
+\noindent 
+ $  $ $  $ $  $ $  $Semua pola harus dicocokkan, tapi tidak semua senar \par
+\noindent 
+ $  $ $  $ $  $ $  $Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok \par
+\vspace{12pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'.\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere.\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ On success, match.group() is matched text.\vspace{\baselineskip}
+ $  $ match = re.search(r'iii', 'piiig') =>  $  $found, match.group() == "iii"\vspace{\baselineskip}
+ $  $ match = re.search(r'igs', 'piiig') =>  $  $not found, match == None\vspace{\baselineskip}
+\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ . = any char but  $  \textbackslash  $n\vspace{\baselineskip}
+ $  $ match = re.search(r'..g', 'piiig') =>  $  $found, match.group() == "iig"\vspace{\baselineskip}
+\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $  $  \textbackslash  $d = digit char,  $  \textbackslash  $w = word char\vspace{\baselineskip}
+ $  $ match = re.search(r' $  \textbackslash  $d $  \textbackslash  $d $  \textbackslash  $d', 'p123g') =>  $  $found, match.group() == "123"\vspace{\baselineskip}
+ $  $ match = re.search(r' $  \textbackslash  $w $  \textbackslash  $w $  \textbackslash  $w', '@@abcd!!') =>  $  $found, match.group() == "abc"} \par
+\noindent 
+\vspace{10pt}
+\noindent 
+\vspace{10pt}
+\noindent 
+Pengulangan \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Hal menjadi lebih menarik saat Anda menggunakan + dan * untuk menentukan pengulangan dalam polanya \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  $ $  $ $  $ $  $+ - 1 atau lebih kemunculan pola ke kiri, mis. 'I +' = satu atau lebih i's \par
+\noindent 
+ $  $ $  $ $  $ $  $* - 0 atau lebih kemunculan pola ke kiri \par
+\noindent 
+ $  $ $  $ $  $ $  $? - cocokkan 0 atau 1 kemunculan pola ke kiri \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Paling kiri  $  \&  $ terbesar \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Pertama, pencarian menemukan kecocokan paling kiri untuk pola tersebut, dan kedua mencoba menggunakan sebanyak mungkin string - yaitu + dan * sejauh mungkin (huruf + dan * dikatakan "serakah"). \par
+\noindent 
+Contoh pengulangan \par
+\noindent 
+\vspace{12pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ $  \#  $ i+ = one or more i's, as many as possible.\vspace{\baselineskip}
+ $  $ match = re.search(r'pi+', 'piiig') =>  $  $found, match.group() == "piii"\vspace{\baselineskip}
+\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the +\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest').\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ In this example, note that it does not get to the second set of i's.\vspace{\baselineskip}
+ $  $ match = re.search(r'i+', 'piigiiii') =>  $  $found, match.group() == "ii"\vspace{\baselineskip}
+\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $  $  \textbackslash  $s* = zero or more whitespace chars\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ Here look for 3 digits, possibly separated by whitespace.\vspace{\baselineskip}
+ $  $ match = re.search(r' $  \textbackslash  $d $  \textbackslash  $s* $  \textbackslash  $d $  \textbackslash  $s* $  \textbackslash  $d', 'xx1 2  $  $ 3xx') =>  $  $found, match.group() == "1 2  $  $ 3"\vspace{\baselineskip}
+ $  $ match = re.search(r' $  \textbackslash  $d $  \textbackslash  $s* $  \textbackslash  $d $  \textbackslash  $s* $  \textbackslash  $d', 'xx12  $  $3xx') =>  $  $found, match.group() == "12  $  $3"\vspace{\baselineskip}
+ $  $ match = re.search(r' $  \textbackslash  $d $  \textbackslash  $s* $  \textbackslash  $d $  \textbackslash  $s* $  \textbackslash  $d', 'xx123xx') =>  $  $found, match.group() == "123"\vspace{\baselineskip}
+\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails:\vspace{\baselineskip}
+ $  $ match = re.search(r' $  \string^  $b $  \textbackslash  $w+', 'foobar') =>  $  $not found, match == None\vspace{\baselineskip}
+ $  $  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds:\vspace{\baselineskip}
+ $  $ match = re.search(r'b $  \textbackslash  $w+', 'foobar') =>  $  $found, match.group() == "bar"} \par
+\noindent 
+Contoh email \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \textbackslash  $ w + @  $  \textbackslash  $ w +': \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  $ $  $Str = 'ungu alice-b@google.com monyet pencuci piring' \par
+\noindent 
+ $  $ $  $Match = re.search (r ' $  \textbackslash  $ w + @  $  \textbackslash  $ w +', str) \par
+\noindent 
+ $  $ $  $Jika cocok: \par
+\noindent 
+ $  $ $  $ $  $ $  $print match.group ()  $  \#  $ $  \#  $ 'b @ google' \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Pencarian tidak mendapatkan keseluruhan alamat email dalam kasus ini karena  $  \textbackslash  $ w tidak cocok dengan '-' atau '.' Di alamat Kami akan memperbaikinya menggunakan fitur ekspresi reguler di bawah ini. \par
+\noindent 
+Kurung persegi \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Tanda kurung siku dapat digunakan untuk menunjukkan sekumpulan karakter, jadi [abc] cocok dengan 'a' atau 'b' atau 'c'. Kode  $  \textbackslash  $ w,  $  \textbackslash  $ s dll bekerja di dalam kurung siku juga dengan satu pengecualian bahwa titik (.) Hanya berarti titik literal. Untuk masalah email, tanda kurung siku adalah cara mudah untuk menambahkan '.' Dan '-' ke kumpulan karakter yang dapat muncul di sekitar @ dengan pola r '[ $  \textbackslash  $ w .-] + @ [ $  \textbackslash  $ w .-] +' untuk mendapatkan keseluruhan alamat email: \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  $ $  $Match = re.search (r '[ $  \textbackslash  $ w .-] + @ [ $  \textbackslash  $ w .-] +', str) \par
+\noindent 
+ $  $ $  $Jika cocok: \par
+\noindent 
+ $  $ $  $ $  $ $  $print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' \par
+\noindent 
+\vspace{12pt}
+\noindent 
+(Lebih banyak fitur kotak-braket) Anda juga dapat menggunakan tanda hubung untuk menunjukkan jangkauan, jadi [a-z] cocok dengan semua huruf kecil. Untuk menggunakan tanda hubung tanpa menunjukkan jangkauan, pasang tanda hubung terakhir, mis. [abc-]. Top-up ( $  \string^  $) pada awal set persegi-braket telah membalikkannya, jadi [ $  \string^  $ ab] berarti karakter apapun kecuali 'a' atau 'b'. \par
+\noindent 
+\vspace{16pt}
+\noindent 
+Ekstraksi Grup \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Fitur "kelompok" dari ekspresi reguler memungkinkan Anda untuk memilih bagian dari teks yang sesuai. Misalkan untuk masalah email yang ingin kita ekstrak username dan host secara terpisah. Untuk melakukan ini, tambahkan kurung () di sekitar nama pengguna dan host dalam pola, seperti ini: r '([ $  \textbackslash  $ w .-] +) @ ([ $  \textbackslash  $ w .-] +)'. Dalam kasus ini, tanda kurung tidak mengubah pola yang akan cocok, sebaliknya mereka membentuk "kelompok" logis dalam teks pertandingan. Pada pencarian yang sukses, match.group (1) adalah teks kecocokan yang sesuai dengan tanda kurung kiri ke 1, dan match.group (2) adalah teks yang sesuai dengan kurung kiri ke-2. Match.group polos () masih merupakan keseluruhan teks pertandingan seperti biasa. \par
+\noindent 
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $Str = 'ungu alice-b@google.com monyet pencuci piring'} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $Match = re.search ('([ $  \textbackslash  $ w .-] +) @ ([ $  \textbackslash  $ w .-] +)', str)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $Jika cocok:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' (keseluruhan pertandingan)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $Print match.group (1)  $  \#  $ $  \#  $ 'alice-b' (nama pengguna, grup 1)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $Print match.group (2)  $  \#  $ $  \#  $ 'google.com' (host, grup 2)} \par
+\noindent 
+\vspace{10pt}
+\noindent 
+Alur kerja umum dengan ekspresi reguler adalah Anda menulis sebuah pola untuk hal yang Anda cari, menambahkan kelompok tanda kurung untuk mengekstrak bagian yang Anda inginkan. \par
+\noindent 
+Temukan semua \par
+\noindent 
+Findall () mungkin adalah fungsi tunggal yang paling kuat dalam modul re. Di atas kami menggunakan re.search () untuk menemukan kecocokan pertama untuk sebuah pola. Findall () menemukan * semua * kecocokan dan mengembalikannya sebagai daftar string, dengan masing-masing string mewakili satu kecocokan. \par
+\noindent 
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  \#  $ $  \#  $ Misalkan kita memiliki teks dengan banyak alamat email} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $Str = 'ungu alice@google.com, bla monyet bob@abc.com blah pencuci piring'} \par
+\noindent 
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $Email = re.findall (r '[ $  \textbackslash  $ w  $  \textbackslash  $ .-] + @ [ $  \textbackslash  $ w  $  \textbackslash  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com']} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $Untuk email di email:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $ $  \#  $ Lakukan sesuatu dengan setiap string email yang ditemukan} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $Cetak email} \par
+\noindent 
+\vspace{16pt}
+\end{document}
