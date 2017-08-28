@@ -1,0 +1,317 @@
+%%%%%%%%%%%%%%
+%% Run LaTeX on this file several times to get Table of Contents,
+%% cross-references, and citations.
+
+%% If you have font problems, you may edit the w-bookps.sty file
+%% to customize the font names to match those on your system.
+
+%% w-bksamp.tex. Current Version: Feb 16, 2012
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Sample file for
+%  Wiley Book Style, Design No.: SD 001B, 7x10
+%  Wiley Book Style, Design No.: SD 004B, 6x9
+%
+%
+%  Prepared by Amy Hendrickson, TeXnology Inc.
+%  http://www.texnology.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%
+% 7x10
+%\documentclass{wileySev}
+
+% 6x9
+\documentclass{wileySix}
+
+\usepackage{graphicx}
+
+%%%%%%%
+%% for times math: However, this package disables bold math (!)
+%% \mathbf{x} will still work, but you will not have bold math
+%% in section heads or chapter titles. If you don't use math
+%% in those environments, mathptmx might be a good choice.
+
+% \usepackage{mathptmx}
+
+% For PostScript text
+\usepackage{w-bookps}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Other packages you might want to use:
+
+% for chapter bibliography made with BibTeX
+% \usepackage{chapterbib}
+
+% for multiple indices
+% \usepackage{multind}
+
+% for answers to problems
+% \usepackage{answers}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Change options here if you want:
+%%
+%% How many levels of section head would you like numbered?
+%% 0= no section numbers, 1= section, 2= subsection, 3= subsubsection
+%%==>>
+\setcounter{secnumdepth}{3}
+
+%% How many levels of section head would you like to appear in the
+%% Table of Contents?
+%% 0= chapter titles, 1= section titles, 2= subsection titles, 
+%% 3= subsubsection titles.
+%%==>>
+\setcounter{tocdepth}{2}
+
+%% Cropmarks? good for final page makeup
+%% \docropmarks
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% DRAFT
+%
+% Uncomment to get double spacing between lines, current date and time
+% printed at bottom of page.
+% \draft
+% (If you want to keep tables from becoming double spaced also uncomment
+% this):
+% \renewcommand{\arraystretch}{0.6}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Demo of section head containing sample macro:
+%% To get a macro to expand correctly in a section head, with upper and
+%% lower case math, put the definition and set the box 
+%% before \begin{document}, so that when it appears in the 
+%% table of contents it will also work:
+
+\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+
+%% use a box to expand the macro before we put it into the section head:
+
+\newbox\sectsavebox
+\setbox\sectsavebox=\hbox{\boldmath\VT{xyz}}
+
+%%%%%%%%%%%%%%%%% End Demo
+
+
+\begin{document}
+
+
+\booktitle{Python Variabel Type }
+\subtitle{This is the Subtitle}
+
+
+\part[Python Variable Type]
+{Python\\ Variable Type}
+
+
+\chapter[Python Variable Type]
+{Python\\ Variable Type}
+
+
+
+\subsection{Python Variabel Type}
+\begin{flushleft}
+•
+\end{flushleft}Variabel tidak lain hanyalah lokasi memori reserved untuk menyimpan nilai. Ini berarti bahwa ketika Anda membuat variabel Anda memesan beberapa ruang di memori.
+Berdasarkan tipe data sebuah variabel, penafsir mengalokasikan memori dan memutuskan apa yang dapat disimpan dalam memori yang dipesan. Oleh karena itu, dengan menetapkan tipe data yang berbeda ke variabel, Anda dapat menyimpan bilangan bulat, desimal atau karakter dalam variabel ini.
+
+
+
+\subsubsection{Menetapkan Nilai ke Variabel}
+\begin{flushleft}
+•
+\end{flushleft}Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel. Tanda sama (=) digunakan untuk menetapkan nilai pada variabel.
+Operand di sebelah kiri = operator adalah nama variabel dan operan di sebelah kanan = operator adalah nilai yang tersimpan dalam variabel. Misalnya 
+\subsubsection{Beberapa Tugas}
+\begin{flushleft}
+•
+\end{flushleft}Python memungkinkan Anda untuk menetapkan nilai tunggal ke beberapa variabel secara bersamaan. Misalnya \begin{flushleft}
+•
+\end{flushleft}a = b = c = 1
+Di sini, sebuah objek bilangan bulat dibuat dengan nilai 1, dan ketiga variabel ditugaskan ke lokasi memori yang sama. Anda juga dapat menetapkan beberapa objek ke beberapa variabel. Misalnya -
+\begin{flushleft}
+•
+\end{flushleft}a,b,c = 1,2,"john"
+\begin{flushleft}
+•
+\end{flushleft}Di sini, dua objek bilangan bulat dengan nilai 1 dan 2 masing-masing diberikan pada variabel a dan b masing-masing, dan satu objek string dengan nilai "john" diberikan ke variabel c.
+
+\subsubsection{Tipe data standar}
+\begin{flushleft}
+•
+\end{flushleft}Data yang tersimpan dalam memori bisa bermacam-macam. Misalnya, usia seseorang disimpan sebagai nilai numerik dan alamatnya disimpan sebagai karakter alfanumerik. Python memiliki berbagai jenis data standar yang digunakan untuk menentukan operasi yang mungkin dilakukan pada mereka dan metode penyimpanan untuk masing-masing metode.Python memiliki lima tipe data standar:
+\begin{flushleft}
+•
+\end{flushleft}Angka
+\begin{flushleft}
+•
+\end{flushleft}Tali
+\begin{flushleft}
+•
+\end{flushleft}Daftar
+\begin{flushleft}
+•
+\end{flushleft}Tuple
+\begin{flushleft}
+•
+\end{flushleft}Kamus
+
+\subsubsection{Nomor Python}
+\begin{flushleft}
+•
+\end{flushleft}Nomor tipe data menyimpan nilai numerik. Nomor objek dibuat saat Anda memberikan nilai pada mereka. Misalnya : \begin{flushleft}
+•
+\end{flushleft}var1 = 1
+\begin{flushleft}
+•
+\end{flushleft}var2 = 10
+\begin{flushleft}
+•
+\end{flushleft}Anda juga dapat menghapus referensi ke objek nomor dengan menggunakan del statement. Sintaks dari pernyataan del adalah -
+\begin{flushleft}
+•
+\end{flushleft}del var1[,var2[,var3[....,varN]]]]
+\begin{flushleft}
+•
+\end{flushleft}Anda dapat menghapus satu objek atau beberapa objek dengan menggunakan pernyataan del. Misalnya -
+\begin{flushleft}
+•
+\end{flushleft}del var
+\begin{flushleft}
+•
+\end{flushleft}del var a, var b
+\begin{flushleft}
+•
+\end{flushleft}Python mendukung empat jenis numerik yang berbeda -
+\begin{flushleft}
+•
+\end{flushleft}int (bilangan bulat yang ditandatangani)
+\begin{flushleft}
+•
+\end{flushleft}Panjang (bilangan bulat panjang, mereka juga bisa diwakili dalam oktal dan heksadesimal)
+\begin{flushleft}
+•
+\end{flushleft}float (floating point real value)
+\begin{flushleft}
+•
+\end{flushleft}kompleks (bilangan kompleks)
+\begin{flushleft}
+•
+\end{flushleft}Python memungkinkan Anda untuk menggunakan huruf kecil l dengan panjang, tapi disarankan agar Anda hanya menggunakan huruf besar L untuk menghindari kebingungan dengan nomor 1. Python menampilkan bilangan bulat panjang dengan huruf besar L.
+\begin{flushleft}
+•
+\end{flushleft}Sebuah bilangan kompleks terdiri dari sepasang bilangan floating-point yang diinisialisasi langsung yang dinotasikan dengan x + yj, di mana x dan y adalah bilangan real dan j adalah unit imajiner.
+\subsubsection{String Python}
+\begin{flushleft}
+•
+\end{flushleft}String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik. Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda. Subset string dapat diambil dengan menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir.
+Tanda plus (+) adalah operator concatenation string dan tanda bintang (*) adalah operator pengulangan. Misalnya -
+\begin{flushleft}
+•
+\end{flushleft}!/usr/bin/python
+\begin{flushleft}
+•
+\end{flushleft}str = 'Hello World!'
+
+\begin{flushleft}
+•
+\end{flushleft}print str            Prints complete string
+\begin{flushleft}
+•
+\end{flushleft}print str[0]         Prints first character of the \begin{flushleft}
+•
+\end{flushleft}string
+\begin{flushleft}
+•
+\end{flushleft}print str[2:5]       Prints characters starting from 3rd to 5th
+\begin{flushleft}
+•
+\end{flushleft}print str[2:]        Prints string starting from 3rd character
+\begin{flushleft}
+•
+\end{flushleft}print str * 2        Prints string two times
+print str + "TEST"   Prints concatenated string
+\begin{flushleft}
+•
+\end{flushleft}Ini akan menghasilkan hasil sebagai berikut -
+\begin{flushleft}
+•
+\end{flushleft}Hello World!
+\begin{flushleft}
+•
+\end{flushleft}H
+\begin{flushleft}
+•
+\end{flushleft}llo
+\begin{flushleft}
+•
+\end{flushleft}llo World!
+\begin{flushleft}
+•
+\end{flushleft}Hello World!Hello World!
+\begin{flushleft}
+•
+\end{flushleft}Hello World!TEST
+\subsubsection{Daftar Python}
+\begin{flushleft}
+•
+\end{flushleft}Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item yang dipisahkan dengan tanda koma dan dilampirkan dalam tanda kurung siku ([]). Sampai batas tertentu, daftar serupa dengan array di C. Salah satu perbedaan di antara keduanya adalah bahwa semua item yang termasuk dalam daftar dapat terdiri dari tipe data yang berbeda.
+Nilai yang tersimpan dalam daftar dapat diakses menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 di awal daftar dan bekerja dengan cara mereka untuk mengakhiri -1. Tanda plus (+) adalah daftar operator concatenation, dan asterisk (*) adalah operator pengulangan. 
+\subsubsection{Tupel Python}
+\begin{flushleft}
+•
+\end{flushleft}Sebuah tupel adalah jenis data urutan lain yang serupa dengan daftar. Sebuah tupel terdiri dari sejumlah nilai yang dipisahkan dengan koma. Tidak seperti daftar, bagaimanapun, tupel tertutup dalam tanda kurung.
+Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung ([]) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam tanda kurung (()) dan tidak dapat diperbarui. Tupel bisa dianggap sebagai daftar hanya-baca 
+\subsubsection{Kamus Python}
+\begin{flushleft}
+•
+\end{flushleft}Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi lain, bisa menjadi objek Python yang sewenang-wenang.
+Kamus ditutupi oleh kurung kurawal ({}) dan nilai dapat diberikan dan diakses menggunakan kawat gigi persegi ([])Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan bahwa unsur-unsurnya "rusak"; Mereka hanya unordered.
+\subsubsection{Konversi Tipe Data}
+\begin{flushleft}
+•
+\end{flushleft}Terkadang, Anda mungkin perlu melakukan konversi antara jenis built-in. Untuk mengonversi antar jenis, Anda cukup menggunakan nama jenis sebagai fungsi.
+Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi.
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%% Making Multiple Indices %%%%%%%%%%%%%%%%
+%% 1. 
+%% \usepackage{multind}
+%% \makeindex{book}
+%% \makeindex{authors}
+%% \begin{document}
+%% 
+%% 2.
+%% % add index terms to your book, ie,
+%% \index{book}{A term to go to the topic index}
+%% \index{authors}{Put this author in the author index}
+%% 
+%% \index{book}{Cows}
+%% \index{book}{Cows!Jersey}
+%% \index{book}{Cows!Jersey!Brown}
+%% 
+%% \index{author}{Douglas Adams}
+%% \index{author}{Boethius}
+%% \index{author}{Mark Twain}
+%% 
+%% 3. On command line type 
+%% makeindex topic 
+%% makeindex authors
+%% 
+%% 4.
+%% this is a Wiley command to make the indices print:
+%% \multiprintindex{book}{Topic index}
+%% \multiprintindex{authors}{Author index}
+
+\end{document}
+
