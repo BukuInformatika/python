@@ -1,0 +1,851 @@
+%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
+
+
+\documentclass[a4paper,12pt]{report}
+
+% Other options in place of 'report' are 1)article 2)book 3)letter
+% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
+
+
+ %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
+
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+
+ %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
+
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
+
+
+\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
+\everymath{\displaystyle}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\newlist{myEnumerate}{enumerate}{9}
+	\setlist[myEnumerate,1]{label=\arabic*)}
+	\setlist[myEnumerate,2]{label=\alph*)}
+	\setlist[myEnumerate,3]{label=(\roman*)}
+	\setlist[myEnumerate,4]{label=(\arabic*)}
+	\setlist[myEnumerate,5]{label=(\Alph*)}
+	\setlist[myEnumerate,6]{label=(\Roman*)}
+	\setlist[myEnumerate,7]{label=\arabic*}
+	\setlist[myEnumerate,8]{label=\alph*}
+	\setlist[myEnumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+	\setlist[itemize]{label=$\cdot$}
+	\setlist[itemize,1]{label=\textbullet}
+	\setlist[itemize,2]{label=$\circ$}
+	\setlist[itemize,3]{label=$\ast$}
+	\setlist[itemize,4]{label=$\dagger$}
+	\setlist[itemize,5]{label=$\triangleright$}
+	\setlist[itemize,6]{label=$\bigstar$}
+	\setlist[itemize,7]{label=$\blacklozenge$}
+	\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+ %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
+
+
+
+
+ %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
+
+
+\rfoot{\thepage}
+
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\setstretch{1.08}
+
+
+ %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
+
+
+\begin{document}
+\sloppy
+\begin{center}\textbf{STRING}\end{center} \par
+\noindent 
+String adalah salah satu jenis yang paling populer dengan Python. Kita bisa membuatnya hanya dengan melampirkan karakter dalam tanda kutip. Python memperlakukan tanda petik tunggal sama dengan tanda kutip ganda. Membuat string semudah memberi nilai pada sebuah variabel. Misalnya - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+var1 = 'Hello World!' \par
+\noindent 
+var2 = "Python Programming" \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Mengakses Nilai dalam String \par
+\noindent 
+Python tidak mendukung tipe karakter; Ini diperlakukan sebagai string dengan panjang satu, sehingga juga dianggap sebagai substring. \par
+\noindent 
+Untuk mengakses substring, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan substring Anda. Misalnya - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+\vspace{12pt}
+\noindent 
+var1 = 'Hello World!' \par
+\noindent 
+var2 = "Python Programming" \par
+\noindent 
+\vspace{12pt}
+\noindent 
+print "var1[0]: ", var1[0] \par
+\noindent 
+print "var2[1:5]: ", var2[1:5] \par
+\vspace{12pt}
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+var1[0]:~ H \par
+\noindent 
+var2[1:5]:~ ytho \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Memperbarui String \par
+\noindent 
+Anda dapat "memperbarui" string yang ada dengan (kembali) menugaskan variabel ke string lain. Nilai baru dapat dikaitkan dengan nilai sebelumnya atau ke string yang sama sekali berbeda sama sekali. Misalnya - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+\vspace{12pt}
+\noindent 
+var1 = 'Hello World!' \par
+\noindent 
+\vspace{12pt}
+\noindent 
+print "Updated String :- ", var1[:6] + 'Python' \par
+\vspace{12pt}
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Updated~String :-  Hello Python \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Karakter melarikan diri \par
+\vspace{12pt}
+\noindent 
+Tabel berikut adalah daftar karakter escape atau non-printable yang dapat diwakili dengan notasi backslash. \par
+\noindent 
+Karakter pelarian ditafsirkan; dalam satu dikutip serta dua kali mengutip string. \par
+\vspace{12pt}
+
+
+ %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.56in}p{0.97in}p{3.74in} }
+\hhline{---}
+\multicolumn{1}{|p{1.56in}}{\Centering \textbf{Backslash}\textbf{notation}} & \multicolumn{1}{|p{0.97in}}{\Centering \textbf{Hexadecimal}\textbf{character}} & \multicolumn{1}{|p{3.74in}|}{\Centering \textbf{Description}} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $a} & \multicolumn{1}{|p{0.97in}}{0x07} & \multicolumn{1}{|p{3.74in}|}{Bell or alert} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $b} & \multicolumn{1}{|p{0.97in}}{0x08} & \multicolumn{1}{|p{3.74in}|}{Backspace} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $cx} & \multicolumn{1}{|p{0.97in}}{ $  $} & \multicolumn{1}{|p{3.74in}|}{Control-x} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $C-x} & \multicolumn{1}{|p{0.97in}}{ $  $} & \multicolumn{1}{|p{3.74in}|}{Control-x} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $e} & \multicolumn{1}{|p{0.97in}}{0x1b} & \multicolumn{1}{|p{3.74in}|}{Escape} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $f} & \multicolumn{1}{|p{0.97in}}{0x0c} & \multicolumn{1}{|p{3.74in}|}{Formfeed} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $M- $  \textbackslash  $C-x} & \multicolumn{1}{|p{0.97in}}{ $  $} & \multicolumn{1}{|p{3.74in}|}{Meta-Control-x} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $n} & \multicolumn{1}{|p{0.97in}}{0x0a} & \multicolumn{1}{|p{3.74in}|}{Newline} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $nnn} & \multicolumn{1}{|p{0.97in}}{ $  $} & \multicolumn{1}{|p{3.74in}|}{Octal notation, where n is in the range 0.7} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $r} & \multicolumn{1}{|p{0.97in}}{0x0d} & \multicolumn{1}{|p{3.74in}|}{Carriage return} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $s} & \multicolumn{1}{|p{0.97in}}{0x20} & \multicolumn{1}{|p{3.74in}|}{Space} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $t} & \multicolumn{1}{|p{0.97in}}{0x09} & \multicolumn{1}{|p{3.74in}|}{Tab} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $v} & \multicolumn{1}{|p{0.97in}}{0x0b} & \multicolumn{1}{|p{3.74in}|}{Vertical tab} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $x} & \multicolumn{1}{|p{0.97in}}{ $  $} & \multicolumn{1}{|p{3.74in}|}{Character x} & \hhline{---}
+\multicolumn{1}{|p{1.56in}}{ $  \textbackslash  $xnn} & \multicolumn{1}{|p{0.97in}}{ $  $} & \multicolumn{1}{|p{3.74in}|}{Hexadecimal notation, where n is in the range 0.9, a.f, or A.F} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:1 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+String Operator Khusus \par
+\vspace{12pt}
+\noindent 
+Asumsikan variabel string memegang 'Halo' dan variabel b berisi 'Python',  \par
+\noindent 
+lalu – \par
+\vspace{12pt}
+
+
+ %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.72in}p{2.77in}p{2.78in} }
+\hhline{---}
+\multicolumn{1}{|p{0.72in}}{\Centering \textbf{Operator}} & \multicolumn{1}{|p{2.77in}}{\Centering \textbf{Description}} & \multicolumn{1}{|p{2.78in}|}{\Centering \textbf{Example}} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{+} & \multicolumn{1}{|p{2.77in}}{Concatenation - Adds values on either side of the operator} & \multicolumn{1}{|p{2.78in}|}{a + b will give HelloPython} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{*} & \multicolumn{1}{|p{2.77in}}{Repetition - Creates new strings, concatenating multiple copies of the same string} & \multicolumn{1}{|p{2.78in}|}{a*2 will give -HelloHello} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{[]} & \multicolumn{1}{|p{2.77in}}{Slice - Gives the character from the given index} & \multicolumn{1}{|p{2.78in}|}{a[1] will give e} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{[ : ]} & \multicolumn{1}{|p{2.77in}}{Range Slice - Gives the characters from the given range} & \multicolumn{1}{|p{2.78in}|}{a[1:4] will give ell} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{in} & \multicolumn{1}{|p{2.77in}}{Membership - Returns true if a character exists in the given string} & \multicolumn{1}{|p{2.78in}|}{H in a will give 1} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{not in } & \multicolumn{1}{|p{2.77in}}{Membership - Returns true if a character does not exist in the given string} & \multicolumn{1}{|p{2.78in}|}{M not in a will give 1} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{r/R} & \multicolumn{1}{|p{2.77in}}{Raw String - Suppresses actual meaning of Escape characters. The syntax for raw strings is exactly the same as for normal strings with the exception of the raw string operator, the letter "r," which precedes the quotation marks. The "r" can be lowercase (r) or uppercase (R) and must be placed immediately preceding the first quote mark.} & \multicolumn{1}{|p{2.78in}|}{print r' $  \textbackslash  $n' prints  $  \textbackslash  $n and print R' $  \textbackslash  $n'prints  $  \textbackslash  $n} & \hhline{---}
+\multicolumn{1}{|p{0.72in}}{ $  \%  $} & \multicolumn{1}{|p{2.77in}}{Format - Performs String formatting} & \multicolumn{1}{|p{2.78in}|}{See at next section} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:2 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+Penyandian String Operator \par
+\vspace{12pt}
+\noindent 
+Salah satu fitur Python yang paling keren adalah format string operator $  \%  $. Operator ini unik untuk string dan membuat paket memiliki fungsi dari keluarga printf C () C. Berikut adalah contoh sederhana - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+\vspace{12pt}
+\noindent 
+print "My name is  $  \%  $s and weight is  $  \%  $d kg!"  $  \%  $ ('Zara', 21)  \par
+\vspace{12pt}
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+My name is Zara and weight is 21 kg! \par
+\noindent 
+Here is the list of complete set of symbols which can be used along with  $  \%  $  $ - $ \par
+
+
+ %%%%%%%%%%%%  Table No:3 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.33in}p{3.05in} }
+\hhline{--}
+\multicolumn{1}{|p{1.33in}}{\Centering \textbf{Format Symbol}} & \multicolumn{1}{|p{3.05in}|}{\Centering \textbf{Conversion}} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $c} & \multicolumn{1}{|p{3.05in}|}{character} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $s} & \multicolumn{1}{|p{3.05in}|}{string conversion via str() prior to formatting} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $i} & \multicolumn{1}{|p{3.05in}|}{signed decimal integer} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $d} & \multicolumn{1}{|p{3.05in}|}{signed decimal integer} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $u} & \multicolumn{1}{|p{3.05in}|}{unsigned decimal integer} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $o} & \multicolumn{1}{|p{3.05in}|}{octal integer} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $x} & \multicolumn{1}{|p{3.05in}|}{hexadecimal integer (lowercase letters)} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $X} & \multicolumn{1}{|p{3.05in}|}{hexadecimal integer (UPPERcase letters)} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $e} & \multicolumn{1}{|p{3.05in}|}{exponential notation (with lowercase 'e')} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $E} & \multicolumn{1}{|p{3.05in}|}{exponential notation (with UPPERcase 'E')} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $f} & \multicolumn{1}{|p{3.05in}|}{floating point real number} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $g} & \multicolumn{1}{|p{3.05in}|}{the shorter of  $  \%  $f and  $  \%  $e} & \hhline{--}
+\multicolumn{1}{|p{1.33in}}{ $  \%  $G} & \multicolumn{1}{|p{3.05in}|}{the shorter of  $  \%  $f and  $  \%  $E} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:3 Ends Here %%%%%%%%%%%%%%
+
+
+\noindent 
+Other supported symbols and functionality are listed in the following table  $ - $ \par
+
+
+ %%%%%%%%%%%%  Table No:4 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{1.87in}p{4.39in} }
+\hhline{--}
+\multicolumn{1}{|p{1.87in}}{\Centering \textbf{Symbol}} & \multicolumn{1}{|p{4.39in}|}{\Centering \textbf{Functionality}} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{*} & \multicolumn{1}{|p{4.39in}|}{argument specifies width or precision} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{-} & \multicolumn{1}{|p{4.39in}|}{left justification} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{+} & \multicolumn{1}{|p{4.39in}|}{display the sign} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{<sp>} & \multicolumn{1}{|p{4.39in}|}{leave a blank space before a positive number} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{ $  \#  $} & \multicolumn{1}{|p{4.39in}|}{add the octal leading zero ( '0' ) or hexadecimal leading '0x' or '0X', depending on whether 'x' or 'X' were used.} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{0} & \multicolumn{1}{|p{4.39in}|}{pad from left with zeros (instead of spaces)} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{ $  \%  $} & \multicolumn{1}{|p{4.39in}|}{' $  \%  $ $  \%  $' leaves you with a single literal ' $  \%  $'} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{(var)} & \multicolumn{1}{|p{4.39in}|}{mapping variable (dictionary arguments)} & \hhline{--}
+\multicolumn{1}{|p{1.87in}}{m.n.} & \multicolumn{1}{|p{4.39in}|}{m is the minimum total width and n is the number of digits to display after the decimal point (if appl.)} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:4 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\noindent 
+Triple Quotes \par
+\vspace{12pt}
+\noindent 
+Tiga tanda kutip Python hadir untuk menyelamatkannya dengan membiarkan string memanjang banyak baris, termasuk kata kunci NEWLINEs, TABs, dan karakter khusus lainnya. \par
+\noindent 
+Sintaks untuk triple quotes terdiri dari tiga tanda kutip tunggal atau ganda berturut-turut. \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+\vspace{12pt}
+\noindent 
+para $  \_  $str = "" "ini adalah string panjang yang terdiri dari \par
+\noindent 
+beberapa baris dan karakter yang tidak dapat dicetak seperti \par
+\noindent 
+TAB ( $  \textbackslash  $ t) dan mereka akan muncul seperti itu saat ditampilkan. \par
+\noindent 
+NEWLINEs dalam string, apakah secara eksplisit diberikan seperti \par
+\noindent 
+Ini dalam tanda kurung [ $  \textbackslash  $ n], atau hanya NEWLINE di dalamnya \par
+\noindent 
+tugas variabel juga akan muncul. \par
+\noindent 
+"" " \par
+\noindent 
+Cetak para $  \_  $str \par
+\noindent 
+Bila kode diatas dieksekusi, maka hasilnya akan menghasilkan hasil berikut. Perhatikan bagaimana setiap karakter khusus telah diubah menjadi bentuk cetaknya, sampai ke NEWLINE terakhir di akhir string antara "up". Dan menutup tanda kutip tiga kali. Perhatikan juga bahwa NEWLINEs terjadi baik dengan carriage return yang eksplisit di akhir baris atau kode escape-nya ( $  \textbackslash  $ n) - \par
+\noindent 
+Ini adalah string panjang yang terdiri dari \par
+\noindent 
+beberapa baris dan karakter yang tidak dapat dicetak seperti \par
+\noindent 
+TAB () dan mereka akan muncul seperti itu saat ditampilkan. \par
+\noindent 
+NEWLINEs dalam string, apakah secara eksplisit diberikan seperti \par
+\noindent 
+ini dalam tanda kurung [ \par
+\noindent 
+ $  $], atau hanya NEWLINE di dalamnya \par
+\noindent 
+tugas variabel juga akan muncul. \par
+\noindent 
+String mentah tidak memperlakukan garis miring terbalik sebagai karakter spesial sama sekali. Setiap karakter yang Anda masukkan ke dalam string mentah tetap seperti yang Anda tulis - \par
+\noindent 
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\noindent 
+\vspace{12pt}
+\noindent 
+Cetak 'C:  $  \textbackslash  $ $  \textbackslash  $ tempat' \par
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\noindent 
+C: di mana-mana \par
+\noindent 
+Sekarang mari kita gunakan string mentah. Kami akan mengutarakan ekspresi 'sebagai berikut - \par
+\vspace{12pt}
+\noindent 
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+\noindent 
+Cetak r'C:  $  \textbackslash  $ $  \textbackslash  $ tempat ' \par
+\vspace{12pt}
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\noindent 
+C: tidak di mana-mana \par
+\noindent 
+String Unicode \par
+\noindent 
+String normal dengan Python disimpan secara internal sebagai 8-bit ASCII, sedangkan string Unicode disimpan sebagai Unicode 16-bit. Hal ini memungkinkan untuk serangkaian karakter yang lebih bervariasi, termasuk karakter khusus dari kebanyakan bahasa di dunia. Saya akan membatasi perlakuan saya terhadap string Unicode sebagai berikut - \par
+\vspace{12pt}
+\noindent 
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+\noindent 
+Cetak u'Hello, dunia! ' \par
+\noindent 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\noindent 
+Halo Dunia! \par
+\noindent 
+Seperti yang Anda lihat, senar Unicode menggunakan awalan Anda, sama seperti senar mentah menggunakan awalan r. \par
+\vspace{12pt}
+\noindent 
+\section*{7.1.  — Common string operations}
+ \par
+\noindent 
+Source code: \href{https://github.com/python/cpython/tree/2.7/Lib/string.py}{Lib/string.py}
+ \par
+\vspace{12pt}
+\noindent 
+The \href{https://docs.python.org/2/library/string.html}{string}
+ module contains a number of useful constants and classes, as well as some deprecated legacy functions that are also available as methods on strings. In addition, Python’s built-in string classes support the sequence type methods described in the \href{https://docs.python.org/2/library/stdtypes.html}{Sequence Types — str, unicode, list, tuple, bytearray, buffer, xrange}
+ section, and also the string-specific methods described in the \href{https://docs.python.org/2/library/stdtypes.html}{String Methods}
+ section. To output formatted strings use template strings or the  $  \%  $ operator described in the \href{https://docs.python.org/2/library/stdtypes.html}{String Formatting Operations}
+ section. Also, see the \href{https://docs.python.org/2/library/re.html}{re}
+ module for string functions based on regular expressions. \par
+\noindent 
+\subsection*{7.1.1. String constants}
+ \par
+\noindent 
+The constants defined in this module are: \par
+\noindent 
+string.ascii $  \_  $letters \par
+The concatenation of the \href{https://docs.python.org/2/library/string.html}{ascii $  \_  $lowercase}
+ and \href{https://docs.python.org/2/library/string.html}{ascii $  \_  $uppercase}
+ constants described below. This value is not locale-dependent. \par
+\noindent 
+string.ascii $  \_  $lowercase \par
+The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. This value is not locale-dependent and will not change. \par
+\noindent 
+string.ascii $  \_  $uppercase \par
+The uppercase letters 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'. This value is not locale-dependent and will not change. \par
+\noindent 
+string.digits \par
+The string '0123456789'. \par
+\noindent 
+string.hexdigits \par
+The string '0123456789abcdefABCDEF'. \par
+\noindent 
+string.letters \par
+The concatenation of the strings \href{https://docs.python.org/2/library/string.html}{lowercase}
+ and \href{https://docs.python.org/2/library/string.html}{uppercase}
+ described below. The specific value is locale-dependent, and will be updated when \href{https://docs.python.org/2/library/locale.html}{locale.setlocale()}
+ is called. \par
+\noindent 
+string.lowercase \par
+A string containing all the characters that are considered lowercase letters. On most systems this is the string 'abcdefghijklmnopqrstuvwxyz'. The specific value is locale-dependent, and will be updated when \href{https://docs.python.org/2/library/locale.html}{locale.setlocale()}
+ is called. \par
+\noindent 
+string.octdigits \par
+The string '01234567'. \par
+\noindent 
+string.punctuation \par
+String of ASCII characters which are considered punctuation characters in the C locale. \par
+\noindent 
+string.printable \par
+String of characters which are considered printable. This is a combination of \href{https://docs.python.org/2/library/string.html}{digits}
+, \href{https://docs.python.org/2/library/string.html}{letters}
+, \href{https://docs.python.org/2/library/string.html}{punctuation}
+, and \href{https://docs.python.org/2/library/string.html}{whitespace}
+. \par
+\noindent 
+string.uppercase \par
+A string containing all the characters that are considered uppercase letters. On most systems this is the string 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'. The specific value is locale-dependent, and will be updated when \href{https://docs.python.org/2/library/locale.html}{locale.setlocale()}
+ is called. \par
+\noindent 
+string.whitespace \par
+A string containing all characters that are considered whitespace. On most systems this includes the characters space, tab, linefeed, return, formfeed, and vertical tab. \par
+\noindent 
+\subsection*{7.1.2. Custom String Formatting}
+ \par
+\noindent 
+New in version 2.6. \par
+\noindent 
+The built-in str and unicode classes provide the ability to do complex variable substitutions and value formatting via the \href{https://docs.python.org/2/library/stdtypes.html}{str.format()}
+ method described in \href{https://www.python.org/dev/peps/pep-3101}{PEP 3101}
+. The \href{https://docs.python.org/2/library/string.html}{Formatter}
+ class in the \href{https://docs.python.org/2/library/string.html}{string}
+ module allows you to create and customize your own string formatting behaviors using the same implementation as the built-in \href{https://docs.python.org/2/library/stdtypes.html}{format()}
+ method. \par
+\noindent 
+\emph{class }string.Formatter \par
+The \href{https://docs.python.org/2/library/string.html}{Formatter}
+ class has the following public methods: \par
+format(\emph{format $  \_  $string}, \emph{*args}, \emph{**kwargs}) \par
+The primary API method. It takes a format string and an arbitrary set of positional and keyword arguments. It is just a wrapper that calls \href{https://docs.python.org/2/library/string.html}{vformat()}
+. \par
+vformat(\emph{format $  \_  $string}, \emph{args}, \emph{kwargs}) \par
+This function does the actual work of formatting. It is exposed as a separate function for cases where you want to pass in a predefined dictionary of arguments, rather than unpacking and repacking the dictionary as individual arguments using the *args and **kwargs syntax. \href{https://docs.python.org/2/library/string.html}{vformat()}
+ does the work of breaking up the format string into character data and replacement fields. It calls the various methods described below. \par
+In addition, the \href{https://docs.python.org/2/library/string.html}{Formatter}
+ defines a number of methods that are intended to be replaced by subclasses: \par
+parse(\emph{format $  \_  $string}) \par
+Loop over the format $  \_  $string and return an iterable of tuples (\emph{literal $  \_  $text}, \emph{field $  \_  $name}, \emph{format $  \_  $spec}, \emph{conversion}). This is used by \href{https://docs.python.org/2/library/string.html}{vformat()}
+ to break the string into either literal text, or replacement fields. \par
+The values in the tuple conceptually represent a span of literal text followed by a single replacement field. If there is no literal text (which can happen if two replacement fields occur consecutively), then \emph{literal $  \_  $text} will be a zero-length string. If there is no replacement field, then the values of \emph{field $  \_  $name}, \emph{format $  \_  $spec} and \emph{conversion} will be None. \par
+get $  \_  $field(\emph{field $  \_  $name}, \emph{args}, \emph{kwargs}) \par
+Given \emph{field $  \_  $name} as returned by \href{https://docs.python.org/2/library/string.html}{parse()}
+ (see above), convert it to an object to be formatted. Returns a tuple (obj, used $  \_  $key). The default version takes strings of the form defined in \href{https://www.python.org/dev/peps/pep-3101}{PEP 3101}
+, such as  $ " $0[name] $ " $ or  $ " $label.title $ " $. \emph{args} and \emph{kwargs} are as passed in to \href{https://docs.python.org/2/library/string.html}{vformat()}
+. The return value \emph{used $  \_  $key} has the same meaning as the \emph{key} parameter to \href{https://docs.python.org/2/library/string.html}{get $  \_  $value()}
+. \par
+get $  \_  $value(\emph{key}, \emph{args}, \emph{kwargs}) \par
+Retrieve a given field value. The \emph{key} argument will be either an integer or a string. If it is an integer, it represents the index of the positional argument in \emph{args}; if it is a string, then it represents a named argument in \emph{kwargs}. \par
+The \emph{args} parameter is set to the list of positional arguments to \href{https://docs.python.org/2/library/string.html}{vformat()}
+, and the \emph{kwargs} parameter is set to the dictionary of keyword arguments. \par
+For compound field names, these functions are only called for the first component of the field name; Subsequent components are handled through normal attribute and indexing operations. \par
+So for example, the field expression ‘0.name’ would cause \href{https://docs.python.org/2/library/string.html}{get $  \_  $value()}
+ to be called with a \emph{key} argument of 0. The name attribute will be looked up after \href{https://docs.python.org/2/library/string.html}{get $  \_  $value()}
+ returns by calling the built-in \href{https://docs.python.org/2/library/functions.html}{getattr()}
+ function. \par
+If the index or keyword refers to an item that does not exist, then an \href{https://docs.python.org/2/library/exceptions.html}{IndexError}
+ or \href{https://docs.python.org/2/library/exceptions.html}{KeyError}
+ should be raised. \par
+check $  \_  $unused $  \_  $args(\emph{used $  \_  $args}, \emph{args}, \emph{kwargs}) \par
+Implement checking for unused arguments if desired. The arguments to this function is the set of all argument keys that were actually referred to in the format string (integers for positional arguments, and strings for named arguments), and a reference to the \emph{args} and \emph{kwargs} that was passed to vformat. The set of unused args can be calculated from these parameters. \href{https://docs.python.org/2/library/string.html}{check $  \_  $unused $  \_  $args()}
+ is assumed to raise an exception if the check fails. \par
+format $  \_  $field(\emph{value}, \emph{format $  \_  $spec}) \par
+\href{https://docs.python.org/2/library/string.html}{format $  \_  $field()}
+ simply calls the global \href{https://docs.python.org/2/library/functions.html}{format()}
+ built-in. The method is provided so that subclasses can override it. \par
+convert $  \_  $field(\emph{value}, \emph{conversion}) \par
+Converts the value (returned by \href{https://docs.python.org/2/library/string.html}{get $  \_  $field()}
+) given a conversion type (as in the tuple returned by the \href{https://docs.python.org/2/library/string.html}{parse()}
+ method). The default version understands ‘s’ (str), ‘r’ (repr) and ‘a’ (ascii) conversion types. \par
+\noindent 
+\subsection*{7.1.3. Format String Syntax}
+ \par
+\noindent 
+The \href{https://docs.python.org/2/library/stdtypes.html}{str.format()}
+ method and the \href{https://docs.python.org/2/library/string.html}{Formatter}
+ class share the same syntax for format strings (although in the case of \href{https://docs.python.org/2/library/string.html}{Formatter}
+, subclasses can define their own format string syntax). \par
+\noindent 
+Format strings contain  $ " $replacement fields $ " $ surrounded by curly braces  $  \{  $ $  \}  $. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. If you need to include a brace character in the literal text, it can be escaped by doubling:  $  \{  $ $  \{  $ and  $  \}  $ $  \}  $. \par
+\noindent 
+The grammar for a replacement field is as follows: \par
+\noindent 
+replacement $  \_  $field~::=   $ " $ $  \{  $ $ " $ [\href{https://docs.python.org/2/library/string.html}{field $  \_  $name}
+] [ $ " $! $ " $ \href{https://docs.python.org/2/library/string.html}{conversion}
+] [ $ " $: $ " $ \href{https://docs.python.org/2/library/string.html}{format $  \_  $spec}
+]  $ " $ $  \}  $ $ " $ \par
+\noindent 
+field $  \_  $name~~~~~~ ~::=  arg $  \_  $name ( $ " $. $ " $ \href{https://docs.python.org/2/library/string.html}{attribute $  \_  $name}
+  $  \vert  $  $ " $[ $ " $ \href{https://docs.python.org/2/library/string.html}{element $  \_  $index}
+  $ " $] $ " $)* \par
+\noindent 
+arg $  \_  $name~~~~~~~~ ~::=  [\href{https://docs.python.org/2/reference/lexical $  \_  $analysis.html}{identifier}
+  $  \vert  $ \href{https://docs.python.org/2/reference/lexical $  \_  $analysis.html}{integer}
+] \par
+\noindent 
+attribute $  \_  $name~~ ~::=  \href{https://docs.python.org/2/reference/lexical $  \_  $analysis.html}{identifier}
+ \par
+\noindent 
+element $  \_  $index~~~ ~::=  \href{https://docs.python.org/2/reference/lexical $  \_  $analysis.html}{integer}
+  $  \vert  $ \href{https://docs.python.org/2/library/string.html}{index $  \_  $string}
+ \par
+\noindent 
+index $  \_  $string~~~~ ~::=  <any source character except  $ " $] $ " $> + \par
+\noindent 
+conversion~~~~~~ ~::=   $ " $r $ " $  $  \vert  $  $ " $s $ " $ \par
+\noindent 
+format $  \_  $spec~~~~~ ~::=  <described in the next section> \par
+\noindent 
+In less formal terms, the replacement field can start with a \emph{field $  \_  $name} that specifies the object whose value is to be formatted and inserted into the output instead of the replacement field. The \emph{field $  \_  $name} is optionally followed by a \emph{conversion} field, which is preceded by an exclamation point '!', and a \emph{format $  \_  $spec}, which is preceded by a colon ':'. These specify a non-default format for the replacement value. \par
+\noindent 
+See also the \href{https://docs.python.org/2/library/string.html}{Format Specification Mini-Language}
+ section. \par
+\noindent 
+The \emph{field $  \_  $name} itself begins with an \emph{arg $  \_  $name} that is either a number or a keyword. If it’s a number, it refers to a positional argument, and if it’s a keyword, it refers to a named keyword argument. If the numerical arg $  \_  $names in a format string are 0, 1, 2, … in sequence, they can all be omitted (not just some) and the numbers 0, 1, 2, … will be automatically inserted in that order. Because \emph{arg $  \_  $name} is not quote-delimited, it is not possible to specify arbitrary dictionary keys (e.g., the strings '10' or ':-]') within a format string. The \emph{arg $  \_  $name} can be followed by any number of index or attribute expressions. An expression of the form '.name' selects the named attribute using \href{https://docs.python.org/2/library/functions.html}{getattr()}
+, while an expression of the form '[index]' does an index lookup using \href{https://docs.python.org/2/reference/datamodel.html}{ $  \_  $ $  \_  $getitem $  \_  $ $  \_  $()}
+. \par
+\noindent 
+Changed in version 2.7: The positional argument specifiers can be omitted, so ' $  \{  $ $  \}  $  $  \{  $ $  \}  $' is equivalent to ' $  \{  $0 $  \}  $  $  \{  $1 $  \}  $'. \par
+\noindent 
+Some simple format string examples: \par
+\noindent 
+"First, thou shalt count to  $  \{  $0 $  \}  $"~  $  \#  $ References first positional argument \par
+\noindent 
+"Bring me a  $  \{  $ $  \}  $"~~~~~~~~~~~~~~~~~~  $  \#  $ Implicitly references the first positional argument \par
+\noindent 
+"From  $  \{  $ $  \}  $ to  $  \{  $ $  \}  $"~~~~~~~~~~~~~~~~~~  $  \#  $ Same as "From  $  \{  $0 $  \}  $ to  $  \{  $1 $  \}  $" \par
+\noindent 
+"My quest is  $  \{  $name $  \}  $"~~~~~~~~~~~~~  $  \#  $ References keyword argument 'name' \par
+\noindent 
+"Weight in tons  $  \{  $0.weight $  \}  $"~~~~~~  $  \#  $ 'weight' attribute of first positional arg \par
+\noindent 
+"Units destroyed:  $  \{  $players[0] $  \}  $"~~  $  \#  $ First element of keyword argument 'players'. \par
+\noindent 
+The \emph{conversion} field causes a type coercion before formatting. Normally, the job of formatting a value is done by the  $  \_  $ $  \_  $format $  \_  $ $  \_  $() method of the value itself. However, in some cases it is desirable to force a type to be formatted as a string, overriding its own definition of formatting. By converting the value to a string before calling  $  \_  $ $  \_  $format $  \_  $ $  \_  $(), the normal formatting logic is bypassed. \par
+\noindent 
+Two conversion flags are currently supported: '!s' which calls \href{https://docs.python.org/2/library/functions.html}{str()}
+ on the value, and '!r' which calls \href{https://docs.python.org/2/library/functions.html}{repr()}
+. \par
+\noindent 
+Some examples: \par
+\noindent 
+"Harold's a clever  $  \{  $0!s $  \}  $"~~~~~~~  $  \#  $ Calls str() on the argument first \par
+\noindent 
+"Bring out the holy  $  \{  $name!r $  \}  $"~~~  $  \#  $ Calls repr() on the argument first \par
+\noindent 
+The \emph{format $  \_  $spec} field contains a specification of how the value should be presented, including such details as field width, alignment, padding, decimal precision and so on. Each value type can define its own  $ " $formatting mini-language $ " $ or interpretation of the \emph{format $  \_  $spec}. \par
+\noindent 
+Most built-in types support a common formatting mini-language, which is described in the next section. \par
+\noindent 
+A \emph{format $  \_  $spec} field can also include nested replacement fields within it. These nested replacement fields may contain a field name, conversion flag and format specification, but deeper nesting is not allowed. The replacement fields within the format $  \_  $spec are substituted before the \emph{format $  \_  $spec} string is interpreted. This allows the formatting of a value to be dynamically specified. \par
+\noindent 
+See the \href{https://docs.python.org/2/library/string.html}{Format examples}
+ section for some examples. \par
+\noindent 
+\subsubsection*{7.1.3.1. Format Specification Mini-Language}
+ \par
+\noindent 
+ $ " $Format specifications $ " $ are used within replacement fields contained within a format string to define how individual values are presented (see \href{https://docs.python.org/2/library/string.html}{Format String Syntax}
+). They can also be passed directly to the built-in \href{https://docs.python.org/2/library/functions.html}{format()}
+ function. Each formattable type may define how the format specification is to be interpreted. \par
+\noindent 
+Most built-in types implement the following options for format specifications, although some of the formatting options are only supported by the numeric types. \par
+\noindent 
+A general convention is that an empty format string ("") produces the same result as if you had called \href{https://docs.python.org/2/library/functions.html}{str()}
+ on the value. A non-empty format string typically modifies the result. \par
+\noindent 
+The general form of a \emph{standard format specifier} is: \par
+\noindent 
+format $  \_  $spec~::=  [[\href{https://docs.python.org/2/library/string.html}{fill}
+]\href{https://docs.python.org/2/library/string.html}{align}
+][\href{https://docs.python.org/2/library/string.html}{sign}
+][ $  \#  $][0][\href{https://docs.python.org/2/library/string.html}{width}
+][,][.\href{https://docs.python.org/2/library/string.html}{precision}
+][\href{https://docs.python.org/2/library/string.html}{type}
+] \par
+\noindent 
+fill~~~~~~ ~::=  <any character> \par
+\noindent 
+align~~~~~ ~::=   $ " $< $ " $  $  \vert  $  $ " $> $ " $  $  \vert  $  $ " $= $ " $  $  \vert  $  $ " $ $  \string^  $ $ " $ \par
+\noindent 
+sign~~~~~~ ~::=   $ " $+ $ " $  $  \vert  $  $ " $- $ " $  $  \vert  $  $ " $  $ " $ \par
+\noindent 
+width~~~~~ ~::=  \href{https://docs.python.org/2/reference/lexical $  \_  $analysis.html}{integer}
+ \par
+\noindent 
+precision~ ~::=  \href{https://docs.python.org/2/reference/lexical $  \_  $analysis.html}{integer}
+ \par
+\noindent 
+type~~~~~~ ~::=   $ " $b $ " $  $  \vert  $  $ " $c $ " $  $  \vert  $  $ " $d $ " $  $  \vert  $  $ " $e $ " $  $  \vert  $  $ " $E $ " $  $  \vert  $  $ " $f $ " $  $  \vert  $  $ " $F $ " $  $  \vert  $  $ " $g $ " $  $  \vert  $  $ " $G $ " $  $  \vert  $  $ " $n $ " $  $  \vert  $  $ " $o $ " $  $  \vert  $  $ " $s $ " $  $  \vert  $  $ " $x $ " $  $  \vert  $  $ " $X $ " $  $  \vert  $  $ " $ $  \%  $ $ " $ \par
+\noindent 
+If a valid \emph{align} value is specified, it can be preceded by a \emph{fill} character that can be any character and defaults to a space if omitted. It is not possible to use a literal curly brace ( $ " $ $  \{  $ $ " $ or  $ " $ $  \}  $ $ " $) as the \emph{fill} character when using the \href{https://docs.python.org/2/library/stdtypes.html}{str.format()}
+ method. However, it is possible to insert a curly brace with a nested replacement field. This limitation doesn’t affect the \href{https://docs.python.org/2/library/functions.html}{format()}
+ function. \par
+\noindent 
+The meaning of the various alignment options is as follows: \par
+
+
+ %%%%%%%%%%%%  Table No:5 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.57in}p{5.68in} }
+\hhline{--}
+\multicolumn{1}{|p{0.57in}}{\Centering \textbf{Option}} & \multicolumn{1}{|p{5.68in}|}{\Centering \textbf{Meaning}} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{'<'} & \multicolumn{1}{|p{5.68in}|}{Forces the field to be left-aligned within the available space (this is the default for most objects).} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{'>'} & \multicolumn{1}{|p{5.68in}|}{Forces the field to be right-aligned within the available space (this is the default for numbers).} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{'='} & \multicolumn{1}{|p{5.68in}|}{Forces the padding to be placed after the sign (if any) but before the digits. This is used for printing fields in the form ‘+000000120’. This alignment option is only valid for numeric types. It becomes the default when ‘0’ immediately precedes the field width.} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{' $  \string^  $'} & \multicolumn{1}{|p{5.68in}|}{Forces the field to be centered within the available space.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:5 Ends Here %%%%%%%%%%%%%%
+
+
+\noindent 
+Note that unless a minimum field width is defined, the field width will always be the same size as the data to fill it, so that the alignment option has no meaning in this case. \par
+\noindent 
+The \emph{sign} option is only valid for number types, and can be one of the following: \par
+
+
+ %%%%%%%%%%%%  Table No:6 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.57in}p{5.68in} }
+\hhline{--}
+\multicolumn{1}{|p{0.57in}}{\Centering \textbf{Option}} & \multicolumn{1}{|p{5.68in}|}{\Centering \textbf{Meaning}} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{'+'} & \multicolumn{1}{|p{5.68in}|}{indicates that a sign should be used for both positive as well as negative numbers.} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{'-'} & \multicolumn{1}{|p{5.68in}|}{indicates that a sign should be used only for negative numbers (this is the default behavior).} & \hhline{--}
+\multicolumn{1}{|p{0.57in}}{space} & \multicolumn{1}{|p{5.68in}|}{indicates that a leading space should be used on positive numbers, and a minus sign on negative numbers.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:6 Ends Here %%%%%%%%%%%%%%
+
+
+\noindent 
+The ' $  \#  $' option is only valid for integers, and only for binary, octal, or hexadecimal output. If present, it specifies that the output will be prefixed by '0b', '0o', or '0x', respectively. \par
+\noindent 
+The ',' option signals the use of a comma for a thousands separator. For a locale aware separator, use the 'n' integer presentation type instead. \par
+\noindent 
+Changed in version 2.7: Added the ',' option (see also \href{https://www.python.org/dev/peps/pep-0378}{PEP 378}
+). \par
+\noindent 
+\emph{width} is a decimal integer defining the minimum field width. If not specified, then the field width will be determined by the content. \par
+\noindent 
+When no explicit alignment is given, preceding the \emph{width} field by a zero ('0') character enables sign-aware zero-padding for numeric types. This is equivalent to a \emph{fill} character of '0' with an \emph{alignment} type of '='. \par
+\noindent 
+The \emph{precision} is a decimal number indicating how many digits should be displayed after the decimal point for a floating point value formatted with 'f' and 'F', or before and after the decimal point for a floating point value formatted with 'g' or 'G'. For non-number types the field indicates the maximum field size - in other words, how many characters will be used from the field content. The \emph{precision} is not allowed for integer values. \par
+\noindent 
+Finally, the \emph{type} determines how the data should be presented. \par
+\noindent 
+The available string presentation types are: \par
+
+
+ %%%%%%%%%%%%  Table No:7 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.43in}p{4.7in} }
+\hhline{--}
+\multicolumn{1}{|p{0.43in}}{\Centering \textbf{Type}} & \multicolumn{1}{|p{4.7in}|}{\Centering \textbf{Meaning}} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'s'} & \multicolumn{1}{|p{4.7in}|}{String format. This is the default type for strings and may be omitted.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{None} & \multicolumn{1}{|p{4.7in}|}{The same as 's'.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:7 Ends Here %%%%%%%%%%%%%%
+
+
+\noindent 
+The available integer presentation types are: \par
+
+
+ %%%%%%%%%%%%  Table No:8 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.43in}p{5.82in} }
+\hhline{--}
+\multicolumn{1}{|p{0.43in}}{\Centering \textbf{Type}} & \multicolumn{1}{|p{5.82in}|}{\Centering \textbf{Meaning}} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'b'} & \multicolumn{1}{|p{5.82in}|}{Binary format. Outputs the number in base 2.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'c'} & \multicolumn{1}{|p{5.82in}|}{Character. Converts the integer to the corresponding unicode character before printing.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'d'} & \multicolumn{1}{|p{5.82in}|}{Decimal Integer. Outputs the number in base 10.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'o'} & \multicolumn{1}{|p{5.82in}|}{Octal format. Outputs the number in base 8.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'x'} & \multicolumn{1}{|p{5.82in}|}{Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'X'} & \multicolumn{1}{|p{5.82in}|}{Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'n'} & \multicolumn{1}{|p{5.82in}|}{Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{None} & \multicolumn{1}{|p{5.82in}|}{The same as 'd'.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:8 Ends Here %%%%%%%%%%%%%%
+
+
+\noindent 
+In addition to the above presentation types, integers can be formatted with the floating point presentation types listed below (except 'n' and None). When doing so, \href{https://docs.python.org/2/library/functions.html}{float()}
+ is used to convert the integer to a floating point number before formatting. \par
+\noindent 
+The available presentation types for floating point and decimal values are: \par
+
+
+ %%%%%%%%%%%%  Table No:9 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.43in}p{5.82in} }
+\hhline{--}
+\multicolumn{1}{|p{0.43in}}{\Centering \textbf{Type}} & \multicolumn{1}{|p{5.82in}|}{\Centering \textbf{Meaning}} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'e'} & \multicolumn{1}{|p{5.82in}|}{Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'E'} & \multicolumn{1}{|p{5.82in}|}{Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'f'} & \multicolumn{1}{|p{5.82in}|}{Fixed point. Displays the number as a fixed-point number. The default precision is 6.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'F'} & \multicolumn{1}{|p{5.82in}|}{Fixed point. Same as 'f'.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'g'} & \multicolumn{1}{|p{5.82in}|}{General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.The precise rules are as follows: suppose that the result formatted with presentation type 'e' and precision p-1 would have exponent exp. Then if -4 <= exp < p, the number is formatted with presentation type 'f' and precision p-1-exp. Otherwise, the number is formatted with presentation type 'e' and precision p-1. In both cases insignificant trailing zeros are removed from the significand, and the decimal point is also removed if there are no remaining digits following it.Positive and negative infinity, positive and negative zero, and nans, are formatted as inf, -inf, 0, -0 and nan respectively, regardless of the precision.A precision of 0 is treated as equivalent to a precision of 1. The default precision is 6.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'G'} & \multicolumn{1}{|p{5.82in}|}{General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{'n'} & \multicolumn{1}{|p{5.82in}|}{Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{' $  \%  $'} & \multicolumn{1}{|p{5.82in}|}{Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.} & \hhline{--}
+\multicolumn{1}{|p{0.43in}}{None} & \multicolumn{1}{|p{5.82in}|}{The same as 'g'.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:9 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\vspace{12pt}
+\end{document}
