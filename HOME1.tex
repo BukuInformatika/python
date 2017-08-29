@@ -1,0 +1,44 @@
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+\title{\Huge \textbf{Web Service}  \footnote{D4TI3D.} \\ \huge HOME \footnote{1144010.}}
+% Author
+\author{\textsc{Faisal Akbar Ramadhan}
+}
+
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%
+% Preface %
+%%%%%%%%%%%
+\chapter*{HOME}
+\input{perkenalan}
+\input{sejarah}
+\input{kelebihandankekurangan}
+\input{fungsi}
+\input{fungsidancontoh}
+\end{document}
