@@ -1,0 +1,578 @@
+%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
+
+
+\documentclass[a4paper,12pt]{report}
+
+% Other options in place of 'report' are 1)article 2)book 3)letter
+% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
+
+
+ %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
+
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+
+ %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
+
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
+
+
+\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
+\everymath{\displaystyle}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\newlist{myEnumerate}{enumerate}{9}
+	\setlist[myEnumerate,1]{label=\arabic*)}
+	\setlist[myEnumerate,2]{label=\alph*)}
+	\setlist[myEnumerate,3]{label=(\roman*)}
+	\setlist[myEnumerate,4]{label=(\arabic*)}
+	\setlist[myEnumerate,5]{label=(\Alph*)}
+	\setlist[myEnumerate,6]{label=(\Roman*)}
+	\setlist[myEnumerate,7]{label=\arabic*}
+	\setlist[myEnumerate,8]{label=\alph*}
+	\setlist[myEnumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+	\setlist[itemize]{label=$\cdot$}
+	\setlist[itemize,1]{label=\textbullet}
+	\setlist[itemize,2]{label=$\circ$}
+	\setlist[itemize,3]{label=$\ast$}
+	\setlist[itemize,4]{label=$\dagger$}
+	\setlist[itemize,5]{label=$\triangleright$}
+	\setlist[itemize,6]{label=$\bigstar$}
+	\setlist[itemize,7]{label=$\blacklozenge$}
+	\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+ %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
+
+
+
+
+ %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
+
+
+\rfoot{\thepage}
+
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\setstretch{1.08}
+
+
+ %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
+
+
+\begin{document}
+\sloppy
+\begin{center}{\fontsize{24pt}{24pt}\selectfont Python Dictionary \\}\end{center} \par
+\vspace{12pt}
+\noindent 
+Setiap kunci dipisahkan dari nilainya oleh titik dua (:), item dipisahkan oleh koma, dan semuanya tertutup dalam kurung kurawal. Kamus kosong tanpa barang ditulis hanya dengan dua kurung kurawal, seperti ini:  $  \{  $ $  \}  $. \par
+\noindent 
+Kunci unik dalam kamus sementara nilai mungkin tidak. Nilai kamus bisa berupa tipe apa pun, namun kunci harus berupa tipe data yang tidak berubah seperti string, angka, atau tupel. \par
+\vspace{12pt}
+\subsection*{Accessing Values in Dictionary:}
+ \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana -\end{adjustwidth}
+ \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} print "dict['Name']: ", dict['Name'] \par
+\noindent 
+ \hspace*{0.5in} print "dict['Age']: ", dict['Age'] \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -\end{adjustwidth}
+ \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['Name']:~ Zara} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['Age']:~ 7} \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Jika kita mencoba mengakses item data dengan sebuah kunci, yang bukan bagian dari kamus, kita mendapatkan error sebagai berikut -\end{adjustwidth}
+ \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} print "dict['Alice']: ", dict['Alice'] \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -\end{adjustwidth}
+ \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['Alice']:} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} Traceback (most recent call last):} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} ~~ File "test.py", line 4, in <module>} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont ~~~~~  \hspace*{0.5in}  \hspace*{0.5in} print "dict['Alice']: ", dict['Alice'];} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} KeyError: 'Alice'} \par
+\vspace{12pt}
+\vspace{12pt}
+\subsection*{Updating Dictionary}
+ \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana -\end{adjustwidth}
+ \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict['Age'] = 8;  $  \#  $ update existing entry \par
+\noindent 
+ \hspace*{0.5in} dict['School'] = "DPS School";  $  \#  $ Add new entry \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} print "dict['Age']: ", dict['Age'] \par
+\noindent 
+ \hspace*{0.5in} print "dict['School']: ", dict['School'] \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -\end{adjustwidth}
+ \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['Age']:~ 8} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['School']:~ DPS School} \par
+\vspace{12pt}
+\vspace{12pt}
+\subsection*{Delete Dictionary Elements}
+ \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Anda dapat menghapus elemen kamus individual atau menghapus keseluruhan isi kamus. Anda juga dapat menghapus seluruh kamus dalam satu operasi.\end{adjustwidth}
+ \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Untuk menghapus seluruh kamus secara eksplisit, cukup gunakan del statement. Berikut adalah contoh sederhana –\end{adjustwidth}
+ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} del dict['Name'];  $  \#  $ remove entry with key 'Name' \par
+\noindent 
+ \hspace*{0.5in} dict.clear();~~~~  $  \#  $ remove all entries in dict \par
+\noindent 
+ \hspace*{0.5in} del dict ;~~~~~~~  $  \#  $ delete entire dictionary \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} print "dict['Age']: ", dict['Age'] \par
+\noindent 
+ \hspace*{0.5in} print "dict['School']: ", dict['School'] \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Ini menghasilkan hasil berikut. Perhatikan bahwa pengecualian diajukan karena setelah kamus del dict tidak ada lagi -\end{adjustwidth}
+ \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['Age']:} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} Traceback (most recent call last):} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont ~  \hspace*{0.5in} File "test.py", line 8, in <module>} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont ~~~  \hspace*{0.5in}  \hspace*{0.5in} print "dict['Age']: ", dict['Age'];} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} TypeError: 'type' object is unsubscriptable} \par
+\begin{adjustwidth}{0.03in}{0.03in}
+\textbf{Note:} del () metode dibahas di bagian selanjutnya.\end{adjustwidth}
+ \par
+\vspace{12pt}
+\subsection*{Properties of Dictionary Keys}
+ \par
+\subsection*{Nilai kamus tidak memiliki batasan. Mereka bisa menjadi objek Python yang sewenang-wenang, baik objek standar atau objek yang ditentukan pengguna. Namun, hal yang sama tidak berlaku untuk kunci.}
+ \par
+\subsection*{Ada dua hal penting yang perlu diingat tentang kunci kamus –}
+ \par
+\subsection*{Lebih dari satu entri per kunci tidak diperbolehkan. Yang berarti tidak ada kunci duplikat yang diperbolehkan. Ketika kunci duplikat ditemui selama penugasan, tugas terakhir akan menang. Sebagai contoh –}
+ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Name': 'Manni' $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} print "dict['Name']: ", dict['Name'] \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -\end{adjustwidth}
+ \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} dict['Name']:~ Manni} \par
+\vspace{12pt}
+\begin{adjustwidth}{0.03in}{0.03in}
+(b) Tombol harus tidak berubah. Yang berarti Anda bisa menggunakan string, angka atau tupel sebagai tombol kamus tapi sesuatu seperti ['key'] tidak diperbolehkan. Berikut adalah contoh sederhana:\end{adjustwidth}
+ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} dict =  $  \{  $['Name']: 'Zara', 'Age': 7 $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} print "dict['Name']: ", dict['Name'] \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -\end{adjustwidth}
+ \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} Traceback (most recent call last):} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont ~~  \hspace*{0.5in}  \hspace*{0.5in} File "test.py", line 3, in <module>} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont ~~~~~  \hspace*{0.5in}  \hspace*{0.5in} dict =  $  \{  $['Name']: 'Zara', 'Age': 7 $  \}  $;} \par
+\noindent 
+{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} TypeError: list objects are unhashable} \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\subsection*{Built-in Dictionary Functions & Methods −}
+ \par
+\begin{adjustwidth}{0.03in}{0.03in}
+Python includes the following dictionary functions  $ - $\end{adjustwidth}
+ \par
+
+
+ %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.4in}p{5.89in} }
+\hhline{--}
+\multicolumn{1}{|p{0.4in}}{\textbf{SN}} & \multicolumn{1}{|p{5.89in}|}{\textbf{Function with Description}} & \hhline{--}
+\multicolumn{1}{|p{0.4in}}{1} & \multicolumn{1}{|p{5.89in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $cmp.htm}{cmp(dict1, dict2)}
+Compares elements of both dict.} & \hhline{--}
+\multicolumn{1}{|p{0.4in}}{2} & \multicolumn{1}{|p{5.89in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $len.htm}{len(dict)}
+Gives the total length of the dictionary. This would be equal to the number of items in the dictionary.} & \hhline{--}
+\multicolumn{1}{|p{0.4in}}{3} & \multicolumn{1}{|p{5.89in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $str.htm}{str(dict)}
+Produces a printable string representation of a dictionary} & \hhline{--}
+\multicolumn{1}{|p{0.4in}}{4} & \multicolumn{1}{|p{5.89in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $type.htm}{type(variable)}
+Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:1 Ends Here %%%%%%%%%%%%%%
+
+
+\begin{adjustwidth}{0.03in}{0.03in}
+Python includes following dictionary methods  $ - $\end{adjustwidth}
+ \par
+
+
+ %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{ p{0.41in}p{5.88in} }
+\hhline{--}
+\multicolumn{1}{|p{0.41in}}{\textbf{SN}} & \multicolumn{1}{|p{5.88in}|}{\textbf{Methods with Description}} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{1} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $clear.htm}{dict.clear()}
+Removes all elements of dictionary $  $\textit{dict}} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{2} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $copy.htm}{dict.copy()}
+Returns a shallow copy of dictionary $  $\textit{dict}} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{3} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $fromkeys.htm}{dict.fromkeys()}
+Create a new dictionary with keys from seq and values $  $\textit{set} $  $to $  $\textit{value}.} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{4} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $get.htm}{dict.get(key, default=None)}
+For $  $\textit{key} $  $key, returns value or default if key not in dictionary} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{5} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $has $  \_  $key.htm}{dict.has $  \_  $key(key)}
+Returns $  $\textit{true} $  $if key in dictionary $  $\textit{dict}, $  $\textit{false} $  $otherwise} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{6} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $items.htm}{dict.items()}
+Returns a list of $  $\textit{dict}'s (key, value) tuple pairs} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{7} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $keys.htm}{dict.keys()}
+Returns list of dictionary dict's keys} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{8} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $setdefault.htm}{dict.setdefault(key, default=None)}
+Similar to get(), but will set dict[key]=default if $  $\textit{key} $  $is not already in dict} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{9} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $update.htm}{dict.update(dict2)}
+Adds dictionary $  $\textit{dict2}'s key-values pairs to $  $\textit{dict}} & \hhline{--}
+\multicolumn{1}{|p{0.41in}}{10} & \multicolumn{1}{|p{5.88in}|}{\href{https://www.tutorialspoint.com/python/dictionary $  \_  $values.htm}{dict.values()}
+Returns list of dictionary $  $\textit{dict}'s values} & \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+ %%%%%%%%%%%%  Table No:2 Ends Here %%%%%%%%%%%%%%
+
+
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+\subsection*{Dictionaries}
+ \par
+\vspace{12pt}
+\noindent 
+\textbf{Introductions} \par
+\noindent 
+Kami sudah mengenal daftar di bab sebelumnya. Di bab kursus Python online kami, kami akan mempresentasikan kamus dan operator dan metode pada kamus. Program atau skrip Python tanpa daftar dan kamus hampir tidak dapat dibayangkan. Seperti daftar kamus yang bisa dengan mudah diubah, bisa menyusut dan berkembang ad libitum pada saat run time. Mereka menyusut dan tumbuh tanpa perlu membuat salinan. Kamus dapat dimuat dalam daftar dan sebaliknya. Tapi apa perbedaan antara daftar dan kamus? Daftar diurutkan dari objek, sedangkan kamus tidak berurutan. Tapi perbedaan utamanya adalah item dalam kamus diakses melalui kunci dan tidak melalui posisinya. Kamus adalah array asosiatif (juga dikenal sebagai hash). Kunci kamus mana pun dikaitkan (atau dipetakan) ke sebuah nilai. Nilai kamus bisa berupa tipe data Python. Jadi kamus adalah pasangan kunci-nilai tak berurutan. \par
+\vspace{12pt}
+\noindent 
+Kamus tidak mendukung urutan operasi dari jenis data urutan seperti string, tupel dan daftar. Kamus termasuk tipe pemetaan built-in. Mereka adalah satu-satunya wakil semacam ini! \par
+\vspace{12pt}
+\noindent 
+Di akhir bab ini, kami akan menunjukkan bagaimana kamus dapat diubah menjadi satu daftar, berisi (kunci, nilai) -tupel atau dua daftar, yaitu satu dengan kunci dan satu dengan nilainya. Transformasi ini bisa dilakukan secara terbalik juga. \par
+\vspace{10pt}
+\noindent 
+\subsection*{How to create a dictionary?}
+ \par
+\noindent 
+Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  $  \{  $ $  \}  $ dipisahkan dengan koma. Item memiliki kunci dan nilai yang sesuai dinyatakan sebagai pasangan, kunci: nilai. Sementara nilai dapat berupa tipe data apa pun dan dapat diulang, kunci harus terdiri dari tipe yang tidak dapat diubah (string, number atau tupel dengan elemen yang tidak berubah) dan harus unik. \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in}  $  \#  $ empty dictionary} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in} my $  \_  $dict =  $  \{  $ $  \}  $} \par
+\vspace{11pt}
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in}  $  \#  $ dictionary with integer keys} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in} my $  \_  $dict =  $  \{  $1: 'apple', 2: 'ball' $  \}  $} \par
+\vspace{11pt}
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in}  $  \#  $ dictionary with mixed keys} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in} my $  \_  $dict =  $  \{  $'name': 'John', 1: [2, 4, 3] $  \}  $} \par
+\vspace{11pt}
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in}  $  \#  $ using dict()} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in} my $  \_  $dict = dict( $  \{  $1:'apple', 2:'ball' $  \}  $)} \par
+\vspace{11pt}
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in}  $  \#  $ from sequence having each item as a pair} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  \hspace*{0.5in} my $  \_  $dict = dict([(1,'apple'), (2,'ball')])} \par
+\noindent 
+Seperti yang bisa Anda lihat di atas, kita juga bisa membuat kamus menggunakan fungsi built-in dict (). \par
+\noindent 
+\subsection*{How to access elements from a dictionary?}
+ \par
+\noindent 
+Sementara pengindeksan digunakan dengan jenis wadah lain untuk mengakses nilai, kamus menggunakan tombol. Kunci dapat digunakan baik di dalam tanda kurung siku atau dengan metode get (). Perbedaan saat menggunakan get () adalah mengembalikan Elemen alih-alih KeyError, jika kuncinya tidak ditemukan. \par
+\noindent 
+ \hspace*{0.5in} my $  \_  $dict =  $  \{  $'name':'Jack', 'age': 26 $  \}  $ \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output: Jack \par
+\noindent 
+ \hspace*{0.5in} print(my $  \_  $dict['name']) \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output: 26 \par
+\noindent 
+ \hspace*{0.5in} print(my $  \_  $dict.get('age')) \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Trying to access keys which doesn't exist throws error \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ my $  \_  $dict.get('address') \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ my $  \_  $dict['address'] \par
+\noindent 
+Saat menjalankan program, hasilnya adalah: \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont Jack} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont 26} \par
+\vspace{12pt}
+\noindent 
+\subsection*{How to change or add elements in a dictionary?}
+ \par
+\noindent 
+Kamus bisa berubah-ubah. Kita bisa menambahkan item baru atau mengubah nilai barang yang ada menggunakan operator penugasan. \par
+\noindent 
+Jika kuncinya sudah ada, nilai akan diperbarui, jika ada kunci baru: pasangan nilai ditambahkan ke kamus. \par
+\noindent 
+Script.py \par
+\noindent 
+ \hspace*{0.5in} my $  \_  $dict =  $  \{  $'name':'Jack', 'age': 26 $  \}  $ \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ update value \par
+\noindent 
+ \hspace*{0.5in} my $  \_  $dict['age'] = 27 \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $Output:  $  \{  $'age': 27, 'name': 'Jack' $  \}  $ \par
+\noindent 
+ \hspace*{0.5in} print(my $  \_  $dict) \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ add item \par
+\noindent 
+ \hspace*{0.5in} my $  \_  $dict['address']~= 'Downtown'   \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output:  $  \{  $'address': 'Downtown', 'age': 27, 'name': 'Jack' $  \}  $ \par
+\noindent 
+ \hspace*{0.5in} print(my $  \_  $dict). \par
+\vspace{12pt}
+\noindent 
+Saat menjalankan program, hasilnya adalah: \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  $  \{  $'name': 'Jack', 'age': 27 $  \}  $} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  $  \{  $'name': 'Jack', 'age': 27, 'address': 'Downtown' $  \}  $} \par
+\vspace{12pt}
+\noindent 
+\subsection*{How to delete or remove elements from a dictionary?}
+ \par
+\noindent 
+Kita bisa menghapus item tertentu dalam kamus dengan menggunakan metode pop (). Metode ini menghilangkan item dengan tombol yang disediakan dan mengembalikan nilainya. \par
+\noindent 
+Metodenya, popitem () dapat digunakan untuk menghapus dan mengembalikan item yang sewenang-wenang (key, value) membentuk kamus. Semua item dapat dihapus sekaligus dengan menggunakan metode clear (). \par
+\noindent 
+Kita juga bisa menggunakan kata kunci del untuk menghapus setiap item atau keseluruhan kamus itu sendiri. \par
+\vspace{12pt}
+\noindent 
+Scrip.py \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ create a dictionary \par
+\noindent 
+ \hspace*{0.5in} squares~=  $  \{  $1:1, 2:4, 3:9, 4:16, 5:25 $  \}  $   \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ remove a particular item \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output: 16 \par
+\noindent 
+ \hspace*{0.5in} print(squares.pop(4))~  \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output:  $  \{  $1: 1, 2: 4, 3: 9, 5: 25 $  \}  $ \par
+\noindent 
+ \hspace*{0.5in} print(squares) \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ remove an arbitrary item \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output: (1, 1) \par
+\noindent 
+ \hspace*{0.5in} print(squares.popitem()) \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output:  $  \{  $2: 4, 3: 9, 5: 25 $  \}  $ \par
+\noindent 
+ \hspace*{0.5in} print(squares) \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ delete a particular item \par
+\noindent 
+ \hspace*{0.5in} del~squares[5]   \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output:  $  \{  $2: 4, 3: 9 $  \}  $ \par
+\noindent 
+ \hspace*{0.5in} print(squares) \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ remove all items \par
+\noindent 
+ \hspace*{0.5in} squares.clear() \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Output:  $  \{  $ $  \}  $ \par
+\noindent 
+ \hspace*{0.5in} print(squares) \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ delete the dictionary itself \par
+\noindent 
+ \hspace*{0.5in} del squares \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in}  $  \#  $ Throws Error \par
+\noindent 
+ \hspace*{0.5in}  $  \#  $ print(squares) \par
+\noindent 
+When you run the program, the output will be: \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont 16} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  $  \{  $1: 1, 2: 4, 3: 9, 5: 25 $  \}  $} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont (1, 1)} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  $  \{  $2: 4, 3: 9, 5: 25 $  \}  $} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  $  \{  $2: 4, 3: 9 $  \}  $} \par
+\noindent 
+{\fontsize{11pt}{11pt}\selectfont  $  \{  $ $  \}  $} \par
+\end{document}
