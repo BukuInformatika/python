@@ -1,0 +1,729 @@
+%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
+
+
+\documentclass[a4paper,12pt]{report}
+
+% Other options in place of 'report' are 1)article 2)book 3)letter
+% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
+
+
+ %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
+
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+
+ %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
+
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
+
+
+\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
+\everymath{\displaystyle}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\newlist{myEnumerate}{enumerate}{9}
+	\setlist[myEnumerate,1]{label=\arabic*)}
+	\setlist[myEnumerate,2]{label=\alph*)}
+	\setlist[myEnumerate,3]{label=(\roman*)}
+	\setlist[myEnumerate,4]{label=(\arabic*)}
+	\setlist[myEnumerate,5]{label=(\Alph*)}
+	\setlist[myEnumerate,6]{label=(\Roman*)}
+	\setlist[myEnumerate,7]{label=\arabic*}
+	\setlist[myEnumerate,8]{label=\alph*}
+	\setlist[myEnumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+	\setlist[itemize]{label=$\cdot$}
+	\setlist[itemize,1]{label=\textbullet}
+	\setlist[itemize,2]{label=$\circ$}
+	\setlist[itemize,3]{label=$\ast$}
+	\setlist[itemize,4]{label=$\dagger$}
+	\setlist[itemize,5]{label=$\triangleright$}
+	\setlist[itemize,6]{label=$\bigstar$}
+	\setlist[itemize,7]{label=$\blacklozenge$}
+	\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+ %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
+
+
+
+
+ %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
+
+
+\rfoot{\thepage}
+
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\setstretch{1.08}
+
+
+ %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
+
+
+\begin{document}
+\sloppy
+Python XML Processing \par
+XML adalah bahasa open source portable yang memungkinkan pemrogram mengemangkan aplikasi yang dapat dibaca oleh aplikasi lain, terlepas dari sistem operasi dan bahasa pengembangnya. \par
+\vspace{12pt}
+\noindent 
+Apa itu XML? \par
+Extensible Markup Languange (XML) adalah bahasa markup seperti HTML atau SGML. Ini direkomendasikan oleh World Wide Web Consortium dan tersedia sebagai standar terbuka.  \par
+XML sangat berguna untuk mencatat data berukuran kecil dan menengah tanpa memerlukan tulang punggung berbasis SQL. \par
+\vspace{12pt}
+\noindent 
+\textbf{2.1 Arsitektur }\textbf{Parsing}\textbf{ XML dan API} \par
+\noindent 
+ \hspace*{0.5in} Perpustakaan standar Python menyediakan seperangkat antarmuka minimal tapi berguna untuk bekerja dengan XML.  \par
+\noindent 
+ \hspace*{0.5in} Dua API yang paling dasar dan umum digunakan untuk data XML adalah antarmuka SAX dan DOM. \par
+\noindent 
+ \hspace*{0.5in} API sederhana untuk XML (SAX): mendaftarkan panggilan kemali untuk acara yang diminati dan kemudian membiarkan parser berjalan melalui dokumen. Ini berguna bila dokumen berukuran besar atau memiliki keterbatasan memori, ini memparsing file tidak pernah tersimpan dalam memori. \par
+\noindent 
+ \hspace*{0.5in} API Document Objek Model (DOM): ini adalah rekomendasi World Wide Web Consortium dimana keseluruhan file dibaca ke memori dan disimpan dalam bentuk hierarkies (tree-based) untuk mewakili semua fitur dokumen XML.  \par
+\noindent 
+ \hspace*{0.5in} SAX jelas tidak bisa memproses informasi secepat DOM saat bisa bekerjadengan file besar. Di sisi lain, menggunakan DOM secara eklusifenar-benar dapat membunuh sumber daya, terutama jika digunakan pada banyak file kecil. \par
+\noindent 
+~~~~~~~~~~~ SAX hanya bisa dibaca sementara DOM mengizinkan perubahan pada file XML. Kedua API yang berbeda ini saling melengkapi satu sama lain, tidak ada alasan mengapa tidak dapat menggunakannya untuk proyek besar. \par
+\vspace{12pt}
+\noindent 
+Contoh: \par
+\noindent 
+<collection shelf="New Arrivals"> \par
+\noindent 
+<movie title="Enemy Behind"> \par
+\noindent 
+~~ <type>War, Thriller</type> \par
+\noindent 
+~~ <format>DVD</format> \par
+\noindent 
+~~ <year>2003</year> \par
+\noindent 
+~~ <rating>PG</rating> \par
+\noindent 
+~~ <stars>10</stars> \par
+\noindent 
+~~ <description>Talk about a US-Japan war</description> \par
+\noindent 
+</movie> \par
+\noindent 
+<movie title="Transformers"> \par
+\noindent 
+~~ <type>Anime, Science Fiction</type> \par
+\noindent 
+~~ <format>DVD</format> \par
+\noindent 
+~~ <year>1989</year> \par
+\noindent 
+~~ <rating>R</rating> \par
+\noindent 
+~~ <stars>8</stars> \par
+\noindent 
+~~ <description>A schientific fiction</description> \par
+\noindent 
+</movie> \par
+\noindent 
+~~ <movie title="Trigun"> \par
+\noindent 
+~~ <type>Anime, Action</type> \par
+\noindent 
+~~ <format>DVD</format> \par
+\noindent 
+~~ <episodes>4</episodes> \par
+\noindent 
+~~ <rating>PG</rating> \par
+\noindent 
+~~ <stars>10</stars> \par
+\noindent 
+~~ <description>Vash the Stampede!</description> \par
+\noindent 
+</movie> \par
+\noindent 
+<movie title="Ishtar"> \par
+\noindent 
+~~ <type>Comedy</type> \par
+\noindent 
+~~ <format>VHS</format> \par
+\noindent 
+~~ <rating>PG</rating> \par
+\noindent 
+~~ <stars>2</stars> \par
+\noindent 
+~~ <description>Viewable boredom</description> \par
+\noindent 
+</movie> \par
+\noindent 
+</collection> \par
+\vspace{10pt}
+\noindent 
+\textbf{2.2 Parsing XML dengan API SAX} \par
+\noindent 
+ \hspace*{0.5in} SAX adalah antarmuka standar untuk parsing XML berbasis event. Parsing XML dengan SAX umumnya mengharuskan untuk membuat C\textit{ontrolHandler }dengan subclassing xml.sax \textit{controlhandler}. \par
+\noindent 
+ \hspace*{0.5in} \textit{ControlHandler }menangani tag dan atribut tertentu dari XML. Objek \textit{ControlHandler }menyediakan metode untuk menangani berbagai aktivitas parsing. Parsing memanggil metode \textit{ControlHandler }saat memparsing file XML. \par
+\noindent 
+ \hspace*{0.5in} Metode \textit{startDocument} dan \textit{endDocument} disebut awal dan akhir setiap elemen. Jika parsing tidak dalam mode namespace, metode \textit{startElement} (tag attribute) dan \textit{endElement} (tag) dipanggil. Jika tidak, metode yang sesuai \textit{startElemenNS} dan \textit{endElemenNS} dipanggil. Disini, tah adalah tag elemen dan atriut adalah atribut.  \par
+\noindent 
+ \hspace*{0.5in} Berikut ini metode penting untuk memahami sebelum melanjutkan ke materi berikutnya : \par
+\noindent 
+\begin{myEnumerate}
+\item Metode \textit{make $  \_  $parser} \par
+Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing diuat akan menjadi tipe parsing pertama yang ditemukan sistem.  \par
+\vspace{10pt}
+{\fontsize{10pt}{10pt}\selectfont xml.sax.make $  \_  $parser([parser $  \_  $list])} \par
+\vspace{12pt}
+Berikut adalah detail parameternya : \par
+Parser $  \_  $list : pilihan argumen yang terdiri dari daftar parsing untuk digunakan yang semuanya harus menerapkan metode \textit{make $  \_  $parse} \par
+\noindent 
+\item Metode \textit{parser} \par
+Metode berikut membuat parsing SAX dan menggunakannya untuk mengurai dokumen \par
+\vspace{10pt}
+{\fontsize{10pt}{10pt}\selectfont xml.sax.parser(xmlfile, contenthandler[, errorhandler])} \par
+\vspace{10pt}
+Berikut adalah detail dari parameternya: \par
+\noindent 
+\begin{itemize}
+\item \textit{Xmlfile } \par
+Ini adalah nama file XML yang bisa dibaca. \par
+\noindent 
+\item \textit{ContentHandler } \par
+Ini harus menjadi objek \textit{ContenHandler} \par
+\noindent 
+\item \textit{ErrorHandler} \par
+Jika ditentukan, e\textit{rrorhandler} harus menjadi objek \textit{ErrorHandler} SAX \par
+\noindent 
+\item Metode\textit{ parseString}\end{itemize}
+ \par
+Membuat parsing SAX dan mengurai string XML yang ditentukan : \par
+\vspace{12pt}
+{\fontsize{10pt}{10pt}\selectfont xml.sax.parsertring(xmlstring,contenthandler[, errorhandler])} \par
+\vspace{12pt}
+Brikut ini adalah detail nama dar parameter : \par
+\noindent 
+\item \textit{XMLstring} \par
+Nama dari string yang bisa dibaca \par
+\noindent 
+\item \textit{ContentHandler} \par
+Menjadi objek ContenHandler \par
+\noindent 
+\item \textit{ErrorHandler} \par
+Menjadi objek ErorHandler SAX \par
+\vspace{12pt}
+\noindent 
+Contoh : \par
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+import xml.sax \par
+\vspace{12pt}
+\noindent 
+class MovieHandler( xml.sax.ContentHandler ): \par
+\noindent 
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self): \par
+\noindent 
+~~~~~ self.CurrentData = "" \par
+\noindent 
+~~~~~ self.type = "" \par
+\noindent 
+~~~~~ self.format = "" \par
+\noindent 
+~~~~~ self.year = "" \par
+\noindent 
+~~~~~ self.rating = "" \par
+\noindent 
+~~~~~ self.stars = "" \par
+\noindent 
+~~~~~ self.description = "" \par
+\vspace{12pt}
+\noindent 
+~~  $  \#  $ Call when an element starts \par
+\noindent 
+~~ def startElement(self, tag, attributes): \par
+\noindent 
+~~~~~ self.CurrentData = tag \par
+\noindent 
+~~~~~ if tag == "movie": \par
+\noindent 
+~~~~~~~~ print "*****Movie*****" \par
+\noindent 
+~~~~~~~~ title = attributes["title"] \par
+\noindent 
+~~~~~~~~ print "Title:", title \par
+\vspace{12pt}
+\noindent 
+~~  $  \#  $ Call when an elements ends \par
+\noindent 
+~~ def endElement(self, tag): \par
+\noindent 
+~~~~~ if self.CurrentData == "type": \par
+\noindent 
+~~~~~~~~ print "Type:", self.type \par
+\noindent 
+~~~~~ elif self.CurrentData == "format": \par
+\noindent 
+~~~~~~~~ print "Format:", self.format \par
+\noindent 
+~~~~~ elif self.CurrentData == "year": \par
+\noindent 
+~~~~~~~~ print "Year:", self.year \par
+\noindent 
+~~~~~ elif self.CurrentData == "rating": \par
+\noindent 
+~~~~~~~~ print "Rating:", self.rating \par
+\noindent 
+~~~~~ elif self.CurrentData == "stars": \par
+\noindent 
+~~~~~~~~ print "Stars:", self.stars \par
+\noindent 
+~~~~~ elif self.CurrentData == "description": \par
+\noindent 
+~~~~~~~~ print "Description:", self.description \par
+\noindent 
+~~~~~ self.CurrentData = "" \par
+\vspace{12pt}
+\noindent 
+~~  $  \#  $ Call when a character is read \par
+\noindent 
+~~ def characters(self, content): \par
+\noindent 
+~~~~~ if self.CurrentData == "type": \par
+\noindent 
+~~~~~~~~ self.type = content \par
+\noindent 
+~~~~~ elif self.CurrentData == "format": \par
+\noindent 
+~~~~~~~~ self.format = content \par
+\noindent 
+~~~~~ elif self.CurrentData == "year": \par
+\noindent 
+~~~~~~~~ self.year = content \par
+\noindent 
+~~~~~ elif self.CurrentData == "rating": \par
+\noindent 
+~~~~~~~~ self.rating = content \par
+\noindent 
+~~~~~ elif self.CurrentData == "stars": \par
+\noindent 
+~~~~~~~~ self.stars = content \par
+\noindent 
+~~~~~ elif self.CurrentData == "description": \par
+\noindent 
+~~~~~~~~ self.description = content \par
+\noindent 
+~  \par
+\noindent 
+if (  $  \_  $ $  \_  $name $  \_  $ $  \_  $ == " $  \_  $ $  \_  $main $  \_  $ $  \_  $"): \par
+\noindent 
+~~  \par
+\noindent 
+~~  $  \#  $ create an XMLReader \par
+\noindent 
+~~ parser = xml.sax.make $  \_  $parser() \par
+\noindent 
+~~  $  \#  $ turn off namepsaces \par
+\noindent 
+~~ parser.setFeature(xml.sax.handler.feature $  \_  $namespaces, 0) \par
+\vspace{12pt}
+\noindent 
+~~  $  \#  $ override the default ContextHandler \par
+\noindent 
+~~ Handler = MovieHandler() \par
+\noindent 
+~~ parser.setContentHandler( Handler ) \par
+\noindent 
+~~  \par
+\noindent 
+~~ parser.parse("movies.xml") \par
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Ini akan menghasilkan hasil sebagai berikut: \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont *****Movie******} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Title: Enemy Behind} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Type: War, Thriller} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Format: DVD} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Year: 2003} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Rating: PG} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Stars: 10} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Description: Talk about a US-Japan war} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Title: Transformers} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Type: Anime, Science Fiction} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Format: DVD} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Year: 1989} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Rating: R} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Stars: 8} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Description: A schientific fiction} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Title: Trigun} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Type: Anime, Action} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Format: DVD} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Rating: PG} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Stars: 10} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Description: Vash the Stampede!} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Title: Ishtar} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Type: Comedy} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Format: VHS} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Rating: PG} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Stars: 2} \par
+\noindent 
+\vspace{10pt}
+\noindent 
+\textbf{2.3 Parsing XML dengan API DOM} \par
+\noindent 
+ \hspace*{0.5in} Document Ovject Model (DOM) adalah API lintas bahasa dari World Wide Web Consortium (W3C) untuk mengakses dan memodifikasi dokumen XML. \par
+\noindent 
+ \hspace*{0.5in} DOM sangat berguna untuk aplikasi akses acak. SAX hanya memungkinkan melihat satu bit dokumen sekaligus. Jika melihat satu elemen SAX, tidak memiliki akses ke yang lain. \par
+\noindent 
+ \hspace*{0.5in} Berikut adalah cara termudah untuk memuat dokumen XML dengan cepat dan membuat objek minidom menggunakan modul xml.dom. Objek minidom menyediakan metode parsing sederhana yang dengan cepat memuat pohon DOM dari file XML. \par
+\noindent 
+ \hspace*{0.5in} Contoh~frase memanggil fungsi  parsing (file [,parsing]) dari objek minidokumen untuk mengurai file XML yang ditunjuk oleh file ke objek pohon DOM. \par
+\noindent 
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+\noindent 
+from xml.dom.minidom import parse \par
+\noindent 
+import xml.dom.minidom \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Open XML document using minidom parser \par
+\noindent 
+DOMTree = xml.dom.minidom.parse("movies.xml") \par
+\noindent 
+collection = DOMTree.documentElement \par
+\noindent 
+if collection.hasAttribute("shelf"): \par
+\noindent 
+~~ print "Root element :  $  \%  $s"  $  \%  $ collection.getAttribute("shelf") \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Get all the movies in the collection \par
+\noindent 
+movies = collection.getElementsByTagName("movie") \par
+\vspace{12pt}
+\noindent 
+ $  \#  $ Print detail of each movie. \par
+\noindent 
+for movie in movies: \par
+\noindent 
+~~ print "*****Movie*****" \par
+\noindent 
+~~ if movie.hasAttribute("title"): \par
+\noindent 
+~~~~~ print "Title:  $  \%  $s"  $  \%  $ movie.getAttribute("title") \par
+\vspace{12pt}
+\noindent 
+~~ type = movie.getElementsByTagName('type')[0] \par
+\noindent 
+~~ print "Type:  $  \%  $s"  $  \%  $ type.childNodes[0].data \par
+\noindent 
+~~ format = movie.getElementsByTagName('format')[0] \par
+\noindent 
+~~ print "Format:  $  \%  $s"  $  \%  $ format.childNodes[0].data \par
+\noindent 
+~~ rating = movie.getElementsByTagName('rating')[0] \par
+\noindent 
+~~ print "Rating:  $  \%  $s"  $  \%  $ rating.childNodes[0].data \par
+\noindent 
+~~ description = movie.getElementsByTagName('description')[0] \par
+\noindent 
+~~ print "Description:  $  \%  $s"  $  \%  $ description.childNodes[0].data \par
+\vspace{12pt}
+\noindent 
+Ini akan menghasilkan hasil sebagai berikut : \par
+\noindent 
+Root element : New Arrivals \par
+\noindent 
+*****Movie***** \par
+\noindent 
+Title: Enemy Behind \par
+\noindent 
+Type: War, Thriller \par
+\noindent 
+Format: DVD \par
+\noindent 
+Rating: PG \par
+\noindent 
+Description: Talk about a US-Japan war \par
+\noindent 
+*****Movie***** \par
+\noindent 
+Title: Transformers \par
+\noindent 
+Type: Anime, Science Fiction \par
+\noindent 
+Format: DVD \par
+\noindent 
+Rating: R \par
+\noindent 
+Description: A schientific fiction \par
+\noindent 
+*****Movie***** \par
+\noindent 
+Title: Trigun \par
+\noindent 
+Type: Anime, Action \par
+\noindent 
+Format: DVD \par
+\noindent 
+Rating: PG \par
+\noindent 
+Description: Vash the Stampede! \par
+\noindent 
+*****Movie***** \par
+\noindent 
+Title: Ishtar \par
+\noindent 
+Type: Comedy \par
+\noindent 
+Format: VHS \par
+\noindent 
+Rating: PG \par
+\noindent 
+Description: Viewable boredom \par
+\vspace{12pt}
+\noindent 
+\textbf{2.4}\textbf{ Membangun Parsing Document XML menggunakan Python} \par
+\noindent 
+ \hspace*{0.5in} Python mendukung untuk bekerja dengan berbagai bentuk markup data terstruktur. Selain mengurai xml.etree. \textit{ElementTree} mendukung pembuatan dokumen XML yang terbentuk dengan baik dari objek elemen yang dibangun dalam aplikasi. Kelas elemen digunakakan saat sebuah dokumen diurai untuk mengetahui bagaimana menghasilkan bentuk serial dari isinya kemudian dapat ditulis ke sebuah file.  \par
+\vspace{12pt}
+\noindent 
+ \hspace*{0.5in} Untuk membuat instance elemeb gunakan fungsi elemen contructor dan \textit{SubElemen()} pabrik. \par
+\noindent 
+Import xml.etree.ElementTree as xml \par
+\vspace{12pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont filename =  $ " $/home/abc/Desktop/test $  \_  $xml.xml $ " $} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont toot = xml.Element( $ " $Users $ " $)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont userelement = xml.Element( $ " $user $ " $)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont root.append(userelement)} \par
+\noindent 
+\vspace{10pt}
+\noindent 
+Bila menjalankan ini, akan menghasilkan sebagai berikut : \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont <Users>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont </Users>} \par
+\vspace{10pt}
+\vspace{10pt}
+\vspace{10pt}
+\noindent 
+Tambahkan anak-anak pegguna \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Uid = xml.SubElement(userelement,  $ " $uid $ " $)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Uid.text =  $ " $1 $ " $} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont FirstName = xml.SubElement(userelement,  $ " $FirstName $ " $)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont FirstName.text =  $ " $testuser $ " $} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont LastName = xml.SubElement(userelement,  $ " $LastName $ " $} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont LastName.text =  $ " $testuser $ " $} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Email = xml.SubElement(userelement,  $ " $Email $ " $)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont Email.text = \href{mailto:testuser@test.com}{testuser@test.com}
+} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont state = xml.SubElement(userelemet,  $ " $state $ " $)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont state.text =  $ " $xyz $ " $} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont location = xml.SubElement(userelement,  $ " $location)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont location.text = abc} \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont tree = xml.ElementTree(root)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont with open(filename,  $ " $w $ " $) as fh:} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont tree.write(fh)} \par
+\vspace{10pt}
+\noindent 
+ \hspace*{0.5in} Pertama buat elemen root dengan mengunakan fungsi \textit{ElementTree}. Kemudian membuat elemen pegguna dan menambahkannya ke root. Selanjutnya membuat \textit{SubElement }dengan melewatkan elemen pengguna (userelement) ke \textit{SubElemen} beserta namanya seperto  $ " $FirstName $ " $. Kemudian untuk setiap \textit{SubElement} tetapkan properti teks untuk memberi nilai. Di akhir, membuat \textit{ElementTree} dan menggunakannya untuk menulis XML ke file. \par
+\noindent 
+ \hspace*{0.5in} Jika menjalankan ini akan menjadi sebagai berikut : \par
+\noindent 
+ {\fontsize{10pt}{10pt}\selectfont <users>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <uid>1</uid>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <FirstName>testuser</FirstName>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <LastName>testuser</LastName>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <Email>\href{mailto:testuser@test.com $  \%  $3c/Email}{testuser@test.com</Email}
+>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <state>xyz</state>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <location>abc</location>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} </user>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont </Users>} \par
+\vspace{10pt}
+\noindent 
+Parsing XML Documen : \par
+\vspace{12pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont import xml.etree.ElementTree as ET} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont tree = ET.parse(‘Your $  \_  $XML $  \_  $file $  \_  $path’)} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont root = tree.getroot()} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont 
+
+ %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+
+
+\newpage
+
+}\vspace{10pt}
+\vspace{10pt}
+\noindent 
+Disini \textit{getroot()} akan mengembalikan elemen dari dokumen XML \par
+\vspace{10pt}
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont <Users version= $ " $1.0 $ " $ languange= $ " $SPA $ " $>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <uid>1</uid>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <FirstName>testuser</FirstName>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <LastName>testuser</LastName>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <Email>testuser@tes.com/Email>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <state>xyz</state>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <location>abc</location>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} </user>} \par
+\noindent 
+{\fontsize{10pt}{10pt}\selectfont </Users>} \par
+\vspace{10pt}
+\vspace{10pt}
+\vspace{10pt}
+\vspace{10pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\end{document}
