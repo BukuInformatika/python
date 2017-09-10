@@ -1,129 +1,3 @@
-%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
-
-
-\documentclass[a4paper,12pt]{report}
-
-% Other options in place of 'report' are 1)article 2)book 3)letter
-% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
-
-
- %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
-
-
-\usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{wasysym}
-\usepackage{enumitem}
-\usepackage{adjustbox}
-\usepackage{ragged2e}
-\usepackage{tabularx}
-\usepackage{changepage}
-\usepackage{setspace}
-\usepackage{hhline}
-\usepackage{multicol}
-\usepackage{float}
-\usepackage{multirow}
-\usepackage{makecell}
-\usepackage{fancyhdr}
-\usepackage[toc,page]{appendix}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-
-
- %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
-
-
-\hypersetup{
-colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=cyan,
-}
-\urlstyle{same}
-
-
- %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
-
-% 1) Section
-% 1.1) SubSection
-% 1.1.1) SubSubSection
-% 1.1.1.1) Paragraph
-% 1.1.1.1.1) Subparagraph
-
-
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{5}
-
-
- %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
-
-
-\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
-\everymath{\displaystyle}
-
-
- %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
-
-
-\setlistdepth{9}
-\newlist{myEnumerate}{enumerate}{9}
-	\setlist[myEnumerate,1]{label=\arabic*)}
-	\setlist[myEnumerate,2]{label=\alph*)}
-	\setlist[myEnumerate,3]{label=(\roman*)}
-	\setlist[myEnumerate,4]{label=(\arabic*)}
-	\setlist[myEnumerate,5]{label=(\Alph*)}
-	\setlist[myEnumerate,6]{label=(\Roman*)}
-	\setlist[myEnumerate,7]{label=\arabic*}
-	\setlist[myEnumerate,8]{label=\alph*}
-	\setlist[myEnumerate,9]{label=\roman*}
-
-\renewlist{itemize}{itemize}{9}
-	\setlist[itemize]{label=$\cdot$}
-	\setlist[itemize,1]{label=\textbullet}
-	\setlist[itemize,2]{label=$\circ$}
-	\setlist[itemize,3]{label=$\ast$}
-	\setlist[itemize,4]{label=$\dagger$}
-	\setlist[itemize,5]{label=$\triangleright$}
-	\setlist[itemize,6]{label=$\bigstar$}
-	\setlist[itemize,7]{label=$\blacklozenge$}
-	\setlist[itemize,8]{label=$\prime$}
-
-
-
- %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
-
-
-\pagestyle{fancy}
-\fancyhf{}
-
-
- %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
-
-
-
-
- %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
-
-
-\rfoot{\thepage}
-
-
- %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
-
-
-\setstretch{1.08}
-
-
- %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
-
-
-\begin{document}
-\sloppy
 \begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{BAB I} \\}\end{center} \par
 \noindent 
 \begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{PYTHON MULTITHREADED PROGRAMMING} \\}\end{center} \par
@@ -131,32 +5,32 @@ urlcolor=cyan,
 \vspace{14pt}
 Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut : \par
 \begin{itemize}
-\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
-\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
- \par
+	\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
+	\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
+\par
 Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan. \par
 \begin{itemize}
-\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})\end{itemize}
- \par
+	\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})\end{itemize}
+\par
 \noindent 
 \begin{itemize}
-\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
- \par
+	\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
+\par
 \noindent 
 \textbf{1.}\textbf{1 }\textbf{Memulai }\textbf{\textit{Thread}}\textbf{ Baru} \par
 \noindent 
- \hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} : \par
+\hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} : \par
 \noindent 
 \begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center} \par
 Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window. \par
 Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.   \par
 Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
 \noindent 
-  \par
+\par
 \noindent 
 
 
- %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
 
 
 \newpage
@@ -206,13 +80,13 @@ Contoh : \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont pass} \par
 {\fontsize{10pt}{10pt}\selectfont 
-
- %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
-
-
-\newpage
-
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut :} \par
+	
+	%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+	
+	
+	\newpage
+	
+	Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut :} \par
 \vspace{10pt}
 \noindent 
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:17 2009}\end{center} \par
@@ -243,37 +117,37 @@ Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread}
 Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
 The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
 \begin{itemize}
-\item \textbf{t}\textbf{hreading.activeCount() } \par
- Mengembalikan jumlah objek \textit{thread} yang aktif \par
-\item \textbf{t}\textbf{hreading.currentThread() } \par
-Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
-\item \textbf{t}\textbf{hreading.enumerate() } \par
-Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
-\vspace{12pt}
-Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
-\item \textbf{run()} \par
-Metode adalah titik masuk untuk \textit{thread} \par
-\item \textbf{start()} \par
-Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
-\item \textbf{join(}\textbf{[time]}\textbf{)} \par
-Menunggu benang untuk mengakhiri \par
-\item \textbf{isAlive()} \par
-Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
-\item \textbf{getName()} \par
-Metode mengambalikan nama\textbf{ }\textit{thread} \par
-\item \textbf{setName()} \par
-Metode menetapkan nama\textbf{ }\textit{thread} \par
-\vspace{12pt}
-\textbf{1.3 }\textbf{Membuat }\textbf{\textit{Thread }}\textbf{Menggunakan }\textbf{\textit{Threading}}\textbf{ Modul} \par
-Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
-\item Mendefinisikan subclass dari \textit{thread} kelas \par
-\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
-\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai \end{itemize}
- \par
+	\item \textbf{t}\textbf{hreading.activeCount() } \par
+	Mengembalikan jumlah objek \textit{thread} yang aktif \par
+	\item \textbf{t}\textbf{hreading.currentThread() } \par
+	Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
+	\item \textbf{t}\textbf{hreading.enumerate() } \par
+	Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
+	\vspace{12pt}
+	Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
+	\item \textbf{run()} \par
+	Metode adalah titik masuk untuk \textit{thread} \par
+	\item \textbf{start()} \par
+	Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
+	\item \textbf{join(}\textbf{[time]}\textbf{)} \par
+	Menunggu benang untuk mengakhiri \par
+	\item \textbf{isAlive()} \par
+	Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
+	\item \textbf{getName()} \par
+	Metode mengambalikan nama\textbf{ }\textit{thread} \par
+	\item \textbf{setName()} \par
+	Metode menetapkan nama\textbf{ }\textit{thread} \par
+	\vspace{12pt}
+	\textbf{1.3 }\textbf{Membuat }\textbf{\textit{Thread }}\textbf{Menggunakan }\textbf{\textit{Threading}}\textbf{ Modul} \par
+	Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
+	\item Mendefinisikan subclass dari \textit{thread} kelas \par
+	\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
+	\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai \end{itemize}
+\par
 \noindent 
 
 
- %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
 
 
 \newpage
@@ -281,9 +155,8 @@ Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} 
 \vspace{12pt}
 Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
 \vspace{12pt}
-\begin{adjustwidth}{0.25in}{-0.5in}
-Contoh :\end{adjustwidth}
- \par
+	Contoh :
+\par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
 \vspace{10pt}
@@ -346,9 +219,8 @@ Contoh :\end{adjustwidth}
 \noindent 
 {\fontsize{9pt}{9pt}\selectfont print  $ " $Exiting Main Thread $ " $} \par
 \vspace{12pt}
-\begin{adjustwidth}{-0.59in}{-0.5in}
-Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:\end{adjustwidth}
- \par
+	Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
+\par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
 \noindent 
@@ -491,27 +363,22 @@ Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 \textbf{1.5 Multithreaded Antrian Prioritas} \par
 The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
 \begin{itemize}
-\item \textbf{get()} \par
-\begin{adjustwidth}{1.0in}{-0.5in}
-Menghapus dan mengembalikan item dari antrian\end{adjustwidth}
- \par
-\item \textbf{put()} \par
-\begin{adjustwidth}{1.0in}{-0.5in}
-Menambahkan item ke antrian\end{adjustwidth}
- \par
-\item \textbf{qsize()} \par
-\begin{adjustwidth}{1.0in}{-0.5in}
-Mengembalikan jumlah item yang saat ini dalam antrian\end{adjustwidth}
- \par
-\item \textbf{empty()} \par
-\begin{adjustwidth}{1.0in}{-0.5in}
-Mengembalikan benar jika antrian kosong jika tidak, salah\end{adjustwidth}
- \par
-\item \textbf{full()}\end{itemize}
- \par
-\begin{adjustwidth}{1.0in}{-0.5in}
-Mengembalikan benar jika antrian penuh jika tidak, salah\end{adjustwidth}
- \par
+	\item \textbf{get()} \par
+		Menghapus dan mengembalikan item dari antrian
+	\par
+	\item \textbf{put()} \par
+		Menambahkan item ke antrian
+	\par
+	\item \textbf{qsize()} \par
+		Mengembalikan jumlah item yang saat ini dalam antrian
+	\par
+	\item \textbf{empty()} \par
+		Mengembalikan benar jika antrian kosong jika tidak, salah
+	\par
+	\item \textbf{full()}\end{itemize}
+\par
+	Mengembalikan benar jika antrian penuh jika tidak, salah
+\par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
@@ -615,7 +482,7 @@ Contoh: \par
 {\fontsize{10pt}{10pt}\selectfont pass} \par
 \vspace{10pt}
 \noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Notify threads it’s time to exit} \par
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Notify threads it?s time to exit} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont exitFlag = 1} \par
 \vspace{10pt}
@@ -656,6 +523,3 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
 \vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\end{document}
