@@ -1,131 +1,5 @@
-%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
-
-
-\documentclass[a4paper,12pt]{report}
-
-% Other options in place of 'report' are 1)article 2)book 3)letter
-% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
-
-
- %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
-
-
-\usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{wasysym}
-\usepackage{enumitem}
-\usepackage{adjustbox}
-\usepackage{ragged2e}
-\usepackage{tabularx}
-\usepackage{changepage}
-\usepackage{setspace}
-\usepackage{hhline}
-\usepackage{multicol}
-\usepackage{float}
-\usepackage{multirow}
-\usepackage{makecell}
-\usepackage{fancyhdr}
-\usepackage[toc,page]{appendix}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-
-
- %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
-
-
-\hypersetup{
-colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=cyan,
-}
-\urlstyle{same}
-
-
- %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
-
-% 1) Section
-% 1.1) SubSection
-% 1.1.1) SubSubSection
-% 1.1.1.1) Paragraph
-% 1.1.1.1.1) Subparagraph
-
-
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{5}
-
-
- %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
-
-
-\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
-\everymath{\displaystyle}
-
-
- %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
-
-
-\setlistdepth{9}
-\newlist{myEnumerate}{enumerate}{9}
-	\setlist[myEnumerate,1]{label=\arabic*)}
-	\setlist[myEnumerate,2]{label=\alph*)}
-	\setlist[myEnumerate,3]{label=(\roman*)}
-	\setlist[myEnumerate,4]{label=(\arabic*)}
-	\setlist[myEnumerate,5]{label=(\Alph*)}
-	\setlist[myEnumerate,6]{label=(\Roman*)}
-	\setlist[myEnumerate,7]{label=\arabic*}
-	\setlist[myEnumerate,8]{label=\alph*}
-	\setlist[myEnumerate,9]{label=\roman*}
-
-\renewlist{itemize}{itemize}{9}
-	\setlist[itemize]{label=$\cdot$}
-	\setlist[itemize,1]{label=\textbullet}
-	\setlist[itemize,2]{label=$\circ$}
-	\setlist[itemize,3]{label=$\ast$}
-	\setlist[itemize,4]{label=$\dagger$}
-	\setlist[itemize,5]{label=$\triangleright$}
-	\setlist[itemize,6]{label=$\bigstar$}
-	\setlist[itemize,7]{label=$\blacklozenge$}
-	\setlist[itemize,8]{label=$\prime$}
-
-
-
- %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
-
-
-\pagestyle{fancy}
-\fancyhf{}
-
-
- %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
-
-
-
-
- %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
-
-
-\rfoot{\thepage}
-
-
- %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
-
-
-\setstretch{1.08}
-
-
- %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
-
-
-\begin{document}
-\sloppy
 Python XML Processing \par
-XML adalah bahasa open source portable yang memungkinkan pemrogram mengemangkan aplikasi yang dapat dibaca oleh aplikasi lain, terlepas dari sistem operasi dan bahasa pengembangnya. \par
+XML adalah bahasa open source portable yang mungkinkan pemrogram mengemangkan aplikasi yang dapat dibaca oleh aplikasi lain, terlepas dari sistem operasi dan bahasa pengembangnya. \par
 \vspace{12pt}
 \noindent 
 Apa itu XML? \par
@@ -227,8 +101,7 @@ Contoh: \par
 \noindent 
  \hspace*{0.5in} Berikut ini metode penting untuk memahami sebelum melanjutkan ke materi berikutnya : \par
 \noindent 
-\begin{myEnumerate}
-\item Metode \textit{make $  \_  $parser} \par
+Metode\par
 Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing diuat akan menjadi tipe parsing pertama yang ditemukan sistem.  \par
 \vspace{10pt}
 {\fontsize{10pt}{10pt}\selectfont xml.sax.make $  \_  $parser([parser $  \_  $list])} \par
@@ -236,7 +109,7 @@ Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing di
 Berikut adalah detail parameternya : \par
 Parser $  \_  $list : pilihan argumen yang terdiri dari daftar parsing untuk digunakan yang semuanya harus menerapkan metode \textit{make $  \_  $parse} \par
 \noindent 
-\item Metode \textit{parser} \par
+Metode\par
 Metode berikut membuat parsing SAX dan menggunakannya untuk mengurai dokumen \par
 \vspace{10pt}
 {\fontsize{10pt}{10pt}\selectfont xml.sax.parser(xmlfile, contenthandler[, errorhandler])} \par
@@ -261,13 +134,13 @@ Membuat parsing SAX dan mengurai string XML yang ditentukan : \par
 \vspace{12pt}
 Brikut ini adalah detail nama dar parameter : \par
 \noindent 
-\item \textit{XMLstring} \par
+{XMLstring} \par
 Nama dari string yang bisa dibaca \par
 \noindent 
-\item \textit{ContentHandler} \par
+{ContentHandler} \par
 Menjadi objek ContenHandler \par
 \noindent 
-\item \textit{ErrorHandler} \par
+{ErrorHandler} \par
 Menjadi objek ErorHandler SAX \par
 \vspace{12pt}
 \noindent 
@@ -631,7 +504,7 @@ Tambahkan anak-anak pegguna \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Email = xml.SubElement(userelement,  $ " $Email $ " $)} \par
 \noindent 
-{\fontsize{10pt}{10pt}\selectfont Email.text = \href{mailto:testuser@test.com}{testuser@test.com}
+{\fontsize{10pt}{10pt}\selectfont Email.text = {mailto:testuser@test.com}{testuser@test.com}
 } \par
 \vspace{10pt}
 \noindent 
@@ -665,9 +538,6 @@ Tambahkan anak-anak pegguna \par
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <FirstName>testuser</FirstName>} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <LastName>testuser</LastName>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <Email>\href{mailto:testuser@test.com $  \%  $3c/Email}{testuser@test.com</Email}
->} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <state>xyz</state>} \par
 \noindent 
@@ -719,11 +589,4 @@ Disini \textit{getroot()} akan mengembalikan elemen dari dokumen XML \par
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} </user>} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont </Users>} \par
-\vspace{10pt}
-\vspace{10pt}
-\vspace{10pt}
-\vspace{10pt}
 \vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\end{document}
