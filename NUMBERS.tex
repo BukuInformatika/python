@@ -1,0 +1,481 @@
+
+NUMBERS \par
+\vspace{12pt}
+Nomor tipe data menyimpan nilai numerik. Mereka adalah tipe data yang tidak berubah, artinya mengubah nilai dari sejumlah hasil tipe data pada objek yang baru dialokasikan. \par
+Nomor objek dibuat saat Anda memberikan nilai pada mereka. Contohnya – \par
+\vspace{12pt}
+var1 = 1 \par
+var2 = 10 \par
+Anda juga dapat menghapus referensi ke objek nomor dengan menggunakan del statement. Sintaks dari pernyataan del adalah - \par
+\vspace{12pt}
+del var1[,var2[,var3[....,varN]]]] \par
+Anda dapat menghapus satu objek atau beberapa objek dengan menggunakan pernyataan del. Sebagai contoh: \par
+\vspace{12pt}
+del var \par
+del var $  \_  $a, var $  \_  $b \par
+Python mendukung empat jenis numerik yang berbeda – \par
+\vspace{12pt}
+ $ \bullet $ int (signed integers): Mereka sering disebut bilangan bulat atau int, bilangan bulat positif atau negatif tanpa titik desimal. \par
+ $ \bullet $ panjang (bilangan bulat panjang): Juga disebut rindu, bilangan bulat adalah ukuran tak terbatas, ditulis seperti bilangan bulat dan diikuti huruf besar atau huruf kecil L. \par
+ $ \bullet $ float (floating point real value): Disebut juga floats, mereka mewakili bilangan real dan ditulis dengan titik desimal membagi bilangan bulat dan bagian fraksional. Mengapung juga bisa dalam notasi ilmiah, dengan E atau e menunjukkan kekuatan 10 (2,5e2 = 2,5 x 102 = 250). \par
+ $ \bullet $ kompleks (bilangan kompleks): berbentuk a + bJ, di mana a dan b mengapung dan J (atau j) mewakili akar kuadrat -1 (yang merupakan bilangan imajiner). Bagian sebenarnya dari bilangan tersebut adalah a, dan bagian imajinernya adalah b. Nomor kompleks tidak banyak digunakan dalam pemrograman Python. \par
+CONTOH \par
+Berikut adalah beberapa contoh angka \par
+\vspace{12pt}
+int \hspace*{0.5in} long \hspace*{0.5in} float \hspace*{0.5in} complex \par
+10 \hspace*{0.5in} 51924361L \hspace*{0.5in} 0.0 \hspace*{0.5in} 3.14j \par
+100 \hspace*{0.5in} -0x19323L \hspace*{0.5in} 15.20 \hspace*{0.5in} 45.j \par
+-786 \hspace*{0.5in} 0122L \hspace*{0.5in} -21.9 \hspace*{0.5in} 9.322e-36j \par
+080 \hspace*{0.5in} 0xDEFABCECBDAECBFBAEL \hspace*{0.5in} 32.3+e18 \hspace*{0.5in} .876j \par
+-0490 \hspace*{0.5in} 535633629843L \hspace*{0.5in} -90. \hspace*{0.5in} -.6545+0J \par
+-0x260 \hspace*{0.5in} -052318172735L \hspace*{0.5in} -32.54e100 \hspace*{0.5in} 3e+26J \par
+0x69 \hspace*{0.5in} -4721885298529L \hspace*{0.5in} 70.2-E12 \hspace*{0.5in} 4.53e-7j \par
+ $ \bullet $ Python memungkinkan Anda menggunakan huruf kecil L dengan panjang, namun disarankan agar Anda hanya menggunakan huruf besar L untuk menghindari kebingungan dengan nomor 1. Python menampilkan bilangan bulat panjang dengan huruf besar L. \par
+ $ \bullet $ Nomor kompleks terdiri dari sepasang bilangan floating point asli yang ditandai dengan tanda + bj, di mana a adalah bagian sebenarnya dan b adalah bagian imajiner dari bilangan kompleks. \par
+\vspace{12pt}
+Konversi Tipe Jumlah \par
+\vspace{12pt}
+Python mengubah nomor secara internal dalam sebuah ekspresi yang mengandung tipe campuran untuk tipe umum untuk evaluasi. Tapi terkadang, Anda perlu memaksa nomor secara eksplisit dari satu jenis ke tipe lain untuk memenuhi persyaratan parameter operator atau fungsi. \par
+\vspace{12pt}
+ $ \bullet $ \hspace*{0.5in} Type int(x) to convert x to a plain integer. \par
+ $ \bullet $ \hspace*{0.5in} Type long(x) to convert x to a long integer. \par
+ $ \bullet $ \hspace*{0.5in} Type float(x) to convert x to a floating-point number. \par
+ $ \bullet $ \hspace*{0.5in} Type complex(x) to convert x to a complex number with real part x and imaginary part zero. \par
+ $ \bullet $ \hspace*{0.5in} Type complex(x, y) to convert x and y to a complex number with real part x and imaginary part y. x and y are numeric expressions \par
+\vspace{12pt}
+Fungsi Matematika \par
+\vspace{12pt}
+Python mencakup fungsi berikut yang melakukan perhitungan matematis. \par
+\vspace{12pt}
+Function \hspace*{0.5in} Returns ( description ) \par
+abs(x) \par
+The absolute value of x: the (positive) distance between x and zero. \par
+ceil(x)  \par
+The ceiling of x: the smallest integer not less than x \par
+cmp(x, y) \par
+-1 if x < y, 0 if x == y, or 1 if x > y  \par
+exp(x)  \par
+The exponential of x: ex  \par
+fabs(x) \par
+The absolute value of x. \par
+floor(x)  \par
+The floor of x: the largest integer not greater than x \par
+log(x)  \par
+The natural logarithm of x, for x> 0  \par
+log10(x)  \par
+The base-10 logarithm of x for x> 0 . \par
+max(x1, x2,...)  \par
+The largest of its arguments: the value closest to positive infinity  \par
+min(x1, x2,...)  \par
+The smallest of its arguments: the value closest to negative infinity  \par
+modf(x)  \par
+The fractional and integer parts of x in a two-item tuple. Both parts have the same sign as x. The integer part is returned as a float. \par
+pow(x, y) \par
+The value of x**y. \par
+round(x [,n]) \par
+x rounded to n digits from the decimal point. Python rounds away from zero as a tie-breaker: round(0.5) is 1.0 and round(-0.5) is -1.0. \par
+sqrt(x)  \par
+The square root of x for x > 0 \par
+\vspace{12pt}
+Fungsi Nomor Acak \par
+\vspace{12pt}
+Nomor acak digunakan untuk aplikasi permainan, simulasi, pengujian,  \par
+\vspace{12pt}
+keamanan, dan privasi. Python mencakup fungsi berikut yang umum digunakan. \par
+\vspace{12pt}
+Function \hspace*{0.5in} Description \par
+choice(seq) \par
+A random item from a list, tuple, or string. \par
+randrange ([start,] stop [,step])  \par
+A randomly selected element from range(start, stop, step) \par
+random()  \par
+A random float r, such that 0 is less than or equal to r and r is less than 1 \par
+seed([x])  \par
+Sets the integer starting value used in generating random numbers. Call this function before calling any other random module function. Returns None. \par
+shuffle(lst)  \par
+Randomizes the items of a list in place. Returns None. \par
+uniform(x, y) \par
+A random float r, such that x is less than or equal to r and r is less than y  \par
+FUNGSI TRIGONOMETRIK \par
+Python mencakup fungsi berikut yang melakukan perhitungan trigonometri. \par
+\vspace{12pt}
+Function \hspace*{0.5in} Description \par
+acos(x) \par
+Return the arc cosine of x, in radians. \par
+asin(x) \par
+Return the arc sine of x, in radians. \par
+atan(x) \par
+Return the arc tangent of x, in radians. \par
+atan2(y, x) \par
+Return atan(y / x), in radians.  \par
+cos(x) \par
+Return the cosine of x radians. \par
+hypot(x, y) \par
+Return the Euclidean norm, sqrt(x*x + y*y).  \par
+sin(x) \par
+Return the sine of x radians. \par
+tan(x) \par
+Return the tangent of x radians. \par
+degrees(x) \par
+Converts angle x from radians to degrees. \par
+radians(x) \par
+Converts angle x from degrees to radians. \par
+\vspace{12pt}
+Konstanta matematika \par
+\vspace{12pt}
+Modul ini juga mendefinisikan dua konstanta matematika – \par
+\vspace{12pt}
+Constants \hspace*{0.5in} Description \par
+pi \hspace*{0.5in} The mathematical constant pi. \par
+e \hspace*{0.5in} The mathematical constant e. \par
+\vspace{12pt}
+String adalah salah satu jenis yang paling populer dengan Python. Kita bisa membuatnya hanya dengan melampirkan karakter dalam tanda kutip. Python memperlakukan tanda petik tunggal sama dengan tanda kutip ganda. Membuat string semudah memberi nilai pada sebuah variabel. Misalnya – \par
+\vspace{12pt}
+var1 = 'Hello World!' \par
+var2 = "Python Programming" \par
+\vspace{12pt}
+Mengakses Nilai dalam String \par
+\vspace{12pt}
+Python tidak mendukung tipe karakter; Ini diperlakukan sebagai string dengan panjang satu, sehingga juga dianggap sebagai substring. \par
+Untuk mengakses substring, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan substring Anda. Misalnya - \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+var1 = 'Hello World!' \par
+var2 = "Python Programming" \par
+\vspace{12pt}
+print "var1[0]: ", var1[0] \par
+print "var2[1:5]: ", var2[1:5] \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+var1[0]:~ H \par
+var2[1:5]:~ ytho \par
+Memperbarui String \par
+\vspace{12pt}
+Anda dapat "memperbarui" string yang ada dengan (kembali) menugaskan variabel ke string lain. Nilai baru dapat dikaitkan dengan nilai sebelumnya atau ke string yang sama sekali berbeda sama sekali. Misalnya - \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+var1 = 'Hello World!' \par
+\vspace{12pt}
+print "Updated String :- ", var1[:6] + 'Python' \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+Updated~String :-  Hello Python \par
+\vspace{12pt}
+Karakter melarikan diri \par
+\vspace{12pt}
+Tabel berikut adalah daftar karakter escape atau non-printable yang dapat diwakili dengan notasi backslash. \par
+\vspace{12pt}
+Karakter pelarian ditafsirkan; dalam satu dikutip serta dua kali mengutip string. \par
+\vspace{12pt}
+Backslash \par
+notation \hspace*{0.5in} Hexadecimal \par
+character \hspace*{0.5in} Description \par
+ $  \textbackslash  $a \hspace*{0.5in} 0x07 \hspace*{0.5in} Bell or alert \par
+ $  \textbackslash  $b \hspace*{0.5in} 0x08 \hspace*{0.5in} Backspace \par
+ $  \textbackslash  $cx \hspace*{0.5in}   \hspace*{0.5in} Control-x \par
+ $  \textbackslash  $C-x \hspace*{0.5in}   \hspace*{0.5in} Control-x \par
+ $  \textbackslash  $e \hspace*{0.5in} 0x1b \hspace*{0.5in} Escape \par
+ $  \textbackslash  $f \hspace*{0.5in} 0x0c \hspace*{0.5in} Formfeed \par
+ $  \textbackslash  $M- $  \textbackslash  $C-x \hspace*{0.5in}   \hspace*{0.5in} Meta-Control-x \par
+ $  \textbackslash  $n \hspace*{0.5in} 0x0a \hspace*{0.5in} Newline \par
+ $  \textbackslash  $nnn \hspace*{0.5in}   \hspace*{0.5in} Octal notation, where n is in the range 0.7 \par
+ $  \textbackslash  $r \hspace*{0.5in} 0x0d \hspace*{0.5in} Carriage return \par
+ $  \textbackslash  $s \hspace*{0.5in} 0x20 \hspace*{0.5in} Space \par
+ $  \textbackslash  $t \hspace*{0.5in} 0x09 \hspace*{0.5in} Tab \par
+ $  \textbackslash  $v \hspace*{0.5in} 0x0b \hspace*{0.5in} Vertical tab \par
+ $  \textbackslash  $x \hspace*{0.5in}   \hspace*{0.5in} Character x \par
+ $  \textbackslash  $xnn \hspace*{0.5in}   \hspace*{0.5in} Hexadecimal notation, where n is in the range 0.9, a.f, or A.F \par
+\vspace{12pt}
+String Operator Khusus \par
+\vspace{12pt}
+Asumsikan variabel string memegang 'Halo' dan variabel b berisi 'Python', lalu – \par
+\vspace{12pt}
+Operator \hspace*{0.5in} Description \hspace*{0.5in} Example \par
++ \hspace*{0.5in} Concatenation - Adds values on either side of the operator \hspace*{0.5in} a + b will give HelloPython \par
+* \hspace*{0.5in} Repetition - Creates new strings, concatenating multiple copies of the same string \hspace*{0.5in} a*2 will give -HelloHello \par
+[] \hspace*{0.5in} Slice - Gives the character from the given index \hspace*{0.5in} a[1] will give e \par
+[ : ] \hspace*{0.5in} Range Slice - Gives the characters from the given range \hspace*{0.5in} a[1:4] will give ell \par
+in \hspace*{0.5in} Membership - Returns true if a character exists in the given string \hspace*{0.5in} H in a will give 1 \par
+not in  \hspace*{0.5in} Membership - Returns true if a character does not exist in the given string \hspace*{0.5in} M not in a will give 1 \par
+r/R \hspace*{0.5in} Raw String - Suppresses actual meaning of Escape characters. The syntax for raw strings is exactly the same as for normal strings with the exception of the raw string operator, the letter "r," which precedes the quotation marks. The "r" can be lowercase (r) or uppercase (R) and must be placed immediately preceding the first quote mark. \hspace*{0.5in} print r' $  \textbackslash  $n' prints  $  \textbackslash  $n and print R' $  \textbackslash  $n'prints  $  \textbackslash  $n \par
+ $  \%  $ \hspace*{0.5in} Format - Performs String formatting \hspace*{0.5in} See at next section \par
+\vspace{12pt}
+\vspace{12pt}
+Penyandian String Operator \par
+Salah satu fitur Python yang paling keren adalah format string operator $  \%  $. Operator ini unik untuk string dan membuat paket memiliki fungsi dari keluarga printf C () C. Berikut adalah contoh sederhana - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Cetak "Nama saya $  \%  $ s dan beratnya adalah $  \%  $ d kg!"  $  \%  $ ('Zara', 21) \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+Nama saya Zara dan beratnya adalah 21 kg! \par
+Berikut adalah daftar lengkap simbol yang bisa digunakan bersamaan dengan $  \%  $ - \par
+\vspace{12pt}
+Format Symbol \hspace*{0.5in} Conversion \par
+ $  \%  $c \hspace*{0.5in} character \par
+ $  \%  $s \hspace*{0.5in} string conversion via str() prior to formatting \par
+ $  \%  $i \hspace*{0.5in} signed decimal integer \par
+ $  \%  $d \hspace*{0.5in} signed decimal integer \par
+ $  \%  $u \hspace*{0.5in} unsigned decimal integer \par
+ $  \%  $o \hspace*{0.5in} octal integer \par
+ $  \%  $x \hspace*{0.5in} hexadecimal integer (lowercase letters) \par
+ $  \%  $X \hspace*{0.5in} hexadecimal integer (UPPERcase letters) \par
+ $  \%  $e \hspace*{0.5in} exponential notation (with lowercase 'e') \par
+ $  \%  $E \hspace*{0.5in} exponential notation (with UPPERcase 'E') \par
+ $  \%  $f \hspace*{0.5in} floating point real number \par
+ $  \%  $g \hspace*{0.5in} the shorter of  $  \%  $f and  $  \%  $e \par
+ $  \%  $G \hspace*{0.5in} the shorter of  $  \%  $f and  $  \%  $E \par
+\vspace{12pt}
+Simbol dan fungsionalitas pendukung lainnya tercantum dalam tabel berikut – \par
+\vspace{12pt}
+Symbol \hspace*{0.5in} Functionality \par
+* \hspace*{0.5in} argument specifies width or precision \par
+- \hspace*{0.5in} left justification \par
++ \hspace*{0.5in} display the sign \par
+<sp> \hspace*{0.5in} leave a blank space before a positive number \par
+ $  \#  $ \hspace*{0.5in} add the octal leading zero ( '0' ) or hexadecimal leading '0x' or '0X', depending on whether 'x' or 'X' were used. \par
+0 \hspace*{0.5in} pad from left with zeros (instead of spaces) \par
+ $  \%  $ \hspace*{0.5in} ' $  \%  $ $  \%  $' leaves you with a single literal ' $  \%  $' \par
+(var) \hspace*{0.5in} mapping variable (dictionary arguments) \par
+m.n. \hspace*{0.5in} m is the minimum total width and n is the number of digits to display after the decimal point (if appl.) \par
+\vspace{12pt}
+Triple Quotes \par
+\vspace{12pt}
+Tiga tanda kutip Python hadir untuk menyelamatkannya dengan membiarkan string memanjang banyak baris, termasuk kata kunci NEWLINEs, TABs, dan karakter khusus lainnya. \par
+Sintaks untuk triple quotes terdiri dari tiga tanda kutip tunggal atau ganda berturut-turut. \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+para $  \_  $str = "" "ini adalah string panjang yang terdiri dari \par
+Beberapa baris dan karakter yang tidak dapat dicetak seperti \par
+TAB ( $  \textbackslash  $ t) dan mereka akan muncul seperti itu saat ditampilkan. \par
+NEWLINEs dalam string, apakah secara eksplisit diberikan seperti \par
+Ini dalam tanda kurung [ $  \textbackslash  $ n], atau hanya NEWLINE di dalamnya \par
+tugas variabel juga akan muncul. \par
+"" " \par
+Cetak para $  \_  $str \par
+Bila kode diatas dieksekusi, maka hasilnya akan menghasilkan hasil berikut. Perhatikan bagaimana setiap karakter khusus telah diubah menjadi bentuk cetaknya, sampai ke NEWLINE terakhir di akhir string antara "up". Dan menutup tanda kutip tiga kali. Perhatikan juga bahwa NEWLINEs terjadi baik dengan carriage return yang eksplisit di akhir baris atau kode escape-nya ( $  \textbackslash  $ n) - \par
+Ini adalah string panjang yang terdiri dari \par
+beberapa baris dan karakter yang tidak dapat dicetak seperti \par
+TAB () dan mereka akan muncul seperti itu saat ditampilkan. \par
+NEWLINEs dalam string, apakah secara eksplisit diberikan seperti \par
+ini dalam tanda kurung [ \par
+ ], atau hanya NEWLINE di dalamnya \par
+tugas variabel juga akan muncul. \par
+String mentah tidak memperlakukan garis miring terbalik sebagai karakter spesial sama sekali. Setiap karakter yang Anda masukkan ke dalam string mentah tetap seperti yang Anda tulis - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+cetak 'C:  $  \textbackslash  $ $  \textbackslash  $ tempat' \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+C: di mana-mana \par
+Sekarang mari kita gunakan string mentah. Kami akan mengutarakan ekspresi 'sebagai berikut - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Cetak r'C:  $  \textbackslash  $ $  \textbackslash  $ tempat ' \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+C: tidak di mana-mana \par
+String Unicode \par
+String normal dengan Python disimpan secara internal sebagai 8-bit ASCII, sedangkan string Unicode disimpan sebagai Unicode 16-bit. Hal ini memungkinkan untuk serangkaian karakter yang lebih bervariasi, termasuk karakter khusus dari kebanyakan bahasa di dunia. Saya akan membatasi perlakuan saya terhadap string Unicode sebagai berikut - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+cetak u'Hello, dunia! ' \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+Halo Dunia! \par
+Seperti yang bisa Anda lihat, senar Unicode menggunakan awalan Anda, sama seperti senar biasa menggunakan awalan r. \par
+Metode String Terpadu \par
+Python menyertakan metode built-in berikut untuk memanipulasi string – \par
+\vspace{12pt}
+SN \hspace*{0.5in} Methods with Description \par
+1 \hspace*{0.5in} capitalize() \par
+Capitalizes first letter of string \par
+2 \hspace*{0.5in} center(width, fillchar) \par
+\vspace{12pt}
+Returns a space-padded string with the original string centered to a total of width columns. \par
+3 \hspace*{0.5in} count(str, beg= 0,end=len(string)) \par
+\vspace{12pt}
+Counts how many times str occurs in string or in a substring of string if starting index beg and ending index end are given. \par
+4 \hspace*{0.5in} decode(encoding='UTF-8',errors='strict') \par
+\vspace{12pt}
+Decodes the string using the codec registered for encoding. encoding defaults to the default string encoding. \par
+5 \hspace*{0.5in} encode(encoding='UTF-8',errors='strict') \par
+\vspace{12pt}
+Returns encoded string version of string; on error, default is to raise a ValueError unless errors is given with 'ignore' or 'replace'. \par
+6 \hspace*{0.5in} endswith(suffix, beg=0, end=len(string)) \par
+Determines if string or a substring of string (if starting index beg and ending index end are given) ends with suffix; returns true if so and false otherwise. \par
+7 \hspace*{0.5in} expandtabs(tabsize=8) \par
+\vspace{12pt}
+Expands tabs in string to multiple spaces; defaults to 8 spaces per tab if tabsize not provided. \par
+8 \hspace*{0.5in} find(str, beg=0 end=len(string)) \par
+\vspace{12pt}
+Determine if str occurs in string or in a substring of string if starting index beg and ending index end are given returns index if found and -1 otherwise. \par
+9 \hspace*{0.5in} index(str, beg=0, end=len(string)) \par
+\vspace{12pt}
+Same as find(), but raises an exception if str not found. \par
+10 \hspace*{0.5in} isalnum() \par
+\vspace{12pt}
+Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise. \par
+11 \hspace*{0.5in} isalpha() \par
+\vspace{12pt}
+Returns true if string has at least 1 character and all characters are alphabetic and false otherwise. \par
+12 \hspace*{0.5in} isdigit() \par
+\vspace{12pt}
+Returns true if string contains only digits and false otherwise. \par
+13 \hspace*{0.5in} islower() \par
+\vspace{12pt}
+Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise. \par
+14 \hspace*{0.5in} isnumeric() \par
+\vspace{12pt}
+Returns true if a unicode string contains only numeric characters and false otherwise. \par
+15 \hspace*{0.5in} isspace() \par
+\vspace{12pt}
+Returns true if string contains only whitespace characters and false otherwise. \par
+16 \hspace*{0.5in} istitle() \par
+\vspace{12pt}
+Returns true if string is properly "titlecased" and false otherwise. \par
+17 \hspace*{0.5in} isupper() \par
+\vspace{12pt}
+Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise. \par
+18 \hspace*{0.5in} join(seq) \par
+\vspace{12pt}
+Merges (concatenates) the string representations of elements in sequence seq into a string, with separator string. \par
+19 \hspace*{0.5in} len(string) \par
+\vspace{12pt}
+Returns the length of the string \par
+20 \hspace*{0.5in} ljust(width[, fillchar]) \par
+\vspace{12pt}
+Returns a space-padded string with the original string left-justified to a total of width columns. \par
+21 \hspace*{0.5in} lower() \par
+\vspace{12pt}
+Converts all uppercase letters in string to lowercase. \par
+22 \hspace*{0.5in} lstrip() \par
+\vspace{12pt}
+Removes all leading whitespace in string. \par
+23 \hspace*{0.5in} maketrans() \par
+\vspace{12pt}
+Returns a translation table to be used in translate function. \par
+24 \hspace*{0.5in} max(str) \par
+\vspace{12pt}
+Returns the max alphabetical character from the string str. \par
+25 \hspace*{0.5in} min(str) \par
+\vspace{12pt}
+Returns the min alphabetical character from the string str. \par
+26 \hspace*{0.5in} replace(old, new [, max]) \par
+\vspace{12pt}
+Replaces all occurrences of old in string with new or at most max occurrences if max given. \par
+27 \hspace*{0.5in} rfind(str, beg=0,end=len(string)) \par
+\vspace{12pt}
+Same as find(), but search backwards in string. \par
+28 \hspace*{0.5in} rindex( str, beg=0, end=len(string)) \par
+\vspace{12pt}
+Same as index(), but search backwards in string. \par
+29 \hspace*{0.5in} rjust(width,[, fillchar]) \par
+\vspace{12pt}
+Returns a space-padded string with the original string right-justified to a total of width columns. \par
+30 \hspace*{0.5in} rstrip() \par
+\vspace{12pt}
+Removes all trailing whitespace of string. \par
+31 \hspace*{0.5in} split(str="", num=string.count(str)) \par
+\vspace{12pt}
+Splits string according to delimiter str (space if not provided) and returns list of substrings; split into at most num substrings if given. \par
+32 \hspace*{0.5in} splitlines( num=string.count(' $  \textbackslash  $n')) \par
+\vspace{12pt}
+Splits string at all (or num) NEWLINEs and returns a list of each line with NEWLINEs removed. \par
+33 \hspace*{0.5in} startswith(str, beg=0,end=len(string)) \par
+\vspace{12pt}
+Determines if string or a substring of string (if starting index beg and ending index end are given) starts with substring str; returns true if so and false otherwise. \par
+34 \hspace*{0.5in} strip([chars]) \par
+\vspace{12pt}
+Performs both lstrip() and rstrip() on string \par
+35 \hspace*{0.5in} swapcase() \par
+\vspace{12pt}
+Inverts case for all letters in string. \par
+36 \hspace*{0.5in} title() \par
+\vspace{12pt}
+Returns "titlecased" version of string, that is, all words begin with uppercase and the rest are lowercase. \par
+37 \hspace*{0.5in} translate(table, deletechars="") \par
+\vspace{12pt}
+Translates string according to translation table str(256 chars), removing those in the del string. \par
+38 \hspace*{0.5in} upper() \par
+\vspace{12pt}
+Converts lowercase letters in string to uppercase. \par
+39 \hspace*{0.5in} zfill (width) \par
+\vspace{12pt}
+Returns original string leftpadded with zeros to a total of width characters; intended for numbers, zfill() retains any sign given (less one zero). \par
+40 \hspace*{0.5in} isdecimal() \par
+\vspace{12pt}
+Returns true if a unicode string contains only decimal characters and false otherwise. \par
+\vspace{12pt}
+9.1.2.2. Implementing the arithmetic operations \par
+We want to implement the arithmetic operations so that mixed-mode operations either call an implementation whose author knew about the types of both arguments, or convert both to the nearest built in type and do the operation there. For subtypes of Integral, this means that  $  \_  $ $  \_  $add $  \_  $ $  \_  $() and  $  \_  $ $  \_  $radd $  \_  $ $  \_  $() should be defined as: \par
+class MyIntegral(Integral): \par
+\vspace{12pt}
+~~~ def  $  \_  $ $  \_  $add $  \_  $ $  \_  $(self, other): \par
+~~~~~~~ if isinstance(other, MyIntegral): \par
+~~~~~~~~~~~ return do $  \_  $my $  \_  $adding $  \_  $stuff(self, other) \par
+~~~~~~~ elif isinstance(other, OtherTypeIKnowAbout): \par
+~~~~~~~~~~~ return do $  \_  $my $  \_  $other $  \_  $adding $  \_  $stuff(self, other) \par
+~~~~~~~ else: \par
+~~~~~~~~~~~ return NotImplemented \par
+\vspace{12pt}
+~~~ def  $  \_  $ $  \_  $radd $  \_  $ $  \_  $(self, other): \par
+~~~~~~~ if isinstance(other, MyIntegral): \par
+~~~~~~~~~~~ return do $  \_  $my $  \_  $adding $  \_  $stuff(other, self) \par
+~~~~~~~ elif isinstance(other, OtherTypeIKnowAbout): \par
+~~~~~~~~~~~ return do $  \_  $my $  \_  $other $  \_  $adding $  \_  $stuff(other, self) \par
+~~~~~~~ elif isinstance(other, Integral): \par
+~~~~~~~~~~~ return int(other) + int(self) \par
+~~~~~~~ elif isinstance(other, Real): \par
+~~~~~~~~~~~ return float(other) + float(self) \par
+~~~~~~~ elif isinstance(other, Complex): \par
+~~~~~~~~~~~ return complex(other) + complex(self) \par
+~~~~~~~ else: \par
+~~~~~~~~~~~ return NotImplemented \par
+There are 5 different cases for a mixed-type operation on subclasses of Complex. I’ll refer to all of the above code that doesn’t refer to MyIntegral and OtherTypeIKnowAbout as  $ " $boilerplate $ " $. a will be an instance of A, which is a subtype of Complex (a : A <: Complex), and b : B <: Complex. I’ll consider a + b: \par
+1. \hspace*{0.5in} If A defines an  $  \_  $ $  \_  $add $  \_  $ $  \_  $() which accepts b, all is well. \par
+2. \hspace*{0.5in} If A falls back to the boilerplate code, and it were to return a value from  $  \_  $ $  \_  $add $  \_  $ $  \_  $(), we’d miss the possibility that B defines a more intelligent  $  \_  $ $  \_  $radd $  \_  $ $  \_  $(), so the boilerplate should return NotImplemented from  $  \_  $ $  \_  $add $  \_  $ $  \_  $(). (Or A may not implement  $  \_  $ $  \_  $add $  \_  $ $  \_  $() at all.) \par
+3. \hspace*{0.5in} Then B’s  $  \_  $ $  \_  $radd $  \_  $ $  \_  $() gets a chance. If it accepts a, all is well. \par
+4. \hspace*{0.5in} If it falls back to the boilerplate, there are no more possible methods to try, so this is where the default implementation should live. \par
+5. \hspace*{0.5in} If B <: A, Python tries B. $  \_  $ $  \_  $radd $  \_  $ $  \_  $ before A. $  \_  $ $  \_  $add $  \_  $ $  \_  $. This is ok, because it was implemented with knowledge of A, so it can handle those instances before delegating to Complex. \par
+If A <: Complex and B <: Real without sharing any other knowledge, then the appropriate shared operation is the one involving the built in complex, and both  $  \_  $ $  \_  $radd $  \_  $ $  \_  $() s land there, so a+b == b+a. \par
+Because most of the operations on any given type will be very similar, it can be useful to define a helper function which generates the forward and reverse instances of any given operator. For example, fractions.Fraction uses: \par
+def  $  \_  $operator $  \_  $fallbacks(monomorphic $  \_  $operator, fallback $  \_  $operator): \par
+~~~ def forward(a, b): \par
+~~~~~~~ if isinstance(b, (int, long, Fraction)): \par
+~~~~~~~~~~~ return monomorphic $  \_  $operator(a, b) \par
+~~~~~~~ elif isinstance(b, float): \par
+~~~~~~~~~~~ return fallback $  \_  $operator(float(a), b) \par
+~~~~~~~ elif isinstance(b, complex): \par
+~~~~~~~~~~~ return fallback $  \_  $operator(complex(a), b) \par
+~~~~~~~ else: \par
+~~~~~~~~~~~ return NotImplemented \par
+~~~ forward. $  \_  $ $  \_  $name $  \_  $ $  \_  $ = ' $  \_  $ $  \_  $' + fallback $  \_  $operator. $  \_  $ $  \_  $name $  \_  $ $  \_  $ + ' $  \_  $ $  \_  $' \par
+~~~ forward. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ = monomorphic $  \_  $operator. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ \par
+\vspace{12pt}
+~~~ def reverse(b, a): \par
+~~~~~~~ if isinstance(a, Rational): \par
+~~~~~~~~~~~  $  \#  $ Includes ints. \par
+~~~~~~~~~~~ return monomorphic $  \_  $operator(a, b) \par
+~~~~~~~ elif isinstance(a, numbers.Real): \par
+~~~~~~~~~~~ return fallback $  \_  $operator(float(a), float(b)) \par
+~~~~~~~ elif isinstance(a, numbers.Complex): \par
+~~~~~~~~~~~ return fallback $  \_  $operator(complex(a), complex(b)) \par
+~~~~~~~ else: \par
+~~~~~~~~~~~ return NotImplemented \par
+~~~ reverse. $  \_  $ $  \_  $name $  \_  $ $  \_  $ = ' $  \_  $ $  \_  $r' + fallback $  \_  $operator. $  \_  $ $  \_  $name $  \_  $ $  \_  $ + ' $  \_  $ $  \_  $' \par
+~~~ reverse. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ = monomorphic $  \_  $operator. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ \par
+\vspace{12pt}
+~~~ return forward, reverse \par
+\vspace{12pt}
+def  $  \_  $add(a, b): \par
+~~~ """a + b""" \par
+~~~ return Fraction(a.numerator * b.denominator + \par
+~~~~~~~~~~~~~~~~~~~ b.numerator * a.denominator, \par
+~~~~~~~~~~~~~~~~~~~ a.denominator * b.denominator) \par
+\vspace{12pt}
+ $  \_  $ $  \_  $add $  \_  $ $  \_  $,  $  \_  $ $  \_  $radd $  \_  $ $  \_  $ =  $  \_  $operator $  \_  $fallbacks( $  \_  $add, operator.add) \par
+\vspace{12pt}
+ $  \#  $ ... \par
+\vspace{12pt}
+

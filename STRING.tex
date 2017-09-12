@@ -1,0 +1,315 @@
+ 
+STRING \par
+String adalah salah satu jenis yang paling populer dengan Python. Kita bisa membuatnya hanya dengan melampirkan karakter dalam tanda kutip. Python memperlakukan tanda petik tunggal sama dengan tanda kutip ganda. Membuat string semudah memberi nilai pada sebuah variabel. Misalnya - \par
+\vspace{12pt}
+var1 = 'Hello World!' \par
+var2 = "Python Programming" \par
+\vspace{12pt}
+Mengakses Nilai dalam String \par
+Python tidak mendukung tipe karakter; Ini diperlakukan sebagai string dengan panjang satu, sehingga juga dianggap sebagai substring. \par
+Untuk mengakses substring, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan substring Anda. Misalnya - \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+var1 = 'Hello World!' \par
+var2 = "Python Programming" \par
+\vspace{12pt}
+print "var1[0]: ", var1[0] \par
+print "var2[1:5]: ", var2[1:5] \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+var1[0]:~ H \par
+var2[1:5]:~ ytho \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+Memperbarui String \par
+Anda dapat "memperbarui" string yang ada dengan (kembali) menugaskan variabel ke string lain. Nilai baru dapat dikaitkan dengan nilai sebelumnya atau ke string yang sama sekali berbeda sama sekali. Misalnya - \par
+\vspace{12pt}
+\vspace{12pt}
+var1 = 'Hello World!' \par
+\vspace{12pt}
+print "Updated String :- ", var1[:6] + 'Python' \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+Updated~String :-  Hello Python \par
+\vspace{12pt}
+Karakter melarikan diri \par
+\vspace{12pt}
+Tabel berikut adalah daftar karakter escape atau non-printable yang dapat diwakili dengan notasi backslash. \par
+Karakter pelarian ditafsirkan; dalam satu dikutip serta dua kali mengutip string. \par
+\vspace{12pt}
+Backslash \par
+notation \hspace*{0.5in} Hexadecimal \par
+character \hspace*{0.5in} Description \par
+ $  \textbackslash  $a \hspace*{0.5in} 0x07 \hspace*{0.5in} Bell or alert \par
+ $  \textbackslash  $b \hspace*{0.5in} 0x08 \hspace*{0.5in} Backspace \par
+ $  \textbackslash  $cx \hspace*{0.5in}   \hspace*{0.5in} Control-x \par
+ $  \textbackslash  $C-x \hspace*{0.5in}   \hspace*{0.5in} Control-x \par
+ $  \textbackslash  $e \hspace*{0.5in} 0x1b \hspace*{0.5in} Escape \par
+ $  \textbackslash  $f \hspace*{0.5in} 0x0c \hspace*{0.5in} Formfeed \par
+ $  \textbackslash  $M- $  \textbackslash  $C-x \hspace*{0.5in}   \hspace*{0.5in} Meta-Control-x \par
+ $  \textbackslash  $n \hspace*{0.5in} 0x0a \hspace*{0.5in} Newline \par
+ $  \textbackslash  $nnn \hspace*{0.5in}   \hspace*{0.5in} Octal notation, where n is in the range 0.7 \par
+ $  \textbackslash  $r \hspace*{0.5in} 0x0d \hspace*{0.5in} Carriage return \par
+ $  \textbackslash  $s \hspace*{0.5in} 0x20 \hspace*{0.5in} Space \par
+ $  \textbackslash  $t \hspace*{0.5in} 0x09 \hspace*{0.5in} Tab \par
+ $  \textbackslash  $v \hspace*{0.5in} 0x0b \hspace*{0.5in} Vertical tab \par
+ $  \textbackslash  $x \hspace*{0.5in}   \hspace*{0.5in} Character x \par
+ $  \textbackslash  $xnn \hspace*{0.5in}   \hspace*{0.5in} Hexadecimal notation, where n is in the range 0.9, a.f, or A.F \par
+\vspace{12pt}
+String Operator Khusus \par
+\vspace{12pt}
+Asumsikan variabel string memegang 'Halo' dan variabel b berisi 'Python',  \par
+lalu – \par
+\vspace{12pt}
+Operator \hspace*{0.5in} Description \hspace*{0.5in} Example \par
++ \hspace*{0.5in} Concatenation - Adds values on either side of the operator \hspace*{0.5in} a + b will give HelloPython \par
+* \hspace*{0.5in} Repetition - Creates new strings, concatenating multiple copies of the same string \hspace*{0.5in} a*2 will give -HelloHello \par
+[] \hspace*{0.5in} Slice - Gives the character from the given index \hspace*{0.5in} a[1] will give e \par
+[ : ] \hspace*{0.5in} Range Slice - Gives the characters from the given range \hspace*{0.5in} a[1:4] will give ell \par
+in \hspace*{0.5in} Membership - Returns true if a character exists in the given string \hspace*{0.5in} H in a will give 1 \par
+not in  \hspace*{0.5in} Membership - Returns true if a character does not exist in the given string \hspace*{0.5in} M not in a will give 1 \par
+r/R \hspace*{0.5in} Raw String - Suppresses actual meaning of Escape characters. The syntax for raw strings is exactly the same as for normal strings with the exception of the raw string operator, the letter "r," which precedes the quotation marks. The "r" can be lowercase (r) or uppercase (R) and must be placed immediately preceding the first quote mark. \hspace*{0.5in} print r' $  \textbackslash  $n' prints  $  \textbackslash  $n and print R' $  \textbackslash  $n'prints  $  \textbackslash  $n \par
+ $  \%  $ \hspace*{0.5in} Format - Performs String formatting \hspace*{0.5in} See at next section \par
+\vspace{12pt}
+Penyandian String Operator \par
+\vspace{12pt}
+Salah satu fitur Python yang paling keren adalah format string operator $  \%  $. Operator ini unik untuk string dan membuat paket memiliki fungsi dari keluarga printf C () C. Berikut adalah contoh sederhana - \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+print "My name is  $  \%  $s and weight is  $  \%  $d kg!"  $  \%  $ ('Zara', 21)  \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+My name is Zara and weight is 21 kg! \par
+Here is the list of complete set of symbols which can be used along with  $  \%  $  $ - $ \par
+Format Symbol \hspace*{0.5in} Conversion \par
+ $  \%  $c \hspace*{0.5in} character \par
+ $  \%  $s \hspace*{0.5in} string conversion via str() prior to formatting \par
+ $  \%  $i \hspace*{0.5in} signed decimal integer \par
+ $  \%  $d \hspace*{0.5in} signed decimal integer \par
+ $  \%  $u \hspace*{0.5in} unsigned decimal integer \par
+ $  \%  $o \hspace*{0.5in} octal integer \par
+ $  \%  $x \hspace*{0.5in} hexadecimal integer (lowercase letters) \par
+ $  \%  $X \hspace*{0.5in} hexadecimal integer (UPPERcase letters) \par
+ $  \%  $e \hspace*{0.5in} exponential notation (with lowercase 'e') \par
+ $  \%  $E \hspace*{0.5in} exponential notation (with UPPERcase 'E') \par
+ $  \%  $f \hspace*{0.5in} floating point real number \par
+ $  \%  $g \hspace*{0.5in} the shorter of  $  \%  $f and  $  \%  $e \par
+ $  \%  $G \hspace*{0.5in} the shorter of  $  \%  $f and  $  \%  $E \par
+Other supported symbols and functionality are listed in the following table  $ - $ \par
+Symbol \hspace*{0.5in} Functionality \par
+* \hspace*{0.5in} argument specifies width or precision \par
+- \hspace*{0.5in} left justification \par
++ \hspace*{0.5in} display the sign \par
+<sp> \hspace*{0.5in} leave a blank space before a positive number \par
+ $  \#  $ \hspace*{0.5in} add the octal leading zero ( '0' ) or hexadecimal leading '0x' or '0X', depending on whether 'x' or 'X' were used. \par
+0 \hspace*{0.5in} pad from left with zeros (instead of spaces) \par
+ $  \%  $ \hspace*{0.5in} ' $  \%  $ $  \%  $' leaves you with a single literal ' $  \%  $' \par
+(var) \hspace*{0.5in} mapping variable (dictionary arguments) \par
+m.n. \hspace*{0.5in} m is the minimum total width and n is the number of digits to display after the decimal point (if appl.) \par
+\vspace{12pt}
+Triple Quotes \par
+\vspace{12pt}
+Tiga tanda kutip Python hadir untuk menyelamatkannya dengan membiarkan string memanjang banyak baris, termasuk kata kunci NEWLINEs, TABs, dan karakter khusus lainnya. \par
+Sintaks untuk triple quotes terdiri dari tiga tanda kutip tunggal atau ganda berturut-turut. \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+para $  \_  $str = "" "ini adalah string panjang yang terdiri dari \par
+beberapa baris dan karakter yang tidak dapat dicetak seperti \par
+TAB ( $  \textbackslash  $ t) dan mereka akan muncul seperti itu saat ditampilkan. \par
+NEWLINEs dalam string, apakah secara eksplisit diberikan seperti \par
+Ini dalam tanda kurung [ $  \textbackslash  $ n], atau hanya NEWLINE di dalamnya \par
+tugas variabel juga akan muncul. \par
+"" " \par
+Cetak para $  \_  $str \par
+Bila kode diatas dieksekusi, maka hasilnya akan menghasilkan hasil berikut. Perhatikan bagaimana setiap karakter khusus telah diubah menjadi bentuk cetaknya, sampai ke NEWLINE terakhir di akhir string antara "up". Dan menutup tanda kutip tiga kali. Perhatikan juga bahwa NEWLINEs terjadi baik dengan carriage return yang eksplisit di akhir baris atau kode escape-nya ( $  \textbackslash  $ n) - \par
+Ini adalah string panjang yang terdiri dari \par
+beberapa baris dan karakter yang tidak dapat dicetak seperti \par
+TAB () dan mereka akan muncul seperti itu saat ditampilkan. \par
+NEWLINEs dalam string, apakah secara eksplisit diberikan seperti \par
+ini dalam tanda kurung [ \par
+ ], atau hanya NEWLINE di dalamnya \par
+tugas variabel juga akan muncul. \par
+String mentah tidak memperlakukan garis miring terbalik sebagai karakter spesial sama sekali. Setiap karakter yang Anda masukkan ke dalam string mentah tetap seperti yang Anda tulis - \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+Cetak 'C:  $  \textbackslash  $ $  \textbackslash  $ tempat' \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+C: di mana-mana \par
+Sekarang mari kita gunakan string mentah. Kami akan mengutarakan ekspresi 'sebagai berikut - \par
+\vspace{12pt}
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Cetak r'C:  $  \textbackslash  $ $  \textbackslash  $ tempat ' \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+C: tidak di mana-mana \par
+String Unicode \par
+String normal dengan Python disimpan secara internal sebagai 8-bit ASCII, sedangkan string Unicode disimpan sebagai Unicode 16-bit. Hal ini memungkinkan untuk serangkaian karakter yang lebih bervariasi, termasuk karakter khusus dari kebanyakan bahasa di dunia. Saya akan membatasi perlakuan saya terhadap string Unicode sebagai berikut - \par
+\vspace{12pt}
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Cetak u'Hello, dunia! ' \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+Halo Dunia! \par
+Seperti yang Anda lihat, senar Unicode menggunakan awalan Anda, sama seperti senar mentah menggunakan awalan r. \par
+\vspace{12pt}
+7.1. string — Common string operations \par
+Source code: Lib/string.py \par
+ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ $  \_  $ \par
+The string module contains a number of useful constants and classes, as well as some deprecated legacy functions that are also available as methods on strings. In addition, Python’s built-in string classes support the sequence type methods described in the Sequence Types — str, unicode, list, tuple, bytearray, buffer, xrange section, and also the string-specific methods described in the String Methods section. To output formatted strings use template strings or the  $  \%  $ operator described in the String Formatting Operations section. Also, see the re module for string functions based on regular expressions. \par
+7.1.1. String constants \par
+The constants defined in this module are: \par
+string.ascii $  \_  $letters \par
+The concatenation of the ascii $  \_  $lowercase and ascii $  \_  $uppercase constants described below. This value is not locale-dependent. \par
+string.ascii $  \_  $lowercase \par
+The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. This value is not locale-dependent and will not change. \par
+string.ascii $  \_  $uppercase \par
+The uppercase letters 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'. This value is not locale-dependent and will not change. \par
+string.digits \par
+The string '0123456789'. \par
+string.hexdigits \par
+The string '0123456789abcdefABCDEF'. \par
+string.letters \par
+The concatenation of the strings lowercase and uppercase described below. The specific value is locale-dependent, and will be updated when locale.setlocale() is called. \par
+string.lowercase \par
+A string containing all the characters that are considered lowercase letters. On most systems this is the string 'abcdefghijklmnopqrstuvwxyz'. The specific value is locale-dependent, and will be updated when locale.setlocale() is called. \par
+string.octdigits \par
+The string '01234567'. \par
+string.punctuation \par
+String of ASCII characters which are considered punctuation characters in the C locale. \par
+string.printable \par
+String of characters which are considered printable. This is a combination of digits, letters, punctuation, and whitespace. \par
+string.uppercase \par
+A string containing all the characters that are considered uppercase letters. On most systems this is the string 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'. The specific value is locale-dependent, and will be updated when locale.setlocale() is called. \par
+string.whitespace \par
+A string containing all characters that are considered whitespace. On most systems this includes the characters space, tab, linefeed, return, formfeed, and vertical tab. \par
+7.1.2. Custom String Formatting \par
+New in version 2.6. \par
+The built-in str and unicode classes provide the ability to do complex variable substitutions and value formatting via the str.format() method described in PEP 3101. The Formatter class in the string module allows you to create and customize your own string formatting behaviors using the same implementation as the built-in format() method. \par
+class string.Formatter \par
+The Formatter class has the following public methods: \par
+format(format $  \_  $string, *args, **kwargs) \par
+The primary API method. It takes a format string and an arbitrary set of positional and keyword arguments. It is just a wrapper that calls vformat(). \par
+vformat(format $  \_  $string, args, kwargs) \par
+This function does the actual work of formatting. It is exposed as a separate function for cases where you want to pass in a predefined dictionary of arguments, rather than unpacking and repacking the dictionary as individual arguments using the *args and **kwargs syntax. vformat() does the work of breaking up the format string into character data and replacement fields. It calls the various methods described below. \par
+In addition, the Formatter defines a number of methods that are intended to be replaced by subclasses: \par
+parse(format $  \_  $string) \par
+Loop over the format $  \_  $string and return an iterable of tuples (literal $  \_  $text, field $  \_  $name, format $  \_  $spec, conversion). This is used by vformat() to break the string into either literal text, or replacement fields. \par
+The values in the tuple conceptually represent a span of literal text followed by a single replacement field. If there is no literal text (which can happen if two replacement fields occur consecutively), then literal $  \_  $text will be a zero-length string. If there is no replacement field, then the values of field $  \_  $name, format $  \_  $spec and conversion will be None. \par
+get $  \_  $field(field $  \_  $name, args, kwargs) \par
+Given field $  \_  $name as returned by parse() (see above), convert it to an object to be formatted. Returns a tuple (obj, used $  \_  $key). The default version takes strings of the form defined in PEP 3101, such as  $ " $0[name] $ " $ or  $ " $label.title $ " $. args and kwargs are as passed in to vformat(). The return value used $  \_  $key has the same meaning as the key parameter to get $  \_  $value(). \par
+get $  \_  $value(key, args, kwargs) \par
+Retrieve a given field value. The key argument will be either an integer or a string. If it is an integer, it represents the index of the positional argument in args; if it is a string, then it represents a named argument in kwargs. \par
+The args parameter is set to the list of positional arguments to vformat(), and the kwargs parameter is set to the dictionary of keyword arguments. \par
+For compound field names, these functions are only called for the first component of the field name; Subsequent components are handled through normal attribute and indexing operations. \par
+So for example, the field expression ‘0.name’ would cause get $  \_  $value() to be called with a key argument of 0. The name attribute will be looked up after get $  \_  $value() returns by calling the built-in getattr() function. \par
+If the index or keyword refers to an item that does not exist, then an IndexError or KeyError should be raised. \par
+check $  \_  $unused $  \_  $args(used $  \_  $args, args, kwargs) \par
+Implement checking for unused arguments if desired. The arguments to this function is the set of all argument keys that were actually referred to in the format string (integers for positional arguments, and strings for named arguments), and a reference to the args and kwargs that was passed to vformat. The set of unused args can be calculated from these parameters. check $  \_  $unused $  \_  $args() is assumed to raise an exception if the check fails. \par
+format $  \_  $field(value, format $  \_  $spec) \par
+format $  \_  $field() simply calls the global format() built-in. The method is provided so that subclasses can override it. \par
+convert $  \_  $field(value, conversion) \par
+Converts the value (returned by get $  \_  $field()) given a conversion type (as in the tuple returned by the parse() method). The default version understands ‘s’ (str), ‘r’ (repr) and ‘a’ (ascii) conversion types. \par
+7.1.3. Format String Syntax \par
+The str.format() method and the Formatter class share the same syntax for format strings (although in the case of Formatter, subclasses can define their own format string syntax). \par
+Format strings contain  $ " $replacement fields $ " $ surrounded by curly braces  $  \{  $ $  \}  $. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. If you need to include a brace character in the literal text, it can be escaped by doubling:  $  \{  $ $  \{  $ and  $  \}  $ $  \}  $. \par
+The grammar for a replacement field is as follows: \par
+replacement $  \_  $field~::=   $ " $ $  \{  $ $ " $ [field $  \_  $name] [ $ " $! $ " $ conversion] [ $ " $: $ " $ format $  \_  $spec]  $ " $ $  \}  $ $ " $ \par
+field $  \_  $name~~~~~~~~::=  arg $  \_  $name ( $ " $. $ " $ attribute $  \_  $name  $  \vert  $  $ " $[ $ " $ element $  \_  $index  $ " $] $ " $)* \par
+arg $  \_  $name~~~~~~~~~~::=  [identifier  $  \vert  $ integer] \par
+attribute $  \_  $name~~~~::=  identifier \par
+element $  \_  $index~~~~~::=  integer  $  \vert  $ index $  \_  $string \par
+index $  \_  $string~~~~~~::=  <any source character except  $ " $] $ " $> + \par
+conversion~~~~~~~~::=   $ " $r $ " $  $  \vert  $  $ " $s $ " $ \par
+format $  \_  $spec~~~~~~~::=  <described in the next section> \par
+In less formal terms, the replacement field can start with a field $  \_  $name that specifies the object whose value is to be formatted and inserted into the output instead of the replacement field. The field $  \_  $name is optionally followed by a conversion field, which is preceded by an exclamation point '!', and a format $  \_  $spec, which is preceded by a colon ':'. These specify a non-default format for the replacement value. \par
+See also the Format Specification Mini-Language section. \par
+The field $  \_  $name itself begins with an arg $  \_  $name that is either a number or a keyword. If it’s a number, it refers to a positional argument, and if it’s a keyword, it refers to a named keyword argument. If the numerical arg $  \_  $names in a format string are 0, 1, 2, … in sequence, they can all be omitted (not just some) and the numbers 0, 1, 2, … will be automatically inserted in that order. Because arg $  \_  $name is not quote-delimited, it is not possible to specify arbitrary dictionary keys (e.g., the strings '10' or ':-]') within a format string. The arg $  \_  $name can be followed by any number of index or attribute expressions. An expression of the form '.name' selects the named attribute using getattr(), while an expression of the form '[index]' does an index lookup using  $  \_  $ $  \_  $getitem $  \_  $ $  \_  $(). \par
+Changed in version 2.7: The positional argument specifiers can be omitted, so ' $  \{  $ $  \}  $  $  \{  $ $  \}  $' is equivalent to ' $  \{  $0 $  \}  $  $  \{  $1 $  \}  $'. \par
+Some simple format string examples: \par
+"First,~thou shalt count to  $  \{  $0 $  \}  $"   $  \#  $ References first positional argument \par
+"Bring~me~a~ $  \{  $ $  \}  $"~~~~~~~~~~~~~~~     $  \#  $ Implicitly references the first positional argument \par
+"From~ $  \{  $ $  \}  $~to~ $  \{  $ $  \}  $"~~~~~~~~~~~~~~~     $  \#  $ Same as "From  $  \{  $0 $  \}  $ to  $  \{  $1 $  \}  $" \par
+"My~quest~is~ $  \{  $name $  \}  $"~~~~~~~~~~     $  \#  $ References keyword argument 'name' \par
+"Weight~in~tons~ $  \{  $0.weight $  \}  $"~~~     $  \#  $ 'weight' attribute of first positional arg \par
+"Units~destroyed:~ $  \{  $players[0] $  \}  $"    $  \#  $ First element of keyword argument 'players'. \par
+The conversion field causes a type coercion before formatting. Normally, the job of formatting a value is done by the  $  \_  $ $  \_  $format $  \_  $ $  \_  $() method of the value itself. However, in some cases it is desirable to force a type to be formatted as a string, overriding its own definition of formatting. By converting the value to a string before calling  $  \_  $ $  \_  $format $  \_  $ $  \_  $(), the normal formatting logic is bypassed. \par
+Two conversion flags are currently supported: '!s' which calls str() on the value, and '!r' which calls repr(). \par
+Some examples: \par
+"Harold's~a~clever~ $  \{  $0!s $  \}  $"~~~~     $  \#  $ Calls str() on the argument first \par
+"Bring~out~the~holy  $  \{  $name!r $  \}  $"     $  \#  $ Calls repr() on the argument first \par
+The format $  \_  $spec field contains a specification of how the value should be presented, including such details as field width, alignment, padding, decimal precision and so on. Each value type can define its own  $ " $formatting mini-language $ " $ or interpretation of the format $  \_  $spec. \par
+Most built-in types support a common formatting mini-language, which is described in the next section. \par
+A format $  \_  $spec field can also include nested replacement fields within it. These nested replacement fields may contain a field name, conversion flag and format specification, but deeper nesting is not allowed. The replacement fields within the format $  \_  $spec are substituted before the format $  \_  $spec string is interpreted. This allows the formatting of a value to be dynamically specified. \par
+See the Format examples section for some examples. \par
+7.1.3.1. Format Specification Mini-Language \par
+ $ " $Format specifications $ " $ are used within replacement fields contained within a format string to define how individual values are presented (see Format String Syntax). They can also be passed directly to the built-in format() function. Each formattable type may define how the format specification is to be interpreted. \par
+Most built-in types implement the following options for format specifications, although some of the formatting options are only supported by the numeric types. \par
+A general convention is that an empty format string ("") produces the same result as if you had called str() on the value. A non-empty format string typically modifies the result. \par
+The general form of a standard format specifier is: \par
+format $  \_  $spec~::=  [[fill]align][sign][ $  \#  $][0][width][,][.precision][type] \par
+fill~~~~~~~~::=  <any character> \par
+align~~~~~~~::=   $ " $< $ " $  $  \vert  $  $ " $> $ " $  $  \vert  $  $ " $= $ " $  $  \vert  $  $ " $ $  \string^  $ $ " $ \par
+sign~~~~~~~~::=   $ " $+ $ " $  $  \vert  $  $ " $- $ " $  $  \vert  $  $ " $  $ " $ \par
+width~~~~~~~::=  integer \par
+precision~~~::=  integer \par
+type~~~~~~~~::=   $ " $b $ " $  $  \vert  $  $ " $c $ " $  $  \vert  $  $ " $d $ " $  $  \vert  $  $ " $e $ " $  $  \vert  $  $ " $E $ " $  $  \vert  $  $ " $f $ " $  $  \vert  $  $ " $F $ " $  $  \vert  $  $ " $g $ " $  $  \vert  $  $ " $G $ " $  $  \vert  $  $ " $n $ " $  $  \vert  $  $ " $o $ " $  $  \vert  $  $ " $s $ " $  $  \vert  $  $ " $x $ " $  $  \vert  $  $ " $X $ " $  $  \vert  $  $ " $ $  \%  $ $ " $ \par
+If a valid align value is specified, it can be preceded by a fill character that can be any character and defaults to a space if omitted. It is not possible to use a literal curly brace ( $ " $ $  \{  $ $ " $ or  $ " $ $  \}  $ $ " $) as the fill character when using the str.format() method. However, it is possible to insert a curly brace with a nested replacement field. This limitation doesn’t affect the format() function. \par
+The meaning of the various alignment options is as follows: \par
+Option \hspace*{0.5in} Meaning \par
+'<' \hspace*{0.5in} Forces the field to be left-aligned within the available space (this is the default for most objects). \par
+'>' \hspace*{0.5in} Forces the field to be right-aligned within the available space (this is the default for numbers). \par
+'=' \hspace*{0.5in} Forces the padding to be placed after the sign (if any) but before the digits. This is used for printing fields in the form ‘+000000120’. This alignment option is only valid for numeric types. It becomes the default when ‘0’ immediately precedes the field width. \par
+' $  \string^  $' \hspace*{0.5in} Forces the field to be centered within the available space. \par
+Note that unless a minimum field width is defined, the field width will always be the same size as the data to fill it, so that the alignment option has no meaning in this case. \par
+The sign option is only valid for number types, and can be one of the following: \par
+Option \hspace*{0.5in} Meaning \par
+'+' \hspace*{0.5in} indicates that a sign should be used for both positive as well as negative numbers. \par
+'-' \hspace*{0.5in} indicates that a sign should be used only for negative numbers (this is the default behavior). \par
+space \hspace*{0.5in} indicates that a leading space should be used on positive numbers, and a minus sign on negative numbers. \par
+The ' $  \#  $' option is only valid for integers, and only for binary, octal, or hexadecimal output. If present, it specifies that the output will be prefixed by '0b', '0o', or '0x', respectively. \par
+The ',' option signals the use of a comma for a thousands separator. For a locale aware separator, use the 'n' integer presentation type instead. \par
+Changed in version 2.7: Added the ',' option (see also PEP 378). \par
+width is a decimal integer defining the minimum field width. If not specified, then the field width will be determined by the content. \par
+When no explicit alignment is given, preceding the width field by a zero ('0') character enables sign-aware zero-padding for numeric types. This is equivalent to a fill character of '0' with an alignment type of '='. \par
+The precision is a decimal number indicating how many digits should be displayed after the decimal point for a floating point value formatted with 'f' and 'F', or before and after the decimal point for a floating point value formatted with 'g' or 'G'. For non-number types the field indicates the maximum field size - in other words, how many characters will be used from the field content. The precision is not allowed for integer values. \par
+Finally, the type determines how the data should be presented. \par
+The available string presentation types are: \par
+Type \hspace*{0.5in} Meaning \par
+'s' \hspace*{0.5in} String format. This is the default type for strings and may be omitted. \par
+None \hspace*{0.5in} The same as 's'. \par
+The available integer presentation types are: \par
+Type \hspace*{0.5in} Meaning \par
+'b' \hspace*{0.5in} Binary format. Outputs the number in base 2. \par
+'c' \hspace*{0.5in} Character. Converts the integer to the corresponding unicode character before printing. \par
+'d' \hspace*{0.5in} Decimal Integer. Outputs the number in base 10. \par
+'o' \hspace*{0.5in} Octal format. Outputs the number in base 8. \par
+'x' \hspace*{0.5in} Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9. \par
+'X' \hspace*{0.5in} Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9. \par
+'n' \hspace*{0.5in} Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters. \par
+None \hspace*{0.5in} The same as 'd'. \par
+In addition to the above presentation types, integers can be formatted with the floating point presentation types listed below (except 'n' and None). When doing so, float() is used to convert the integer to a floating point number before formatting. \par
+The available presentation types for floating point and decimal values are: \par
+Type \hspace*{0.5in} Meaning \par
+'e' \hspace*{0.5in} Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6. \par
+'E' \hspace*{0.5in} Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character. \par
+'f' \hspace*{0.5in} Fixed point. Displays the number as a fixed-point number. The default precision is 6. \par
+'F' \hspace*{0.5in} Fixed point. Same as 'f'. \par
+'g' \hspace*{0.5in} General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude. \par
+The precise rules are as follows: suppose that the result formatted with presentation type 'e' and precision p-1 would have exponent exp. Then if -4 <= exp < p, the number is formatted with presentation type 'f' and precision p-1-exp. Otherwise, the number is formatted with presentation type 'e' and precision p-1. In both cases insignificant trailing zeros are removed from the significand, and the decimal point is also removed if there are no remaining digits following it. \par
+Positive and negative infinity, positive and negative zero, and nans, are formatted as inf, -inf, 0, -0 and nan respectively, regardless of the precision. \par
+A precision of 0 is treated as equivalent to a precision of 1. The default precision is 6. \par
+'G' \hspace*{0.5in} General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too. \par
+'n' \hspace*{0.5in} Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters. \par
+' $  \%  $' \hspace*{0.5in} Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign. \par
+None \hspace*{0.5in} The same as 'g'. \par
+\vspace{12pt}
+\vspace{12pt}
