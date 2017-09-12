@@ -1,0 +1,377 @@
+
+\begin{center}{\fontsize{14pt}{14pt}\selectfont Python Exceptions Handling \\}\end{center} \par
+Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya - \par
+\vspace{12pt}
+ Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut adalah daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar. \par
+\vspace{12pt}
+~~~ Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. \par
+\vspace{12pt}
+Daftar Pengecualian Standar – \par
+\vspace{12pt}
+EXCEPTION NAME \hspace*{0.5in} DESCRIPTION \par
+Exception \hspace*{0.5in} Kelas dasar untuk semua pengecualian \par
+\vspace{12pt}
+StopIteration \hspace*{0.5in} Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun. \par
+\vspace{12pt}
+SystemExit \hspace*{0.5in} Dibesarkan oleh fungsi sys.exit () \par
+. \par
+StandardError \hspace*{0.5in} Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit \par
+\vspace{12pt}
+ArithmeticError \hspace*{0.5in} Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik. \par
+\vspace{12pt}
+OverflowError \hspace*{0.5in} Dibesarkan saat perhitungan melebihi batas maksimum untuk tipe numerik. \par
+\vspace{12pt}
+FloatingPointError \hspace*{0.5in} Dibesarkan saat perhitungan floating point gagal. \par
+\vspace{12pt}
+ZeroDivisionError \hspace*{0.5in} Dibesarkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik. \par
+\vspace{12pt}
+AssertionError \hspace*{0.5in} Dibesarkan jika terjadi kegagalan pernyataan Assert. \par
+\vspace{12pt}
+AttributeError \hspace*{0.5in} Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan. \par
+\vspace{12pt}
+EOFError \hspace*{0.5in} Dibesarkan bila tidak ada input dari fungsi raw $  \_  $input () atau input () dan akhir file tercapai. \par
+\vspace{12pt}
+ImportError \hspace*{0.5in} Dibesarkan saat sebuah pernyataan impor gagal. \par
+\vspace{12pt}
+KeyboardInterrupt \hspace*{0.5in} Dibesarkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c. \par
+\vspace{12pt}
+LookupError \hspace*{0.5in} Kelas dasar untuk semua kesalahan pencarian. \par
+\vspace{12pt}
+IndexError \par
+KeyError \hspace*{0.5in} Dibesarkan saat sebuah indeks tidak ditemukan secara berurutan. \par
+Dibesarkan saat kunci yang ditentukan tidak ditemukan dalam kamus. \par
+\vspace{12pt}
+NameError \hspace*{0.5in} Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global. \par
+\vspace{12pt}
+UnboundLocalError \par
+EnvironmentError \hspace*{0.5in} Dibesarkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak ada nilai yang ditugaskan padanya. \par
+Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python. \par
+\vspace{12pt}
+IOError \par
+IOError \hspace*{0.5in} Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. \par
+Dibangkitkan untuk kesalahan terkait sistem operasi. \par
+\vspace{12pt}
+SyntaxError \par
+IndentationError \hspace*{0.5in} Dibesarkan saat ada kesalahan dengan sintaks Python. \par
+Dibesarkan saat indentasi tidak ditentukan dengan benar. \par
+\vspace{12pt}
+SystemError \hspace*{0.5in} Dibesarkan saat penafsir menemukan masalah internal, namun bila kesalahan ini ditemui juru bahasa Python tidak keluar. \par
+\vspace{12pt}
+SystemExit \hspace*{0.5in} Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Jika tidak ditangani dalam kode, menyebabkan penafsir untuk keluar. \par
+\vspace{12pt}
+TypeError \hspace*{0.5in} Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan. \par
+\vspace{12pt}
+ValueError \hspace*{0.5in} Dibesarkan saat fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan. \par
+\vspace{12pt}
+RuntimeError \hspace*{0.5in} Dibesarkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun. \par
+\vspace{12pt}
+NotImplementedError \hspace*{0.5in} Dibesarkan ketika metode abstrak yang perlu diimplementasikan di kelas warisan sebenarnya tidak diimplementasikan \par
+\vspace{12pt}
+Penegasan dengan Python \par
+\vspace{12pt}
+Penegasan adalah pemeriksaan kewarasan yang dapat Anda aktifkan atau matikan saat Anda selesai dengan pengujian program Anda. \par
+\vspace{12pt}
+Cara termudah untuk memikirkan sebuah pernyataan adalah menyamakannya dengan pernyataan kenaikan gaji-jika (atau lebih akurat, pernyataan kenaikan-jika-tidak). Sebuah ekspresi diuji, dan jika hasilnya muncul salah, pengecualian akan meningkat. \par
+\vspace{12pt}
+Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, diperkenalkan di versi 1.5. \par
+\vspace{12pt}
+Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid. \par
+Pernyataan tegas \par
+\vspace{12pt}
+Ketika menemukan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Jika ungkapannya salah, Python menimbulkan pengecualian AssertionError. \par
+\vspace{12pt}
+Sintaks untuk menegaskan adalah - \par
+\vspace{12pt}
+menegaskan Ekspresi [, Argumen] \par
+\vspace{12pt}
+Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, mereka akan menghentikan program dan menghasilkan traceback. \par
+Contoh \par
+\vspace{12pt}
+Berikut adalah fungsi yang mengubah suhu dari derajat Kelvin sampai derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur jika melihat suhu negatif - \par
+ $  \#  $!/usr/bin/python \par
+def KelvinToFahrenheit(Temperature): \par
+~~ assert (Temperature >= 0),"Colder than absolute zero!" \par
+~~ return ((Temperature-273)*1.8)+32 \par
+print KelvinToFahrenheit(273) \par
+print int(KelvinToFahrenheit(505.78)) \par
+print KelvinToFahrenheit(-5) \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut – \par
+32.0 \par
+451 \par
+Traceback (most recent call last): \par
+File "test.py", line 9, in  \par
+print KelvinToFahrenheit(-5) \par
+File "test.py", line 4, in KelvinToFahrenheit \par
+assert (Temperature >= 0),"Colder than absolute zero!" \par
+AssertionError: Colder than absolute zero! \par
+\vspace{12pt}
+\vspace{12pt}
+Apa itu Exception? \par
+\vspace{12pt}
+Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. \par
+\vspace{12pt}
+Ketika skrip Python menimbulkan pengecualian, ia harus menangani pengecualian begitu saja sehingga berhenti dan berhenti. \par
+Menangani pengecualian \par
+\vspace{12pt}
+Jika Anda memiliki beberapa kode yang mencurigakan yang mungkin menimbulkan pengecualian, Anda dapat mempertahankan program Anda dengan menempatkan kode yang mencurigakan di coba: blokir. Setelah dicoba: blokir, sertakan sebuah pernyataan kecuali:, diikuti oleh blok kode yang menangani masalah ini seaman mungkin. \par
+Sintaksis \par
+\vspace{12pt}
+Berikut adalah sintaks sederhana coba .... kecuali ... blok lain – \par
+\vspace{12pt}
+try: \par
+~~ You do your operations here; \par
+~~ ...................... \par
+except ExceptionI: \par
+~~ If there is ExceptionI, then execute this block. \par
+except ExceptionII: \par
+~~ If there is ExceptionII, then execute this block. \par
+~~ ...................... \par
+else: \par
+~~ If there is no exception then execute this block \par
+\vspace{12pt}
+\vspace{12pt}
+Berikut adalah beberapa poin penting tentang sintaks yang disebutkan di atas - \par
+\vspace{12pt}
+~~~ Pernyataan percobaan tunggal dapat memiliki banyak kecuali pernyataan. Ini berguna saat blok coba berisi pernyataan yang mungkin membuang berbagai jenis pengecualian. \par
+\vspace{12pt}
+~~~ Anda juga bisa memberikan klausa umum kecuali klausul, yang menangani pengecualian apapun. \par
+\vspace{12pt}
+~~~ Setelah klausa kecuali, Anda bisa memasukkan klausul lain. Kode di blok yang lain dijalankan jika kode di coba: blok tidak menimbulkan pengecualian. \par
+\vspace{12pt}
+~~~ Blok yang lain adalah tempat yang baik untuk kode yang tidak perlu dicoba: perlindungan blokir. \par
+\vspace{12pt}
+Contoh \par
+\vspace{12pt}
+Contoh ini membuka file, menulis konten di file, dan keluar dengan anggun karena tidak ada masalah sama sekali - \par
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+try: \par
+~~ fh = open("testfile", "w") \par
+~~ fh.write("This is my test file for exception handling!!") \par
+except IOError: \par
+~~ print "Error: can $  \textbackslash  $'t find file or read data" \par
+else: \par
+~~ print "Written content in the file successfully" \par
+~~ fh.close() \par
+\vspace{12pt}
+Ini menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+Written content in the file successfully \par
+\vspace{12pt}
+Klausul kecuali tanpa pengecualian \par
+\vspace{12pt}
+Anda juga dapat menggunakan pernyataan kecuali tanpa pengecualian yang didefinisikan sebagai berikut - \par
+\vspace{12pt}
+try: \par
+~~ You do your operations here; \par
+~~ ...................... \par
+except: \par
+~~ If there is any exception, then execute this block. \par
+~~ ...................... \par
+else: \par
+~~ If there is no exception then execute this block.  \par
+\vspace{12pt}
+\vspace{12pt}
+Pernyataan try-except semacam ini menangkap semua pengecualian yang terjadi. Dengan menggunakan jenis try-except statement ini tidak dianggap sebagai praktik pemrograman yang bagus, karena menangkap semua pengecualian namun tidak membuat programmer mengenali akar permasalahan yang mungkin terjadi. \par
+Klausul Kecuali dengan Beberapa Pengecualian \par
+\vspace{12pt}
+Anda juga dapat menggunakan pernyataan kecuali yang sama untuk menangani beberapa pengecualian sebagai berikut - \par
+\vspace{12pt}
+try: \par
+~~ You do your operations here; \par
+~~ ...................... \par
+except(Exception1[, Exception2[,...ExceptionN]]]): \par
+~~ If there is any exception from the given exception list,  \par
+~~ then execute this block. \par
+~~ ...................... \par
+else: \par
+~~ If there is no exception then execute this block.  \par
+\vspace{12pt}
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+try: \par
+~~ fh = open("testfile", "w") \par
+~~ fh.write("This is my test file for exception handling!!") \par
+finally: \par
+~~ print "Error: can $  \textbackslash  $'t find file or read data" \par
+\vspace{12pt}
+\vspace{12pt}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+try: \par
+~~ fh = open("testfile", "w") \par
+~~ try: \par
+~~~~~ fh.write("This is my test file for exception handling!!") \par
+~~ finally: \par
+~~~~~ print "Going to close the file" \par
+~~~~~ fh.close() \par
+except IOError: \par
+~~ print "Error: can $  \textbackslash  $'t find file or read data" \par
+\vspace{12pt}
+\vspace{12pt}
+Bila dikecualikan dilempar di blok coba, eksekusi langsung lolos ke blok akhirnya. Setelah semua pernyataan di blok akhirnya dieksekusi, pengecualian dinaikkan lagi dan ditangani dalam pernyataan kecuali jika ada di lapisan yang lebih tinggi dari pernyataan try-except. \par
+Argumen Eksepsi \par
+\vspace{12pt}
+Pengecualian dapat memiliki argumen, yang merupakan nilai yang memberi informasi tambahan tentang masalah tersebut. Isi argumen bervariasi menurut pengecualian. Anda menangkap argumen pengecualian dengan menyediakan sebuah variabel dalam klausa kecuali sebagai berikut - \par
+\vspace{12pt}
+try: \par
+~~ You do your operations here; \par
+~~ ...................... \par
+except ExceptionType, Argument: \par
+~~ You can print value of Argument here... \par
+\vspace{12pt}
+Jika Anda menulis kode untuk menangani satu pengecualian, Anda dapat memiliki variabel mengikuti nama pengecualian dalam pernyataan kecuali. Jika Anda menjebak beberapa pengecualian, Anda dapat memiliki variabel mengikuti tuple pengecualian. \par
+\vspace{12pt}
+Variabel ini menerima nilai pengecualian yang sebagian besar mengandung penyebab pengecualian. Variabel tersebut dapat menerima satu nilai atau beberapa nilai dalam bentuk tuple. Tuple ini biasanya berisi error string, error number, dan error location. \par
+\vspace{12pt}
+Pengecualian yang Ditentukan Pengguna \par
+\vspace{12pt}
+Python juga memungkinkan Anda membuat pengecualian sendiri dengan menurunkan kelas dari pengecualian standar built-in. \par
+\vspace{12pt}
+Berikut adalah contoh yang berkaitan dengan RuntimeError. Di sini, sebuah kelas dibuat yang dikelompokkan dari RuntimeError. Ini berguna saat Anda perlu menampilkan informasi yang lebih spesifik saat pengecualian tertangkap. \par
+\vspace{12pt}
+Di blok percobaan, pengecualian yang ditentukan pengguna dinaikkan dan ditangkap di blok kecuali. Variabel e digunakan untuk membuat sebuah instance dari class Networkerror. \par
+\vspace{12pt}
+1 (x,y) = (5,0) \par
+~~ 2 try: \par
+~~~3~  z = x/y \par
+~~ 4 except ZeroDivisionError: \par
+~~~5~  print "divide by zero" \par
+Jika Anda ingin memeriksa pengecualian dari kode, Anda bisa memiliki: \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+~~ 1 (x,y) = (5,0) \par
+~~ 2 try: \par
+~~~3~  z = x/y \par
+~~ 4 except ZeroDivisionError as e: \par
+~~~5~  z = e  $  \#  $ representation: "<exceptions.ZeroDivisionError instance at 0x817426c>" \par
+~~ 6 print z  $  \#  $ output: "integer division or modulo by zero" \par
+\vspace{12pt}
+General Error Catching \par
+\vspace{12pt}
+Terkadang, Anda ingin menangkap semua kesalahan yang mungkin dihasilkan, tapi biasanya Anda tidak melakukannya. Dalam kebanyakan kasus, Anda ingin menjadi sespesifik mungkin (CatchWhatYouCanHandle). Pada contoh pertama di atas, jika Anda menggunakan klausul pengecualian catch-all dan pengguna menekan Ctrl-C, menghasilkan KeyboardInterrupt, Anda tidak ingin program mencetak "bagi dengan nol". \par
+\vspace{12pt}
+Namun, ada beberapa situasi di mana yang terbaik untuk menangkap semua kesalahan. \par
+\vspace{12pt}
+Misalnya, Anda menulis modul ekstensi ke layanan web. Anda ingin informasi kesalahan untuk output output halaman web, dan server untuk terus berjalan, jika mungkin. Tapi Anda tidak tahu kesalahan apa yang mungkin Anda masukkan ke dalam kode Anda. \par
+\vspace{12pt}
+Dalam situasi seperti ini, Anda mungkin ingin mengode sesuatu seperti ini: \par
+\vspace{12pt}
+ 1 import sys \par
+~~ 2 try: \par
+~~~3~  untrusted.execute() \par
+~~ 4 except:  $  \#  $ catch *all* exceptions \par
+~~~5~  e = sys.exc $  \_  $info()[0] \par
+~~~6~  write $  \_  $to $  \_  $page( "<p>Error:  $  \%  $s</p>"  $  \%  $ e ) \par
+\vspace{12pt}
+Menemukan Nama Pengecualian Spesifik \par
+\vspace{12pt}
+Pengecualian standar yang dapat diajukan dijelaskan secara rinci pada: \par
+\vspace{12pt}
+~~~ http://docs.python.org/library/exceptions.html \par
+\vspace{12pt}
+Lihatlah dokumentasi kelas untuk mengetahui pengecualian apa yang bisa diberikan oleh kelas tertentu. \par
+\vspace{12pt}
+Lihat juga: \par
+\vspace{12pt}
+Di wiki ini: WritingExceptionClasses, TracebackModule. \par
+\vspace{12pt}
+Untuk gagasan umum (non-Python specific) tentang pengecualian, berkonsultasilah dengan ExceptionPatterns. \par
+\vspace{12pt}
+Untuk menulis tentang ... \par
+\vspace{12pt}
+~~~ Berikan contoh IOError, dan interpretasikan kode IOError. \par
+~~~ Berikan contoh beberapa pengecualian. Penanganan beberapa kecuali dalam satu baris. \par
+\vspace{12pt}
+Pertanyaan \par
+\vspace{12pt}
+Penanganan Kesalahan Umum \par
+\vspace{12pt}
+Di bagian "penanganan kesalahan umum" di atas, tertulis untuk menangkap semua pengecualian, Anda menggunakan kode berikut: \par
+\vspace{12pt}
+import sys \par
+~~ 2 try: \par
+\vspace{12pt}
+~~~3~  untrusted.execute() \par
+\vspace{12pt}
+~~ 4 except:  $  \#  $ catch *all* exceptions \par
+\vspace{12pt}
+~~~5~  e = sys.exc $  \_  $info()[0] \par
+\vspace{12pt}
+~~~6~  write $  \_  $to $  \_  $page( "<p>Error:  $  \%  $s</p>"  $  \%  $ e ) \par
+\vspace{12pt}
+~~ 1 try: \par
+\vspace{12pt}
+~~~2~  untrusted.execute() \par
+\vspace{12pt}
+~~ 3 except Exception as e: \par
+\vspace{12pt}
+~~~4~  write $  \_  $to $  \_  $page( "<p>Error:  $  \%  $s</p>"  $  \%  $ str(e) ) \par
+\vspace{12pt}
+Seseorang menunjukkan bahwa "kecuali" menangkap lebih dari sekedar "kecuali Pengecualian sebagai e." \par
+\vspace{12pt}
+Mengapa demikian? Apa bedanya? - LionKimbro \par
+\vspace{12pt}
+Untuk saat ini (versi <= 2.4) pengecualian tidak harus diwarisi dari Exception. Jadi polos 'kecuali:' menangkap semua pengecualian, tidak hanya sistem. Pengecualian string adalah salah satu contoh pengecualian yang tidak mewarisi dari Exception. - MikeRovner \par
+\vspace{12pt}
+Saya percaya bahwa pada 2,7, pengecualian masih tidak harus diwariskan dari Exception atau bahkan BaseException. Namun, seperti Python 3, pengecualian harus subclass BaseException. - gajah jim \par
+\vspace{12pt}
+Mendapatkan Informasi Berguna dari Pengecualian \par
+\vspace{12pt}
+Jadi, saya punya sesuatu seperti: \par
+\vspace{12pt}
+1 (a,b,c) = d \par
+\vspace{12pt}
+dan Python kembali: \par
+\vspace{12pt}
+1 ValueError: unpack list of wrong size \par
+\vspace{12pt}
+... dan begitulah, Anda tentu bertanya-tanya, "Nah, apa yang ada di d?" \par
+\vspace{12pt}
+Anda tahu - Anda bisa mencetak di sana, dan itu berhasil. Tapi adakah cara yang lebih baik dan lebih menarik untuk mendapatkan informasi yang diketahui orang? \par
+\vspace{12pt}
+Anda bisa melakukan sesuatu seperti: \par
+\vspace{12pt}
+1 try: \par
+~~~2~  a, b, c = d \par
+~~ 3 except Exception as e: \par
+~~~4~  e.args += (d,) \par
+~~~5~  raise \par
+\vspace{12pt}
+Atribut .args pengecualian adalah tuple dari semua argumen yang dilewatkan (biasanya argumen satu dan satu-satunya adalah pesan kesalahannya). Dengan cara ini Anda dapat mengubah argumen dan menaikkan kembali, dan informasi tambahan akan ditampilkan. Anda juga bisa membuat pernyataan cetak atau login di blok kecuali. \par
+\vspace{12pt}
+Perhatikan bahwa tidak semua pengecualian subclass Exception (meski hampir semua dilakukan), jadi ini mungkin tidak menangkap beberapa pengecualian; Selain itu, pengecualian tidak diperlukan untuk memiliki atribut .args (meskipun jika pengecualian subclass Exception dan tidak mengesampingkan  $  \_  $ $  \_  $init $  \_  $ $  \_  $ tanpa memanggil superclass-nya), maka kode yang ditulis mungkin gagal Namun dalam prakteknya hampir tidak pernah (dan Jika ya, Anda harus memperbaiki pengecualian yang tidak sesuai!) \par
+\vspace{12pt}
+Bukankah lebih baik mencegahnya untuk melakukan remediasi? \par
+\vspace{12pt}
+>  \par
+\vspace{12pt}
+Joel Spolsky mungkin programmer hebat C ++, dan sarannya untuk desain antarmuka pengguna sangat berharga, tapi Python bukan C ++ atau Java, dan argumennya tentang pengecualian tidak berlaku dengan Python. \par
+\vspace{12pt}
+Joel berpendapat: \par
+\vspace{12pt}
+"Mereka tidak terlihat dalam kode sumber Melihat kumpulan kode, termasuk fungsi yang mungkin atau mungkin tidak membuang pengecualian, tidak ada cara untuk melihat pengecualian mana yang mungkin dilempar dan dari mana.Ini berarti bahwa pemeriksaan kode yang hati-hati pun tidak. Saya bisa mengungkapkan potensi bug. " \par
+\vspace{12pt}
+(Perhatikan bahwa ini juga merupakan argumen di balik pengecualian yang diperiksa oleh Java - sekarang eksplisit bahwa pengecualian dapat dilemparkan - kecuali bahwa RuntimeException masih dapat dibuang ke mana saja. -jJ) \par
+\vspace{12pt}
+Saya tidak mengerti argumen ini. Dalam kode sumber acak, tidak ada cara untuk mengetahui apakah akan gagal hanya dengan inspeksi. Jika Anda melihat: \par
+\vspace{12pt}
+x = 1 \par
+result = myfunction (x) \par
+\vspace{12pt}
+Anda tidak dapat mengetahui apakah fungsi saya gagal pada saat runtime hanya dengan inspeksi, jadi mengapa harus itu penting apakah gagal menabrak pada saat runtime atau gagal dengan meningkatkan pengecualian? \par
+\vspace{12pt}
+(Crashing itu buruk Dengan secara eksplisit menyatakan pengecualian, Anda memperingatkan orang-orang bahwa mereka mungkin ingin mengatasinya Jawa melakukannya dengan canggung C tidak memiliki cara yang baik untuk melakukannya sama sekali, karena kesalahan kembali masih di band Untuk pengembalian reguler Di python, pengecualian passthrough tidak ditandai, namun kondisi kesalahan menonjol di tempat mereka diciptakan, dan biasanya tidak meniru hasil yang benar. -jJ) \par
+\vspace{12pt}
+Argumen Joel yang mengemukakan pengecualian hanyalah sebuah goto yang menyamar sebagian benar. Tapi begitu juga untuk loop, sementara loop, fungsi dan metode! Seperti konstruksi lainnya, pengecualian adalah gotos yang dijinakkan dan dipekerjakan untuk Anda, bukan yang liar dan berbahaya. Anda tidak bisa melompat * di mana saja *, hanya tempat yang sangat terbatas. \par
+\vspace{12pt}
+Joel juga menulis: \par
+\vspace{12pt}
+"Mereka membuat terlalu banyak titik keluar yang mungkin untuk sebuah fungsi.Untuk menulis kode yang benar, Anda benar-benar harus memikirkan setiap jalur kode yang mungkin melalui fungsi Anda. Setiap kali Anda memanggil fungsi yang dapat meningkatkan pengecualian dan tidak menangkapnya di Spot, Anda menciptakan peluang untuk kejutan bug yang disebabkan oleh fungsi yang dihentikan tiba-tiba, meninggalkan data dalam keadaan tidak konsisten, atau jalur kode lainnya yang tidak Anda pikirkan. " \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
