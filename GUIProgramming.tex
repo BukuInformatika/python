@@ -1,133 +1,3 @@
-%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
-
-
-\documentclass[a4paper,12pt]{report}
-
-% Other options in place of 'report' are 1)article 2)book 3)letter
-% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
-
-
- %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
-
-
-\usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{wasysym}
-\usepackage{enumitem}
-\usepackage{adjustbox}
-\usepackage{ragged2e}
-\usepackage{tabularx}
-\usepackage{changepage}
-\usepackage{setspace}
-\usepackage{hhline}
-\usepackage{multicol}
-\usepackage{float}
-\usepackage{multirow}
-\usepackage{makecell}
-\usepackage{fancyhdr}
-\usepackage[toc,page]{appendix}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-
-
- %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
-
-
-\hypersetup{
-colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=cyan,
-}
-\urlstyle{same}
-
-
- %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
-
-% 1) Section
-% 1.1) SubSection
-% 1.1.1) SubSubSection
-% 1.1.1.1) Paragraph
-% 1.1.1.1.1) Subparagraph
-
-
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{5}
-
-
- %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
-
-
-\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
-\everymath{\displaystyle}
-
-
- %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
-
-
-\setlistdepth{9}
-\newlist{myEnumerate}{enumerate}{9}
-	\setlist[myEnumerate,1]{label=\arabic*)}
-	\setlist[myEnumerate,2]{label=\alph*)}
-	\setlist[myEnumerate,3]{label=(\roman*)}
-	\setlist[myEnumerate,4]{label=(\arabic*)}
-	\setlist[myEnumerate,5]{label=(\Alph*)}
-	\setlist[myEnumerate,6]{label=(\Roman*)}
-	\setlist[myEnumerate,7]{label=\arabic*}
-	\setlist[myEnumerate,8]{label=\alph*}
-	\setlist[myEnumerate,9]{label=\roman*}
-
-\renewlist{itemize}{itemize}{9}
-	\setlist[itemize]{label=$\cdot$}
-	\setlist[itemize,1]{label=\textbullet}
-	\setlist[itemize,2]{label=$\circ$}
-	\setlist[itemize,3]{label=$\ast$}
-	\setlist[itemize,4]{label=$\dagger$}
-	\setlist[itemize,5]{label=$\triangleright$}
-	\setlist[itemize,6]{label=$\bigstar$}
-	\setlist[itemize,7]{label=$\blacklozenge$}
-	\setlist[itemize,8]{label=$\prime$}
-
-
-
- %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
-
-
-\pagestyle{fancy}
-\fancyhf{}
-
-
- %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
-
-
-
-
- %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
-
-
-\rfoot{\thepage}
-
-
- %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
-
-
-\setstretch{1.08}
-
-
- %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
-
-
-\begin{document}
-\sloppy
-\begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{BAB III} \\}\end{center} \par
-\noindent 
-\begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{PYTHON GUI PROGRAMMING (TKINTER)} \\}\end{center} \par
-\vspace{12pt}
 Python menyediakan berbagai pilihan untuk mengembangkan antarmuka pengguna grafis (GUIs). Yang paling tercantum dibawah ini : \par
 \noindent 
 \begin{itemize}
@@ -189,33 +59,35 @@ Contoh : \par
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
 
 
-\begin{table}[H]
-\centering
-\begin{adjustbox}{width=\textwidth}
-\begin{tabular}{ p{1.57in}p{4.69in} }
-\hhline{--}
-\multicolumn{1}{|p{1.57in}}{\Centering \textbf{Operator}} & \multicolumn{1}{|p{4.69in}|}{\Centering \textbf{Penjelasan}} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Button} & \multicolumn{1}{|p{4.69in}|}{Menampilkan tombol dalam aplikasi} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Canvas} & \multicolumn{1}{|p{4.69in}|}{Menggambar bentuk seperti garis, oval, poligon dan persegi panjang dalam aplikasi} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Checkbutton} & \multicolumn{1}{|p{4.69in}|}{Menampilkan sejumlah pilihan sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Entry} & \multicolumn{1}{|p{4.69in}|}{Menampilka bidang garis teks tunggal untuk menerima nilai-nilai dari pengguna} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Frame} & \multicolumn{1}{|p{4.69in}|}{Wadah untuk mengatur widget lainnya} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Label } & \multicolumn{1}{|p{4.69in}|}{Memberikan keterangan garis single untuk widget lainnya. Hal ini berisi gambar} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Listbox } & \multicolumn{1}{|p{4.69in}|}{Menyediakan daftar pilihan kepada pengguna} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Menubutton} & \multicolumn{1}{|p{4.69in}|}{Menampilkan menu dalam aplikasi} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Menu} & \multicolumn{1}{|p{4.69in}|}{Memberikan berbagai perintah untuk pengguna. Perintah-perintah ini terkandung di dalam MenuButton} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Message} & \multicolumn{1}{|p{4.69in}|}{Menampilkan bidang teks multiline untuk menerima nilai-nilai dari pengguna} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{RadioButton} & \multicolumn{1}{|p{4.69in}|}{Menampilkan sejumah pilihan sebagai tombol radio. Pengguna dapat memilih hanya satu pilihan pada suatu waktu} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Scale} & \multicolumn{1}{|p{4.69in}|}{Menyediakan widget slide} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Scrollbar } & \multicolumn{1}{|p{4.69in}|}{Menambah kemampuan bergulir ke berbagai widget seperti kotak daftar} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Text} & \multicolumn{1}{|p{4.69in}|}{Menampilka teks dalam beberapa garis} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Toplevel} & \multicolumn{1}{|p{4.69in}|}{Menyediakan wajah jendela terpisah} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{PanedWindow} & \multicolumn{1}{|p{4.69in}|}{Wadah yang mengandung sejumlah panel disusun horizontal atau vertikal} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{LabelFrame} & \multicolumn{1}{|p{4.69in}|}{Wadah widget sederhana. Bertindak sebagai spacer atau wajah untuk layout jendela kompleks} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{TkMessageBox} & \multicolumn{1}{|p{4.69in}|}{Menampilkan kotak pesan dalam aplikasi} & \hhline{--}
-\multicolumn{1}{|p{1.57in}}{Spinbox } & \multicolumn{1}{|p{4.69in}|}{Memilih sejumlah tetap nilai-nilai} & \hline
-\end{tabular}
-\end{adjustbox}
+\begin{table}[ht]
+	\caption{Ukuran}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\hline
+		Operator& Penjelasan \cr
+		\hline
+		Button&SMenampilkan tombol dalam aplikasi&\cr
+		Canvas&Menggambar bentuk seperti garis, oval, poligon dan persegi panjang dalam aplikasi&\cr
+		Checkbutton&Menampilkan sejumlah pilihan sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu&\cr
+		Entry&Menampilka bidang garis teks tunggal untuk menerima nilai-nilai dari pengguna\cr
+		Frame&Wadah untuk mengatur widget lainnya&\cr
+		Label &Memberikan keterangan garis single untuk widget lainnya. Hal ini berisi gambar&\cr
+		Listbox &Menyediakan daftar pilihan kepada pengguna&\cr
+		Menubutton&Menampilkan menu dalam aplikasi&\cr
+		Menu&Memberikan berbagai perintah untuk pengguna. Perintah-perintah ini terkandung di dalam MenuButton&\cr
+		Message&Menampilkan bidang teks multiline untuk menerima nilai-nilai dari pengguna&\cr
+		RadioButton&Menampilkan sejumah pilihan sebagai tombol radio. Pengguna dapat memilih hanya satu pilihan pada suatu waktu&\cr
+		Scale&Menyediakan widget slide&\cr
+		Scrollbar &Menambah kemampuan bergulir ke berbagai widget seperti kotak daftar&\cr
+		Text&Menampilka teks dalam beberapa garis&\cr
+		Toplevel&Menyediakan wajah jendela terpisah&\cr
+		PanedWindow&Wadah yang mengandung sejumlah panel disusun horizontal atau vertikal&\cr
+		LabelFrame&Wadah widget sederhana. Bertindak sebagai spacer atau wajah untuk layout jendela kompleks&\cr
+		TkMessageBox&Menampilkan kotak pesan dalam aplikasi&\cr
+		Spinbox &Memilih sejumlah tetap nilai-nilai&\cr
+		\hline
+	\end{tabular*}
+	\begin{tablenotes}
+	\end{tablenotes}
 \end{table}
 
 
@@ -226,9 +98,10 @@ Contoh : \par
 \noindent 
  \hspace*{0.5in} Beberapa atribut umu sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atriut standarm : \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Ukuran \par
 \noindent 
+\end{enumerate}
 Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak unit yang berbeda seperti : \par
 \noindent 
 \begin{itemize}
@@ -241,18 +114,20 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
  %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
 
 
-\begin{table}[H]
-\centering
-\begin{adjustbox}{width=\textwidth}
-\begin{tabular}{ p{1.06in}p{4.2in} }
-\hhline{--}
-\multicolumn{1}{|p{1.06in}}{\Centering \textbf{Karakter}} & \multicolumn{1}{|p{4.2in}|}{\Centering \textbf{Penjelasan}} & \hhline{--}
-\multicolumn{1}{|p{1.06in}}{c} & \multicolumn{1}{|p{4.2in}|}{Sentimeter} & \hhline{--}
-\multicolumn{1}{|p{1.06in}}{i} & \multicolumn{1}{|p{4.2in}|}{Inci} & \hhline{--}
-\multicolumn{1}{|p{1.06in}}{m} & \multicolumn{1}{|p{4.2in}|}{Milimeter} & \hhline{--}
-\multicolumn{1}{|p{1.06in}}{p} & \multicolumn{1}{|p{4.2in}|}{Poin printer (1/72 $ " $)} & \hline
-\end{tabular}
-\end{adjustbox}
+\begin{table}[ht]
+	\caption{Ukuran}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\hline
+		Karakter&  Penjelasan \cr
+		\hline
+		c&Sentimeter&\cr
+		i&Inci&\cr
+		m&Milimeter&\cr
+		p&Poin printer\cr
+		\hline
+	\end{tabular*}
+	\begin{tablenotes}
+	\end{tablenotes}
 \end{table}
 
 
@@ -289,7 +164,7 @@ Indeks karakter untuk menggarisawahi dalam teks widget  \par
 \item Lebar diinginkan widget\end{itemize}
  \par
 \noindent 
-\item Warna \par
+Warna \par
 \noindent 
 Tkinter memiliki warna dengan string. Ada dua cara umum untuk menentukan warna di Tkiter, yaitu : \par
 \noindent 
@@ -394,7 +269,7 @@ Jangkar NW akan posisi teks sehingga titik referensi bertepatan dengan laut sudu
 Jangakr W akan pusat teks secara vertikal disekitar titik referensi dengan tepi kiri kotak teks yang melewati titik itu dan sebagainya. \par
 Jika membuat widget kecil didalam bingkai besar dan menggunakan jangkar = SE pilihan, widget akan ditempatkan disudut kanan bawah gambar. Jika menggunakan anchor = N sebaliknya widget akan dipusatkan disepanjang tepi atas. \par
 \noindent 
-\item Gaya relief \par
+Gaya relief \par
 \noindent 
 Widget mengacu pada efek 3-D simulasi terbaru disekitar bagian luar widget. Berikut adalah daftar konstanta yang mungkin dapat digunakan untuk atribut: \par
 \noindent 
@@ -428,7 +303,7 @@ Contoh : \par
 {\fontsize{10pt}{10pt}\selectfont B5.pack()} \par
 {\fontsize{10pt}{10pt}\selectfont top.mainloop()} \par
 \noindent 
-\item Britmaps \par
+Britmaps \par
 \noindent 
 Ada beberapa jenis bitmap yang tersedia, diantaranya: \par
 \noindent 
@@ -471,7 +346,7 @@ Contoh: \par
 {\fontsize{10pt}{10pt}\selectfont B5.pack()} \par
 {\fontsize{10pt}{10pt}\selectfont top.mainloop()} \par
 \noindent 
-\item Kursor \par
+Kursor \par
 \noindent 
 Berikut daftar menarik : \par
 \noindent 
@@ -570,6 +445,4 @@ Python (plus Tkinter) ini bersifat open-source, maka banyak sekali komunitas-kom
  \par
 \vspace{12pt}
 \vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\end{document}
+
