@@ -1,0 +1,444 @@
+
+\begin{document} 
+Python Object Oriented \par
+Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek Python. \par
+\vspace{12pt}
+Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. \par
+\vspace{12pt}
+Namun, di sini adalah pengenalan kecil Object-Oriented Programming (OOP) untuk membawa Anda pada kecepatan - \par
+Ikhtisar Terminologi OOP \par
+\vspace{12pt}
+Kelas: Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) dan metode, diakses melalui notasi titik. \par
+\vspace{12pt}
+~~ Variabel kelas: Variabel yang dimiliki oleh semua instance kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh. \par
+\vspace{12pt}
+~~~ Anggota data: Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya. \par
+\vspace{12pt}
+~~~ Fungsi overloading: Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat. \par
+\vspace{12pt}
+~~~ Contoh variabel: Variabel yang didefinisikan di dalam metode dan hanya dimiliki oleh instance kelas saat ini. \par
+\vspace{12pt}
+~~~ Warisan: Pengalihan karakteristik kelas ke kelas lain yang berasal darinya. \par
+\vspace{12pt}
+~~~ Contoh: Objek individual dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas. \par
+\vspace{12pt}
+~~~ Instansiasi: Pembuatan sebuah instance dari sebuah kelas. \par
+\vspace{12pt}
+~~~ Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas. \par
+\vspace{12pt}
+~~~ Objek: Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode. \par
+\vspace{12pt}
+~~~ Operator overloading: Penugasan lebih dari satu fungsi ke operator tertentu. \par
+\vspace{12pt}
+Membuat Kelas \par
+\vspace{12pt}
+Pernyataan kelas membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut - \par
+\vspace{12pt}
+\vspace{12pt}
+class ClassName: \par
+~~ 'Optional class documentation string' \par
+~~ class $  \_  $suite \par
+\vspace{12pt}
+\vspace{12pt}
+Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $. \par
+\vspace{12pt}
+~~~ Class $  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data. \par
+\vspace{12pt}
+\vspace{12pt}
+Contoh \par
+\vspace{12pt}
+Berikut adalah contoh kelas Python sederhana - \par
+\vspace{12pt}
+class Employee: \par
+~~ 'Common base class for all employees' \par
+~~ empCount = 0 \par
+\vspace{12pt}
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
+~~~~~ self.name = name \par
+~~~~~ self.salary = salary \par
+~~~~~ Employee.empCount += 1 \par
+~~  \par
+~~ def displayCount(self): \par
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+\vspace{12pt}
+~~ def displayEmployee(self): \par
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
+\vspace{12pt}
+Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. \par
+\vspace{12pt}
+~~~ Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. \par
+\vspace{12pt}
+~~~ Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. \par
+\vspace{12pt}
+Membuat Instance Objects \par
+\vspace{12pt}
+Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. \par
+\vspace{12pt}
+"Ini akan menciptakan objek pertama kelas Karyawan" \par
+Emp1 = Karyawan ("Zara", 2000) \par
+"Ini akan menciptakan objek kedua dari kelas Karyawan" \par
+Emp2 = Karyawan ("Manni", 5000) \par
+\vspace{12pt}
+Mengakses Atribut \par
+\vspace{12pt}
+Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut - \par
+\vspace{12pt}
+Emp1.displayEmployee () \par
+Emp2.displayEmployee () \par
+Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount \par
+\vspace{12pt}
+Sekarang, meletakkan semua konsep bersama - \par
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+class Employee: \par
+~~ 'Common base class for all employees' \par
+~~ empCount = 0 \par
+\vspace{12pt}
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
+~~~~~ self.name = name \par
+~~~~~ self.salary = salary \par
+~~~~~ Employee.empCount += 1 \par
+~~  \par
+~~ def displayCount(self): \par
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+\vspace{12pt}
+~~ def displayEmployee(self): \par
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
+\vspace{12pt}
+"This would create first object of Employee class" \par
+emp1 = Employee("Zara", 2000) \par
+"This would create second object of Employee class" \par
+emp2 = Employee("Manni", 5000) \par
+emp1.displayEmployee() \par
+emp2.displayEmployee() \par
+print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+When the above code is executed, it produces the following result  $ - $ \par
+Name~:~ Zara ,Salary:  2000 \par
+Name~:~ Manni ,Salary:  5000 \par
+Total Employee 2 \par
+You can add, remove, or modify attributes of classes and objects at any time  $ - $ \par
+emp1.age~= 7   $  \#  $ Add an 'age' attribute. \par
+emp1.age~= 8   $  \#  $ Modify 'age' attribute. \par
+del~emp1.age   $  \#  $ Delete 'age' attribute. \par
+\vspace{12pt}
+Alih-alih menggunakan pernyataan normal untuk mengakses atribut, Anda dapat menggunakan fungsi berikut - \par
+\vspace{12pt}
+~~~ Getattr (obj, name [, default]): untuk mengakses atribut objek. \par
+\vspace{12pt}
+~~~ Hasattr (obj, name): untuk memeriksa apakah ada atribut atau tidak. \par
+\vspace{12pt}
+~~~ Setattr (obj, name, value): untuk mengatur atribut. Jika atribut tidak ada, maka akan dibuat. \par
+\vspace{12pt}
+~~~ The delattr (obj, name): untuk menghapus sebuah atribut. \par
+\vspace{12pt}
+Hasattr (emp1, 'age')  $  \#  $ Mengembalikan true jika atribut 'age' ada \par
+Getattr (emp1, 'age')  $  \#  $ Mengembalikan nilai atribut 'age' \par
+Setattr (emp1, 'age', 8)  $  \#  $ Set attribute 'age' di 8 \par
+Delattr (empl, 'age')  $  \#  $ Hapus atribut 'umur' \par
+\vspace{12pt}
+Atribut Atribut Built-In \par
+\vspace{12pt}
+Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses menggunakan operator dot seperti atribut lainnya - \par
+\vspace{12pt}
+~~~  $  \_  $ $  \_  $dict $  \_  $ $  \_  $: Kamus yang berisi namespace kelas. \par
+\vspace{12pt}
+~~~  $  \_  $ $  \_  $doc $  \_  $ $  \_  $: String dokumentasi kelas atau tidak, jika tidak terdefinisi. \par
+\vspace{12pt}
+~~~  $  \_  $ $  \_  $name $  \_  $ $  \_  $: nama kelas \par
+\vspace{12pt}
+~~~  $  \_  $ $  \_  $module $  \_  $ $  \_  $: Nama modul dimana kelas didefinisikan. Atribut ini " $  \_  $ $  \_  $main $  \_  $ $  \_  $" dalam mode interaktif. \par
+\vspace{12pt}
+~~~  $  \_  $ $  \_  $bases $  \_  $ $  \_  $: Tupel yang mungkin kosong yang berisi kelas dasar, sesuai urutan kejadiannya dalam daftar kelas dasar. \par
+\vspace{12pt}
+Untuk kelas di atas mari kita coba untuk mengakses semua atribut ini – \par
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+class Employee: \par
+~~ 'Common base class for all employees' \par
+~~ empCount = 0 \par
+\vspace{12pt}
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
+~~~~~ self.name = name \par
+~~~~~ self.salary = salary \par
+~~~~~ Employee.empCount += 1 \par
+~~  \par
+~~ def displayCount(self): \par
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+\vspace{12pt}
+~~ def displayEmployee(self): \par
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
+\vspace{12pt}
+print "Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ \par
+print "Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $ \par
+print "Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $ \par
+print "Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $ \par
+print "Employee. $  \_  $ $  \_  $dict $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $dict $  \_  $ $  \_  $ \par
+\vspace{12pt}
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+Karyawan . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $: kelas dasar umum untuk semua karyawan \par
+Karyawan . $  \_  $ $  \_  $ name $  \_  $ $  \_  $: Karyawan \par
+Karyawan . $  \_  $ $  \_  $ modul $  \_  $ $  \_  $:  $  \_  $ $  \_  $main $  \_  $ $  \_  $ \par
+Karyawan . $  \_  $ $  \_  $ bases $  \_  $ $  \_  $: () \par
+Karyawan . $  \_  $ $  \_  $ dict $  \_  $ $  \_  $:  $  \{  $' $  \_  $ $  \_  $module $  \_  $ $  \_  $': ' $  \_  $ $  \_  $main $  \_  $ $  \_  $', 'displayCount': \par
+<function displayCount at 0xb7c84994>, 'empCount': 2, \par
+'DisplayEmployee': <function displayEmployee at 0xb7c8441c>, \par
+' $  \_  $ $  \_  $doc $  \_  $ $  \_  $': 'Kelas dasar umum untuk semua karyawan', \par
+' $  \_  $ $  \_  $init $  \_  $ $  \_  $': <function  $  \_  $ $  \_  $init $  \_  $ $  \_  $ di 0xb7c846bc> $  \}  $ \par
+\vspace{12pt}
+Menghancurkan Objek (Pengumpulan Sampah) \par
+\vspace{12pt}
+Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. \par
+\vspace{12pt}
+Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. \par
+\vspace{12pt}
+Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \par
+\vspace{12pt}
+a = 40  $  \#  $ Buat objek <40> \par
+B = a  $  \#  $ Tingkatkan ref. Hitung <40> \par
+c = [b]  $  \#  $ Tingkatkan ref. Hitung <40> \par
+\vspace{12pt}
+Del  $  \#  $ Penurunan ref. Hitung <40> \par
+b = 100  $  \#  $ Kurangi ref. Hitung <40> \par
+C [0] = -1  $  \#  $ Kurangi ref. Hitung <40> \par
+\vspace{12pt}
+Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
+Contoh \par
+\vspace{12pt}
+Penghancur  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () ini mencetak nama kelas sebuah instance yang akan dihancurkan - \par
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+class Point: \par
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $( self, x=0, y=0): \par
+~~~~~ self.x = x \par
+~~~~~ self.y = y \par
+~~ def  $  \_  $ $  \_  $del $  \_  $ $  \_  $(self): \par
+~~~~~ class $  \_  $name = self. $  \_  $ $  \_  $class $  \_  $ $  \_  $. $  \_  $ $  \_  $name $  \_  $ $  \_  $ \par
+~~~~~ print class $  \_  $name, "destroyed" \par
+\vspace{12pt}
+pt1 = Point() \par
+pt2 = pt1 \par
+pt3 = pt1 \par
+print id(pt1), id(pt2), id(pt3)  $  \#  $ prints the ids of the obejcts \par
+del pt1 \par
+del pt2 \par
+del pt3 \par
+\vspace{12pt}
+\vspace{12pt}
+Kelas Warisan \par
+\vspace{12pt}
+Alih-alih mulai dari nol, Anda dapat membuat kelas dengan menurunkannya dari kelas yang sudah ada sebelumnya dengan mencantumkan kelas induk dalam tanda kurung setelah nama kelas yang baru. \par
+\vspace{12pt}
+Kelas anak mewarisi atribut kelas induknya, dan Anda dapat menggunakan atribut tersebut seolah-olah mereka didefinisikan di kelas anak. Kelas anak juga dapat mengesampingkan data anggota dan metode dari orang tua. \par
+Sintaksis \par
+\vspace{12pt}
+Kelas turunan dinyatakan seperti kelas orang tua mereka; Namun, daftar kelas dasar yang diwarisi dari diberikan setelah nama kelas - \par
+\vspace{12pt}
+Kelas SubClassName (ParentClass1 [, ParentClass2, ...]): \par
+~~ 'String dokumentasi kelas opsional' \par
+~~ Class $  \_  $suite \par
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt}
+class~Parent:~~~~~~   $  \#  $ define parent class \par
+~~ parentAttr = 100 \par
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self): \par
+~~~~~ print "Calling parent constructor" \par
+\vspace{12pt}
+~~ def parentMethod(self): \par
+~~~~~ print 'Calling parent method' \par
+\vspace{12pt}
+~~ def setAttr(self, attr): \par
+~~~~~ Parent.parentAttr = attr \par
+\vspace{12pt}
+~~ def getAttr(self): \par
+~~~~~ print "Parent attribute :", Parent.parentAttr \par
+\vspace{12pt}
+class Child(Parent):  $  \#  $ define child class \par
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self): \par
+~~~~~ print "Calling child constructor" \par
+\vspace{12pt}
+~~ def childMethod(self): \par
+~~~~~ print 'Calling child method' \par
+\vspace{12pt}
+c~=~Child()~~~~~~~    $  \#  $ instance of child \par
+c.childMethod()~~~~~  $  \#  $ child calls its method \par
+c.parentMethod()~~~~  $  \#  $ calls parent's method \par
+c.setAttr(200)~~~~~~  $  \#  $ again call parent's method \par
+c.getAttr()~~~~~~~~~  $  \#  $ again call parent's method \par
+\vspace{12pt}
+Calling child constructor \par
+Calling child method \par
+Calling parent method \par
+Parent attribute : 200 \par
+\vspace{12pt}
+class~A:~~~~~~   $  \#  $ define your class A \par
+..... \par
+\vspace{12pt}
+class~B:~~~~~~~   $  \#  $ define your class B \par
+..... \par
+\vspace{12pt}
+class~C(A,~B):    $  \#  $ subclass of A and B \par
+Anda dapat menggunakan fungsi issubclass () atau isinstance () untuk memeriksa hubungan dua kelas dan contoh. \par
+\vspace{12pt}
+~~~ Fungsi boolean issubclass (sub, sup) mengembalikan true jika sub subclass yang diberikan memang merupakan subclass dari superclass sup. \par
+\vspace{12pt}
+~~~ The isinstance (obj, Class) fungsi boolean mengembalikan true jika obj adalah turunan dari Class Class atau merupakan instance dari subclass of Class. \par
+\vspace{12pt}
+Metode utama \par
+\vspace{12pt}
+Anda selalu dapat mengganti metode kelas induk Anda. Salah satu alasan untuk mengesampingkan metode orang tua adalah karena Anda mungkin menginginkan fungsi khusus atau berbeda di subkelas Anda. \par
+Contoh \par
+\vspace{12pt}
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+class parent:  $  \#  $ define parent class \par
+~~ Def myMethod (diri): \par
+~~~~~ Cetak 'metode induk panggilan' \par
+\vspace{12pt}
+Kelas anak (orang tua):  $  \#  $ define child class \par
+~~ Def myMethod (diri): \par
+~~~~~ Cetak 'metode memanggil anak' \par
+\vspace{12pt}
+C = Anak ()  $  \#  $ contoh anak \par
+C.myMethod ()  $  \#  $ metode panggilan balik anak \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+Memanggil metode anak \par
+\vspace{12pt}
+Metode Base Overloading \par
+\vspace{12pt}
+Berikut daftar tabel beberapa fungsionalitas generik yang dapat Anda timpa di kelas Anda sendiri - \par
+\vspace{12pt}
+Operator overloading \par
+\vspace{12pt}
+Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa yang terjadi bila Anda menggunakan operator plus untuk menambahkannya? Kemungkinan besar Python akan berteriak pada Anda. \par
+\vspace{12pt}
+Anda bisa, bagaimanapun, menentukan metode  $  \_  $ $  \_  $add $  \_  $ $  \_  $ di kelas Anda untuk melakukan penambahan vektor dan operator plus akan berperilaku sesuai harapan - \par
+Contoh \par
+\vspace{12pt}
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Kelas vektor: \par
+~~ def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, a, b): \par
+~~~~~ Self.a = a \par
+~~~~~ Self.b = b \par
+\vspace{12pt}
+~~ def  $  \_  $ $  \_  $str  $  \_  $ $  \_  $ (diri): \par
+~~~~~ Return 'Vector ( $  \%  $ d, $  \%  $ d)' $  \%  $ (self.a, self.b) \par
+~~  \par
+~~ Def  $  \_  $ $  \_  $add  $  \_  $ $  \_  $ (diri sendiri, lainnya): \par
+~~~~~ return Vector (self.a + other.a, self.b + other.b) \par
+\vspace{12pt}
+v1 = vektor (2,10) \par
+v2 = vektor (5, -2) \par
+cetak v1 + v2 \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+Vektor (7,8) \par
+\vspace{12pt}
+Persembunyian data \par
+\vspace{12pt}
+Atribut objek mungkin atau mungkin tidak terlihat di luar definisi kelas. Anda perlu memberi nama atribut dengan awalan ganda ganda, dan atribut tersebut kemudian tidak langsung terlihat oleh orang luar. \par
+Contoh \par
+\vspace{12pt}
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Kelas JustCounter: \par
+~~  $  \_  $ $  \_  $secretCount = 0 \par
+~  \par
+~~ def menghitung (diri): \par
+~~~~~ self . $  \_  $ $  \_  $ secretCount + = 1 \par
+~~~~~ cetak diri . $  \_  $ $  \_  $ secretCount \par
+\vspace{12pt}
+counter = JustCounter () \par
+Counter.count () \par
+Counter.count () \par
+print counter . $  \_  $ $  \_  $ secretCount \par
+\vspace{12pt}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+1 \par
+2 \par
+Traceback (panggilan terakhir): \par
+~ File "test.py", baris 12, di <module> \par
+~~~ print counter . $  \_  $ $  \_  $ secretCount \par
+AttributeError: instance JustCounter tidak memiliki atribut ' $  \_  $ $  \_  $secretCount' \par
+\vspace{12pt}
+Python melindungi anggota tersebut dengan mengganti namanya secara internal untuk memasukkan nama kelas. Anda dapat mengakses atribut seperti object. $  \_  $className $  \_  $ $  \_  $attrName. Jika Anda akan mengganti baris terakhir Anda sebagai berikut, maka akan berhasil untuk Anda - \par
+\vspace{12pt}
+print counter. $  \_  $JustCounter $  \_  $ $  \_  $secretCount \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+\vspace{12pt}
+1 \par
+2 \par
+2 \par
+\vspace{12pt}
+Contoh \par
+\vspace{12pt}
+Kelas bisa mewarisi kelas lainnya. Kelas dapat mewarisi atribut dan perilaku (metode) dari kelas lain, yang disebut kelas super. Sebuah kelas yang mewarisi dari kelas super disebut Sub-kelas. Kelas super kadang disebut nenek moyang juga. Ada hubungan hierarki antar kelas. \par
+Jika kita melihat lebih dekat contoh sebelumnya tentang akun kelas, kita dapat melihat bahwa model ini dapat memenuhi kebutuhan bank sebenarnya. Bank biasanya memiliki jenis akun yang berbeda, mis. Rekening Tabungan, Rekening Giro dan lain-lain. Meskipun jenis akun yang berbeda ini sangat berbeda, namun tetap memiliki banyak sifat dan metode yang sama. Misalnya. Setiap akun memiliki dan membutuhkan nomor rekening, pemegang dan saldo. Selanjutnya mungkin bagi masing-masing untuk menyetor atau menarik uang. \par
+Jadi, ada sesuatu seperti akun "mendasar" darimana mereka mewarisi. Warisan digunakan untuk membuat kelas baru dengan menggunakan kelas yang ada. Yang baru dapat diciptakan dengan memperluas dan dengan membatasi kelas yang ada. \par
+\vspace{12pt}
+Sekarang saatnya untuk kembali ke Python dan melihat bagaimana kelas diimplementasikan dengan Python. Kita mulai dengan kelas yang paling sederhana, yang bisa didefinisikan. Kami hanya memberikan nama tapi menghilangkan semua spesifikasi lebih lanjut dengan menggunakan kata kunci n. \par
+\vspace{12pt}
+Class Account (objek): \par
+lulus \par
+\vspace{12pt}
+Kami belum mendefinisikan atribut atau metode apa pun di kelas akun sederhana kami. Sekarang kita akan membuat sebuah instance dari kelas kosong ini: \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+>>> dari Account import Account \par
+>>> x = Akun () \par
+>>> cetak x \par
+<Account.Account objek di 0x7f364120ab90> \par
+>>> \par
+\vspace{12pt}
+Sebuah metode berbeda dari satu fungsi saja dalam dua aspek: \par
+\vspace{12pt}
+~~~ Itu milik kelas dan itu didefinisikan dalam kelas \par
+~~~ Parameter pertama dalam definisi suatu metode harus menjadi referensi "diri" pada instance kelas \par
+~~~ Sebuah metode disebut tanpa parameter ini "diri" \par
+\vspace{12pt}
+Kami memperluas kelas kami dengan mendefinisikan beberapa metode. Tubuh dari metode ini masih belum ditentukan: \par
+\vspace{12pt}
+kelas Account (objek): \par
+\vspace{12pt}
+~~~ Transfer def (self, target, amount): \par
+~~~~~~~ lulus \par
+  \par
+~~~ Def deposit (self, amount): \par
+~~~~~~~ lulus \par
+  \par
+~~~ Def withdraw (self, amount): \par
+~~~~~~~ lulus \par
+  \par
+~~~ def keseimbangan (diri): \par
+~~~~~~~ lulus \par
+\vspace{12pt}
+Python tidak memiliki konstruktor eksplisit seperti C ++ atau Java, tapi metode  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ () dengan Python adalah sesuatu yang serupa, meskipun sebenarnya bukan konstruktor. Ini berperilaku dalam banyak hal seperti konstruktor, mis. Ini adalah kode pertama yang dijalankan, saat instance baru dari sebuah kelas dibuat. Nama itu terdengar seperti konstruktor " $  \_  $ $  \_  $init $  \_  $ $  \_  $". Tapi secara tegas, akan salah jika menyebutnya sebagai konstruktor, karena contoh baru sudah "dibangun" pada saat metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ dipanggil. \par
+Tapi bagaimanapun, metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ digunakan - seperti konstruktor pada bahasa pemrograman berorientasi objek lainnya - untuk menginisialisasi variabel instance dari sebuah objek. Definisi metode init terlihat seperti definisi metode lainnya: \par
+\vspace{12pt}
+Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (self, holder, number, balance, credit $  \_  $line = 1500): \par
+~~~~~~~ self.Holder = pemegang \par
+~~~~~~~ Nomor self.Number = \par
+~~~~~~~ self.Balance = keseimbangan \par
+~~~~~~~ self.CreditLine = credit $  \_  $line \par
+\vspace{12pt}
+Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ada destruktor "nyata", tapi ada yang serupa, yaitu metode  $  \_  $ $  \_  $del $  \_  $ $  \_  $. Hal ini disebut ketika contoh ini akan hancur. Jika kelas dasar memiliki metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () kelas turunan, jika ada, harus secara eksplisit memanggilnya untuk memastikan penghapusan komponen kelas dasar contoh yang tepat. \par
+Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: \par
+\vspace{12pt}
+\vspace{12pt}
+Kelas Salam: \par
+~~~ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, nama): \par
+~~~~~~~ self.name = nama \par
+~~~ Def  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (diri): \par
+~~~~~~~ Cetak "Destructor dimulai" \par
+~~~ Def SayHello (diri): \par
+~~~~~~~ Cetak "Halo", self.name \par
+\vspace{12pt}
+
