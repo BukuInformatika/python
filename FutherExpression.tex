@@ -1,131 +1,3 @@
-%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
-
-
-\documentclass[a4paper,12pt]{report}
-
-% Other options in place of 'report' are 1)article 2)book 3)letter
-% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
-
-
- %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
-
-
-\usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{wasysym}
-\usepackage{enumitem}
-\usepackage{adjustbox}
-\usepackage{ragged2e}
-\usepackage{tabularx}
-\usepackage{changepage}
-\usepackage{setspace}
-\usepackage{hhline}
-\usepackage{multicol}
-\usepackage{float}
-\usepackage{multirow}
-\usepackage{makecell}
-\usepackage{fancyhdr}
-\usepackage[toc,page]{appendix}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-
-
- %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
-
-
-\hypersetup{
-colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=cyan,
-}
-\urlstyle{same}
-
-
- %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
-
-% 1) Section
-% 1.1) SubSection
-% 1.1.1) SubSubSection
-% 1.1.1.1) Paragraph
-% 1.1.1.1.1) Subparagraph
-
-
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{5}
-
-
- %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
-
-
-\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
-\everymath{\displaystyle}
-
-
- %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
-
-
-\setlistdepth{9}
-\newlist{myEnumerate}{enumerate}{9}
-	\setlist[myEnumerate,1]{label=\arabic*)}
-	\setlist[myEnumerate,2]{label=\alph*)}
-	\setlist[myEnumerate,3]{label=(\roman*)}
-	\setlist[myEnumerate,4]{label=(\arabic*)}
-	\setlist[myEnumerate,5]{label=(\Alph*)}
-	\setlist[myEnumerate,6]{label=(\Roman*)}
-	\setlist[myEnumerate,7]{label=\arabic*}
-	\setlist[myEnumerate,8]{label=\alph*}
-	\setlist[myEnumerate,9]{label=\roman*}
-
-\renewlist{itemize}{itemize}{9}
-	\setlist[itemize]{label=$\cdot$}
-	\setlist[itemize,1]{label=\textbullet}
-	\setlist[itemize,2]{label=$\circ$}
-	\setlist[itemize,3]{label=$\ast$}
-	\setlist[itemize,4]{label=$\dagger$}
-	\setlist[itemize,5]{label=$\triangleright$}
-	\setlist[itemize,6]{label=$\bigstar$}
-	\setlist[itemize,7]{label=$\blacklozenge$}
-	\setlist[itemize,8]{label=$\prime$}
-
-
-
- %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
-
-
-\pagestyle{fancy}
-\fancyhf{}
-
-
- %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
-
-
-
-
- %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
-
-
-\rfoot{\thepage}
-
-
- %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
-
-
-\setstretch{1.08}
-
-
- %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
-
-
-\begin{document}
-\sloppy
-\begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{BAB IV} \\}\end{center} \par
-\noindent 
 \begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{FURTHER EXPRESSION} \\}\end{center} \par
 \vspace{14pt}
 \noindent 
@@ -450,35 +322,21 @@ int PyArg $  \_  $ParseTuple(PyObject* tuple,char* format,...) \par
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
 
 
-\begin{table}[H]
-\centering
-\begin{adjustbox}{width=\textwidth}
-\begin{tabular}{ p{0.52in}p{1.51in}p{2.2in} }
-\hhline{---}
-\multicolumn{1}{|p{0.52in}}{\Centering \textbf{Code}} & \multicolumn{1}{|p{1.51in}}{\Centering \textbf{C type}} & \multicolumn{1}{|p{2.2in}|}{\Centering \textbf{Meaning}} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{c} & \multicolumn{1}{|p{1.51in}}{char} & \multicolumn{1}{|p{2.2in}|}{String Python dengan panjang 1 menjadi huruf C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{d} & \multicolumn{1}{|p{1.51in}}{double} & \multicolumn{1}{|p{2.2in}|}{Pelampung Python menjadi C ganda.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{f} & \multicolumn{1}{|p{1.51in}}{float} & \multicolumn{1}{|p{2.2in}|}{Pelampung Python menjadi pelampung C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{i} & \multicolumn{1}{|p{1.51in}}{int} & \multicolumn{1}{|p{2.2in}|}{Int Python menjadi int int} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{l} & \multicolumn{1}{|p{1.51in}}{long} & \multicolumn{1}{|p{2.2in}|}{Sebuah int Python menjadi panjang C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{L} & \multicolumn{1}{|p{1.51in}}{long long} & \multicolumn{1}{|p{2.2in}|}{Sebuah int Python menjadi C panjang panjang} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{O} & \multicolumn{1}{|p{1.51in}}{PyObject*} & \multicolumn{1}{|p{2.2in}|}{Gets non-NULL meminjam referensi ke argumen Python.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{s} & \multicolumn{1}{|p{1.51in}}{char*} & \multicolumn{1}{|p{2.2in}|}{Python string tanpa nulls tertanam ke C char *.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{s $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{2.2in}|}{Setiap string Python ke alamat dan panjang C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{t $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{2.2in}|}{Read-only penyangga segmen tunggal ke alamat C dan panjangnya.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{u} & \multicolumn{1}{|p{1.51in}}{Py $  \_  $UNICODE*} & \multicolumn{1}{|p{2.2in}|}{Python Unicode tanpa nulls tertanam ke C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{u $  \#  $} & \multicolumn{1}{|p{1.51in}}{Py $  \_  $UNICODE*+int} & \multicolumn{1}{|p{2.2in}|}{Setiap alamat dan panjang Python Unicode C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{w $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{2.2in}|}{Membaca / menulis penyangga segmen tunggal ke alamat dan panjang C.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{z} & \multicolumn{1}{|p{1.51in}}{char*} & \multicolumn{1}{|p{2.2in}|}{Seperti s, juga menerima None (set C char * ke NULL).} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{z $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{2.2in}|}{Seperti s  $  \#  $, juga menerima None (set C char * ke NULL).} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{(...)} & \multicolumn{1}{|p{1.51in}}{as per ...} & \multicolumn{1}{|p{2.2in}|}{Urutan Python diperlakukan sebagai satu argumen per item.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{ $  \vert  $} & \multicolumn{1}{|p{1.51in}}{ $  $} & \multicolumn{1}{|p{2.2in}|}{Argumen berikut bersifat opsional.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{:} & \multicolumn{1}{|p{1.51in}}{ $  $} & \multicolumn{1}{|p{2.2in}|}{Format akhir, diikuti dengan nama fungsi untuk pesan error.} & \hhline{---}
-\multicolumn{1}{|p{0.52in}}{;} & \multicolumn{1}{|p{1.51in}}{ $  $} & \multicolumn{1}{|p{2.2in}|}{Format akhir, diikuti oleh seluruh pesan kesalahan teks.} & \hline
-\end{tabular}
-\end{adjustbox}
+\begin{table}[ht]
+	\caption{Ukuran}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\hline
+		Karakter&  Penjelasan \cr
+		\hline
+		c&Sentimeter&\cr
+		i&Inci&\cr
+		m&Milimeter&\cr
+		p&Poin printer\cr
+		\hline
+	\end{tabular*}
+	\begin{tablenotes}
+	\end{tablenotes}
 \end{table}
-
 
  %%%%%%%%%%%%  Table No:1 Ends Here %%%%%%%%%%%%%%
 
@@ -546,32 +404,35 @@ Berikut daftar tabel string kode yang umum digunakan, yang nol atau lebihnya dig
  %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
 
 
-\begin{table}[H]
-\centering
-\begin{adjustbox}{width=\textwidth}
-\begin{tabular}{ p{0.69in}p{1.51in}p{1.88in} }
-\hhline{---}
-\multicolumn{1}{|p{0.69in}}{\Centering \textbf{Code}} & \multicolumn{1}{|p{1.51in}}{\Centering \textbf{Tipe C }} & \multicolumn{1}{|p{1.88in}|}{\textbf{Meaning}} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{c} & \multicolumn{1}{|p{1.51in}}{char} & \multicolumn{1}{|p{1.88in}|}{Sebuah char C menjadi string Python dengan panjang 1.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{d} & \multicolumn{1}{|p{1.51in}}{double} & \multicolumn{1}{|p{1.88in}|}{C ganda menjadi float Python.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{f} & \multicolumn{1}{|p{1.51in}}{float} & \multicolumn{1}{|p{1.88in}|}{Pelampung C menjadi float Python.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{i} & \multicolumn{1}{|p{1.51in}}{int} & \multicolumn{1}{|p{1.88in}|}{C int menjadi int Python.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{l} & \multicolumn{1}{|p{1.51in}}{long} & \multicolumn{1}{|p{1.88in}|}{Sebuah C panjang menjadi int Python.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{N} & \multicolumn{1}{|p{1.51in}}{PyObject*} & \multicolumn{1}{|p{1.88in}|}{Melewati objek Python dan mencuri referensi.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{O} & \multicolumn{1}{|p{1.51in}}{PyObject*} & \multicolumn{1}{|p{1.88in}|}{Melewati objek Python dan MENINGKATKANNYA seperti biasa.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{O $  \&  $} & \multicolumn{1}{|p{1.51in}}{convert+void*} & \multicolumn{1}{|p{1.88in}|}{Konversi sewenang-wenang} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{s} & \multicolumn{1}{|p{1.51in}}{char*} & \multicolumn{1}{|p{1.88in}|}{C 0-diakhiri char * ke string Python, atau NULL to None.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{s $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{1.88in}|}{C char * dan panjang ke string Python, atau NULL to None.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{u} & \multicolumn{1}{|p{1.51in}}{Py $  \_  $UNICODE*} & \multicolumn{1}{|p{1.88in}|}{String C-wide, null-terminated menjadi Python Unicode, atau NULL to None.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{u $  \#  $} & \multicolumn{1}{|p{1.51in}}{Py $  \_  $UNICODE*+int} & \multicolumn{1}{|p{1.88in}|}{String dan panjang lebar C ke Unicode Python, atau NULL to None.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{w $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{1.88in}|}{Membaca / menulis penyangga segmen tunggal ke alamat dan panjang C.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{z} & \multicolumn{1}{|p{1.51in}}{char*} & \multicolumn{1}{|p{1.88in}|}{Seperti s, juga menerima None (set C char * ke NULL).} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{z $  \#  $} & \multicolumn{1}{|p{1.51in}}{char*+int} & \multicolumn{1}{|p{1.88in}|}{Seperti s  $  \#  $, juga menerima None (set C char * ke NULL).} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{(...)} & \multicolumn{1}{|p{1.51in}}{as per ...} & \multicolumn{1}{|p{1.88in}|}{Membangun tuple Python dari nilai C.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{[...]} & \multicolumn{1}{|p{1.51in}}{as per ...} & \multicolumn{1}{|p{1.88in}|}{Membangun daftar Python dari nilai C.} & \hhline{---}
-\multicolumn{1}{|p{0.69in}}{ $  \{  $... $  \}  $} & \multicolumn{1}{|p{1.51in}}{as per ...} & \multicolumn{1}{|p{1.88in}|}{Bangun kamus Python dari nilai C, kunci dan nilai bergantian.} & \hline
-\end{tabular}
-\end{adjustbox}
+\begin{table}[ht]
+	\caption{Ukuran}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\hline
+		Code& C Type&  Meaning\cr
+		\hline
+		c&char&String Python dengan panjang 1 menjadi huruf C.\cr
+		d&double&Pelampung Python menjadi C ganda.\cr
+		f&float&Pelampung Python menjadi pelampung C.\cr
+		i&int&Int Python menjadi int int\cr
+		l&long&Sebuah int Python menjadi panjang C.\cr
+		L&long long&Sebuah int Python menjadi C panjang panjang\cr
+		O&PyObject*&Gets non-NULL meminjam referensi ke argumen Python\cr
+		s&char*&Python string tanpa nulls tertanam ke C char *\cr
+		s&char*+int&Setiap string Python ke alamat dan panjang C\cr
+		t&char*+int&Read-only penyangga segmen tunggal ke alamat C dan panjangnya\cr
+		U&PyUNICODE*&Python Unicode tanpa nulls tertanam ke C\cr
+		u&PPyUNICODE*int+&Setiap alamat dan panjang Python Unicode C\cr
+		w&char*+int&Membaca / menulis penyangga segmen tunggal ke alamat dan panjang C\cr
+		Z&char*&Seperti s, juga menerima None (set C char * ke NULL).\cr
+		z&char*+int&Seperti s, juga menerima None set C char * ke NULL\cr
+		(...)&Poin printer&Urutan Python diperlakukan sebagai satu argumen per item.\cr
+		|&as per ...&Argumen berikut bersifat opsional.\cr
+		:&&Format akhir, diikuti dengan nama fungsi untuk pesan error.\cr
+		;&&Format akhir, diikuti oleh seluruh pesan kesalahan teks.\cr				
+		\hline
+	\end{tabular*}
+	\begin{tablenotes}
+	\end{tablenotes}
 \end{table}
 
 
@@ -582,4 +443,3 @@ Berikut daftar tabel string kode yang umum digunakan, yang nol atau lebihnya dig
 Kode  $  \{  $... $  \}  $ membangun kamus dari sejumlah nilai C, kunci dan nilai bergantian. Misalnya, Py $  \_  $BuildValue (" $  \{  $issi $  \}  $", 23, "zig", "zag", 42) mengembalikan kamus seperti  $  \{  $23: 'zig', 'zag': 42 $  \}  $ Python. \par
 Setiap blok memori yang dialokasikan dengan malloc () pada akhirnya harus dikembalikan ke genangan memori yang tersedia dengan satu panggilan untuk membebaskan (). Penting untuk menelepon gratis () pada waktu yang tepat. Jika alamat blok dilupakan tapi gratis () tidak dipanggil untuk itu, memori yang ditempatinya tidak dapat digunakan kembali sampai program berakhir. Ini disebut kebocoran memori. Di sisi lain, jika sebuah program memanggil gratis () untuk satu blok dan kemudian terus menggunakan blok tersebut, itu menciptakan konflik dengan penggunaan ulang blok melalui panggilan malloc () yang lain. Ini disebut dengan menggunakan memori yang dibebaskan. Ini memiliki konsekuensi buruk yang sama seperti merujuk pada data yang tidak diinisiasi - dump inti, hasil yang salah, crash misterius. \par
 Karena Python membuat penggunaan malloc () dan gratis (), dibutuhkan strategi untuk menghindari kebocoran memori dan juga penggunaan memori yang bebas. Metode yang dipilih disebut penghitungan referensi. Prinsipnya sederhana: setiap objek berisi sebuah counter, yang bertambah saat referensi ke objek disimpan di suatu tempat, dan yang dikurangi saat referensi itu dihapus. Saat counter mencapai nol, referensi terakhir ke objek telah dihapus dan objeknya dibebaskan. \par
-\end{document}
