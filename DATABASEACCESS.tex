@@ -6,7 +6,7 @@ Basis data adalah sekumpulan dari data yang telah disusun sesuai dengan aturan t
 \noindent 
 \textbf{Manfaat Penggunaan Database} \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Kecepatan dan Kemudahan \par
 Database memiliki kemampuan dalam menyeleksi data sehingga menjadi suatu kelompok yang tersusun dengan cepat. Hal inilah yang ahirnya dapat menghasilkan informasi yang dibutuhkan secara cepat pula. Seberapa cepat pemrosesan data oleh database tergantung pada perancangan databasenya. \par
 \vspace{12pt}
@@ -27,7 +27,7 @@ Dengan memiliki database secara terpusat maka di masing-masing divisi tidak meme
 Hampir semua Aplikasi manajemen database sekarang memiliki fasilitas manajemen pengguna. Manajemen pengguna ini mampu membuat hak akses yang berbeda-beda disesuaikan dengan kepentingan maupun posisi pengguna. Selain itu data yang tersimpan di database diperlukan password untuk mengaksesnya. \par
 \vspace{12pt}
 \noindent 
-\item Memudahkan dalam pembuatan Aplikasi baru\end{myEnumerate}
+\item Memudahkan dalam pembuatan Aplikasi baru\end{enumerate}
  \par
 Dalam poin ini database yang dirancang dengan sangat baik, sehingga si perusahaan memerlukan aplikasi baru tidak perlu membuat database yang baru juga, atau tidak perlu mengubah kembali struktur database yang sudah ada. Sehingga Si pembuat aplikasi atau programmer hanya cukup membuat atau pengatur antarmuka aplikasinya saja. \par
 \vspace{12pt}
@@ -53,7 +53,7 @@ Data dapat disebut sebagai kumpulan dari fakta yang mewakili objek, misalnya sep
 \noindent 
 Tipe Database Terdapat 12 tipe database, antara lain: \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Operational database: Database ini menyimpan data rinci yang diperlukan untuk mendukung operasi dari seluruh organisasi. Mereka juga disebut subject-area databases (SADB), transaksi database, dan produksi database. Contoh: database pelanggan, database pribadi, database inventaris, akuntansi database. \par
 \noindent 
 \item Analytical database: Database ini menyimpan data dan informasi yang diambil dari operasional yang dipilih dan eksternal database. Mereka terdiri dari data dan informasi yang dirangkum paling dibutuhkan oleh sebuah organisasi manajemen dan End-user lainnya. Beberapa orang menyebut analitis multidimensi database sebagai database, manajemen database, atau informasi database. \par
@@ -76,14 +76,14 @@ Tipe Database Terdapat 12 tipe database, antara lain: \par
 \noindent 
 \item Real-time databases Real-time: Database adalah sistem pengolahan dirancang untuk menangani beban kerja negara yang dapat berubah terus- menerus. Ini berbeda dari database tradisional yang mengandung data yang terus- menerus, sebagian besar tidak terpengaruh oleh waktu. \par
 \noindent 
-\item Relational Database: Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.\end{myEnumerate}
+\item Relational Database: Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.\end{enumerate}
  \par
 \vspace{12pt}
 \noindent 
 \textbf{Modul python}\textbf{ untuk mengakses database MySQL} \par
 Untuk mengakses database MySQL dari Python, berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Instal server mysql dengan menjalankan perintah sudo apt-get install mysql-server. Jangan lupa memasukkan password akun root untuk server MySQL. \par
 \noindent 
 \item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. Selanjutnya, kita akan masuk ke shell MySQL. Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). \par
@@ -96,7 +96,7 @@ mysql> create table alamat(id int not null auto $  \_  $increment primary key, n
 mysql> create user 'andri'@'localhost' identified by '123456'; \par
 mysql> grant all on teman.* to 'andri'@'localhost' with grant option; \par
 \noindent 
-\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut.\end{myEnumerate}
+\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut.\end{enumerate}
  \par
 \vspace{12pt}
 Modul terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. \par
@@ -185,7 +185,7 @@ lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal ka
 \noindent 
 \textbf{Koneksi Database MySQL dengan Python} \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Pastikan sudah mengintal package libmysqlclient-dev dengan: \par
 apt-get install libmysqlclient-dev \par
 \noindent 
@@ -212,7 +212,7 @@ print "Database version :  $  \%  $s "  $  \%  $ data \par
  $  \#  $ disconnect from server \par
 db.close() \par
 \noindent 
-\item Test dengan code berikut:\end{myEnumerate}
+\item Test dengan code berikut:\end{enumerate}
  \par
 python test.py \par
 \vspace{12pt}
