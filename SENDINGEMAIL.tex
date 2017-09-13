@@ -1,130 +1,5 @@
-%%%%%%%%%%%%  Generated using docx2latex.pythonanywhere.com  %%%%%%%%%%%%%%
-
-
-\documentclass[a4paper,12pt]{report}
-
-% Other options in place of 'report' are 1)article 2)book 3)letter
-% Other options in place of 'a4paper' are 1)a5paper 2)b5paper 3)letterpaper 4)legalpaper 5)executivepaper
-
-
- %%%%%%%%%%%%  Include Packages  %%%%%%%%%%%%%%
-
-
-\usepackage{amsmath}
-\usepackage{latexsym}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{wasysym}
-\usepackage{enumitem}
-\usepackage{adjustbox}
-\usepackage{ragged2e}
-\usepackage{tabularx}
-\usepackage{changepage}
-\usepackage{setspace}
-\usepackage{hhline}
-\usepackage{multicol}
-\usepackage{float}
-\usepackage{multirow}
-\usepackage{makecell}
-\usepackage{fancyhdr}
-\usepackage[toc,page]{appendix}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-
-
- %%%%%%%%%%%%  Define Colors For Hyperlinks  %%%%%%%%%%%%%%
-
-
-\hypersetup{
-colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=cyan,
-}
-\urlstyle{same}
-
-
- %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
-
-% 1) Section
-% 1.1) SubSection
-% 1.1.1) SubSubSection
-% 1.1.1.1) Paragraph
-% 1.1.1.1.1) Subparagraph
-
-
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{5}
-
-
- %%%%%%%%%%%%  Set Page Margins  %%%%%%%%%%%%%%
-
-
-\usepackage[a4paper,bindingoffset=0.2in,headsep=0.5cm,left=1.0in,right=1.0in,bottom=2cm,top=2cm,headheight=2cm]{geometry}
-\everymath{\displaystyle}
-
-
- %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
-
-
-\setlistdepth{9}
-\newlist{myEnumerate}{enumerate}{9}
-	\setlist[myEnumerate,1]{label=\arabic*)}
-	\setlist[myEnumerate,2]{label=\alph*)}
-	\setlist[myEnumerate,3]{label=(\roman*)}
-	\setlist[myEnumerate,4]{label=(\arabic*)}
-	\setlist[myEnumerate,5]{label=(\Alph*)}
-	\setlist[myEnumerate,6]{label=(\Roman*)}
-	\setlist[myEnumerate,7]{label=\arabic*}
-	\setlist[myEnumerate,8]{label=\alph*}
-	\setlist[myEnumerate,9]{label=\roman*}
-
-\renewlist{itemize}{itemize}{9}
-	\setlist[itemize]{label=$\cdot$}
-	\setlist[itemize,1]{label=\textbullet}
-	\setlist[itemize,2]{label=$\circ$}
-	\setlist[itemize,3]{label=$\ast$}
-	\setlist[itemize,4]{label=$\dagger$}
-	\setlist[itemize,5]{label=$\triangleright$}
-	\setlist[itemize,6]{label=$\bigstar$}
-	\setlist[itemize,7]{label=$\blacklozenge$}
-	\setlist[itemize,8]{label=$\prime$}
-
-
-
- %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
-
-
-\pagestyle{fancy}
-\fancyhf{}
-
-
- %%%%%%%%%%%%  Footer here  %%%%%%%%%%%%%%
-
-
-
-
- %%%%%%%%%%%%  Print Page Numbers  %%%%%%%%%%%%%%
-
-
-\rfoot{\thepage}
-
-
- %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
-
-
-\setstretch{1.08}
-
-
- %%%%%%%%%%%%  Document Code starts here %%%%%%%%%%%%%%
-
-
+\documentclass{article}
 \begin{document}
-\sloppy
-\begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{SENDING EMAIL} \\}\end{center} \par
 Mail Server adalah perangkat lunak program yang mendistribusikan file atau informasi sebagai respons atas permintaan yang dikirim via email, mail server juga digunakan pada bitnet untuk menyediakan layanan serupa ftp. Selain itu mail server juga dapat dikatakan sebagai aplikasi yang digunakan untuk penginstalan email.  \par
 \vspace{12pt}
 Mail Server juga bisa disebut sebagai sebuah komputer yang didedikasikan untuk menjalankan jenis aplikasi perangkat lunak komputer, hal ini dianggap sebagai bagian terpenting dari setiap email sistem. Mail Server biasanya dikelola oleh seorang yang biasanya dipanggil post master. \par
@@ -146,7 +21,7 @@ Tugas Post Master  \par
 \noindent 
 Protokol yang umum digunakan antara lain protokol SMTP, POP3 dan IMAP. \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item SMTP (Simple Mail Transfer Protocol) \par
 SMTP (Simple Mail Transfer Protocol) digunakan sebagai standar untuk menampung dan mendistribusikan email. \par
 \vspace{12pt}
@@ -197,7 +72,7 @@ POP3 adalah protokol komunikasi satu arah, yang artinya data diambil dari server
 \item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.\end{itemize}
  \par
 \noindent 
-\item IMAP (Internet Message Access Protocol) \par
+\item IMAP (Internet Message Access Protocol) \end{enumerate} \par
 IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja. \par
 \vspace{12pt}
 IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3. \par
@@ -238,23 +113,23 @@ Banyaknya pengguna mobile dewasa ini mengakibatkan IMAP lebih banyak digunakan. 
 \noindent 
 Pada mail server terdapat 2 server yang berbeda yaitu : \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Outgoing Server (Sending email) : Protocol server yang menangani adalah SMTP (Simple Mail Transfer Protocol) pada port 25. \par
 \noindent 
-\item Incoming Server (Receiving email) : Protocol server yang menangani adalah POP3 (Post Office Protocol) pada port 110 atau IMAP (Internet Message Access Protocol) pada port 143.\end{myEnumerate}
+\item Incoming Server (Receiving email) : Protocol server yang menangani adalah POP3 (Post Office Protocol) pada port 110 atau IMAP (Internet Message Access Protocol) pada port 143.\end{enumerate}
  \par
 \vspace{12pt}
 \noindent 
 Penjelasan dari Server yang menangani outgoing email dan incoming email sebagai berikut : \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item SMTP Server : Saat anda mengirimkan email maka email anda akan ditangani SMTP Server dan akan dikirim ke SMTP Server tujuan, baik secara langsung maupun melalui beberapa SMTP Server dijalurnya. Apabila server tujuan terkoneksi maka email akan dikirim, namun apabila tidak terjadi koneksi maka akan dimasukan ke dalam queue dan di resend setiap 15 menit, apabila dalam 5 hari tidak ada perubahan maka akan diberikan undeliver notice ke inbox pengirim. \par
 \vspace{12pt}
 \noindent 
 \item POP3 Server : Jika menggunakan POP3 Server, apabila kita akan membaca email maka email pada server di download sehingga email hanya akan ada pada mesin yang mendownload email tersebut (kita hanya bisa membaca email tersebut pada device yang mendownload email tersebut). \par
 \vspace{12pt}
 \noindent 
-\item IMAP Server : Jika menggunakan IMAP Server, email dapat dibuka kembali lewat device yang berbeda. Fungsinya adalah mengelola email yang disimpan di server, kemudian email tersebut di ambil oleh client, selain itu IMAP juga meneruskan packet data. Kemampuan~ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil/download semua pesan yang ada tanpa kecuali. IMAP adalah suatu  protokol yang umum digunakan untuk pengiriman surat elektronik atau email di Internet. Protokol ini gunakan untuk mengirimkan data dari komputer pengirim surat elektronik ke server surat elektronik penerima. Untuk menggunakan SMTP bisa dari Microsoft Outlook. biasanya untuk menggunakan SMTP di perlukan settingan :\end{myEnumerate}
+\item IMAP Server : Jika menggunakan IMAP Server, email dapat dibuka kembali lewat device yang berbeda. Fungsinya adalah mengelola email yang disimpan di server, kemudian email tersebut di ambil oleh client, selain itu IMAP juga meneruskan packet data. Kemampuan~ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil/download semua pesan yang ada tanpa kecuali. IMAP adalah suatu  protokol yang umum digunakan untuk pengiriman surat elektronik atau email di Internet. Protokol ini gunakan untuk mengirimkan data dari komputer pengirim surat elektronik ke server surat elektronik penerima. Untuk menggunakan SMTP bisa dari Microsoft Outlook. biasanya untuk menggunakan SMTP di perlukan settingan :\end{enumerate}
  \par
 \vspace{12pt}
 \noindent 
@@ -290,14 +165,14 @@ Merupakan bahasa standar yang digunakan untuk mengatur tampilan informasi di Int
 \textbf{Apa Itu Port ?} \par
 Port adalah socket atau jack koneksi yang terletak di luar unit sistem sebagai tempat kabel - kabel yang berbeda ditancapkan. Port berfungsi untuk mentransmisikan data. Berikut macam - macam port : \par
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Port Serial \par
 \noindent 
 \item Port Pararel \par
 \noindent 
 \item Port SCSI (Scuzzy) \par
 \noindent 
-\item Port USB \end{myEnumerate}
+\item Port USB \end{enumerate}
  \par
 \vspace{12pt}
 \noindent 
@@ -313,7 +188,7 @@ Proses pengiriman e-mail malalui tahapan yang sedikit panjang. Saat e-mail di ki
 Cara kerja ini saya ambil dari Xmodulo, sebelum memahami proses cara kerja mail server sebaiknya anda mengenal terlebih dahulu singkatan - singkatan dari MUA, MTA, MDA dll. Berikut penjelasannya : \par
 \vspace{12pt}
 \noindent 
-\begin{myEnumerate}
+\begin{enumerate}
 \item Mail User Agent (MUA) : MUA adalah komponen yang berinteraksi dengan pengguna akhir secara langsung. Contoh dari MUA yaitu Thunderbird, MS Outlook, Zimbra Desktop. Interface webmail seperti Gmail dan Yahoo juga MUA. \par
 \noindent 
 \item Mail Transfer Agent (MTA) : MTA bertanggung jawab untuk mentransfer email dari mail server mengirimkan sampai ke server penerima email. Contoh MTA yaitu sendmail dan postfix. \par
@@ -322,7 +197,7 @@ Cara kerja ini saya ambil dari Xmodulo, sebelum memahami proses cara kerja mail 
 \noindent 
 \item POP / IMAP : POP dan IMAP adalah protokol yang digunakan untuk mengambil email dari kotak surat penerima server untuk penerima MUA. \par
 \noindent 
-\item Mail Exchanger Record (MX) : Record MX adalah entri DNS untuk mail server. Catatan ini menunjuk ke alamat IP ke arah mana email harus ditembak. MX record terendah selalu menang, yaitu, mendapat prioritas tertinggi. Sebagai contoh, MX 10 adalah lebih baik daripada MX 20. Alamat IP dari MX record dapat bervariasi berdasarkan desain dan konfigurasi persyaratan, seperti yang akan dibahas nanti dalam artikel.\end{myEnumerate}
+\item Mail Exchanger Record (MX) : Record MX adalah entri DNS untuk mail server. Catatan ini menunjuk ke alamat IP ke arah mana email harus ditembak. MX record terendah selalu menang, yaitu, mendapat prioritas tertinggi. Sebagai contoh, MX 10 adalah lebih baik daripada MX 20. Alamat IP dari MX record dapat bervariasi berdasarkan desain dan konfigurasi persyaratan, seperti yang akan dibahas nanti dalam artikel.\end{enumerate}
  \par
 Ketika pengirim mengklik tombol kirim, SMTP (MTA) memastikan ujung ke ujung pengiriman email dari pengirim-sisi server ke server tujuan. Setelah mencapai server tujuan, MTA lokal ke server tujuan menerima email, dan di pindahkan ke MDA setempat. MDA kemudian menulis email ke kotak pesan penerima. Ketika penerima memeriksa email, mereka diambil oleh MUA dengan menggunakan protokol seperti POP atau IMAP. \par
 \vspace{12pt}
