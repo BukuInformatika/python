@@ -184,10 +184,6 @@ static PyObject* helloworld(PyObject* self) \par
 \vspace{12pt}
 \noindent 
 static char helloworld $  \_  $docs[] = \par
-\noindent 
-~~~ "helloworld( ): Any message you want to put here!! $  \textbackslash  $n"; \par
-\vspace{12pt}
-\noindent 
 static PyMethodDef helloworld $  \_  $funcs[] =  $  \{  $ \par
 \noindent 
 ~~~  $  \{  $"helloworld", (PyCFunction)helloworld,  \par
@@ -222,9 +218,6 @@ void inithelloworld(void) \par
  \hspace*{0.5in} Distutils paket membuatnya sangat mudah mendistribusikan modul Python, baik Python murni dan modul ekstensi dengan cara standar. Modul didistribusikan dalam bentuk sumber dan dibangun dan diinstal melalui skrip setup yang iasa disebut seup.py sebagai berikut : \par
 \noindent 
 from distutils.core import setup, Extension \par
-\noindent 
-setup(name='helloworld', version='1.0',~  $  \textbackslash  $ \par
-\noindent 
 ~~~~~ ext $  \_  $modules=[Extension('helloworld', ['hello.c'])]). \par
 \vspace{12pt}
 \noindent 
