@@ -102,9 +102,9 @@ Kita harus berhati-hati dengan mode 'w' karena akan menimpa file jika sudah ada.
 Menulis string atau urutan byte (untuk file biner) dilakukan dengan menggunakan metode write (). Metode ini mengembalikan jumlah karakter yang ditulis ke file. \par
 \vspace{12pt}
 with open("test.txt",'w',encoding = 'utf-8') as f: \par
-~~ f.write("my first file $  \textbackslash  $n") \par
-~~ f.write("This file $  \textbackslash  $n $  \textbackslash  $n") \par
-~~ f.write("contains three lines $  \textbackslash  $n") \par
+~~ f.write("my first file $  \\setminus  $n") \par
+~~ f.write("This file $  \\setminus  $n $  \\setminus  $n") \par
+~~ f.write("contains three lines $  \\setminus  $n") \par
 \vspace{12pt}
 Program ini akan membuat file baru bernama 'test.txt' jika tidak ada. Jika memang ada, itu akan ditimpa. \par
 \vspace{12pt}
@@ -124,12 +124,12 @@ Ada berbagai metode yang tersedia untuk tujuan ini. Kita bisa menggunakan metode
 ' is ' \par
 \vspace{12pt}
 >>>~f.read()~~~   $  \#  $ read in the rest till end of file \par
-'my first file $  \textbackslash  $nThis file $  \textbackslash  $ncontains three lines $  \textbackslash  $n' \par
+'my first file $  \\setminus  $nThis file $  \\setminus  $ncontains three lines $  \\setminus  $n' \par
 \vspace{12pt}
 >>>~f.read()   $  \#  $ further reading returns empty sting \par
 \vspace{12pt}
 \vspace{12pt}
-Kita dapat melihat, metode read () mengembalikan baris baru sebagai ' $  \textbackslash  $ n'. Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. \par
+Kita dapat melihat, metode read () mengembalikan baris baru sebagai ' $  \\setminus  $ n'. Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. \par
 \vspace{12pt}
 Kita bisa mengubah kursor file kita saat ini (posisi) dengan menggunakan metode seek (). Demikian pula metode tell () mengembalikan posisi kita saat ini (dalam jumlah byte). \par
 \vspace{12pt}
@@ -155,20 +155,20 @@ This file \par
 contains three lines \par
 \vspace{12pt}
 \vspace{12pt}
-Baris dalam file itu sendiri memiliki karakter baris baru ' $  \textbackslash  $ n'. \par
+Baris dalam file itu sendiri memiliki karakter baris baru ' $  \\setminus  $ n'. \par
 \vspace{12pt}
 Terlebih lagi, print () parameter akhir untuk menghindari dua baris baru saat mencetak. \par
 \vspace{12pt}
 Sebagai alternatif, kita dapat menggunakan metode readline () untuk membaca setiap baris file. Metode ini membaca sebuah file sampai newline, termasuk newline character. \par
 \vspace{12pt}
 >>> f.readline() \par
-'This is my first file $  \textbackslash  $n' \par
+'This is my first file $  \\setminus  $n' \par
 \vspace{12pt}
 >>> f.readline() \par
-'This file $  \textbackslash  $n' \par
+'This file $  \\setminus  $n' \par
 \vspace{12pt}
 >>> f.readline() \par
-'contains three lines $  \textbackslash  $n' \par
+'contains three lines $  \\setminus  $n' \par
 \vspace{12pt}
 >>> f.readline() \par
 '' \par
@@ -176,7 +176,7 @@ Sebagai alternatif, kita dapat menggunakan metode readline () untuk membaca seti
 Terakhir, metode readlines () mengembalikan daftar baris yang tersisa dari keseluruhan file. Semua metode membaca ini mengembalikan nilai kosong saat akhir file (EOF) tercapai. \par
 \vspace{12pt}
 >>> f.readlines() \par
-['This is my first file $  \textbackslash  $n', 'This file $  \textbackslash  $n', 'contains three lines $  \textbackslash  $n'] \par
+['This is my first file $  \\setminus  $n', 'This file $  \\setminus  $n', 'contains three lines $  \\setminus  $n'] \par
 \vspace{12pt}
 \vspace{12pt}
 Metode Berkas Python \par
@@ -209,14 +209,14 @@ Metode tulis () \par
 \vspace{12pt}
 Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. \par
 \vspace{12pt}
-Metode write () tidak menambahkan karakter baris baru (' $  \textbackslash  $ n') ke akhir string - \par
+Metode write () tidak menambahkan karakter baris baru (' $  \\setminus  $ n') ke akhir string - \par
 Sintaksis \par
 \vspace{12pt}
  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
  $  \#  $ Open a file \par
 fo = open("foo.txt", "wb") \par
-fo.write( "Python is a great language. $  \textbackslash  $nYeah its great!! $  \textbackslash  $n"); \par
+fo.write( "Python is a great language. $  \\setminus  $nYeah its great!! $  \\setminus  $n"); \par
 \vspace{12pt}
  $  \#  $ Close opend file \par
 fo.close() \par
@@ -303,7 +303,7 @@ Contoh Kode 1 - Membuka sebuah file \par
 Openfile = open ('pathtofile', 'r') \par
 Openfile.read () \par
 \vspace{12pt}
-Itu menarik. Anda akan melihat banyak simbol ' $  \textbackslash  $ n'. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. \par
+Itu menarik. Anda akan melihat banyak simbol ' $  \\setminus  $ n'. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. \par
 Carilah dan Anda Temukan \par
 \vspace{12pt}
 Apakah Anda mencoba mengetik di print openfile.read ()? Apakah itu gagal? Kemungkinan besar, dan alasannya adalah karena 'kursor' telah mengubah tempatnya. Kursor Kursor apa Nah, kursor yang sebenarnya tidak bisa kamu lihat, tapi tetap kursor. Kursor tak terlihat ini memberitahukan fungsi baca (dan banyak fungsi I / O lainnya) dari mana mulai. Untuk mengatur di mana kursor berada, Anda menggunakan fungsi seek (). Ini digunakan dalam bentuk seek (offset, dari mana). \par

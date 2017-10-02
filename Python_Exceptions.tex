@@ -151,7 +151,7 @@ try: \par
 ~~ fh = open("testfile", "w") \par
 ~~ fh.write("This is my test file for exception handling!!") \par
 except IOError: \par
-~~ print "Error: can $  \textbackslash  $'t find file or read data" \par
+~~ print "Error: can $  \\setminus  $'t find file or read data" \par
 else: \par
 ~~ print "Written content in the file successfully" \par
 ~~ fh.close() \par
@@ -196,7 +196,7 @@ try: \par
 ~~ fh = open("testfile", "w") \par
 ~~ fh.write("This is my test file for exception handling!!") \par
 finally: \par
-~~ print "Error: can $  \textbackslash  $'t find file or read data" \par
+~~ print "Error: can $  \\setminus  $'t find file or read data" \par
 \vspace{12pt}
 \vspace{12pt}
  $  \#  $!/usr/bin/python \par
@@ -209,7 +209,7 @@ try: \par
 ~~~~~ print "Going to close the file" \par
 ~~~~~ fh.close() \par
 except IOError: \par
-~~ print "Error: can $  \textbackslash  $'t find file or read data" \par
+~~ print "Error: can $  \\setminus  $'t find file or read data" \par
 \vspace{12pt}
 \vspace{12pt}
 Bila dikecualikan dilempar di blok coba, eksekusi langsung lolos ke blok akhirnya. Setelah semua pernyataan di blok akhirnya dieksekusi, pengecualian dinaikkan lagi dan ditangani dalam pernyataan kecuali jika ada di lapisan yang lebih tinggi dari pernyataan try-except. \par
