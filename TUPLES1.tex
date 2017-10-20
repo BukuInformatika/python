@@ -20,6 +20,24 @@ Kita dapat mengisi sebuah Tuple tanpa memakai tanda kurung, tapi hal ini tidak d
 Sesuai dengan yang sudah dibahas di awal tadi, perbedaan utama dari Tuple dan List yaitu : \par
 Tuple bersifat immutable (tetap), kita tidak diizinkan untuk mengganti nilai yang ada atau menghapus data yang ada dalam Tuple tersebut. Jika kita menghapus atau mengubah data yang sudah ada sebelumnya, maka pesan kesalahan akan di tampilkan oleh interpreter Python. \par
 
+>>> NamaKota[1] = \"Medan\" \par
+Traceback (most recent call last): \par
+File "", line 1, in \par
+NamaKota[1] = \"Medan\" \par
+
+TypeError: 'tuple' object does not support item assignment \par
+
+Kita dapat menggunakan indeks atau irisan untuk mengakses nilai yang ada di dalam Tuple. Berikut contohnya, \par
+
+>>> NamaSiswa[1] \par
+'Indra Riksa' \par
+>>> NamaSiswa[0:2] \par
+('Indra Riksa', 'Agien Farhan') \par
+>>> KotaBesar[:2] \par
+(('Surabaya', 'Jakarta'), ('Bandung', 'Yogyakarta', 'Medan')) \par
+>>> KotaBesar[1][0] \par
+'Bandung' \par
+
 Membuat tuple semudah memasukkan nilai-nilai yang dipisahkan koma. Opsional Anda dapat memasukkan nilai-nilai yang dipisahkan koma ini di antara tanda kurung juga. Misalnya - \par
 \vspace{12pt}
 Tup1 = ('fisika', 'kimia', 1997, 2000); \par
