@@ -1,3 +1,104 @@
 \section {Home}
-    Pemrograman python adalah bahasa pemrograman terpopuler di tahun 2016 menurut tiobe. Python juga memiliki sintak atau aturan penulisan code pemrograman. Salah satu bagian Home merupakan halaman pengantar untuk mempelajari python . sebelum ketahapan yang baru selain home ini pembaca memerlukan pengertian yang lain yaitu seperti enverinmoment setup, syntax dan lain lain, awal untuk penulis jelakan yaitu pengertian tentang class pada python untuk mengantarkan logika dan pengetahuan apaitu class.
-    Python merupakan bahasa pemrograman yang berorientasi obyek dinamis, dapat digunakan untuk bermacam-macam pengembangan perangkat lunak (http://www.python.org/about/apps). Python menyediakan dukungan yang kuat untuk integrasi dengan bahasa pemrograman lain dan alat-alat bantu lainnya. Python hadir dengan pustakapustaka standar yang dapat diperluas serta dapat dipelajari hanya dalam beberapa hari. Sudah banyak programmer Python yang menyatakan bahwa mereka mendapatkan produktivitas yang lebih tinggi. Mereka juga merasakan bahwa Python meningkatkan kualitas pengembangan karena kode sumber yang mereka tulis dapat terus dipelihara.
+Pemrograman python adalah bahasa pemrograman terpopuler di tahun 2016 menurut tiobe. Python juga memiliki sintak atau aturan penulisan code pemrograman. Salah satu bagian Home merupakan halaman pengantar untuk mempelajari python . sebelum ketahapan yang baru selain home ini pembaca memerlukan pengertian yang lain yaitu seperti enverinmoment setup, syntax dan lain lain, awal untuk penulis jelakan yaitu pengertian tentang class pada python untuk mengantarkan logika dan pengetahuan apaitu class.
+Phyton dapat berjalan dibanyak platform atau sistem operasi seperti windows, linux/unix, mac OS X, OS/2, amiga, palm handhelds dan telepon genggam nokia. namun saat ini python juga sudah masuk kedalam virtual java dan NET. Python amemiliki beberapa keunggulan, yaitu :
+\begin {enumerate}
+\item Syntaxnya sangat bersih dan mudah dibaca
+\item Kemampuan melakukan pengekan syntaxnya yang kuat
+\item Berorientasi objek secara intuisif
+\item Kode-kode prosedure dinyatakan pada ekspresi natural
+\item Modularitas yang penuh, mendukung hirarki paket
+\item Penanganan error dilakukan berdasar pada eksepsi
+\item Tipe-tipe data dinamis berada pada tingkat sangat tinggi
+\item Library standar dapat diperluas dan modul dari pihak ketiga dapat dibuat secara virtual untuk setiap kebutuhan
+\item Ekstensi dan modul-modul dapat secara mudah ditulis dalam C, C+ (atau java untuk Jython atau NET untuk IronPytho)
+\item Dapat dimasukan kedalam aplikasi sebagai antar muka skrip
+\end {enumerate}
+
+\subsection {Ranah Aplikasi Python}
+Python dapat digunakan untuk membangun aplikasi-aplikasi berjalan pada banyak fungsi. diantaranya adalah sebagai berikut :
+\begin {enumerate}
+\item Pengembangan web dan internet. Dimana python mampu mengembangkan web dan internet seperti : penulisan skrip Common Gateway Internet (CGI), pengembangan frameworks seperti djago dan turbo gears, python juga mendukung penuh HTML, dan XML, pemrosesan e-mail, pemrosesan RRS feeds dll.
+\item Akses terhadap database. antar muka open database connectivity (ODBC) untuk MySQL, Oracle,postgreSQL, SybaseODBC. dan juga mampu menyediakan Appication Programming Interface (API)
+\item Pengembangan Graphical User Interface (GUI) pada Dekstop
+\item Keperluan perhitung scientific dan numeris.
+\item Pengembangan perangkat lunak komputer.
+\item Pengembangan jaringan komputer.
+\end {enumerate}
+
+\subsection {interpreter python}
+Bahasa pemrograman pyhton dilengkapi dengan suatu fasilitas seperti shell di linux, yang digunakan secara berulang dikemudian hari. untuk keperluan pernulisan ekspresi kompleks, kita dapat membuatnya dalam sebuah script yang dibantu dengan adanya teks editor. berikut adalah contoh dari statement dasar, perulangan dan seleksi :
+
+\subsubsection {perulangan}
+Dimana pada python dalam perulangan menggunakan statement for dan while. Yang dimana memiliki ciri berupa insialiasi perulangan dilakukan diawal statement dan perulangan itu akan berhenti bila syarat atua kondisi yang telah ditemukan terpenuhi.
+Beberapa bentuk while adalah sebagai berikut :
+\begin {equation}
+Perulangan sederhana 
+while x < 10: 
+  print x, 
+  x = x + 1 
+Perulangan di dalam perulangan 
+while x < 10: 
+  while y < 10: 
+    print y,  
+     y = y + 1 
+    print x, 
+    x = x + 1
+ Perulangan yang terus menerus
+ while 1: 
+    print \‘selamanya mengulang\’ 
+  Perulangan dengan else 
+  while x < 10: 
+    print x, 
+    x = x + 1 
+   else: 
+    print \‘Perulangan sudah selesai\’ 
+   Hasilnya : 
+   Python 2.4.3 (#1, May 24 2008, 13:47:28) 
+   [GCC 4.1.2 20070626 (Red Hat 4.1.2-14)] on 
+   linux2 
+   Type “help”, “copyright”, “credits” or “license” 
+   for more information. 
+   >>> x = 1 >>>
+   while x < 10: ...     
+   print x, ...     
+   x = x + 1 
+   1 2 3 4 5 6 7 8 9 
+   Contoh perulangan dengan while :
+   >>> x = \‘universitas multimedia nusantara\’ 
+   >>> while x: ...     
+   print x ...     
+   x = x[1:] 
+   universitas multimedia nusantara
+   niversitas multimedia nusantara 
+   iversitas multimedia nusantara 
+   versitas multimedia nusantara 
+   ersitas multimedia nusantara 
+   rsitas multimedia nusantara 
+   sitas multimedia nusantara 
+   itas multimedia nusantara 
+   tas multimedia nusantara 
+   as multimedia nusantara 
+   s multimedia nusantara
+    multimedia nusantara 
+   multimedia nusantara 
+   ultimedia nusantara 
+   ltimedia nusantara 
+   timedia nusantara 
+   imedia nusantara 
+   media nusantara 
+   edia nusantara 
+   dia nusantara 
+   ia nusantara 
+   a nusantara 
+    nusantara
+   nusantara 
+   usantara 
+   santara 
+   antara 
+   ntara 
+   tara 
+   ara 
+   ra 
+   a 
+Contoh diatas adalah perulangan yang menghilangkan satu karakter pertama sebuah string dengan menggunakan irisan while x.
+\end {equation}
