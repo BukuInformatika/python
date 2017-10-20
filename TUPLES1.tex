@@ -48,6 +48,18 @@ Kita dapat menggunakan indeks atau irisan untuk mengakses nilai yang ada di dala
 >>> TupleGab \par
 ('a', 2, 3, 4, 'b', 5, 6, 7) \par
 contoh di atas, dua Tuple dibuat secara terpisah, TupleAku dan TupleDia. Dua Tuple ini dicocokkan pada Tuple lainnya TupleGab menggunakan operator +. Perlu dicatat bahwa TupleGab berisi nilai dari TupleAku dan TupleDia. Metode ini dapat digunakan untuk menambahkan elemen data lain pada sebuah Tuple. \par
+>>> IniTuple = (\"x\", \"y\", \"z\") \par
+>>> IniTuple = IniTuple + (\"a\", \"b\") \par
+>>> IniTuple \par
+('x', 'y', 'z', 'a', 'b') \par
+
+Dan kita juga dapat membuat Tuple dengan objek-objek yang mutable yaitu seperti List. Sedemikian sehingga, kita dapat mengubah nilai yang ada dalam List tersebut. Berikut contohnya: \par
+>>> TupleData = (222, \"ayam\", [555, \"telur\", \"sapi\"]) \par
+>>> TupleData \par
+(222, 'ayam', [555, 'telur', 'sapi']) \par
+>>> TupleData[2][1] = 777 \par
+>>> TupleData \par
+(222, 'ayam', [555, 777, 'sapi']) \par
 
 Membuat tuple semudah memasukkan nilai-nilai yang dipisahkan koma. Opsional Anda dapat memasukkan nilai-nilai yang dipisahkan koma ini di antara tanda kurung juga. Misalnya - \par
 \vspace{12pt}
@@ -61,7 +73,7 @@ Tup1 = (50,); \par
 Seperti indeks string, indeks tuple mulai dari 0, dan mereka dapat diiris, digabungkan, dan seterusnya. \par
 Mengakses Nilai pada Tuples: \par
 Untuk mengakses nilai dalam tupel, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut. Misalnya - \par
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 Tup1 = ('fisika', 'kimia', 1997, 2000); \par
 Tup2 = (1, 2, 3, 4, 5, 6, 7); \par
@@ -73,15 +85,15 @@ tup1 [0]: fisika \par
 Tup2 [1: 5]: [2, 3, 4, 5] \par
 Memperbarui Tupel \par
 Tupel tidak berubah yang berarti Anda tidak dapat memperbarui atau mengubah nilai elemen tupel. Anda dapat mengambil bagian dari tupel yang ada untuk membuat tupel baru seperti ditunjukkan oleh contoh berikut - \par
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 Tup1 = (12, 34.56); \par
 Tup2 = ('abc', 'xyz'); \par
 \vspace{12pt}
- $  \#  $ Tindakan berikut tidak berlaku untuk tupel \par
- $  \#  $ Tup1 [0] = 100; \par
+ \$  \# \$ Tindakan berikut tidak berlaku untuk tupel \par
+ \$  \#  \$ Tup1 [0] = 100; \par
 \vspace{12pt}
- $  \#  $ Jadi mari kita buat tupel baru sebagai berikut \par
+ \$  \#  \$ Jadi mari kita buat tupel baru sebagai berikut \par
 Tup3 = tup1 + tup2; \par
 Cetak tup3 \par
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
@@ -89,7 +101,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 Hapus Elemen Tuple \par
 Menghapus elemen tuple individual tidak mungkin dilakukan. Tentu saja, tidak ada yang salah dengan menggabungkan tuple lain dengan unsur-unsur yang tidak diinginkan dibuang. \par
 Untuk secara eksplisit menghapus keseluruhan tuple, cukup gunakan del statement. Sebagai contoh: \par
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 Tup = ('fisika', 'kimia', 1997, 2000); \par
 \vspace{12pt}
@@ -124,7 +136,7 @@ L[1:] \hspace*{0.5in} ['Spam', 'SPAM!'] \hspace*{0.5in} Slicing fetches sections
 \vspace{12pt}
 Tidak melampirkan delimiters \par
 Setiap kumpulan beberapa objek, yang dipisahkan koma, ditulis tanpa mengidentifikasi simbol, yaitu tanda kurung untuk daftar, tanda kurung untuk tupel, dll., Default tupel, seperti yang ditunjukkan dalam contoh singkat ini - \par
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 cetak 'abc', -4.24e93, 18 + 6.6j, 'xyz' \par
 x, y = 1, 2; \par
@@ -189,29 +201,29 @@ Sebuah tuple dibuat dengan menempatkan semua item (elemen) di dalam tanda kurung
 Sebuah tuple dapat memiliki sejumlah item dan mereka mungkin memiliki tipe yang berbeda (integer, float, list, string etc.). \par
 \vspace{12pt}
 \vspace{12pt}
- $  \#  $ empty tuple \par
- $  \#  $ Output: () \par
-my $  \_  $tuple = () \par
-print(my $  \_  $tuple) \par
+ \$  \#  \$ empty tuple \par
+ \$  \#  \$ Output: () \par
+my \$  \_  \$tuple = () \par
+print(my \$  \_  \$tuple) \par
 \vspace{12pt}
- $  \#  $ tuple having integers \par
- $  \#  $ Output: (1, 2, 3) \par
-my $  \_  $tuple = (1, 2, 3) \par
-print(my $  \_  $tuple) \par
+ \$  \#  \$ tuple having integers \par
+ \$  \#  \$ Output: (1, 2, 3) \par
+my \$  \_  \$tuple = (1, 2, 3) \par
+print(my \$  \_  \$tuple) \par
 \vspace{12pt}
- $  \#  $ tuple with mixed datatypes \par
- $  \#  $ Output: (1, "Hello", 3.4) \par
-my $  \_  $tuple = (1, "Hello", 3.4) \par
-print(my $  \_  $tuple) \par
+ \$  \#  \$ tuple with mixed datatypes \par
+ \$  \#  \$ Output: (1, "Hello", 3.4) \par
+my \$  \_  \$tuple = (1, "Hello", 3.4) \par
+print(my \$  \_  \$tuple) \par
 \vspace{12pt}
- $  \#  $ nested tuple \par
- $  \#  $ Output: ("mouse", [8, 4, 6], (1, 2, 3)) \par
-my $  \_  $tuple = ("mouse", [8, 4, 6], (1, 2, 3)) \par
-print(my $  \_  $tuple) \par
+ \$  \#  \$ nested tuple \par
+ \$  \#  \$ Output: ("mouse", [8, 4, 6], (1, 2, 3)) \par
+my \$  \_  \$tuple = ("mouse", [8, 4, 6], (1, 2, 3)) \par
+print(my \$  \_  \$tuple) \par
 \vspace{12pt}
- $  \#  $ tuple can be created without parentheses \par
- $  \#  $ also called tuple packing \par
- $  \#  $ Output: 3, 4.6, "dog" \par
+ \$  \#  \$ tuple can be created without parentheses \par
+ \$  \#  \$ also called tuple packing \par
+ \$  \#  \$ Output: 3, 4.6, "dog" \par
 \vspace{12pt}
 my $  \_  $tuple = 3, 4.6, "dog" \par
 print(my $  \_  $tuple) \par
