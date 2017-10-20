@@ -102,3 +102,52 @@ while x < 10:
    a 
 Contoh diatas adalah perulangan yang menghilangkan satu karakter pertama sebuah string dengan menggunakan irisan while x.
 \end {equation}
+Contoh diatas adalah perulangan yang menghilangkan satu karakter pertama sebuah string dengan menggunakan irisan while x.
+Berikut ini satu lagi contoh untuk menampilkan bilangan genap kurang dari 11.
+Python 2.4.3(#1,May 24 2008,13:47:28) [GGc 4.1.2 20070626 (Red Hat 4.1.2-14)] on linux2 Type "help", "copyright", "credits" or "license" for more information.
+\begin {equation}
+>>> x=0
+>>> while x<10 :
+... x = x + 1
+... if x % 2:
+...       continue
+... else:
+...       print x,
+...
+2 4 6 8 10
+>>>
+Beberapa bentuk for adalah sebagai berikut:
+Perulangan sederhana
+for x in range(0,10):
+      print x,
+perulangan di dalam perulangan
+for x in range (0,10):
+      for y in range (0,10):
+              print y,
+print x,
+Perulangan dengan else
+for x in range(0,10):
+      print x,
+else:
+  print 'Perulangan sudah selesai'
+ Hasilnya :
+ Python 2.4.3(#1,May 24 2008, 13:47:28) [GCC 4.1.2 20070626 (Red Hat 4.1.2-14)] on linux2
+ Type "help", "copyright", "credits" or "license" for more information.
+ >>> for x in range(0,10):
+ ... print x
+ ...
+ 0 1 2 3 4 5 6 7 8 9
+ >>>
+ Python 2.4.3 (#1,May 24 2008, 13:47:28) [GCC 4.1.2 20070626 (Red Hat 4.1.2-14)] on linux2
+ Type "help", "copyright", "credits" or "license" for more information.
+ >>> for x in range(0,10):
+ ... for y in range(0,10):
+ ...       print y,
+ ...
+  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
+ 0 1 2 3 4 5 6 7 8 9
+ >>> print x,
+ 9
+ \end {equation}
