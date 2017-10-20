@@ -1,5 +1,6 @@
 % Tugas 3 GIS Kelompok 4 
 % Akbar Pambudi Utomo (1154094)
+% Pebridayanti Hasibuan (1154118)
 
 
 \section{Basic Syntax}
@@ -14,3 +15,52 @@ Pengenal Python adalah nama yang digunakan untuk mengidentifikasi variabel, fung
 pengenal dimulai dengan huruf \"A\" sampai \"Z\" atau huruf \"a\" sampai \"z\" atau garis \"_\" diikuti oleh nol atau lebih
 huruf, garis bawah dan angka (0 sampai 9). Python tidak mengisinkan karakter tanda baca seperti \"@\", \"$\", san \"%\" 
 dalam pengenal karena Python adalah bahasa pemrograman yang sensitif.
+\end
+
+\subsection {Basic syntax}
+Visual Basic adalah salah suatu developement tools untuk membangun aplikasi dalam lingkungan Windows. Dalam pengembangan aplikasi, Visual Basic menggunakan pendekatan Visual untuk merancang user interface dalam bentuk form, sedangkan untuk kodingnya menggunakan dialek bahasa Basic yang cenderung mudah dipelajari. Visual Basic telah menjadi tools yang terkenal bagi para pemula maupun para developer. Dalam lingkungan Window’s User-interface sangat memegang peranan penting,karena dalam pemakaian aplikasi yang kita buat, pemakai senantiasa berinteraksi dengan User-interface tanpa menyadari bahwa dibelakangnya berjalan instruksi-instruksi program yang mendukung tampilan dan proses yang dilakukan.
+Pada pemrograman Visual, pengembangan aplikasi dimulai dengan pembentukkan user interface, kemudian mengatur properti dari objek-objek yang digunakan dalam user interface, dan baru dilakukan penulisan kode program untuk menangani kejadian-kejadian (event). Tahap pengembangan aplikasi demikian dikenal dengan istilah pengembangan aplikasi dengan pendekatan Bottom Up.
+\subsection {permasalahan yang terdapat di basic syntax}
+Permasalahan yang dibahas adalah membuat suatu pengkodean dengan
+menggunakan algoritma RC4. Masalah enkripsi data dengan algoritma RC4
+muncul ketika proses enkripsi dalam sistem sedang. Pembahasan masalah lebih
+ditekankan pada proses indeks kerja algoritma RC4.
+Algoritma RC4 mengenkripsi dengan mengombinasikannya dengan
+plainteks dengan menggunakan bit-wise Xor (Exclusive-or). RC4 menggunakan
+panjang kunci dari 1 sampai 256 byte yang digunakan untuk menginisialisasikan
+tabel sepanjang 256 byte. Tabel ini digunakan untuk generasi yang berikut dari
+pseudo random yang menggunakan XOR dengan plaintext untuk menghasilkan
+ciphertext. Masing - masing elemen dalam tabel saling ditukarkan minimal sekali.
+Proses dekripsinya dilakukan dengan cara yang sama (karena Xor merupakan
+fungsi simetrik). Untuk menghasilkan keystream, cipher menggunakan state
+internal yang meliputi dua bagian :
+1. Tahap key scheduling dimana state automaton diberi nilai awal berdasar kan
+kunci enkripsi.
+State yang diberi nilai awal berupa array yang merepresentasikan suatu
+permutasi dengan 256 elemen, jadi hasil dari algoritma KSA adalah
+permutasi awal. Array yang mempunyai 256 elemen ini (dengan indeks 0
+sampai dengan 255) dinamakan S. Berikut adalah algoritma KSA dalam 
+29
+bentuk pseudo-code dimana key adalah kunci enkripsi dan keylength adalah besar kunci enkripsi dalam bytes (untuk kunci 128 bit, keylength = 16).
+\begin {equation}
+for i = 0 to 255
+S [i] := i
+j := 0
+for i = 0 to 255
+j := (j + S[i] + key [I mod keylenght] ) mod 256
+swap (S[i], S[j])
+\end {equation}
+2. Tahap pseudo-random generation dimana state automaton beroperasi dan
+outputnya menghasilkan keystream. Setiap putaran, bagian keystream sebesar
+1 byte (dengan nilai antara 0 sampai dengan 255) dioutput oleh PRGA
+berdasarkan state S. Berikut adalah algoritma PRGA dalam bentuk pseudocode:
+\begin {equation}
+i := 0
+j := 0
+loop
+i := ( i + 1 ) mod 256
+j := ( j + S[i] ) mod 256
+swap ( S[i], S[j] )
+output S[ (S[i] + S[j]) mod 256]
+\end {equation}
+\end 
