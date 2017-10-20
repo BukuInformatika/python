@@ -3,6 +3,20 @@
 TUPLES \par
 Sebuah tupel adalah urutan objek Python yang tidak berubah. Tupel adalah urutan, seperti daftar. Perbedaan antara tupel dan daftar adalah, tupel tidak dapat diubah tidak seperti daftar dan tupel menggunakan tanda kurung, sedangkan daftar menggunakan tanda kurung siku. \par
 Tuple juga merupakan tipe data yang berurut (sequence data type) yang fungsinya hampir sama List. Namun Tuple juga berbeda sifatnya, yaitu Tuple bersifat immutable maksudnya data di dalam Tuple tidak dapat diubah atau dihapuskan. Sebuah Tuple terdiri dari beberapa nilai yang dipisah oleh tanda koma (‘,’). Tidak seperti List, tipe data Tuple ditandai dengan tanda kurung "()".
+Ini adalah contohnya, 
+
+>>> NamaSiswa = ("Indra Riksa", "Agien Farhan", "Saryoni", "Berlin", "Kindi") 
+>>> NamaSiswa 
+('Indra Riksa', 'Agien Farhan', 'Saryoni, 'Berlin', 'Kindi') 
+
+Kita dapat mengisi sebuah Tuple tanpa memakai tanda kurung, tapi hal ini tidak dianjurkan jika Tuple tersebut berisi data yang besar. Contoh di bawah ini jika kita ingin membuat Tuple bersarang, ada Tuple di dalam Tuple. 
+
+>>> NamaKota = "Surabaya", "Jakarta" 
+>>> NamaKota 
+('Surabaya', 'Jakarta') 
+>>> KotaBesar = NamaKota, ("Bandung", "Yogyakarta", "Medan") 
+>>> KotaBesar 
+(('Surabaya', 'Jakarta'), ('Bandung', 'Yogyakarta', 'Medan'))
 Membuat tuple semudah memasukkan nilai-nilai yang dipisahkan koma. Opsional Anda dapat memasukkan nilai-nilai yang dipisahkan koma ini di antara tanda kurung juga. Misalnya - \par
 \vspace{12pt}
 Tup1 = ('fisika', 'kimia', 1997, 2000); \par
