@@ -136,3 +136,65 @@ j := ( j + S[i] ) mod 256
 swap ( S[i], S[j] )
 output S[ (S[i] + S[j]) mod 256]
 \end {equation}
+\end
+
+\subsection {bentuk-bentuk basic syntax}
+Bentuk-bentuk kondisi yang ada pada visual basic adalah :
+A.Kondisi Perulangan
+Dalam pemrograman ada kalanya kita memerlukan perulangan untuk melakukan suatu perintah yang sama untuk beberapa kali, misalkan pada program untuk mencari data maka diperlukan perulangan untuk mencari data dari record awal sampai record akhir atau sampai data yang dicari ditemukan. 
+Perhatikan contoh sederhana yang menunjukkan penggunaan kondisi perulangan dalam program berikut ini :
+
+\begin {equation}
+Top of Form
+Private Sub Form_Load()
+MsgBox \“ini adalah pesan ke 1\”
+MsgBox \“ini adalah pesan ke 2\”
+MsgBox \“ini adalah pesan ke 3\”
+MsgBox \“ini adalah pesan ke 4\”
+MsgBox \“ini adalah pesan ke 5\”
+End Sub
+\end {equation}
+
+Kode program di atas adalah kode program yang digunakan untuk menampilkan pesan sebanyak 5 kali ketika program di load. Bayangkan jika pesan yang ingin ditampilkan bukan 5 kali tetapi 1000 kali, pastinya kita akan kesusahan jika harus menulis kode program \“ MsgBox \“ini adalah pesan ke #/” /“ Sebanyak 1000 kali. Untuk mempersingkat kode program maka sebenarnya kita tidak perlu menulis program sebanyak 1000 baris, kita cukup menulis 3 baris program yang hasilnya akan menampilkan pesan sebanyak 1000 kali yaitu sebagai berikut :
+
+\begin {equation}
+For i = 1 To 1000
+MsgBox \“ini adalah pesan ke\ ” & i
+Next i
+Sehingga source kodenya menjadi :
+Private Sub Form_Load()
+For i = 1 To 1000
+MsgBox \“ini adalah pesan ke \” & i
+Next i
+End Sub
+\end {equation}
+Dengan menggunakan struktur kondisi perulangan seperti source code di atas maka ketika program di load maka program akan menjalankan perulangan dan menampilkan pesan \“ini adalah pesan ke 1\”,angka 1 pada pesan karena pada perulangan For … Next nilai awalnya adalah 1 kemudian program menjalankan perintah Next i sehingga sekarang nilai i menjadi 2, kemudian program menampilkan pesan \“ini adalah pesan ke 2\”, kemudian begitu seterusnya sampai nilai i = 1000 dan program menampilkan pesan \“ini adalah pesan ke 1000\”, karena nilai i = nilai akhir yaitu 1000 maka program keluar dariperulangan. Dari contoh di atas dapat disimpulkan bahwa sebuah perulangan memiliki kondisi awal dan kondisi akhir, dan perulangan akan berjalan dan berhenti jika kondisi akhir terpenuhi.
+1.Macam – Macam Bentuk Perulangan
+Dalam visual basic terdapat beberapa macam struktur kondisi perulangan, diantaranya adalah Do … Loop dan For … Next. Untuk lebih jelasnya berikut adalah macam – macam bentuk perulangan dalam visual basic :
+A.Do While … Loop
+Digunakan sebagai statement kondisi dengan banyak pilihan.
+Select Case nilai_angka
+\begin {equation}
+Case 0 to 50
+nilai huruf = \"D\"
+Case Is <= 70
+nilai huruf = \"C\"
+Case Is <= 80
+nilai huruf = \"B\"
+Else Case
+nilai huruf = \"A\"
+End select
+\end {equation}
+
+Len()
+Digunakan untuk mendapatkan informasi panjang sebuah String.
+Syntax dasar :
+Len(string)
+
+Contoh :
+\bin {equation}
+Dim str As String
+str = Belajar Visual Basic
+msgbox str &  =  & Len(str) & karakter
+\end {equation}
+\end
