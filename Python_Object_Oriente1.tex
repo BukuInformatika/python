@@ -1,107 +1,48 @@
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Object Oriented} \\}\end{center} \par
-Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek Python. Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. Namun, di sini adalah pengenalan kecil Object-Oriented Programming (OOP) untuk membawa Anda pada kecepatan - Ikhtisar Terminologi OOP. Kelas: Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) \& metode, diakses melalui notasi titik. Variabel kelas: Variabel yang dimiliki oleh semua instance kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh. Anggota data: Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya. Fungsi overloading: Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat.Contoh variabel: Variabel yang didefinisikan di dalam metode dan hanya dimiliki oleh instance kelas saat ini. \par
-Warisan: Pengalihan karakteristik kelas ke kelas lain yang berasal darinya. Contoh: Objek individual dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas. Instansiasi: Pembuatan sebuah instance dari sebuah kelas. Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas.  Objek: Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode. Operator overloading: Penugasan lebih dari satu fungsi ke operator tertentu. \par
-\vspace{12pt}
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Membuat Kelas} \\} \par
-\vspace{12pt}
-Pernyataan kelas membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut - \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-class ClassName: \par
-\noindent 
-~~ 'Optional class documentation string' \par
-\noindent 
-~~ class $  \_  $suite \par
-\vspace{12pt}
-\vspace{12pt}
-Kelas~memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . \$  \_  \$ \$  \_  \$ doc \$  \_  \$ \$  \_  \$.  Class \$  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data. \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-Contoh \par
-\vspace{12pt}
-\noindent 
-Berikut adalah contoh kelas Python sederhana - \par
-\vspace{12pt}
-\noindent 
-class Employee: \par
-\noindent 
-~~ 'Common base class for all employees' \par
-\noindent 
-~~ empCount = 0 \par
-\vspace{12pt}
-\noindent 
-~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$(self, name, salary): \par
-\noindent 
+\section{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Object Oriented} \\}\end{center} 
+Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek Python. Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. Namun, di sini adalah pengenalan kecil Object-Oriented Programming (OOP) untuk membawa Anda pada kecepatan - Ikhtisar Terminologi OOP. Kelas: Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) dan metode, diakses melalui notasi titik. Variabel kelas: Variabel yang dimiliki oleh semua instance kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh. Anggota data: Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya. Fungsi overloading: Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat.Contoh variabel: Variabel yang didefinisikan di dalam metode dan hanya dimiliki oleh instance kelas saat ini. 
+Warisan: Pengalihan karakteristik kelas ke kelas lain yang berasal darinya. Contoh: Objek individual dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas. Instansiasi: Pembuatan sebuah instance dari sebuah kelas. Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas.  Objek: Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode. Operator overloading: Penugasan lebih dari satu fungsi ke operator tertentu. 
+
+\subsection{Pernyataan kelas membuat definisi kelas baru}
+Pernyataan kelas membuat definisi kelas baru , Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut 
+class ClassName: 
+~~ 'Optional class documentation string' 
+~~ class \$  \_  \$suite 
+\subsubsection {Kelas~memiliki kumpulan dokumentasi}
+Kelas~memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . \$  \_  \$ \$  \_  \$ doc \$  \_  \$ \$  \_  \$.  Class \$  \_  \$ suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data. 
+Berikut adalah contoh kelas Python sederhana 
+class Employee:
+~~ 'Common base class for all employees' 
+~~ empCount = 0 
+~~ def  \$  \_  \$ \  \_  \$init \$  \_  \$ \$  \_  \$(self, name, salary):  
+~~~~~ self.name = name  
+~~~~~ self.salary = salary 
+~~~~~ Employee.empCount += 1 
+~~  
+~~ def displayCount(self): \
+~~~~ print "Total Employee  \$  \%  \$d"  \$  \%  \$ Employee.empCount 
+~~ def displayEmployee(self):
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
+Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  \$  \_  \$ \$  \_  \$init  \$  \_  \$ \$  \_  \$ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. 
+{\fontsize{14pt}{14pt}\selectfont \textbf{Membuat Instance Objects} \\} 
+Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$-nya. 
+"Ini akan menciptakan objek pertama kelas Karyawan" 
+Emp1 = Karyawan ("Zara", 2000) 
+"Ini akan menciptakan objek kedua dari kelas Karyawan" 
+Emp2 = Karyawan ("Manni", 5000) 
+{\fontsize{14pt}{14pt}\selectfont \textbf{Mengakses Atribut} \\}
+Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut 
+Emp1.displayEmployee () 
+Emp2.displayEmployee ()  
+Cetak "Jumlah Karyawan \$  \%  \$ d" \$  \%  \$ Employee.empCount 
+Sekarang, meletakkan semua konsep bersama 
+ \$  \#  \$!/usr/bin/python 
+class Employee: 
+~~ 'Common base class for all employees' 
+~~ empCount = 0 
+~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$(self, name, salary): 
 ~~~~~ self.name = name \par
-\noindent 
 ~~~~~ self.salary = salary \par
-\noindent 
 ~~~~~ Employee.empCount += 1 \par
-\noindent 
-~~  \par
-\noindent 
-~~ def displayCount(self): \par
-\noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
-\vspace{12pt}
-\noindent 
-~~ def displayEmployee(self): \par
-\noindent 
-~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
-\vspace{12pt}
-Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. \par
-\vspace{12pt}
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Membuat Instance Objects} \\} \par
-\vspace{12pt}
-Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$-nya. \par
-\vspace{12pt}
-\noindent 
-"Ini akan menciptakan objek pertama kelas Karyawan" \par
-\noindent 
-Emp1 = Karyawan ("Zara", 2000) \par
-\noindent 
-"Ini akan menciptakan objek kedua dari kelas Karyawan" \par
-\noindent 
-Emp2 = Karyawan ("Manni", 5000) \par
-\vspace{12pt}
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Mengakses Atribut} \\} \par
-\vspace{12pt}
-Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut - \par
-\vspace{12pt}
-\noindent 
-Emp1.displayEmployee () \par
-\noindent 
-Emp2.displayEmployee () \par
-\noindent 
-Cetak "Jumlah Karyawan \$  \%  \$ d" \$  \%  \$ Employee.empCount \par
-\vspace{12pt}
-\noindent 
-Sekarang, meletakkan semua konsep bersama - \par
-\noindent 
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
-class Employee: \par
-\noindent 
-~~ 'Common base class for all employees' \par
-\noindent 
-~~ empCount = 0 \par
-\vspace{12pt}
-\noindent 
-~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \${self, name, salary}: \par
-\noindent 
-~~~~~ self.name = name \par
-\noindent 
-~~~~~ self.salary = salary \par
-\noindent 
-~~~~~ Employee.empCount += 1 \par
-\noindent 
 ~~  \par
 \noindent 
 ~~ def displayCount(self): \par
@@ -109,7 +50,7 @@ class Employee: \par
 ~~~~ print "Total Employee  \$  \%  \$d"  \$  \%  \$ Employee.empCount \par
 \vspace{12pt}
 \noindent 
-~~ def displayEmployee{self}: \par
+~~ def displayEmployee(self): \par
 \noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
 \vspace{12pt}
@@ -120,13 +61,13 @@ emp1 = Employee("Zara", 2000) \par
 \noindent 
 "This would create second object of Employee class" \par
 \noindent 
-emp2 = Employee{"Manni", 5000} \par
+emp2 = Employee("Manni", 5000) \par
 \noindent 
 emp1.displayEmployee() \par
 \noindent 
 emp2.displayEmployee() \par
 \noindent 
-print "Total Employee  \$  \% \$d"  \$  \%  \$ Employee.empCount \par
+print "Total Employee  \$  \%  \$d"  \$  \%  \$ Employee.empCount \par
 \noindent 
 When the above code is executed, it produces the following result  \$ - \$ \par
 \noindent 
@@ -136,7 +77,7 @@ Name~:~ Manni ,Salary:  5000 \par
 \noindent 
 Total Employee 2 \par
 \noindent 
-You can add, remove, or modify attributes of classes and objects at any time  \$ - \$ \par
+You can add, remove, or modify attributes of classes and objects at any time  $ - $ \par
 \noindent 
 emp1.age~= 7   \$  \#  \$ Add an 'age' attribute. \par
 \noindent 
@@ -186,13 +127,13 @@ Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses meng
 ~~~  \$  \_  \$ \$  \_  \$module \$  \_  \$ \$  \_  \$: Nama modul dimana kelas didefinisikan. Atribut ini " \$  \_  \$ \$  \_  \$main \$  \_  \$ \$  \_  \$" dalam mode interaktif. \par
 \vspace{12pt}
 \noindent 
-~~~  \$  \_  \$ \$  \_  \$bases \$  \_  \$ \$  \_  \$: Tupel yang mungkin kosong yang berisi kelas dasar, sesuai urutan kejadiannya dalam daftar kelas dasar. \par
+~~~  \$  \_  \$ \$  \_  \$bases\$  \_  \$ \$  \_  \$: Tupel yang mungkin kosong yang berisi kelas dasar, sesuai urutan kejadiannya dalam daftar kelas dasar. \par
 \vspace{12pt}
 \noindent 
 Untuk kelas di atas mari kita coba untuk mengakses semua atribut ini – \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
 class Employee: \par
