@@ -33,7 +33,8 @@ Perpustakaan standar yang luas: sebagian besar perpustakaan Python sangat portab
 \end{enumerate}
 
 \subsubsection{Kata-kata yang dicadangkan}
-Ini adalah kata-kata yang dicadangkan dan Anda tidak dapat menggunakannya sebagai konstan atau variabel atau nama pengenal lainnya. Semua kata kunci Python mengandung huruf kecil saja
+Ini adalah kata-kata yang dicadangkan dan Anda tidak dapat menggunakannya sebagai konstan atau variabel 
+atau nama pengenal lainnya. Semua kata kunci Python mengandung huruf kecil saja.
 \begin{enumerate}
     \item Dan, exec, Tidak
     \item Menegaskan, akhirnya, atau
@@ -63,6 +64,31 @@ Mari kita jalankan program dalam mode pemrograman yang berbeda. pemrograman mode
      \end{verbatim}
 Jika anda menjalankan versi baru Python, Anda perlu menggunakan pernyataan cetak dengan tanda kurung seperti pada cetak $("Hallo, Python!");$. Namun dengan versi Python 2.4.3, ini hasilnya sebagai berikut :
 Hello, Python!
+
+\subsection{Garis dan indentasi}
+Python tidak memberikan tanda kurung untuk menunjukkan blok kode untuk definisi dan alur kelas dan fungsi
+kontrol. Blok kode dilambangkan dengan garis indentasi, yang ditegakkan secara kaku.
+Jumlah ruang dalam indentasi bervariasi, namun semua pernyataan di dalam blok harus
+menjulurkan jumlah yang sama, Misalnya :
+    \begin{verbatim}
+            if True:
+                print "True"
+            else:
+               print "False"
+    \end{verbatim}
+    
+Namun, Blok tersebut menghasilkan kesalahan
+    \begin{verbatim}
+            if True:
+                print "Answer"
+                print "True"
+            else:
+                print "Answer"
+               print "False"
+    \end{verbatim}
+Jadi, dengan Python semua garis kontinu yang menjorok dengan jumlah spasi yang sama akan membentuk satu blok. Contoh berikut memiliki berbagai blok pernyataan
+Note : Jangan mencoba memahami logika pada saat ini. Pastikan Anda memahami berbagai blok meskipun tanpa tanda kurung.
+
 
 \subsection {Basic syntax}
 Visual Basic adalah salah suatu developement tools untuk membangun aplikasi dalam lingkungan Windows. Dalam pengembangan aplikasi, Visual Basic menggunakan pendekatan Visual untuk merancang user interface dalam bentuk form, sedangkan untuk kodingnya menggunakan dialek bahasa Basic yang cenderung mudah dipelajari. Visual Basic telah menjadi tools yang terkenal bagi para pemula maupun para developer. Dalam lingkungan Window’s User-interface sangat memegang peranan penting,karena dalam pemakaian aplikasi yang kita buat, pemakai senantiasa berinteraksi dengan User-interface tanpa menyadari bahwa dibelakangnya berjalan instruksi-instruksi program yang mendukung tampilan dan proses yang dilakukan.
