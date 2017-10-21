@@ -26,6 +26,39 @@ Seorang murid dengan nilai dibawah 90 dan diatas 30 disebut Siswa Standard \par
 \item
 Seorang murid dengan nilai dibawah 30 disebut siswa bodoh \par
 \end{enumerate}\par
+
+Dari contoh diatas, pertanyaannya adalah bagaimana cara menulis kode pemrograman untuk menangani situasi seperti itu. Hampir semua bahasa pemrograman memberikan pernyataan kondisional diatas berdasarkan diagram decision di bawah. \par
+\begin{figure}[ht]
+	    \centerline{\includegraphics[width=0.25\textwidth]{figures/diagram_decision.png}}
+	    \caption{diagram decision}
+	    \label{diagram_decision}
+	    \end{figure} \par
+
+Mari kita membuat sebuah program C dengan bantuan jika pernyataan kondisional untuk mengubah situasi yang diberikan di atas menjadi kode pemrograman: \par 
+\begin{verbatim}
+#include <stdio.h>
+ 
+main() {
+ 
+   int x = 45;
+    
+   if( x > 95) {
+  
+      printf( "siswa pintar");
+   }
+    
+   if( x < 30) {
+  
+      printf( "siswa bodoh");
+   }
+    
+   if( x < 95 && x > 30 ) {
+  
+      printf( "Siswa Standard");
+   }
+}
+\end{verbatim}\par
+Outputnya adalah Siswa Standard
 \vspace{12pt}
 \noindent 
 Bahasa pemrograman Python mengasumsikan nilai \$  \$non-nol \$  \$dan \$  \$non-nullsebagai TRUE, dan jika itu adalah \$  \$nol \$  \$atau \$  \$nol \$  \$, maka diasumsikan sebagai nilai FALSE. \par
@@ -104,33 +137,33 @@ Contoh untuk IF ELIF ELSE, di python sintak ini bisa ditulis dengan lebih singka
 \noindent 
 varAngka = 123 \par
 \noindent 
- $  $ \par
+ \$  \$ \par
 \noindent 
 if varAngka==200: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $print "Nilai : TRUE" \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print "Nilai : TRUE" \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $print varAngka \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print varAngka \par
 \vspace{12pt}
 \noindent 
 elif varAngka==123: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $print "Nilai : TRUE" \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print "Nilai : TRUE" \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $print varAngka \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print varAngka \par
 \vspace{12pt}
 \noindent 
 else: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $print "Nilai : FALSE" \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print "Nilai : FALSE" \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $print varAngka \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print varAngka \par
 \vspace{12pt}
 \noindent 
 Contoh untuk NESTED IF :  \par
@@ -138,7 +171,7 @@ Contoh untuk NESTED IF :  \par
 \noindent 
 varAngka = 89 \par
 \noindent 
- $  $ \par
+ \$  \$ \par
 \noindent 
 if varAngka<100: \par
 \vspace{12pt}
@@ -194,7 +227,7 @@ Statemen IF juga bisa ditulis dalam 1 baris saja, misalnya seperti ini :  \par
 if varAngka1: print "Nilai : TRUE" \par
 \vspace{12pt}
 \noindent 
-Dari sintak percabangan sudah bisa kita lihat perbedaan antara python dengan bahasa pemrograman yang lain. Sintak ditulis dengan lebih ringkas dibanding yang lain. Percabangan atau pengkondisian ini adalah hal dasar dalam pemrograman pada umumnya, kita pasti akan menggunakannya. Pada tulisan yang akan dibuat selanjutnya saya akan menulis mengenai perulangan atau looping dalam python. \par
+Dari sintak percabangan sudah bisa kita lihat perbedaan di antara python dengan menggunakan bahasa pemrograman yang lain. Sintak ditulis dengan lebih ringkas dibanding dengan yang lain. Percabangan atau pengkondisian ini adalah hal dasar dalam pemrograman pada umumnya, kita pasti akan menggunakannya. Pada tulisan yang akan dibuat selanjutnya saya akan menulis mengenai perulangan atau looping dalam python. \par
 \vspace{12pt}
 \noindent 
 Suite pernyataan tunggal \par
