@@ -26,7 +26,7 @@ Ini adalah string, yang akan dicari agar sesuai dengan pola pada awal string. \p
 \noindent 
 flags \hspace*{0.5in}  \par
 \noindent 
-Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini. \par
+Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$  \vert  \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini. \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
@@ -52,16 +52,16 @@ Impor kembali \par
 Line = "Kucing lebih pintar dari pada anjing" \par
 \vspace{12pt}
 \noindent 
-MatchObj = re.match (r '(. *) Adalah (. *?). *', Line, re.M  $  \vert  $ re.I) \par
+MatchObj = re.match (r '(. *) Adalah (. *?). *', Line, re.M  \$  \vert  \$ re.I) \par
 \vspace{12pt}
 \noindent 
 jika cocokObj: \par
 \noindent 
 ~~ cetak "matchObj.group ():", matchObj.group () \par
 \noindent 
-~~ cetak "matchObj.group (1):", matchObj.group (1) \par
+~~ cetak "matchObj.group {1}:", matchObj.group {1} \par
 \noindent 
-~~ Cetak "matchObj.group (2):", matchObj.group (2) \par
+~~ Cetak "matchObj.group {2}:", matchObj.group {2} \par
 \noindent 
 lain: \par
 \noindent 
@@ -73,9 +73,9 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
 MatchObj.group (): Kucing lebih pintar dari pada anjing \par
 \noindent 
-MatchObj.group (1): Kucing \par
+MatchObj.group {1}: Kucing \par
 \noindent 
-MatchObj.group (2): lebih pintar \par
+MatchObj.group {2}: lebih pintar \par
 \vspace{12pt}
 Fungsi Pencarian \par
 \vspace{12pt}
@@ -83,15 +83,15 @@ Fungsi ini mencari kejadian pertama dari pola RE dalam string dengan flag piliha
 \vspace{12pt}
 Berikut adalah sintaks untuk fungsi ini: \par
 \vspace{12pt}
-Re.search (pola, string, flag = 0) \par
+Re.search {pola, string, flag = 0} \par
 \vspace{12pt}
 \noindent 
 Berikut adalah deskripsi parameternya: \par
-Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini adalah string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok (num) atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup(num=0) Metode ini mengembalikan seluruh kecocokan (atau jumlah subkelompok tertentu)groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) \par
+Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini adalah string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$  \vert  \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok {num} atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup{num=0} Metode ini mengembalikan seluruh kecocokan atau jumlah subkelompok tertentu.groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import re \par
 \vspace{12pt}
@@ -99,7 +99,7 @@ import re \par
 line = "Cats are smarter than dogs"; \par
 \vspace{12pt}
 \noindent 
-searchObj = re.search( r'(.*) are (.*?) .*', line, re.M $  \vert  $re.I) \par
+searchObj = re.search( r'(.*) are (.*?) .*', line, re.M \$  \vert  \$re.I) \par
 \vspace{12pt}
 \noindent 
 if searchObj: \par
@@ -126,7 +126,7 @@ Pencocokan Versus Searching \par
 Python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default). \par
 Contoh \par
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import re \par
 \vspace{12pt}
@@ -145,7 +145,7 @@ else: \par
 ~~ print "No match!!" \par
 \vspace{12pt}
 \noindent 
-searchObj = re.search( r'dogs', line, re.M $  \vert  $re.I) \par
+searchObj = re.search( r'dogs', line, re.M \$  \vert  \$re.I) \par
 \noindent 
 if searchObj: \par
 \noindent 
@@ -179,19 +179,19 @@ Contoh \par
 import re \par
 \vspace{12pt}
 \noindent 
-phone = "2004-959-559  $  \#  $ This is Phone Number" \par
+phone = "2004-959-559  \$  \#  \$ This is Phone Number" \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Delete Python-style comments \par
+ \$  \#  \$ Delete Python-style comments \par
 \noindent 
-num = re.sub(r' $  \#  $.* $  \$  $', "", phone) \par
+num = re.sub(r' \$  \#  \$.* \$  \$  \$', "", phone) \par
 \noindent 
 print "Phone Num : ", num \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Remove anything other than digits \par
+ \$  \#  \$ Remove anything other than digits \par
 \noindent 
-num~=~re.sub(r' $  \setminus  $D',~"", phone)     \par
+num~=~re.sub(r' \$  \setminus  \$D',~"", phone)     \par
 \noindent 
 print "Phone Num : ", num \par
 \vspace{12pt}
