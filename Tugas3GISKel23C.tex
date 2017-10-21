@@ -15,6 +15,30 @@ Python menyediakan dukungan yang kuat untuk integrasi dengan bahasa pemrograman 
 Python hadir dengan pustakapustaka standar yang dapat diperluas serta dapat dipelajari hanya dalam beberapa hari.
 Sudah banyak programmer Python yang menyatakan bahwa mereka mendapatkan produktivitas yang lebih tinggi. 
 Mereka juga merasakan bahwa Python meningkatkan kualitas 
+Distribusi Python tersedia untuk berbagai macam platform.
+Anda hanya perlu mendownload kode biner yang berlaku untuk platform Anda dan menginstal Python.
+Jika kode biner untuk platform Anda tidak tersedia, Anda memerlukan kompiler C untuk mengkompilasi kode sumber secara manual. 
+Kompilasi kode sumber menawarkan fleksibilitas lebih dalam hal pilihan fitur yang Anda butuhkan dalam instalasi Anda.
+Berikut adalah ikhtisar singkat tentang menginstal Python di berbagai platform
+
+\subsection{installasi Python pada windows}
+	\begin{enumerate}
+	\item Unduh Python 2.7 di python.org.
+	\item Jalankan file instalasi Python yang telah diunduh. Secara default Python akan terinstall di folder C:\Python27.
+	\item Selanjutnya mengatur variable environment, buka Control Panel->System and Security->System.
+	\item Klik Advanced system settings, Environment Variables.
+	\item Pada System variables, pilih Path, klik Edit.
+	\item Pada Variable value, tambahkan ;C:\Python27.
+	\end{enumerate}
+	
+\subsubsection{Pengujian Python pada windows}
+	\begin{enumerate}
+	\item Cara pertama: ketik python untuk menjalankan Python Interpreter. 
+	      Jika berhasil akan ditampilkan versi Python yang digunakan beserta interpreternya. 
+	      Coba ketikkan print “hello world” untuk menampilkan teks hello world.
+	\item Cara kedua: buat file hello.py, yang isinya print “hello world”, 
+	      simpan di mana saja suka-suka kamu, misalnya di D:\python-code. Buka command prompt, Run -> cmd. 
+	      Kemudian masuk ke folder D:\python-code, lalu ketik python hello.py untuk menjalankan file Python yang telah dibuat.
 
 \subsection{Installasi Python pada Unix/Linux}
 	Berikutini adalah simple steps untuk menginstall python pada Unix/Linux.
