@@ -5,6 +5,14 @@ Sebuah tupel adalah urutan objek Python yang tidak berubah. Tupel adalah urutan,
 Tuple juga merupakan tipe data yang berurut (sequence data type) yang fungsinya hampir sama List. Namun Tuple juga berbeda sifatnya, yaitu Tuple bersifat immutable maksudnya data di dalam Tuple tidak dapat diubah atau dihapuskan. Sebuah Tuple terdiri dari beberapa nilai yang dipisah oleh tanda koma (‘,’). Tidak seperti List, tipe data Tuple ditandai dengan tanda kurung "()". \par
 Ini adalah contohnya, \par
 
+\section{Perbedaan antara list dengan tuple} \par
+\begin{enumerate}
+\item Nilai dalam Tuple tidak bisa diganti. /par
+\item Kalau dalam List diawali dan diakhiri dengan tanda kurung siku [], Tuple dimulai dan ditutup dengan tanda kurung (). /par
+\end{enumerate}
+
+Nilai-nilai pada Tuple yang sudah tentukan pada awal program tidak akan bisa diganti sampai akhir programnya. Dan tentunya index pada tuple selalu dimulai dari angka 0 /par
+
 >>> NamaSiswa = ("Indra Riksa", "Agien Farhan", "Saryoni", "Berlin", "Kindi") \par
 >>> NamaSiswa \par
 ('Indra Riksa', 'Agien Farhan', 'Saryoni, 'Berlin', 'Kindi') \par
@@ -77,6 +85,14 @@ Jika kita membuat sebuah Tuple yang hanya isi berisi satu data, maka harus ditam
 >>> SatuData = ("Kymco") \par
 >>> len(SatuData) \par
 5 \par
+
+ Berikut contoh jika kita memberikan tanda koma,
+
+>>> TupleSatu = ("Kymco",)
+>>> TupleSatu
+('Kymco',)
+>>> len(TupleSatu)
+1
 
 Membuat tuple semudah memasukkan nilai-nilai yang dipisahkan koma. Opsional Anda dapat memasukkan nilai-nilai yang dipisahkan koma ini di antara tanda kurung juga. Misalnya - \par
 \vspace{12pt}
