@@ -152,7 +152,7 @@ Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam mod
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
- \hspace*{0.5in} [' \$  \_  \$ \$  \_  \$doc \$  \_  \$ \$  \_  \$', ' $  \_  $ $  \_  $file $  \_  $ $  \_  $', ' $  \_  $ $  \_  $name $  \_  $ $  \_  $', 'acos', 'asin', 'atan',  \par
+ \hspace*{0.5in} [' \$  \_  \$ \$  \_  \$doc \$  \_  \$ \$  \_  \$', ' \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$', ' \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$', 'acos', 'asin', 'atan',  \par
 \noindent 
  \hspace*{0.5in} 'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',  \par
 \noindent 
@@ -162,10 +162,10 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
  \hspace*{0.5in} 'sqrt', 'tan', 'tanh'] \par
 \noindent 
-Di sini, variabel string khusus  $  \_  $ $  \_  $name $  \_  $ $  \_  $ adalah nama modul, dan  $  \_  $ $  \_  $file $  \_  $ $  \_  $ adalah nama file tempat modul dimuat. \par
+Di sini, variabel string khusus  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ adalah nama modul, dan  \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$ adalah nama file tempat modul dimuat. \par
 \vspace{12pt}
 \noindent 
-The $  $globals() $  $and $  $locals() $  $Functions  $ - $ \par
+The \$  \$globals() \$  \$and \$  \$locals() \$  \$Functions  \$ - \$ \par
 \noindent 
 Fungsi global () dan penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global dan lokal tergantung pada lokasi dari tempat mereka dipanggil. \par
 \noindent 
@@ -176,15 +176,15 @@ Jika globals () dipanggil dari dalam sebuah fungsi, maka akan mengembalikan semu
 Jenis kembalian dari kedua fungsi ini adalah kamus. Oleh karena itu, nama dapat diekstrak dengan menggunakan tombol () fungsi. \par
 \vspace{12pt}
 \noindent 
-The $  $reload() $  $Function \par
+The \$  \$reload() \$  \$Function \par
 \noindent 
 Saat modul diimpor ke dalam skrip, kode di bagian tingkat atas dari modul hanya akan dijalankan satu kali. \par
 \noindent 
 Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, Anda dapat menggunakan fungsi reload (). Fungsi reload () mengimpor modul yang sebelumnya diimpor lagi. Sintaks fungsi reload () adalah ini - \par
 \noindent 
- \hspace*{0.5in} reload(module $  \_  $name) \par
+ \hspace*{0.5in} reload(module \$  \_  \$name) \par
 \noindent 
-Di sini, module $  \_  $name adalah nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - \par
+Di sini, module \$  \_  \$name adalah nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - \par
 \noindent 
  \hspace*{0.5in} reload(hello) \par
 \vspace{12pt}
@@ -195,7 +195,7 @@ Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkunga
 \noindent 
 Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut - \par
 \noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+ \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
  \hspace*{0.5in} def Pots(): \par
@@ -204,16 +204,16 @@ Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini mem
 \noindent 
 Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas - \par
 \noindent 
-Phone/Isdn.py $  $file having function Isdn() \par
+Phone/Isdn.py \$  \$file having function Isdn() \par
 \noindent 
-Phone/G3.py $  $file having function G3() \par
+Phone/G3.py \$  \$file having function G3() \par
 \vspace{12pt}
 \noindent 
-Now, create one more file  $  \_  $ $  \_  $init $  \_  $ $  \_  $.py in $  $Phone $  $directory  $ - $ \par
+Now, create one more file  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$.py in \$  \$Phone \$  \$directory  \$ - \$ \par
 \noindent 
-Phone/ $  \_  $ $  \_  $init $  \_  $ $  \_  $.py \par
+Phone/ \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$.py \par
 \noindent 
-Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di  $  \_  $ $  \_  $init $  \_  $ $  \_  $.py sebagai berikut - \par
+Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di  $  \_  $ $  \_  \$init \$  \_  \$ \$  \_  \$.py sebagai berikut - \par
 \noindent 
  \hspace*{0.5in} from Pots import Pots \par
 \noindent 
@@ -222,12 +222,12 @@ Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus mema
  \hspace*{0.5in} from G3 import G3 \par
 \vspace{12pt}
 \noindent 
-Setelah Anda menambahkan baris ini ke  $  \_  $ $  \_  $init $  \_  $ $  \_  $.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. \par
+Setelah Anda menambahkan baris ini ke  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. \par
 \noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+ \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in}  $  \#  $ Now import your Phone Package. \par
+ \hspace*{0.5in}  \$  \#  \$ Now import your Phone Package. \par
 \noindent 
  \hspace*{0.5in} import Phone \par
 \vspace{12pt}
