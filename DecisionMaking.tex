@@ -44,7 +44,7 @@ Setelah tutorial mengenai \$
 if statements
 Sebuah if statement terdiri dari ekspresi boolean diikuti oleh satu atau lebih pernyataan.
 \noindent 
-Pada tulisan ini, saya menggunakan perangkat raspberry pi 2 dengan sistem operasi rasbian jessie. Sangat ringan dan tentunya python secara default ada di dalamnya. Kebetulan dalam tulisan ini masih menggunakan python versi 2, meskipun ada python versi 3 juga. \par
+Pada pembahasan python decisiom makaing ini, kami menggunakan perangkat raspberry pi 2 dengan sistem operasi rasbian jessie. Sangat ringan dan tentunya python secara default ada di dalamnya. Kebetulan dalam tulisan ini masih menggunakan python versi 2, meskipun ada python versi 3 juga. \par
 \vspace{12pt}
 \noindent 
 Python core tidak menyediakan  \$ \" \$switch \$ \" \$ atau  \$ " \$case \$ \" \$ seperti bahasa pemrograman lain. Tapi kita bisa menggunakan statemen if, elif yang bisa menggantikan  \$ \" \$switch \$ \" \$ atau  \$ \" \$case \$ \" \$. \par
@@ -53,7 +53,7 @@ Python core tidak menyediakan  \$ \" \$switch \$ \" \$ atau  \$ " \$case \$ \" \
 Di bawah ini merupakan tipe-tipe percabangan yang disediakan oleh python. \par
 \vspace{12pt}
 \noindent 
-IF : Mengandung expresi boolean dan diikuti oleh satu atau banyak statemen \par
+IF : Mengandung ekspresi boolean dan diikuti oleh satu atau banyak statemen \par
 \vspace{12pt}
 \noindent 
 IF ELSE : IF bisa diikuti oleh optional statemen yaitu ELSE, yang akan dieksekusi ketika ekspresi boolean bernilai FALSE \par
@@ -89,6 +89,16 @@ if varAngka2: \par
  \$  \$ \$  \$ \$  \$ \$  \$ \$ \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$ \$  \$print varAngka2{\fontsize{14pt}{14pt}\selectfont  \$  \$ \\} \par
 \vspace{12pt}
 \noindent 
+Begin{verbatim}
+#/usr/bin/python
+a = raw_input("Masukkan Angka = ")
+b = int(a)
+if (b%2==0):
+        print "Genap"
+else:
+        print "Ganjil"
+end{verbatim}
+
 Contoh untuk IF ELIF ELSE, di python sintak ini bisa ditulis dengan lebih singkat yaitu elif :  \par
 \vspace{12pt}
 \noindent 
@@ -184,7 +194,7 @@ Statemen IF juga bisa ditulis dalam 1 baris saja, misalnya seperti ini :  \par
 if varAngka1: print "Nilai : TRUE" \par
 \vspace{12pt}
 \noindent 
-Dari sintak percabangan sudah bisa kita lihat perbedaan antara python dengan bahasa pemrograman yang lain. Sintak ditulis dengan lebih ringkas. Percabangan atau pengkondisian ini adalah hal dasar dalam pemrograman, kita pasti akan menggunakannya. Pada artikel selanjutnya saya akan menulis mengenai perulangan atau looping dalam python. \par
+Dari sintak percabangan sudah bisa kita lihat perbedaan antara python dengan bahasa pemrograman yang lain. Sintak ditulis dengan lebih ringkas dibanding yang lain. Percabangan atau pengkondisian ini adalah hal dasar dalam pemrograman pada umumnya, kita pasti akan menggunakannya. Pada tulisan yang akan dibuat selanjutnya saya akan menulis mengenai perulangan atau looping dalam python. \par
 \vspace{12pt}
 \noindent 
 Suite pernyataan tunggal \par
@@ -337,7 +347,7 @@ elif(hari $  \_  $ini == "Minggu"): \par
 Pada contoh diatas, jika program dijalankan maka akan mencetak \$  
 \$\"Saya akan libur\". \par
 \noindent 
- \$  \$ Pernyataan digunakan untuk pengambilan keputusan dalam python berupa if, pernyataan tersebut memiliki format lengkap sebagai berikut : \par
+ \$  \$ Pernyataan tersebut digunakan untuk pengambilan keputusan dalam python berupa if, pernyataan tersebut memiliki format lengkap  yang dapat dilihat sebagai berikut : \par
 \vspace{12pt}
 \noindent 
 ~~~ if kondisi \$  \_  \$1: \par
@@ -373,7 +383,7 @@ Pada contoh diatas, jika program dijalankan maka akan mencetak \$
 \noindent 
 ~~~  \par
 \noindent 
-Contoh Code dijalankan pada modus interaktif \par
+Contoh Code yang dijalankan pada modus interaktif \par
 \vspace{12pt}
 \noindent 
   x = 5 \par
@@ -396,7 +406,7 @@ terbesar = y \par
 ~~~  \par
 \vspace{12pt}
 \noindent 
- \$ \$Python tidak menggunakan \$ \{ \$ \$ \} \$ untuk menyertakan blok kode untuk penggunaan if or loop or fungsi dll. Sebaliknya, python menggunakan titik dua (:) dan indentasi atau spasi untuk pernyataan \$ \$kelompok. Tes \$ \$boolean untuk if tidak perlu dalam tanda kurung (perbedaan besar dari C++ atau Java), dan dapat memiliki *elif* dan *else*. \par
+ \$ \$Python tidak menggunakan \$ \{ \$ \$ \} \$ untuk menyertakan blok kode untuk penggunaan if or loop or fungsi yang lainnya. Sebaliknya, python menggunakan titik dua (:) dan indentasi atau spasi untuk pernyataan \$ \$kelompok. Tes \$ \$boolean untuk if tidak perlu dalam tanda kurung (perbedaan besar dari C++ atau Java), dan dapat memiliki *elif* dan *else*. \par
 \noindent 
 \vspace{\baselineskip}
  \$  \$ \$  \$ \$  \$ \$  \$Nilai apapun dapat digunakan sebagai if-test. pada  \$ \" \$nol \$ \" \$ nilai-nilai semua dihitung sebagai false:Tidak ada,0,string kosong,list kosong, dictionary kosong. Ada juga tipe Boolean dengan dua nilai: True dan False (jika dikonversi ke int, ini adalah 1 dan 0). Python memiliki operasi perbandingan yang biasa: ==, =, <, <=,>,> =. Tidak seperti Java dan C.Operator boolean bisa juga di eja seperti * and *, * or *, * not * (Python tidak menggunakan gaya C  \$  \&  \$  \$  \&  \$  \$  \vert  \$  \$  \vert  \$!). \par
@@ -443,7 +453,7 @@ terbesar = y \par
 ~~~~~~ print 'nilai dan~matakuliah~tidak~ada'~~~     \par
 \vspace{12pt}
 \noindent 
-Seperti halnya bahasa pemrograman yang lain, tentu python juga mempunyai perintah untuk pengambilan suatu keputusan terhadap kondisi tertentu, yang disebut percabangan. Percabangan pada bahasa pemrograman python menggunakan perintah if, ya sama dengan bahasa pemrograman yang lain. Bagaimana cara menggunakan perintah if ini dalam bahasa pemrograman python? \par
+Seperti halnya bahasa pemrograman yang lain, tentu python juga mempunyai perintah untuk pengambilan suatu keputusan terhadap kondisi tertentu, yang disebut percabangan. Percabangan pada bahasa pemrograman python menggunakan perintah if, ya sama dengan bahasa pemrograman yang lain. Bagaimana cara menggunakan perintah if ini dalam bahasa pemrograman python? berikut adaah cara penggunaan percabangan if yang tepat\par
 \noindent 
 \vspace{\baselineskip}
 Cara penulisan dari perintah if secara garis besar adalah seperti berikut: \par
