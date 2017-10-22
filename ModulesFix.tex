@@ -13,14 +13,14 @@ Example \par
 \noindent 
 Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py \par
 \noindent 
- \hspace*{0.5in} def print \$  \_  \$func( par ): \par
+ \hspace*{0.5in} def print \  \_  \$func( par ): \par
 \noindent 
  \hspace*{0.5in} ~~ print "Hello : ", par \par
 \noindent 
  \hspace*{0.5in} ~~ return \par
 \vspace{12pt}
 \noindent 
-The \$  \$import \$  \$Statement \par
+The \$  \$import \$  \Statement \par
 \noindent 
 Anda dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut: \par
 \noindent 
@@ -28,17 +28,17 @@ Anda dapat menggunakan file sumber Python apapun sebagai modul dengan mengekseku
 \noindent 
 Ketika penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Anda perlu meletakkan perintah berikut di bagian atas skrip - \par
 \noindent 
- \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in}  \$  \#  \$ Import module support \par
+ \hspace*{0.5in}  \  \#  \ Import module support \par
 \noindent 
  \hspace*{0.5in} import support \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in}  \$  \#  \$ Now you can call defined function that module as follows \par
+ \hspace*{0.5in}  \  \#  \ Now you can call defined function that module as follows \par
 \noindent 
- \hspace*{0.5in} support.print \$  \_  \$func("Zara") \par
+ \hspace*{0.5in} support.print \  \_  \func("Zara") \par
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
@@ -47,7 +47,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 Modul hanya dimuat satu kali, berapa pun jumlahnya diimpor. Hal ini mencegah eksekusi modul terjadi berulang-ulang jika terjadi beberapa impor. \par
 \vspace{12pt}
 \noindent 
-The \$  \$from...import \$  \$Statement \par
+The \  \from...import \  \Statement \par
 \noindent 
 Python dari pernyataan memungkinkan Anda mengimpor atribut tertentu dari modul ke dalam namespace saat ini. Dari ... impor memiliki sintaks berikut - \par
 \noindent 
@@ -60,7 +60,7 @@ Misalnya, untuk mengimpor fungsi fibonacci dari modul fib, gunakan pernyataan be
 Pernyataan ini tidak mengimpor seluruh modul fib ke dalam namespace saat ini; Itu hanya memperkenalkan item fibonacci dari modul fib ke dalam tabel simbol global modul pengimpor. \par
 \vspace{12pt}
 \noindent 
-The \$  \$from...import * \$  \$Statement: \par
+The \  \from...import * \  \$Statement: \par
 \noindent 
 Hal ini juga memungkinkan untuk mengimpor semua nama dari modul ke dalam namespace saat ini dengan menggunakan pernyataan impor berikut - \par
 \noindent 
@@ -73,23 +73,23 @@ Locating Modules \par
 \noindent 
 Saat mengimpor modul, juru bahasa Python mencari modul dalam urutan berikut - \par
 \noindent 
- \hspace*{0.5in}  \$ \bullet \$ Direktori saat ini. \par
+ \hspace*{0.5in}  \ \bullet \ Direktori saat ini. \par
 \noindent 
- \hspace*{0.5in}  \$ \bullet \$ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  \hspace*{0.5in} PYTHONPATH. \par
+ \hspace*{0.5in}  \ \bullet \ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  \hspace*{0.5in} PYTHONPATH. \par
 \noindent 
- \hspace*{0.5in}  \$ \bullet \$ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini  \hspace*{0.5in} biasanya / usr / local / lib / python /. \par
+ \hspace*{0.5in}  \ \bullet \ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini  \hspace*{0.5in} biasanya / usr / local / lib / python /. \par
 \vspace{12pt}
 \noindent 
 Jalur pencarian modul disimpan dalam sistem modul sys sebagai sys.pathvariable. Variabel sys.path berisi direktori saat ini, PYTHONPATH, dan default pengaturan instalasi. \par
 \vspace{12pt}
 \noindent 
-The \$  \$PYTHONPATH \$  \$Variable: \par
+The \  \PYTHONPATH \  \Variable: \par
 \noindent 
 The PYTHONPATH adalah variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. \par
 \noindent 
 Berikut adalah PYTHONPATH khas dari sistem Windows: \par
 \noindent 
- \hspace*{0.5in} set PYTHONPATH=c: \$  \setminus  \$python20 \$  \setminus  \$lib; \par
+ \hspace*{0.5in} set PYTHONPATH=c: \  \setminus  \python20 \  \setminus  \$lib; \par
 \noindent 
 Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX: \par
 \noindent 
@@ -110,16 +110,16 @@ Pernyataan global VarName memberitahu Python bahwa VarName adalah variabel globa
 \noindent 
 Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespace. Dalam fungsi Money, kita menetapkan Money a value, oleh karena itu Python mengasumsikan variabel lokal Moneyas. Namun, kami mengakses nilai variabel lokal Moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya. Uncommenting pernyataan global memperbaiki masalahnya. \par
 \noindent 
- \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
  \hspace*{0.5in} Money = 2000 \par
 \noindent 
  \hspace*{0.5in} def AddMoney(): \par
 \noindent 
- \hspace*{0.5in} ~~  \$  \#  \$ Uncomment the following line to fix the code: \par
+ \hspace*{0.5in} ~~  \  \#  \ Uncomment the following line to fix the code: \par
 \noindent 
- \hspace*{0.5in} ~~  \$  \#  \$ global Money \par
+ \hspace*{0.5in} ~~  \  \#  \ global Money \par
 \noindent 
  \hspace*{0.5in} ~~ Money = Money + 1 \par
 \vspace{12pt}
@@ -137,10 +137,10 @@ Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi na
 \noindent 
 Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut adalah contoh sederhana - \par
 \noindent 
- \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in}  \$  \#  \$ Import built-in module math \par
+ \hspace*{0.5in}  \  \#  \ Import built-in module math \par
 \noindent 
  \hspace*{0.5in} import math \par
 \vspace{12pt}
@@ -152,7 +152,7 @@ Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam mod
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
- \hspace*{0.5in} [' \$  \_  \$ \$  \_  \$doc \$  \_  \$ \$  \_  \$', ' \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$', ' \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$', 'acos', 'asin', 'atan',  \par
+ \hspace*{0.5in} [' \  \_  \ \  \_  \doc \  \_  \ \  \_  \', ' \  \_  \ \  \_  \file \  \_  \ \  \_  \', ' \  \_  \ \  \_  \name \  \_  \ \  \_  \', 'acos', 'asin', 'atan',  \par
 \noindent 
  \hspace*{0.5in} 'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',  \par
 \noindent 
@@ -195,7 +195,7 @@ Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkunga
 \noindent 
 Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut - \par
 \noindent 
- \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
  \hspace*{0.5in} def Pots(): \par
@@ -204,16 +204,16 @@ Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini mem
 \noindent 
 Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas - \par
 \noindent 
-Phone/Isdn.py \$  \$file having function Isdn() \par
+Phone/Isdn.py \  \file having function Isdn() \par
 \noindent 
-Phone/G3.py \$  \$file having function G3() \par
+Phone/G3.py \$  \file having function G3() \par
 \vspace{12pt}
 \noindent 
-Now, create one more file  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$.py in \$  \$Phone \$  \$directory  \$ - \$ \par
+Now, create one more file  \  \_  \ \  \_  \init \  \_  \ \  \_  \.py in \  \$Phone \  \$directory  \ - \ \par
 \noindent 
-Phone/ \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$.py \par
+Phone/ \  \_  \ \  \_  \init \  \_  \ \  \_  \.py \par
 \noindent 
-Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di  $  \_  $ $  \_  \$init \$  \_  \$ \$  \_  \$.py sebagai berikut - \par
+Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di    \_     \_  \init \  \_  \ \  \_  \.py sebagai berikut - \par
 \noindent 
  \hspace*{0.5in} from Pots import Pots \par
 \noindent 
@@ -222,12 +222,12 @@ Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus mema
  \hspace*{0.5in} from G3 import G3 \par
 \vspace{12pt}
 \noindent 
-Setelah Anda menambahkan baris ini ke  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. \par
+Setelah Anda menambahkan baris ini ke  \  \_  \ \  \_  \init \  \_  \ \  \_  \.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. \par
 \noindent 
- \hspace*{0.5in}  \$  \#  \$!/usr/bin/python \par
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in}  \$  \#  \$ Now import your Phone Package. \par
+ \hspace*{0.5in}  \  \#  \ Now import your Phone Package. \par
 \noindent 
  \hspace*{0.5in} import Phone \par
 \vspace{12pt}
@@ -255,7 +255,7 @@ Jika Anda berhenti dari juru bahasa Python dan memasukkannya lagi, definisi yang
 \noindent 
 Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat diimpor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator). \par
 \noindent 
-Modul adalah file yang berisi definisi dan pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global  $  \_  $ $  \_  $name $  \_  $ $  \_  $. Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut. \par
+Modul adalah file yang berisi definisi dan pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut. \par
 \vspace{12pt}
 \noindent 
 6.1. More on Modules \par
@@ -279,10 +279,10 @@ Saat Anda menjalankan modul Python dengan \par
 \noindent 
 python fibo.py <arguments> \par
 \noindent 
-Kode dalam modul akan dieksekusi, sama seperti jika Anda mengimpornya, tapi dengan  $  \_  $ $  \_  $name $  \_  $ $  \_  $ set ke " $  \_  $ $  \_  $main $  \_  $ $  \_  $". Itu berarti bahwa dengan menambahkan kode ini di akhir modul Anda: \par
+Kode dalam modul akan dieksekusi, sama seperti jika Anda mengimpornya, tapi dengan    \_     \_  name   \_     \_   set ke "   \_     \_  main   \_     \_  ". Itu berarti bahwa dengan menambahkan kode ini di akhir modul Anda: \par
 \vspace{12pt}
 \noindent 
-if  $  \_  $ $  \_  $name $  \_  $ $  \_  $ == " $  \_  $ $  \_  $main $  \_  $ $  \_  $": \par
+if    \_     \_  name   \_     \_   == "   \_     \_  main   \_     \_  ": \par
 \noindent 
 ~~~ import sys \par
 \noindent 
@@ -292,7 +292,7 @@ if  $  \_  $ $  \_  $name $  \_  $ $  \_  $ == " $  \_  $ $  \_  $main $  \_  $ 
 Anda dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file "utama": \par
 \vspace{12pt}
 \noindent 
- $  \$  $ python fibo.py 50 \par
+   \$   python fibo.py 50 \par
 \noindent 
 1 1 2 3 5 8 13 21 34 \par
 \noindent 
@@ -314,20 +314,20 @@ Ketika sebuah modul bernama spam diimpor, penerjemah pertama-tama mencari modul 
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
- $ \bullet $ Direktori berisi skrip masukan (atau direktori saat ini bila tidak ada file yang ditentukan). \par
+  \bullet  Direktori berisi skrip masukan (atau direktori saat ini bila tidak ada file yang ditentukan). \par
 \noindent 
- $ \bullet $ PYTHONPATH (daftar nama direktori, dengan sintaks yang sama dengan variabel shell PATH). \par
+  \bullet  PYTHONPATH (daftar nama direktori, dengan sintaks yang sama dengan variabel shell PATH). \par
 \noindent 
- $ \bullet $ Default yang tergantung pada instalasi. \par
+  \bullet  Default yang tergantung pada instalasi. \par
 \vspace{12pt}
 \noindent 
 Setelah inisialisasi, program Python dapat memodifikasi sys.path. Direktori yang berisi skrip yang dijalankan ditempatkan di awal jalur pencarian, di depan jalur perpustakaan standar. Ini berarti skrip di direktori itu akan dimuat alih-alih modul dengan nama yang sama di direktori perpustakaan. Ini adalah kesalahan kecuali penggantinya. Lihat bagian Modul Standar untuk informasi lebih lanjut. \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-6.1.3.  $ " $Compiled $ " $ Python files \par
+6.1.3.   " Compiled  "  Python files \par
 \noindent 
-Untuk mempercepat pemuatan modul, Python menyimpan versi yang dikompilasi setiap modul di direktori  $  \_  $ $  \_  $pycache $  \_  $ $  \_  $ dengan nama module.version.pyc, di mana versi tersebut mengkodekan format file yang dikompilasi; Umumnya berisi nomor versi Python. Sebagai contoh, dalam rilis CPython 3.3 versi terkompilasi dari spam.py akan di-cache sebagai  $  \_  $ $  \_  $pycache  $  \_  $ $  \_  $ / spam.cpython-33.pyc. Konvensi penamaan ini memungkinkan modul yang dikompilasi dari berbagai rilis dan versi Python yang berbeda untuk hidup berdampingan.  \par
+Untuk mempercepat pemuatan modul, Python menyimpan versi yang dikompilasi setiap modul di direktori    \_     \_  pycache   \_     \_   dengan nama module.version.pyc, di mana versi tersebut mengkodekan format file yang dikompilasi; Umumnya berisi nomor versi Python. Sebagai contoh, dalam rilis CPython 3.3 versi terkompilasi dari spam.py akan di-cache sebagai    \_     \_  pycache    \_     \_   / spam.cpython-33.pyc. Konvensi penamaan ini memungkinkan modul yang dikompilasi dari berbagai rilis dan versi Python yang berbeda untuk hidup berdampingan.  \par
 \vspace{12pt}
 \noindent 
 Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk melihat apakah sudah ketinggalan zaman dan perlu dikompilasi ulang. Ini adalah proses yang benar-benar otomatis. Selain itu, modul yang dikompilasi bersifat platform-independen, sehingga perpustakaan yang sama dapat dibagi antar sistem dengan arsitektur yang berbeda. Python tidak memeriksa cache dalam dua situasi. Pertama, selalu mengkompilasi ulang dan tidak menyimpan hasilnya untuk modul yang dimuat langsung dari baris perintah. Kedua, tidak memeriksa cache jika tidak ada modul sumber. Untuk mendukung distribusi non-source (dikompilasi saja), modul yang dikompilasi harus berada dalam direktori sumber, dan tidak boleh ada modul sumber. \par
@@ -340,11 +340,11 @@ Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk mel
 \noindent 
 Beberapa tip untuk para ahli: \par
 \noindent 
- $ \bullet $ Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string  $  \_  $ $  \_  $doc $  \_  $ $  \_  $. Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul "Dioptimalkan" memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. \par
+  \bullet  Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string    \_     \_  doc   \_     \_  . Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul "Dioptimalkan" memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. \par
 \noindent 
- $ \bullet $ Program tidak berjalan lebih cepat saat dibaca dari file .pyc daripada saat dibaca dari file .py; Satu-satunya yang lebih cepat tentang file .pyc adalah kecepatan pengisiannya. \par
+  \bullet  Program tidak berjalan lebih cepat saat dibaca dari file .pyc daripada saat dibaca dari file .py; Satu-satunya yang lebih cepat tentang file .pyc adalah kecepatan pengisiannya. \par
 \noindent 
- $ \bullet $ Compileall modul dapat membuat file .pyc untuk semua modul dalam sebuah direktori. \par
+  \bullet  Compileall modul dapat membuat file .pyc untuk semua modul dalam sebuah direktori. \par
 \noindent 
- $ \bullet $ Ada lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. \par
+  \bullet  Ada lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. \par
 
