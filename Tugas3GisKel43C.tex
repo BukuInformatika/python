@@ -25,6 +25,7 @@ Python adalah salah satu bahasa pemrograman tingkat tinggi. Yang mana, Python be
 Fitur Python sendiri mudah dipelajari karena Python memiliki beberapa kata kunci, struktur sederhana, dan sintaks yang jelas. Hal ini memungkinkan siswa untuk mengambil bahasa dengan cepat. Mudah dibaca karena kode Python lebih jelas dan terlihat oleh mata. Mudah dipelihara karena kode sumber Python cukup mudah untuk dipelihara.
 Perpustakaan standar yang luas: sebagian besar perpustakaan Python sangat portabel dan kompatibel dengan platform cross-platform di UNIX, Windows, dan Macintosh. 
 Python sendiri tidak mengizinkan karakter tanda baca seperti @, $, dan % dalam pengenal. Python merupakan  bahasa pemrograman yang termasuksensitif. Dengan demikian, Tenaga Kerja adalah dua pengidentifikasi yang berbeda dengan Python. Pengenal Python adalah nama yang digunakan untuk mengidentifikasi variabel, fungsi, kelas, modul atau objek lainnya. Pengenal dimulai dengan huruf A sampai Z atau huruf a sampai z atau garis bawah (_) diikuti oleh nol atau lebih huruf, garis bawah dan angka (0 sampai 9).
+
 \subsection{keunggulan phyton}
 \begin{enumerate}
     \item Tidak ada tahapan kompilasi dan penyambungan (link) sehingga kecepatan perubahan pada masa pembuatan sistem aplikasi meningkat. 
@@ -42,6 +43,7 @@ Python sendiri tidak mengizinkan karakter tanda baca seperti @, $, dan % dalam p
     \item Kompilasi untuk portable kode byte sehingga kecepatan eksekusi bertambah dan melindungi kode sumber. 
     \item Antarmuka terpasang untuk pelayanan keluar seperti perangkat Bantu system, GUI, persistence, database, dll. 
 \end{enumerate}
+
 \subsection{Kekurangan phyton}
 \begin{enumerate}
     \item Beberapa penugasan terdapat diluar dari jangkauan python,
@@ -72,6 +74,7 @@ Python sendiri tidak mengizinkan karakter tanda baca seperti @, $, dan % dalam p
     di institut tersebut, walaupun Guido van Rossum masih
     memegang peran penting dalam mengarahkan kemajuannya.
 \end{enumerate}
+
 \subsection{konvensi penamaan untuk pengenal Python}
 \begin{enumerate}
     \item Nama kelas dimulai dengan huruf besar. Semua pengenal lainnya mulai dengan huruf kecil.
@@ -79,6 +82,7 @@ Python sendiri tidak mengizinkan karakter tanda baca seperti @, $, dan % dalam p
     \item Memulai pengenal dengan dua garis bawah terkemuka menunjukkan pengenal yang sangat pribadi.
     \item Jika pengenal juga diakhiri dengan dua tanda garis bawah, identifier adalah bahasa yang didefinisikan nama khusus
 \end{enumerate}
+
 \subsection{Python Software Foundation}
 Python software foundation adalah sebuah organisasi non-profit yang dibentuk sebagai pemegang Hak cipta intelektual Python sejak versi 2.1 dan dengan demikian mencegah Python dimiliki oleh Perusahaan momersial. Salah satu fitur yang tersedia pada Python adalah sebagai bahasa pemrograman dinamis yang dilengkapi dengan manajemen memori otomatis. Seperti halnya pada bahasa pemrograman dinamis lainnya, Python umumnya digunakan sebagai bahasa skrip meskk pada prakteknya penggunaan bahasa ini lebih luas mencakup konteks pemanfaatan yang umumnya tidak dilakukan dengan menggunakan bahasa skrip. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan diberbagai platform sistem operasi.
 
@@ -166,6 +170,20 @@ Namun, Blok tersebut menghasilkan kesalahan
     \end{verbatim}
 Jadi, dengan Python semua garis kontinu yang menjorok dengan jumlah spasi yang sama akan membentuk satu blok. Contoh berikut memiliki berbagai blok pernyataan
 Note : Jangan mencoba memahami logika pada saat ini. Pastikan Anda memahami berbagai blok meskipun tanpa tanda kurung.
+
+\subsubsection {Pernyataan Multi-Line}
+Pernyataan di Python biasanya diakhiri dengan baris baru. Python, bagaimanapun, memungkinkan penggunaan karakter kelanjutan baris (\) untuk menunjukkan bahwa garis tersebut harus dilanjutkan. Misalnya –
+\bin {equation}
+total = item_one + \
+        item_two + \
+        item_three
+\end {equation}
+
+Pernyataan yang ada di dalam kurung [], {}, atau () tidak perlu menggunakan karakter kelanjutan baris. Misalnya –
+\bin {equation}
+days = ['Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday']
+\end {equation}
 
 \subsection{Deklarasi Tipe Sederhana dan Tipe Casting}
     Hanya tipe numerik dari int dan float yang akan digunakan di sini:int memegang nilai integer dan tidak ada titik desimal: 
