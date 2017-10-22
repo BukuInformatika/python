@@ -1,59 +1,83 @@
+%Kelompok 1 D4 TI 3D
+%Wahyu Maruti Adjie_1154034
+%Muhammad Nur Ikhsan_1154087
+%Emy Safitri_1154102
+%Andi Ikram Maulana_1154065
+%Ilman Mubarik Sidiq_1154114
 
-\begin{center}{\fontsize{14pt}{14pt}\selectfont Python Exceptions Handling \\}\end{center} \par
-Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya - \par
-\vspace{12pt}
- Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut adalah daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar. \par
-\vspace{12pt}
-~~~ Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. \par
-\vspace{12pt}
-Daftar Pengecualian Standar – \par
-\vspace{12pt}
-EXCEPTION NAME \hspace*{0.5in} DESCRIPTION \par
-Exception \hspace*{0.5in} Kelas dasar untuk semua pengecualian \par
-\vspace{12pt}
-StopIteration \hspace*{0.5in} Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun. \par
-\vspace{12pt}
-SystemExit \hspace*{0.5in} Dibesarkan oleh fungsi sys.exit () \par
-. \par
-StandardError \hspace*{0.5in} Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit \par
-\vspace{12pt}
-ArithmeticError \hspace*{0.5in} Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik. \par
-\vspace{12pt}
-OverflowError \hspace*{0.5in} Dibesarkan saat perhitungan melebihi batas maksimum untuk tipe numerik. \par
-\vspace{12pt}
-FloatingPointError \hspace*{0.5in} Dibesarkan saat perhitungan floating point gagal. \par
-\vspace{12pt}
-ZeroDivisionError \hspace*{0.5in} Dibesarkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik. \par
-\vspace{12pt}
-AssertionError \hspace*{0.5in} Dibesarkan jika terjadi kegagalan pernyataan Assert. \par
-\vspace{12pt}
-AttributeError \hspace*{0.5in} Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan. \par
-\vspace{12pt}
-EOFError \hspace*{0.5in} Dibesarkan bila tidak ada input dari fungsi raw $  \_  $input () atau input () dan akhir file tercapai. \par
-\vspace{12pt}
-ImportError \hspace*{0.5in} Dibesarkan saat sebuah pernyataan impor gagal. \par
-\vspace{12pt}
-KeyboardInterrupt \hspace*{0.5in} Dibesarkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c. \par
-\vspace{12pt}
-LookupError \hspace*{0.5in} Kelas dasar untuk semua kesalahan pencarian. \par
-\vspace{12pt}
-IndexError \par
-KeyError \hspace*{0.5in} Dibesarkan saat sebuah indeks tidak ditemukan secara berurutan. \par
-Dibesarkan saat kunci yang ditentukan tidak ditemukan dalam kamus. \par
-\vspace{12pt}
-NameError \hspace*{0.5in} Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global. \par
-\vspace{12pt}
-UnboundLocalError \par
-EnvironmentError \hspace*{0.5in} Dibesarkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak ada nilai yang ditugaskan padanya. \par
-Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python. \par
-\vspace{12pt}
-IOError \par
-IOError \hspace*{0.5in} Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. \par
-Dibangkitkan untuk kesalahan terkait sistem operasi. \par
-\vspace{12pt}
-SyntaxError \par
-IndentationError \hspace*{0.5in} Dibesarkan saat ada kesalahan dengan sintaks Python. \par
-Dibesarkan saat indentasi tidak ditentukan dengan benar. \par
+                                          \section{Python Exceptions Handling}
+
+\subsection{Penjelasan}
+Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya 
+Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut adalah daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar.
+Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. 
+Daftar Pengecualian Standar 
+\subsection{EXCEPTION NAME DESCRIPTION}
+
+\subsubsection{Exception}
+Kelas dasar untuk semua pengecualian.
+
+\subsubsection{StopIteration}
+Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun.
+
+\subsubsection{SystemExit}
+Dibesarkan oleh fungsi sys.exit ()
+
+\subsubsection{StandardError}
+Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit
+
+\subsubsection{ArithmeticError}
+Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik.
+
+\subsubsection{OverflowError}
+Dibesarkan saat perhitungan melebihi batas maksimum untuk tipe numerik.
+
+\subsubsection{FloatingPointError}
+Dibesarkan saat perhitungan floating point gagal.
+
+\subsubsection{ZeroDivisionError}
+Dibesarkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik.
+
+\subsubsection{AssertionError}
+Dibesarkan jika terjadi kegagalan pernyataan Assert.
+
+\subsubsection{AttributeError}
+Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan. 
+
+\subsubsection{EOFError}
+Dibesarkan bila tidak ada input dari fungsi raw $ / $input () atau input () dan akhir file tercapai.
+
+\subsubsection{ImportError}
+Dibesarkan saat sebuah pernyataan impor gagal.
+
+\subsubsection{KeyboardInterrupt}
+Dibesarkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c.
+
+\subsubsection{LookupError}
+Kelas dasar untuk semua kesalahan pencarian.
+
+\subsubsection{IndexError}
+
+\subsubsection{KeyError}
+Dibesarkan saat sebuah indeks tidak ditemukan secara berurutan. Dibesarkan saat kunci yang ditentukan tidak ditemukan dalam kamus.
+
+\subsubsection{NameError}
+Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global.
+
+\subsubsection{UnboundLocalError}
+
+\subsubsection{EnvironmentError}
+Dibesarkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak ada nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python.
+
+\subsubsection{IOError}
+IOError Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi.
+
+\subsubsection{SyntaxError} 
+\subsubsection{IndentationError}
+Dibesarkan saat ada kesalahan dengan sintaks Python.
+Dibesarkan saat indentasi tidak ditentukan dengan benar. 
+
+
 \vspace{12pt}
 SystemError \hspace*{0.5in} Dibesarkan saat penafsir menemukan masalah internal, namun bila kesalahan ini ditemui juru bahasa Python tidak keluar. \par
 \vspace{12pt}
