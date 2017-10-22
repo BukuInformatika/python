@@ -1,5 +1,5 @@
 \section{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Object Oriented} \\}\end{center} 
-Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek Python. Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. Namun, di sini adalah pengenalan kecil Object-Oriented Programming (OOP) untuk membawa Anda pada kecepatan - Ikhtisar Terminologi OOP. Kelas: Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) dan metode, diakses melalui notasi titik. Variabel kelas: Variabel yang dimiliki oleh semua instance kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh. Anggota data: Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya. Fungsi overloading: Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat.Contoh variabel: Variabel yang didefinisikan di dalam metode dan hanya dimiliki oleh instance kelas saat ini. 
+Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek Python. Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. Namun, di sini adalah pengenalan kecil Object-Oriented Programmin {OOP} untuk membawa Anda pada kecepatan - Ikhtisar Terminologi OOP. Kelas: Prototipe yang ditentukan pengguna untuk objek yang mendefinisikan seperangkat atribut yang menjadi ciri objek kelas apa pun. Atribut adalah data anggota (variabel kelas dan variabel contoh) dan metode, diakses melalui notasi titik. Variabel kelas: Variabel yang dimiliki oleh semua instance kelas. Variabel kelas didefinisikan dalam kelas tapi di luar metode kelas manapun. Variabel kelas tidak digunakan sesering variabel contoh. Anggota data: Variabel kelas atau variabel contoh yang menyimpan data yang terkait dengan kelas dan objeknya. Fungsi overloading: Penugasan lebih dari satu perilaku ke fungsi tertentu. Operasi yang dilakukan bervariasi menurut jenis objek atau argumen yang terlibat.Contoh variabel: Variabel yang didefinisikan di dalam metode dan hanya dimiliki oleh instance kelas saat ini. 
 Warisan: Pengalihan karakteristik kelas ke kelas lain yang berasal darinya. Contoh: Objek individual dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas. Instansiasi: Pembuatan sebuah instance dari sebuah kelas. Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas.  Objek: Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode. Operator overloading: Penugasan lebih dari satu fungsi ke operator tertentu. 
 
 \subsection{Pernyataan kelas membuat definisi kelas baru}
@@ -88,86 +88,86 @@ del~emp1.age   \$  \#  \$ Delete 'age' attribute. \par
 Alih-alih menggunakan pernyataan normal untuk mengakses atribut, Anda dapat menggunakan fungsi berikut - \par
 \vspace{12pt}
 \noindent 
-~~~ Getattr (obj, name [, default]): untuk mengakses atribut objek. \par
+~~~ Getattr {obj, name [, default]}: untuk mengakses atribut objek. \par
 \vspace{12pt}
 \noindent 
-~~~ Hasattr (obj, name): untuk memeriksa apakah ada atribut atau tidak. \par
+~~~ Hasattr {obj, name}: untuk memeriksa apakah ada atribut atau tidak. \par
 \vspace{12pt}
 \noindent 
-~~~ Setattr (obj, name, value): untuk mengatur atribut. Jika atribut tidak ada, maka akan dibuat. \par
+~~~ Setattr {obj, name, value}: untuk mengatur atribut. Jika atribut tidak ada, maka akan dibuat. \par
 \vspace{12pt}
 \noindent 
-~~~ The delattr (obj, name): untuk menghapus sebuah atribut. \par
+~~~ The delattr {obj, name}: untuk menghapus sebuah atribut. \par
 \vspace{12pt}
 \noindent 
-Hasattr (emp1, 'age')  \$  \#  \$ Mengembalikan true jika atribut 'age' ada \par
+Hasattr {emp1, 'age'}  \$  \#  \$ Mengembalikan true jika atribut 'age' ada \par
 \noindent 
-Getattr (emp1, 'age')  \$  \#  \$ Mengembalikan nilai atribut 'age' \par
+Getattr {emp1, 'age'}  \$  \#  \$ Mengembalikan nilai atribut 'age' \par
 \noindent 
-Setattr (emp1, 'age', 8)  \$  \#  \$ Set attribute 'age' di 8 \par
+Setattr {emp1, 'age', 8}  \$  \#  \$ Set attribute 'age' di 8 \par
 \noindent 
-Delattr (empl, 'age')  \$  \#  \$ Hapus atribut 'umur' \par
-\vspace{12pt}
-\noindent 
+Delattr {empl, 'age'}  \$  \#  \$ Hapus atribut 'umur' \par
+\begin{12pt}
+\centering 
 Atribut Atribut Built-In \par
-\vspace{12pt}
-\noindent 
-Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses menggunakan operator dot seperti atribut lainnya - \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\ centering
+Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses menggunakan operator dot seperti atribut lainnya - 
+\begin{12pt}
+\bf 
 ~~~  \$  \_  \$ \$  \_  \$dict \$  \_  \$ \$  \_  \$: Kamus yang berisi namespace kelas. \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\bf
 ~~~  \$  \_  \$ \$  \_  \$doc \$  \_  \$ \$  \_  \$: String dokumentasi kelas atau tidak, jika tidak terdefinisi. \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\bf 
 ~~~  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$: nama kelas \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\verb 
 ~~~  \$  \_  \$ \$  \_  \$module \$  \_  \$ \$  \_  \$: Nama modul dimana kelas didefinisikan. Atribut ini " \$  \_  \$ \$  \_  \$main \$  \_  \$ \$  \_  \$" dalam mode interaktif. \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\bf 
 ~~~  \$  \_  \$ \$  \_  \$bases\$  \_  \$ \$  \_  \$: Tupel yang mungkin kosong yang berisi kelas dasar, sesuai urutan kejadiannya dalam daftar kelas dasar. \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\item
 Untuk kelas di atas mari kita coba untuk mengakses semua atribut ini – \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\bf 
  \$  \#  \$!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\item 
 class Employee: \par
 \noindent 
 ~~ 'Common base class for all employees' \par
-\noindent 
+\item 
 ~~ empCount = 0 \par
-\vspace{12pt}
-\noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
-\noindent 
+\begin{12pt}
+\bf 
+~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \{self, name, salar}: \par
+\item
 ~~~~~ self.name = name \par
-\noindent 
+\item
 ~~~~~ self.salary = salary \par
-\noindent 
+\item
 ~~~~~ Employee.empCount += 1 \par
-\noindent 
+\item 
 ~~  \par
-\noindent 
+\item 
 ~~ def displayCount(self): \par
-\noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
-\vspace{12pt}
-\noindent 
+\item 
+~~~~ print "Total Employee  \$  \%  \$d"  \$  \%  \$ Employee.empCount \par
+\begin{12pt}
+\item 
 ~~ def displayEmployee(self): \par
-\noindent 
+\item 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
-\vspace{12pt}
+\begin{12pt}
+\bf 
+print "Employee. \$  \_  \$ \$  \_  \$doc \$  \_  \$ \$  \_  \$:", Employee. \$  \_  \$ \$  \_  \$doc \$  \_  \$ \$  \_  \$ \par\\
+\bf 
+print "Employee. \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$:", Employee. \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ \par
 \noindent 
-print "Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ \par
-\noindent 
-print "Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $ \par
-\noindent 
-print "Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $ \par
+print "Employee. \$  \_  \$ \$  \_  \$module \$  \_  \$ \$  \_  \$:", Employee. \$  \_  \$ \$  \_  \$module \$  \_  \$ \$  \_  \$ \par
 \noindent 
 print "Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $ \par
 \noindent 
