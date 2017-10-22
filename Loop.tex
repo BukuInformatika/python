@@ -2,8 +2,7 @@
 \begin{center}Python Loops\end{center} \par
 \vspace{12pt}
 \vspace{12pt}
-Python sangat mementingkan indentasi, sehingga kita perlu melakukan indentasi secara konsisten.
-Indentasi tersebut dipermudah dengan penggunaan tombol Tab dan dimulai dari kolom pertama untuk setiap blok baru\cite{santoso2009bahasa}.
+Python dikenal sebagai bahasa pemograman interpreter, karena Python dieksekusi dengan sebuah interpreter. Satu hal yang telah kita ketahui bahwa bahasa pemograman Python adalah bahasa pemograman yang mudah dibaca dan terstruktur. Python sangat mementingkan indentasi, sehingga kita perlu melakukan indentasi secara konsisten. Indentasi tersebut dipermudah dengan penggunaan tombol Tab dan dimulai dari kolom pertama untuk setiap blok baru\cite{santoso2009bahasa}.
 Secara umum, pernyataan pada bahasa pemrograman akan dieksekusi secara berurutan. Pernyataan pertama dalam sebuah fungsi dijalankan pertama, diikuti oleh yang kedua, dan seterusnya. Tetapi akan ada situasi dimana Anda harus menulis banyak kode, dimana kode tersebut sangat banyak. Jika dilakukan secara manual maka Anda hanya akan membuang-buang tenaga dengan menulis beratus-ratus bahkan beribu-ribu kode. Untuk itu Anda perlu menggunakan pengulangan di dalam bahasa pemrograman Python. \par
 
 Di dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 bagian, yaitu : \par
@@ -86,7 +85,7 @@ buah = ["nanas", "apel", "jeruk"] \par
 for makanan in buah: \par
 \noindent 
 \vspace{\baselineskip}
- \$  \$  \$  \$ print("Saya suka makan", makanan) \par
+ \$  \$  \$  \$ print(\"Saya suka makan\", makanan) \par
 \noindent 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -275,7 +274,7 @@ Program menampilkan huruf Belajar Python \par
 begin{verbatim}
 makanan = ['Pizza', 'Nasi Bebek',~ 'Rujak Buah'] \par
 for makan in makanan: \par
-~~ print ("Makanan Favorit :", makan) \par
+~~ print (\"Makanan Favorit :\", makan) \par
 end{verbatim}
 \vspace{12pt}
 Apabila program diatas Anda jalankan, maka akan menghasilkan output berikut ini:\vspace{\baselineskip}
@@ -369,12 +368,12 @@ i = 2 \par
 while(i < 30): \par
 ~~ j = 2 \par
 ~~ while(j <= (i/j)): \par
-~~~~~ if not(i $  \%  $j): break \par
+~~~~~ if not(i \$  \%  \$j): break \par
 ~~~~~ j = j + 1 \par
-~~ if (j > i/j) : print (i, " adalah bilangan prima") \par
+~~ if (j > i/j) : print (i, \" adalah bilangan prima\") \par
 ~~ i = i + 1 \par
 \vspace{12pt}
-print ("Good bye!") \par
+print (\"Good bye!\") \par
 \vspace{12pt}
 \vspace{\baselineskip}
 Apabila program diatas Anda jalankan, maka akan menampilkan output seperti di bawah ini.\vspace{\baselineskip}
@@ -403,7 +402,7 @@ while True: \par
 ~~~~~~~ break \par
 end{verbatim}
 \vspace{12pt}
-Pada potongan kode diatas, \$  \$while $  $akan terus berputar selama i masih kurang dari 10. Jika sudah lebih dari 10 maka $  $while $  \$akan berhenti. Pengulangan $  $whilejuga biasa digunakan di aplikasi konsol, untuk menahan $  $user $  $mengisikan semua input yang diperlukan dan baru akan berhenti setelah semua input dan proses interaksi berakhir. Jika kode diatas kita jalankan, maka $  $output-nya akan seperti ini: \par
+Pada potongan kode diatas, \$  \$while \$  \$akan terus berputar selama i masih kurang dari 10. Jika sudah lebih dari 10 maka \$  \$while \$  \$akan berhenti. Pengulangan \$  \$whilejuga biasa digunakan di aplikasi konsol, untuk menahan \$  \$user \$  \$mengisikan semua input yang diperlukan dan baru akan berhenti setelah semua input dan proses interaksi berakhir. Jika kode diatas kita jalankan, maka \$  \$output-nya akan seperti ini: \par
 \vspace{12pt}
 Saat~ini i bernilai:  0 \par
 Saat~ini i bernilai:  1 \par
@@ -416,10 +415,10 @@ Saat~ini i bernilai:  7 \par
 Saat~ini i bernilai:  8 \par
 Saat~ini i bernilai:  9 \par
 \vspace{12pt}
-Sekarang kita coba gunakan $  $for. Pengulangan $  $for $  $biasa digunakan untuk pengulangan yang sudah jelas banyaknya. Misal, Anda ingin mengulang sebuah pengulangan sampai 10 kali atau mengeluarkan semua hasil $  $query $  $dari $  $databasedi halaman HTML. Berikut ini adalah contoh kode untuk pengulangan $  $for: \par
+Sekarang kita coba gunakan \$  \$for. Pengulangan \$  \$for \$  \$biasa digunakan untuk pengulangan yang sudah jelas banyaknya. Misal, Anda ingin mengulang sebuah pengulangan sampai 10 kali atau mengeluarkan semua hasil \$  \$query \$  \$dari \$  \$databasedi halaman HTML. Berikut ini adalah contoh kode untuk pengulangan \$  \$for: \par
 for i in range(0, 10): \par
 ~~~ print i \par
-Jika dijalankan maka kode diatas akan mengeluarkan $  $output $  $seperti ini: \par
+Jika dijalankan maka kode diatas akan mengeluarkan \$  \$output \$  \$seperti ini: \par
 \vspace{12pt}
 0 \par
 1 \par
@@ -431,13 +430,13 @@ Jika dijalankan maka kode diatas akan mengeluarkan $  $output $  $seperti ini: \
 7 \par
 8 \par
 9 \par
-Tidak hanya mengiterasi deretan angka, pengulangan $  $for $  $pun dapat Anda gunakan untuk mengulang sesuatu yang $  $iterable $  $seperti $  $list, $  $tuple, $  $dictionary, dan $  $iterable object $  $lainnya. Berikut ini kita ambil contoh dengan mengulang sebuah $  $list $  $yang berisi karakter anime Dragonball Super: \par
+Tidak hanya mengiterasi deretan angka, pengulangan \$  \$for \$  \$pun dapat Anda gunakan untuk mengulang sesuatu yang \$  \$iterable \$  \$seperti \$  \$list, \$  \$tuple, \$  \$dictionary, dan \$  \$iterable object \$  \$lainnya. Berikut ini kita ambil contoh dengan mengulang sebuah \$  \$list \$  \$yang berisi karakter anime Dragonball Super: \par
 \vspace{12pt}
-dragonball $  \_  $super $  \_  $character = ["Son Goku", "Vegeta", "Beerus", "Trunks", "Whiz", "Champa"] \par
-for character in dragonball $  \_  $super $  \_  $character: \par
+dragonball \$  \_  \$super \$  \_  \$character = [\"Son Goku\", \"Vegeta\", \"Beerus\", \"Trunks\", \"Whiz\", \"Champa\"] \par
+for character in dragonball \$  \_  \$super \$  \_  \$character: \par
 ~~~ print character \par
 \vspace{12pt}
-Jika kita jalankan potongan kode tadi, maka $  $output-nya akan seperti berikut: \par
+Jika kita jalankan potongan kode tadi, maka \$  \$output-nya akan seperti berikut: \par
 \vspace{12pt}
 Son Goku \par
 Vegeta \par
