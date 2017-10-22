@@ -31,59 +31,143 @@ Bahasa pemrograman Python mendukung berbagai macam operator, diantaranya :
 	\item Operator Penugasan (Assignment Operators)
 	\item Operator Logika (Logical Operators)
 	\item Operator Bitwise (Bitwise Operators)
-	\item Operator Keanggotaan (Membership Operators)
-	\item Operator Identitas (Identity Operators)
 \end{enumerate}  
 
 
-\subsubsection{Bitwise Operator}
-Operator bitwise (Bitwise Operators) adalah operator khusus yang disediakan PHP untuk menangani proses logika untuk bilangan biner. Bilangan biner atau binary adalah jenis bilangan yang hanya terdiri dari 2 jenis angka, yakni 0 dan 1. Jika operand (sebuah objek yang ada pada operasi matematika yang dapat digunakan untuk melakukan operasi) yang digunakan bukan bilangan biner, maka akan dikonversi secara otomatis oleh PHP menjadi bilangan biner.
-
 \subsubsection{Operator aritmatika}
-Operator aritmatika sendiri merupakan operator yang dipergunakan dalam melakukan operasi matematika, seperti pengurangan, pembagian, penambahan, perkalian, pangkat, modulus dll. Berikut contoh penggunaan operator aritmatika pada bahasa pemrograman python:
-print 3 + 2 * 3 - 10 / 5 
-print (3 + 2) * (3 - 10 / 5)
-print 3 ** 2 #pangkat
-print 100 % 3 #modulus / sisa bagi
+Operator Aritmatika sendiri merupakan operator yang dipergunakan dalam melakukan operasi matematika, seperti pengurangan, pembagian, penjumlahan, perkalian, pangkat, modulus dll. 
 
-perintah tersebut akan menghasilkan nilai
-7
-5
-9
-1
+Di bawah ini adalah tabel \ref{tablearitmatika} yang terdapat pada bahasa pemrograman Python.
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=1\textwidth]{figures/tablearitmatika.JPG}}
+	\caption{Table Operator Aritmatika.}
+	\label{tablearitmatika}
+\end{figure}
+
+Berikut contoh penggunaan operator aritmatika pada bahasa pemrograman python:
+\begin{enumerate}
+
+\item Penjumlahan
+	
+	print(13 + 2)
+	apel = 7
+	jeruk = 9
+	buah = apel + jeruk #
+	print(buah)
+
+\item Pengurangan
+
+	hutang = 10000
+	bayar = 5000
+	sisaHutang = hutang - bayar
+	print("Sisa hutang Anda adalah ", sisaHutang)
+	
+\item Perkalian
+
+	panjang = 15
+	lebar = 8
+	luas = panjang * lebar
+	print(luas)
+	
+\item Pembagian
+
+	kue = 16
+	anak = 4
+	kuePerAnak = kue / anak
+	print("Setiap anak akan mendapatkan bagian kue sebanyak ", kuePerAnak)
+	
+\item Sisa Bagi / Modulus
+
+	bilangan1 = 14
+	bilangan2 = 5
+	hasil = bilangan1 \% bilangan2
+	print("Sisa bagi dari bilangan ", bilangan1, " dan ", bilangan2, " adalah ", hasil)
+	
+\item Pangkat
+
+	bilangan3 = 8
+	bilangan4 = 2
+	hasilPangkat = bilangan3 ** bilangan4
+	print(hasilPangkat)
+	
+\item Pembagian Bulat
+
+	print(10//3) 
+	10 dibagi 3 adalah 3.3333. Karena dibulatkan maka akan menghasilkan nilai 3
+	
+\end{enumerate}
 
 Perhatikan perintah pada baris pertama tanpa harus menuliskan tanda kurung pun python sudah melakukan operasi matematika sesuai dengan aturan prioritas matematika. Operator yang biasa dipergunakan pada aritmatika ini pun beberapa dapat dipergunakan dalam melakukan manipulasi string contohnya :
-print 'Pintarcoding.com! ' * 3
-print 'hallo' + ' ' + 'Pintarcoding.com!'
+\begin{verbatim}
+	print 'Pintarcoding.com! ' * 3
+	print 'hallo' + ' ' + 'Pintarcoding.com!'
+\end{verbatim}
 
-\subsubsection{Operator Keanggotaan}
-Tes Python operator keanggotaan untuk keanggotaan secara berurutan, seperti string, daftar, atau tupel. Ada dua operator keanggotaan seperti yang dijelaskan di bawah ini:
+\subsubsection{Operator Perbandingan}
+Operator perbandingan adalah operator yang digunakan untuk membandingan nilai dari masing-masing operand. Operator ini juga dikenal dengan operator relasi dan sering digunakan untuk membuat sebuah logika atau kondisi. Operator perbandingakan akan mengembalikan sebuah nilai boolan yaitu true atau false.
 
-\subsubsubsection{in}
-Evaluates to true if it finds a variable in the specified sequence and false otherwise.	x dalam y, di sini di hasil dalam 1 jika x adalah anggota dari urutan y.
-\subsubsubsection{not in}
-Evaluates to true if it does not finds a variable in the specified sequence and false otherwise.x tidak di y, di sini tidak dalam hasil dalam 1 jika x bukan anggota dari urutan y.
+Di bawah ini adalah tabel \ref{tableperbandingan} macam-macam operator perbandingan yang terdapat pada bahasa pemrograman Python.
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=1\textwidth]{figures/tableperbandingan.JPG}}
+	\caption{Table Operator Perbandingan.}
+	\label{tableperbandingan}
+\end{figure}
 
-\subsubsection{Operator Bitwise}
-Operator bitwise bekerja pada bit dan melakukan sedikit dengan operasi bit. Berasumsi jika a = 60; dan b = 13; Sekarang dalam format biner mereka akan sebagai berikut -
-a = 0011 1100
-b = 0000 1101
------------------
-a & b = 0000 1100
-a | b = 0011 1101
-a ^ b = 0011 0001
-~ A = 1100 0011
-Pyhton built-in fungsi bin () dapat digunakan untuk mendapatkan representasi biner dari bilangan bulat.
-Ada berikut operator 
+Di bawah ini adalah contoh implementasi operator perbandingan pada program di Python:
 
-\subsubsection{Operator Pembanding}
-Ada beberapa operator pembanding antara lain, seperti contoh berikut:
-print 10 > 2 # lebih besar, bernilai True
-print 10 < 2 # lebih kecil, bernilai False
-print 10 != 2 # tidak sama dengan, bernilai True
-print 5 >= 5 # lebih besar atau sama dengan, bernilai True
-print 5 <= 4 # lebih kecil atau sama dengan, bernilai False
-print 5 == 5 # sama dengan, bernilai True
+a = 20
+b = 10
+c = 0
+
+\begin{verbartim}
+print ("a = ",a)
+print ("b = ",b)
+
+if ( a == b ):
+   print ("Baris 1 - a sama dengan b")
+else:
+   print ("Baris 1 - a tidak sama dengan b")
+
+if ( a != b ):
+   print ("Baris 2 - a tidak sama dengan b")
+else:
+   print ("Baris 2 - a sama dengan b")
+
+if ( a < b ):
+   print ("Baris 4 - a kurang dari b") 
+else:
+   print ("Baris 4 - a lebih dari b")
+
+if ( a > b ):
+   print ("Baris 5 - a lebih dari b") 
+else:
+   print ("Baris 5 - a kurang dari b")
+
+if ( a >= b ):
+   print ("Baris 6 - a lebih besar dari atau sama dengan b") 
+else:
+   print ("Baris 6 - a tidak lebih besar dari atau sama dengan b") 
+
+if ( a <= b ):
+   print ("Baris 7 - a lebih kecil dari atau sama dengan b") 
+else:
+   print ("Baris 7 - a tidak lebih kecil dari atau sama dengan b")    
+   
+\end{verbartim}
+
+Jika program diatas dijalankan, maka akan menghasilkan output di bawah ini:
+
+a =  20
+b =  10
+Baris 1 - a tidak sama dengan b
+Baris 2 - a tidak sama dengan b
+Baris 4 - a lebih dari b
+Baris 5 - a lebih dari b
+Baris 6 - a lebih besar dari atau sama dengan b
+Baris 7 - a tidak lebih kecil dari atau sama dengan b
+
+\subsubsection{Bitwise Operator}
+Operator bitwise (Bitwise Operators) adalah operator khusus yang disediakan PHP untuk menangani proses logika untuk bilangan biner. Bilangan biner atau binary adalah jenis bilangan yang hanya terdiri dari 2 jenis angka, yakni 0 dan 1. Jika operand (sebuah objek yang ada pada operasi matematika yang dapat digunakan untuk melakukan operasi) yang digunakan bukan bilangan biner, maka akan dikonversi secara otomatis oleh PHP menjadi bilangan biner.
 
 \subsubsection{Operator Logika}
 Pada bahasa python terdapat 3 operator logika antara lain and, or dan not. Adapun cara penggunaan dari operator-operator tersebut adalah sebagai berikut:
