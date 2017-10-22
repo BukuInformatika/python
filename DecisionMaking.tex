@@ -229,6 +229,24 @@ else: \par
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $print varAngka \par
 \vspace{12pt}
+\noindent
+Contoh lain pada NESTED IF dengan kondisi pilihan lebih dari satu. Seperti menentukan game yang sangat disukai : \par
+\vspace{12}
+\noindent 
+Begin{verbatim}
+#/usr/bin/python
+pilihan=2
+if pilihan==1:
+        print "DOTA 2"
+else:
+        if pilihan==2:
+		print "GTA V Online"
+	else:
+		print "Semua Game"
+end{verbatim}
+\noindent
+Perintah seperti diatas itu adalah NESTED IF yaitu terdapat IF di dalam IF. \par
+\vspace{12pt}
 \noindent 
 Statemen IF juga bisa ditulis dalam 1 baris saja, misalnya seperti ini :  \par
 \vspace{12pt}
