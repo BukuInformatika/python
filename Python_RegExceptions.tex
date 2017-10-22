@@ -1,35 +1,13 @@
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Regular Exceptions} \\}\end{center} \par
-Exceptions reguler adalah urutan khusus karakter yang membantu Anda mencocokkan atau menemukan string atau rangkaian senar lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola. Ekspresi reguler banyak digunakan di dunia UNIX. Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul re meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler.Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai karakter, yang tentunya memiliki arti khusus bila digunakan dalam ekspresi reguler. Untuk menghindari kebingungan saat berhadapan dengan ekspresi reguler, kita akan menggunakan Raw Strings sebagai r'expression '. \par
-\vspace{14pt}
-\noindent 
-Fungsi Pertandingan \par
-\noindent 
-Fungsi ini mencoba mencocokkan pola RE dengan string dengan flag pilihan. \par
-\vspace{12pt}
-\noindent 
-Berikut adalah sintaks untuk fungsi ini - \par
-\noindent 
-  \par
-\noindent 
-Parameter \hspace*{0.5in}  \par
-\noindent 
-pattern \hspace*{0.5in}  \par
-\noindent 
-Ini adalah ekspresi reguler yang harus disesuaikan. \par
-\vspace{12pt}
-\noindent 
-string \hspace*{0.5in}  \par
-\noindent 
-Ini adalah string, yang akan dicari agar sesuai dengan pola pada awal string. \par
-\vspace{12pt}
-\noindent 
-flags \hspace*{0.5in}  \par
-\noindent 
-Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini. \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
+\subsection {Python Regular Exceptions}
+ Exceptions reguler adalah urutan khusus karakter yang membantu Anda mencocokkan atau menemukan string atau rangkaian senar lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola. Ekspresi reguler banyak digunakan di dunia UNIX. Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul re meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler.Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai karakter, yang tentunya memiliki arti khusus bila digunakan dalam ekspresi reguler. Untuk menghindari kebingungan saat berhadapan dengan ekspresi reguler, kita akan menggunakan Raw Strings sebagai r'expression '.
+\subsubsection {Fungsi Pertandingan}
+Fungsi ini mencoba mencocokkan pola RE dengan string dengan flag pilihan.
+Berikut adalah sintaks untuk fungsi ini :
+\begin {enumerate}
+\item Parameter, Ini adalah ekspresi reguler yang harus disesuaikan.
+\item String, Ini adalah string, yang akan dicari agar sesuai dengan pola pada awal string.
+\item flags, Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.
+
 Fungsi re.match  \par
 \noindent 
 mengembalikan objek yang cocok pada kesuksesan, None on failure. Kami mengelompokkan (num) atau kelompok () fungsi objek pencocokan untuk mendapatkan ekspresi yang sesuai. \par
