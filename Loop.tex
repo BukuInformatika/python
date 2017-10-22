@@ -91,7 +91,8 @@ for makanan in buah: \par
 \vspace{\baselineskip}
 \vspace{12pt}
 \noindent 
-Nested Loop \par
+\subsection{Nested Loop}
+Nested Loop (Perulangan Bertingkat) adalah semua tipe perulangan yang dapat dipakai di dalam perulangan yang lain. Jadi Perulangan for bisa dipakai di dalam for yang lain, perulangan for bisa berada didalam perulangan while, perulangan while bisa dipakai di dalam perulangan while yang lain, dan perulangan while bisa di dalam perulangan for. \par
 \vspace{12pt}
 \noindent 
 Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut. \$  \$\vspace{\baselineskip}
@@ -172,6 +173,46 @@ Continue Statement \par
 dan Pass Statement \par
 \vspace{\baselineskip}
 \vspace{12pt}
+
+\subsubsection{Contoh Penggunaan Nested Loop}
+Format nested loop \(for di dalam for\)
+\begin{verbatim}
+For iterasi_var_1 in urutan_1:
+	Statements_untuk_perulangan_for_yang_di_luar
+...
+For iterasi_var_1 in urutan_2:
+	Statements_untuk_perulangan_for_yang_di_dalam
+...
+Statements_untuk_perulangan_for_yang_di_luar
+...
+\end{verbatim}
+
+Format nested loop \(while di dalam while\)
+\begin{verbatim}
+While expressions:
+	Statements_untuk_perulangan_while_yang_di_dalam
+...
+Statements_untuk_perulangan_whle_yang_di_luar
+...
+\end{verbatim}
+
+Contoh :
+\begin{verbatim}
+X = int(input(“Masukkan jumlah bariss: “))
+For i in range (x) :
+	For j in range(i+1):
+		Print(“*”, end=””)
+	Print()
+\end{verbatim}
+Saat di Run Module maka :
+Masukkan jumlah bariss: 5 \(inputkan 5\)
+*
+**
+***
+****
+***** 
+Muncul 5 baris isi bintang
+
 FOR Loop \par
 FOR Loop digunakan untuk melakukan perulangan atau iterasi sampai batas atau range yang telah ditentukan.\vspace{\baselineskip}
 \vspace{\baselineskip}
