@@ -1,14 +1,8 @@
+\section{Python Functions}\par
+Fungsi adalah blok kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. Fungsi menyediakan modularitas yang lebih baik untuk aplikasi Anda dan tingkat penggunaan kode yang tinggi. Seperti yang sudah Anda ketahui, Python memberi Anda banyak fungsi built-in seperti cetak (), dll. Tetapi Anda juga dapat membuat fungsi Anda sendiri. Fungsi ini disebut fungsi yang ditentukan pengguna. \par
 
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Functions} \\}\end{center} \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} Fungsi adalah blok kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. Fungsi menyediakan modularitas yang lebih baik untuk aplikasi Anda dan tingkat penggunaan kode yang tinggi. Seperti yang sudah Anda ketahui, Python memberi Anda banyak fungsi built-in seperti cetak (), dll. Tetapi Anda juga dapat membuat fungsi Anda sendiri. Fungsi ini disebut fungsi yang ditentukan pengguna. \par
-\vspace{12pt}
-\noindent 
-Defining a Function \par
-\noindent 
- \hspace*{0.5in} Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. \par
+\subsection{Defining a Function} \par
+ Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. \par
 \noindent 
  $ \bullet $ Blok fungsi dimulai dengan defensi kata kunci diikuti oleh nama fungsi dan tanda kurung (()). \par
 \noindent 
@@ -21,7 +15,56 @@ Defining a Function \par
  $ \bullet $ Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. \par
 \vspace{12pt}
 \noindent 
-Syntax \par
+
+\subsection{Syntax} \par
+Berikut adalah contoh program kalkulator menggunakan Function pada Python : \par
+\begin{verbatim}
+def menu()
+    print "Hallo Guys :) Selamat Datang di Program Kalkulator"
+    print "Pilih Operasi Bilangan :"
+    print " "
+    print "1) Penjumlahan"
+    print "2) Pengurangan"
+    print "3) Perkalian"
+    print "4) Pembagian"
+    print "5) Keluar Program"
+    print " "
+    return input ("Pilih Operasi Matematikanya : ")
+
+# Function untuk Penjumlahan
+def tbh(a,b):
+    print a, "+", b, "=", a + b
+
+# Function untuk Pengurangan
+def kur(a,b):
+    print b, "+", a, "=", b + a
+
+# Function untuk Perkalian
+def kal(a,b):
+    print a, "*", b, "=", a * b
+
+# Function untuk Pembagian
+def bag(a,b):
+    print a, "/", b, "=", a / b
+
+loop = 1
+choice = 0
+while loop == 1:
+    choice = menu()
+    if choice == 1:
+        tbh(input("Tambahkan Ini: "),input("Dengan ini: "))
+    elif choice == 2:
+        kur(input("Kurangkan Ini: "),input("Dengan ini: "))
+    elif choice == 3:
+        kur(input("Kalikan Ini: "),input("Dengan ini: "))
+    elif choice == 4:
+        kur(input("Bagikan Ini: "),input("Dengan ini: "))
+    elif choice == 5:
+        loop = 0
+
+print "GoodBye :( Terimakasih Telah Menggunakan calc.py :)"
+\end{verbatim}
+
 \noindent 
  \hspace*{0.5in} def functionname( parameters ): \par
 \noindent 
