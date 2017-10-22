@@ -67,11 +67,11 @@ Buka dalam mode biner. \par
 Buka file untuk mengupdate (membaca dan menulis) \par
 \vspace{12pt}
 \noindent 
-f~=~open("test.txt")~~~    $  \#  $ equivalent to 'r' or 'rt' \par
+f~=~open("test.txt")~~~    \$  \#  \$ equivalent to 'r' or 'rt' \par
 \noindent 
-f~= open("test.txt",'w')   $  \#  $ write in text mode \par
+f~= open("test.txt",'w')   \$  \#  \$ write in text mode \par
 \noindent 
-f = open("img.bmp",'r+b')  $  \#  $ read and write in binary mode \par
+f = open("img.bmp",'r+b')  \$  \#  \$ read and write in binary mode \par
 \vspace{12pt}
 \noindent 
 Tidak seperti bahasa lain, karakter 'a' tidak menyiratkan angka 97 sampai dikodekan menggunakan ASCII (atau pengkodean setara lainnya). Apalagi, pengkodean default bergantung pada platform. Di jendela, itu adalah 'cp1252' tapi 'utf-8' di Linux. Jadi, kita juga tidak harus bergantung pada pengkodean default atau kode kita akan berperilaku berbeda di berbagai platform. Oleh karena itu, ketika bekerja dengan file dalam mode teks, sangat disarankan untuk menentukan jenis pengkodean. \par
@@ -85,7 +85,7 @@ Ketika kita selesai dengan operasi ke file, kita perlu menutupinya dengan benar.
 \noindent 
 f = open("test.txt",encoding = 'utf-8') \par
 \noindent 
- $  \#  $ perform file operations \par
+ \$  \#  \$ perform file operations \par
 \noindent 
 f.close() \par
 \vspace{12pt}
@@ -97,7 +97,7 @@ try: \par
 \noindent 
 ~~ f = open("test.txt",encoding = 'utf-8') \par
 \noindent 
-~~  $  \#  $ perform file operations \par
+~~  \$  \#  \$ perform file operations \par
 \noindent 
 finally: \par
 \noindent 
@@ -108,7 +108,7 @@ Dengan cara ini, kita dijamin bahwa file tersebut benar tertutup bahkan jika pen
 \noindent 
 with open("test.txt",encoding = 'utf-8') as f: \par
 \noindent 
-~~  $  \#  $ perform file operations \par
+~~  \$  \#  \$ perform file operations \par
 \vspace{12pt}
 \noindent 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Menulis ke File} \\} \par
@@ -117,11 +117,11 @@ Untuk menulis ke file kita perlu membukanya dalam mode write 'w', tambahkan 'a' 
 \noindent 
 with open("test.txt",'w',encoding = 'utf-8') as f: \par
 \noindent 
-~~ f.write("my first file $  \setminus  $n") \par
+~~ f.write("my first file \$  \setminus  \$n") \par
 \noindent 
-~~ f.write("This file $  \setminus  $n $  \setminus  $n") \par
+~~ f.write("This file \$  \setminus  \$n \$  \setminus  \$n") \par
 \noindent 
-~~ f.write("contains three lines $  \setminus  $n") \par
+~~ f.write("contains three lines \$  \setminus  \$n") \par
 \vspace{12pt}
 Program ini akan membuat file baru bernama 'test.txt' jika tidak ada. Jika memang ada, itu akan ditimpa. Kita harus menyertakan karakter newline sendiri untuk membedakan garis yang berbeda. \par
 \vspace{12pt}
@@ -134,37 +134,37 @@ Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. Ada berb
 \noindent 
 >>> f = open("test.txt",'r',encoding = 'utf-8') \par
 \noindent 
->>>~f.read(4)~~   $  \#  $ read the first 4 data \par
+>>>~f.read(4)~~   \$  \#  \$ read the first 4 data \par
 \noindent 
 'This' \par
 \vspace{12pt}
 \noindent 
->>>~f.read(4)~~   $  \#  $ read the next 4 data \par
+>>>~f.read(4)~~   \$  \#  \$ read the next 4 data \par
 \noindent 
 ' is ' \par
 \vspace{12pt}
 \noindent 
->>>~f.read()~~~   $  \#  $ read in the rest till end of file \par
+>>>~f.read()~~~   \$  \#  \$ read in the rest till end of file \par
 \noindent 
-'my first file $  \setminus  $nThis file $  \setminus  $ncontains three lines $  \setminus  $n' \par
+'my first file \$  \setminus  \$nThis file \$  \setminus  \$ncontains three lines \$  \setminus  \$n' \par
 \vspace{12pt}
 \noindent 
->>>~f.read()   $  \#  $ further reading returns empty sting \par
+>>>~f.read()   \$  \#  \$ further reading returns empty sting \par
 \vspace{12pt}
 Kita dapat melihat, metode read () mengembalikan baris baru sebagai ' $  \setminus  $ n'. Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. Kita bisa mengubah kursor file kita saat ini (posisi) dengan menggunakan metode seek (). Demikian pula metode tell () mengembalikan posisi kita saat ini (dalam jumlah byte). \par
 \vspace{12pt}
 \noindent 
->>>~f.tell()~~   $  \#  $ get the current file position \par
+>>>~f.tell()~~   \$  \#  \$ get the current file position \par
 \noindent 
 56 \par
 \vspace{12pt}
 \noindent 
->>>~f.seek(0)~   $  \#  $ bring file cursor to initial position \par
+>>>~f.seek(0)~   \$  \#  \$ bring file cursor to initial position \par
 \noindent 
 0 \par
 \vspace{12pt}
 \noindent 
->>>~print(f.read())   $  \#  $ read the entire file \par
+>>>~print(f.read())   \$  \#  \$ read the entire file \par
 \noindent 
 This is my first file \par
 \noindent 
@@ -188,22 +188,22 @@ This is my first file \par
 This file \par
 \noindent 
 contains three lines \par
-Baris dalam file itu sendiri memiliki karakter baris baru ' $  \setminus  $ n'. Terlebih lagi, print () parameter akhir untuk menghindari dua baris baru saat mencetak. Sebagai alternatif, kita dapat menggunakan metode readline () untuk membaca setiap baris file. Metode ini membaca sebuah file sampai newline, termasuk newline character. \par
+Baris dalam file itu sendiri memiliki karakter baris baru ' \$  \setminus  \$ n'. Terlebih lagi, print () parameter akhir untuk menghindari dua baris baru saat mencetak. Sebagai alternatif, kita dapat menggunakan metode readline () untuk membaca setiap baris file. Metode ini membaca sebuah file sampai newline, termasuk newline character. \par
 \vspace{12pt}
 \noindent 
 >>> f.readline() \par
 \noindent 
-'This is my first file $  \setminus  $n' \par
+'This is my first file \$  \setminus  \$n' \par
 \vspace{12pt}
 \noindent 
 >>> f.readline() \par
 \noindent 
-'This file $  \setminus  $n' \par
+'This file \$  \setminus  \$n' \par
 \vspace{12pt}
 \noindent 
 >>> f.readline() \par
 \noindent 
-'contains three lines $  \setminus  $n' \par
+'contains three lines \$  \setminus  \$n' \par
 \vspace{12pt}
 \noindent 
 >>> f.readline() \par
@@ -215,7 +215,7 @@ Terakhir, metode readlines () mengembalikan daftar baris yang tersisa dari kesel
 \noindent 
 >>> f.readlines() \par
 \noindent 
-['This is my first file $  \setminus  $n', 'This file $  \setminus  $n', 'contains three lines $  \setminus  $n'] \par
+['This is my first file \$  \setminus  \$n', 'This file \$  \setminus  \$n', 'contains three lines \$  \setminus  \$n'] \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
