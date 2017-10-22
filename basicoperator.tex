@@ -7,7 +7,7 @@
 
 \section{Python Basic Operator}
 \section{Pengenalan Python Programming}
-Menurut Van Python adalah bahasa pemrograman yang menggabungkan kapabilitas, kemampuan, dengan sintaksis kode yang sangat jelas, dan dilengkapi dengan fungsionalitas pustaka standar yang besar serta komprehensif. Python mendukung multi paradigma pemrograman, utamanya namun tidak dibatasi pada pemrograman berorientasi objek, pemrograman imperatif, dan pemrograman fungsional. Salah satu fitur yang tersedia pada python adalah sebagai bahasa pemrograman dinamis yang dilengkapi dengan manajemen memori otomatis. Seperti halnya pada bahasa pemrograman dinamis lainnya, python umumnya digunakan sebagai bahasa skrip meski pada praktiknya penggunaan bahasa ini lebih luas mencakup konteks pemanfaatan yang umumnya tidak dilakukan dengan menggunakan bahasa skrip. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Manfaat besar dari sistem operasi seperti pyton adalah portabilitas aplikasi, setidaknya aplikasi yang dibuat dengan Python murni. Seluruh Sistem Operasi akan berjalan di mana pun dapat mengkompilasi Kernel Linux dan Python, dengan sedikit usaha daripada mengatakan bahwa porting seluruh Linux ke chipset yang berbeda. Aplikasi Python tidak perlu dikompilasi ulang untuk CPU target, dan jika sebagian besar Sistem Operasi dibuat dengan Python, port dibuat dengan mudah. \cite{van2007python}
+Menurut Van Python adalah bahasa pemrograman yang menggabungkan kapabilitas, kemampuan, dengan sintaksis kode yang sangat jelas, dan dilengkapi dengan fungsionalitas pustaka standar yang besar serta komprehensif. Python mendukung multi paradigma pemrograman, utamanya namun tidak dibatasi pada pemrograman berorientasi objek, pemrograman imperatif, dan pemrograman fungsional. Salah satu fitur yang tersedia pada python adalah sebagai bahasa pemrograman dinamis yang dilengkapi dengan manajemen memori otomatis. Seperti halnya pada bahasa pemrograman dinamis lainnya, python umumnya digunakan sebagai bahasa skrip meski pada praktiknya penggunaan bahasa ini lebih luas mencakup konteks pemanfaatan yang umumnya tidak dilakukan dengan menggunakan bahasa skrip. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Manfaat besar dari sistem operasi seperti pyton adalah portabilitas aplikasi, setidaknya aplikasi yang dibuat dengan Python murni. Seluruh Sistem Operasi akan berjalan di mana pun dapat mengkompilasi Kernel Linux dan Python, dengan sedikit usaha daripada mengatakan bahwa porting seluruh Linux ke chipset yang berbeda. Aplikasi Python tidak perlu dikompilasi ulang untuk CPU target, dan jika sebagian besar Sistem Operasi dibuat dengan Python, port dibuat dengan mudah.Proses mengubah dari bentuk bahasa tingkat tinggi dalam bahasa pemograman ada dua tipe, yaitu interpreter dan compiler. Fungsi Interpreter yaitu membaca program berbahasa tingkat tinggi kemudian mengeksekusi program tersebut. Sedangkan fungsi compiler membaca program dan menerjemahkannya secara keseluruhan kemudian baru dieksekusi. Bisa juga mengkompile suatu program yang merupakan bagian program lain. Dalam kasus ini, program tingkat tinggi ini dinamakan kode sumber (source code) dan hasil terjemahannya sering dinamakan object code atau executable. \cite{van2007python}
 
 \subsection{Python Basic Operator}
 Peran operator dalam proses perhitungan matematika sangatlah penting.
@@ -172,28 +172,6 @@ Baris 7 - a tidak lebih kecil dari atau sama dengan b
 
 \subsubsection{Bitwise Operator}
 Operator bitwise (Bitwise Operators) adalah operator khusus yang disediakan PHP untuk menangani proses logika untuk bilangan biner. Bilangan biner atau binary adalah jenis bilangan yang hanya terdiri dari 2 jenis angka, yakni 0 dan 1. Jika operand (sebuah objek yang ada pada operasi matematika yang dapat digunakan untuk melakukan operasi) yang digunakan bukan bilangan biner, maka akan dikonversi secara otomatis oleh PHP menjadi bilangan biner.
-Berikut penggunaan Operator Bitwise
-Operator bitwise bekerja pada bit dan melakukan sedikit demi sedikit operasi. Asumsikan jika a = 60; dan b = 13; Sekarang dalam format biner mereka akan sebagai berikut 
-a = 0011 1100
-b = 0000 1101
-a & b = 0000 1100
-a | b = 0011 1101
-a ^ b = 0011 0001
-~ A = 1100 0011
-
-x << y
-     Mengembalikan x dengan bit bergeser nilai y
-x >> y
-     Mengembalikan x dengan bit bergeser nilai y. Ini sama dengan // dengan x 2 ** y.
-x & y
-     Setiap bit dari output adalah 1 jika bit yang sesuai dari x AND dari y adalah 1, jika tidak maka itu adalah 0.
-x | y
-     Setiap bit dari output adalah 0 jika bit yang sesuai dari x AND dari y adalah 0, jika tidak, itu adalah 1.
-~ x
-     Mengembalikan nilai x - jumlah yang Anda dapatkan dengan mengganti masing-masing 1 untuk angka 0 dan masing-masing 0 untuk angka 1. Ini sama dengan -x - 1.
-x ^ y
-    Setiap bit dari output sama dengan bit yang sesuai pada x jika bit di y adalah 0, dan itu adalah pelengkap bit pada x jika bit di y adalah 1.
-
 
 \subsubsection{Operator Logika}
 Pada bahasa python terdapat 3 operator logika antara lain and, or dan not. Adapun cara penggunaan dari operator-operator tersebut adalah sebagai berikut:
@@ -206,3 +184,12 @@ Perintah tersebut akan mengashilkan
 Pintarcoding.com! Pintarcoding.com! Pintarcoding.com! 
 hallo Pintarcoding.com!
 
+\subsubsection{Operator Identitas}
+operator identitas membandingkan lokasi memori dari dua benda. Ada dua operator Identitas seperti yang dijelaskan di bawah ini :
+\begin{enumerate}
+\item operator is, Mengevaluasi ke true jika variabel di kedua sisi operator menunjuk ke objek yang sama dan salah sebaliknya
+contoh : x adalah y, berikut adalah hasil dalam 1 jika id(x)sama dengan id(y) .
+
+\item operator is not, Mengevaluasi false jika variabel di kedua sisi operator menunjuk ke objek yang sama dan benar sebaliknya.
+Contoh : x tidak y, di sini bukan hasil dalam 1 jika id(x)tidak sama dengan id(y) .
+\end{enumerate}
