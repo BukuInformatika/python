@@ -255,3 +255,139 @@ msgbox str &  =  & Len(str) & karakter
 \end {equation}
 \end
 
+\subsection {fungsi dari pemograman basix syntax}
+fungsi dalam pemrograman C terdiri dari function header dan function body. Berikut adalah semua bagian dari sebuah fungsi: 
+
+Return Type −  Fungsi dapat mengembalikan nilai. Return_type adalah tipe data dari nilai fungsi yang dikembalikan. Beberapa fungsi melakukan operasi yang diinginkan tanpa mengembalikan nilai.
+Function Name − Ini adalah nama sebenarnya dari fungsi. Nama fungsi dan daftar parameter bersama merupakan function signature.
+Parameter List − Parameter seperti placeholder. Saat sebuah fungsi dipanggil, Anda melewatkan sebuah nilai sebagai parameter. Nilai ini disebut sebagai parameter atau argumen Daftar parameter mengacu pada tipe, urutan, dan jumlah parameter fungsi. Parameter bersifat opsional; Artinya, fungsi tidak mengandung parameter.
+Function Body − berisi kumpulan pernyataan yang mendefinisikan fungsi yang dilakukannya.
+
+Memanggil Function
+Untuk menggunakan fungsi, Anda harus memanggil fungsi itu untuk melakukan tugas yang ditentukan.
+
+Sekarang, mari tulis contoh di atas dengan bantuan sebuah fungsi
+\begin {enumaret}
+#include <stdio.h>
+ 
+int getMax( int set[] ) {
+ 
+   int i, max;
+    
+   max = set[0];
+   i = 1;    
+   while( i < 5 ) {
+   
+      if( max <  set[i] ) {
+     
+         max = set[i];
+      }
+      i = i + 1;
+   }
+     
+   return max;
+}
+ 
+main() {
+ 
+   int set1[5] = {10, 20, 30, 40, 50};
+   int set2[5] = {101, 201, 301, 401, 501};
+   int max;
+ 
+   /* Process first set of numbers available in set1[] */
+   max = getMax(set1);
+   printf("Max in first set = %dn", max );
+     
+   /* Now process second set of numbers available in set2[] */
+   max = getMax(set2);
+   printf("Max in second set = %dn", max );
+}
+\end {enumaret}
+Outpunya adalah: 
+\begin {enumaret}
+Max in first set = 50
+Max in second set = 501
+\end {enumaret}
+
+Function dalam bahasa Java
+Jika Anda jelas tentang fungsi dalam pemrograman C, maka mudah untuk memahaminya di bahasa java, java menyebut function sebagai methods tapi sisa konsepnya kurang lebih sama. 
+Berikut ini adalah program sama seperti di atas yang ditulis di bahasa java 
+\begin {enumaret}
+public class DemoJava {
+     
+   public static void main(String []args) {
+  
+      int[] set1 = {10, 20, 30, 40, 50};
+      int[] set2 = {101, 201, 301, 401, 501};
+      int max;
+ 
+      /* Process first set of numbers available in set1[] */
+      max = getMax(set1);
+      System.out.format(\"Max in first set = %dn\", max );
+ 
+      /* Now process second set of numbers available in set2[] */
+      max = getMax(set2);
+      System.out.format(\"Max in second set = %dn\", max );
+   }
+    
+   public static int getMax( int set[] ) {
+  
+      int i, max;
+    
+      max = set[0];
+      i = 1;    
+      while( i < 5 ) {
+ 
+         if( max <  set[i] ) {
+            max = set[i];
+         }
+         i = i + 1;
+      }
+     
+      return max;
+   }
+}
+\end {enumaret}
+Outputnya adalah: 
+\begin {enumaret}
+Max in first set = 50
+Max in second set = 501
+\end {enumaret}
+
+Function dalan bahasa Python
+Jika Anda tahu konsep fungsi dalam pemrograman C dan Java, maka Python tidak jauh berbeda. Berikut basic syntax untuk mengunakan fucntion di python 
+
+\begin {enumaret}
+def function_name( parameter list ):
+   body of the function
+   
+   return [expression]
+\end {enumaret}
+Berikut ini adalah program sama seperti di atas yang ditulis di bahasa python 
+\begin {enumaret}
+def getMax( set ):
+   max = set[0]
+   i = 1  
+   while( i < 5 ):
+      if( max <  set[i] ):
+         max = set[i]
+      i = i + 1
+   return max
+ 
+ 
+set1 = [10, 20, 30, 40, 50]
+set2 = [101, 201, 301, 401, 501]
+\end {enumaret}
+ 
+# Process first set of numbers available in set1[]
+max = getMax(set1)
+print \"Max in first set = \"\, max
+     
+# Now process second set of numbers available in set2[]
+max = getMax(set2)
+print \"Max in second set = \"\, max
+Outputnya adalah: 
+
+Max in first set =  50
+Max in second set =  501
+\end {enumaret}
