@@ -79,6 +79,20 @@ Dan kita juga dapat membuat Tuple dengan objek-objek yang mutable yaitu seperti 
 
 Pada contoh tersebut, pertama kita membuat sebuah Tuple yang berisi sebuah List. Setelah itu, kita ubah sebuah nilai yang ada dalam List tersebut. Dapat disimpulkan bahwa objek multitable dalam Tuple dapat diubah, meskipun Tuple sendiri bersifat immutable. \par
 
+Kita juga bisa menggabungkan beberapa tuples. Untuk menggabungkan beberapa tuples, Anda dapat menggunakan operator concatenation "+". \par
+
+Berikut adalah contohnya: \par
+#Nama File : tuples_concat.py \par
+tup1 = (1998, 1997); \par
+tup2 = ('Agien Farhan', 'Kindi'); \par
+
+# Buat variable tuples baru untuk menampung hasilnya \par
+tup3 = tup1 + tup2; \par
+print (tup3) \par
+
+Jika kalian jalankan program diatas, maka akan menghasilkan output sebagai berikut: \par
+(1998, 1997, 'Agien Farhan', 'Kindi') \par
+
 Jika kita ingin membuat sebuah sebuah variable dengan Tuple kosong, kita hanya cukup memberikan tanda kurung pada variabel tersebut. Panjang Tuple kosong tersebut adalah 0. \par
 Berikut adalah contohnya, \par
 
