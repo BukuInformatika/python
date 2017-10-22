@@ -269,7 +269,7 @@ Memanggil Function
 Untuk menggunakan fungsi, Anda harus memanggil fungsi itu untuk melakukan tugas yang ditentukan.
 
 Sekarang, mari tulis contoh di atas dengan bantuan sebuah fungsi
-\begin {enumaret}
+\begin {verbatim}
 #include <stdio.h>
  
 int getMax( int set[] ) {
@@ -304,17 +304,17 @@ main() {
    max = getMax(set2);
    printf("Max in second set = %dn", max );
 }
-\end {enumaret}
+\end {verbatim}
 Outpunya adalah: 
-\begin {enumaret}
+\begin {verbatim}
 Max in first set = 50
 Max in second set = 501
-\end {enumaret}
+\end {verbatim}
 
 Function dalam bahasa Java
 Jika Anda jelas tentang fungsi dalam pemrograman C, maka mudah untuk memahaminya di bahasa java, java menyebut function sebagai methods tapi sisa konsepnya kurang lebih sama. 
 Berikut ini adalah program sama seperti di atas yang ditulis di bahasa java 
-\begin {enumaret}
+\begin {verbatim}
 public class DemoJava {
      
    public static void main(String []args) {
@@ -349,24 +349,24 @@ public class DemoJava {
       return max;
    }
 }
-\end {enumaret}
+\end {verbatim}
 Outputnya adalah: 
-\begin {enumaret}
+\begin {verbatim}
 Max in first set = 50
 Max in second set = 501
-\end {enumaret}
+\end {verbatim}
 
 Function dalan bahasa Python
 Jika Anda tahu konsep fungsi dalam pemrograman C dan Java, maka Python tidak jauh berbeda. Berikut basic syntax untuk mengunakan fucntion di python 
 
-\begin {enumaret}
+\begin {verbatim}
 def function_name( parameter list ):
    body of the function
    
    return [expression]
-\end {enumaret}
+\end {verbatim}
 Berikut ini adalah program sama seperti di atas yang ditulis di bahasa python 
-\begin {enumaret}
+\begin {verbatim}
 def getMax( set ):
    max = set[0]
    i = 1  
@@ -379,7 +379,7 @@ def getMax( set ):
  
 set1 = [10, 20, 30, 40, 50]
 set2 = [101, 201, 301, 401, 501]
-\end {enumaret}
+\end {verbatim}
  
 # Process first set of numbers available in set1[]
 max = getMax(set1)
@@ -389,7 +389,7 @@ print \"Max in first set = \"\, max
 max = getMax(set2)
 print \"Max in second set = \"\, max
 Outputnya adalah: 
-
+\begin {verbatim}
 Max in first set =  50
 Max in second set =  501
-\end {enumaret}
+\end {verbatim}
