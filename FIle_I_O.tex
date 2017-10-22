@@ -24,9 +24,9 @@ Membuka sebuah file \par
 Python memiliki built-in function open () untuk membuka file. Fungsi ini mengembalikan objek file, juga disebut handle, karena digunakan untuk membaca atau memodifikasi file yang sesuai. \par
 \vspace{12pt}
 \noindent 
->>>~f~=~open("test.txt")     $  \#  $ open file in current directory \par
+>>>~f~=~open("test.txt")     \$  \#  \$ open file in current directory \par
 \noindent 
->>>~f = open("C:/Python33/README.txt")   $  \#  $ specifying full path \par
+>>>~f = open("C:/Python33/README.txt")   \$  \#  \$ specifying full path \par
 \vspace{12pt}
 Kita bisa menentukan mode saat membuka file. Dalam mode, kami menentukan apakah kita ingin membaca 'r', menulis 'w' atau menambahkan 'a' ke file. Kita juga menentukan apakah kita ingin membuka file dalam mode teks atau mode biner. Defaultnya adalah membaca dalam mode teks. Dalam mode ini, kita mendapatkan string saat membaca dari file. Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan digunakan saat berhadapan dengan file non-teks seperti file gambar atau exe. \par
 \vspace{12pt}
@@ -226,10 +226,10 @@ Ada berbagai metode yang tersedia dengan objek file. Beberapa di antaranya telah
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+ \$  \#  \$ Open a file \par
 \noindent 
 fo = open("foo.txt", "wb") \par
 \noindent 
@@ -244,29 +244,29 @@ print "Softspace flag : ", fo.softspace \par
 \noindent 
 Membaca dan Menulis File \par
 \vspace{12pt}
-Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih mudah. Kita akan melihat bagaimana menggunakan metode read () dan write () untuk membaca dan menulis file. Metode tulis () Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. Metode write () tidak menambahkan karakter baris baru (' $  \setminus  $ n') ke akhir string - \par
+Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih mudah. Kita akan melihat bagaimana menggunakan metode read () dan write () untuk membaca dan menulis file. Metode tulis () Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. Metode write () tidak menambahkan karakter baris baru (' \$  \setminus  \$ n') ke akhir string - \par
 \noindent 
 Sintaksis \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+ \$  \#  \$ Open a file \par
 \noindent 
 fo = open("foo.txt", "wb") \par
 \noindent 
-fo.write( "Python is a great language. $  \setminus  $nYeah its great!! $  \setminus  $n"); \par
+fo.write( "Python is a great language. \$  \setminus  \$nYeah its great!! \$  \setminus  \$n"); \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Close opend file \par
+ \$  \#  \$ Close opend file \par
 \noindent 
 fo.close() \par
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+ \$  \#  \$ Open a file \par
 \noindent 
 fo = open("foo.txt", "r+") \par
 \noindent 
@@ -275,7 +275,7 @@ str = fo.read(10); \par
 print "Read String is : ", str \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Close opend file \par
+ \$  \#  \$ Close opend file \par
 \noindent 
 fo.close() \par
 \vspace{12pt}
@@ -283,10 +283,10 @@ fo.close() \par
 Read~String is :  Python is \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+ \$  \#  \$ Open a file \par
 \noindent 
 fo = open("foo.txt", "r+") \par
 \noindent 
@@ -295,14 +295,14 @@ str = fo.read(10); \par
 print "Read String is : ", str \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Check current position \par
+ \$  \#  \$ Check current position \par
 \noindent 
 position = fo.tell(); \par
 \noindent 
 print "Current file position : ", position \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Reposition pointer at the beginning once again \par
+ \$  \#  \$ Reposition pointer at the beginning once again \par
 \noindent 
 position = fo.seek(0, 0); \par
 \noindent 
@@ -310,7 +310,7 @@ str = fo.read(10); \par
 \noindent 
 print "Again read String is : ", str \par
 \noindent 
- $  \#  $ Close opend file \par
+ \$  \#  \$ Close opend file \par
 \noindent 
 fo.close() \par
 \vspace{12pt}
@@ -322,25 +322,25 @@ Current~file position :  10 \par
 Again~read String is :  Python is \par
 \vspace{12pt}
 \noindent 
-os.rename(current $  \_  $file $  \_  $name, new $  \_  $file $  \_  $name) \par
+os.rename(current \$  \_  \$file \$  \_  \$name, new \$  \_  \$file \$  \_  \$name) \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Rename a file from test1.txt to test2.txt \par
+ \$  \#  \$ Rename a file from test1.txt to test2.txt \par
 \noindent 
 os.rename( "test1.txt", "test2.txt" ) \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Delete file test2.txt \par
+ \$  \#  \$ Delete file test2.txt \par
 \noindent 
 os.remove("text2.txt") \par
 \vspace{12pt}
@@ -348,27 +348,27 @@ os.remove("text2.txt") \par
 os.mkdir("newdir") \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Create a directory "test" \par
+ \$  \#  \$ Create a directory "test" \par
 \noindent 
 os.mkdir("test") \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Changing a directory to "/home/newdir" \par
+ \$  \#  \$ Changing a directory to "/home/newdir" \par
 \noindent 
 os.chdir("/home/newdir") \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
