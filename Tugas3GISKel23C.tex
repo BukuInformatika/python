@@ -52,6 +52,15 @@ Berikut adalah ikhtisar singkat tentang menginstal Python di berbagai platform
 	\end{enumerate}
 Lokasi standar penginstallan python ada pada /usr/local/bin dan libraries nya berada 
 /usr/local/lib/pythonXX dimana XX adalah versi python yang di install.
+\subsection{Setting Path pada Unix/Linux}
+Untuk menambahkan direktori python di path pada Unix
+\begin{enumerate}
+\item In the csh shell – ketik setenv PATH $PATH:/usr/local/bin/python lalu tekan enter
+\item In the bash shell(Linux) – ketik export ATH=$PATH:/usr/local/bin/python lalu tekan enter
+\item In the sh or ksh shell – ketik PATH=$PATH:/usr/local/bin/python lalu tekan enter
+\item Note - /usr/local/bin/python adalah path untuk direktori Python
+\end{enumerate}
+
 
 Pengujian
 1.Cara pertama: ketik python untuk menjalankan Python Interpreter. Jika berhasil akan ditampilkan versi Python yang digunakan beserta interpreternya. Coba ketikkan print “hello world” untuk menampilkan teks hello world.
