@@ -14,14 +14,22 @@ contoh:  print ("Wahyu Maruti Adjie adalah mahasiswa yang hebat")
 \subsection{Membaca input keyboard}
 Dalam Python2 terdapat  dua fungsi built-in yang berfungsi untuk membaca data dari input standar, yang secara default berasal dari keyboard, dua fungsi tersebut yaitu input() dan raw_input(). Dalam Python3, fungsi raw_input() tidak dipakai. Dan input() bertugas menerjemahkan data dari keyboard sebagai string.
 
+\subsection{fuction python}
+Fungsi input([prompt]) memiliki fungsi yang sama dengan raw_input, yakni berfungsi untuk membaca masukan, tetapi dalam melakukan pembacaan masukan keduanya punya fungsi yang bedanya . 
 
-Python memiliki built-in function open () untuk membuka file. Fungsi ini mengembalikan objek file, juga disebut handle, karena digunakan untuk membaca atau memodifikasi file yang sesuai. \par
-\vspace{12pt}
-\noindent 
->>>~f~=~open("test.txt")     $  \#  $ open file in current directory \par
-\noindent 
->>>~f = open("C:/Python33/README.txt")   $  \#  $ specifying full path \par
-\vspace{12pt}
+\subsection{raw_input()} 
+Segala inputan yang diterima oleh fungsi raw_input() di anggap sebagai inputan string.
+
+Subsection{input()}
+ fungsi input() akan mengambil bilangan, sehingga inputan dapat di olah oleh operasi aritmatika.
+contoh : >>> x = input("something:")
+something:10
+
+>>> x
+'10'
+
+
+
 Kita bisa menentukan mode saat membuka file. Dalam mode, kami menentukan apakah kita ingin membaca 'r', menulis 'w' atau menambahkan 'a' ke file. Kita juga menentukan apakah kita ingin membuka file dalam mode teks atau mode biner. Defaultnya adalah membaca dalam mode teks. Dalam mode ini, kita mendapatkan string saat membaca dari file. Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan digunakan saat berhadapan dengan file non-teks seperti file gambar atau exe. \par
 \vspace{12pt}
 \vspace{12pt}
