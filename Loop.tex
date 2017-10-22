@@ -2,10 +2,10 @@
 \begin{center}Python Loops\end{center} \par
 \vspace{12pt}
 \vspace{12pt}
+Python sangat mementingkan indentasi, sehingga kita perlu melakukan indentasi secara konsisten.
+Indentasi tersebut dipermudah dengan penggunaan tombol Tab dan dimulai dari kolom pertama untuk setiap blok baru\cite{santoso2009bahasa}.
 Secara umum, pernyataan pada bahasa pemrograman akan dieksekusi secara berurutan. Pernyataan pertama dalam sebuah fungsi dijalankan pertama, diikuti oleh yang kedua, dan seterusnya. Tetapi akan ada situasi dimana Anda harus menulis banyak kode, dimana kode tersebut sangat banyak. Jika dilakukan secara manual maka Anda hanya akan membuang-buang tenaga dengan menulis beratus-ratus bahkan beribu-ribu kode. Untuk itu Anda perlu menggunakan pengulangan di dalam bahasa pemrograman Python. \par
-\noindent 
-\vspace{\baselineskip}
-\vspace{\baselineskip}
+
 Di dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 bagian, yaitu : \par
 \noindent 
 While Loop \par
@@ -39,10 +39,10 @@ count = 0 \par
 while (count < 9): \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ print ('The count is:', count) \par
+ \$  \$  \$  \$ print ('The count is:', count) \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ count = count + 1 \par
+ \$  \$  \$  \$ count = count + 1 \par
 \noindent 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -55,7 +55,7 @@ print ("Good bye!") \par
 \noindent 
 For Loop \par
 \noindent 
-Pengulangan For pada Python memiliki kemampuan untuk mengulangi item dari urutan apapun, seperti $  $list atau string. \par
+Pengulangan For pada Python memiliki kemampuan untuk mengulangi item dari urutan apapun, seperti \$  \$list atau string. \par
 \noindent 
  \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -73,7 +73,7 @@ angka = [1,2,3,4,5] \par
 for x in angka: \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ print(x) \par
+ \$  \$  \$  \$ print(x) \par
 \noindent 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -86,7 +86,7 @@ buah = ["nanas", "apel", "jeruk"] \par
 for makanan in buah: \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ print("Saya suka makan", makanan) \par
+ \$  \$  \$  \$ print("Saya suka makan", makanan) \par
 \noindent 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -95,7 +95,7 @@ for makanan in buah: \par
 Nested Loop \par
 \vspace{12pt}
 \noindent 
-Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut. $  $\vspace{\baselineskip}
+Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut. \$  \$\vspace{\baselineskip}
 \vspace{\baselineskip}
 Dibawah ini adalah contoh penggunaan Nested Loop. \par
 \noindent 
@@ -109,22 +109,22 @@ i = 2 \par
 while(i < 100): \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ j = 2 \par
+ \$  \$  \$  \$ j = 2 \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ while(j <= (i/j)): \par
+ \$  \$  \$  \$ while(j <= (i/j)): \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $  $  $  $  $ if not(i $  \%  $j): break \par
+ \$  \$  \$  \$  \$  \$  \$  \$ if not(i \$  \%  \$j): break \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $  $  $  $  $ j = j + 1 \par
+ \$  \$  \$  \$  \$  \$  \$  \$ j = j + 1 \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ if (j > i/j) : print i, " is prime" \par
+ \$  \$  \$  \$ if (j > i/j) : print i, " is prime" \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ i = i + 1 \par
+ \$  \$  \$  \$ i = i + 1 \par
 \noindent 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -153,10 +153,12 @@ Dengan menggunakan perulangan, source code lebih pendek dan efisien. Perhatikan 
 \vspace{\baselineskip}
  \par
 \vspace{12pt}
+begin{verbatim}
 i = 1 \par
 while(i < 11): \par
 ~~~ print(i) \par
 ~~~ i = i+1 \par
+end{verbatim}
 \vspace{\baselineskip}
 Bandingkan kedua program diatas, Mana yang lebih efisien? Mana yang lebih simple?\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -177,7 +179,7 @@ FOR Loop digunakan untuk melakukan perulangan atau iterasi sampai batas atau ran
 Dibawah ini adalah sintak dasar FOR Loop di Python.\vspace{\baselineskip}
 \vspace{\baselineskip}
  \par
-for iterating $  \_  $var in range: \par
+for iterating \$  \_  \$var in range: \par
 ~~ statements(s) \par
 \vspace{\baselineskip}
 Contoh Program\vspace{\baselineskip}
@@ -194,7 +196,7 @@ for i in range(10): \par
 ~~ print(i+1) \par
 ~~ i = i+1 \par
 \vspace{\baselineskip}
-Fungsi $  $range() $  $biasanya digunakan sebagai counter pada perulangan bentuk For. range(10) artinya menampikan perulangan sebanyak 10 elemen.\vspace{\baselineskip}
+Fungsi \$  \$range() \$  \$biasanya digunakan sebagai counter pada perulangan bentuk For. range(10) artinya menampikan perulangan sebanyak 10 elemen.\vspace{\baselineskip}
 \vspace{\baselineskip}
 Apabila program diatas Anda jalankan, maka akan menampilkan angka 1 sampai dengan 10 seperti output di bawah ini:\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -215,9 +217,11 @@ Contoh 2\vspace{\baselineskip}
  \par
  Program mencetak angka -1 s/d 8 \par
 \vspace{12pt}
+begin{verbatim}
 i = 10 \par
-for i in range(-10, 10, 2):  $  \#  $ range(range awal, range akhir, selisih) \par
+for i in range(-10, 10, 2):  \$  \#  \$ range(range awal, range akhir, selisih) \par
 ~~ print(i) \par
+end{verbatim}
 \vspace{12pt}
 \vspace{\baselineskip}
 Perhatikan pada range(-10, 10, 2) artinya perulangan akan dimulai dari batas awal -10 sampai dengan batas akhir 10 dengan selisih 2.\vspace{\baselineskip}
@@ -268,9 +272,11 @@ Program berikut akan menampilkan perulangan dari list atau tupple.\vspace{\basel
  \par
 Program menampilkan huruf Belajar Python \par
 \vspace{12pt}
+begin{verbatim}
 makanan = ['Pizza', 'Nasi Bebek',~ 'Rujak Buah'] \par
 for makan in makanan: \par
 ~~ print ("Makanan Favorit :", makan) \par
+end{verbatim}
 \vspace{12pt}
 Apabila program diatas Anda jalankan, maka akan menghasilkan output berikut ini:\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -293,10 +299,12 @@ Coba Anda ketik program di bawah ini:\vspace{\baselineskip}
  \par
 Program mencetak angka 1 s/d 10 \par
 \vspace{12pt}
+begin{verbatim}
 i = 1 \par
 while(i < 11): \par
  print(i) \par
  i = i+1 \par
+ end{verbatim}
 \vspace{\baselineskip}
 Apabila program diatas Anda jalankan, maka akan menghasilkan output seperti di bawah ini:\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -337,8 +345,8 @@ Nested Loop secara sederhana adalah perulangan di dalam perulangan.\vspace{\base
 Di bawah ini adalah sintak dasar Nested Loop pada Python:\vspace{\baselineskip}
 \vspace{\baselineskip}
  \par
-for iterating $  \_  $var in sequence: \par
-~~ for iterating $  \_  $var in sequence: \par
+for iterating \$  \_  \$var in sequence: \par
+~~ for iterating \$  \_  \$var in sequence: \par
 ~~~~~ statements(s) \par
 ~~ statements(s) \par
 \vspace{\baselineskip}
@@ -383,8 +391,9 @@ Apabila program diatas Anda jalankan, maka akan menampilkan output seperti di ba
 23~ adalah bilangan prima \par
 29~ adalah bilangan prima \par
 \vspace{12pt}
-Pengulangan adalah salah satu hal penting yang ada di bahasa pemrograman. Pengulangan digunakan misalnya untuk meng-update $  $nama $  $file $  $yang cukup banyak jumlahnya, atau mengakses piksel satu persatu pada gambar. \par
-Python memiliki tiga jenis pengulangan yang wajib Anda cermati untuk membuat sebuah aplikasi dengan Python. Pengulangan yang pertama adalah $  $while. Dengan menggunakan $  $while, Anda dapat membuat kondisi tertentu untuk menghentikan $  $while. Biasanya $  $while $  $digunakan untuk melakukan $  $loopingyang tidak pasti. Coba lihat contoh berikut (Anda dapat menulisnya dalam sebuah $  $file, kemudian eksekusi $  $file $  $tersebut di konsol): \par
+Pengulangan adalah salah satu hal penting yang ada di bahasa pemrograman. Pengulangan digunakan misalnya untuk meng-update \$  \$nama \$  \$file \$  \$yang cukup banyak jumlahnya, atau mengakses piksel satu persatu pada gambar. \par
+Python memiliki tiga jenis pengulangan yang wajib Anda cermati untuk membuat sebuah aplikasi dengan Python. Pengulangan yang pertama adalah \$  \$while. Dengan menggunakan \$  \$while, Anda dapat membuat kondisi tertentu untuk menghentikan \$  \$while. Biasanya \$  \$while \$  \$digunakan untuk melakukan \$  \$loopingyang tidak pasti. Coba lihat contoh berikut (Anda dapat menulisnya dalam sebuah \$  \$file, kemudian eksekusi \$  \$file \$  \$tersebut di konsol): \par
+begin{verbatim}
 i = 0 \par
 while True: \par
 ~~~ if i < 10: \par
@@ -392,8 +401,9 @@ while True: \par
 ~~~~~~~ i = i + 1 \par
 ~~~ elif i >= 10: \par
 ~~~~~~~ break \par
+end{verbatim}
 \vspace{12pt}
-Pada potongan kode diatas, $  $while $  $akan terus berputar selama i masih kurang dari 10. Jika sudah lebih dari 10 maka $  $while $  $akan berhenti. Pengulangan $  $whilejuga biasa digunakan di aplikasi konsol, untuk menahan $  $user $  $mengisikan semua input yang diperlukan dan baru akan berhenti setelah semua input dan proses interaksi berakhir. Jika kode diatas kita jalankan, maka $  $output-nya akan seperti ini: \par
+Pada potongan kode diatas, \$  \$while $  $akan terus berputar selama i masih kurang dari 10. Jika sudah lebih dari 10 maka $  $while $  \$akan berhenti. Pengulangan $  $whilejuga biasa digunakan di aplikasi konsol, untuk menahan $  $user $  $mengisikan semua input yang diperlukan dan baru akan berhenti setelah semua input dan proses interaksi berakhir. Jika kode diatas kita jalankan, maka $  $output-nya akan seperti ini: \par
 \vspace{12pt}
 Saat~ini i bernilai:  0 \par
 Saat~ini i bernilai:  1 \par
