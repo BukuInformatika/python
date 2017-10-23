@@ -1,23 +1,24 @@
- 
-LISTS \par
-Struktur data yang paling dasar dengan Python adalah urutannya. Setiap elemen berurutan diberi nomor - posisinya atau indeksnya. Indeks pertama adalah nol, indeks kedua adalah satu, dan seterusnya. \par
+\section{LISTS}
+Struktur data yang paling dasar dengan Python adalah urutannya. Setiap elemen berurutan diberi nomor - posisinya atau indeksnya. Indeks pertama adalah nol, indeks kedua adalah satu, dan seterusnya.
 \vspace{12pt}
-Python memiliki enam jenis urutan built-in, namun yang paling umum adalah daftar dan tupel, yang akan kami lihat di tutorial ini. \par
-Ada beberapa hal yang dapat Anda lakukan dengan semua tipe urutan. Operasi ini meliputi pengindeksan, pengiris, penambahan, perbanyak, dan pengecekan keanggotaan. Selain itu, Python memiliki fungsi built-in untuk menemukan panjang urutan dan untuk menemukan elemen terbesar dan terkecilnya. \par
+Python memiliki enam jenis urutan built-in, namun yang paling umum adalah daftar dan tupel, yang akan kami lihat di tutorial ini.
+Ada beberapa hal yang dapat Anda lakukan dengan semua tipe urutan. Operasi ini meliputi pengindeksan, pengiris, penambahan, perbanyak, dan pengecekan keanggotaan. Selain itu, Python memiliki fungsi built-in untuk menemukan panjang urutan dan untuk menemukan elemen terbesar dan terkecilnya.
 \vspace{12pt}
-Daftar Python \par
+\subsection{Daftar Python}
 \vspace{12pt}
-Daftar ini adalah datatype paling serbaguna yang tersedia dengan Python yang dapat ditulis sebagai daftar nilai yang dipisahkan koma (item) antara tanda kurung siku. Hal penting tentang daftar adalah item dalam daftar tidak perlu jenis yang sama. \par
-Membuat daftar sesederhana memasukkan berbagai nilai yang dipisahkan koma di antara tanda kurung siku. Misalnya - \par
+Daftar ini adalah datatype paling serbaguna yang tersedia dengan Python yang dapat ditulis sebagai daftar nilai yang dipisahkan koma (item) antara tanda kurung siku. Hal penting tentang daftar adalah item dalam daftar tidak perlu jenis yang sama.
+Membuat daftar sederhana memasukkan berbagai nilai yang dipisahkan koma di antara tanda kurung siku.
 \vspace{12pt}
-list1 = ['physics', 'chemistry', 1997, 2000]; \par
-list2 = [1, 2, 3, 4, 5 ]; \par
-list3 = ["a", "b", "c", "d"] \par
-Serupa dengan indeks string, daftar indeks mulai dari 0, dan daftar dapat diiris, digabungkan dan seterusnya. \par
-Mengakses Nilai dalam Daftar \par
-Untuk mengakses nilai dalam daftar, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut. Misalnya - \par
+\begin{verbatim}
+list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5 ];
+list3 = ["a", "b", "c", "d"]
+\end{verbatim}
+Serupa dengan indeks string, daftar indeks mulai dari 0, dan daftar dapat diiris, digabungkan dan seterusnya.
+Mengakses Nilai dalam Daftar
+Untuk mengakses nilai dalam daftar, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut.
 \vspace{12pt}
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 List1 = ['fisika', 'kimia', 1997, 2000]; \par
 List2 = [1, 2, 3, 4, 5, 6, 7]; \par
@@ -34,7 +35,7 @@ Memperbarui Daftar \par
 \vspace{12pt}
 Anda dapat memperbarui satu atau beberapa elemen daftar dengan memberikan potongan di sisi kiri operator penugasan, dan Anda dapat menambahkan ke elemen dalam daftar dengan metode append (). Misalnya - \par
 \vspace{12pt}
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 list = ['physics', 'chemistry', 1997, 2000]; \par
 \vspace{12pt}
@@ -58,7 +59,7 @@ Hapus Daftar Elemen \par
 \vspace{12pt}
 Untuk menghapus elemen daftar, Anda dapat menggunakan salah satu pernyataan del jika Anda tahu persis elemen yang Anda hapus atau metode hapus () jika Anda tidak mengetahuinya. Misalnya - \par
 \vspace{12pt}
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 List1 = ['fisika', 'kimia', 1997, 2000]; \par
 \vspace{12pt}
@@ -66,7 +67,7 @@ Daftar cetak1 \par
 \vspace{12pt}
 Del list1 [2]; \par
 \vspace{12pt}
-Cetak "Setelah menghapus nilai pada indeks 2:" \par
+Cetak \"Setelah menghapus nilai pada indeks 2:\" \par
 \vspace{12pt}
 Daftar cetak1 \par
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
@@ -88,91 +89,101 @@ Indexing, Slicing, dan Matrixes \par
 Karena daftar adalah urutan, pengindeksan dan pengiris bekerja dengan cara yang sama untuk daftar seperti yang mereka lakukan untuk string. \par
 Dengan asumsi masukan berikut - \par
 L = ['spam', 'Spam', 'SPAM!'] \par
-  \par
 Python Expression \hspace*{0.5in} Results  \hspace*{0.5in} Description \par
 L[2] \hspace*{0.5in} 'SPAM!' \hspace*{0.5in} Offsets start at zero \par
 L[-2] \hspace*{0.5in} 'Spam' \hspace*{0.5in} Negative: count from the right \par
 L[1:] \hspace*{0.5in} ['Spam', 'SPAM!'] \hspace*{0.5in} Slicing fetches sections \par
-Built-in List Functions  $  \&  $ Methods: \par
+Built-in List Functions  \$  \&  \$ Methods: \par
 Python includes the following list functions – \par
 \vspace{12pt}
 SN \hspace*{0.5in} Function with Description \par
-1 \hspace*{0.5in} cmp(list1, list2) \par
+\begin{enumerate}
+\item \hspace*{0.5in} cmp(list1, list2) \par
 \vspace{12pt}
 Compares elements of both lists. \par
-2 \hspace*{0.5in} len(list) \par
+\item \hspace*{0.5in} len(list) \par
 \vspace{12pt}
 Gives the total length of the list. \par
-3 \hspace*{0.5in} max(list) \par
+\item \hspace*{0.5in} max(list) \par
 \vspace{12pt}
 Returns item from the list with max value. \par
-4 \hspace*{0.5in} min(list) \par
+\item \hspace*{0.5in} min(list) \par
 \vspace{12pt}
 Returns item from the list with min value. \par
-5 \hspace*{0.5in} list(seq) \par
+\item \hspace*{0.5in} list(seq) \par
 \vspace{12pt}
 Converts a tuple into list. \par
+\end{enumerate}
 Python includes following list methods \par
 SN \hspace*{0.5in} Methods with Description \par
-1 \hspace*{0.5in} list.append(obj) \par
+\begin{enumerate}
+\item \hspace*{0.5in} list.append(obj) \par
 \vspace{12pt}
 Appends object obj to list \par
-2 \hspace*{0.5in} list.count(obj) \par
+\item \hspace*{0.5in} list.count(obj) \par
 \vspace{12pt}
 Returns count of how many times obj occurs in list \par
-3 \hspace*{0.5in} list.extend(seq) \par
+\item \hspace*{0.5in} list.extend(seq) \par
 \vspace{12pt}
 Appends the contents of seq to list \par
-4 \hspace*{0.5in} list.index(obj) \par
+\item \hspace*{0.5in} list.index(obj) \par
 \vspace{12pt}
 Returns the lowest index in list that obj appears \par
-5 \hspace*{0.5in} list.insert(index, obj) \par
+\item \hspace*{0.5in} list.insert(index, obj) \par
 \vspace{12pt}
 Inserts object obj into list at offset index \par
-6 \hspace*{0.5in} list.pop(obj=list[-1]) \par
+\item \hspace*{0.5in} list.pop(obj=list[-1]) \par
 \vspace{12pt}
 Removes and returns last object or obj from list \par
-7 \hspace*{0.5in} list.remove(obj) \par
+\item \hspace*{0.5in} list.remove(obj) \par
 \vspace{12pt}
 Removes object obj from list \par
-8 \hspace*{0.5in} list.reverse() \par
+\item \hspace*{0.5in} list.reverse() \par
 \vspace{12pt}
 Reverses objects of list in place \par
-9 \hspace*{0.5in} list.sort([func]) \par
+\item \hspace*{0.5in} list.sort([func]) \par
 \vspace{12pt}
 Sorts objects of list, use compare func if given \par
 \vspace{12pt}
-Python memiliki tipe daftar built-in yang hebat dengan nama "daftar". Daftar literal ditulis dalam tanda kurung siku []. Daftar bekerja sama dengan senar - gunakan fungsi len () dan tanda kurung siku [] untuk mengakses data, dengan elemen pertama di indeks 0. (Lihat daftar dokumen python.org resmi). \par
+\end{enumerate}
+Python memiliki tipe daftar built-in yang hebat dengan nama \"daftar\". Daftar literal ditulis dalam tanda kurung siku []. Daftar bekerja sama dengan senar - gunakan fungsi len () dan tanda kurung siku [] untuk mengakses data, dengan elemen pertama di indeks 0. (Lihat daftar dokumen python.org resmi). \par
 \vspace{12pt}
+\begin{verbatim}
 ~ Warna = ['merah', 'biru', 'hijau'] \par
-~ cetak warna [0]  $  \#  $ $  \#  $ merah \par
-~ cetak warna [2]  $  \#  $ $  \#  $ hijau \par
-~ Cetak len (warna)  $  \#  $ $  \#  $ 3 \par
+~ cetak warna [0]  \$  \#  \$ \$  \#  \$ merah \par
+~ cetak warna [2]  \$  \#  \$ \$  \#  \$ hijau \par
+~ Cetak len (warna)  \$  \#  \$ \$  \#  \$ 3 \par
+\end{verbatim}
 \vspace{12pt}
 \vspace{12pt}
   \par
 Tugas dengan = daftar tidak membuat salinan. Sebagai gantinya, tugas membuat kedua variabel menunjuk ke satu daftar di memori. \par
 \vspace{12pt}
-~ B = warna  $  \#  $ $  \#  $ Tidak menyalin daftar \par
-  \par
-"Daftar kosong" hanyalah sepasang kurung kosong []. '+' Bekerja untuk menambahkan dua daftar, jadi [1, 2] + [3, 4] menghasilkan [1, 2, 3, 4] (ini sama seperti + dengan string). \par
+\begin{verbatim}
+~ B = warna  \$  \#  \$ \$  \#  \$ Tidak menyalin daftar \par
+\"Daftar kosong\" hanyalah sepasang kurung kosong []. '+' Bekerja untuk menambahkan dua daftar, jadi [1, 2] + [3, 4] menghasilkan [1, 2, 3, 4] (ini sama seperti + dengan string). \par
 FOR dan IN \par
+\end{verbatim}
 \vspace{12pt}
 Python's * untuk * dan * in * constructs sangat berguna, dan penggunaan pertama dari yang akan kita lihat adalah dengan daftar. * Untuk * membangun - untuk daftar var - adalah cara mudah untuk melihat setiap elemen dalam daftar (atau koleksi lainnya). Jangan menambah atau menghapus dari daftar selama iterasi. \par
 \vspace{12pt}
+\begin{verbatim}
 ~ kotak = [1, 4, 9, 16] \par
 ~ Jumlah = 0 \par
 ~ Untuk num dalam kotak: \par
 ~~~ Jumlah + = num \par
 ~ Jumlah cetak \par
+\end{verbatim}
 \vspace{12pt}
-Jika Anda tahu hal macam apa yang ada dalam daftar, gunakan nama variabel dalam lingkaran yang menangkap informasi seperti "num", atau "name", atau "url". Karena kode python tidak memiliki sintaks lain untuk mengingatkan Anda tentang tipe, nama variabel Anda adalah cara kunci bagi Anda untuk tetap mempertahankan apa yang sedang terjadi. \par
+Jika Anda tahu hal macam apa yang ada dalam daftar, gunakan nama variabel dalam lingkaran yang menangkap informasi seperti \"num\", atau \"name\", atau \"url\". Karena kode python tidak memiliki sintaks lain untuk mengingatkan Anda tentang tipe, nama variabel Anda adalah cara kunci bagi Anda untuk tetap mempertahankan apa yang sedang terjadi. \par
 \vspace{12pt}
 * Dalam * membangun sendiri adalah cara mudah untuk menguji apakah sebuah elemen muncul dalam daftar (atau koleksi lainnya) - nilai dalam koleksi - tes jika nilainya ada dalam koleksi, mengembalikan True / False. \par
 \vspace{12pt}
+\begin{verbatim}
 ~ Daftar = ['larry', 'curly', 'moe'] \par
 ~ jika 'keriting' dalam daftar: \par
 ~~~ Cetak 'yay' \par
+\end{verbatim}
 \vspace{12pt}
 The for / in constructs sangat umum digunakan pada kode Python dan bekerja pada tipe data selain list, jadi sebaiknya hafalkan sintaksnya. Anda mungkin memiliki kebiasaan dari bahasa lain di mana Anda memulai pengulangan manual melalui koleksi, dengan Python yang seharusnya Anda gunakan untuk / in. \par
 \vspace{12pt}
