@@ -3,14 +3,14 @@
 \begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Modules} \\}\end{center} \par
 \vspace{12pt}
 \noindent 
-Modul memungkinkan Anda mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami dan digunakan. Modul adalah objek Python dengan atribut yang diberi nama sewenang-wenang sehingga Anda bisa mengikat dan memberi referensi. \par
+Modul memungkinkan Anda mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami dan digunakan. Modul merupakan objek Python dengan atribut yang diberi nama sewenang-wenang sehingga Anda bisa mengikat dan memberi referensi. \par
 \noindent 
-Cukup, modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas dan variabel. Modul juga bisa menyertakan kode runnable. \par
+Cukup, modul merupakan file yang terdiri dari kode Python. Modul bisa mendefinisikan fungsi, kelas dan variabel. Modul juga dapat menyertakan kode runnable. \par
 \vspace{12pt}
 \noindent 
 Example \par
 \noindent 
-Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py \par
+Kode Python untuk sebuah modul yang di beri nama aname biasanya berada pada sebuah file bernama aname.py. Berikut merupakan contoh modul sederhana, support.py \par
 \noindent 
  \hspace*{0.5in} def print $  \_  $func( par ): \par
 \noindent 
@@ -25,7 +25,7 @@ Anda dapat menggunakan file sumber Python apapun sebagai modul dengan mengekseku
 \noindent 
  \hspace*{0.5in} import module1[, module2[,... moduleN] \par
 \noindent 
-Ketika penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Anda perlu meletakkan perintah berikut di bagian atas skrip - \par
+Ketika penafsir menemukan sebuah pernyataan impor, ia mengimpor modul apabila modul tersebut berada di jalur pencarian. Jalur pencarian merupakan daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Anda perlu meletakkan perintah berikut di bagian atas skrip - \par
 \noindent 
  \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
@@ -84,7 +84,7 @@ Jalur pencarian modul disimpan dalam sistem modul sys sebagai sys.pathvariable. 
 \noindent 
 The $  $PYTHONPATH $  $Variable: \par
 \noindent 
-The PYTHONPATH adalah variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. \par
+The PYTHONPATH merupakan variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. \par
 \noindent 
 Berikut adalah PYTHONPATH khas dari sistem Windows: \par
 \noindent 
@@ -105,9 +105,9 @@ Python membuat tebakan terdidik tentang apakah variabel bersifat lokal atau glob
 \noindent 
 Oleh karena itu, untuk menetapkan nilai pada variabel global dalam suatu fungsi, Anda harus terlebih dahulu menggunakan pernyataan global. \par
 \noindent 
-Pernyataan global VarName memberitahu Python bahwa VarName adalah variabel global. Python berhenti mencari namespace lokal untuk variabel tersebut. \par
+Pernyataan global VarName memberitahu Python bahwa VarName merupakan variabel global. Python berhenti mencari namespace lokal untuk variabel tersebut. \par
 \noindent 
-Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespace. Dalam fungsi Money, kita menetapkan Money a value, oleh karena itu Python mengasumsikan variabel lokal Moneyas. Namun, kami mengakses nilai variabel lokal Moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya. Uncommenting pernyataan global memperbaiki masalahnya. \par
+Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespace. Dalam fungsi Money, kita menetapkan Money a value, oleh karena itu Python mengasumsikan variabel lokal Moneyas. Namun, kami mengakses nilai variabel lokal Moneybefore yang mengaturnya, jadi UnboundLocalError merupakan hasilnya. Uncommenting pernyataan global memperbaiki masalahnya. \par
 \noindent 
  \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
@@ -134,7 +134,7 @@ The dir( ) Function \par
 \noindent 
 Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul. \par
 \noindent 
-Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut adalah contoh sederhana - \par
+Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut merupakan contoh sederhana - \par
 \noindent 
  \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
@@ -161,7 +161,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
  \hspace*{0.5in} 'sqrt', 'tan', 'tanh'] \par
 \noindent 
-Di sini, variabel string khusus  $  \_  $ $  \_  $name $  \_  $ $  \_  $ adalah nama modul, dan  $  \_  $ $  \_  $file $  \_  $ $  \_  $ adalah nama file tempat modul dimuat. \par
+Di sini, variabel string khusus  $  \_  $ $  \_  $name $  \_  $ $  \_  $ adalah nama modul, dan  $  \_  $ $  \_  $file $  \_  $ $  \_  $ merupakan nama file tempat modul dimuat. \par
 \vspace{12pt}
 \noindent 
 The $  $globals() $  $and $  $locals() $  $Functions  $ - $ \par
@@ -183,14 +183,14 @@ Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, 
 \noindent 
  \hspace*{0.5in} reload(module $  \_  $name) \par
 \noindent 
-Di sini, module $  \_  $name adalah nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - \par
+Di sini, module $  \_  $name merupakan nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - \par
 \noindent 
  \hspace*{0.5in} reload(hello) \par
 \vspace{12pt}
 \noindent 
 Packages in Python \par
 \noindent 
-Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul dan subpackages dan sub-subpackages, dan seterusnya. \par
+Paket merupakan struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul dan subpackages dan sub-subpackages, dan seterusnya. \par
 \noindent 
 Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut - \par
 \noindent 
@@ -254,7 +254,7 @@ Jika Anda berhenti dari juru bahasa Python dan memasukkannya lagi, definisi yang
 \noindent 
 Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat diimpor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator). \par
 \noindent 
-Modul adalah file yang berisi definisi dan pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global  $  \_  $ $  \_  $name $  \_  $ $  \_  $. Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut. \par
+Modul merupakan file yang berisi definisi dan pernyataan Python. Nama file merupakan nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global  $  \_  $ $  \_  $name $  \_  $ $  \_  $. Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut. \par
 \vspace{12pt}
 \noindent 
 6.1. More on Modules \par
@@ -320,7 +320,7 @@ Ketika sebuah modul bernama spam diimpor, penerjemah pertama-tama mencari modul 
  $ \bullet $ Default yang tergantung pada instalasi. \par
 \vspace{12pt}
 \noindent 
-Setelah inisialisasi, program Python dapat memodifikasi sys.path. Direktori yang berisi skrip yang dijalankan ditempatkan di awal jalur pencarian, di depan jalur perpustakaan standar. Ini berarti skrip di direktori itu akan dimuat alih-alih modul dengan nama yang sama di direktori perpustakaan. Ini adalah kesalahan kecuali penggantinya. Lihat bagian Modul Standar untuk informasi lebih lanjut. \par
+Setelah inisialisasi, program Python dapat memodifikasi sys.path. Direktori yang berisi skrip yang dijalankan ditempatkan di awal jalur pencarian, di depan jalur perpustakaan standar. Ini berarti skrip di direktori itu akan dimuat alih-alih modul dengan nama yang sama di direktori perpustakaan. Ini merupakan kesalahan kecuali penggantinya. Lihat bagian Modul Standar untuk informasi lebih lanjut. \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
@@ -329,7 +329,7 @@ Setelah inisialisasi, program Python dapat memodifikasi sys.path. Direktori yang
 Untuk mempercepat pemuatan modul, Python menyimpan versi yang dikompilasi setiap modul di direktori  $  \_  $ $  \_  $pycache $  \_  $ $  \_  $ dengan nama module.version.pyc, di mana versi tersebut mengkodekan format file yang dikompilasi; Umumnya berisi nomor versi Python. Sebagai contoh, dalam rilis CPython 3.3 versi terkompilasi dari spam.py akan di-cache sebagai  $  \_  $ $  \_  $pycache  $  \_  $ $  \_  $ / spam.cpython-33.pyc. Konvensi penamaan ini memungkinkan modul yang dikompilasi dari berbagai rilis dan versi Python yang berbeda untuk hidup berdampingan.  \par
 \vspace{12pt}
 \noindent 
-Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk melihat apakah sudah ketinggalan zaman dan perlu dikompilasi ulang. Ini adalah proses yang benar-benar otomatis. Selain itu, modul yang dikompilasi bersifat platform-independen, sehingga perpustakaan yang sama dapat dibagi antar sistem dengan arsitektur yang berbeda. Python tidak memeriksa cache dalam dua situasi. Pertama, selalu mengkompilasi ulang dan tidak menyimpan hasilnya untuk modul yang dimuat langsung dari baris perintah. Kedua, tidak memeriksa cache jika tidak ada modul sumber. Untuk mendukung distribusi non-source (dikompilasi saja), modul yang dikompilasi harus berada dalam direktori sumber, dan tidak boleh ada modul sumber. \par
+Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk melihat apakah sudah ketinggalan zaman dan perlu dikompilasi ulang. Ini merupakan proses yang benar-benar otomatis. Selain itu, modul yang dikompilasi bersifat platform-independen, sehingga perpustakaan yang sama dapat dibagi antar sistem dengan arsitektur yang berbeda. Python tidak memeriksa cache dalam dua situasi. Pertama, selalu mengkompilasi ulang dan tidak menyimpan hasilnya untuk modul yang dimuat langsung dari baris perintah. Kedua, tidak memeriksa cache jika tidak ada modul sumber. Untuk mendukung distribusi non-source (dikompilasi saja), modul yang dikompilasi harus berada dalam direktori sumber, dan tidak boleh ada modul sumber. \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
