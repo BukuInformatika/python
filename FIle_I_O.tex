@@ -368,22 +368,22 @@ import os \par
 os.chdir("/home/newdir") \par
 \vspace{12pt}
 \noindent 
- \$  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ This would give location of the current directory \par
+ \$  \#  \$ This would give location of the current directory \par
 \noindent 
 os.getcwd() \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $~This~would  remove "/tmp/test"  directory. \par
+ \$  \#  \$~This~would  remove "/tmp/test"  directory. \par
 \noindent 
 os.rmdir(~"/tmp/test"  ) \par
 \vspace{12pt}
@@ -400,7 +400,7 @@ Openfile = open ('pathtofile', 'r') \par
 \noindent 
 Openfile.read () \par
 \vspace{12pt}
-Itu menarik. Anda akan melihat banyak simbol ' $  \setminus  $ n'. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. Carilah dan Anda Temukan Apakah Anda mencoba mengetik di print openfile.read ()? Apakah itu gagal? Kemungkinan besar, dan alasannya adalah karena 'kursor' telah mengubah tempatnya. Kursor Kursor apa Nah, kursor yang sebenarnya tidak bisa kamu lihat, tapi tetap kursor. Kursor tak terlihat ini memberitahukan fungsi baca (dan banyak fungsi I / O lainnya) dari mana mulai. Untuk mengatur di mana kursor berada, Anda menggunakan fungsi seek (). Ini digunakan dalam bentuk seek (offset, dari mana). Mana yang opsional, dan menentukan mana yang harus dicari. Jika darimana 0, byte / huruf dihitung dari awal. Jika 1, byte dihitung dari posisi kursor saat ini. Jika 2, maka byte dihitung dari akhir file. Jika tidak ada yang diletakkan di sana, 0 diasumsikan. \par
+Itu menarik. Anda akan melihat banyak simbol ' \$  \setminus  \$ n'. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. Carilah dan Anda Temukan Apakah Anda mencoba mengetik di print openfile.read ()? Apakah itu gagal? Kemungkinan besar, dan alasannya adalah karena 'kursor' telah mengubah tempatnya. Kursor Kursor apa Nah, kursor yang sebenarnya tidak bisa kamu lihat, tapi tetap kursor. Kursor tak terlihat ini memberitahukan fungsi baca (dan banyak fungsi I / O lainnya) dari mana mulai. Untuk mengatur di mana kursor berada, Anda menggunakan fungsi seek (). Ini digunakan dalam bentuk seek (offset, dari mana). Mana yang opsional, dan menentukan mana yang harus dicari. Jika darimana 0, byte / huruf dihitung dari awal. Jika 1, byte dihitung dari posisi kursor saat ini. Jika 2, maka byte dihitung dari akhir file. Jika tidak ada yang diletakkan di sana, 0 diasumsikan. \par
 \vspace{12pt}
 \noindent 
 Offset menggambarkan seberapa jauh dari mana kursor bergerak. sebagai contoh: \par
@@ -439,46 +439,46 @@ Mmm, acar Pickles, dengan Python, harus dimakan. Rasa mereka hanya untuk membiar
 Contoh Kode 3 - pickletest.py \par
 \vspace{12pt}
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ pickletest.py \par
+ \$  \#  \$ \$  \#  \$ \$  \#  \$ pickletest.py \par
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ PICKLE AN OBJECT \par
+ \$  \#  \$ \$  \#  \$ \$  \#  \$ PICKLE AN OBJECT \par
 \vspace{12pt}
 \noindent 
- $  \#  $ mengimpor modul acar \par
+ \$  \#  \$ mengimpor modul acar \par
 \noindent 
 Acar impor \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Mari membuat sesuatu untuk menjadi acar \par
+ \$  \#  \$ Mari membuat sesuatu untuk menjadi acar \par
 \noindent 
- $  \#  $ Bagaimana dengan daftar? \par
+ \$  \#  \$ Bagaimana dengan daftar? \par
 \noindent 
 picklelist = ['one', 2, 'three', 'four', 5, 'dapatkah kamu menghitung?'] \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Sekarang buat file \par
+ \$  \#  \$ Sekarang buat file \par
 \noindent 
- $  \#  $ ganti nama file dengan file yang ingin Anda buat \par
+ \$  \#  \$ ganti nama file dengan file yang ingin Anda buat \par
 \noindent 
 File = open ('filename', 'w') \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Sekarang mari kita pilih picklelist \par
+ \$  \#  \$ Sekarang mari kita pilih picklelist \par
 \noindent 
 pickle.dump (picklelist, file) \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Tutup file, dan pengawetan Anda sudah selesai \par
+ \$  \#  \$ Tutup file, dan pengawetan Anda sudah selesai \par
 \noindent 
 file.close () \par
 \vspace{12pt}
 \noindent 
-Kode untuk melakukan ini diletakkan seperti pickle.load (object $  \_  $to $  \_  $pickle, file $  \_  $object) di mana: \par
+Kode untuk melakukan ini diletakkan seperti pickle.load (object \$  \_  \$to \$  \_  \$pickle, file \$  \_  \$object) di mana: \par
 \vspace{12pt}
 \noindent 
-~~~ object $  \_  $to $  \_  $pickle adalah objek yang ingin Anda acar (yaitu simpan ke file) \par
+~~~ object \$  \_  \$to \$  \_  \$pickle adalah objek yang ingin Anda acar (yaitu simpan ke file) \par
 \noindent 
-~~~ file $  \_  $object adalah objek file yang ingin Anda tulis (dalam kasus ini, objek file adalah 'file') \par
+~~~ file \$  \_  \$object adalah objek file yang ingin Anda tulis (dalam kasus ini, objek file adalah 'file') \par
 \vspace{12pt}
 \noindent 
 Setelah Anda menutup file tersebut, buka di notepad dan lihat apa yang Anda lihat. Seiring dengan beberapa kue gibblygook lainnya, Anda akan melihat potongan daftar yang kami buat. \par
@@ -488,34 +488,34 @@ Sekarang untuk membuka kembali, atau unpickle, file Anda. Untuk menggunakan ini,
 Contoh kode 4 - unpickletest.py \par
 \vspace{12pt}
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ unpickletest.py \par
+ \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickletest.py \par
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ unpickle file \par
+ \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickle file \par
 \vspace{12pt}
 \noindent 
- $  \#  $ mengimpor modul acar \par
+ \$  \#  \$ mengimpor modul acar \par
 \noindent 
 Acar impor \par
 \vspace{12pt}
 \noindent 
- $  \#  $ sekarang buka file untuk dibaca \par
+ \$  \#  \$ sekarang buka file untuk dibaca \par
 \noindent 
- $  \#  $ ganti nama file dengan path ke file yang Anda buat di pickletest.py \par
+ \$  \#  \$ ganti nama file dengan path ke file yang Anda buat di pickletest.py \par
 \noindent 
 unpicklefile = open ('filename', 'r') \par
 \vspace{12pt}
 \noindent 
- $  \#  $ sekarang muat daftar yang kita acar ke objek baru \par
+ \$  \#  \$ sekarang muat daftar yang kita acar ke objek baru \par
 \noindent 
 unpickledlist = pickle.load (unpicklefile) \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Tutup file, hanya untuk keamanan \par
+ \$  \#  \$ Tutup file, hanya untuk keamanan \par
 \noindent 
 unpicklefile.close () \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Mencoba menggunakan daftar \par
+ \$  \#  \$ Mencoba menggunakan daftar \par
 \noindent 
 untuk item dalam unpickledlist: \par
 \noindent 
