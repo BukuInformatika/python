@@ -569,6 +569,20 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 Scope of Variables \par
 \noindent 
 Semua variabel dalam sebuah program mungkin tidak dapat diakses di semua lokasi dalam program tersebut. Ini tergantung di mana Anda telah menyatakan sebuah variabel. \par
+Contoh penggunaan scope variabel : 
+\begin{verbatim}
+ def bljrScope(A):
+ A = 10
+ print "Nilai A di dalam fungsi, a = ", A
+ # program utama
+ A = 30
+ print "Nilai a di luar fungsi, a = ", A
+ bljrScope(A)
+\end{verbatim
+ Output :
+ Nilai a di luar fungsi, a = 30
+ Nilai A di dalam fungsi, a = 10
+ Pada contoh diatas, variabel A didefinisikan di dua tempat yaitu di dalam fungsi bljrScope() dan di dalam program utama. 
 \noindent 
 Ruang lingkup variabel menentukan bagian dari program di mana Anda dapat mengakses pengenal tertentu. Ada dua lingkup dasar variabel dengan Python - \par
 \noindent 
