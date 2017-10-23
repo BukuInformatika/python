@@ -28,7 +28,7 @@ Python sendiri tidak mengizinkan karakter tanda baca. Python merupakan  bahasa p
 
 \subsection{keunggulan phyton}
 \begin{enumerate}
-    \item Tidak ada tahapan kompilasi dan penyambungan (link) sehingga kecepatan perubahan pada masa pembuatan sistem aplikasi meningkat. 
+    \item Tidak ada tahapan kompilasi dan penyambungan (link) sehingga kecepatan perubahan pada masa pembuatan sistem aplikasi                meningkat. 
     \item Tidak ada deklarasi tipe data yang merumitkan sehingga program menjadi lebih sederhana, singkat, dan fleksible. 
     \item Manajemen memori otomatis yaitu kumpulan sampah memori sehingga dapat menghindari pencacatan kode. 
     \item Tipe data dan operasi tingkat tinggi yaitu kecepatan pembuatan sistem aplikasi menggunakan tipe objek yang telah ada. 
@@ -100,7 +100,7 @@ atau nama pengenal lainnya. Semua kata kunci Python mengandung huruf kecil saja.
     \item elif, di, sementara
     \item lain, aku s, dengan
     \item kecuali, lambda, menghasilkan
-    \end{enumerate}
+\end{enumerate}
 
 \subsection{Program Python}
 Mari kita jalankan program dalam mode pemrograman yang berbeda. pemrograman mode interaktif memohon interpreter tanpa melewatkan file script sebagai parameter menampilkan prompt berikut :
@@ -119,7 +119,7 @@ Mari kita jalankan program dalam mode pemrograman yang berbeda. pemrograman mode
 Jika anda menjalankan versi baru Python, Anda perlu menggunakan pernyataan cetak dengan tanda kurung seperti pada cetak $("Hallo, Python!");$. Namun dengan versi Python 2.4.3, ini hasilnya sebagai berikut :
 Hello, Python!
 
-\subsubsuction{Masukan / Keluaran}
+\subsuction{Masukan / Keluaran}
 Berikut ini merupakan contoh program masukan ataupun keluaran:
 \begin{verbatim}
     Contoh masukan : 
@@ -199,6 +199,7 @@ Variabel dari satu jenis dapat dilemparkan sebagai yang lain dengan menggunakan 
 \subsection {Basic syntax}
 Visual Basic adalah salah suatu developement tools untuk membangun aplikasi dalam lingkungan Windows. Dalam pengembangan aplikasi, Visual Basic menggunakan pendekatan Visual untuk merancang user interface dalam bentuk form, sedangkan untuk kodingnya menggunakan dialek bahasa Basic yang cenderung mudah dipelajari. Visual Basic telah menjadi tools yang terkenal bagi para pemula maupun para developer. Dalam lingkungan Window’s User-interface sangat memegang peranan penting,karena dalam pemakaian aplikasi yang kita buat, pemakai senantiasa berinteraksi dengan User-interface tanpa menyadari bahwa dibelakangnya berjalan instruksi-instruksi program yang mendukung tampilan dan proses yang dilakukan.
 Pada pemrograman Visual, pengembangan aplikasi dimulai dengan pembentukkan user interface, kemudian mengatur properti dari objek-objek yang digunakan dalam user interface, dan baru dilakukan penulisan kode program untuk menangani kejadian-kejadian (event). Tahap pengembangan aplikasi demikian dikenal dengan istilah pengembangan aplikasi dengan pendekatan Bottom Up.
+
 \subsection {permasalahan yang terdapat di basic syntax}
 Permasalahan yang dibahas adalah membuat suatu pengkodean dengan
 menggunakan algoritma RC4. Masalah enkripsi data dengan algoritma RC4
@@ -213,36 +214,37 @@ ciphertext. Masing - masing elemen dalam tabel saling ditukarkan minimal sekali.
 Proses dekripsinya dilakukan dengan cara yang sama (karena Xor merupakan
 fungsi simetrik). Untuk menghasilkan keystream, cipher menggunakan state
 internal yang meliputi dua bagian :
-1. Tahap key scheduling dimana state automaton diberi nilai awal berdasar kan
-kunci enkripsi.
-State yang diberi nilai awal berupa array yang merepresentasikan suatu
-permutasi dengan 256 elemen, jadi hasil dari algoritma KSA adalah
-permutasi awal. Array yang mempunyai 256 elemen ini (dengan indeks 0
-sampai dengan 255) dinamakan S. Berikut adalah algoritma KSA dalam 
-29
-bentuk pseudo-code dimana key adalah kunci enkripsi dan keylength adalah besar kunci enkripsi dalam bytes (untuk kunci 128 bit, keylength = 16).
-\begin {equation}
-for i = 0 to 255
-S [i] := i
-j := 0
-for i = 0 to 255
-j := (j + S[i] + key [I mod keylenght] ) mod 256
-swap (S[i], S[j])
-\end {equation}
-2. Tahap pseudo-random generation dimana state automaton beroperasi dan
-outputnya menghasilkan keystream. Setiap putaran, bagian keystream sebesar
-1 byte (dengan nilai antara 0 sampai dengan 255) dioutput oleh PRGA
-berdasarkan state S. Berikut adalah algoritma PRGA dalam bentuk pseudocode:
-\begin {equation}
-i := 0
-j := 0
-loop
-i := ( i + 1 ) mod 256
-j := ( j + S[i] ) mod 256
-swap ( S[i], S[j] )
-output S[ (S[i] + S[j]) mod 256]
-\end {equation}
-\end
+\begin{enumerate}
+    \item Tahap key scheduling dimana state automaton diberi nilai awal berdasarkan
+     kunci enkripsi. State yang diberi nilai awal berupa array yang merepresentasikan suatu
+     permutasi dengan 256 elemen, jadi hasil dari algoritma KSA adalah
+     permutasi awal. Array yang mempunyai 256 elemen ini (dengan indeks 0
+    sampai dengan 255) dinamakan S. Berikut adalah algoritma KSA dalam 
+    bentuk pseudo-code dimana key adalah kunci enkripsi dan keylength adalah besar kunci enkripsi dalam bytes (untuk kunci 128 bit,         keylength = 16).
+    \begin {equation}
+    for i = 0 to 255
+    S [i] := i
+    j := 0
+    for i = 0 to 255
+    j := (j + S[i] + key [I mod keylenght] ) mod 256
+    swap (S[i], S[j])
+    \end {equation}
+    
+    \item Tahap pseudo-random generation dimana state automaton beroperasi dan
+    outputnya menghasilkan keystream. Setiap putaran, bagian keystream sebesar
+    1 byte (dengan nilai antara 0 sampai dengan 255) dioutput oleh PRGA
+    berdasarkan state S. Berikut adalah algoritma PRGA dalam bentuk pseudocode:
+    \begin {equation}
+    i := 0
+    j := 0
+    loop
+    i := ( i + 1 ) mod 256
+    j := ( j + S[i] ) mod 256
+    swap ( S[i], S[j] )
+    output S[ (S[i] + S[j]) mod 256]
+    \end
+    \end {equation}
+  \end {enumerate}
 
 \subsection {bentuk-bentuk basic syntax}
 Bentuk-bentuk kondisi yang ada pada visual basic adalah :
@@ -359,7 +361,7 @@ Max in first set = 50
 Max in second set = 501
 \end {verbatim}
 
-Function dalam bahasa Java
+\subsection {Function dalam bahasa Java}
 Jika Anda jelas tentang fungsi dalam pemrograman C, maka mudah untuk memahaminya di bahasa java, java menyebut function sebagai methods tapi sisa konsepnya kurang lebih sama. 
 Berikut ini adalah program sama seperti di atas yang ditulis di bahasa java 
 \begin {verbatim}
@@ -404,7 +406,7 @@ Max in first set = 50
 Max in second set = 501
 \end {verbatim}
 
-Function dalan bahasa Python
+\subsection {Function dalan bahasa Python}
 Jika Anda tahu konsep fungsi dalam pemrograman C dan Java, maka Python tidak jauh berbeda. Berikut basic syntax untuk mengunakan fucntion di python 
 
 \begin {verbatim}
