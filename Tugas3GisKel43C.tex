@@ -9,7 +9,12 @@
 
 \section{Basic Syntax}
 \subsection{Pengenalan Python}
-Python dikembangkan oleh Guido van Rossum (programmer kelahiran belanda) pada tahun 1990 di CWI, Amsterdam sebagai
+    \begin{figure} [ht]
+    \centerline{\includegraphics[width=1\textwidth](plagiarisme/logopython.JPG}}
+    \caption{Gambar Logo Python}
+    \label{logopython}
+    \end{figure}
+\ref {logopython}Python dikembangkan oleh Guido van Rossum (programmer kelahiran belanda) pada tahun 1990 di CWI, Amsterdam sebagai
 kelanjutan dari bahasa pemrograman ABC. Python adalah bahasa pemrograman interpretatif yang dianggap mudah dipelajari 
 serta berfokus pada keterbacaan kode. Dengan kata lain, Python diklaim sebagai bahasa perograman yang memiliki kode-kode
 pemrograman yang sangat jelas, lengkap dan mudah untuk dipahami. Python secara umum berbentuk pemrograman berorientasi
@@ -444,30 +449,20 @@ Max in first set =  50
 Max in second set =  501
 \end {verbatim}
 
-\section{Variable Types}
-Variabel tidak lain hanya merupakan sebuah lokasi memori yang dipesan yang fungsinya yaitu untuk menyimpan nilai. Hal ini berarti bahwa ketika kita membuat variabel, maka kita  memesan beberapa ruang di memori tersebut
-
-Berdasarkan tipe data sebuah variabel, penafsir mengalokasikan memori dan memutuskan apa yang dapat disimpan dalam memori yang dipesan. Oleh karena itu, dengan menetapkan tipe data yang berbeda ke variabel, kita dapat menyimpan bilangan bulat, desimal atau karakter dalam variabel ini.
-
-\subsection{Menetapkan Nilai ke Variabel}
-Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat kita menetapkan nilai ke variabel. Tanda sama (=) digunakan untuk menetapkan nilai pada variabel.
-
-Operand di sebelah kiri = operator adalah nama variabel dan operan di sebelah kanan = operator adalah nilai yang tersimpan dalam variabel. Misalnya –
+\section{Variable Type}
+\subsection{Python Variabel Type}
+Satu dari fitur yang paling powerful dari sebuah bahasa pemrograman adalah kemampuan utnuk memanipulasi variabel. Sebuah variabel adalah nama yang merujuk kesebuah nilai tertentu. Dalam Python, untuk membentuk variabel cukup memberi nama pada nilai yang kita inginkan. Satatement yang melakukan hal tersebut disebut asiignment.
     \begin{verbatim}
-        #!/usr/bin/python
-
-        counter = 100          # An integer assignment
-        miles   = 1000.0       # A floating point
-        name    = "John"       # A string
-
-        print counter
-        print miles
-        print name
-    \end{verbatim}
-
-Di sini, 100, 1000.0 dan "John" adalah nilai yang diberikan untuk melawan, mil, dan variabel nama masing-masing. Ini menghasilkan hasil sebagai berikut –
+        >>> pesan = "Hi, Apa Kabar Brother"
+        >>> n = 19
+        >>> pi = 3.14159
+     \end{verbatim}
+Contoh diatas menunjukkan tiga buah assignment. Contoh pertama memberi nilai "Hi, Apa Kabar Brother" pada variabel pesan, kedua memberi nilai 19 pada variabel n, dan ketiga memberi nilai 3.14159 pada variabel pi. Variabel akan memiliki tipe sesuai dengan nilainya.
     \begin{verbatim}
-      100
-      1000.0
-      John
-    \end{verbatim}
+        >>> type(mesg)
+        <type 'string'>
+        >>> type(n)
+        <type 'int'>
+        >>> type(pi)
+        <type 'float'>
+     \end{verbatim}
