@@ -41,25 +41,24 @@ Bahasa pemrograman pyhton dilengkapi dengan suatu fasilitas seperti shell di lin
 \subsubsection{perulangan}
 Dimana pada python dalam perulangan menggunakan statement for dan while. Yang dimana memiliki ciri berupa insialiasi perulangan dilakukan diawal statement dan perulangan itu akan berhenti bila syarat atua kondisi yang telah ditemukan terpenuhi.
 Beberapa bentuk while adalah sebagai berikut :
-\begin{equation}
 Perulangan sederhana 
 while x < 10: 
   print x, 
-  x = x + 1 
+  $x = x + 1$ 
 Perulangan di dalam perulangan 
 while x < 10: 
   while y < 10: 
     print y,  
-     y = y + 1 
+     $y = y + 1$ 
     print x, 
-    x = x + 1
+    $x = x + 1$
  Perulangan yang terus menerus
  while 1: 
     print \‘selamanya mengulang\’ 
   Perulangan dengan else 
   while x < 10: 
     print x, 
-    x = x + 1 
+    $x = x + 1$ 
    else: 
     print \‘Perulangan sudah selesai\’ 
    Hasilnya : 
@@ -71,13 +70,13 @@ while x < 10:
    >>> x = 1 >>>
    while x < 10: ...     
    print x, ...     
-   x = x + 1 
+   $x = x + 1$ 
    1 2 3 4 5 6 7 8 9 
    Contoh perulangan dengan while :
    >>> x = \‘universitas multimedia nusantara\’ 
    >>> while x: ...     
    print x ...     
-   x = x[1:] 
+   $x = x[1:]$ 
    universitas multimedia nusantara
    niversitas multimedia nusantara 
    iversitas multimedia nusantara 
@@ -118,7 +117,7 @@ Python 2.4.3(#1,May 24 2008,13:47:28) [GGc 4.1.2 20070626 (Red Hat 4.1.2-14)] on
 \begin{equation}
 >>> x=0
 >>> while x<10 :
-... x = x + 1
+... $x = x + 1$
 ... if x % 2:
 ...       continue
 ... else:
@@ -188,19 +187,19 @@ Beberapa fitur yang dapat dikatakan sebagai keunggulan python yaitu :
 \subsection{Script Python}
     Seringkali pengguna harus menuliskan ekspresi yang cukup kompleks dan akan digunakan secara berulang di kemudian hari. Untuk keperluan penulisan ekspresi kompleks, kita dapat membuatnya dalam sebuah script yang dibantu dengan adanya teks editor. Penulis menggunakan vi teks editor default yang terdapat pada distro GNU/Linux. Pada contoh berikut ini, kita dapat melihat contoh script Python yang sederhana : 
 \begin{enumerate}
-$ vi contoh-script-01.py
+vi contoh-script-01.py
 #!/usr/bin/python
 a = 1
 print 'Nilai a adalah :',a
 simpan script anda dengan :
 :wq!
   Secara default, script Python yang anda buat akan disimpan dengan ekstensi .py . Anda dapat melakukan eksekusi script yang telah anda buat tersebut dengan cara :
-    $ python contoh-script-01.py
+    	python contoh-script-01.py
     atau :
     Memberikan permission x (executable) sehingga
    script tersebut dapat dijalankan, dengan perintah :
-    $ chmod +x contoh-script-01.py
-    $ ./contoh-script-01.py
+    chmod +x contoh-script-01.py
+    /contoh-script-01.py
 \end{enumerate}
 
 \subsection{Kelebihan dan Kekurangan}
@@ -223,6 +222,7 @@ simpan script anda dengan :
 \item Kompilasi untuk portable kode byte sehingga kecepatan eksekusi bertambah dan melindungi kode sumber.
 \item Antarmuka terpasang untuk pelayanan keluar seperti perangkat Bantu system, GUI, persistence, database, dll.
 \end{enumerate}
+
 \subsubsection{Kekurangan}
 \begin{enumerate}
 \item Beberapa penugasan terdapat diluar dari jangkauan python, seperti bahasa pemrograman dinamis lainnya, python tidak secepat atau efisien sebagai statis, tidak seperti bahasa pemrograman kompilasi seperti bahasa C.
@@ -238,9 +238,9 @@ simpan script anda dengan :
 \subsection{Elemen Dasar Python}
 Bahasa pemrograman python memiliki beberapa elemen penting, diantaranya yaitu :
 \begin{enumerate}
-\item Himpunan Karakter
+	\item Himpunan Karakter
 		Semua karakter di python terdiri dari huruf besar, huruf kecil, angka dan simbol-simbol lainnya yang terdapat pada keyword dapat digunakan untuk menandai atau memberikan nama terhadap sebuah data atau object.
-\item Pengenal 
+	\item Pengenal 
 		Pengenal (identifier) merupakan suatu nama yang biasa dipakai oleh user (programmer) untuk menamakan : variabel, konstanta, tipe data, fungsi, label, objek, serta hal-hal lain. Karena python memiliki penamaan case sensitive maksudnya huruf besar dan kecil berbeda.Contoh : No_mahasiswa berbeda dengan no_mahasiswa
 	\item Nama Variabel harus diawali dengan huruf atau karakter garis bawah (_), selanjutnya dapat diikuti dengan huruf maupun angka atau tanda garis bawah.Nama Variabel tidak boleh diawali dengan angka.
 	\item Nama Variabel tidak boleh menggunakan operator-operator aritmatika dan karakter khusus.
@@ -248,7 +248,7 @@ Bahasa pemrograman python memiliki beberapa elemen penting, diantaranya yaitu :
 	\item Nama Variabel tidak boleh menggunakan kata-kata yang telah memiliki arti khusus dalam bahasa python.
 	\item Penggunaan huruf kecil dan huruf besar dibedakan.
 	\item Panjang maksimal suatu variabel adalah 32 karakter sehingga jika mendeklarasikan suatu variabel yang panjangnya lebih dari 32 karakter, secara otomatis sistem tetap akan mengenali sepanjang 32 karakter saja.
-\item Kata Kunci
+	\item Kata Kunci
 		Kata kunci (keywords) merupakan pengenal ke sistem python yang mempunyai arti khusus bagi interpreter python dan kata kunci juga merupakan kumpulan kata yang dicadangkan. kata-kata ini tidak boleh digunakan sebagai identifier.
 \end{enumerate}
 
