@@ -95,3 +95,203 @@ hello world
 
 Python memiliki konsep desain yang bagus dan sederhana, yang berfokus pada kemudahan dalam penggunaan. Kode Python dirancang untuk mudah dibaca, dipelajari, digunakan ulang, dan dirawat. Selain itu, Python juga mendukung pemograman berorientasi objek dan pemograman fungsional.
 Python dapat meningkatkan produktivias dan menghemat waktu bagi para programmer. Untuk memperoleh hasil program yang sama, kode Python juga jauh lebih sedikit dibandngkan dengan kode yang ditulis menggunakan bahasa-bahasa pemograman lain seperti C, C++,C# maupun Java.
+
+
+\subsection{Tipe Data Phyton}
+	Menggunakan tipe Number
+
+Tipe data Number digunakan untuk menyimpan nilai-nilai numerik. Tipe ini merupakan tipe data immutable, yang artinya jika kita mengubah nilai dari sebuah data, maka kita akan mengalokasikan obyek baru. Sama seperti tipe data lainnya, obyek Number dibuat ketika kita memberikan sebuah nilai padanya. Contoh:
+
+>>>data = 1
+
+Kita juga dapat mengubah nilai yang ada dalam variable data tersebut.
+
+>>>data = data + 1
+>>>data=3.50
+>>>floatdat = 7.5
+>>>data = floatdat
+
+Kita dapat menghapus sebuah obyek ataupun banyak obyek dengan menggunakan pernyataan del. Misalnya:
+
+>>>del data
+>>>del data, floatdat
+
+Python mengelompokkan tipe Number dalam 4 macam, yaitu:
+
+Plain Integer
+Plain integer atau bilangan bulat merupakan tipe data yang sering kita temui pada semua bahasa pemrograman. Integer ini mempunyai range nilai antara -2^32 sampai 2^31 – 1. Tipe ini juga dapat ditulis dalam bentuk octal (di tanda awalan “0”) maupun hexadesimal (ditandai awalan “0x” atau “0X”). Contoh:
+10 100 6542 -784
+083 -042 -0x43 0X61
+
+Long Integer
+Long integer sangat membantu kita untuk perhitungan di luar range nilai integer. Secara virtual, tidak ada batasan nilai tergantung besar virtual memory yang kita gunakan. Akhiran ‘l‘ atau ‘L‘ disetiap nilai bilangan bulat menandakan bahwa data tersebut bertipe long integer.
+562718819L -0x526718L 012L -567299101L
+
+Floating Point Real Number
+Tipe ini sering disebut sebagai tipe real (atau float). Tipe ini sama dengan tipe double di C. Nilai float mempunyai dua bagian, bagian titik desimal dan bagian eksponensial. Tanda positif atau negatif diantara “e” merupakan tanda eksponen. Contoh nilai float:
+0.0 14.5 -15.4 32.3+e18
+-90.76712 -90. -32.54e100 70.2-E12
+
+Complex Number
+Sebuah bilangan kompleks biasanya ditunjukkan oleh bentuk a + bj, dimana a adalah bagian real dan b adalah bagian imajiner. Bagian imajiner merupakan bilangan di awal tanda “j” atau “J“. Berikut ini contoh bilangan kompleks:
+3.14j 45j 54.56+12.1J 3e+36J
+
+Bagian real dan imajiner dari bilangan kompleks dapat kita pisahkan menggunakan data atribut, yaitu menggunakan real dan imag. Sedangkan untuk mendapatkan konjugasi dari bilangan kompleks tersebut, kita dapat menggunakan metode conjugate().
+
+>>> kompleks = 23.45-1.23J
+>>> kompleks.real
+23.45
+>>> kompleks.imag
+-1.23
+>>> kompleks.conjugate()
+(23.45+1.23j)
+
+String merupakan salah satu tipe data yang sering digunakan dalam pemrograman Python. Sebuah string dapat dinyatakan sebagai kumpulan karakter yang dibatasi oleh satu atau dua tanda petik. Inilah contohnya,
+
+>>> nama = "Klinik Python Indonesia"
+>>> nama
+'Klinik Python Indonesia'
+>>> slm = 'Salam Python Dahsyat!'
+>>> slm
+'Salam Python Dahsyat!'
+>>> print slm
+Salam Python Dahsyat!
+
+Dari contoh di atas, ketika kita memanggil variabel secara langsung maka akan ditampilkan isi dari variabel tersebut dengan sebuah tanda petik. Namun jika kita menggunakan pernyataan print, maka tanda petik tersebut akan dihilangkan.
+
+Menampilkan Tanda Petik Sebagai String
+
+Di dalam sebuah string tidak dapat berisi tanda petik yang sama dengan tanda petik yang digunakan oleh string tersebut. Misalkan, ketika kita menuliskan 'Py'thon' maka akan muncul pesan kesalahan (syntax error). Agar tidak muncul pesan kesalahan, kita bisa mengganti tanda petik luarnya dengan tanda petik ganda, misalnya "Py'thon". Tanda petik juga dapat ditulis setelah tanda backslash (\) agar dapat ditampilkan sebagai string.
+
+>>> str = "Py'thon"
+>>> str
+"Py'thon"
+>>> str2 = 'Py"thon'
+>>> str2
+'Py"thon'
+>>> "\"OK, \" sampai ketemu lagi."
+'"OK, " sampai ketemu lagi.'
+
+Kode \n atau Triple Quotes Juga Boleh!
+
+Jika kita ingin menuliskan string yang panjang dalam beberapa baris, maka kita perlu menambahkan tanda backslash diikuti huruf n (\n) sebagai tanda baris baru.
+
+>>> teks = "Python adalah bahasa pemrograman yang powerfull.\nTerbukti Python bisa dijalankan di segala platform OS.\nJadi, saatnya kita menggunakan Python sebagai bahasa permrograman \nsehari-hari. Salam Python Dahsyat!"
+
+Tanda \n akan memberikan perintah membuat baris baru jika kita memanggil teks dengan pernyataan print.
+
+>>> print teks
+Python adalah bahasa pemrograman yang powerfull.
+Terbukti Python bisa dijalankan di segala platform OS.
+Jadi, saatnya kita menggunakan Python sebagai bahasa permrograman
+sehari-hari. Salam Python Dahsyat!
+
+Kita juga dapat menggunakan tanda petik tiga (triple quotes), """ atau ''', untuk menuliskan sebuah string yang panjang dalam beberapa baris.
+
+>>> teks = """Python adalah bahasa pemrograman yang powerfull.
+... Terbukti Python bisa dijalankan di segala platform OS.
+... Jadi, saatnya kita menggunakan Python sebagai bahasa pemrograman
+... sehari-hari. Salam Python Dahsyat!"""
+
+Tampilan teks dengan pernyataan print seperti di bawah ini,
+
+>>> print teks
+Python adalah bahasa pemrograman yang powerfull.
+Terbukti Python bisa dijalankan di segala platform OS.
+Jadi, saatnya kita menggunakan Python sebagai bahasa pemrograman
+sehari-hari. Salam Python Dahsyat!
+
+Menggabungkan String
+
+Untuk menggabungkan dua buah string atau lebih, kita dapat menggunakan operator +. Sedangkan untuk menggandakan string, kita gunakan operator *.
+
+>>> blog = 'Klinik' + 'Python'
+>>> blog
+'KlinikPython'
+>>> newblog = blog*5
+>>> newblog
+'KlinikPythonKlinikPythonKlinikPythonKlinikPythonKlinikPython'
+>>> blog *= 4
+>>> print blog
+KlinikPythonKlinikPythonKlinikPythonKlinikPython
+
+Jika dua string ditulis secara berurutan, maka secara langsung kedua string tersebut akan digabungkan.
+
+>>> blog = 'Klinik''Python'
+>>> blog
+'KlinikPython'
+
+Menentukan Panjang String
+
+Panjang dari sebuah string dapat kita temukan dengan menggunakan fungsi len().
+
+>>> len(blog)
+12
+
+Memecah String
+
+Tidak seperti bahasa lainnya, Python tidak mendukung tipe Karakter. Untuk mengambil satu karakter atau lebih dari sebuah string, kita dapat memecah string tersebut menggunakan indeks (disebut Metode Irisan). Irisan terdiri dari dua indeks yang dipisahkan tanda koma.
+
+>>> buah = 'Nanas'
+>>> buah[0]
+'N'
+>>> buah[0:2]
+'Na'
+>>> buah[0:4]
+'Nana'
+>>> buah[0:5]
+'Nanas'
+
+Dari contoh di atas, panjang string buah adalah 5. Ketika kita menghitung maju, indeks bernilai 0 sampai (panjang-string – 1) dimulai dari kiri ke kanan. Maka dari itu, kita dapat mengakses setiap karakter dalam range 0 sampai 4.
+
+Sebuah string juga dapat dihitung mundur, dengan indeks -1 sampai (negatif panjang-string) dimulai dari kanan ke kiri. Berikut gambaran lengkapnya, baik itu penghitungan maju atau mundur.
+
+Contoh penggunaan penghitungan mundur,
+
+>>> buah[-1]
+‘s’
+>>> buah[-5]
+‘N’
+>>> buah[-5:-1]
+‘Nana’
+>>> buah[1:-1]
+‘ana’
+
+Jika kita lupa berapa nilai indeks awala atau indeks akhir, kita dapat kosongkan indeks tersebut.
+
+>>> buah[:3]
+‘Nan’
+>>> buah[2:]
+‘nas’
+
+Pengosongan indeks akan menyebabkan semua string ditampilkan.
+
+>>> buah[:]
+‘Nanas’
+
+String Bersifat Immutable
+
+Tipe data String pada Python bersifat immutable, yang artinya sekali dibuat maka tidak dapat diubah kembali. Ada pertanyaan bagus, jika string bersifat immutable, mengapa kita bisa mengubah nilai dari variabel string tersebut? Jawabannya sangat sederhana. Ketika kita memberikan nilai yang berbeda pada variabel string, sebuah obyek baru berhasil kita buat. Lihat contoh berikut,
+
+>>> nama = "Klinik"
+>>> nama
+'Klinik'
+>>> id(nama)
+3076962016L
+>>> nama = "Python"
+>>> id(nama)
+3077289888L
+
+Catat bahwa ketika string nama telah kita buat, maka identitas dari variabel ini dapat kita ketahui dengan menggunakan fungsi id(). Jika kita ubah nilai dari variabel nama tersebut, maka identitasnya juga berubah. Hal ini menandakan bahwa obyek baru telah dibuat. Penggantian nilai pada string pada posisi indeks tertentu akan menghasilkan pesan kesalahan.
+
+>>> nama[0] = 'K'
+Traceback (most recent call last):
+File "", line 1, in
+TypeError: 'str' object does not support item assignment
+
+Kita juga dapat menambahkan sebuah string baru pada string lama.
+
+>>> 'Si' + nama[0]
+'SiP'
+>>> 'J' + nama[1:]
+'Jython'
