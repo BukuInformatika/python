@@ -9,7 +9,7 @@
 
 \subsection{Penjelasan}
 Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya 
-Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut adalah daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar.
+Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut ini merupakan daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar.
 Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. 
 Daftar Pengecualian Standar 
 \subsection{EXCEPTION NAME DESCRIPTION}
@@ -67,7 +67,7 @@ Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global.
 \subsubsection{UnboundLocalError}
 
 \subsubsection{EnvironmentError}
-Dibesarkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak ada nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python.
+Dibesarkan saat kita mencoba mengakses variabel lokal di dalam suatu fungsi atau metode namun tidak terdapat nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python.
 
 \subsubsection{IOError}
 IOError Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi.
@@ -79,9 +79,9 @@ Dibesarkan saat indentasi tidak ditentukan dengan benar.
 
 
 \vspace{12pt}
-SystemError \hspace*{0.5in} Dibesarkan saat penafsir menemukan masalah internal, namun bila kesalahan ini ditemui juru bahasa Python tidak keluar. \par
+SystemError \hspace*{0.5in} Dibesarkan saat penafsir menemukan masalah internal, bila kesalahan ini ditemui juru bahasa Python tidak keluar. \par
 \vspace{12pt}
-SystemExit \hspace*{0.5in} Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Jika tidak ditangani dalam kode, menyebabkan penafsir untuk keluar. \par
+SystemExit \hspace*{0.5in} Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Apabila tidak ditangani dalam kode, menyebabkan penafsir untuk keluar. \par
 \vspace{12pt}
 TypeError \hspace*{0.5in} Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan. \par
 \vspace{12pt}
@@ -102,16 +102,16 @@ Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, di
 Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid. \par
 Pernyataan tegas \par
 \vspace{12pt}
-Ketika menemukan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Jika ungkapannya salah, Python menimbulkan pengecualian AssertionError. \par
+Ketika mendapatkan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Apabila ungkapannya salah, Python menimbulkan pengecualian AssertionError. \par
 \vspace{12pt}
 Sintaks untuk menegaskan adalah - \par
 \vspace{12pt}
 menegaskan Ekspresi [, Argumen] \par
 \vspace{12pt}
-Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, mereka akan menghentikan program dan menghasilkan traceback. \par
+Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, maka mereka akan menghentikan program dan menghasilkan traceback. \par
 Contoh \par
 \vspace{12pt}
-Berikut adalah fungsi yang mengubah suhu dari derajat Kelvin sampai derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur jika melihat suhu negatif - \par
+Berikut merupakan fungsi yang mengubah suhu dari derajat Kelvin sampai ke derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur apabila melihat suhu negatif - \par
  $  \#  $!/usr/bin/python \par
 def KelvinToFahrenheit(Temperature): \par
 ~~ assert (Temperature >= 0),"Colder than absolute zero!" \par
@@ -133,7 +133,7 @@ AssertionError: Colder than absolute zero! \par
 \vspace{12pt}
 Apa itu Exception? \par
 \vspace{12pt}
-Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. \par
+Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python mendapatkan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. \par
 \vspace{12pt}
 Ketika skrip Python menimbulkan pengecualian, ia harus menangani pengecualian begitu saja sehingga berhenti dan berhenti. \par
 Menangani pengecualian \par
@@ -292,9 +292,9 @@ Dalam situasi seperti ini, Anda mungkin ingin mengode sesuatu seperti ini: \par
 ~~~5~  e = sys.exc $  \_  $info()[0] \par
 ~~~6~  write $  \_  $to $  \_  $page( "<p>Error:  $  \%  $s</p>"  $  \%  $ e ) \par
 \vspace{12pt}
-Menemukan Nama Pengecualian Spesifik \par
+Mendapatkan Nama Pengecualian Spesifik \par
 \vspace{12pt}
-Pengecualian standar yang dapat diajukan dijelaskan secara rinci pada: \par
+Pengecualian standar yang bisa diajukan dijelaskan secara rinci pada: \par
 \vspace{12pt}
 ~~~ http://docs.python.org/library/exceptions.html \par
 \vspace{12pt}
@@ -366,7 +366,7 @@ Anda bisa melakukan sesuatu seperti: \par
 ~~~4~  e.args += (d,) \par
 ~~~5~  raise \par
 \vspace{12pt}
-Atribut .args pengecualian adalah tuple dari semua argumen yang dilewatkan (biasanya argumen satu dan satu-satunya adalah pesan kesalahannya). Dengan cara ini Anda dapat mengubah argumen dan menaikkan kembali, dan informasi tambahan akan ditampilkan. Anda juga bisa membuat pernyataan cetak atau login di blok kecuali. \par
+Atribut .args pengecualian adalah tuple dari semua argumen yang dilewatkan (biasanya argumen satu dan satu-satunya adalah pesan kesalahannya). Dengan cara ini Anda bisa mengubah argumen dan menaikkan kembali, dan informasi tambahan akan ditampilkan. Anda juga bisa membuat pernyataan cetak atau login di blok kecuali. \par
 \vspace{12pt}
 Perhatikan bahwa tidak semua pengecualian subclass Exception (meski hampir semua dilakukan), jadi ini mungkin tidak menangkap beberapa pengecualian; Selain itu, pengecualian tidak diperlukan untuk memiliki atribut .args (meskipun jika pengecualian subclass Exception dan tidak mengesampingkan  $  \_  $ $  \_  $init $  \_  $ $  \_  $ tanpa memanggil superclass-nya), maka kode yang ditulis mungkin gagal Namun dalam prakteknya hampir tidak pernah (dan Jika ya, Anda harus memperbaiki pengecualian yang tidak sesuai!) \par
 \vspace{12pt}
@@ -380,14 +380,14 @@ Joel berpendapat: \par
 \vspace{12pt}
 "Mereka tidak terlihat dalam kode sumber Melihat kumpulan kode, termasuk fungsi yang mungkin atau mungkin tidak membuang pengecualian, tidak ada cara untuk melihat pengecualian mana yang mungkin dilempar dan dari mana.Ini berarti bahwa pemeriksaan kode yang hati-hati pun tidak. Saya bisa mengungkapkan potensi bug. " \par
 \vspace{12pt}
-(Perhatikan bahwa ini juga merupakan argumen di balik pengecualian yang diperiksa oleh Java - sekarang eksplisit bahwa pengecualian dapat dilemparkan - kecuali bahwa RuntimeException masih dapat dibuang ke mana saja. -jJ) \par
+(Perhatikan bahwa ini juga merupakan argumen di balik pengecualian yang diperiksa oleh Java - sekarang eksplisit bahwa pengecualian bisa dilemparkan - kecuali bahwa RuntimeException masih bisa dibuang ke mana saja. -jJ) \par
 \vspace{12pt}
 Saya tidak mengerti argumen ini. Dalam kode sumber acak, tidak ada cara untuk mengetahui apakah akan gagal hanya dengan inspeksi. Jika Anda melihat: \par
 \vspace{12pt}
 x = 1 \par
 result = myfunction (x) \par
 \vspace{12pt}
-Anda tidak dapat mengetahui apakah fungsi saya gagal pada saat runtime hanya dengan inspeksi, jadi mengapa harus itu penting apakah gagal menabrak pada saat runtime atau gagal dengan meningkatkan pengecualian? \par
+Anda tidak bisa mengetahui apakah fungsi saya gagal pada saat runtime hanya dengan inspeksi, jadi mengapa harus itu penting apakah gagal menabrak pada saat runtime atau gagal dengan meningkatkan pengecualian? \par
 \vspace{12pt}
 (Crashing itu buruk Dengan secara eksplisit menyatakan pengecualian, Anda memperingatkan orang-orang bahwa mereka mungkin ingin mengatasinya Jawa melakukannya dengan canggung C tidak memiliki cara yang baik untuk melakukannya sama sekali, karena kesalahan kembali masih di band Untuk pengembalian reguler Di python, pengecualian passthrough tidak ditandai, namun kondisi kesalahan menonjol di tempat mereka diciptakan, dan biasanya tidak meniru hasil yang benar. -jJ) \par
 \vspace{12pt}
@@ -395,7 +395,7 @@ Argumen Joel yang mengemukakan pengecualian hanyalah sebuah goto yang menyamar s
 \vspace{12pt}
 Joel juga menulis: \par
 \vspace{12pt}
-"Mereka membuat terlalu banyak titik keluar yang mungkin untuk sebuah fungsi.Untuk menulis kode yang benar, Anda benar-benar harus memikirkan setiap jalur kode yang mungkin melalui fungsi Anda. Setiap kali Anda memanggil fungsi yang dapat meningkatkan pengecualian dan tidak menangkapnya di Spot, Anda menciptakan peluang untuk kejutan bug yang disebabkan oleh fungsi yang dihentikan tiba-tiba, meninggalkan data dalam keadaan tidak konsisten, atau jalur kode lainnya yang tidak Anda pikirkan. " \par
+"Mereka membuat terlalu banyak titik keluar yang mungkin untuk sebuah fungsi.Untuk menulis kode yang benar, Anda benar-benar harus memikirkan setiap jalur kode yang mungkin melalui fungsi Anda. Setiap kali Anda memanggil fungsi yang bisa meningkatkan pengecualian dan tidak menangkapnya di Spot, Anda menciptakan peluang untuk kejutan bug yang disebabkan oleh fungsi yang dihentikan tiba-tiba, meninggalkan data dalam keadaan tidak konsisten, atau jalur kode lainnya yang tidak Anda pikirkan. " \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
