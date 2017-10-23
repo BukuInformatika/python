@@ -1,18 +1,21 @@
 \sloppy
-\begin{center}Python Loops\end{center} \par
+\begin{center}
+Python Loops
+\end{center} \par
 \vspace{12pt}
 \vspace{12pt}
 Python dikenal sebagai bahasa pemograman interpreter, karena Python dieksekusi dengan sebuah interpreter. Satu hal yang telah kita ketahui bahwa bahasa pemograman Python adalah bahasa pemograman yang mudah dibaca dan terstruktur. Python sangat mementingkan indentasi, sehingga kita perlu melakukan indentasi secara konsisten. Indentasi tersebut dipermudah dengan penggunaan tombol Tab dan dimulai dari kolom pertama untuk setiap blok baru\cite{santoso2009bahasa}.
 Secara umum, pernyataan pada bahasa pemrograman akan dieksekusi secara berurutan. Pernyataan pertama dalam sebuah fungsi dijalankan pertama, diikuti oleh yang kedua, dan seterusnya. Tetapi akan ada situasi dimana Anda harus menulis banyak kode, dimana kode tersebut sangat banyak. Jika dilakukan secara manual maka Anda hanya akan membuang-buang tenaga dengan menulis beratus-ratus bahkan beribu-ribu kode. Untuk itu Anda perlu menggunakan pengulangan di dalam bahasa pemrograman Python. \par
 
-Di dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 bagian, yaitu : \par
-\noindent 
-While Loop \par
-\noindent 
-For Loop \par
-\noindent 
-Nested Loop \par
-\noindent 
+Di dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 bagian, yaitu : 
+\begin{itemize}
+\item
+While Loop 
+\item
+For Loop 
+\item
+Nested Loop 
+\end{itemize} 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
 \vspace{12pt}
@@ -32,21 +35,13 @@ Contoh penggunaan While Loop \par
 \noindent 
 \vspace{\baselineskip}
 \vspace{\baselineskip}
+\begin{verbatim}
 count = 0 \par
-\noindent 
-\vspace{\baselineskip}
 while (count < 9): \par
-\noindent 
-\vspace{\baselineskip}
  \$  \$  \$  \$ print ('The count is:', count) \par
-\noindent 
-\vspace{\baselineskip}
  \$  \$  \$  \$ count = count + 1 \par
-\noindent 
-\vspace{\baselineskip}
-\vspace{\baselineskip}
 print ("Good bye!") \par
-\noindent 
+\end{verbatim}
 \vspace{\baselineskip}
 \vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -213,7 +208,7 @@ Masukkan jumlah bariss: 5 \(inputkan 5\)
 ***** 
 Muncul 5 baris isi bintang
 
-FOR Loop \par
+\subsection{FOR Loop}
 FOR Loop digunakan untuk melakukan perulangan atau iterasi sampai batas atau range yang telah ditentukan.\vspace{\baselineskip}
 \vspace{\baselineskip}
 Dibawah ini adalah sintak dasar FOR Loop di Python.\vspace{\baselineskip}
@@ -231,10 +226,12 @@ Contoh 1\vspace{\baselineskip}
  \par
 Program mencetak angka 1 s/d 10 \par
 \vspace{12pt}
+\begin{verbatim}
 i = 10 \par
 for i in range(10): \par
 ~~ print(i+1) \par
 ~~ i = i+1 \par
+\end{verbatim}
 \vspace{\baselineskip}
 Fungsi \$  \$range() \$  \$biasanya digunakan sebagai counter pada perulangan bentuk For. range(10) artinya menampikan perulangan sebanyak 10 elemen.\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -327,7 +324,7 @@ Makanan Favorit : Rujak Buah \par
 \vspace{12pt}
 \vspace{\baselineskip}
 \vspace{12pt}
-While Loop \par
+\subsection{While Loop}
 While Loop akan menjalankan statemet selama kondisi terpenuhi (atau bernilai true).\vspace{\baselineskip}
 \vspace{\baselineskip}
 Di bawah ini adalah sintak dasar dari While Loop pada Python\vspace{\baselineskip}
@@ -362,7 +359,7 @@ Apabila program diatas Anda jalankan, maka akan menghasilkan output seperti di b
 \vspace{12pt}
 \vspace{\baselineskip}
 \vspace{12pt}
-Infinite Loop \par
+\subsection{Infinite Loop}
 \vspace{\baselineskip}
 Infinite Loop adalah kondisi perulangan, dimana statement akan dijalankan terus menerus tanpa berhenti. Akan berhenti kalau Anda menekan tombol CTRL+C.\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -378,7 +375,7 @@ print ("Good bye!") \par
 \vspace{12pt}
 \vspace{\baselineskip}
 \vspace{12pt}
-Nested Loop \par
+\subsection{Nested Loop}
 \vspace{\baselineskip}
 Nested Loop secara sederhana adalah perulangan di dalam perulangan.\vspace{\baselineskip}
 \vspace{\baselineskip}
@@ -405,6 +402,7 @@ Di bawah ini adalah contoh program implementasi Nested Loop untuk mencetak bilan
  \par
 Program menampilkan bilangan prima dari 2 s/d 30 \par
 \vspace{12pt}
+\begin{verbatim}
 i = 2 \par
 while(i < 30): \par
 ~~ j = 2 \par
@@ -413,6 +411,7 @@ while(i < 30): \par
 ~~~~~ j = j + 1 \par
 ~~ if (j > i/j) : print (i, \" adalah bilangan prima\") \par
 ~~ i = i + 1 \par
+\end{verbatim}
 \vspace{12pt}
 print (\"Good bye!\") \par
 \vspace{12pt}
@@ -479,22 +478,33 @@ for character in dragonball \$  \_  \$super \$  \_  \$character: \par
 \vspace{12pt}
 Jika kita jalankan potongan kode tadi, maka \$  \$output-nya akan seperti berikut: \par
 \vspace{12pt}
-Son Goku \par
-Vegeta \par
-Beerus \par
-Trunks \par
-Whiz \par
-Champa \par
-For Loop \par
+\begin{itemize}
+\item
+Son Goku
+\item
+Vegeta
+\item
+Beerus
+\item
+Trunks
+\item
+Whiz
+\item
+Champa
+\item
+For Loop
+\end{itemize}
 Seperti pada bahasa pemrograman lainnya, for loop sudah menjadi standar namun berbeda-beda tata cara penulisan nya di setiap pemrograman. \par
 \vspace{12pt}
-Sekarang kita langsung buat contoh di Python. $  $ \par
+Sekarang kita langsung buat contoh di Python. \$  \$ \par
 \vspace{12pt}
 \vspace{12pt}
 Contoh iterasi pada String  \par
 \vspace{12pt}
+\begin{verbatim}
 for~n in 'Python':   \par
 ~~~ print 'Huruf :', n \par
+\end{verbatim}
 \vspace{12pt}
   \par
 iterasi pada List biasa \par
@@ -529,14 +539,14 @@ for letter in 'Python': \par
 \vspace{12pt}
 print "Good job !!!" \par
 \vspace{12pt}
-While Loop \par
+\subsection{While Loop}
 WHile dipakai untuk looping dimana iterasi akan dilakukan selama kondisi yang diberikan benar. While ini juga bisa di pakai untuk Infinite loop. \par
 \vspace{12pt}
 Contoh While \par
 count = 0 \par
 while count < 100: \par
- $  $  $  $  $  $print "Count ke : ", count \par
- $  $  $  $  $  $count = count + 1 \par
+ \$  \$  \$  \$  \$  \$print "Count ke : ", count \par
+ \$  \$  \$  \$  \$  \$count = count + 1 \par
 \vspace{12pt}
 infinite loop \par
 ''' \par
@@ -545,19 +555,21 @@ Set loop ini untuk kondisi dimana suatu syarat tidak pernah TRUE \par
 \vspace{12pt}
 setvar =1 \par
 while setvar == 1 \par
- $  $  $  $ input = input $  \_  $raw("Masukan angka :") \par
- $  $  $  $ print "Angka anda : ", input \par
+ \$  \$  \$  \$ input = input \$  \_  \$raw("Masukan angka :") \par
+ \$  \$  \$  \$ print "Angka anda : ", input \par
 \vspace{12pt}
 loop diatas akan berhenti jika anda stop manual misal dgn CTRL+C di terminal \par
 ''' \par
 ELSE statement di while loop. di Python kita bisa set WHile loop lalu dikasih kondisi \par
 ''' \par
+\begin{verbatim}
 count = 0 \par
 while count < 5: \par
- $  $  $  $  $  $print "count : ",count \par
- $  $  $  $  $  $count = count + 1 \par
+ \$  \$  \$  \$  \$  \$print "count : ",count \par
+ \$  \$  \$  \$  \$  \$count = count + 1 \par
 else: \par
- $  $  $  $ print "Lihat yang masuk sini apa : ",count \par
+ \$  \$  \$  \$ print "Lihat yang masuk sini apa : ",count \par
+ \end{verbatim}
 \vspace{12pt}
 while dgn break \par
 angka~=~10~~~~~~    \par
