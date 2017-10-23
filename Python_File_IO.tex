@@ -28,7 +28,7 @@ I/O \textit{Input/Ouput Read} [IOR] dan untuk tulis I/O \textit{Input/Output Wri
 \vspace{12pt}
 \vspace{14pt}
 \noindent 
-File adalah lokasi bernama pada disk untuk menyimpan informasi terkait. Ini digunakan untuk menyimpan data secara permanen dalam memori non-volatile (misalnya hard disk). \par
+File merupakan lokasi bernama pada disk untuk menyimpan sebuah informasi terkait. Ini dapat digunakan untuk menyimpan data secara permanen dalam memori non-volatile (misalnya hard disk). \par
 \noindent 
 \vspace{12pt}
 \noindent 
@@ -56,7 +56,7 @@ Oleh karena itu, dengan Python, sebuah operasi file berlangsung dengan urutan se
 \noindent 
 Membuka sebuah file \par
 \noindent 
-Python memiliki built-in function open () untuk membuka file. Fungsi ini mengembalikan objek file, juga disebut handle, karena digunakan untuk membaca atau memodifikasi file yang sesuai. \par
+Python memiliki built-in function open () untuk membuka file. Fungsi ini dapat mengembalikan objek file, juga disebut handle, karena digunakan untuk membaca atau memodifikasi file yang sesuai. \par
 \vspace{12pt}
 \noindent 
 >>> f = open("test.txt")~~~  $  \#  $ open file in current directory \par
@@ -83,9 +83,9 @@ Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan diguna
 \begin{tabular}{ p{0.25in}p{6.0in} }
 \hhline{--}
 \multicolumn{1}{|p{0.25in}}{'r'} & \multicolumn{1}{|p{6.0in}|}{Buka file untuk dibaca. (default)} & \hhline{--}
-\multicolumn{1}{|p{0.25in}}{'w'} & \multicolumn{1}{|p{6.0in}|}{Buka file untuk menulis. Membuat file baru jika tidak ada atau memotong file jika file tersebut ada.} & \hhline{--}
-\multicolumn{1}{|p{0.25in}}{'x'} & \multicolumn{1}{|p{6.0in}|}{Buka file untuk pembuatan eksklusif. Jika file sudah ada, operasi gagal} & \hhline{--}
-\multicolumn{1}{|p{0.25in}}{'a'} & \multicolumn{1}{|p{6.0in}|}{Buka untuk menambahkan di akhir file tanpa memotongnya. Membuat file baru jika tidak ada.} & \hhline{--}
+\multicolumn{1}{|p{0.25in}}{'w'} & \multicolumn{1}{|p{6.0in}|}{Buka file untuk menulis. Membuat file baru apabila tidak ada atau memotong file apabila file tersebut ada.} & \hhline{--}
+\multicolumn{1}{|p{0.25in}}{'x'} & \multicolumn{1}{|p{6.0in}|}{Buka file untuk pembuatan eksklusif. apanila file sudah ada, operasi gagal} & \hhline{--}
+\multicolumn{1}{|p{0.25in}}{'a'} & \multicolumn{1}{|p{6.0in}|}{Buka untuk menambahkan di akhir file tanpa memotongnya. Membuat file baru apabila tidak ada.} & \hhline{--}
 \multicolumn{1}{|p{0.25in}}{'t'} & \multicolumn{1}{|p{6.0in}|}{Buka dalam mode teks. (default)} & \hhline{--}
 \multicolumn{1}{|p{0.25in}}{'b'} & \multicolumn{1}{|p{6.0in}|}{Buka dalam mode biner.} & \hhline{--}
 \multicolumn{1}{|p{0.25in}}{'+'} & \multicolumn{1}{|p{6.0in}|}{Buka file untuk mengupdate (membaca dan menulis)} & \hline
