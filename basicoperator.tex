@@ -35,11 +35,10 @@ Bahasa pemrograman Python mendukung berbagai macam operator, diantaranya :
 	\item Operator Penugasan (Assignment Operators)
 	\item Operator Logika (Logical Operators)
 	\item Operator Bitwise (Bitwise Operators)
-	\item Operator Identitas (Identity Operators)
 \end{enumerate}  
 
 
-\subsubsection{Operator Aritmatika}
+\subsubsection{Operator aritmatika}
 Operator Aritmatika sendiri merupakan operator yang dipergunakan dalam melakukan operasi matematika, seperti pengurangan, pembagian, penjumlahan, perkalian, pangkat, modulus dll. 
 
 Di bawah ini adalah tabel \ref{tablearitmatika} yang terdapat pada bahasa pemrograman Python.
@@ -109,7 +108,7 @@ Perhatikan perintah pada baris pertama tanpa harus menuliskan tanda kurung pun p
 \end{verbatim}
 
 \subsubsection{Operator Perbandingan}
-Operator perbandingan adalah operator yang digunakan untuk membandingan nilai dari masing-masing operand. Operator ini juga dikenal dengan operator relasi dan sering digunakan untuk membuat sebuah logika atau kondisi. Operator perbandingakan akan mengembalikan sebuah nilai boolan yaitu true atau false.
+Operator perbandingan adalah operator yang digunakan untuk membandingan nilai dari masing-masing operand. Operator ini juga dikenal dengan operator relasi dan sering digunakan untuk membuat sebuah logika atau kondisi. Operator perbandingakan akan mengembalikan sebuah nilai boolan yaitu true atau false. Operator ini juga dikenal dengan operator relasi dan sering digunakan untuk membuat sebuah logika atau kondisi.
 
 Di bawah ini adalah tabel \ref{tableperbandingan} macam-macam operator perbandingan yang terdapat pada bahasa pemrograman Python.
 \begin{figure}[ht]
@@ -172,15 +171,47 @@ Baris 6 - a lebih besar dari atau sama dengan b
 Baris 7 - a tidak lebih kecil dari atau sama dengan b
 
 \subsubsection{Bitwise Operator}
-Operator bitwise (Bitwise Operators) adalah operator khusus yang disediakan PHP untuk menangani proses logika untuk bilangan biner. Bilangan biner atau binary adalah jenis bilangan yang hanya terdiri dari 2 jenis angka, yakni 0 dan 1. Jika operand (sebuah objek yang ada pada operasi matematika yang dapat digunakan untuk melakukan operasi) yang digunakan bukan bilangan biner, maka akan dikonversi secara otomatis oleh PHP menjadi bilangan biner.
+Operator bitwise (Bitwise Operators) adalah operator khusus yang disediakan PHP untuk menangani proses logika untuk bilangan biner. Bilangan biner atau binary adalah jenis bilangan yang hanya terdiri dari 2 jenis angka, yakni 0 dan 1. Jika operand (sebuah objek yang ada pada operasi matematika yang dapat digunakan untuk melakukan operasi) yang digunakan bukan bilangan biner, maka akan dikonversi secara otomatis oleh PHP menjadi bilangan biner. Operator Bitwise adalah operator untuk melakukan operasi berdasarkan bit/biner. Konsepnya memang hampir sama dengan opeartor Logika. Namun, Bitwise digunakan untuk biner.
+AND : &
+OR : |
+XOR : ^
+Negasi/kebalikan : ~
+Left Shift : <<
+Right Shift : >>
+
+Hasil operasi dari operator ini agak sulit dipahami, kalau kita belum paham operasi bilangan biner.
+Misalnya, kita punya variabel a = 60 dan b = 13.
+
+Bila dibuat dalam bentuk biner, akan menjadi seperti ini:
+a = 00111100
+b = 00001101
+Kemudian, dilakukan operasi bitwise
+
+Operasi AND
+a = 00111100
+b = 00001101
+a & b = 00001100
+
+Operasi OR
+a = 00111100
+b = 00001101
+a | b = 00111101
+
+Operasi XOR
+a = 00111100
+b = 00001101
+a ^ b = 00110001
+
+Opearsi NOT (Negasi/kebalikan)
+a = 00111100
+~a  = 11000011
+
 
 \subsubsection{Operator Logika}
 Pada bahasa python terdapat 3 operator logika antara lain and, or dan not. Adapun cara penggunaan dari operator-operator tersebut adalah sebagai berikut:
-\begin{verbatim}
 print 10 > 2 and 10 > 5 # bernilai True
 print True or False # bernilai True
 print not False # bernilai True
-\end{vervatim}
 perintah diatas digunakan untuk ketika dijalankan maka akan menghasilkan nilai True pada semua baris perintah diatas.
 
 Perintah tersebut akan mengashilkan
@@ -188,7 +219,7 @@ Pintarcoding.com! Pintarcoding.com! Pintarcoding.com!
 hallo Pintarcoding.com!
 
 \subsubsection{Operator Identitas}
-Operator identitas membandingkan lokasi memori dari dua benda. Ada dua operator Identitas seperti yang dijelaskan di bawah ini :
+operator identitas membandingkan lokasi memori dari dua benda. Ada dua operator Identitas seperti yang dijelaskan di bawah ini :
 \begin{enumerate}
 \item operator is, Mengevaluasi ke true jika variabel di kedua sisi operator menunjuk ke objek yang sama dan salah sebaliknya
 contoh : x adalah y, berikut adalah hasil dalam 1 jika id(x)sama dengan id(y) .
