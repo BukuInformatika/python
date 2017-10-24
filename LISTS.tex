@@ -286,9 +286,11 @@ st Build Up \par
 \vspace{12pt}
 Salah satu pola yang umum adalah dengan memulai daftar daftar kosong [], lalu gunakan append () atau extend () untuk menambahkan elemen ke dalamnya: \par
 \vspace{12pt}
-~ List = []  $  \#  $ $  \#  $ Mulai sebagai daftar kosong \par
-~ List.append ('a')  $  \#  $ $  \#  $ Gunakan append () untuk menambahkan elemen \par
+\begin{verbatim}
+~ List = []  \$  \#  \$ \$  \#  \$ Mulai sebagai daftar kosong \par
+~ List.append ('a')  \$  \#  \$ \$  \#  \$ Gunakan append () untuk menambahkan elemen \par
 ~ List.append ('b') \par
+\end{verbatim}
 \vspace{12pt}
 Daftar irisan \par
 \vspace{12pt}
@@ -371,7 +373,7 @@ Contoh yang menggunakan sebagian besar metode daftar: \par
 0 \par
 >>> fruits.index('banana') \par
 3 \par
->>>~fruits.index('banana', 4)   $  \#  $ Find next banana starting a position 4 \par
+>>>~fruits.index('banana', 4)   \$  \#  \$ Find next banana starting a position 4 \par
 6 \par
 >>> fruits.reverse() \par
 >>> fruits \par
@@ -408,19 +410,59 @@ mungkin telah memperhatikan bahwa metode seperti insert, remove atau sortir yang
 \vspace{12pt}
 \section{Menggunakan Daftar sebagai Antrian} \par
 \vspace{12pt}
-Hal ini juga memungkinkan untuk menggunakan daftar sebagai antrian, di mana elemen pertama yang ditambahkan adalah elemen pertama yang diambil ("first-in, first-out"); Namun, daftar tidak efisien untuk tujuan ini. Sementara menambahkan dan muncul dari akhir daftar dengan cepat, melakukan sisipan atau muncul dari awal daftar lambat (karena semua elemen lainnya harus digeser oleh satu). \par
+Hal ini juga memungkinkan untuk menggunakan daftar sebagai antrian, di mana elemen pertama yang ditambahkan adalah elemen pertama yang diambil (\"first-in, first-out\"); Namun, daftar tidak efisien untuk tujuan ini. Sementara menambahkan dan muncul dari akhir daftar dengan cepat, melakukan sisipan atau muncul dari awal daftar lambat (karena semua elemen lainnya harus digeser oleh satu). \par
 \vspace{12pt}
 Untuk menerapkan antrean, gunakan collections.deque yang dirancang agar cepat ditambahkan dan muncul dari kedua ujungnya. Sebagai contoh: \par
 >>> \par
 \vspace{12pt}
+\begin{verbatim}
 >>> dari koleksi import deque \par
 >>> antrian = deque (["Eric", "John", "Michael"]) \par
->>> queue.append ("Terry")  $  \#  $ Terry tiba \par
->>> queue.append ("Graham")  $  \#  $ Graham tiba \par
->>> queue.popleft ()  $  \#  $ Yang pertama tiba sekarang pergi \par
+>>> queue.append ("Terry")  \$  \#  \$ Terry tiba \par
+>>> queue.append ("Graham")  \$  \#  \$ Graham tiba \par
+>>> queue.popleft ()  \$  \#  \$ Yang pertama tiba sekarang pergi \par
 'Eric' \par
->>> queue.popleft ()  $  \#  $ Yang kedua tiba sekarang pergi \par
+>>> queue.popleft ()  \$  \#  \$ Yang kedua tiba sekarang pergi \par
 'John' \par
->>> antrian  $  \#  $ Sisa antrian sesuai urutan kedatangan \par
+>>> antrian  \$  \#  \$ Sisa antrian sesuai urutan kedatangan \par
 deque (['Michael', 'Terry', 'Graham']) \par
-\vspace{12pt}
+\end{verbatim}
+
+List adalah sejumlah object yang dipisahkan oleh tanda koma (,) dan diapit oleh kurung siku
+([ ]). Begini contohnya:
+\begin{verbatim}
+>>> a = [1.0, 2.0, 3.0] # cara membuat list
+>>> a.append(4.0) # tambahkan 4.0 kedalam list
+>>> print a
+[1.0, 2.0, 3.0, 4.0] 
+>>> a.insert(0,0.0) # sisipkan 0.0 pada posisi 0
+>>> print a
+[0.0, 1.0, 2.0, 3.0, 4.0]
+>>> print len(a) # menentukan panjang list
+5
+\end{verbatim}
+Jika kita memberikan statemen b = a, maka itu tidak berarti bahwa variabel b terpisah dengan
+variabel a. Di python, statemen seperti itu diartikan hanya sebagai pemberian nama lain
+(alias) kepada variabel a. Artinya, perubahan yang terjadi baik itu di a ataupun di b, maka hasil
+akhir mereka berdua akan sama saja. Setiap perubahan yang terjadi di b akan berdampak di a.
+Untuk meng-copy a secara independen, gunakan statemen c = a[:], sebagaimana dicontohkan
+berikut ini :
+\begin{verbatim}
+>>> a = [1.0, 2.0, 3.0]
+>>> b = a # b adalah alias dari a
+>>> b[0] = 5.0 # isi elemen b diubah
+>>> print a
+[5.0, 2.0, 3.0] # perubahan di b tercermin di a
+>>> c = a[:] # c kopian dari a
+>>> c[0] = 1.0 # isi elemen c diubah
+>>> print a
+[5.0, 2.0, 3.0] # a tidak dipengaruhi c
+\end{verbatim}
+Matrik dapat direpresentasikan sebagai list-list yang disusun berbaris. Berikut adalah matrik./cite{suparno2013komputasi}
+3 × 3 dalam bentuk list:
+\begin{verbatim}
+>>> a = [[1, 2, 3], \
+[4, 5, 6], \
+[7, 8, 9]]
+>>> print a[1] # Print baris kedua (elemen 1)
+\end{verbatim}
