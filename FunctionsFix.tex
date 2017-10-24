@@ -1,6 +1,13 @@
 \section{Python Functions}\par
 Fungsi adalah blok kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. Fungsi menyediakan modularitas yang lebih baik untuk aplikasi Anda dan tingkat penggunaan kode yang tinggi. Seperti yang sudah Anda ketahui, Python memberi Anda banyak fungsi built-in seperti cetak (), dll. Tetapi Anda juga dapat membuat fungsi Anda sendiri. Fungsi ini disebut fungsi yang ditentukan pengguna. \par
 
+Ada tiga jenis fungsi dengan Python: \par
+\begin{enumerate}
+\item Built-in Functions, seperti help () untuk meminta bantuan, min () untuk mendapatkan nilai minimum, print () untuk mencetak objek ke terminal.
+\item User-Defined Functions (UDFs), yang merupakan fungsi yang dibuat untuk membantu pengguna
+\item Anonymous Functions, yang juga disebut fungsi lambda karena tidak dinyatakan dengan kata kunci def standar.
+\end{enumerate}
+
 function di Python biasanya mempunyai sebuah parameter dan return statement. Function di Python mempunyai pola sebagai berikut:
 \begin{verbatim}
 def nama function yang ingin anda buat (param1, param2, ... paramn):
@@ -11,19 +18,14 @@ def nama function yang ingin anda buat (param1, param2, ... paramn):
 Tipe data yang dikembalikan bisa bermacam jenis tipe data yang didukung Python. Meskipun parameter yang akan diterima oleh function tersebut. 
 
 \subsection{Defining a Function} \par
- Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. \par
-\noindent 
- $ \bullet $ Blok fungsi dimulai dengan defensi kata kunci diikuti oleh nama fungsi dan tanda kurung (()). \par
-\noindent 
- $ \bullet $ Setiap parameter masukan atau argumen harus ditempatkan di dalam tanda kurung ini. Anda juga dapat menentukan parameter di dalam tanda kurung ini. \par
-\noindent 
- $ \bullet $ Pernyataan fungsi pertama dapat berupa pernyataan opsional - string dokumentasi fungsi atau docstring. \par
-\noindent 
- $ \bullet $ Blok kode dalam setiap fungsi dimulai dengan titik dua (:) dan indentasi. \par
-\noindent 
- $ \bullet $ Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. \par
-\vspace{12pt}
-\noindent 
+Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. \par
+\begin{enumerate}
+\item Blok fungsi dimulai dengan defensi kata kunci diikuti oleh nama fungsi dan tanda kurung (()).
+\item Setiap parameter masukan atau argumen harus ditempatkan di dalam tanda kurung ini. Anda juga dapat menentukan parameter di dalam tanda kurung ini.
+\item Pernyataan fungsi pertama dapat berupa pernyataan opsional - string dokumentasi fungsi atau docstring.
+\item Blok kode dalam setiap fungsi dimulai dengan titik dua (:) dan indentasi.
+\item Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None.
+\end{enumerate}
 
 \subsection{Syntax} \par
 Berikut adalah contoh program kalkulator menggunakan Function pada Python : \par
