@@ -8,7 +8,7 @@
                                           \section{Python Exceptions Handling}
 
 \subsection{Penjelasan}
-Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya 
+Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya.
 Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut ini merupakan daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar.
 Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. 
 Daftar Pengecualian Standar 
@@ -18,25 +18,25 @@ Daftar Pengecualian Standar
 Kelas dasar untuk semua pengecualian.
 
 \subsubsection{StopIteration}
-Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun.
+Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke suatu objek apa pun.
 
 \subsubsection{SystemExit}
 Dibesarkan oleh fungsi sys.exit ()
 
 \subsubsection{StandardError}
-Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit
+Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit.
 
 \subsubsection{ArithmeticError}
 Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik.
 
 \subsubsection{OverflowError}
-Dibesarkan saat perhitungan melebihi batas maksimum untuk tipe numerik.
+Dibesarkan saat perhitungan melebihi batas maksimum untuk suatu tipe numerik.
 
 \subsubsection{FloatingPointError}
 Dibesarkan saat perhitungan floating point gagal.
 
 \subsubsection{ZeroDivisionError}
-Dibesarkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik.
+Dibesarkan saat pembagian atau modul nol dilakukan untuk semua tipe numerik.
 
 \subsubsection{AssertionError}
 Dibesarkan jika terjadi kegagalan pernyataan Assert.
@@ -67,10 +67,10 @@ Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global.
 \subsubsection{UnboundLocalError}
 
 \subsubsection{EnvironmentError}
-Dibesarkan saat kita mencoba mengakses variabel lokal di dalam suatu fungsi atau metode namun tidak terdapat nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python.
+Dibesarkan saat kita mencoba mengakses suatu variabel lokal di dalam suatu fungsi atau metode namun tidak terdapat nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkup Python.
 
 \subsubsection{IOError}
-IOError Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi.
+IOError Dibesarkan saat operasi i/o gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi.
 
 \subsubsection{SyntaxError} 
 \subsubsection{IndentationError}
@@ -239,7 +239,7 @@ except IOError: \par
 Bila dikecualikan dilempar di blok coba, eksekusi langsung lolos ke blok akhirnya. Setelah semua pernyataan di blok akhirnya dieksekusi, pengecualian dinaikkan lagi dan ditangani dalam pernyataan kecuali jika ada di lapisan yang lebih tinggi dari pernyataan try-except. \par
 Argumen Eksepsi \par
 \vspace{12pt}
-Pengecualian dapat memiliki argumen, yang merupakan nilai yang memberi informasi tambahan tentang masalah tersebut. Isi argumen bervariasi menurut pengecualian. Anda menangkap argumen pengecualian dengan menyediakan sebuah variabel dalam klausa kecuali sebagai berikut - \par
+Pengecualian bisa memiliki argumen, yang merupakan nilai yang memberi informasi tambahan tentang masalah tersebut. Isi argumen bervariasi menurut pengecualian. Anda menangkap argumen pengecualian dengan menyediakan sebuah variabel dalam klausa kecuali sebagai berikut - \par
 \vspace{12pt}
 try: \par
 ~~ You do your operations here; \par
@@ -247,9 +247,9 @@ try: \par
 except ExceptionType, Argument: \par
 ~~ You can print value of Argument here... \par
 \vspace{12pt}
-Jika Anda menulis kode untuk menangani satu pengecualian, Anda dapat memiliki variabel mengikuti nama pengecualian dalam pernyataan kecuali. Jika Anda menjebak beberapa pengecualian, Anda dapat memiliki variabel mengikuti tuple pengecualian. \par
+Jika Anda menuliskan sebuah kode untuk menangani satu pengecualian, Anda bisa memiliki variabel mengikuti nama pengecualian dalam pernyataan kecuali. Jika Anda menjebak beberapa pengecualian, Anda bisa memiliki variabel mengikuti tuple pengecualian. \par
 \vspace{12pt}
-Variabel ini menerima nilai pengecualian yang sebagian besar mengandung penyebab pengecualian. Variabel tersebut dapat menerima satu nilai atau beberapa nilai dalam bentuk tuple. Tuple ini biasanya berisi error string, error number, dan error location. \par
+Variabel ini menerima nilai pengecualian yang sebagian besar mengandung penyebab pengecualian. Variabel tersebut bisa menerima satu nilai atau beberapa nilai dalam bentuk tuple. Tuple ini biasanya berisi error string, error number, dan error location. \par
 \vspace{12pt}
 Pengecualian yang Ditentukan Pengguna \par
 \vspace{12pt}
