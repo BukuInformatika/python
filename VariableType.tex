@@ -1,33 +1,19 @@
-\sloppy
-Python Variabel Type  \par
-\noindent 
-Satu dari fitur yang paling powerful dari sebuah bahasa pemrograman adalah kemampuan untuk memanipulasi $  $variabel. Sebuah variabel adalah nama yang merujuk ke sebuah nilai. \par
-\vspace{12pt}
-\noindent 
-Pernyataan pemberian nilai $  $(assigment statement) akan memberikan nilai pada variabel: \par
-\vspace{12pt}
-\noindent 
-pesan = "Apa kabar, bro ?" \par
-\noindent 
-n = 17 \par
-\noindent 
-pi = 3.14159 \par
-\vspace{12pt}
-\noindent 
-Contoh diatas melakukan tiga pemberian nilai. Yang pertama memberikan nilai string $  $"Apa kabar, bro ?" $  $pada variabel bernama $  $pesan. Yang Kedua memberikan nilai integer $  $17 $  $kepada $  $n, dan yang ketiga memberikan nilai bilangan floating-point $  $3.14159 $  $kepada variabel dengan nama $  $pi. \par
-\vspace{12pt}
-\noindent 
-Token pemberian nilai, tanda $  $=, agar tidak bingung jangan disamakan dengan tanda $  $sama dengan, yang mana menggunakan token $  $== $  $. Pernyataan pemberian nilai mengikat sebuah $  $nama $  $di sebelah kiri dari operator, dan nilainya, di sebelah kanannya. Inilah mengapa kamu akan mendapatkan error jika kamu menulis: \par
-\vspace{12pt}
-\noindent 
-17 = n \par
-\noindent 
-File "<interactive input>", line 1 \par
-\noindent 
-SyntaxError: can't assign to literal \par
-\vspace{12pt}
-\noindent 
-Ketika membaca atau menulis kode, katakan dalam hati "n diberikan nilai 17". Jangan katakan "n sama dengan 17". \par
+\section{Python Variabel Type}
+Satu dari fitur yang paling powerful dari sebuah bahasa pemrograman adalah kemampuan untuk memanipulasi variabel. Sebuah variabel adalah nama yang merujuk ke sebuah nilai.
+Pernyataan pemberian nilai(assigment statement) akan memberikan nilai pada variabel: 
+\begin{verbatim}
+pesan = "Apa kabar, bro ?" 
+n = 17  
+pi = 3.14159 
+\end{verbatim}
+Contoh diatas melakukan tiga pemberian nilai. Yang pertama memberikan nilai string \"Apa kabar, bro ?\" pada variabel bernama pesan. Yang Kedua memberikan nilai integer 17 kepada n, dan yang ketiga memberikan nilai bilangan floating-point 3.14159 kepada variabel dengan nama pi.
+Token pemberian nilai, tanda =, agar tidak bingung jangan disamakan dengan tanda sama dengan, yang mana menggunakan token ==. Pernyataan pemberian nilai mengikat sebuah nama di sebelah kiri dari operator, dan nilainya, di sebelah kanannya. Inilah mengapa kamu akan mendapatkan error jika kamu menulis: 
+\begin{verbatim}
+17 = n 
+File "<interactive input>", line 1 
+SyntaxError: can't assign to literal 
+\end{verbatim}
+Ketika membaca atau menulis kode, katakan dalam hati \"n diberikan nilai 17\". Jangan katakan \"n sama dengan 17\".
 \vspace{12pt}
 \noindent 
 Cara umum untuk merepresentasikan variabel pada kertas adalah dengan menulis namanya dengan tanda panah mengarah ke nilai variabelnya. Gambar jenis ini dinamakan $  $state snapshot $  $karena ia memperlihatkan state atau kondisi dari setiap variabel pada instan waktu tertentu. (Pikirkan ini sebagai variabel keadaan pikiran). Diagram ini memperlihatkan hasil dari pengeksekusian pernyataan pemberian nilai: \par
