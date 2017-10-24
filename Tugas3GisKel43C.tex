@@ -622,3 +622,26 @@ list = [ ’abcd’, 786 , 2.23, ’john’, 70.2 ]
 tuple[2] = 1000 Invalid syntax with tuple
 list[2] = 1000 Valid syntax with list
 \end{verbatim}
+
+\subsection{Menilai Ekspresi}
+Sebuah ekspresi merupakan perpaduan antara nilai, variabel, operator, dan pemanggilan fungsi. Jika kamu mengetik sebuah ekspresi pada Python prompt, maka si interpreter akan menilainya dan menampilkan hasilnya:
+	\begin{verbatim}
+		1 + 1 
+		2 
+		len(”hello”) 
+		5 
+	\end{verbatim}
+Pada contoh ini len merupakan fungsi built-in yang ada di Python yang akan menghasilkan jumlah karakter dari sebuah string. Sebelumnya kita sudah melihat fungsi print dan type, jadi ini adalah contoh fungsi ketiga kita.
+
+Proses penilaian dari sebuah ekspresi akan menghasilkan sebuah nilai, itulah mengapa ekspresi bisa ada di sisi sebelah kanan dari pernyataan pemberian nilai. Nilai dengan sendirinya adalah ekspresi sederhana, dan begitu juga variabel.
+	\begin{verbatim}
+		17
+		17 
+		y = 3.14 
+		x = len(”hello”) 
+		x 
+		5 
+		Y
+
+		3.14
+	\end{verbatim}
