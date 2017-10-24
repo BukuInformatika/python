@@ -593,7 +593,7 @@ Contoh penggunaan scope variabel :
  Output :
  Nilai a di luar fungsi, a = 30
  Nilai A di dalam fungsi, a = 10
- Pada contoh diatas, variabel A didefinisikan di dua tempat yaitu di dalam fungsi bljrScope() dan di dalam program utama. 
+ Pada contoh diatas, variabel A didefinisikan di dua tempat yaitu di dalam fungsi bljrScope() dan di dalam program utama.Ketika nilai A awal di beri nilai 30, kemudian di cetak, nilai A masih bernilai 30. Namun ketika kita memanggil fungsi bljrScope() dengan mengirim parameter A yang bernilai 30, terlihat bahwa nilai A yang berlaku adalah nilai A yang didefinisikan didalam fungsi tersebut. Atau nilai A yang bernilai 10. ini terbukti bahwa variabel A yang di cetak dalam fungsi bljrScope() merupakan variabel local yang didefinisikan didalam fungsi, bukan variabel A global yang dicetak di luar fungsi.  
 \noindent 
 Ruang lingkup variabel menentukan bagian dari program di mana Anda dapat mengakses pengenal tertentu. Ada dua lingkup dasar variabel dengan Python - \par
 \noindent 
