@@ -1,0 +1,30 @@
+\section{Variable Type}
+Variabel merupakan tempat menyimpan data, sedangkan tipe data adalah jenis data yang terseimpan dalam variabel. Variabel menyimpan data yang dilakukan selama program dieksekusi, yang natinya isi dari variabel tersebut dapat diubah oleh operasi - operasi tertentu pada program yang menggunakan variabel.
+
+Variabel dapat menyimpan berbagai macam tipe data. Variabel bersifat mutable, artinya nilainya bisa berubah-ubah.
+
+Membuat Variabel di Python
+Variabel di python dapat dibuat dengan format seperti ini:
+nama_variabel = <nilai>
+Contoh:
+variabel_ku = "ini isi variabel"
+variabel2 = 20
+Kemudian untuk melihat isi variabel, kita dapat menggunakan fungsi print.
+print variabel_ku
+print variabel2
+Aturan Penulisan Variabel
+Nama variabel boleh diawali menggunakan huruf atau garis bawah (_), contoh: nama, _nama, namaKu, nama_variabel.
+Karakter selanjutnya dapat berupa huruf, garis bawah (_) atau angka, contoh: __nama, n2, nilai1.
+Karakter pada nama variabel bersifat sensitif (case-sensitif). Artinya huruf besar dan kecil dibedakan. Misalnya, variabel_Ku dan variabel_ku, keduanya adalah variabel yang berbeda.
+Nama variabel tidak boleh menggunakan kata kunci yang sudah ada dalam python seperti if, while, for, dsb.
+Menghapus Variabel
+Ketika sebuah variabel tidak dibutuhkan lagi, maka kita bisa menghapusnya dengan fungsi del().
+Contoh:
+>>> nama = "petanikode"
+>>> print nama
+petanikode
+>>> del(nama)
+>>> print nama
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nama' is not defined
