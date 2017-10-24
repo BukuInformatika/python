@@ -20,25 +20,25 @@ import re \par
 \vspace{12pt}
 \noindent 
 line = "Cats are smarter than dogs"; \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
-matchObj = re.match( r'dogs', line, re.M  \vert  re.I) \par
+matchObj = re.match{r'dogs', line, re.M  \vert  re.I} 
 \noindent 
 if matchObj: \par
 \noindent 
-~~ print "match --> matchObj.group() : ", matchObj.group() \par
+~~ print "match --> matchObj.group() : ", matchObj.group{} \par
 \noindent 
 else: \par
 \noindent 
 ~~ print "No match!!" \par
 \vspace{12pt}
 \noindent 
-searchObj = re.search( r'dogs', line, re.M \$  \vert  \$re.I) \par
+searchObj = re.search{r'dogs', line, re.M \$  \vert  \$re.I} \par
 \noindent 
 if searchObj: \par
-\noindent 
-~~ print "search --> searchObj.group() : ", searchObj.group() \par
-\noindent 
+\item
+~~ print "search --> searchObj.group{} : ", searchObj.group{} \par
+\item
 else: \par
 \noindent 
 ~~ print "Nothing found!!" \par
@@ -46,23 +46,23 @@ else: \par
 \noindent 
 No match!! \par
 \noindent 
-search~--> matchObj.group() :  dogs \par
-\vspace{12pt}
-\noindent 
+search~--> matchObj.group{}:  dogs \par
+\begin{12pt}
+\item
 Cari dan Ganti \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
-Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub. \par
+Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub. 
 \noindent 
-Sintaksis \par
+Sintaksis 
 \vspace{12pt}
-Re.sub (pola, repl, string, max = 0) \par
+Re.sub {pola, repl, string, max = 0} 
 \vspace{12pt}
 \noindent 
 Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi. \par
 Contoh \par
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import re \par
 \vspace{12pt}
@@ -72,17 +72,17 @@ phone = "2004-959-559  \$  \#  \$ This is Phone Number" \par
 \noindent 
  \$  \#  \$ Delete Python-style comments \par
 \noindent 
-num = re.sub(r' \$  \#  \$.* \$  \$  \$', "", phone) \par
+num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} 
 \noindent 
 print "Phone Num : ", num \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\item
  \$  \#  \$ Remove anything other than digits \par
 \noindent 
-num~=~re.sub(r' \$  \setminus  \$D',~"", phone)     \par
+num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     a
 \noindent 
 print "Phone Num : ", num \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
 Phone~Num :  2004-959-559 \par
 \noindent 
@@ -90,7 +90,7 @@ Phone~Num :  2004959559 \par
 \vspace{12pt}
 \noindent 
 Regular Expression Modifiers: Option Flags \par
-Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif ( $  \vert  $), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
+Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif {\$  \vert  \$}, seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
 \noindent 
 re.I \hspace*{0.5in}  \par
 \noindent 
@@ -99,12 +99,12 @@ Lakukan pencocokan case-insensitive. \par
 \noindent 
 re.L \hspace*{0.5in}  \par
 \noindent 
-Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( $  \setminus  $ w dan  $  \setminus  $ W), serta perilaku batas kata ( $  \setminus  $ b dan  $  \setminus  $ B). \par
+Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad { \$  \setminus \$ w dan  \$  \setminus  \$ W}, serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). \par
 \vspace{12pt}
 \noindent 
 re.M \hspace*{0.5in}  \par
 \noindent 
-Membuat  $  \$  $ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  $  \string^  $ cocok dengan awal baris apapun (bukan hanya permulaan string). \par
+Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun {bukan hanya permulaan string}. \par
 \vspace{12pt}
 \noindent 
 re.S \hspace*{0.5in}  \par
@@ -118,42 +118,42 @@ Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi 
 \noindent 
 re.X \hspace*{0.5in}  \par
 \noindent 
-Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  $  \#  $ sebagai tanda komentar. \par
+Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  \$  \#  \$ sebagai tanda komentar. \par
 \vspace{12pt}
 \noindent 
 \textbf{Pola Ekspresi Reguler} \par
 \vspace{12pt}
 \noindent 
-Kecuali karakter kontrol, (+?.  $  \string^  $  $  \string^  $  $  \$  $ () []  $  \{  $ $  \}  $  $  \vert  $  $  \setminus  $), Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik. \par
+Kecuali karakter kontrol, {+?.  \$  \string^  \$  \$  \string^  \$  \$  \$  \$ {} []  \$  \{  \$ \$  \}  \$  \$  \vert  \$  \$  \setminus  \$}, Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik. \par
 \noindent 
 Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python - \par
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \noindent 
 import re \par
+\BEGIN{12pt}
+\noindent 
+phone = "2004-959-559  \$  \#  \$ This is Phone Number" \par
 \vspace{12pt}
 \noindent 
-phone = "2004-959-559  $  \#  $ This is Phone Number" \par
-\vspace{12pt}
+ \$  \#  \$ Delete Python-style comments \par
 \noindent 
- $  \#  $ Delete Python-style comments \par
-\noindent 
-num = re.sub(r' $  \#  $.* $  \$  $', "", phone) \par
+num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} \par
 \noindent 
 print "Phone Num : ", num \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Remove anything other than digits \par
+ \$  \#  \$ Remove anything other than digits \par
 \noindent 
-num~=~re.sub(r' $  \setminus  $D',~"", phone)     \par
+num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     \par
 \noindent 
 print "Phone Num : ", num \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\item 
 Phone~Num :  2004-959-559 \par
 \noindent 
 Phone~Num :  2004959559 \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
 <Directory "/var/www/cgi-bin"> \par
 \noindent 
