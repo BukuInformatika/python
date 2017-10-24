@@ -190,51 +190,51 @@ Karyawan . \$  \_  \$ \$  \_  \$ dict \$  \_  \$ \$  \_  \$:  \$  \{  \$' \$  \_
 Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \par
 \vspace{12pt}
 \noindent 
-a = 40  $  \#  $ Buat objek <40> \par
+a = 40  \$  \#  \$ Buat objek <40> \par
 \noindent 
-B = a  $  \#  $ Tingkatkan ref. Hitung <40> \par
+B = a  \$  \#  \$ Tingkatkan ref. Hitung <40> \par
 \noindent 
-c = [b]  $  \#  $ Tingkatkan ref. Hitung <40> \par
+c = [b]  \$  \#  \$ Tingkatkan ref. Hitung <40> \par
 \vspace{12pt}
 \noindent 
-Del  $  \#  $ Penurunan ref. Hitung <40> \par
+Del  \$  \#  \$ Penurunan ref. Hitung <40> \par
 \noindent 
-b = 100  $  \#  $ Kurangi ref. Hitung <40> \par
+b = 100  \$  \#  \$ Kurangi ref. Hitung <40> \par
 \noindent 
-C [0] = -1  $  \#  $ Kurangi ref. Hitung <40> \par
+C [0] = -1  \$  \#  \$ Kurangi ref. Hitung <40> \par
 \vspace{12pt}
-Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
+Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ {}, yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
 \noindent 
 Contoh \par
 \vspace{12pt}
-\noindent 
-Penghancur  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () ini mencetak nama kelas sebuah instance yang akan dihancurkan - \par
-\noindent 
- $  \#  $!/usr/bin/python \par
+\item
+Penghancur  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ {} ini mencetak nama kelas sebuah instance yang akan dihancurkan - 
+\bf
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
 class Point: \par
 \noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $( self, x=0, y=0): \par
+~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$( self, x=0, y=0): \par
 \noindent 
 ~~~~~ self.x = x \par
 \noindent 
 ~~~~~ self.y = y \par
 \noindent 
-~~ def  $  \_  $ $  \_  $del $  \_  $ $  \_  $(self): \par
+~~ def  \$  \_  \$ \$  \_  \$del \$  \_  \$ \$  \_  \${self}: \par
 \noindent 
-~~~~~ class $  \_  $name = self. $  \_  $ $  \_  $class $  \_  $ $  \_  $. $  \_  $ $  \_  $name $  \_  $ $  \_  $ \par
-\noindent 
-~~~~~ print class $  \_  $name, "destroyed" \par
+~~~~~ class \$  \_  \$name = self. \$  \_  \$ \$  \_  \$class \$  \_  \$ \$  \_  \$. \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ \par
+\item
+~~~~~ print class \$  \_  \$name, "destroyed" \par
 \vspace{12pt}
 \noindent 
-pt1 = Point() \par
+pt1 = Point{} \par
 \noindent 
 pt2 = pt1 \par
 \noindent 
 pt3 = pt1 \par
 \noindent 
-print id(pt1), id(pt2), id(pt3)  $  \#  $ prints the ids of the obejcts \par
+print id{pt1}, id{pt2}, id{pt3}  \$  \#  \$ prints the ids of the obejcts \par
 \noindent 
 del pt1 \par
 \noindent 
@@ -245,39 +245,39 @@ del pt3 \par
 \vspace{12pt}
 \noindent 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Kelas Warisan} \\} \par
-\vspace{12pt}
+\begin{12pt}
 Alih-alih mulai dari nol, Anda dapat membuat kelas dengan menurunkannya dari kelas yang sudah ada sebelumnya dengan mencantumkan kelas induk dalam tanda kurung setelah nama kelas yang baru. Kelas anak mewarisi atribut kelas induknya, dan Anda dapat menggunakan atribut tersebut seolah-olah mereka didefinisikan di kelas anak. Kelas anak juga dapat mengesampingkan data anggota dan metode dari orang tua. Sintaksis Kelas turunan dinyatakan seperti kelas orang tua mereka; Namun, daftar kelas dasar yang diwarisi dari diberikan setelah nama kelas - \par
 \vspace{12pt}
 \noindent 
-Kelas SubClassName (ParentClass1 [, ParentClass2, ...]): \par
+Kelas SubClassName {ParentClass1 [, ParentClass2, ...]}: \par
 \noindent 
 ~~ 'String dokumentasi kelas opsional' \par
 \noindent 
-~~ Class $  \_  $suite \par
+~~ Class \$  \_  \$suite \par
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
-class~Parent:~~~~~~   $  \#  $ define parent class \par
+class~Parent:~~~~~~   \$  \#  \$ define parent class \par
 \noindent 
 ~~ parentAttr = 100 \par
 \noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self): \par
+~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \${self}: \par
 \noindent 
 ~~~~~ print "Calling parent constructor" \par
 \vspace{12pt}
 \noindent 
-~~ def parentMethod(self): \par
+~~ def parentMethod{self}: \par
 \noindent 
 ~~~~~ print 'Calling parent method' \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
-~~ def setAttr(self, attr): \par
+~~ def setAttr{self, attr}: \par
 \noindent 
 ~~~~~ Parent.parentAttr = attr \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
-~~ def getAttr(self): \par
+~~ def getAttr{self}: \par
 \noindent 
 ~~~~~ print "Parent attribute :", Parent.parentAttr \par
 \vspace{12pt}
