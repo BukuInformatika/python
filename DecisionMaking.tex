@@ -1,13 +1,6 @@
-\sloppy
-Python Decision Making \par
-\vspace{12pt}
-\noindent 
-Pengambilan keputusan adalah antisipasi kondisi yang terjadi saat pelaksanaan program dan menentukan tindakan yang dilakukan sesuai kondisi. \par
-\vspace{12pt}
-\noindent 
-Struktur keputusan mengevaluasi banyak ekspresi yang menghasilkan TRUE atau FALSE sebagai hasil. \$  \$Anda perlu menentukan tindakan mana yang harus diambil dan pernyataan mana yang akan dijalankan jika hasilnya BENAR atau SALAH sebaliknya. \par
-\vspace{12pt}
-\noindent 
+\section{Python Decision Making}
+Pengambilan keputusan adalah antisipasi kondisi yang terjadi saat pelaksanaan program dan menentukan tindakan yang dilakukan sesuai kondisi. 
+Struktur keputusan mengevaluasi banyak ekspresi yang menghasilkan TRUE atau FALSE sebagai hasil. \$  \$Anda perlu menentukan tindakan mana yang harus diambil dan pernyataan mana yang akan dijalankan jika hasilnya BENAR atau SALAH sebaliknya. 
 Berikut adalah bentuk umum dari struktur pengambilan keputusan yang khas atau khusus yang ditemukan di sebagian besar bahasa pemrograman
 \ref{struktur}.
 \begin{figure}[ht]
@@ -15,18 +8,16 @@ Berikut adalah bentuk umum dari struktur pengambilan keputusan yang khas atau kh
     \caption{struktur pada python}
     \label{struktur}
     \end{figure}\par
-\vspace{12pt}
-\noindent
-Bahasa pemrograman Python menyediakan jenis dan juga laporan pengambilan keputusan. Berikut ini adalah penjelasan tentang pernyataan dan deskripsinya : \par
-\vspace{12pt}
+Bahasa pemrograman Python menyediakan jenis dan juga laporan pengambilan keputusan. Berikut ini adalah penjelasan tentang pernyataan dan deskripsinya :
+\begin{enumerate}
 \item
 if statements : sebuah if statement terdiri dari ekspresi boolean diikuti oleh satu atau lebih pernyataan. \par
 \item
 if...else statements : sebuah if statement dapat diikuti oleh opsinal else statement, yang mengeksekusi ketika ekspresi boolean adalah palsu. \par
 \item
 nested if statements : anda dapat menggunakan satu if atau else if pernyataan di dalam lain if atau else if statements. \par
-\noindent 
-Decision making / Pemilihan keputusan pada python sangat penting untuk pemrograman komputer. Akan ada banyak situasi saat Anda diberi dua pilihan atau lebih dan Anda harus memilih opsi berdasarkan kondisi yang diberikan. Misalnya,
+\end{enumerate}
+Decision making atau Pemilihan keputusan pada python sangat penting untuk pemrograman komputer. Akan ada banyak situasi saat Anda diberi dua pilihan atau lebih dan Anda harus memilih opsi berdasarkan kondisi yang diberikan. Misalnya,
 \begin{enumerate} \par
 \item
 Seorang murid dengan nilai lebih dari 90 disebut siswa pintar \par
@@ -68,11 +59,8 @@ main() {
 }
 \end{verbatim}\par
 Outputnya adalah Siswa Standard
-\vspace{12pt}
-\noindent 
+
 Bahasa pemrograman Python mengasumsikan nilai \$  \$non-nol \$  \$dan \$  \$non-nullsebagai TRUE, dan jika itu adalah \$  \$nol \$  \$atau \$  \$nol \$  \$, maka diasumsikan sebagai nilai FALSE. \par
-\vspace{12pt}
-\noindent 
 Bahasa pemrograman Python menyediakan jenis pernyataan pengambilan keputusan berikut. \par
 \vspace{12pt}
 \noindent 
@@ -80,7 +68,7 @@ Mari kita membahas setiap keputusan secara singkat  \par
 \vspace{12pt}
 \noindent 
 Setelah tutorial mengenai \$ 
-{variable dan operator}
+\subsection{variable dan operator}
 \$pada bahasa pemrograman python akan membahas mengenai percabangan/pengambilan keputusan. Percabangan atau pengambilan keputusan adalah pengkondisian yang terjadi ketika aplikasi berjalan, kemudian ada aksi-aksi tertentu atau kondisi tertentu sehingga aplikasi harus bereaksi terhadap hal itu. Atau dalam bahasa pemrograman umum dikenal dengan IF, THEN, ELSE sebagai contoh pengaplikasian dari pengambilan keputusan ini. \par
 \vspace{12pt}
 if statements
@@ -185,7 +173,7 @@ varAngka = 89 \par
 if varAngka<100: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $print "Nilai : TRUE" \par
+ \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$  \$print \"Nilai : TRUE\" \par
 \vspace{12pt}
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $print varAngka \par
@@ -194,37 +182,37 @@ if varAngka<100: \par
  $  $  $  $  $  $  $  $  $  $  $  $if varAngka > 80: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print "Nilai : A" \par
+ $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print \"Nilai : A\" \par
 \vspace{12pt}
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $elif varAngka > 60: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print "Nilai : B" \par
+ $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print \"Nilai : B\" \par
 \vspace{12pt}
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $elif varAngka > 40: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print "Nilai : C" \par
+ $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print \"Nilai : C\" \par
 \vspace{12pt}
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $elif varAngka > 20: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print "Nilai : D" \par
+ $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print \"Nilai : D\" \par
 \vspace{12pt}
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $else: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print "Nilai : E" \par
+ $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $  $ print \"Nilai : E\" \par
 \vspace{12pt}
 \noindent 
 else: \par
 \vspace{12pt}
 \noindent 
- $  $  $  $  $  $  $  $  $  $  $  $print "Nilai : FALSE" \par
+ $  $  $  $  $  $  $  $  $  $  $  $print \"Nilai : FALSE\" \par
 \vspace{12pt}
 \noindent 
  $  $  $  $  $  $  $  $  $  $  $  $print varAngka \par
@@ -251,7 +239,7 @@ Perintah seperti diatas itu adalah NESTED IF yaitu terdapat IF di dalam IF. \par
 Statemen IF juga bisa ditulis dalam 1 baris saja, misalnya seperti ini :  \par
 \vspace{12pt}
 \noindent 
-if varAngka1: print "Nilai : TRUE" \par
+if varAngka1: print \"Nilai : TRUE\" \par
 \vspace{12pt}
 \noindent 
 Dari sintak percabangan sudah bisa kita lihat perbedaan di antara python dengan menggunakan bahasa pemrograman yang lain. Sintak ditulis dengan lebih ringkas dibanding dengan yang lain. Percabangan atau pengkondisian ini adalah hal dasar dalam pemrograman pada umumnya, kita pasti akan menggunakannya. Pada tulisan yang akan dibuat selanjutnya saya akan menulis mengenai perulangan atau looping dalam python. \par
@@ -379,13 +367,13 @@ elif(hari \$  \_  \$ini == \"Rabu\"): \par
  \$  \$  \$  \$ print(\"Saya akan kuliah\") \par
 \noindent 
 \vspace{\baselineskip}
-elif(hari $  \_  $ini == "Kamis"): \par
+elif(hari \$  \_  \$ini == \"Kamis\"): \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ print("Saya akan kuliah") \par
+ \$  \$  \$  \$ print(\"Saya akan kuliah\") \par
 \noindent 
 \vspace{\baselineskip}
-elif(hari $  \_  $ini == "Jumat"): \par
+elif(hari \$  \_  \$ini == \"Jumat\"): \par
 \noindent 
 \vspace{\baselineskip}
  $  $  $  $ print("Saya akan kuliah") \par
@@ -559,14 +547,14 @@ Adapun tanda titik dua diletakan setelah kondisi, sedangkan untuk perintah yang 
 angka = 7 \par
 \noindent 
 \vspace{\baselineskip}
-if angka  $  \%  $ 2 == 0: \par
+if angka  \$  \%  \$ 2 == 0: \par
 \noindent 
 \vspace{\baselineskip}
- $  $  $  $ print 'genap' \par
+ \$  \$  \$  \$ print 'genap' \par
 \noindent 
 \vspace{\baselineskip}
 else:\vspace{\baselineskip}
- $  $print 'ganjil' \par
+ \$  \$print 'ganjil' \par
 \noindent 
 \vspace{\baselineskip}
  Dari perintah diatas akan menghasilkan nilai yang diprint adalah 'ganjil'. Tanda  $  \%  $ (persen) disini merupakan operator untuk modulus, yaitu sisa bagi. Adapun jalannya dari program diatas adalah, jika angka dalam hal ini nilainya 7 jika di modulus dengan 2, menyisahkan nilai nol maka data yang diprint adalah genap, jika tidak menyisahkan nilai nol maka data yang diprint adalah ganjil. \par
