@@ -8,7 +8,7 @@ Objek adalah sesuatu yang menamping nilai atau data dan dapat dikenakan operasi 
 \item Class atau Kelas: adalah struktur data yang bisa digunakan untuk mendefinisikan objek yang menyimpan data bersama-sama nilai-nilai dan perilaku. Kelas adalah suatu entitas yang merupakan bentuk program dari suatu abstraksi untuk permasalahan dunia nyata, dan instans dari class merupakan realisasi dari beberapa objek.
 \item Inheritace atau pewarisan merupakan konsep dalam pemrograman berbasis objek yang memungkinkan untuk membuat suatu kelas dengan didasarkan pada kelas yang sudah ada sehingga mewarisi semua method dan atributnya. Dengan cara seperti ini, semua method dan atribut yang terdapat pada kelas induk diturunkan ke kelas turunannya. Namun kelas turunannya dapat menambah method baru atau atribut baru tersendiri.
 \item Method Constructor merupakan sebuah method yang akan otomatis dipanggil ketika objek diinstantiasi. Construktor umumnya digunakan untuk melakukan inisialisasi terhadap suatu variabel atau method.
-\end {enumerate} \par
+\end {enumerate} 
 
 Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin  ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. Namun, di sini adalah pengenalan kecil Object-Oriented Programming (OOP) untuk membawa Anda pada kecepatan - Ikhtisar Terminologi OOP. 
 
@@ -23,133 +23,133 @@ Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi o
 \item Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas.  
 \item Objek: Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode.
 \item Operator overloading: Penugasan lebih dari satu fungsi ke operator tertentu. 
-\end{enumerate} \par
+\end{enumerate} 
 
 Salah satu alasan yang paling penting untuk mempertimbangkan bekerja di OOP adalah bahwa ia menyediakan pendekatan pemodelan langsung dan memecahkan masalah didunia nyata. 
 
 \vspace{12pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Membuat Kelas} \\} \par
+{\fontsize{14pt}{14pt}\selectfont \textbf{Membuat Kelas} \\} 
 \vspace{12pt}
-Pernyataan kelas membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut - \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-class ClassName: \par
-\noindent 
-~~ 'Optional class documentation string' \par
-\noindent 
-~~ class $  \_  $suite \par
-\vspace{12pt}
-\vspace{12pt}
-Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $.  Class $  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data. \par
+Pernyataan kelas membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut - 
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Contoh \par
+class ClassName: 
+\noindent 
+~~ 'Optional class documentation string' 
+\noindent
+~~ class $  \_  $suite 
 \vspace{12pt}
+\vspace{12pt}
+Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $.  Class $  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data. 
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Contoh 
+\vspace{12pt
 \noindent 
 
-Berikut adalah contoh kelas Python sederhana - \par
+Berikut adalah contoh kelas Python sederhana - 
 \vspace{12pt}
 \noindent 
-class Employee: \par
+class Employee: 
 \noindent 
-~~ 'Common base class for all employees' \par
+~~ 'Common base class for all employees' 
 \noindent 
-~~ empCount = 0 \par
+~~ empCount = 0 
 \vspace{12pt}
 \noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
 \noindent 
-~~~~~ self.name = name \par
+~~~~~ self.name = name 
 \noindent 
-~~~~~ self.salary = salary \par
+~~~~~ self.salary = salary 
 \noindent 
-~~~~~ Employee.empCount += 1 \par
+~~~~~ Employee.empCount += 1 
 \noindent 
-~~  \par
+~~  
 \noindent 
-~~ def displayCount(self): \par
+~~ def displayCount(self): 
 \noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
 \vspace{12pt}
+\noindent
+~~ def displayEmployee(self): 
 \noindent 
-~~ def displayEmployee(self): \par
-\noindent 
-~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
 \vspace{12pt}
 
 \section{Variable empCount}
-Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. \par
+Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. 
 \vspace{12pt}
-\noindent 
+\noindent
 
 \subsection{Membuat Instance Objects}
-Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. \par
+Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. 
 \vspace{12pt}
 \noindent 
-"Ini akan menciptakan objek pertama kelas Karyawan" \par
+"Ini akan menciptakan objek pertama kelas Karyawan" 
 \noindent 
-Emp1 = Karyawan ("Zara", 2000) \par
+Emp1 = Karyawan ("Zara", 2000) 
 \noindent 
-"Ini akan menciptakan objek kedua dari kelas Karyawan" \par
+"Ini akan menciptakan objek kedua dari kelas Karyawan" 
 \noindent 
-Emp2 = Karyawan ("Manni", 5000) \par
+Emp2 = Karyawan ("Manni", 5000) 
 \vspace{12pt}
 \noindent 
 
 \subsection{Mengakses Atribut}
-Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut - \par
+Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut - 
 \vspace{12pt}
 \noindent 
-Emp1.displayEmployee () \par
+Emp1.displayEmployee () 
 \noindent 
-Emp2.displayEmployee () \par
+Emp2.displayEmployee ()
 \noindent 
-Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount \par
+Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount 
 \vspace{12pt}
-\noindent 
+\noindent
 
-Sekarang, meletakkan semua konsep bersama - \par
+Sekarang, meletakkan semua konsep bersama - 
 \noindent 
- $  \#  $!/usr/bin/python \par
+ $  \#  $!/usr/bin/python 
 \vspace{12pt}
 \noindent 
-class Employee: \par
+class Employee: 
 \noindent 
-~~ 'Common base class for all employees' \par
+~~ 'Common base class for all employees' 
 \noindent 
-~~ empCount = 0 \par
+~~ empCount = 0 
 \vspace{12pt}
 \noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
 \noindent 
-~~~~~ self.name = name \par
+~~~~~ self.name = name 
 \noindent 
-~~~~~ self.salary = salary \par
+~~~~~ self.salary = salary 
 \noindent 
-~~~~~ Employee.empCount += 1 \par
+~~~~~ Employee.empCount += 1 
 \noindent 
 ~~  \par
 \noindent 
-~~ def displayCount(self): \par
+~~ def displayCount(self): 
 \noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
 \vspace{12pt}
 \noindent 
-~~ def displayEmployee(self): \par
+~~ def displayEmployee(self): 
 \noindent 
-~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
 \vspace{12pt}
 \noindent 
-"This would create first object of Employee class" \par
+"This would create first object of Employee class" 
 \noindent 
-emp1 = Employee("Zara", 2000) \par
+emp1 = Employee("Zara", 2000) 
+\noinde
+"This would create second object of Employee class" 
 \noindent 
-"This would create second object of Employee class" \par
-\noindent 
-emp2 = Employee("Manni", 5000) \par
+emp2 = Employee("Manni", 5000) 
 \noindent 
 emp1.displayEmployee() \par
 \noindent 
@@ -186,7 +186,7 @@ Alih-alih menggunakan pernyataan normal untuk mengakses atribut, Anda dapat meng
 ~~~ Setattr (obj, name, value): untuk mengatur atribut. Jika atribut tidak ada, maka akan dibuat. \par
 \vspace{12pt}
 \noindent 
-~~~ The delattr (obj, name): untuk menghapus sebuah atribut. \par
+~~~ The delattr (obj, name): untuk menghapus sebuah atribut. \pa
 \vspace{12pt}
 \noindent 
 Hasattr (emp1, 'age')  $  \#  $ Mengembalikan true jika atribut 'age' ada \par
