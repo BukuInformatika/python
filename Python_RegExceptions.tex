@@ -111,44 +111,44 @@ No match!!
 
 search\~--> matchObj.group() :  dogs
 
-Cari dan Ganti \par
+Cari dan Ganti
 \vspace{12pt}
 \noindent
-Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub. \par
+Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub.
 \noindent
-Sintaksis \par
+Sintaksis
 \vspace{12pt}
-Re.sub (pola, repl, string, max = 0) \par
-\vspace{12pt}
-\noindent
-Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi. \par
-Contoh \par
-\noindent
- $  \#  $!/usr/bin/python \par
-\noindent
-import re \par
+Re.sub (pola, repl, string, max = 0)
 \vspace{12pt}
 \noindent
-phone = "2004-959-559  $  \#  $ This is Phone Number" \par
+Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi.
+Contoh
+\noindent
+ $  \#  $!/usr/bin/python
+\noindent
+import re
 \vspace{12pt}
 \noindent
- $  \#  $ Delete Python-style comments \par
-\noindent
-num = re.sub(r' $  \#  $.* $  \$  $', "", phone) \par
-\noindent
-print "Phone Num : ", num \par
+phone = "2004-959-559  $  \#  $ This is Phone Number" 
 \vspace{12pt}
 \noindent
- $  \#  $ Remove anything other than digits \par
+ $  \#  $ Delete Python-style comments
 \noindent
-num~=~re.sub(r' $  \setminus  $D',~"", phone)     \par
+num = re.sub(r' $  \#  $.* $  \$  $', "", phone)
 \noindent
-print "Phone Num : ", num \par
+print "Phone Num : ", num
 \vspace{12pt}
 \noindent
-Phone~Num :  2004-959-559 \par
+ $  \#  $ Remove anything other than digits
 \noindent
-Phone~Num :  2004959559 \par
+num~=~re.sub(r' $  \setminus  $D',~"", phone)
+\noindent
+print "Phone Num : ", num
+\vspace{12pt}
+\noindent
+Phone~Num :  2004-959-559
+\noindent
+Phone~Num :  2004959559
 \vspace{12pt}
 \noindent
 Regular Expression Modifiers: Option Flags \par
