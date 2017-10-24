@@ -552,3 +552,35 @@ abcd
 [’abcd’, 786, 2.23, ’john’, 70.200000000000003, 123, ’john’]
 \end{verbatim}
 
+\subsection{Tupel Python}
+Sebuah tupel adalah jenis data urutan lain yang serupa dengan daftar. Sebuah tupel terdiri dari sejumlah nilai yang dipisahkan dengan koma. Tidak seperti daftar,
+bagaimanapun, tupel tertutup dalam tanda kurung.
+Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung
+([]) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam
+\begin{verbatim}
+tanda kurung (()) dan tidak dapat diperbarui. Tupel bisa dianggap sebagai daftar
+hanya-baca . Misalnya -
+tuple = ( ’abcd’, 786 , 2.23, ’john’, 70.2 )
+tinytuple = (123, ’john’)
+print tuple Prints complete list
+print tuple[0] Prints first element of the list
+print tuple[1:3] Prints elements starting from 2nd till 3rd
+print tuple[2:] Prints elements starting from 3rd element
+print tinytuple * 2 Prints list two times
+print tuple + tinytuple Prints concatenated lists
+Ini menghasilkan hasil sebagai berikut
+(’abcd’, 786, 2.23, ’john’, 70.200000000000003)
+abcd
+(786, 2.23)
+(2.23, ’john’, 70.200000000000003)
+(123, ’john’, 123, ’john’)
+(’abcd’, 786, 2.23, ’john’, 70.200000000000003, 123, ’john’)
+\end{verbatim}
+Kode berikut tidak valid dengan tupel, karena kami mencoba memperbarui tupel,
+yang tidak diizinkan. Kasus serupa dimungkinkan dengan daftar 
+\begin{verbatim}
+tuple = ( ’abcd’, 786 , 2.23, ’john’, 70.2 )
+list = [ ’abcd’, 786 , 2.23, ’john’, 70.2 ]
+tuple[2] = 1000 Invalid syntax with tuple
+list[2] = 1000 Valid syntax with list
+\end{verbatim}
