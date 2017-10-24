@@ -27,6 +27,16 @@ Seorang murid dengan nilai dibawah 90 dan diatas 30 disebut Siswa Standard \par
 Seorang murid dengan nilai dibawah 30 disebut siswa bodoh \par
 \end{enumerate}\par
 
+Umumnya juga, decision making dalam bahasa pemrograman yang sering digunakan adalah :
+\begin{enumerate}
+\item
+if...else statement : berguna saat kita harus mengambil keputusan dari dua pilihan. Misalnya, jika seorang siswa mendapatkan nilai lebih dari angka 95, maka siswa itu pintar, jika tidak, situasi seperti itu dapat dikodekan. \par
+\item
+if...elseif...else statement : merupakan optional dari if...else statement, yang sangat berguna untuk menentukan berbagai kondisi yang lebih dari 2. \par
+\item
+switch statement : merupakan alternative dari if statement. Setiap nilai disebut case, dan variabel yang dicek untuk setiap switch case. \par
+\end{enumerate}
+
 Dari contoh diatas, pertanyaannya adalah bagaimana cara menulis kode pemrograman untuk menangani situasi seperti itu. Hampir semua bahasa pemrograman memberikan pernyataan kondisional diatas berdasarkan diagram decision di bawah. \par
 \begin{figure}[ht]
 	    \centerline{\includegraphics[width=0.25\textwidth]{figures/diagram_decision.png}}
@@ -39,21 +49,14 @@ Mari kita membuat sebuah program C dengan bantuan jika pernyataan kondisional un
 #include <stdio.h>
  
 main() {
- 
    int x = 45;
-    
    if( x > 95) {
-  
       printf( "siswa pintar");
    }
-    
    if( x < 30) {
-  
       printf( "siswa bodoh");
    }
-    
    if( x < 95 && x > 30 ) {
-  
       printf( "Siswa Standard");
    }
 }
