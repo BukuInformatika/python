@@ -7,7 +7,7 @@ tertentu sangat sesuai dengan ekspresi yang diberikan, ekspresi dapat digabungka
 bisa berisikan karakter spesial dan juga biasa.
 
 \subsubsection {Deskripsi parameter}
-Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini merupakan string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$  \vert  \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok {num} atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup{num=0} Metode ini mengembalikan seluruh kecocokan atau jumlah subkelompok tertentu.groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) 
+Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini merupakan string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$  \vert  \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok (num) atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup(num=0) Metode ini mengembalikan seluruh kecocokan atau jumlah subkelompok tertentu.groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) 
 
 \subsubsection {Penawaran paramater ptyhon}
 python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default)
@@ -90,7 +90,7 @@ Phone~Num :  2004959559 \par
 \vspace{12pt}
 \noindent 
 Regular Expression Modifiers: Option Flags \par
-Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif {\$  \vert  \$}, seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
+Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif (\$  \vert  \$), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
 \noindent 
 re.I \hspace*{0.5in}  \par
 \noindent 
@@ -99,12 +99,12 @@ Lakukan pencocokan case-insensitive. \par
 \noindent 
 re.L \hspace*{0.5in}  \par
 \noindent 
-Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad { \$  \setminus \$ w dan  \$  \setminus  \$ W}, serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). \par
+Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( \$  \setminus \$ w dan  \$  \setminus  \$ W), serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). \par
 \vspace{12pt}
 \noindent 
 re.M \hspace*{0.5in}  \par
 \noindent 
-Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun {bukan hanya permulaan string}. \par
+Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun (bukan hanya permulaan string). \par
 \vspace{12pt}
 \noindent 
 re.S \hspace*{0.5in}  \par
@@ -113,7 +113,7 @@ Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline. \pa
 \noindent 
 re.U \hspace*{0.5in}  \par
 \noindent 
-Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \setminus  $ w,  $  \setminus  $ W,  $  \setminus  $ b,  $  \setminus  $ B. \par
+Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \setminus  $ w,  $  \setminus  $ W,  $  \setminus  \$ b,  \$  \setminus  \$ B. \par
 \vspace{12pt}
 \noindent 
 re.X \hspace*{0.5in}  \par
@@ -200,38 +200,33 @@ print '</html>' \par
 \noindent 
 Halo kata! Ini adalah program CGI pertamaku \par
 \vspace{12pt}
-Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  $  \setminus  $ r  $  \setminus  $ n  $  \setminus  $ r  $  \setminus  $ n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS. \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
+Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \setminus  \$ r  \$  \setminus  \$ n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS. 
+Header HTTP 
 \vspace{12pt}
 \noindent 
-Header HTTP \par
+Baris Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \setminus  \$ r  \$  \setminus  \$ n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut - \par
+\noindent 
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
-Baris Content-type: text / html  $  \setminus  $ r  $  \setminus  $ n  $  \setminus  $ r  $  \setminus  $ n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut - \par
-\noindent 
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- $  \#  $ Import modules for CGI handling  \par
+ \$  \#  \$ Import modules for CGI handling  \par
 \noindent 
 import cgi, cgitb  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Create instance of FieldStorage  \par
+ \$  \#  \$ Create instance of FieldStorage  \par
 \noindent 
 form = cgi.FieldStorage()  \par
 \vspace{12pt}
 \noindent 
    \#   Get data from fields \par
 \noindent 
-first $  \_  $name = form.getvalue('first $  \_  $name') \par
+first \$  \_  \$name = form.getvalue('first \$  \_  \$name') \par
 \noindent 
-last $  \_  $name~ = form.getvalue('last $  \_  $name') \par
+last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') \par
 \vspace{12pt}
 \noindent 
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
 \noindent 
 print "<html>" \par
 \noindent 
@@ -243,7 +238,7 @@ print "</head>" \par
 \noindent 
 print "<body>" \par
 \noindent 
-print "<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $name) \par
+print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>"  \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) \par
 \noindent 
 print "</body>" \par
 \noindent 
