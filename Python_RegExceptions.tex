@@ -278,77 +278,64 @@ Last Name: <input type=\verb|"text" name="last $  \_  $name"| />
 
 </form>
 
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent
- $  \#  $ Import modules for CGI handling  \par
-\noindent
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Create instance of FieldStorage  \par
-\noindent
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Get data from fields \par
-\noindent
-first $  \_  $name = form.getvalue('first $  \_  $name') \par
-\noindent
-last $  \_  $name~ = form.getvalue('last $  \_  $name') \par
-\vspace{12pt}
-\noindent
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
-\noindent
-print "<html>" \par
-\noindent
-print "<head>" \par
-\noindent
-print "<title>Hello - Second CGI Program</title>" \par
-\noindent
-print "</head>" \par
-\noindent
-print "<body>" \par
-\noindent
-print "<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $name) \par
-\noindent
-print "</body>" \par
-\noindent
-print "</html>" \par
-\vspace{12pt}
-\noindent
-<form action="/cgi-bin/hello $  \_  $get.py" method="post"> \par
-\noindent
-First Name: <input type="text" name="first $  \_  $name"><br /> \par
-\noindent
-Last Name: <input type="text" name="last $  \_  $name" /> \par
-\vspace{12pt}
-\noindent
-<input type="submit" value="Submit" /> \par
-\noindent
-</form> \par
-\vspace{12pt}
-Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello $  \_  $get.py untuk menangani masukan ini. \par
-\noindent
-Melewati Data Kotak Centang ke Program CGI \par
-\vspace{12pt}
-\noindent
-Kotak centang digunakan bila lebih dari satu pilihan diperlukan untuk dipilih. \par
-\vspace{12pt}
-\noindent
-Berikut adalah contoh kode HTML untuk form dengan dua kotak centang - \par
-\vspace{12pt}
-\noindent
-Melewati Data Tombol Radio ke Program CGI \par
-\vspace{12pt}
-\noindent
-Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih. \par
-\vspace{12pt}
-\noindent
-Berikut adalah contoh kode HTML untuk form dengan dua tombol radio  \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent
+ \$  \#  \$!/usr/bin/python
+
+ $  \#  $ Import modules for CGI handling
+
+import cgi, cgitb
+
+ \$  \#  \$ Create instance of FieldStorage
+
+form = cgi.FieldStorage()
+
+\$  \#  \$ Get data from fields
+
+first \$  \_  \$name = form.getvalue(\'first \$  \_  \$name\')
+
+last \$  \_  \$name~ = form.getvalue(\'last \$  \_  \$name\')
+
+print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+
+print \"<html>\"
+
+print \"<head>\"
+
+print \"<title>Hello - Second CGI Program</title>\"
+
+print \"</head>\"
+
+print \"<body>\"
+
+print \verb|"<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $|name)
+
+print \"<body>\"
+
+print \"</html>\"
+
+<form action=\verb|"/cgi-bin/hello $  \_  $get.py" method="post"|>
+
+First~Name: <input type=\verb|"text" name="first $  \_  $name"|> <br />
+
+Last Name: <input type=\verb|"text" name="last $  \_  $name"|/>
+
+<input type=\verb|"submit" value="Submit"| />
+
+</form>
+
+Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello $  \_  $get.py untuk menangani masukan ini.
+
+Melewati Data Kotak Centang ke Program CGI
+
+Kotak centang digunakan bila lebih dari satu pilihan diperlukan untuk dipilih.
+
+Berikut adalah contoh kode HTML untuk form dengan dua kotak centang -
+
+Melewati Data Tombol Radio ke Program CGI
+
+Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih.
+
+Berikut adalah contoh kode HTML untuk form dengan dua tombol radio
+
  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent
