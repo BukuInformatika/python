@@ -252,3 +252,39 @@ contoh : x adalah y, berikut adalah hasil dalam 1 jika id(x)sama dengan id(y) .
 \item operator is not, Mengevaluasi false jika variabel di kedua sisi operator menunjuk ke objek yang sama dan benar sebaliknya.
 Contoh : x tidak y, di sini bukan hasil dalam 1 jika id(x)tidak sama dengan id(y) .
 \end{enumerate}
+
+Di bawah ini adalah contoh implementasi operator identitas pada program di Python:
+\begin{verbartim}
+#!/usr/bin/python
+
+a = 20
+b = 20
+
+if ( a is b ):
+   print "Line 1 - a and b have same identity"
+else:
+   print "Line 1 - a and b do not have same identity"
+
+if ( id(a) == id(b) ):
+   print "Line 2 - a and b have same identity"
+else:
+   print "Line 2 - a and b do not have same identity"
+
+b = 30
+if ( a is b ):
+   print "Line 3 - a and b have same identity"
+else:
+   print "Line 3 - a and b do not have same identity"
+
+if ( a is not b ):
+   print "Line 4 - a and b do not have same identity"
+else:
+   print "Line 4 - a and b have same identity"
+\end{verbatim}
+
+Hasil dalam menjalankan program di atas menghasilkan hasil sebagai berikut: 
+
+Line 1 - a and b have same identity
+Line 2 - a and b have same identity
+Line 3 - a and b do not have same identity
+Line 4 - a and b do not have same identity
