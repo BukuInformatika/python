@@ -89,3 +89,8 @@ Berikut adalah langkah-langkah sederhana untuk menginstal Python di mesin Unix /
 \item Ini menginstal Python di lokasi standar / usr / local / bin
 \item dan pustakanya di / usr / local / lib / pythonXX dimana XX adalah versi Python.
 \end {enumerate}
+
+\subsection {Struktur Data}
+Python adalah bahasa yang diketik secara dinamis , nilai Python , bukan variabel, tipe carry. Ini berimplikasi pada banyak aspek dari cara fungsi bahasa.
+Semua variabel dalam Python menyimpan referensi ke objek, dan referensi ini dilewatkan ke fungsi; sebuah fungsi tidak dapat mengubah nilai referensi variabel dalam fungsi pemanggilannya. Beberapa orang telah memanggil skema parameter-passing ini "Call by object reference."
+Di antara bahasa yang diketik secara dinamis, Python cukup tipe-check. Konversi implisit didefinisikan untuk tipe numerik (dan juga boolean), jadi seseorang dapat secara sah mengalikan bilangan kompleks dengan bilangan bulat panjang (misalnya) tanpa pengecoran eksplisit. Namun, tidak ada konversi implisit antara (misalnya) angka dan string; string adalah argumen yang tidak valid terhadap fungsi matematis yang mengharapkan sebuah angka.
