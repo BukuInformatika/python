@@ -230,6 +230,20 @@ Anda dapat mengomentari beberapa baris sebagai berikut –
 # I said that already.
 \end {equation}
 
+\subsection{Menggunakan Blank Lines}
+Baris yang hanya berisi spasi putih, yaitu dengan komentar dan dikenal sebagai garis kosong dan Python sama sekali mengabaikannya.
+Dalam sesi juru bahasa interaktif, Anda harus memasukkan baris fisik kosong untuk mengakhiri pernyataan multiline.
+
+\subsection{Menunggu Pengguna}
+Baris berikut dari program menampilkan prompt, pernyataan yang mengatakan "Tekan tombol enter untuk keluar", dan menunggu pengguna melakukan tindakan –
+\bin {equation}
+#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")
+\end {equation}
+	
+Di sini, "\ n \ n" digunakan untuk membuat dua baris baru sebelum menampilkan baris sebenarnya. Begitu pengguna menekan tombolnya, program akan berakhir. Ini adalah trik bagus untuk menjaga jendela konsol terbuka sampai pengguna selesai dengan aplikasi.
+
 \subsection{Deklarasi Tipe Sederhana dan Tipe Casting}
     Hanya tipe numerik dari int dan float yang akan digunakan di sini:int memegang nilai integer dan tidak ada titik desimal: 
     float menyimpan nilai floating point dan memiliki titik desimal.Kedua tipe memiliki representasi internal yang berbeda. 
