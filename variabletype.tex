@@ -1,18 +1,6 @@
 \section{Variable Type}
 Variabel merupakan tempat menyimpan data, sedangkan tipe data adalah jenis data yang terseimpan dalam variabel. Variabel menyimpan data yang dilakukan selama program dieksekusi, yang natinya isi dari variabel tersebut dapat diubah oleh operasi - operasi tertentu pada program yang menggunakan variabel. Variabel juga dapat dikatakan sebagai entitas yang memiliki nilai dan berbeda satu dengan yang lain. Variabel mengalokasikan memori untuk menyimpan nilai.Hal ini berarti ketika membuat variabel, maka  memesan beberapa ruang di memori. 
 
-Pada tahun 1970, sudah memperkenalkan gagasan tipe variabel, yaitu, a
-skema abstraksi w.r.t, jenis Contoh tipikal adalah, misalnya, secara abstrak
-fungsi identitas dari jenis apa pun atau, yaitu, Ax ~ .x ° "dari tipe o-, sehingga mendapatkan
-'identitas universal' Aot.Ax ".x". Identitas universal ini pada gilirannya memiliki tipe Aa.a ~ a,
-yang merupakan jenis fungsi (jika seseorang dapat memanggil mereka seperti itu) bergaul ke masing-masing
-ketik cr sebuah objek dari tipe crier. Sebenarnya, formalisme itu cukup umum, karena
-Pembentukan abstraksi tipe tidak terbatas sama sekali. Yang tentu saja bermasalah
-adalah skema evaluasi Dari fungsi universal tipe Aa.cr [a], karena itu
-adalah mungkin untuk menerapkan objek t jenis ini ke tipe apapun ~ ', menghasilkan tipe t {~'}
-o '[¢ / a]: ini jelas memberi masalah sirkularitas.
-
-
 Tipe data di bahasa pemrograman python dibagi menjadi dua kelompok yaitu :
 \begin{enumerate}
 	\item Immutable, merupakan tipe data yang tidak bisa diubah (string dan bilangan)
@@ -22,9 +10,10 @@ Tipe data di bahasa pemrograman python dibagi menjadi dua kelompok yaitu :
 Variabel bisa digunakan untuk menyimpan bilangan bulat, desimal atau juga karakter.Variabel dapat menyimpan berbagai macam tipe data. Variabel bersifat mutable, artinya nilainya bisa berubah-ubah.Tidak seperti pemrograman lainnya, variabel pada Python tidak harus dideklarasikan secara eksplisit. Pendeklarasian variabel terjadi secara otomatis ketika kita memberikan sebuah nilai pada suatu variabel. Untuk pemberian nilai, bisa langsung dengan tanda =. Berdasarkan tipe data sebuah variabel, penafsir mengalokasikan memori dan memutuskan apa yang dapat disimpan dalam memori yang dipesan. Oleh karena itu, dengan menetapkan tipe data yang berbeda ke variabel, Anda dapat menyimpan bilangan bulat, desimal atau karakter dalam variabel ini.
 
 \subsection{Menetapkan Nilai ke Variabel}
-Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel. Tanda sama (=) digunakan untuk menetapkan nilai pada variabel
+Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel. Tanda sama (=) digunakan untuk menetapkan nilai pada variabel.
 
-Operan di sebelah kiri operator = adalah nama dari variabel dan operan di sebelah kanan operator = adalah nilai yang disimpan dalam variabel. Misalnya -
+Operan di sebelah kiri operator = adalah nama dari variabel dan operan di sebelah kanan operator = adalah nilai yang disimpan dalam variabel. Misalnya:
+
 \begin{verbatim}
 #!/usr/bin/python
 
@@ -37,7 +26,7 @@ print miles
 print name
 \end{verbatim}
 
-Di sini, 100, 1000,0 dan "John" adalah nilai-nilai ditugaskan untuk counter , miles , dan name variabel, masing-masing. Ini menghasilkan hasil berikut -
+Di sini, 100, 1000,0 dan John adalah nilai-nilai ditugaskan untuk counter , miles , dan name variabel, masing-masing. Ini menghasilkan hasil berikut -
 100
 1000.0
 John
@@ -54,6 +43,7 @@ Berikut ini merupakan aturan-aturan yang digunakan dalam penulisan variabel pada
 
 \subsection{Membuat Variabel di Python}
 Variabel di python dapat dibuat dengan format seperti ini:
+
 \begin{verbatim}
 nama_variabel = <nilai>
 Contoh:
@@ -78,8 +68,56 @@ Traceback (most recent call last):
 NameError: name 'nama' is not defined
 \end{verbatim}
 
-\subsection{penggunaan variabel}
-contoh penggunaan variabel  dalam bahasa pemrograman Python adalah sebagai berikut :
+\section{Tipe data}
+Cara mengisi nilai variabel ditentukan dengan jenis datanya, misalkan untuk tipe data teks (string) maka harus diapit dengan tanda petik (...). Sedangkan untuk angka (integer) dan boolean tidak perlu diapit dengan tanda petik.
+
+Contoh:
+
+\begin{verbatim}
+nama_ku = "Petani Kode"
+umur = 20
+tinggi = 183.22
+\end{verbatim}
+
+Python akan seara otomatis mengenali jenis data atau tipe data yang tersimpan dalam sebuah variabel. Untuk memeriksa tipe data pada suatu variabel, kita bisa menggunakan fungsi type().
+
+Contoh:
+
+\begin{verbatim}
+>>> usia = 20
+>>> type(usia)
+<type 'int'>
+>>> usia = "20"
+>>> type(usia)
+<type 'str'>
+>>> usia = '20'
+>>> type(usia)
+<type 'str'>
+>>> usia = 20.5
+>>> type(usia)
+<type 'float'>
+>>> usia = true
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined
+>>> usia = True
+>>> type(usia)
+<type 'bool'>
+\end{verbatim}
+
+\subsection{Jenis-jenis Tipe Data}
+
+Secara umum, tipe data primitif dalam python dibagi menjadi tiga jenis:
+
+\begin{enumerate}
+\item Tipe data angka
+\item Tipe data teks
+\item Tipe data boolan
+\end{enumerate}
+
+\subsection{Penggunaan Variabel}
+Contoh penggunaan variabel  dalam bahasa pemrograman Python adalah sebagai berikut :
+
 \begin{verbatim}
 #proses memasukan data ke dalam variabel
 nama = "John Doe"
