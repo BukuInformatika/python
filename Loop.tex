@@ -1,6 +1,4 @@
 \section{Python Loops}
-\vspace{12pt}
-\vspace{12pt}
 Python dikenal sebagai bahasa pemograman interpreter, karena Python dieksekusi dengan sebuah interpreter. Satu hal yang telah kita ketahui bahwa bahasa pemograman Python adalah bahasa pemograman yang mudah dibaca dan terstruktur. Python sangat mementingkan indentasi, sehingga kita perlu melakukan indentasi secara konsisten. Indentasi tersebut dipermudah dengan penggunaan tombol Tab dan dimulai dari kolom pertama untuk setiap blok baru\cite{santoso2009bahasa}.
 
 Secara umum, perulangan adalah blok kode yang dieksekusi berulang kali. Semua bahasa pemrograman menyediakan berbagai model struktur perulangan, seperti contohnya pada PHP ada while, for, dan foreach. Python juga menyediakan berbagai model tipe untuk menghandel perulangan. \par
@@ -95,6 +93,55 @@ for makanan in buah: \par
 \vspace{\baselineskip}
 \vspace{\baselineskip}
 \vspace{12pt}
+
+Looping artinya adalah pengulangan. Misalnya anda mendapat tugas untuk menghitung akar bilangan-bilangan dari 1 sampai 10. Ada 2 cara untuk menyelesaikan tugas tersebut, pertama, salinlah source-code berikut pada python editor lalu diberi nama looping01.py
+\begin{enumerate}
+\item from numpy import sqrt # hanya function sqrt yang dipanggil
+\item print sqrt(1)
+\item print sqrt(2)
+\item print sqrt(3)
+\item print sqrt(4)
+\item print sqrt(5)
+\item print sqrt(6)
+\item print sqrt(7)
+\item print sqrt(8)
+\item print sqrt(9)
+\item print sqrt(10)
+\end{enumerate}
+Jalankan source-code di atas dengan menekan tombol F5, maka akan muncul hasil sebagai berikut :
+\begin{enumerate}
+\item 0
+\item 41421356237
+\item 73205080757
+\item 0
+\item 2360679775
+\item 44948974278
+\item 64575131106
+\item 82842712475
+\item 0
+\item 16227766017
+\end{enumerate}
+Cara kedua dengan teknik looping, yaitu :
+from numpy import sqrt
+for i in range(1,10+1):
+print sqrt(i)
+Simpanlah source-code ini dengan nama looping02.py, lalu jalankan dengan F5, akan nampak
+hasil yang sama yaitu
+\begin{enumerate}
+\item 0
+\item 41421356237
+\item 73205080757
+\item 0
+\item 2360679775
+\item 44948974278
+\item 64575131106
+\item 82842712475
+\item 0
+\item 16227766017
+\end{enumerate}
+
+Mari sejenak kita bandingkan antara looping01.py dan looping02.py. Kedua source-code itu memiliki tujuan yang sama yaitu menghitung akar bilangan dari 1 sampai 10. Perbedaannya, looping01.py berisi 11 baris statemen, sedangkan looping02.py hanya 3 baris statemen. Coba cek
+ukuran file-nya! Ukuran file looping01.py (di laptop saya) adalah 179 byte, sementara ukuran looping02.py adalah 72 byte. Dengan demikian dapat disimpulkan bahwa looping02.py lebih efisien dibanding looping01.py.\cite{suparno2013komputasi}
 
 \subsection{Nested Loop}
 Nested Loop (Perulangan Bertingkat) adalah semua tipe perulangan yang dapat dipakai di dalam perulangan yang lain. Jadi Perulangan for bisa dipakai di dalam for yang lain, perulangan for bisa berada didalam perulangan while, perulangan while bisa dipakai di dalam perulangan while yang lain, dan perulangan while bisa di dalam perulangan for. \par
