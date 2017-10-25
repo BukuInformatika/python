@@ -38,7 +38,8 @@ Sebuah aplikasi web berkomunikasi dengan perangkat lunak client melalui HTTP. HT
 item Web Server yang berhadapan langsung dengan pengguna, menerima HTTP Request dan mengembalikan HTTP Response. 
 item Untuk konten statis seperti CSS, Javascript, gambar, maupun HTML web server dapat langsung menyajikannya sebagai HTTP Response kepada pengguna. Konten dinamis seperti program PHP maupun Perl disajikan melalui CGI. CGI Script kemudian menghasilkan HTML atau konten statis lainnya yang akan disajikan sebagai HTTP Response kepada pengguna.
 Meskipun terdapat banyak pengembangan selanjutnya dari CGI, ilustrasi sederhana di atas merupakan konsep inti ketika awal pengembangan CGI. Umumnya aplikasi web dengan CGI memiliki kelemahan di mana menjalankan script CGI mengharuskan web server untuk membuat sebuah proses baru. Pembuatan proses baru biasanya akan menggunakan banyak waktu dan memori dibandingkan dengan eksekusi script, dan karena setiap pengguna yang terkoneksi akan mengakibatkan hal ini terhadap server performa aplikasi akan menjadi kurang baik. 
-CGI sendiri menyediakan solusi untuk hal tersebut, misalnya FastCGI yang menjalankan aplikasi sebagai bagian dari web server. Bahasa lain juga menyediakan alternatif dari CGI, misalnya Java yang memiliki Servlet. Servlet pada Java merupakan sebuah program yang menambahkan fitur dari server secara langsung. Jadi pada pemrograman dengan Servlet, kita akan memiliki satu web server di dalam program kita, dan pada web server tersebut akan ditambahkan fitur-fitur spesifik aplikasi web kita. 
+CGI sendiri menyediakan solusi untuk hal tersebut, misalnya FastCGI yang menjalankan aplikasi sebagai bagian dari web server. Bahasa lain juga menyediakan alternatif dari CGI, misalnya Java yang memiliki Servlet. Servlet pada Java merupakan sebuah program yang menambahkan fitur dari server secara langsung. Jadi pada pemrograman dengan Servlet, kita akan memiliki satu web server di dalam program kita, dan pada web server tersebut akan ditambahkan fitur-fitur spesifik aplikasi web kita.
+server aplikasi yang aman memiliki antarmuka aman yang menerima permintaan dari browser web. Server juga memiliki program aplikasi untuk mengakses objek, seperti database, dan antarmuka pemrograman aplikasi (API) antara antarmuka aman dan program aplikasi. 
 
 \subsection{Kelebihan CGI} 
 Kelebihan yang dimiliki CGI antara lain :
@@ -75,32 +76,25 @@ Contoh nyata penerapan CGI untuk dokumen~~dinamis~~ini  misalnya  suatu "buku ta
 baru~saja~dikirimkan~ oleh  pengguna  tadi~~sembari~~memberikan  ucapan  terima kasih atas partisipasinya.
 Penerapan lain dari CGI adalah sebuah gateway.~Artinya~ adalah  program yang~dipergunakan sebagai penghubung  untuk~~mengakses~ informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna.Contoh yang nyata adalah gateway yang menghubungkan~antara~web  server  dengan dengan suatu database server yang besar semacam~oracle~~atau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisa~~memberikan~~query  dalam  SQL (structured query language, yaitu bahasa~yang~dipakai  untuk  melakukan pendefinisian maupun manipulasi terhadap~database)~ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya ke~dalam~bentuk~yang~bisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser.
 Program CGI pada prinsipnya bisa ditulis~dalam~bahasa  pemrograman  apa saja,~namun~kenyataanya tidak  semua  bahasa~~pemrograman~ cocok  untuk pemrograman CGI. Penerapan CGI dapat sangat~kompleks, dan untuk membuat  suatu program CGI menuntut pengetahuan teknis~yang~~cukup  tinggi  akan pemrograman. \par
-\subsection{Keamanan pada CGI}
-CGI dapat menimbulkan lubang keamanan, karena program CGI dapat dijalankan di server lokal dari luar sistem (remote) oleh siapa saja. Apabila program CGI tidak didisain dan dikonfigurasi dengan baik, maka akan terjadi lubang keamanan. Kesalahan yang dapat terjadi antara lain: \par
-\begin{itemize}
-	\item program CGI mengakses berkas (file) yang seharusnya tidak boleh di akses. Misalnya pernah terjadi kesalahan dalam program phf sehingga digunakan oleh orang untuk mengakses berkas password dari server WW.
-	\item runaway CGI-script, yaitu program berjalan di luar kontrol sehingga mengabiskan CPU cycle dari server WWW\end{itemize}
-\textbf{Lubang Keamanan CGI} \par
-\noindent 
-Beberapa contoh lubang keamanan pada CGI \par
-\noindent 
-\begin{itemize}
-	\item CGI dipasang oleh orang yang tidak berhak \par
-	\noindent 
-	\item CGI dijalankan berulang-ulang untuk menghabiskan resources (CPU, disk): DoS \par
-	\noindent 
-	\item Masalah setuid CGI di sistem UNIX, dimana CGI dijalankan oleh userid web server \par
-	\noindent 
-	\item Penyisipan karakter khusus untuk shell expansion \par
-	\noindent 
-	\item Kelemahan ASP di sistem Windows \par
-	\noindent 
-	\item Guestbook abuse dengan informasi sampah (pornografi) \par
-	\noindent 
-	\item Akses ke database melalui perintah SQL (SQL injection).\end{itemize}
-\par
-\vspace{12pt}
-\noindent 
+\subsection{Keamanan pada CGI} 
+CGI dapat menimbulkan lubang keamanan, karena program CGI dapat dijalankan di server lokal dari luar sistem (remote) oleh siapa saja. Apabila program CGI tidak didisain dan dikonfigurasi dengan baik, maka akan terjadi lubang keamanan. Kesalahan yang dapat terjadi antara lain: 
+\begin{enumerate}
+	\item program CGI mengakses berkas (file) yang seharusnya tidak boleh di akses. Misalnya pernah terjadi kesalahan dalam program phf sehingga digunakan oleh orang untuk mengakses berkas password dari server WW. 
+	\item runaway CGI-script, yaitu program berjalan di luar kontrol sehingga mengabiskan CPU cycle dari server WWW.
+\end{enumerate}
+
+\subsection{Lubang Keamanan CGI} 
+Beberapa contoh lubang keamanan pada CGI 
+\begin{enumerate}
+	\item CGI dipasang oleh orang yang tidak berhak 
+	\item CGI dijalankan berulang-ulang untuk menghabiskan resources (CPU, disk): DoS 
+	\item Masalah setuid CGI di sistem UNIX, dimana CGI dijalankan oleh userid web server 
+	\item Penyisipan karakter khusus untuk shell expansion 
+	\item Kelemahan ASP di sistem Windows 
+	\item Guestbook abuse dengan informasi sampah (pornografi) 
+	\item Akses ke database melalui perintah SQL (SQL injection).
+\end {enumerate}
+
 \textbf{Web Programming }\textbf{Python} \par
 Python adalah bahasa pemrograman dinamis yang mendukung pemrograman berorientasi obyek. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Seperti halnya bahasa pemrograman dinamis, python seringkali digunakan sebagai bahasa skrip dengan interpreter yang teintergrasi dalam sistem operasi. Saat ini kode python dapat dijalankan pada sistem berbasis: \par
 \noindent 
