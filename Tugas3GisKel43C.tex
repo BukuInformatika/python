@@ -639,6 +639,33 @@ tuple[2] = 1000 Invalid syntax with tuple
 list[2] = 1000 Valid syntax with list
 \end{verbatim}
 
+\subsection{Kamus Python}
+Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif
+atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus
+bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi
+lain, bisa menjadi objek Python yang sewenang-wenang.
+Kamus ditutupi oleh kurung kurawal ( { }) dan nilai dapat diberikan dan diakses
+menggunakan kawat gigi persegi ([]). Misalnya -
+\begin{verbatim}
+dict = { }
+dict[’one’] = ”This is one”
+dict[2] = ”This is two”
+tinydict = {’name’: ’john’,’code’:6734, ’dept’: ’sales’ }
+print dict[’one’] Prints value for ’one’ key
+print dict[2] Prints value for 2 key
+print tinydict Prints complete dictionary
+print tinydict.keys() Prints all the keys
+print tinydict.values() Prints all the values
+Ini menghasilkan hasil sebagai berikut -
+This is one
+This is two
+{’dept’: ’sales’, ’code’: 6734, ’name’: ’john’ }
+[’dept’, ’code’, ’name’]
+[’sales’, 6734, ’john’]
+\end{verbatim}
+Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan
+bahwa unsur-unsurnya ”rusak”; Mereka hanya unordered.
+
 \subsection{Menilai Ekspresi}
 Sebuah ekspresi merupakan perpaduan antara nilai, variabel, operator, dan pemanggilan fungsi. Jika kamu mengetik sebuah ekspresi pada Python prompt, maka si interpreter akan menilainya dan menampilkan hasilnya:
 	\begin{verbatim}
