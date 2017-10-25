@@ -112,218 +112,172 @@ No match!!
 search\~--> matchObj.group() :  dogs
 
 Cari dan Ganti
-\vspace{12pt}
-\noindent
+
 Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub.
-\noindent
+
 Sintaksis
-\vspace{12pt}
+
 Re.sub (pola, repl, string, max = 0)
-\vspace{12pt}
-\noindent
+
 Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi.
 Contoh
-\noindent
- $  \#  $!/usr/bin/python
-\noindent
+
+ \$  \#  \$!/usr/bin/python
+
 import re
-\vspace{12pt}
-\noindent
-phone = "2004-959-559  $  \#  $ This is Phone Number" 
-\vspace{12pt}
-\noindent
- $  \#  $ Delete Python-style comments
-\noindent
-num = re.sub(r' $  \#  $.* $  \$  $', "", phone)
-\noindent
+
+phone = "2004-959-559  \$  \#  \$ This is Phone Number"
+
+ \verb|$  #  $ |Delete Python-style comments
+
+num = re.sub(r' \verb|$  #  $.* $  $  $', ""|, phone)
+
 print "Phone Num : ", num
-\vspace{12pt}
-\noindent
- $  \#  $ Remove anything other than digits
-\noindent
-num~=~re.sub(r' $  \setminus  $D',~"", phone)
-\noindent
-print "Phone Num : ", num
-\vspace{12pt}
-\noindent
+
+ \verb|$  #  $| Remove anything other than digits
+
+num~=~re.sub(r' \verb|$  $D',~""|, phone)
+
+print \"Phone Num : \", num
+
 Phone~Num :  2004-959-559
-\noindent
+
 Phone~Num :  2004959559
-\vspace{12pt}
-\noindent
-Regular Expression Modifiers: Option Flags \par
-Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif ( $  \vert  $), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
-\noindent
-re.I \hspace*{0.5in}  \par
-\noindent
-Lakukan pencocokan case-insensitive. \par
-\vspace{12pt}
-\noindent
-re.L \hspace*{0.5in}  \par
-\noindent
-Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( $  \setminus  $ w dan  $  \setminus  $ W), serta perilaku batas kata ( $  \setminus  $ b dan  $  \setminus  $ B). \par
-\vspace{12pt}
-\noindent
-re.M \hspace*{0.5in}  \par
-\noindent
-Membuat  $  \$  $ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  $  \string^  $ cocok dengan awal baris apapun (bukan hanya permulaan string). \par
-\vspace{12pt}
-\noindent
-re.S \hspace*{0.5in}  \par
-\noindent
-Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline. \par
-\noindent
-re.U \hspace*{0.5in}  \par
-\noindent
-Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \setminus  $ w,  $  \setminus  $ W,  $  \setminus  $ b,  $  \setminus  $ B. \par
-\vspace{12pt}
-\noindent
-re.X \hspace*{0.5in}  \par
-\noindent
-Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  $  \#  $ sebagai tanda komentar. \par
-\vspace{12pt}
-\noindent
-\textbf{Pola Ekspresi Reguler} \par
-\vspace{12pt}
-\noindent
-Kecuali karakter kontrol, (+?.  $  \string^  $  $  \string^  $  $  \$  $ () []  $  \{  $ $  \}  $  $  \vert  $  $  \setminus  $), Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik. \par
-\noindent
-Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python - \par
-\noindent
- $  \#  $!/usr/bin/python \par
-\noindent
-import re \par
-\vspace{12pt}
-\noindent
-phone = "2004-959-559  $  \#  $ This is Phone Number" \par
-\vspace{12pt}
-\noindent
- $  \#  $ Delete Python-style comments \par
-\noindent
-num = re.sub(r' $  \#  $.* $  \$  $', "", phone) \par
-\noindent
-print "Phone Num : ", num \par
-\vspace{12pt}
-\noindent
- $  \#  $ Remove anything other than digits \par
-\noindent
-num~=~re.sub(r' $  \setminus  $D',~"", phone)     \par
-\noindent
-print "Phone Num : ", num \par
-\vspace{12pt}
-\noindent
-Phone~Num :  2004-959-559 \par
-\noindent
-Phone~Num :  2004959559 \par
-\vspace{12pt}
-\noindent
-<Directory "/var/www/cgi-bin"> \par
-\noindent
-~~ AllowOverride None \par
-\noindent
-~~ Options ExecCGI \par
-\noindent
-~~ Order allow,deny \par
-\noindent
-~~ Allow from all \par
-\noindent
-</Directory> \par
-\vspace{12pt}
-\noindent
-<Directory "/var/www/cgi-bin"> \par
-\noindent
-Options All \par
-\noindent
-</Directory> \par
-\vspace{12pt}
-\noindent
-!/usr/bin/python \par
-\vspace{12pt}
-\noindent
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
-\noindent
-print '<html>' \par
-\noindent
-print '<head>' \par
-\noindent
-print '<title>Hello Word - First CGI Program</title>' \par
-\noindent
-print '</head>' \par
-\noindent
-print '<body>' \par
-\noindent
-print '<h2>Hello Word! This is my first CGI program</h2>' \par
-\noindent
-print '</body>' \par
-\noindent
-print '</html>' \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent
-Halo kata! Ini adalah program CGI pertamaku \par
-\vspace{12pt}
-Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  $  \setminus  $ r  $  \setminus  $ n  $  \setminus  $ r  $  \setminus  $ n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS. \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\noindent
-Header HTTP \par
-\vspace{12pt}
-\noindent
-Baris Content-type: text / html  $  \setminus  $ r  $  \setminus  $ n  $  \setminus  $ r  $  \setminus  $ n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut - \par
-\noindent
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent
- $  \#  $ Import modules for CGI handling  \par
-\noindent
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Create instance of FieldStorage  \par
-\noindent
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Get data from fields \par
-\noindent
-first $  \_  $name = form.getvalue('first $  \_  $name') \par
-\noindent
-last $  \_  $name~ = form.getvalue('last $  \_  $name') \par
-\vspace{12pt}
-\noindent
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
-\noindent
-print "<html>" \par
-\noindent
-print "<head>" \par
-\noindent
-print "<title>Hello - Second CGI Program</title>" \par
-\noindent
-print "</head>" \par
-\noindent
-print "<body>" \par
-\noindent
-print "<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $name) \par
-\noindent
-print "</body>" \par
-\noindent
-print "</html>" \par
-\vspace{12pt}
-\noindent
-<form action="/cgi-bin/hello $  \_  $get.py" method="get"> \par
-\noindent
-First~Name: <input type="text" name="first $  \_  $name">  <br /> \par
-\vspace{12pt}
-\noindent
-Last Name: <input type="text" name="last $  \_  $name" /> \par
-\noindent
-<input type="submit" value="Submit" /> \par
-\noindent
-</form> \par
-\vspace{12pt}
-\noindent
+
+Regular Expression Modifiers: Option Flags
+Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif ( \$   \$), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description
+re.I
+Lakukan pencocokan case-insensitive.
+
+re.L
+Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( \verb|$   $ w dan  $   $| W), serta perilaku batas kata ( \verb|$    $ b dan  $    $| B).
+
+re.M
+Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$   \$ cocok dengan awal baris apapun (bukan hanya permulaan string).
+
+re.S
+Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline.
+
+re.U
+Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  \verb|$    $ w,  $    $ W,  $    $ b,  $   $ |B.
+
+re.X
+Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  \$  \#  \$ sebagai tanda komentar.
+
+\subsection{Pola Ekspresi Reguler}
+Kecuali karakter kontrol, (+?.  \verb|$   $  $   $  $  \$  $ () []  $  \{  $ $  \}  $  $    $  $  $|), Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik.
+
+Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python -
+
+ \$  \#  \$!/usr/bin/python
+
+import re
+
+phone = \"2004-959-559  \$  \#  \$ This is Phone Number\"
+
+ \$  \#  \$ Delete Python-style comments
+num = re.sub(r\verb|' $  \#  $.* $  \$  $', ""|, phone)
+
+print \"Phone Num : \", num
+
+ \$  \#  \$ Remove anything other than digits
+
+num~=~re.sub(r' \verb|$    $D',~""|, phone)
+
+print \"Phone Num : \", num
+
+Phone~Num :  2004-959-559
+Phone~Num :  2004959559
+
+<Directory \"/var/www/cgi-bin\">
+
+\~\~ AllowOverride None
+
+\~\~ Options ExecCGI
+
+\~\~ Order allow,deny
+
+\~\~ Allow from all
+
+</Directory>
+
+<Directory \"/var/www/cgi-bin\">
+
+Options All
+
+</Directory>
+
+!/usr/bin/python
+
+print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+
+print \'<html>\'
+
+print \'<head>\'
+
+print \'<title>Hello Word - First CGI Program</title>\'
+
+print \'</head>\'
+
+print \'<body>\'
+
+print \'<h2>Hello Word! This is my first CGI program</h2>\'
+
+print \'</body>\'
+
+print \'</html>\'
+
+Halo kata! Ini adalah program CGI pertamaku
+
+Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  \verb|$    $ r  $    $ n  $    $ r  $    $| n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS.
+
+Header HTTP
+nt-type: text / html  \verb|$    $ r  $    $ n  $    $ r  $    $| n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut -
+
+ \$  \#  \$!/usr/bin/python
+
+ $  \#  $ Import modules for CGI handling
+
+import cgi, cgitb
+
+ \$  \#  \$ Create instance of FieldStorage
+
+form = cgi.FieldStorage()
+
+ \$  \#  \$ Get data from fields
+
+first \$  \_  \$name = form.getvalue(\'first \$  \_  \$name\')
+
+last \$  \_  \$name~ = form.getvalue(\'last \$  \_  \$name\')
+
+print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+
+print \"<html>\"
+
+print \"<head>\"
+
+print \"<title>Hello - Second CGI Program</title>\"
+
+print \"</head>\"
+
+print \"<body>\"
+
+print \verb|"<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $|name)
+
+print \"</body>\"
+
+print \"</html>\"
+
+<form action=\verb|"/cgi-bin/hello $  \_  $get.py" method="get"|>
+
+First~Name: <input type=\verb|"text" name="first $  \_  $name"|>  <br />
+
+Last Name: <input type=\verb|"text" name="last $  \_  $name"| />
+
+<input type=\verb|"submit" value="Submit"| /> 
+
+</form>
+
  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent
