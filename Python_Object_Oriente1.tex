@@ -103,8 +103,7 @@ Emp2 = Karyawan ("Manni", 5000)
 Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut - 
 \vspace{12pt}
 \noindent 
-Emp1.displayEmployee () 
-\noindent 
+Emp1.displayEmployee () \noindent 
 Emp2.displayEmployee ()
 \noindent 
 Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount 
@@ -131,7 +130,7 @@ class Employee:
 \noindent 
 ~~~~~ Employee.empCount += 1 
 \noindent 
-~~  \par
+~~  
 \noindent 
 ~~ def displayCount(self): 
 \noindent 
@@ -146,97 +145,97 @@ class Employee:
 "This would create first object of Employee class" 
 \noindent 
 emp1 = Employee("Zara", 2000) 
-\noinde
+\noinden
 "This would create second object of Employee class" 
 \noindent 
 emp2 = Employee("Manni", 5000) 
 \noindent 
-emp1.displayEmployee() \par
+emp1.displayEmployee() 
 \noindent 
-emp2.displayEmployee() \par
+emp2.displayEmployee() 
 \noindent 
-print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
+print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
 \noindent 
-When the above code is executed, it produces the following result  $ - $ \par
+When the above code is executed, it produces the following result  $ - $ 
 \noindent 
-Name~:~ Zara ,Salary:  2000 \par
+Name~:~ Zara ,Salary:  2000 
 \noindent 
-Name~:~ Manni ,Salary:  5000 \par
+Name~:~ Manni ,Salary:  5000 
 \noindent 
-Total Employee 2 \par
+Total Employee 2 
 \noindent 
-You can add, remove, or modify attributes of classes and objects at any time  $ - $ \par
+You can add, remove, or modify attributes of classes and objects at any time  $ - $ 
 \noindent 
-emp1.age~= 7   $  \#  $ Add an 'age' attribute. \par
+emp1.age~= 7   $  \#  $ Add an 'age' attribute. 
 \noindent 
-emp1.age~= 8   $  \#  $ Modify 'age' attribute. \par
+emp1.age~= 8   $  \#  $ Modify 'age' attribute. 
 \noindent 
-del~emp1.age   $  \#  $ Delete 'age' attribute. \par
+del~emp1.age   $  \#  $ Delete 'age' attribute. 
 \vspace{12pt}
 
-Alih-alih menggunakan pernyataan normal untuk mengakses atribut, Anda dapat menggunakan fungsi berikut - \par
+Alih-alih menggunakan pernyataan normal untuk mengakses atribut, Anda dapat menggunakan fungsi berikut - 
 \vspace{12pt}
 \noindent 
-~~~ Getattr (obj, name [, default]): untuk mengakses atribut objek. \par
+~~~ Getattr (obj, name [, default]): untuk mengakses atribut objek. 
 \vspace{12pt}
 \noindent 
-~~~ Hasattr (obj, name): untuk memeriksa apakah ada atribut atau tidak. \par
+~~~ Hasattr (obj, name): untuk memeriksa apakah ada atribut atau tidak. 
 \vspace{12pt}
 \noindent 
-~~~ Setattr (obj, name, value): untuk mengatur atribut. Jika atribut tidak ada, maka akan dibuat. \par
+~~~ Setattr (obj, name, value): untuk mengatur atribut. Jika atribut tidak ada, maka akan dibuat. 
 \vspace{12pt}
 \noindent 
-~~~ The delattr (obj, name): untuk menghapus sebuah atribut. \pa
+~~~ The delattr (obj, name): untuk menghapus sebuah atribut. 
 \vspace{12pt}
 \noindent 
-Hasattr (emp1, 'age')  $  \#  $ Mengembalikan true jika atribut 'age' ada \par
+Hasattr (emp1, 'age')  $  \#  $ Mengembalikan true jika atribut 'age' ada 
 \noindent 
-Getattr (emp1, 'age')  $  \#  $ Mengembalikan nilai atribut 'age' \par
+Getattr (emp1, 'age')  $  \#  $ Mengembalikan nilai atribut 'age' 
 \noindent 
-Setattr (emp1, 'age', 8)  $  \#  $ Set attribute 'age' di 8 \par
+Setattr (emp1, 'age', 8)  $  \#  $ Set attribute 'age' di 8 
 \noindent 
-Delattr (empl, 'age')  $  \#  $ Hapus atribut 'umur' \par
+Delattr (empl, 'age')  $  \#  $ Hapus atribut 'umur' 
 \vspace{12pt}
 \noindent 
-Atribut Atribut Built-In \par
-\vspace{12pt}
-\noindent 
-
-Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses menggunakan operator dot seperti atribut lainnya - \par
-\vspace{12pt}
-\noindent 
-~~~  $  \_  $ $  \_  $dict $  \_  $ $  \_  $: Kamus yang berisi namespace kelas. \par
-\vspace{12pt}
-\noindent 
-~~~  $  \_  $ $  \_  $doc $  \_  $ $  \_  $: String dokumentasi kelas atau tidak, jika tidak terdefinisi. \par
-\vspace{12pt}
-\noindent 
-~~~  $  \_  $ $  \_  $name $  \_  $ $  \_  $: nama kelas \par
-\vspace{12pt}
-\noindent 
-~~~  $  \_  $ $  \_  $module $  \_  $ $  \_  $: Nama modul dimana kelas didefinisikan. Atribut ini " $  \_  $ $  \_  $main $  \_  $ $  \_  $" dalam mode interaktif. \par
-\vspace{12pt}
-\noindent 
-~~~  $  \_  $ $  \_  $bases $  \_  $ $  \_  $: Tupel yang mungkin kosong yang berisi kelas dasar, sesuai urutan kejadiannya dalam daftar kelas dasar. \par
+Atribut Atribut Built-In 
 \vspace{12pt}
 \noindent 
 
-Untuk kelas di atas mari kita coba untuk mengakses semua atribut ini – \par
+Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses menggunakan operator dot seperti atribut lainnya - 
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+~~~  $  \_  $ $  \_  $dict $  \_  $ $  \_  $: Kamus yang berisi namespace kelas. 
 \vspace{12pt}
 \noindent 
-class Employee: \par
-\noindent 
-~~ 'Common base class for all employees' \par
-\noindent 
-~~ empCount = 0 \par
+~~~  $  \_  $ $  \_  $doc $  \_  $ $  \_  $: String dokumentasi kelas atau tidak, jika tidak terdefinisi. 
 \vspace{12pt}
 \noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): \par
+~~~  $  \_  $ $  \_  $name $  \_  $ $  \_  $: nama kelas \
+\vspace{12pt}
 \noindent 
-~~~~~ self.name = name \par
+~~~  $  \_  $ $  \_  $module $  \_  $ $  \_  $: Nama modul dimana kelas didefinisikan. Atribut ini " $  \_  $ $  \_  $main $  \_  $ $  \_  $" dalam mode interaktif. 
+\vspace{12pt}
+\noindent 
+~~~  $  \_  $ $  \_  $bases $  \_  $ $  \_  $: Tupel yang mungkin kosong yang berisi kelas dasar, sesuai urutan kejadiannya dalam daftar kelas dasar. 
+\vspace{12pt}
+\noindent 
+
+Untuk kelas di atas mari kita coba untuk mengakses semua atribut ini – 
+\vspace{12pt}
+\noindent 
+ $  \#  $!/usr/bin/python 
+\vspace{12pt}
+\noindent 
+class Employee: 
+\noindent 
+~~ 'Common base class for all employees' 
+\noindent 
+~~ empCount = 0 
+\vspace{12pt}
+\noindent 
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
+\noindent 
+~~~~~ self.name = name 
 \noindent 
 ~~~~~ self.salary = salary \par
 \noindent 
@@ -284,7 +283,7 @@ Karyawan . $  \_  $ $  \_  $ dict $  \_  $ $  \_  $:  $  \{  $' $  \_  $ $  \_  
 \noindent 
 'DisplayEmployee': <function displayEmployee at 0xb7c8441c>, \par
 \noindent 
-' $  \_  $ $  \_  $doc $  \_  $ $  \_  $': 'Kelas dasar umum untuk semua karyawan', \par
+' $  \_  $ $  \_  $doc $  \_  $ $  \_  $': 'Kelas dasar umum untuk semua karyawan', \pa
 \noindent 
 ' $  \_  $ $  \_  $init $  \_  $ $  \_  $': <function  $  \_  $ $  \_  $init $  \_  $ $  \_  $ di 0xb7c846bc> $  \}  $ \par
 \vspace{12pt}
