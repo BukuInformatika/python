@@ -19,34 +19,34 @@ Contoh \par
 import re \par
 \vspace{12pt}
 \noindent 
-line = "Cats are smarter than dogs"; \par
+line = "Cats are smarter than dogs"; 
 \begin{12pt}
 \noindent 
 matchObj = re.match{r'dogs', line, re.M  \vert  re.I} 
 \noindent 
 if matchObj: \par
 \noindent 
-~~ print "match --> matchObj.group() : ", matchObj.group{} \par
+~~ print "match --> matchObj.group() : ", matchObj.group{} 
 \noindent 
 else: \par
 \noindent 
-~~ print "No match!!" \par
+~~ print "No match!!" \
 \vspace{12pt}
 \noindent 
-searchObj = re.search{r'dogs', line, re.M \$  \vert  \$re.I} \par
+searchObj = re.search{r'dogs', line, re.M \$  \vert  \$re.I} 
 \noindent 
 if searchObj: \par
 \item
-~~ print "search --> searchObj.group{} : ", searchObj.group{} \par
+~~ print "search --> searchObj.group{} : ", searchObj.group{} 
 \item
 else: \par
 \noindent 
-~~ print "Nothing found!!" \par
+~~ print "Nothing found!!" 
 \vspace{12pt}
 \noindent 
 No match!! \par
 \noindent 
-search~--> matchObj.group{}:  dogs \par
+search~--> matchObj.group{}:  dogs 
 \begin{12pt}
 \item
 Cari dan Ganti \par
@@ -59,146 +59,146 @@ Sintaksis
 Re.sub {pola, repl, string, max = 0} 
 \vspace{12pt}
 \noindent 
-Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi. \par
+Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi. 
 Contoh \par
 \noindent 
- \$  \#  \$!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python 
 \noindent 
 import re \par
 \vspace{12pt}
 \noindent 
-phone = "2004-959-559  \$  \#  \$ This is Phone Number" \par
+phone = "2004-959-559  \$  \#  \$ This is Phone Number" 
 \vspace{12pt}
 \noindent 
- \$  \#  \$ Delete Python-style comments \par
+ \$  \#  \$ Delete Python-style comments 
 \noindent 
 num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} 
 \noindent 
 print "Phone Num : ", num \par
 \begin{12pt}
 \item
- \$  \#  \$ Remove anything other than digits \par
+ \$  \#  \$ Remove anything other than digits 
 \noindent 
 num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     a
 \noindent 
-print "Phone Num : ", num \par
+print "Phone Num : ", num 
 \begin{12pt}
 \noindent 
-Phone~Num :  2004-959-559 \par
+Phone~Num :  2004-959-559 
 \noindent 
-Phone~Num :  2004959559 \par
+Phone~Num :  2004959559 
 \vspace{12pt}
 \noindent 
-Regular Expression Modifiers: Option Flags \par
+Regular Expression Modifiers: Option Flags 
 Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif (\$  \vert  \$), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
 \noindent 
-re.I \hspace*{0.5in}  \par
+re.I \hspace*{0.5in}  
 \noindent 
-Lakukan pencocokan case-insensitive. \par
+Lakukan pencocokan case-insensitive. 
 \vspace{12pt}
 \noindent 
-re.L \hspace*{0.5in}  \par
+re.L \hspace*{0.5in}  
 \noindent 
-Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( \$  \setminus \$ w dan  \$  \setminus  \$ W), serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). \par
+Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( \$  \setminus \$ w dan  \$  \setminus  \$ W), serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). 
 \vspace{12pt}
 \noindent 
-re.M \hspace*{0.5in}  \par
+re.M \hspace*{0.5in}  
 \noindent 
-Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun (bukan hanya permulaan string). \par
+Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun (bukan hanya permulaan string). 
 \vspace{12pt}
 \noindent 
-re.S \hspace*{0.5in}  \par
+re.S \hspace*{0.5in}  
 \noindent 
-Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline. \par
+Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline. 
 \noindent 
-re.U \hspace*{0.5in}  \par
+re.U \hspace*{0.5in}  
 \noindent 
-Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \setminus  $ w,  $  \setminus  $ W,  $  \setminus  \$ b,  \$  \setminus  \$ B. \par
+Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \setminus  $ w,  $  \setminus  $ W,  $  \setminus  \$ b,  \$  \setminus  \$ B. 
 \vspace{12pt}
 \noindent 
-re.X \hspace*{0.5in}  \par
+re.X \hspace*{0.5in}  
 \noindent 
-Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  \$  \#  \$ sebagai tanda komentar. \par
+Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  \$  \#  \$ sebagai tanda komentar. 
 \vspace{12pt}
 \noindent 
-\textbf{Pola Ekspresi Reguler} \par
+\textbf{Pola Ekspresi Reguler} 
 \vspace{12pt}
 \noindent 
 Kecuali karakter kontrol, {+?.  \$  \string^  \$  \$  \string^  \$  \$  \$  \$ {} []  \$  \{  \$ \$  \}  \$  \$  \vert  \$  \$  \setminus  \$}, Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik. \par
 \noindent 
-Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python - \par
+Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python - 
 \noindent 
- \$  \#  \$!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python 
 \noindent 
 import re \par
 \BEGIN{12pt}
 \noindent 
-phone = "2004-959-559  \$  \#  \$ This is Phone Number" \par
+phone = "2004-959-559  \$  \#  \$ This is Phone Number" 
 \vspace{12pt}
 \noindent 
- \$  \#  \$ Delete Python-style comments \par
+ \$  \#  \$ Delete Python-style comments 
 \noindent 
-num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} \par
+num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} 
 \noindent 
-print "Phone Num : ", num \par
+print "Phone Num : ", num 
 \vspace{12pt}
 \noindent 
- \$  \#  \$ Remove anything other than digits \par
+ \$  \#  \$ Remove anything other than digits 
 \noindent 
-num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     \par
+num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     
 \noindent 
-print "Phone Num : ", num \par
+print "Phone Num : ", num 
 \begin{12pt}
 \item 
-Phone~Num :  2004-959-559 \par
+Phone~Num :  2004-959-559 
 \noindent 
-Phone~Num :  2004959559 \par
+Phone~Num :  2004959559 
 \begin{12pt}
 \noindent 
-<Directory "/var/www/cgi-bin"> \par
+<Directory "/var/www/cgi-bin"> 
 \noindent 
-~~ AllowOverride None \par
+~~ AllowOverride None 
 \noindent 
-~~ Options ExecCGI \par
+~~ Options ExecCGI 
 \noindent 
-~~ Order allow,deny \par
+~~ Order allow,deny 
 \noindent 
-~~ Allow from all \par
+~~ Allow from all 
 \noindent 
-</Directory> \par
+</Directory> 
 \vspace{12pt}
 \noindent 
-<Directory "/var/www/cgi-bin"> \par
+<Directory "/var/www/cgi-bin"> 
 \noindent 
-Options All \par
+Options All
 \noindent 
-</Directory> \par
+</Directory> 
 \vspace{12pt}
 \noindent 
-!/usr/bin/python \par
+!/usr/bin/python 
 \vspace{12pt}
 \noindent 
-print "Content-type:text/html   \setminus  r   \setminus  n   \setminus  r   \setminus  n" \par
+print "Content-type:text/html   \setminus  r   \setminus  n   \setminus  r   \setminus  n" 
 \noindent 
-print '<html>' \par
+print '<html>' 
 \noindent 
-print '<head>' \par
+print '<head>' 
 \noindent 
-print '<title>Hello Word - First CGI Program</title>' \par
+print '<title>Hello Word - First CGI Program</title>' 
 \noindent 
-print '</head>' \par
+print '</head>' 
 \noindent 
-print '<body>' \par
+print '<body>' 
 \noindent 
-print '<h2>Hello Word! This is my first CGI program</h2>' \par
+print '<h2>Hello Word! This is my first CGI program</h2>' 
 \noindent 
-print '</body>' \par
+print '</body>' 
 \noindent 
-print '</html>' \par
+print '</html>' 
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Halo kata! Ini adalah program CGI pertamaku \par
+Halo kata! Ini adalah program CGI pertamaku 
 \vspace{12pt}
 Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \setminus  \$ r  \$  \setminus  \$ n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS. 
 Header HTTP 
@@ -209,34 +209,34 @@ Baris Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \
  \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \$  \#  \$ Import modules for CGI handling  \par
+ \$  \#  \$ Import modules for CGI handling  
 \noindent 
 import cgi, cgitb  \par
 \vspace{12pt}
 \noindent 
- \$  \#  \$ Create instance of FieldStorage  \par
+ \$  \#  \$ Create instance of FieldStorage 
 \noindent 
-form = cgi.FieldStorage()  \par
+form = cgi.FieldStorage()  
 \vspace{12pt}
 \noindent 
-   \#   Get data from fields \par
+   \#   Get data from fields 
 \noindent 
-first \$  \_  \$name = form.getvalue('first \$  \_  \$name') \par
+first \$  \_  \$name = form.getvalue('first \$  \_  \$name') 
 \noindent 
-last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') \par
+last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') 
 \vspace{12pt}
 \noindent 
-print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" 
 \noindent 
-print "<html>" \par
+print "<html>" 
 \noindent 
-print "<head>" \par
+print "<head>" 
 \noindent 
-print "<title>Hello - Second CGI Program</title>" \par
+print "<title>Hello - Second CGI Program</title>" 
 \noindent 
-print "</head>" \par
+print "</head>" 
 \noindent 
-print "<body>" \par
+print "<body>" 
 \noindent 
 print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>"  \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) \par
 \noindent 
