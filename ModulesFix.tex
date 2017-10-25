@@ -44,8 +44,10 @@ Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX:
  \hspace*{0.5in} set PYTHONPATH=/usr/local/lib/python  
 Namespaces & Scoping  
 Variabel adalah nama {identifiers} yang memetakan ke objek. Namespace adalah kamus dari nama variabel {kunci} & objek yang sesuai {nilai}.  
-Pernyataan phyton dapat mengakses sebuah variabel di dalam namespace lokal & dalam sebuah namespace global, jika variabel lokal & variabel global memiliki satu kesamaan pada namanya, maka variabel lokal akan membayangi variabel global . & pada setiap fungsinya tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya.  
-Python membuat tebakan terdidik tentang apakah variabel bersifat lokal atau global. Ini mengasumsikan bahwa setiap variabel yang diberi nilai dalam suatu fungsi adalah lokal.  
+Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local dan dalam sebuah namespace global, jika variable local dan variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. Dan pada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
+
+Phyton membbuat tebakan terdidik tentang variable yang bersifat local atau global . ini tentu dapat mengasumsikan bahwa setiap variable yang diberi ilia dalam suatu fungsi merupakan variable local
+
 Oleh karena itu, untuk menetapkan nilai pada variabel global dalam suatu fungsi, Anda harus terlebih dahulu menggunakan pernyataan global.  
 Pernyataan global VarName memberitahu Python bahwa VarName adalah variabel global. Python berhenti mencari namespace lokal untuk variabel tersebut. 
 Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespace. Dalam fungsi Money, kita menetapkan Money a value, oleh karena itu Python mengasumsikan variabel lokal Moneyas. Namun, kami mengakses nilai variabel lokal Moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya. Uncommenting pernyataan global memperbaiki masalahnya. 
