@@ -70,7 +70,58 @@ Python memiliki fitur yang meliputi:
 		\item Dapat diperpanjang: Anda dapat menambahkan modul tingkat rendah ke penerjemah Python. Modul ini memungkinkan programmer untuk menambahkan atau menyesuaikan alat mereka agar lebih eﬁsien.
 		\item Database: Python menyediakan antarmuka untuk semua database komersial utama. 
 	\end{enumerate}
-		
+
+\subsection {Pernyataan Multi-Line}
+Pernyataan di Python biasanya diakhiri dengan baris baru. Python, bagaimanapun, memungkinkan penggunaan karakter kelanjutan baris (\) untuk menunjukkan bahwa garis tersebut harus dilanjutkan. Misalnya –
+	\begin {equation}
+	total = item_one + \
+		item_two + \
+		item_three
+	\end {equation}
+
+Pernyataan yang ada di dalam kurung [], {}, atau () tidak perlu menggunakan karakter kelanjutan baris. Misalnya –
+	\begin {equation}
+	days = ['Monday', 'Tuesday', 'Wednesday',
+		'Thursday', 'Friday']
+	\end {equation}
+
+\subection{Kutipan pada Python}
+Python menerima kutipan tunggal ('), ganda (") dan triple (' '' atau '" ") untuk menunjukkan literal string, selama jenis kutipan yang sama dimulai dan mengakhiri string.
+Tanda kutip triple digunakan untuk membentang string di beberapa baris. Misalnya:
+	\begin {equation}
+	word = 'word'
+	sentence = "This is a sentence."
+	paragraph = """This is a paragraph. It is
+	made up of multiple lines and sentences."""
+	\end {equation}
+
+\subsection{Komentar pada Python}
+Tanda hash (#) yang tidak berada di dalam string literal memulai sebuah komentar. Semua karakter setelah # dan sampai akhir garis fisik adalah bagian dari komentar dan penafsir Python mengabaikannya.
+	\begin {equation}
+	#!/usr/bin/python
+
+	# First comment
+	print \"Hello, Python!\" # second comment
+	\end {equation}
+
+	 Dan hasilnya sebagai berikut –
+	\begin {equation}
+	    Hello, Python!
+	\end {equation}
+
+Anda bisa mengetikkan komentar di baris yang sama setelah sebuah pernyataan atau ungkapan –
+	\begin {equation}
+	    name = \"Madisetti\" # This is again comment
+	\end {equation}
+
+Anda dapat mengomentari beberapa baris sebagai berikut –
+	\begin {equation}
+	# This is a comment.
+	# This is a comment, too.
+	# This is a comment, too.
+	# I said that already.
+	\end {equation}
+
 \subsubsection{Variabel}	
  Jadi variable itu untuk menyimpan data sebagai penampung nya dan nilai adalah isi dari variable itu sendiri.
 Contoh variable katakana saja my int = 7 itu juga bisa di ubah menjadi my int =3  
