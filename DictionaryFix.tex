@@ -7,46 +7,58 @@ Setiap kunci dipisahkan dari nilainya oleh titik dua (:), item dipisahkan oleh k
 
 Kunci unik dalam kamus sementara nilai mungkin tidak. Nilai kamus bisa berupa tipe apa pun, namun kunci harus berupa tipe data yang tidak berubah seperti string, angka, atau tupel.
 
-subsection{Accessing Values in Dictionary}
+Dictionary menyediakan wadah yang sangat berguna yang memungkinkan kita mencari nilai menggunakan kunci\cite{oliphant2007python}. Dalam sebuah Dictionary tidak boleh ada dua key yang sama, maka memberikan nilai ke key yang sudah ada akan menghapus nilai yang lama. Untuk menambah key baru, Python memiliki syntax yang sama. Ini bisa menimbulkan kerancuan pada saat akan melakukan penambahan key baru, tapi ternyata hanya mengubah key yang sudah ada. Sebagai catatan, key yang baru terletak di bagian tengah bukan di belakang. Hal tersebut kebetulan saja, karena sebenarnya pada Dictionary memang tidak ada standar pengurutan yang berlaku.
+
+\subsection{Accessing Values in Dictionary}
 Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana -
+\begin{verbatim}  
   \$  \#  \$!/usr/bin/python
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
  print "dict['Name']: ", dict['Name'] 
- print "dict['Age']: ", dict['Age'] 
+ print "dict['Age']: ", dict['Age']
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
 dict['Name']:~ Zara
 dict['Age']:~ 7 
 Jika kita mencoba mengakses item data dengan sebuah kunci, yang bukan bagian dari kamus, kita mendapatkan error sebagai berikut -
-   \$  \#  \$!/usr/bin/python
- dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
+\begin{verbatim} 
+\$  \#  \$!/usr/bin/python
+dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
 print "dict['Alice']: ", dict['Alice']
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
 dict['Alice']: 
 Traceback (most recent call last):
 ~~ File "test.py", line 4, in <module>
 ~~~~~  \print "dict['Alice']: ", dict['Alice']; 
- KeyError: 'Alice' 
-Updating Dictionary
+KeyError: 'Alice' 
+
+\subsection{Updating Dictionary}
 Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana -
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python 
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
   dict['Age'] = 8;  \$  \#  \$ update existing entry
   dict['School'] = "DPS School";  \$  \#  \$ Add new entry
   print "dict['Age']: ", dict['Age']
-  print "dict['School']: ", dict['School'] 
+  print "dict['School']: ", dict['School']
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
   dict['Age']:~ 8 
   dict['School']:~ DPS School 
-Delete Dictionary Elements 
+  
+\subsection{Delete Dictionary Elements}
 Anda dapat menghapus elemen kamus individual atau menghapus keseluruhan isi kamus. Anda juga dapat menghapus seluruh kamus dalam satu operasi. 
 Untuk menghapus seluruh kamus secara eksplisit, cukup gunakan del statement. Berikut adalah contoh sederhana – 
+\begin{verbatim}   
    \$  \#  \$!/usr/bin/python
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$
   del dict['Name'];  \$  \#  \$ remove entry with key 'Name'
   dict.clear();~~~~  \$  \#  \$ remove all entries in dict 
   del dict~;~~~~~~   \$  \#  \$ delete entire dictionary 
   print "dict['Age']: ", dict['Age'] 
-  print "dict['School']: ", dict['School'] 
+  print "dict['School']: ", dict['School']
+\end{verbatim}  
 Ini menghasilkan hasil berikut. Perhatikan bahwa pengecualian diajukan karena setelah kamus del dict tidak ada lagi - 
   dict['Age']: 
   Traceback (most recent call last): 
@@ -54,19 +66,24 @@ Ini menghasilkan hasil berikut. Perhatikan bahwa pengecualian diajukan karena se
 ~~~     print "dict['Age']: ", dict['Age']; 
   TypeError: 'type' object is unsubscriptable 
 Note: del () metode dibahas di bagian selanjutnya. 
-Properties of Dictionary Keys 
+
+\subsection{Properties of Dictionary Keys} 
 Nilai kamus tidak memiliki batasan. Mereka bisa menjadi objek Python yang sewenang-wenang, baik objek standar atau objek yang ditentukan pengguna. Namun, hal yang sama tidak berlaku untuk kunci. 
 Ada dua hal penting yang perlu diingat tentang kunci kamus – 
 Lebih dari satu entri per kunci tidak diperbolehkan. Yang berarti tidak ada kunci duplikat yang diperbolehkan. Ketika kunci duplikat ditemui selama penugasan, tugas terakhir akan menang. Sebagai contoh – 
+\begin{verbatim}   
    \$  \#  \$!/usr/bin/python 
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Name': 'Manni' \$  \}  \$ 
-  print "dict['Name']: ", dict['Name'] 
+  print "dict['Name']: ", dict['Name']
+\end{verbatim}  
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
   dict['Name']:~ Manni 
 (b) Tombol harus tidak berubah. Yang berarti Anda bisa menggunakan string, angka atau tupel sebagai tombol kamus tapi sesuatu seperti ['key'] tidak diperbolehkan. Berikut adalah contoh sederhana: 
+\begin{verbatim}   
    \$  \#  \$!/usr/bin/python 
   dict =  \$  \{  \$['Name']: 'Zara', 'Age': 7 \$  \}  \$ 
-  print "dict['Name']: ", dict['Name'] 
+  print "dict['Name']: ", dict['Name']
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
   Traceback (most recent call last): 
 ~~     File "test.py", line 3, in <module> 
@@ -75,13 +92,15 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
 Built-in Dictionary Functions  \$  \&  \$ Methods  \$ - \$ 
 Python includes the following dictionary functions  \$ - \$ 
 Python includes following dictionary methods  \$ - \$ 
-Dictionaries 
-Introductions 
+
+\subsection{Dictionaries Introductions} 
 Kami sudah mengenal daftar di bab sebelumnya. Di bab kusus Python online kami akan mempresentasikan kamus dan operator dan metode pada kamus. Program atau skrip Python tanpa daftar dan kamus hampir tidak dapat dibayangkan. Seperti daftar kamus yang bisa dengan mudah diubah, bisa menyusut dan berkembang ad libitum pada saat run time. Mereka menyusut dan tumbuh tanpa perlu membuat salinan. Kamus dapat dimuat dalam daftar dan sebaliknya. Tapi apa perbedaan antara daftar dan kamus? Daftar diurutkan dari objek, sedangkan kamus tidak berurutan. Tapi perbedaan utamanya adalah item dalam kamus diakses melalui kunci dan tidak melalui posisinya. Kamus adalah array asosiatif (juga dikenal sebagai hash). Kunci kamus mana pun dikaitkan (atau dipetakan) ke sebuah nilai. Nilai kamus bisa berupa tipe data Python. Jadi kamus adalah pasangan kunci-nilai tak berurutan. 
 Kamus tidak mendukung urutan operasi dari jenis data urutan seperti string, tupel dan daftar. Kamus termasuk tipe pemetaan built-in. Mereka adalah satu-satunya wakil semacam ini! 
 Di akhir bab ini, kami akan menunjukkan bagaimana kamus dapat diubah menjadi satu daftar, berisi (kunci, nilai) -tupel atau dua daftar, yaitu satu dengan kunci dan satu dengan nilainya. Transformasi ini bisa dilakukan secara terbalik juga. 
-How to create a dictionary? 
+
+\subsection{How to create a dictionary?}
 Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  \$  \{  \$ \$  \}  \$ dipisahkan dengan koma. Item memiliki kunci dan nilai yang sesuai dinyatakan sebagai pasangan, kunci: nilai. Sementara nilai dapat berupa tipe data apa pun dan dapat diulang, kunci harus terdiri dari tipe yang tidak dapat diubah (string, number atau tupel dengan elemen yang tidak berubah) dan harus unik. 
+\begin{verbatim}
    \$  \#  \$ empty dictionary 
   my \$  \_  \$dict =  \$  \{  \$ \$  \}  \$ 
    \$  \#  \$ dictionary with integer keys 
@@ -91,10 +110,13 @@ Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  \$  \{
    \$  \#  \$ using dict() 
   my \$  \_  \$dict = dict( \$  \{  \$1:'apple', 2:'ball' \$  \}  \$) 
    \$  \#  \$ from sequence having each item as a pair 
-  my \$  \_  \$dict = dict([(1,'apple'), (2,'ball')]) 
+  my \$  \_  \$dict = dict([(1,'apple'), (2,'ball')])
+\end{verbatim}
 Seperti yang bisa Anda lihat di atas, kita juga bisa membuat kamus menggunakan fungsi built-in dict (). 
-How to access elements from a dictionary? 
+
+\subsection{How to access elements from a dictionary?} 
 Sementara pengindeksan digunakan dengan jenis wadah lain untuk mengakses nilai, kamus menggunakan tombol. Kunci dapat digunakan baik di dalam tanda kurung siku atau dengan metode get (). Perbedaan saat menggunakan get () adalah mengembalikan Elemen alih-alih KeyError, jika kuncinya tidak ditemukan. 
+\begin{verbatim}
   my \$  \_  \$dict =  \$  \{  \$'name':'Jack', 'age': 26 \$  \}  \$ 
    \$  \#  \$ Output: Jack 
   print(my \$  \_  \$dict['name']) 
@@ -103,13 +125,16 @@ Sementara pengindeksan digunakan dengan jenis wadah lain untuk mengakses nilai, 
    \$  \#  \$ Trying to access keys which doesn't exist throws error 
    \$  \#  \$ my \$  \_  \$dict.get('address') 
    \$  \#  \$ my \$  \_  \$dict['address'] 
+\end{verbatim}   
 Saat menjalankan program, hasilnya adalah: 
 Jack 
 26 
-How to change or add elements in a dictionary? 
+
+\subsection{How to change or add elements in a dictionary?}
 Kamus bisa berubah-ubah. Kita bisa menambahkan item baru atau mengubah nilai barang yang ada menggunakan operator penugasan. 
 Jika kuncinya sudah ada, nilai akan diperbarui, jika ada kunci baru: pasangan nilai ditambahkan ke kamus. 
-Script.py 
+Script.py
+\begin{verbatim}
   my \$  \_  \$dict =  \$  \{  \$'name':'Jack', 'age': 26 \$  \}  \$ 
    \$  \#  \$ update value 
   my \$  \_  \$dict['age'] = 27 
@@ -119,15 +144,18 @@ Script.py
   my \$  \_  \$dict['address']~= 'Downtown'   
    \$  \#  \$ Output:  \$  \{  \$'address': 'Downtown', 'age': 27, 'name': 'Jack' \$  \}  \$ 
   print(my \$  \_  \$dict). 
+\end{verbatim}  
 Saat menjalankan program, hasilnya adalah: 
 
  \$  \{  \$'name': 'Jack', 'age': 27 \$  \}  \$ 
  \$  \{  \$'name': 'Jack', 'age': 27, 'address': 'Downtown' \$  \}  \$ 
-How to delete or remove elements from a dictionary?
+ 
+\subsection{How to delete or remove elements from a dictionary?}
 Kita bisa menghapus item tertentu dalam kamus dengan menggunakan metode pop (). Metode ini menghilangkan item dengan tombol yang disediakan dan mengembalikan nilainya. 
 Metodenya, popitem () dapat digunakan untuk menghapus dan mengembalikan item yang sewenang-wenang (key, value) membentuk kamus. Semua item dapat dihapus sekaligus dengan menggunakan metode clear (). 
 Kita juga bisa menggunakan kata kunci del untuk menghapus setiap item atau keseluruhan kamus itu sendiri. 
-Scrip.py 
+Scrip.py
+\begin{verbatim}
    \$  \#  \$ create a dictionary 
   squares~=  \$  \{  \$1:1, 2:4, 3:9, 4:16, 5:25 \$  \}  \$   
    \$  \#  \$ remove a particular item 
@@ -151,7 +179,8 @@ Scrip.py
    \$  \#  \$ delete the dictionary itself 
   del squares 
   \$  \#  \$ Throws Error 
-  \$  \#  \$ print(squares) 
+  \$  \#  \$ print(squares)
+\end{verbatim}  
 When you run the program, the output will be: 
 16 
  \$  \{  \$1: 1, 2: 4, 3: 9, 5: 25 \$  \}  \$ 
