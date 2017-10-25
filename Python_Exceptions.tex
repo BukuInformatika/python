@@ -73,67 +73,57 @@ Dibesarkan saat kita mencoba mengakses suatu variabel lokal di dalam suatu fungs
 IOError Dibesarkan saat operasi i/o gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi.
 
 \subsubsection{SyntaxError} 
+
 \subsubsection{IndentationError}
 Dibesarkan saat ada kesalahan dengan sintaks Python.
 Dibesarkan saat indentasi tidak ditentukan dengan benar. 
 
+\subsubsection{SystemError} 
+Dibesarkan saat penafsir menemukan masalah internal, bila kesalahan ini ditemui juru bahasa Python tidak keluar.
+\subsubsection{SystemExit} 
+Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Apabila tidak ditangani dalam kode, menyebabkan penafsir untuk keluar
 
+\subsubsection{TypeError} 
+Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan.
+\subsubsection{ValueError}
+Dibesarkan saat fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan
+
+\subsubsection{RuntimeError} 
+Dibesarkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun.
+
+\subsection{Penegasan dengan Python}
+Penegasan adalah pemeriksaan kewarasan yang dapat Anda aktifkan atau matikan saat Anda selesai dengan pengujian program Anda.
+Cara termudah untuk memikirkan sebuah pernyataan adalah menyamakannya dengan pernyataan kenaikan gaji-jika (atau lebih akurat, pernyataan kenaikan-jika-tidak). Sebuah ekspresi diuji, dan jika hasilnya muncul salah, pengecualian akan meningkat.
+Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, diperkenalkan di versi 1.5.
+Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid.
+Pernyataan tegas, Ketika mendapatkan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Apabila ungkapannya salah, Python menimbulkan pengecualian AssertionError.
+Sintaks untuk menegaskan adalah - menegaskan Ekspresi [, Argumen] 
+Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, maka mereka akan menghentikan program dan menghasilkan traceback.
+Contoh: 
+Berikut merupakan fungsi yang mengubah suhu dari derajat Kelvin sampai ke derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur apabila melihat suhu negatif -
+ $  \#  $!/usr/bin/python
+def KelvinToFahrenheit(Temperature): 
+~~ assert (Temperature >= 0),"Colder than absolute zero!" 
+~~ return ((Temperature-273)*1.8)+32 
+print KelvinToFahrenheit(273) 
+print int(KelvinToFahrenheit(505.78)) 
+print KelvinToFahrenheit(-5) 
 \vspace{12pt}
-SystemError \hspace*{0.5in} Dibesarkan saat penafsir menemukan masalah internal, bila kesalahan ini ditemui juru bahasa Python tidak keluar. \par
-\vspace{12pt}
-SystemExit \hspace*{0.5in} Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Apabila tidak ditangani dalam kode, menyebabkan penafsir untuk keluar. \par
-\vspace{12pt}
-TypeError \hspace*{0.5in} Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan. \par
-\vspace{12pt}
-ValueError \hspace*{0.5in} Dibesarkan saat fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan. \par
-\vspace{12pt}
-RuntimeError \hspace*{0.5in} Dibesarkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun. \par
-\vspace{12pt}
-NotImplementedError \hspace*{0.5in} Dibesarkan ketika metode abstrak yang perlu diimplementasikan di kelas warisan sebenarnya tidak diimplementasikan \par
-\vspace{12pt}
-Penegasan dengan Python \par
-\vspace{12pt}
-Penegasan adalah pemeriksaan kewarasan yang dapat Anda aktifkan atau matikan saat Anda selesai dengan pengujian program Anda. \par
-\vspace{12pt}
-Cara termudah untuk memikirkan sebuah pernyataan adalah menyamakannya dengan pernyataan kenaikan gaji-jika (atau lebih akurat, pernyataan kenaikan-jika-tidak). Sebuah ekspresi diuji, dan jika hasilnya muncul salah, pengecualian akan meningkat. \par
-\vspace{12pt}
-Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, diperkenalkan di versi 1.5. \par
-\vspace{12pt}
-Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid. \par
-Pernyataan tegas \par
-\vspace{12pt}
-Ketika mendapatkan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Apabila ungkapannya salah, Python menimbulkan pengecualian AssertionError. \par
-\vspace{12pt}
-Sintaks untuk menegaskan adalah - \par
-\vspace{12pt}
-menegaskan Ekspresi [, Argumen] \par
-\vspace{12pt}
-Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, maka mereka akan menghentikan program dan menghasilkan traceback. \par
-Contoh \par
-\vspace{12pt}
-Berikut merupakan fungsi yang mengubah suhu dari derajat Kelvin sampai ke derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur apabila melihat suhu negatif - \par
- $  \#  $!/usr/bin/python \par
-def KelvinToFahrenheit(Temperature): \par
-~~ assert (Temperature >= 0),"Colder than absolute zero!" \par
-~~ return ((Temperature-273)*1.8)+32 \par
-print KelvinToFahrenheit(273) \par
-print int(KelvinToFahrenheit(505.78)) \par
-print KelvinToFahrenheit(-5) \par
-\vspace{12pt}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut – \par
-32.0 \par
-451 \par
-Traceback (most recent call last): \par
-File "test.py", line 9, in  \par
-print KelvinToFahrenheit(-5) \par
-File "test.py", line 4, in KelvinToFahrenheit \par
-assert (Temperature >= 0),"Colder than absolute zero!" \par
-AssertionError: Colder than absolute zero! \par
-\vspace{12pt}
-\vspace{12pt}
-Apa itu Exception? \par
-\vspace{12pt}
-Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python mendapatkan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut – 
+32.0 
+451 
+Traceback (most recent call last): 
+File "test.py", line 9, in  
+print KelvinToFahrenheit(-5) 
+File "test.py", line 4, in KelvinToFahrenheit 
+assert (Temperature >= 0),"Colder than absolute zero!" 
+AssertionError: Colder than absolute zero! 
+
+\subsection{Apa itu Exception?}
+Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python mendapatkan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan.
+
+
+
 \vspace{12pt}
 Ketika skrip Python menimbulkan pengecualian, ia harus menangani pengecualian begitu saja sehingga berhenti dan berhenti. \par
 Menangani pengecualian \par
