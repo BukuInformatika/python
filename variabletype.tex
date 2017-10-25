@@ -1,18 +1,26 @@
 \section{Variable Type}
-Variabel merupakan tempat menyimpan data, sedangkan tipe data adalah jenis data yang terseimpan dalam variabel. Variabel menyimpan data yang dilakukan selama program dieksekusi, yang natinya isi dari variabel tersebut dapat diubah oleh operasi - operasi tertentu pada program yang menggunakan variabel.
+Variabel merupakan tempat menyimpan data, sedangkan tipe data adalah jenis data yang terseimpan dalam variabel. Variabel menyimpan data yang dilakukan selama program dieksekusi, yang natinya isi dari variabel tersebut dapat diubah oleh operasi - operasi tertentu pada program yang menggunakan variabel. Variabel juga dapat dikatakan sebagai entitas yang memiliki nilai dan berbeda satu dengan yang lain. Variabel mengalokasikan memori untuk menyimpan nilai.Hal ini berarti ketika membuat variabel, maka  memesan beberapa ruang di memori. 
 
-Variabel dapat menyimpan berbagai macam tipe data. Variabel bersifat mutable, artinya nilainya bisa berubah-ubah.
+Tipe data di bahasa pemrograman python dibagi menjadi dua kelompok yaitu :
+\begin{enumerate}
+	\item immutable, merupakan tipe data yang tidak bisa diubah (string dan bilangan)
+	\item mutable, merupakan tipe data yang bisa diubah (list dan dictionary)
+\end{enumerate}  
 
-Berdasarkan tipe data sebuah variabel, penafsir mengalokasikan memori dan memutuskan apa yang dapat disimpan dalam memori yang dipesan. Oleh karena itu, dengan menetapkan tipe data yang berbeda ke variabel, Anda dapat menyimpan bilangan bulat, desimal atau karakter dalam variabel ini.
-Menetapkan Nilai ke Variabel
+Variabel bisa digunakan untuk menyimpan bilangan bulat, desimal atau juga karakter.Variabel dapat menyimpan berbagai macam tipe data. Variabel bersifat mutable, artinya nilainya bisa berubah-ubah.Tidak seperti pemrograman lainnya, variabel pada Python tidak harus dideklarasikan secara eksplisit. Pendeklarasian variabel terjadi secara otomatis ketika kita memberikan sebuah nilai pada suatu variabel. Untuk pemberian nilai, bisa langsung dengan tanda "=". Berdasarkan tipe data sebuah variabel, penafsir mengalokasikan memori dan memutuskan apa yang dapat disimpan dalam memori yang dipesan. Oleh karena itu, dengan menetapkan tipe data yang berbeda ke variabel, Anda dapat menyimpan bilangan bulat, desimal atau karakter dalam variabel ini.
+
+/subsubsection{Menetapkan Nilai ke Variabel}
 Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel. Tanda sama (=) digunakan untuk menetapkan nilai pada variabel.
 
 /subsubsection{Aturan Penulisan Variabel}
 Berikut ini merupakan aturan-aturan yang digunakan dalam penulisan variabel pada bahasa pemograman python, yaitu sebagai berikut :
-1. Nama variabel boleh diawali menggunakan huruf atau garis bawah (_), contoh: nama, _nama, namaKu, nama_variabel.
-2. Karakter selanjutnya dapat berupa huruf, garis bawah (_) atau angka, contoh: __nama, n2, nilai1.
-3. Karakter pada nama variabel bersifat sensitif (case-sensitif). Artinya huruf besar dan kecil dibedakan. Misalnya, variabel_Ku dan 4. 4. variabel_ku, keduanya adalah variabel yang berbeda.
-5. Nama variabel tidak boleh menggunakan kata kunci yang sudah ada dalam python seperti if, while, for, dsb.
+\begin{enumerate}
+	\item Nama variabel boleh diawali menggunakan huruf atau garis bawah (_), contoh: nama, _nama, namaKu, nama_variabel.
+	\item Karakter selanjutnya dapat berupa huruf, garis bawah (_) atau angka, contoh: __nama, n2, nilai1.
+	\item Karakter pada nama variabel bersifat sensitif (case-sensitif). Artinya huruf besar dan kecil dibedakan. Misalnya, variabel_Ku
+	\item variabel_ku, keduanya adalah variabel yang berbeda.
+	\item Nama variabel tidak boleh menggunakan kata kunci yang sudah ada dalam python seperti if, while, for, dsb.
+\end{enumerate}  
 
 /subsubsection{Membuat Variabel di Python}
 Variabel di python dapat dibuat dengan format seperti ini:
