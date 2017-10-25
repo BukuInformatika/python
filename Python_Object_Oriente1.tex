@@ -29,7 +29,7 @@ Salah satu alasan yang paling penting untuk mempertimbangkan bekerja di OOP adal
 
 \vspace{12pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Membuat Kelas} \\} 
+\subsection {Membuat Kelas}
 \vspace{12pt}
 Pernyataan kelas membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut - 
 \vspace{12pt}
@@ -80,7 +80,7 @@ class Employee:
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
 \vspace{12pt}
 
-\section{Variable empCount}
+\subsection{Variable empCount}
 Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. 
 \vspace{12pt}
 \noindent
@@ -290,7 +290,7 @@ Karyawan . $  \_  $ $  \_  $ dict $  \_  $ $  \_  $:  $  \{  $' $  \_  $ $  \_  
 \vspace{12pt}
 \noindent 
 
-\section{Menghancurkan Objek (Pengumpulan Sampah)}
+\subsection{Menghancurkan Objek (Pengumpulan Sampah)}
 Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \par
 \vspace{12pt}
 \noindent 
@@ -307,8 +307,8 @@ b = 100  $  \#  $ Kurangi ref. Hitung <40> \par
 \noindent 
 C [0] = -1  $  \#  $ Kurangi ref. Hitung <40> \par
 \vspace{12pt}
-
-Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
+\par
+Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  $  \_  $ $  \_  $del  $  \_  $ $  \_ $ (), yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
 \noindent 
 Contoh \par
 \vspace{12pt}
@@ -350,7 +350,7 @@ del pt3 \par
 \vspace{12pt}
 \noindent
 
-\section{Kelas Warisan}
+\subsection{Kelas Warisan}
 Alih-alih mulai dari nol, Anda dapat membuat kelas dengan menurunkannya dari kelas yang sudah ada sebelumnya dengan mencantumkan kelas induk dalam tanda kurung setelah nama kelas yang baru. Kelas anak mewarisi atribut kelas induknya, dan Anda dapat menggunakan atribut tersebut seolah-olah mereka didefinisikan di kelas anak. Kelas anak juga dapat mengesampingkan data anggota dan metode dari orang tua. Sintaksis Kelas turunan dinyatakan seperti kelas orang tua mereka; Namun, daftar kelas dasar yang diwarisi dari diberikan setelah nama kelas - \par
 \vspace{12pt}
 \noindent 
@@ -436,7 +436,7 @@ Anda dapat menggunakan fungsi issubclass () atau isinstance () untuk memeriksa h
 \vspace{12pt}
 \noindent 
 
-\section{Metode utama}
+\subsection{Metode utama}
 Anda selalu dapat mengganti metode kelas induk Anda. Salah satu alasan untuk mengesampingkan metode orang tua adalah karena Anda mungkin menginginkan fungsi khusus atau berbeda di subkelas Anda. \par
 Contoh \par
 \vspace{12pt}
@@ -477,7 +477,7 @@ Berikut daftar tabel beberapa fungsionalitas generik yang dapat Anda timpa di ke
 \vspace{14pt}
 \noindent 
 
-\secrion{Operator overloading}
+\subsection{Operator overloading}
 Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa yang terjadi bila Anda menggunakan operator plus untuk menambahkannya? Kemungkinan besar Python akan berteriak pada Anda. Anda bisa, bagaimanapun, menentukan metode  $  \_  $ $  \_  $add $  \_  $ $  \_  $ di kelas Anda untuk melakukan penambahan vektor dan operator plus akan berperilaku sesuai harapan - \par
 Contoh \par
 \vspace{12pt}
@@ -519,7 +519,7 @@ Vektor (7,8) \par
 \vspace{12pt}
 \noindent 
 
-\section{Persembunyian data}
+\subsection{Persembunyian data}
 Atribut objek mungkin atau mungkin tidak terlihat di luar definisi kelas. Anda perlu memberi nama atribut dengan awalan ganda ganda, dan atribut tersebut kemudian tidak langsung terlihat oleh orang luar. \par
 Contoh \par
 \vspace{12pt}
@@ -565,6 +565,7 @@ Traceback (panggilan terakhir): \par
 \noindent 
 AttributeError: instance JustCounter tidak memiliki atribut ' $  \_  $ $  \_  $secretCount' \par
 \vspace{12pt}
+
 Python melindungi anggota tersebut dengan mengganti namanya secara internal untuk memasukkan nama kelas. Anda dapat mengakses atribut seperti object. $  \_  $className $  \_  $ $  \_  $attrName. Jika Anda akan mengganti baris terakhir Anda sebagai berikut, maka akan berhasil untuk Anda - \par
 \vspace{12pt}
 \noindent 
@@ -591,6 +592,7 @@ Sekarang saatnya untuk kembali ke Python dan melihat bagaimana kelas diimplement
 Class Account (objek): \par
 \vspace{12pt}
 \noindent 
+
 Kami belum mendefinisikan atribut atau metode apa pun di kelas akun sederhana kami. Sekarang kita akan membuat sebuah instance dari kelas kosong ini: \par
 \vspace{12pt}
 \vspace{12pt}
@@ -619,65 +621,66 @@ Sebuah metode disebut tanpa parameter ini "diri" \par
 Kami memperluas kelas kami dengan mendefinisikan beberapa metode. Tubuh dari metode ini masih belum ditentukan: \par
 \vspace{12pt}
 \noindent 
-kelas Account (objek): \par
+kelas Account (objek):
 \vspace{12pt}
 \noindent 
-~~~ Transfer def (self, target, amount): \par
+~~~ Transfer def (self, target, amount):
 \noindent 
-~~~~~~~ lulus \par
+~~~~~~~ lulus 
 \noindent 
-  \par
+  
+\noindent
+~~~ Def deposit (self, amount):
 \noindent 
-~~~ Def deposit (self, amount): \par
-\noindent 
-~~~~~~~ lulus \par
-\noindent 
-  \par
-\noindent 
-~~~ Def withdraw (self, amount): \par
-\noindent 
-~~~~~~~ lulus \par
+~~~~~~~ lulus
 \noindent 
   \par
 \noindent 
-~~~ def keseimbangan (diri): \par
+~~~ Def withdraw (self, amount):
 \noindent 
-~~~~~~~ lulus \par
+~~~~~~~ lulus 
+\noindent 
+  \par
+\noindent 
+~~~ def keseimbangan (diri):
+\noindent 
+~~~~~~~ lulus
 \vspace{12pt}
 \noindent 
 
-Python tidak memiliki konstruktor eksplisit seperti C ++ atau Java, tapi metode  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ () dengan Python adalah sesuatu yang serupa, meskipun sebenarnya bukan konstruktor. Ini berperilaku dalam banyak hal seperti konstruktor, mis. Ini adalah kode pertama yang dijalankan, saat instance baru dari sebuah kelas dibuat. Nama itu terdengar seperti konstruktor " $  \_  $ $  \_  $init $  \_  $ $  \_  $". Tapi secara tegas, akan salah jika menyebutnya sebagai konstruktor, karena contoh baru sudah "dibangun" pada saat metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ dipanggil. Tapi bagaimanapun, metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ digunakan - seperti konstruktor pada bahasa pemrograman berorientasi objek lainnya - untuk menginisialisasi variabel instance dari sebuah objek. Definisi metode init terlihat seperti definisi metode lainnya: \par
+Python tidak memiliki konstruktor eksplisit seperti C ++ atau Java, tapi metode  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ () dengan Python adalah sesuatu yang serupa, meskipun sebenarnya bukan konstruktor. Ini berperilaku dalam banyak hal seperti konstruktor, mis. Ini adalah kode pertama yang dijalankan, saat instance baru dari sebuah kelas dibuat. Nama itu terdengar seperti konstruktor " $  \_  $ $  \_  $init $  \_  $ $  \_  $". Tapi secara tegas, akan salah jika menyebutnya sebagai konstruktor, karena contoh baru sudah "dibangun" pada saat metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ dipanggil. Tapi bagaimanapun, metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ digunakan - seperti konstruktor pada bahasa pemrograman berorientasi objek lainnya - untuk menginisialisasi variabel instance dari sebuah objek. Definisi metode init terlihat seperti definisi metode lainnya:
 \vspace{12pt}
+
 \vspace{12pt}
 \noindent 
 Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (self, holder, number, balance, credit $  \_  $line = 1500): \par
 \noindent 
-~~~~~~~ self.Holder = pemegang \par
+~~~~~~~ self.Holder = pemegang 
 \noindent 
-~~~~~~~ Nomor self.Number = \par
+~~~~~~~ Nomor self.Number =
 \noindent 
-~~~~~~~ self.Balance = keseimbangan \par
+~~~~~~~ self.Balance = keseimbangan 
 \noindent 
-~~~~~~~ self.CreditLine = credit $  \_  $line \par
+~~~~~~~ self.CreditLine = credit $  \_  $line
 \vspace{12pt}
 
-Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ada destruktor "nyata", tapi ada yang serupa, yaitu metode  $  \_  $ $  \_  $del $  \_  $ $  \_  $. Hal ini disebut ketika contoh ini akan hancur. Jika kelas dasar memiliki metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () kelas turunan, jika ada, harus secara eksplisit memanggilnya untuk memastikan penghapusan komponen kelas dasar contoh yang tepat. \par
+Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ada destruktor "nyata", tapi ada yang serupa, yaitu metode  $  \_  $ $  \_  $del $  \_  $ $  \_  $. Hal ini disebut ketika contoh ini akan hancur. Jika kelas dasar memiliki metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () kelas turunan, jika ada, harus secara eksplisit memanggilnya untuk memastikan penghapusan komponen kelas dasar contoh yang tepat.
 \noindent 
 Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: \par
 \vspace{12pt}
+
 \vspace{12pt}
 \noindent 
-Kelas Salam: \par
+Kelas Salam:
 \noindent 
 ~~~ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, nama): \par
 \noindent 
-~~~~~~~ self.name = nama \par
+~~~~~~~ self.name = nama
 \noindent 
-~~~ Def  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (diri): \par
+~~~ Def  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (diri):
 \noindent 
-~~~~~~~ Cetak "Destructor dimulai" \par
+~~~~~~~ Cetak "Destructor dimulai"
 \noindent 
-~~~ Def SayHello (diri): \par
+~~~ Def SayHello (diri):
 \noindent 
-~~~~~~~ Cetak "Halo", self.name \par
-\vspace{12pt}
+~~~~~~~ Cetak "Halo", self.name
