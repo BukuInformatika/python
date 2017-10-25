@@ -1,14 +1,14 @@
-\section{Python Functions}\par
-Fungsi adalah blok kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. Fungsi menyediakan modularitas yang lebih baik untuk aplikasi Anda dan tingkat penggunaan kode yang tinggi. Seperti yang sudah Anda ketahui, Python memberi Anda banyak fungsi built-in seperti cetak (), dll. Tetapi Anda juga dapat membuat fungsi Anda sendiri. Fungsi ini disebut fungsi yang ditentukan pengguna. \par
+\section{Python Functions}
+Fungsi adalah blok kode terorganisir dan dapat digunakan kembali yang digunakan untuk melakukan tindakan tunggal dan terkait. Fungsi menyediakan modularitas yang lebih baik untuk aplikasi Anda dan tingkat penggunaan kode yang tinggi. Seperti yang sudah Anda ketahui, Python memberi Anda banyak fungsi built-in seperti cetak (), dll. Tetapi Anda juga dapat membuat fungsi Anda sendiri. Fungsi ini disebut fungsi yang ditentukan pengguna. 
 
-Ada tiga jenis fungsi dengan Python: \par
+Ada tiga jenis fungsi dengan Python: 
 \begin{enumerate}
 \item Built-in Functions, seperRekursif ti help () untuk meminta bantuan, min () untuk mendapatkan nilai minimum, print () untuk mencetak objek ke terminal.
 \item User-Defined Functions (UDFs), yang merupakan fungsi yang dibuat untuk membantu pengguna
 \item Anonymous Functions, yang juga disebut fungsi lambda karena tidak dinyatakan dengan kata kunci def standar.
 \end{enumerate}
 
-Keuntungan-keuntungan menggunakan Function, yaitu: \par
+Keuntungan-keuntungan menggunakan Function, yaitu: 
 \begin{enumerate}
 \item Program besar dapat di bagi menjadi program-program kecil menggunakan function.
 \item Kemudahan mencari error atau kesalahan karena alur logika jelas dan kesalahan dapat ditempatkan pada suatu modul tertentu.
@@ -35,8 +35,8 @@ Tipe data yang dikembalikan bisa bermacam jenis tipe data yang didukung Python. 
 Dalam python terdapat dua buah perintah yang dapat digunakan untuk membuat sebuah fungsi, yaitu def dan lambda. def adalah perintah standar di dalam python untuk mendefinisikan sebuah fungsi. Tidak seperti function dalam bahasa pemrograman compiler seperti C/C\+\+, def dalam bahasa python merupakan perintah yang executable, artinya function yang tidak akan aktif sampai python merunning perintah def tersebut. Sedangkan lambda, dalam python lebih dikenal dengan nama Anonymous Function (Fungsi yang tidak disebutkan namanya). Lambda bukanlah sebuah perintah (statemen) namun lebih kepada ekspresi (expression).
 
 
-\subsection{Defining a Function} \par
-Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. \par
+\subsection{Defining a Function} 
+Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. Berikut adalah aturan sederhana untuk mendefinisikan fungsi dengan Python. 
 \begin{enumerate}
 \item Blok fungsi dimulai dengan defensi kata kunci diikuti oleh nama fungsi dan tanda kurung (()).
 \item Setiap parameter masukan atau argumen harus ditempatkan di dalam tanda kurung ini. Anda juga dapat menentukan parameter di dalam tanda kurung ini.
@@ -45,8 +45,56 @@ Anda dapat menentukan fungsi untuk menyediakan fungsionalitas yang dibutuhkan. B
 \item Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None.
 \end{enumerate}
 
-\subsection{Syntax} \par
-Berikut adalah contoh program kalkulator menggunakan Function pada Python : \par
+\subsection{Parameter Fungsi} 
+Parameter Fungsi adalah sebuah fungsi yang dapat mempunyai daftar argumen (parameter) atau tidak. 
+
+\subsubsection{Parameter Posisi} 
+Parameter Posisi merupakan parameter fungsi pada urutan posisi yang valid. Saat pemanggilan fungsi, parameter itu diharuskan sesuai dengan jumlah parameter yang sudah didefinisikan. 
+
+Contoh : 
+\begin{verbatim}
+def perhitunan (k,l) :
+            m=k+l
+            return m
+perhitungan (4,5)
+0utput = 9
+\end{verbatim}
+
+\subsubsection{Parameter Nama} 
+Parameter Nama adalah Dipanggilnya fungsi  nilai pada parameternya dijelaskan langsung dari nama parameternya. 
+
+Contoh :
+\begin{verbatim}
+def totalTransfer(hari, uangTransfer):
+            gaji= hari*uangTransfer
+            return gaji
+totalTransfer(hari=20,uangTransfer=20000)
+Output = 400000
+\end{verbatim}
+
+\subsubsection{Parameter Default}
+Parameter default adalah nilai yang diambil ke parameter pada saat pendefinisian fungsi.
+Contoh :
+\begin{verbatim}
+def koin (ratusan, ribuan=5) :
+Print “koin ratusannya adalah ; “, ratusan;
+Print “koin ribuannya adalah ; “, ribuan;
+Uang(7)
+Output : 7 dan 5 , nilai default yang digunakan.
+\end{verbatim}
+
+\subsubsection{Parameter Bertipe List} 
+Parameter Bertipe List adalah satu parameter yang diawali oleh tanda  *. 
+Contoh :
+\begin{verbatim}
+def angka(*bilangan) ;
+            Print angka
+angka (2,7,9)
+Output : (2,7,9)
+\end{verbatim}
+
+\subsection{Syntax} 
+Berikut adalah contoh program kalkulator menggunakan Function pada Python : 
 \begin{verbatim}
 def menu()
     print "Hallo Guys :) Selamat Datang di Program Kalkulator"
@@ -94,7 +142,7 @@ while loop == 1:
 print "GoodBye :( Terimakasih Telah Menggunakan calc.py :)"
 \end{verbatim}
 
-Berikut contoh Program Mencetak Menu dan Menghitung Luas menggunakan Function pada Python : \par
+Berikut contoh Program Mencetak Menu dan Menghitung Luas menggunakan Function pada Python : 
 \begin{verbatim}
 def menu(): 
 print "Menu Options" 
@@ -173,455 +221,282 @@ print "\n"*100
 break
 \end{verbatim}
 
-\subsection{Parameter Fungsi} \par
-Parameter Fungsi adalah sebuah fungsi yang dapat mempunyai daftar argumen (parameter) atau tidak. \par
 
-\subsubsection{Parameter Posisi} \par
-Parameter Posisi merupakan parameter fungsi pada urutan posisi yang valid. Saat pemanggilan fungsi, parameter itu diharuskan sesuai dengan jumlah parameter yang sudah didefinisikan. \par
+def functionname( parameters ): 
+"function \$  \_  \$docstring"
+function \$  \_  \$suite 
+return [expression] 
 
-Contoh : \par
-\begin{verbatim}
-def perhitunan (k,l) :
-            m=k+l
-            return m
-perhitungan (4,5)
-0utput = 9
-\end{verbatim}
+Secara default, parameter memiliki perilaku posisi dan Anda perlu memberi tahu mereka dengan urutan yang sama seperti yang ditetapkan. 
+Example:
+Fungsi berikut mengambil string sebagai parameter masukan dan mencetaknya di layar standar.
 
-\subsubsection{Parameter Nama} \par
-Parameter Nama adalah Dipanggilnya fungsi  nilai pada parameternya dijelaskan langsung dari nama parameternya. \par
+def printme( str ): 
+"This prints a passed string into this function" 
+print str 
+return \par
 
-Contoh :
-\begin{verbatim}
-def totalTransfer(hari, uangTransfer):
-            gaji= hari*uangTransfer
-            return gaji
-totalTransfer(hari=20,uangTransfer=20000)
-Output = 400000
-\end{verbatim}
+\subsection{Calling a Function} 
+Mendefinisikan sebuah fungsi hanya memberinya sebuah nama, menentukan parameter yang akan disertakan dalam fungsi dan menyusun blok kode. Setelah struktur dasar fungsi selesai, Anda dapat menjalankannya dengan memanggilnya dari fungsi lain atau langsung dari prompt Python. Berikut adalah contoh untuk memanggil fungsi printme ().
 
-\subsubsection{Parameter Default} \par
-Parameter default adalah nilai yang diambil ke parameter pada saat pendefinisian fungsi. \par
-Contoh :
-\begin{verbatim}
-def koin (ratusan, ribuan=5) :
-Print “koin ratusannya adalah ; “, ratusan;
-Print “koin ribuannya adalah ; “, ribuan;
-Uang(7)
-Output : 7 dan 5 , nilai default yang digunakan.
-\end{verbatim}
+\$  \#  \$!/usr/bin/python 
 
-\subsubsection{Parameter Bertipe List} \par
-Parameter Bertipe List adalah satu parameter yang diawali oleh tanda  *. \par
-Contoh :
-\begin{verbatim}
-def angka(*bilangan) ;
-            Print angka
-angka (2,7,9)
-Output : (2,7,9)
-\end{verbatim}
+\$  \#  \$ Function definition is here
+def printme( str ): 
+"This prints a passed string into this function" 
+print str
+return; 
+\$  \#  \$ Now you can call printme function
 
-\noindent 
- \hspace*{0.5in} def functionname( parameters ): \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} "function $  \_  $docstring" \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} function $  \_  $suite \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} return [expression] \par
-\noindent 
-Secara default, parameter memiliki perilaku posisi dan Anda perlu memberi tahu mereka dengan urutan yang sama seperti yang ditetapkan. \par
-\vspace{12pt}
-\noindent 
-Example \par
-\noindent 
-Fungsi berikut mengambil string sebagai parameter masukan dan mencetaknya di layar standar. \par
-\noindent 
- \hspace*{0.5in} def printme( str ): \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} "This prints a passed string into this function" \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} print str \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} return \par
-\vspace{12pt}
-\noindent 
-Calling a Function \par
-\noindent 
-Mendefinisikan sebuah fungsi hanya memberinya sebuah nama, menentukan parameter yang akan disertakan dalam fungsi dan menyusun blok kode. Setelah struktur dasar fungsi selesai, Anda dapat menjalankannya dengan memanggilnya dari fungsi lain atau langsung dari prompt Python. Berikut adalah contoh untuk memanggil fungsi printme () - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def printme( str ): \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} "This prints a passed string into this function" \par
-\noindent 
-~~  \hspace*{0.5in} print str \par
-\noindent 
-~~  \hspace*{0.5in} return; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call printme function \par
-\noindent 
- \hspace*{0.5in} printme("I'm first call to user defined function!") \par
-\noindent 
- \hspace*{0.5in} printme("Again second call to the same function") \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} I'm first call to user defined function! \par
-\noindent 
- \hspace*{0.5in} Again second call to the same function \par
-\vspace{12pt}
-\noindent 
-Pass by reference vs value \par
-\noindent 
-Semua parameter (argumen) dalam bahasa Python dilewatkan dengan referensi. Ini berarti jika Anda mengubah parameter yang mengacu pada suatu fungsi, perubahan tersebut juga mencerminkan kembali fungsi pemanggilan. Sebagai contoh - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def changeme( mylist ): \par
-\noindent 
- \hspace*{0.5in} ~~ "This changes a passed list into this function" \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} mylist.append([1,2,3,4]); \par
-\noindent 
-~~  \hspace*{0.5in} print "Values inside the function: ", mylist \par
-\noindent 
-~~  \hspace*{0.5in} return \par
-\noindent 
- \hspace*{0.5in} \vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call changeme function \par
-\noindent 
- \hspace*{0.5in} mylist = [10,20,30]; \par
-\noindent 
- \hspace*{0.5in} changeme( mylist ); \par
-\noindent 
- \hspace*{0.5in} print "Values outside the function: ", mylist \par
-\noindent 
-Di sini, kita mempertahankan referensi objek yang dilewati dan menambahkan nilai pada objek yang sama. Jadi, ini akan menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Values~inside the function:  [10, 20, 30, [1, 2, 3, 4]] \par
-\noindent 
- \hspace*{0.5in} Values~outside the function:  [10, 20, 30, [1, 2, 3, 4]] \par
-\noindent 
-Ada satu contoh lagi di mana argumen dilewatkan melalui referensi dan rujukannya ditimpa di dalam fungsi yang disebut. \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def changeme( mylist ): \par
-\noindent 
- \hspace*{0.5in} ~~ "This changes a passed list into this function" \par
-\noindent 
- \hspace*{0.5in} ~~ mylist = [1,2,3,4];  $  \#  $ This would assig new reference in mylist \par
-\noindent 
- \hspace*{0.5in} ~~ print "Values inside the function: ", mylist \par
-\noindent 
- \hspace*{0.5in} ~~ return \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call changeme function \par
-\noindent 
- \hspace*{0.5in} mylist = [10,20,30]; \par
-\noindent 
- \hspace*{0.5in} changeme( mylist ); \par
-\noindent 
- \hspace*{0.5in} print "Values outside the function: ", mylist \par
-\noindent 
-Parameter mylist adalah local ke fungsi changeme. Mengubah mylist dalam fungsi tidak mempengaruhi mylist. Fungsi ini tidak menghasilkan apa-apa dan akhirnya ini akan menghasilkan hasil sebagai berikut: \par
-\noindent 
- \hspace*{0.5in} Values~inside the function:  [1, 2, 3, 4] \par
-\noindent 
- \hspace*{0.5in} Values~outside the function:  [10, 20, 30] \par
-\vspace{12pt}
-\noindent 
-Function Arguments \par
-\noindent 
-Anda dapat memanggil fungsi dengan menggunakan jenis argumen formal berikut: \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Argumen yang dibutuhkan \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Argumen kata kunci \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Argumen baku \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Argumen panjang variable \par
-\vspace{12pt}
-\noindent 
-Required arguments \par
-\noindent 
-Argumen yang diperlukan adalah argumen yang diberikan ke sebuah fungsi dalam urutan posisi yang benar. Di sini, jumlah argumen dalam pemanggilan fungsi harus sesuai persis dengan definisi fungsi. Untuk memanggil fungsi printme (), Anda pasti perlu melewati satu argumen, jika tidak maka akan memberikan kesalahan sintaks sebagai berikut - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def printme( str ): \par
-\noindent 
-~~  \hspace*{0.5in}  \hspace*{0.5in} "This prints a passed string into this function" \par
-\noindent 
-~~  \hspace*{0.5in} print str \par
-\noindent 
-~~  \hspace*{0.5in} return; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call printme function \par
-\noindent 
- \hspace*{0.5in} printme() \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
-\noindent 
- \hspace*{0.5in} Traceback (most recent call last): \par
-\noindent 
- \hspace*{0.5in} ~ File "test.py", line 11, in <module> \par
-\noindent 
- \hspace*{0.5in} ~~~ printme(); \par
-\noindent 
- \hspace*{0.5in} TypeError: printme() takes exactly 1 argument (0 given) \par
-\vspace{12pt}
-\noindent 
-Keyword arguments \par
-\noindent 
-Argumen kata kunci terkait dengan pemanggilan fungsi. Bila Anda menggunakan argumen kata kunci dalam pemanggilan fungsi, penelepon mengidentifikasi argumen berdasarkan nama parameter. Hal ini memungkinkan Anda melewatkan argumen atau menempatkannya agar tidak bermasalah karena penerjemah Python dapat menggunakan kata kunci yang diberikan agar sesuai dengan nilai parameter. Anda juga dapat membuat panggilan kata kunci ke fungsi printme () dengan cara berikut - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def printme( str ): \par
-\noindent 
- \hspace*{0.5in} ~~ "This prints a passed string into this function" \par
-\noindent 
- \hspace*{0.5in} ~~ print str \par
-\noindent 
- \hspace*{0.5in} ~~ return; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call printme function \par
-\noindent 
- \hspace*{0.5in} printme( str = "My string") \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} My string \par
-\noindent 
-Contoh berikut memberikan gambaran yang lebih jelas. Perhatikan bahwa urutan parameter tidak masalah. \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def printinfo( name, age ): \par
-\noindent 
- \hspace*{0.5in} ~~ "This prints a passed info into this function" \par
-\noindent 
- \hspace*{0.5in} ~~ print "Name: ", name \par
-\noindent 
- \hspace*{0.5in} ~~ print "Age ", age \par
-\noindent 
- \hspace*{0.5in} ~~ return; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call printinfo function \par
-\noindent 
- \hspace*{0.5in} printinfo( age=50, name="miki" ) \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Name:~ miki \par
-\noindent 
- \hspace*{0.5in} Age~ 50 \par
-\vspace{12pt}
-\noindent 
-Default arguments \par
-\noindent 
-Argumen default adalah argumen yang mengasumsikan nilai default jika nilai tidak diberikan dalam pemanggilan fungsi untuk argumen itu. Contoh berikut memberi ide pada argumen default, ini mencetak usia default jika tidak lulus - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def printinfo( name, age = 35 ): \par
-\noindent 
- \hspace*{0.5in} ~~ "This prints a passed info into this function" \par
-\noindent 
- \hspace*{0.5in} ~~ print "Name: ", name \par
-\noindent 
- \hspace*{0.5in} ~~ print "Age ", age \par
-\noindent 
- \hspace*{0.5in} ~~ return; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call printinfo function \par
-\noindent 
- \hspace*{0.5in} printinfo( age=50, name="miki" ) \par
-\noindent 
- \hspace*{0.5in} printinfo( name="miki" ) \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Name:~ miki \par
-\noindent 
- \hspace*{0.5in} Age~ 50 \par
-\noindent 
- \hspace*{0.5in} Name:~ miki \par
-\noindent 
- \hspace*{0.5in} Age~ 35 \par
-\vspace{12pt}
-\noindent 
-Variable-length arguments \par
-\noindent 
-Anda mungkin perlu memproses sebuah fungsi untuk argumen lebih banyak daripada yang Anda tentukan saat menentukan fungsinya. Argumen ini disebut variable-lengtharguments dan tidak disebutkan dalam definisi fungsi, tidak seperti argumen yang dibutuhkan dan standar. \par
-\noindent 
-Sintaks untuk fungsi dengan argumen variabel non-kata kunci adalah ini - \par
-\noindent 
- \hspace*{0.5in} def functionname([formal $  \_  $args,] *var $  \_  $args $  \_  $tuple ): \par
-\noindent 
- \hspace*{0.5in} ~~ "function $  \_  $docstring" \par
-\noindent 
- \hspace*{0.5in} ~~ function $  \_  $suite \par
-\noindent 
- \hspace*{0.5in} ~~ return [expression] \par
-\noindent 
-Tanda asterisk (*) ditempatkan sebelum nama variabel yang menyimpan nilai dari semua argumen variabel nonkeyword. Tuple ini tetap kosong jika tidak ada argumen tambahan yang ditentukan selama pemanggilan fungsi. Berikut adalah contoh sederhana - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def printinfo( arg1, *vartuple ): \par
-\noindent 
- \hspace*{0.5in} ~~ "This prints a variable passed arguments" \par
-\noindent 
- \hspace*{0.5in} ~~ print "Output is: " \par
-\noindent 
- \hspace*{0.5in} ~~ print arg1 \par
-\noindent 
- \hspace*{0.5in} ~~ for var in vartuple: \par
-\noindent 
- \hspace*{0.5in} ~~~~~ print var \par
-\noindent 
- \hspace*{0.5in} ~~ return; \par
-\noindent 
- \hspace*{0.5in} \vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call printinfo function \par
-\noindent 
- \hspace*{0.5in} printinfo( 10 ) \par
-\noindent 
- \hspace*{0.5in} printinfo( 70, 60, 50 ) \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Output is: \par
-\noindent 
- \hspace*{0.5in} 10 \par
-\noindent 
- \hspace*{0.5in} Output is: \par
-\noindent 
- \hspace*{0.5in} 70 \par
-\noindent 
- \hspace*{0.5in} 60 \par
-\noindent 
- \hspace*{0.5in} 50 \par
-\noindent 
-The $  $Anonymous $  $Functions \par
-\noindent 
-Fungsi ini disebut anonim karena tidak dinyatakan secara standar dengan menggunakan kata kunci def. Anda bisa menggunakan kata kunci lambda untuk membuat fungsi anonim yang kecil. \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Bentuk lambda bisa mengambil sejumlah argumen tapi hanya mengembalikan satu nilai  \hspace*{0.5in} ~~ dalam bentuk ekspresi. Mereka tidak dapat berisi perintah atau beberapa ekspresi. \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Fungsi anonim tidak bisa menjadi panggilan langsung untuk dicetak karena lambda  \hspace*{0.5in} ~~ membutuhkan ekspresi \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Fungsi Lambda memiliki namespace lokal mereka sendiri dan tidak dapat mengakses  \hspace*{0.5in} ~ variabel selain yang ada dalam daftar parameter dan yang ada di namespace global. \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Meskipun tampak bahwa lambda adalah versi satu baris dari sebuah fungsi, mereka tidak  \hspace*{0.5in} ~ setara dengan pernyataan inline di C atau C ++, yang tujuannya adalah dengan  \hspace*{0.5in} ~~~~~~~ melewatkan alokasi stack fungsi selama pemanggilan untuk alasan kinerja. \par
-\vspace{12pt}
-\noindent 
-Syntax \par
-\noindent 
-Sintaks fungsi lambda hanya berisi satu pernyataan, yaitu sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} lambda [arg1 [,arg2,.....argn]]:expression \par
-\noindent 
-Berikut adalah contoh untuk menunjukkan bagaimana lambda bentuk fungsi bekerja - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} sum = lambda arg1, arg2: arg1 + arg2; \par
-\vspace{12pt}
-\noindent 
-  \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call sum as a function \par
-\noindent 
- \hspace*{0.5in} print "Value of total : ", sum( 10, 20 ) \par
-\noindent 
- \hspace*{0.5in} print "Value of total : ", sum( 20, 20 ) \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Value~of total :  30 \par
-\noindent 
- \hspace*{0.5in} Value~of total :  40 \par
-\vspace{12pt}
-\noindent 
-The $  $return $  $Statement \par
-\noindent 
-Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. \par
-\noindent 
-Semua contoh di atas tidak mengembalikan nilai apapun. Anda bisa mengembalikan nilai dari sebuah fungsi sebagai berikut - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def sum( arg1, arg2 ): \par
-\noindent 
- \hspace*{0.5in} ~~  $  \#  $ Add both the parameters and return them." \par
-\noindent 
- \hspace*{0.5in} ~~ total = arg1 + arg2 \par
-\noindent 
- \hspace*{0.5in} ~~ print "Inside the function : ", total \par
-\noindent 
- \hspace*{0.5in} ~~ return total; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call sum function \par
-\noindent 
- \hspace*{0.5in} total = sum( 10, 20 ); \par
-\noindent 
- \hspace*{0.5in} print "Outside the function : ", total  \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Inside~the function :  30 \par
-\noindent 
- \hspace*{0.5in} Outside~the function :  30 \par
-\noindent 
-Scope of Variables \par
-\noindent 
-Semua variabel dalam sebuah program mungkin tidak dapat diakses di semua lokasi dalam program tersebut. Ini tergantung di mana Anda telah menyatakan sebuah variabel. \par
+printme("I'm first call to user defined function!")
+printme("Again second call to the same function") 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
+
+I'm first call to user defined function! 
+
+Again second call to the same function 
+Pass by reference vs value
+Semua parameter (argumen) dalam bahasa Python dilewatkan dengan referensi. Ini berarti jika Anda mengubah parameter yang mengacu pada suatu fungsi, perubahan tersebut juga mencerminkan kembali fungsi pemanggilan. Sebagai contoh:
+
+\$  \#  \$!/usr/bin/python 
+
+\$  \#  \$ Function definition is here 
+def changeme( mylist ): 
+"This changes a passed list into this function" 
+mylist.append([1,2,3,4]); 
+"Values inside the function: ", mylist
+
+return
+
+
+\$  \#  \$ Now you can call changeme function 
+mylist = [10,20,30]; 
+changeme( mylist );
+print "Values outside the function: ", mylist
+
+Di sini, kita mempertahankan referensi objek yang dilewati dan menambahkan nilai pada objek yang sama. Jadi, ini akan menghasilkan hasil sebagai berikut:
+
+Values~inside the function:  [10, 20, 30, [1, 2, 3, 4]] 
+Values~outside the function:  [10, 20, 30, [1, 2, 3, 4]] 
+
+Ada satu contoh lagi di mana argumen dilewatkan melalui referensi dan rujukannya ditimpa di dalam fungsi yang disebut. 
+
+\$  \# \$!/usr/bin/python 
+\$  \#  \$ Function definition is here 
+def changeme( mylist ): 
+"This changes a passed list into this function" 
+~~ mylist = [1,2,3,4];  \$  \#  \$ This would assig new reference in mylist 
+~~ print "Values inside the function: ", mylist 
+
+~~ return 
+
+\$  \#  \$ Now you can call changeme function 
+
+mylist = [10,20,30]; 
+
+changeme( mylist ); 
+
+print "Values outside the function: ", mylist 
+
+Parameter mylist adalah local ke fungsi changeme. Mengubah mylist dalam fungsi tidak mempengaruhi mylist. Fungsi ini tidak menghasilkan apa-apa dan akhirnya ini akan menghasilkan hasil sebagai berikut: 
+
+Values~inside the function:  [1, 2, 3, 4] 
+
+Values~outside the function:  [10, 20, 30] 
+
+Function Arguments
+
+Anda dapat memanggil fungsi dengan menggunakan jenis argumen formal berikut: 
+\$ \bullet \$ Argumen yang dibutuhkan
+\$ \bullet \$ Argumen kata kunci 
+
+\$ \bullet \$ Argumen baku
+
+\$ \bullet \$ Argumen panjang variable
+
+Required arguments 
+
+Argumen yang diperlukan adalah argumen yang diberikan ke sebuah fungsi dalam urutan posisi yang benar. Di sini, jumlah argumen dalam pemanggilan fungsi harus sesuai persis dengan definisi fungsi. Untuk memanggil fungsi printme (), Anda pasti perlu melewati satu argumen, jika tidak maka akan memberikan kesalahan sintaks sebagai berikut :
+\$  \#  \$!/usr/bin/python 
+\$  \#  \$ Function definition is here 
+def printme( str ): 
+
+~~  "This prints a passed string into this function" 
+
+~~  print str
+
+~~  return;
+
+\$  \#  \$ Now you can call printme function 
+
+printme() 
+
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: 
+
+Traceback (most recent call last): 
+
+ ~ File "test.py", line 11, in <module> 
+~~~ printme();
+
+ TypeError: printme() takes exactly 1 argument (0 given) 
+
+Keyword arguments 
+Argumen kata kunci terkait dengan pemanggilan fungsi. Bila Anda menggunakan argumen kata kunci dalam pemanggilan fungsi, penelepon mengidentifikasi argumen berdasarkan nama parameter. Hal ini memungkinkan Anda melewatkan argumen atau menempatkannya agar tidak bermasalah karena penerjemah Python dapat menggunakan kata kunci yang diberikan agar sesuai dengan nilai parameter. Anda juga dapat membuat panggilan kata kunci ke fungsi printme () dengan cara berikut - 
+
+\$  \#  \$!/usr/bin/python
+
+\$  \#  \$ Function definition is here
+
+ def printme( str ): 
+
+~~ "This prints a passed string into this function" 
+
+~~ print str 
+
+~~ return; 
+
+ \$  \#  \$ Now you can call printme function 
+
+printme( str = "My string") 
+
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut:
+
+My string 
+
+Contoh berikut memberikan gambaran yang lebih jelas. Perhatikan bahwa urutan parameter tidak masalah. 
+
+\$  \#  \$!/usr/bin/python 
+
+\$  \#  \$ Function definition is here 
+
+def printinfo( name, age ):
+
+~~ "This prints a passed info into this function"
+
+~~ print "Name: ", name 
+
+~~ print "Age ", age 
+
+~~ return; 
+
+
+\$  \#  \$ Now you can call printinfo function 
+printinfo( age=50, name="miki" )
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut:
+Name:~ miki
+
+Age~ 50 
+
+
+Default arguments 
+
+Argumen default adalah argumen yang mengasumsikan nilai default jika nilai tidak diberikan dalam pemanggilan fungsi untuk argumen itu. Contoh berikut memberi ide pada argumen default, ini mencetak usia default jika tidak lulus.
+
+\$  \#  \$!/usr/bin/python
+
+\$  \#  \$ Function definition is here 
+def printinfo( name, age = 35 ): 
+~~ "This prints a passed info into this function"
+~~ print "Name: ", name 
+~~ print "Age ", age 
+
+~~ return;
+
+\$  \#  \$ Now you can call printinfo function
+
+printinfo( age=50, name="miki" ) 
+
+printinfo( name="miki" ) 
+
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut
+
+Name:~ miki 
+
+Age~ 50 
+
+Name:~ miki
+
+Age~ 35 
+
+Variable-length arguments 
+
+Anda mungkin perlu memproses sebuah fungsi untuk argumen lebih banyak daripada yang Anda tentukan saat menentukan fungsinya. Argumen ini disebut variable-lengtharguments dan tidak disebutkan dalam definisi fungsi, tidak seperti argumen yang dibutuhkan dan standar. 
+
+Sintaks untuk fungsi dengan argumen variabel non-kata kunci adalah ini -
+
+def functionname([formal \$  \_  \$args,] *var \$  \_  \$args \$  \_  \$tuple ): 
+
+~~ "function \$  \_  \$docstring" 
+
+~~ function \$  \_  \$suite 
+
+~~ return [expression]
+Tanda asterisk (*) ditempatkan sebelum nama variabel yang menyimpan nilai dari semua argumen variabel nonkeyword. Tuple ini tetap kosong jika tidak ada argumen tambahan yang ditentukan selama pemanggilan fungsi. Berikut adalah contoh sederhana - 
+
+\$  \#  \$!/usr/bin/python 
+
+\$  \#  \$ Function definition is here 
+
+def printinfo( arg1, *vartuple ): 
+
+~~ "This prints a variable passed arguments" 
+
+~~ print "Output is: " 
+~~ print arg1
+~~ for var in vartuple:
+~~~~~ print var 
+~~ return; 
+
+\$  \#  \$ Now you can call printinfo function
+printinfo( 10 ) 
+printinfo( 70, 60, 50 ) 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+Output is: 
+0
+Output is: 
+70 
+60 
+50 
+The \$  \$Anonymous \$  \$Functions 
+Fungsi ini disebut anonim karena tidak dinyatakan secara standar dengan menggunakan kata kunci def. Anda bisa menggunakan kata kunci lambda untuk membuat fungsi anonim yang kecil. 
+\$ \bullet \$ Bentuk lambda bisa mengambil sejumlah argumen tapi hanya mengembalikan satu nilai   ~~ dalam bentuk ekspresi. Mereka tidak dapat berisi perintah atau beberapa ekspresi. 
+   \$ \bullet \$ Fungsi anonim tidak bisa menjadi panggilan langsung untuk dicetak karena lambda   ~~ membutuhkan ekspresi 
+   \$ \bullet \$ Fungsi Lambda memiliki namespace lokal mereka sendiri dan tidak dapat mengakses   ~ variabel selain yang ada dalam daftar parameter dan yang ada di namespace global. 
+   \$ \bullet \$ Meskipun tampak bahwa lambda adalah versi satu baris dari sebuah fungsi, mereka tidak   ~ setara dengan pernyataan inline di C atau C ++, yang tujuannya adalah dengan   ~~~~~~~ melewatkan alokasi stack fungsi selama pemanggilan untuk alasan kinerja. 
+Syntax 
+Sintaks fungsi lambda hanya berisi satu pernyataan, yaitu sebagai berikut - 
+  lambda [arg1 [,arg2,.....argn]]:expression 
+Berikut adalah contoh untuk menunjukkan bagaimana lambda bentuk fungsi bekerja -
+   \$  \#  \$!/usr/bin/python 
+   \$  \#  \$ Function definition is here 
+  sum = lambda arg1, arg2: arg1 + arg2;
+
+
+   \$  \#  \$ Now you can call sum as a function 
+ print "Value of total : ", sum( 10, 20 ) 
+  print "Value of total : ", sum( 20, 20 ) 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+ Value~of total :  30 
+ Value~of total :  40 
+The \$  \$return \$  \$Statement 
+Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. 
+Semua contoh di atas tidak mengembalikan nilai apapun. Anda bisa mengembalikan nilai dari sebuah fungsi sebagai berikut - 
+  \$  \#  \$!/usr/bin/python 
+  \$  \#  \$ Function definition is here 
+ def sum( arg1, arg2 ): 
+  ~~  \$  \#  \$ Add both the parameters and return them." 
+  ~~ total = arg1 + arg2 
+  ~~ print "Inside the function : ", total 
+  ~~ return total; 
+ 
+   \$  \#  \$ Now you can call sum function 
+  total = sum( 10, 20 ); 
+ print "Outside the function : ", total  
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
+  Inside~the function :  30 
+ Outside~the function :  30 
+Scope of Variables 
+Semua variabel dalam sebuah program mungkin tidak dapat diakses di semua lokasi dalam program tersebut. Ini tergantung di mana Anda telah menyatakan sebuah variabel. 
 Contoh penggunaan scope variabel : 
 \begin{verbatim}
  def bljrScope(A):
@@ -636,50 +511,29 @@ Contoh penggunaan scope variabel :
  Nilai a di luar fungsi, a = 30
  Nilai A di dalam fungsi, a = 10
  Pada contoh diatas, variabel A didefinisikan di dua tempat yaitu di dalam fungsi bljrScope() dan di dalam program utama.Ketika nilai A awal di beri nilai 30, kemudian di cetak, nilai A masih bernilai 30. Namun ketika kita memanggil fungsi bljrScope() dengan mengirim parameter A yang bernilai 30, terlihat bahwa nilai A yang berlaku adalah nilai A yang didefinisikan didalam fungsi tersebut. Atau nilai A yang bernilai 10. ini terbukti bahwa variabel A yang di cetak dalam fungsi bljrScope() merupakan variabel local yang didefinisikan didalam fungsi, bukan variabel A global yang dicetak di luar fungsi.  
-\noindent 
-Ruang lingkup variabel menentukan bagian dari program di mana Anda dapat mengakses pengenal tertentu. Ada dua lingkup dasar variabel dengan Python - \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Variabel global \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Variabel local \par
-\vspace{12pt}
-\noindent 
-Global vs. Local variables \par
-\noindent 
-Variabel yang didefinisikan di dalam badan fungsi memiliki lingkup lokal, dan yang didefinisikan di luar memiliki cakupan global. \par
-\noindent 
-Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mereka dideklarasikan, sedangkan variabel global dapat diakses di seluruh tubuh program oleh semua fungsi. Saat Anda memanggil fungsi, variabel yang dideklarasikan di dalamnya dibawa ke lingkup. Berikut adalah contoh sederhana - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} total = 0;  $  \#  $ This is global variable. \par
-\noindent 
- \hspace*{0.5in}  $  \#  $ Function definition is here \par
-\noindent 
- \hspace*{0.5in} def sum( arg1, arg2 ): \par
-\noindent 
- \hspace*{0.5in} ~~  $  \#  $ Add both the parameters and return them." \par
-\noindent 
- \hspace*{0.5in} ~~ total = arg1 + arg2;  $  \#  $ Here total is local variable. \par
-\noindent 
- \hspace*{0.5in} ~~ print "Inside the function local total : ", total \par
-\noindent 
- \hspace*{0.5in} ~~ return total; \par
-\noindent 
- \hspace*{0.5in} \vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call sum function \par
-\noindent 
- \hspace*{0.5in} sum( 10, 20 ); \par
-\noindent 
- \hspace*{0.5in} print "Outside the function global total : ", total  \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Inside~the function local total :  30 \par
-\noindent 
- \hspace*{0.5in} Outside~the function global total :  0 \par
+Ruang lingkup variabel menentukan bagian dari program di mana Anda dapat mengakses pengenal tertentu. Ada dua lingkup dasar variabel dengan Python - 
+   \$ \bullet \$ Variabel global 
+   \$ \bullet \$ Variabel local 
+
+Global vs. Local variables 
+Variabel yang didefinisikan di dalam badan fungsi memiliki lingkup lokal, dan yang didefinisikan di luar memiliki cakupan global. 
+Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mereka dideklarasikan, sedangkan variabel global dapat diakses di seluruh tubuh program oleh semua fungsi. Saat Anda memanggil fungsi, variabel yang dideklarasikan di dalamnya dibawa ke lingkup. Berikut adalah contoh sederhana - 
+  \$  \#  \$!/usr/bin/python 
+
+  total = 0;  \$  \#  \$ This is global variable. 
+  \$  \#  \$ Function definition is here 
+  def sum( arg1, arg2 ): 
+  ~~  \$  \#  \$ Add both the parameters and return them." 
+  ~~ total = arg1 + arg2;  \$  \#  \$ Here total is local variable. 
+  ~~ print "Inside the function local total : ", total 
+  ~~ return total; 
+
+   \$  \#  \$ Now you can call sum function 
+  sum( 10, 20 ); 
+ \ print "Outside the function global total : ", total  
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+  Inside~the function local total :  30 
+ Outside~the function global total :  0 
 
 \section{Pembelajaran Function Python}
-Function dalam Python didefinisikan menggunakan kata kunci def. Setelah def ada nama pengenal function diikut dengan parameter yang diapit oleh tanda kurung dan diakhir dingan tanda titik dua :. Baris berikutnya berupa blok fungsi yang akan dijalankan jika fungsi dipanggil. \par
+Function dalam Python didefinisikan menggunakan kata kunci def. Setelah def ada nama pengenal function diikut dengan parameter yang diapit oleh tanda kurung dan diakhir dingan tanda titik dua :. Baris berikutnya berupa blok fungsi yang akan dijalankan jika fungsi dipanggil. 
