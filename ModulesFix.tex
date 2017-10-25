@@ -172,39 +172,33 @@ Di sini, variabel string khusus  $  \_  $ $  \_  $name $  \_  $ $  \_  $ adalah 
 \noindent 
 The $  $globals() $  $and $  $locals() $  $Functions  $ - $ \par
 \noindent 
-Fungsi global () dan penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global dan lokal tergantung pada lokasi dari tempat mereka dipanggil. \par
+Fungsi global () dan penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global dan lokal tergantung pada lokasi dari tempat mereka dipanggil. 
+ 
+Jika penduduk setempat () dipanggil dari dalam sebuah fungsi, maka semua nama yang dapat diakses secara lokal berasal dari fungsi itu. 
+
+Jika globals () dipanggil dari dalam sebuah fungsi, maka akan mengembalikan semua nama yang dapat diakses secara global dari fungsi itu. 
+
+Jenis kembalian dari kedua fungsi ini adalah kamus. Oleh karena itu, nama dapat diekstrak dengan menggunakan tombol () fungsi. 
+{12pt}
+
+The $  $reload() $  $Function 
+
+Saat modul diimpor ke dalam skrip, kode di bagian tingkat atas dari modul hanya akan dijalankan satu kali. 
+
+Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, Anda dapat menggunakan fungsi reload (). Fungsi reload () mengimpor modul yang sebelumnya diimpor lagi. Sintaks fungsi reload () adalah ini - 
+ \hspace*{0.5in} reload(module $  \_  $name)
+Di sini, module $  \_  $name merupakan nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - 
+ *{0.5in} reload(hello)
+{12pt}
 \noindent 
-Jika penduduk setempat () dipanggil dari dalam sebuah fungsi, maka semua nama yang dapat diakses secara lokal berasal dari fungsi itu. \par
-\noindent 
-Jika globals () dipanggil dari dalam sebuah fungsi, maka akan mengembalikan semua nama yang dapat diakses secara global dari fungsi itu. \par
-\noindent 
-Jenis kembalian dari kedua fungsi ini adalah kamus. Oleh karena itu, nama dapat diekstrak dengan menggunakan tombol () fungsi. \par
-\vspace{12pt}
-\noindent 
-The $  $reload() $  $Function \par
-\noindent 
-Saat modul diimpor ke dalam skrip, kode di bagian tingkat atas dari modul hanya akan dijalankan satu kali. \par
-\noindent 
-Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, Anda dapat menggunakan fungsi reload (). Fungsi reload () mengimpor modul yang sebelumnya diimpor lagi. Sintaks fungsi reload () adalah ini - \par
-\noindent 
- \hspace*{0.5in} reload(module $  \_  $name) \par
-\noindent 
-Di sini, module $  \_  $name merupakan nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - \par
-\noindent 
- \hspace*{0.5in} reload(hello) \par
-\vspace{12pt}
-\noindent 
-Packages in Python \par
-\noindent 
-Paket merupakan struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul dan subpackages dan sub-subpackages, dan seterusnya. \par
-\noindent 
-Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} def Pots(): \par
-\noindent 
+Packages in Python 
+
+Paket merupakan struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul dan subpackages dan sub-subpackages, dan seterusnya.
+Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut -
+
+ *{0.5in}  $  \#  $!/usr/bin/python {12pt}
+
+ \hspace*{0.5in} def Pots(): 
  \hspace*{0.5in} ~~ print "I'm Pots Phone" \par
 \noindent 
 Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas - \par
