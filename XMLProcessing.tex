@@ -96,25 +96,22 @@ Contoh: \par
 </movie> \par
 \noindent 
 </collection> \par
-\vspace{10pt}
-\noindent 
-\textbf{2.2 Parsing XML dengan API SAX} \par
-\noindent 
- \hspace*{0.5in} SAX adalah antarmuka standar untuk parsing XML berbasis event. Parsing XML dengan SAX umumnya mengharuskan untuk membuat C\textit{ontrolHandler }dengan subclassing xml.sax \textit{controlhandler}. \par
-\noindent 
- \hspace*{0.5in} \textit{ControlHandler }menangani tag dan atribut tertentu dari XML. Objek \textit{ControlHandler }menyediakan metode untuk menangani berbagai aktivitas parsing. Parsing memanggil metode \textit{ControlHandler }saat memparsing file XML. \par
-\noindent 
- \hspace*{0.5in} Metode \textit{startDocument} dan \textit{endDocument} disebut awal dan akhir setiap elemen. Jika parsing tidak dalam mode namespace, metode \textit{startElement} (tag attribute) dan \textit{endElement} (tag) dipanggil. Jika tidak, metode yang sesuai \textit{startElemenNS} dan \textit{endElemenNS} dipanggil. Disini, tah adalah tag elemen dan atriut adalah atribut.  \par
-\noindent 
- \hspace*{0.5in} Berikut ini metode penting untuk memahami sebelum melanjutkan ke materi berikutnya : \par
-\noindent 
-Metode\par
-Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing diuat akan menjadi tipe parsing pertama yang ditemukan sistem.  \par
-\vspace{10pt}
-{\fontsize{10pt}{10pt}\selectfont xml.sax.make $  \_  $parser([parser $  \_  $list])} \par
-\vspace{12pt}
-Berikut adalah detail parameternya : \par
-Parser $  \_  $list : pilihan argumen yang terdiri dari daftar parsing untuk digunakan yang semuanya harus menerapkan metode \textit{make $  \_  $parse} \par
+
+\subsection{Parsing XML dengan API SAX}
+  SAX adalah antarmuka standar untuk parsing XML berbasis event. Parsing XML dengan SAX umumnya mengharuskan untuk membuat dengan subclassing xml.sax.
+  ControlHandler menangani tag dan atribut tertentu dari XML. Objek ControlHandler menyediakan metode untuk menangani berbagai aktivitas parsing. Parsing memanggil metode ControlHandler saat memparsing file XML.
+  Metode startDocument dan endDocument disebut awal dan akhir setiap elemen. Jika parsing tidak dalam mode namespace, metode startElement (tag attribute) dan endElement (tag) dipanggil. Jika tidak, metode yang sesuai startElemenNS dan endElemenNS dipanggil. 
+\begin{itemize}
+Berikut ini metode penting untuk memahami sebelum melanjutkan ke materi berikutnya : 
+\item Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing diuat akan menjadi tipe parsing pertama yang ditemukan sistem.
+\selectfont xml.sax.make $  \_  $parser([parser $  \_  $list])}
+\end{itemize}
+
+\begin{itemize}
+Berikut adalah detail parameternya : 
+Parser $  \_  $list : pilihan argumen yang terdiri dari daftar parsing untuk digunakan yang semuanya harus menerapkan metode \textit{make $  \_  $parse}
+\end{itemize}
+
 \noindent 
 Metode\par
 Metode berikut membuat parsing SAX dan menggunakannya untuk mengurai dokumen \par
