@@ -93,7 +93,7 @@ angka (2,7,9)
 Output : (2,7,9)
 \end{verbatim}
 
-\subsection{Syntax} 
+\section{Syntax} 
 Berikut adalah contoh program kalkulator menggunakan Function pada Python : 
 \begin{verbatim}
 def menu()
@@ -221,24 +221,24 @@ print "\n"*100
 break
 \end{verbatim}
 
-
+\begin{verbatim}
 def functionname( parameters ): 
 "function \$  \_  \$docstring"
 function \$  \_  \$suite 
 return [expression] 
-
+\end{verbatim}
 Secara default, parameter memiliki perilaku posisi dan Anda perlu memberi tahu mereka dengan urutan yang sama seperti yang ditetapkan. 
 Example:
 Fungsi berikut mengambil string sebagai parameter masukan dan mencetaknya di layar standar.
-
+\begin{verbatim}
 def printme( str ): 
 "This prints a passed string into this function" 
 print str 
 return \par
-
-\subsection{Calling a Function} 
+\end{verbatim}
+\section{Calling a Function} 
 Mendefinisikan sebuah fungsi hanya memberinya sebuah nama, menentukan parameter yang akan disertakan dalam fungsi dan menyusun blok kode. Setelah struktur dasar fungsi selesai, Anda dapat menjalankannya dengan memanggilnya dari fungsi lain atau langsung dari prompt Python. Berikut adalah contoh untuk memanggil fungsi printme ().
-
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python 
 
 \$  \#  \$ Function definition is here
@@ -250,14 +250,15 @@ return;
 
 printme("I'm first call to user defined function!")
 printme("Again second call to the same function") 
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
 
 I'm first call to user defined function! 
-
 Again second call to the same function 
-Pass by reference vs value
-Semua parameter (argumen) dalam bahasa Python dilewatkan dengan referensi. Ini berarti jika Anda mengubah parameter yang mengacu pada suatu fungsi, perubahan tersebut juga mencerminkan kembali fungsi pemanggilan. Sebagai contoh:
 
+\section{Pass by reference vs value}
+Semua parameter (argumen) dalam bahasa Python dilewatkan dengan referensi. Ini berarti jika Anda mengubah parameter yang mengacu pada suatu fungsi, perubahan tersebut juga mencerminkan kembali fungsi pemanggilan. Sebagai contoh:
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python 
 
 \$  \#  \$ Function definition is here 
@@ -273,14 +274,14 @@ return
 mylist = [10,20,30]; 
 changeme( mylist );
 print "Values outside the function: ", mylist
-
+\end{verbatim}
 Di sini, kita mempertahankan referensi objek yang dilewati dan menambahkan nilai pada objek yang sama. Jadi, ini akan menghasilkan hasil sebagai berikut:
-
+\begin{verbatim}
 Values~inside the function:  [10, 20, 30, [1, 2, 3, 4]] 
 Values~outside the function:  [10, 20, 30, [1, 2, 3, 4]] 
-
+\end{verbatim}
 Ada satu contoh lagi di mana argumen dilewatkan melalui referensi dan rujukannya ditimpa di dalam fungsi yang disebut. 
-
+\begin{verbatim}
 \$  \# \$!/usr/bin/python 
 \$  \#  \$ Function definition is here 
 def changeme( mylist ): 
@@ -297,26 +298,27 @@ mylist = [10,20,30];
 changeme( mylist ); 
 
 print "Values outside the function: ", mylist 
-
+\end{verbatim}
 Parameter mylist adalah local ke fungsi changeme. Mengubah mylist dalam fungsi tidak mempengaruhi mylist. Fungsi ini tidak menghasilkan apa-apa dan akhirnya ini akan menghasilkan hasil sebagai berikut: 
-
+\begin{verbatim}
 Values~inside the function:  [1, 2, 3, 4] 
 
 Values~outside the function:  [10, 20, 30] 
 
 Function Arguments
-
+\end{verbatim}
 Anda dapat memanggil fungsi dengan menggunakan jenis argumen formal berikut: 
+\begin{verbatim}
 \$ \bullet \$ Argumen yang dibutuhkan
 \$ \bullet \$ Argumen kata kunci 
 
 \$ \bullet \$ Argumen baku
 
 \$ \bullet \$ Argumen panjang variable
-
-Required arguments 
-
+\end{verbatim}
+\section{Required arguments} 
 Argumen yang diperlukan adalah argumen yang diberikan ke sebuah fungsi dalam urutan posisi yang benar. Di sini, jumlah argumen dalam pemanggilan fungsi harus sesuai persis dengan definisi fungsi. Untuk memanggil fungsi printme (), Anda pasti perlu melewati satu argumen, jika tidak maka akan memberikan kesalahan sintaks sebagai berikut :
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python 
 \$  \#  \$ Function definition is here 
 def printme( str ): 
@@ -330,19 +332,19 @@ def printme( str ):
 \$  \#  \$ Now you can call printme function 
 
 printme() 
-
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: 
-
+\begin{verbatim}
 Traceback (most recent call last): 
 
  ~ File "test.py", line 11, in <module> 
 ~~~ printme();
 
  TypeError: printme() takes exactly 1 argument (0 given) 
-
-Keyword arguments 
+\end{verbatim}
+\section{Keyword arguments} 
 Argumen kata kunci terkait dengan pemanggilan fungsi. Bila Anda menggunakan argumen kata kunci dalam pemanggilan fungsi, penelepon mengidentifikasi argumen berdasarkan nama parameter. Hal ini memungkinkan Anda melewatkan argumen atau menempatkannya agar tidak bermasalah karena penerjemah Python dapat menggunakan kata kunci yang diberikan agar sesuai dengan nilai parameter. Anda juga dapat membuat panggilan kata kunci ke fungsi printme () dengan cara berikut - 
-
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python
 
 \$  \#  \$ Function definition is here
@@ -358,13 +360,13 @@ Argumen kata kunci terkait dengan pemanggilan fungsi. Bila Anda menggunakan argu
  \$  \#  \$ Now you can call printme function 
 
 printme( str = "My string") 
-
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut:
 
 My string 
 
 Contoh berikut memberikan gambaran yang lebih jelas. Perhatikan bahwa urutan parameter tidak masalah. 
-
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python 
 
 \$  \#  \$ Function definition is here 
@@ -382,16 +384,16 @@ def printinfo( name, age ):
 
 \$  \#  \$ Now you can call printinfo function 
 printinfo( age=50, name="miki" )
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut:
-Name:~ miki
+Name:\~ miki
 
-Age~ 50 
+Age\~ 50 
 
 
-Default arguments 
-
+\section{Default arguments} 
 Argumen default adalah argumen yang mengasumsikan nilai default jika nilai tidak diberikan dalam pemanggilan fungsi untuk argumen itu. Contoh berikut memberi ide pada argumen default, ini mencetak usia default jika tidak lulus.
-
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python
 
 \$  \#  \$ Function definition is here 
@@ -407,23 +409,22 @@ def printinfo( name, age = 35 ):
 printinfo( age=50, name="miki" ) 
 
 printinfo( name="miki" ) 
-
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut
 
-Name:~ miki 
+Name:\~ miki 
 
-Age~ 50 
+Age\~ 50 
 
-Name:~ miki
+Name:\~ miki
 
-Age~ 35 
+Age\~ 35 
 
-Variable-length arguments 
-
+\section{Variable-length arguments} 
 Anda mungkin perlu memproses sebuah fungsi untuk argumen lebih banyak daripada yang Anda tentukan saat menentukan fungsinya. Argumen ini disebut variable-lengtharguments dan tidak disebutkan dalam definisi fungsi, tidak seperti argumen yang dibutuhkan dan standar. 
 
-Sintaks untuk fungsi dengan argumen variabel non-kata kunci adalah ini -
-
+Sintaks untuk fungsi dengan argumen variabel non-kata kunci adalah ini :
+\begin{verbatim}
 def functionname([formal \$  \_  \$args,] *var \$  \_  \$args \$  \_  \$tuple ): 
 
 ~~ "function \$  \_  \$docstring" 
@@ -431,8 +432,9 @@ def functionname([formal \$  \_  \$args,] *var \$  \_  \$args \$  \_  \$tuple ):
 ~~ function \$  \_  \$suite 
 
 ~~ return [expression]
-Tanda asterisk (*) ditempatkan sebelum nama variabel yang menyimpan nilai dari semua argumen variabel nonkeyword. Tuple ini tetap kosong jika tidak ada argumen tambahan yang ditentukan selama pemanggilan fungsi. Berikut adalah contoh sederhana - 
-
+\end{verbatim}
+Tanda asterisk (*) ditempatkan sebelum nama variabel yang menyimpan nilai dari semua argumen variabel nonkeyword. Tuple ini tetap kosong jika tidak ada argumen tambahan yang ditentukan selama pemanggilan fungsi. Berikut adalah contoh sederhana : 
+\begin{verbatim}
 \$  \#  \$!/usr/bin/python 
 
 \$  \#  \$ Function definition is here 
@@ -450,6 +452,7 @@ def printinfo( arg1, *vartuple ):
 \$  \#  \$ Now you can call printinfo function
 printinfo( 10 ) 
 printinfo( 70, 60, 50 ) 
+\end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
 Output is: 
 0
@@ -457,16 +460,18 @@ Output is:
 70 
 60 
 50 
-The \$  \$Anonymous \$  \$Functions 
+\section{The Anonymous Functions} 
 Fungsi ini disebut anonim karena tidak dinyatakan secara standar dengan menggunakan kata kunci def. Anda bisa menggunakan kata kunci lambda untuk membuat fungsi anonim yang kecil. 
-\$ \bullet \$ Bentuk lambda bisa mengambil sejumlah argumen tapi hanya mengembalikan satu nilai   ~~ dalam bentuk ekspresi. Mereka tidak dapat berisi perintah atau beberapa ekspresi. 
-   \$ \bullet \$ Fungsi anonim tidak bisa menjadi panggilan langsung untuk dicetak karena lambda   ~~ membutuhkan ekspresi 
-   \$ \bullet \$ Fungsi Lambda memiliki namespace lokal mereka sendiri dan tidak dapat mengakses   ~ variabel selain yang ada dalam daftar parameter dan yang ada di namespace global. 
-   \$ \bullet \$ Meskipun tampak bahwa lambda adalah versi satu baris dari sebuah fungsi, mereka tidak   ~ setara dengan pernyataan inline di C atau C ++, yang tujuannya adalah dengan   ~~~~~~~ melewatkan alokasi stack fungsi selama pemanggilan untuk alasan kinerja. 
-Syntax 
-Sintaks fungsi lambda hanya berisi satu pernyataan, yaitu sebagai berikut - 
+\$ \bullet \$ Bentuk lambda bisa mengambil sejumlah argumen tapi hanya mengembalikan satu nilai dalam bentuk ekspresi. Mereka tidak dapat berisi perintah atau beberapa ekspresi. 
+   \$ \bullet \$ Fungsi anonim tidak bisa menjadi panggilan langsung untuk dicetak karena lambda membutuhkan ekspresi 
+   \$ \bullet \$ Fungsi Lambda memiliki namespace lokal mereka sendiri dan tidak dapat mengakses variabel selain yang ada dalam daftar parameter dan yang ada di namespace global. 
+   \$ \bullet \$ Meskipun tampak bahwa lambda adalah versi satu baris dari sebuah fungsi, mereka tidak setara dengan pernyataan inline di C atau C ++, yang tujuannya adalah dengan melewatkan alokasi stack fungsi selama pemanggilan untuk alasan kinerja. 
+
+\section{Syntax} 
+Sintaks fungsi lambda hanya berisi satu pernyataan, yaitu sebagai berikut : 
   lambda [arg1 [,arg2,.....argn]]:expression 
-Berikut adalah contoh untuk menunjukkan bagaimana lambda bentuk fungsi bekerja -
+Berikut adalah contoh untuk menunjukkan bagaimana lambda bentuk fungsi bekerja :
+\begin{verbatim}
    \$  \#  \$!/usr/bin/python 
    \$  \#  \$ Function definition is here 
   sum = lambda arg1, arg2: arg1 + arg2;
@@ -475,12 +480,14 @@ Berikut adalah contoh untuk menunjukkan bagaimana lambda bentuk fungsi bekerja -
    \$  \#  \$ Now you can call sum as a function 
  print "Value of total : ", sum( 10, 20 ) 
   print "Value of total : ", sum( 20, 20 ) 
+  \end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
  Value~of total :  30 
  Value~of total :  40 
-The \$  \$return \$  \$Statement 
+\section{The return Statement} 
 Pernyataan kembali [ekspresi] keluar dari sebuah fungsi, secara opsional menyampaikan kembali ekspresi ke pemanggil. Pernyataan pengembalian tanpa argumen sama dengan return None. 
-Semua contoh di atas tidak mengembalikan nilai apapun. Anda bisa mengembalikan nilai dari sebuah fungsi sebagai berikut - 
+Semua contoh di atas tidak mengembalikan nilai apapun. Anda bisa mengembalikan nilai dari sebuah fungsi sebagai berikut :
+\begin{verbatim}
   \$  \#  \$!/usr/bin/python 
   \$  \#  \$ Function definition is here 
  def sum( arg1, arg2 ): 
@@ -492,10 +499,11 @@ Semua contoh di atas tidak mengembalikan nilai apapun. Anda bisa mengembalikan n
    \$  \#  \$ Now you can call sum function 
   total = sum( 10, 20 ); 
  print "Outside the function : ", total  
+ \end{verbatim}
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
-  Inside~the function :  30 
- Outside~the function :  30 
-Scope of Variables 
+  Inside\~the function :  30 
+ Outside\~the function :  30 
+\section{Scope of Variables} 
 Semua variabel dalam sebuah program mungkin tidak dapat diakses di semua lokasi dalam program tersebut. Ini tergantung di mana Anda telah menyatakan sebuah variabel. 
 Contoh penggunaan scope variabel : 
 \begin{verbatim}
@@ -510,15 +518,16 @@ Contoh penggunaan scope variabel :
  Output :
  Nilai a di luar fungsi, a = 30
  Nilai A di dalam fungsi, a = 10
- Pada contoh diatas, variabel A didefinisikan di dua tempat yaitu di dalam fungsi bljrScope() dan di dalam program utama.Ketika nilai A awal di beri nilai 30, kemudian di cetak, nilai A masih bernilai 30. Namun ketika kita memanggil fungsi bljrScope() dengan mengirim parameter A yang bernilai 30, terlihat bahwa nilai A yang berlaku adalah nilai A yang didefinisikan didalam fungsi tersebut. Atau nilai A yang bernilai 10. ini terbukti bahwa variabel A yang di cetak dalam fungsi bljrScope() merupakan variabel local yang didefinisikan didalam fungsi, bukan variabel A global yang dicetak di luar fungsi.  
+Pada contoh diatas, variabel A didefinisikan di dua tempat yaitu di dalam fungsi bljrScope() dan di dalam program utama.Ketika nilai A awal di beri nilai 30, kemudian di cetak, nilai A masih bernilai 30. Namun ketika kita memanggil fungsi bljrScope() dengan mengirim parameter A yang bernilai 30, terlihat bahwa nilai A yang berlaku adalah nilai A yang didefinisikan didalam fungsi tersebut. Atau nilai A yang bernilai 10. ini terbukti bahwa variabel A yang di cetak dalam fungsi bljrScope() merupakan variabel local yang didefinisikan didalam fungsi, bukan variabel A global yang dicetak di luar fungsi.  
 Ruang lingkup variabel menentukan bagian dari program di mana Anda dapat mengakses pengenal tertentu. Ada dua lingkup dasar variabel dengan Python - 
    \$ \bullet \$ Variabel global 
    \$ \bullet \$ Variabel local 
 
-Global vs. Local variables 
+\section{Global vs. Local variables} 
 Variabel yang didefinisikan di dalam badan fungsi memiliki lingkup lokal, dan yang didefinisikan di luar memiliki cakupan global. 
-Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mereka dideklarasikan, sedangkan variabel global dapat diakses di seluruh tubuh program oleh semua fungsi. Saat Anda memanggil fungsi, variabel yang dideklarasikan di dalamnya dibawa ke lingkup. Berikut adalah contoh sederhana - 
-  \$  \#  \$!/usr/bin/python 
+Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mereka dideklarasikan, sedangkan variabel global dapat diakses di seluruh tubuh program oleh semua fungsi. Saat Anda memanggil fungsi, variabel yang dideklarasikan di dalamnya dibawa ke lingkup. Berikut adalah contoh sederhana :
+\begin{verbatim}
+  \$  \#  \$!/usr/bin/python 
 
   total = 0;  \$  \#  \$ This is global variable. 
   \$  \#  \$ Function definition is here 
@@ -531,7 +540,8 @@ Ini berarti bahwa variabel lokal dapat diakses hanya di dalam fungsi di mana mer
    \$  \#  \$ Now you can call sum function 
   sum( 10, 20 ); 
  \ print "Outside the function global total : ", total  
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+ \end{verbatim}
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : 
   Inside~the function local total :  30 
  Outside~the function global total :  0 
 
