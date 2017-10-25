@@ -1,5 +1,6 @@
 % Tugas 3 Kelompok 4
 % Akbar Pambudi Utomo (1154094)
+% Julham Ramadhana(1154069)
 
 \section{Basic Syntax}
 \subsection{Pengenal Python}
@@ -113,50 +114,28 @@ Code nya antara lain:
 	Detik = 0 
 Lalu gunakan import time 
 
-Untuk system loop jadi setelah detik mencapai 9 maka menit akan bertambah 1 seperti itu. \\} \par
-\vspace{14pt}
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont While true : \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Time.sleep(1) \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Detik += 1 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont If detik == 9: \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Detik = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Depandetik += 1 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont If depandetik == 6: \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Menit +=1 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Depandetik = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Detik = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont If menit == 9: \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Menit = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Depanmenit += 1 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont If depanmenit == 6: \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Jam +=1 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Depanmenit = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Menit = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont If ja, == 9 : \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Depanjam += 1 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Jam = 0 \\} \par
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Print ( $ " $ $  \{  $0 $  \}  $ $  \{  $1 $  \}  $ $  \{  $2 $  \}  $ $  \{  $3 $  \}  $ $  \{  $4 $  \}  $ $  \{  $5 $  \vert  $ $  \}  $ $ " $. Format(depanjam,jam,depanmenit,menit,depandetik,detik), end= $ " $ $  \setminus  $r $ " $) \\} \par
-\vspace{14pt}
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont Run maka akan jadi program simpe tentang stopwatch sederhana ini. \\} \par
+Untuk system loop jadi setelah detik mencapai 9 maka menit akan bertambah 1 seperti itu.
+\begin{verbatim}
+	While true : 
+	Time.sleep(1)
+	Detik += 1 
+	If detik == 9: 
+	Detik = 0 
+	Depandetik += 1 
+	If depandetik == 6:
+	Menit +=1 
+	Depandetik = 0 
+	Detik = 0 
+	If menit == 9: 
+	Menit = 0 
+	Depanmenit += 1
+	If depanmenit == 6:
+	Jam +=1 
+	Depanmenit = 0 
+	Menit = 0 
+	If ja, == 9 : 
+	Depanjam += 1 
+	Jam = 0 
+Print ( $ " $ $  \{  $0 $  \}  $ $  \{  $1 $  \}  $ $  \{  $2 $  \}  $ $  \{  $3 $  \}  $ $  \{  $4 $  \}  $ $  \{  $5 $  \vert  $ $  \}  $ $ " $. Format(depanjam,jam,depanmenit,menit,depandetik,detik), end= $ " $ $  \setminus  $r $ " $) 
+\end{verbatim}
+Run maka akan jadi program simpe tentang stopwatch sederhana ini.
