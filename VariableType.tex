@@ -162,7 +162,7 @@ Python menampilkan bilangan bulat panjang dengan huruf besar L.
 Sebuah bilangan kompleks terdiri dari sepasang bilangan floating-point yang diinisialisasi langsung yang dinotasikan dengan x + yj, di mana x dan y adalah bilangan real dan j adalah unit imajiner. 
 
 \subsubsection{String Python}
-	String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik.Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda.Subset string dapat diambil dengan menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir. 
+String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik.Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda.Subset string dapat diambil dengan menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir. 
 Tanda plus (+) adalah operator concatenation string dan tanda bintang (*) adalah operator pengulangan.
 Misalnya:
 \begin{verbatim}
@@ -229,10 +229,10 @@ Ini menghasilkan hasil sebagai berikut:
 \end{verbatim}
 Kode berikut tidak valid dengan tupel, karena kami mencoba memperbarui tupel, yang tidak diizinkan.Kasus serupa dimungkinkan dengan daftar:
 \begin{verbatim}
-tuple = ( 'abcd',~786 , 2.23, 'john', 70.2  ) 
-list = [ 'abcd', 786 ,~2.23, 'john', 70.2  ] 
-tuple[2]~=~1000~    Invalid syntax with tuple 
-list[2]~=~1000~~    Valid syntax with list 
+	tuple = ( 'abcd',~786 , 2.23, 'john', 70.2  ) 
+	list = [ 'abcd', 786 ,~2.23, 'john', 70.2  ] 
+	tuple[2]~=~1000~    Invalid syntax with tuple 
+	list[2]~=~1000~~    Valid syntax with list 
 \end{verbatim}
 
 \subsubsection{Kamus Python}
@@ -251,73 +251,17 @@ print tinydict.keys()~~  Prints all the keys
 print~tinydict.values()   Prints all the values 
 \end{verbatim}
 Ini menghasilkan hasil sebagai berikut:
-This is one 
-This is two 
-{  'dept': 'sales', 'code': 6734, 'name': 'john' } 
-['dept', 'code', 'name'] 
-['sales', 6734, 'john'] 
+	\begin{verbatim}
+		This is one 
+		This is two 
+		{  'dept': 'sales', 'code': 6734, 'name': 'john' } 
+		['dept', 'code', 'name'] 
+		['sales', 6734, 'john'] 
+	\end{verbatim}
 Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan bahwa unsur-unsurnya\"rusak\";.Mereka hanya unordered. 
-
-Konversi Tipe Data
-	Terkadang, Anda mungkin perlu melakukan konversi antara jenis built-in. Untuk mengonversi antar jenis, Anda cukup menggunakan nama jenis sebagai fungsi. 
-Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. $  $Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi. \par
-\vspace{12pt}
-\noindent 
-Pembagian nilai $  $a $  $dan $  $b $  $menghasilkan $  $3 $  $(integer). Mengapa demikian? \par
-\vspace{12pt}
-\noindent 
-Karena nilai $  $a $  $dan $  $b $  $bertipe integer, maka hasilnya pun berupa integer. \par
-\vspace{12pt}
-\noindent 
-Bagaimana agar hasilnya ada komanya? \par
-\vspace{12pt}
-\noindent 
-Tentu kita harus merubah tipe variabel $  $a $  $dan $  $b $  $menjadi bilangan pecahan (float) dulu, baru setelah itu dibagi. \par
-\vspace{12pt}
-\noindent 
-a = 10 \par
-\noindent 
-b = 3 \par
-\noindent 
-c = float(a) / float(b)~ output: 3.3333333333333335 \par
-\vspace{12pt}
-\noindent 
-print c \par
-\vspace{12pt}
-\noindent 
-Fungsi $  $float() $  $akan mengubah nilai $  $a $  $menjadi $  $10.0 $  $dan $  $b $  $menjadi $  $3.0. \par
-\vspace{12pt}
-\noindent 
-Fungsi-fungsi untuk mengubah tipe data: \par
-\vspace{12pt}
-\noindent 
-int() $  $untuk mengubah menjadi integer; \par
-\vspace{12pt}
-\noindent 
-long() $  $untuk mengubah menjadi integer panjang; \par
-\vspace{12pt}
-\noindent 
-float() $  $untuk mengubah menjadi float; \par
-\vspace{12pt}
-\noindent 
-bool() $  $untuk mengubah menjadi boolean; \par
-\vspace{12pt}
-\noindent 
-chr() $  $untuk mengubah menjadi karakter; \par
-\vspace{12pt}
-\noindent 
-str() $  $untuk mengubah menjadi string. \par
-\vspace{12pt}
-\noindent 
-bin() $  $untuk mengubah menjadi bilangan Biner. \par
-\vspace{12pt}
-\noindent 
-hex() $  $untuk mengubah menjadi bilangan Heksadesimal. \par
-\vspace{12pt}
-\noindent 
-oct() $  $untuk mengubah menjadi bilangan okta. \par
-\vspace{12pt}
-\vspace{12pt}
+\subsection{Konversi Tipe Data}
+Terkadang, Anda mungkin perlu melakukan konversi antara jenis built-in. Untuk mengonversi antar jenis, Anda cukup menggunakan nama jenis sebagai fungsi. 
+Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. $  $Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi. 
 
 /subsection(Daftar Python)
 Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item
