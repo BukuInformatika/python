@@ -1,13 +1,13 @@
 \section{Common Gateway Interface}
-\subsubsection{Sejarah Common Gateway Interface}
+\subsection{Sejarah Common Gateway Interface}
 Pada tahun 1993, tim National Center for Supercomputing Applications (NCSA) menulis spesifikasi untuk memanggil executable command line di milis www-talk. [2] [3] [4] Pengembang server Web lainnya menggunakannya, dan telah menjadi standar untuk server Web sejak saat itu. Sebuah kelompok kerja yang dipimpin oleh Ken Coar dimulai pada bulan November 1997 untuk mendapatkan definisi NCSA tentang CGI yang lebih formal. [5] Karya ini menghasilkan RFC 3875, yang menentukan Versi CGI 1.1. Secara khusus disebutkan di RFC adalah kontributor berikut: [6]
-\begin{enumerate}
+\begin{itemize}
 \item Rob McCool (penulis Server Web HTTP NCSA)
 \item John Franks (penulis GN Web Server)
 \item Ari Luotonen (pengembang CERN httpd Web Server)
 \item Tony Sanders (penulis Web Server Plexus)
 \item George Phillips (pengelola server Web di University of British Columbia)
-\end{enumerate}
+\end{itemize}
 Secara historis skrip CGI sering ditulis menggunakan bahasa C. RFC 3875 "Common Gateway Interface (CGI)" secara parsial mendefinisikan CGI menggunakan C, [7] seperti dalam mengatakan bahwa variabel lingkungan "diakses oleh perpustakaan perpustakaan umum getenv () atau variabel lingkungan". \cite{mccool1993common}
 \subsection{Common Gateway Interface}
 Common Gateway Interface atau disingkat CGI merupakan standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip dengan program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML. CGI (Common Gateway Interface) adalah bentuk dari hubungan interaktif di mana client (browser) bisa mengirimkan suatu masukan kepada server, dan server mengolah masukan tersebut serta mengembalikannya kepada client (browser). Contoh sederhana adalah saat kita menggunakan sebuah mesin pencari. Saat kita menuliskan keyword dan menekan tombol Search maka browser akan mengirimkan keyword tersebut ke server. Keyword tersebut lalu diolah oleh server dan server mengirimkan data hasil pengolahan (yang sesuai dengan keyword yang kita masukkan) ke browser kita. Jadi yang akan kita lihat pada browser adalah  hanya data yang sesuai dengan keyword yang kita masukkan. 
@@ -19,15 +19,17 @@ Untuk dapat menggunakan CGI syarat yang utama adalah server dengan sistem operas
 	CGI pada masa-masa awalnya dibuat dengan bahasa C, bahasa yang juga digunakan untuk membuat web server pertama yaitu, CERN. CGI kemudian diadopsi oleh NCSA (National Central for Supercomputing Application) web server, dan hingga kini masih digunakan pada Apache Web Server, web server yang paling banyak digunakan oleh komunitas internet saat ini.
 	Walaupun demikian CGI bisa juga direalisasikan dengan banyak bahasa pemrograman lain. Mulai dari C, Perl, Phyton, PHP, Tcl/Tk, hingga skrip shell pada UNIX/LINUX. 
 	CGI seringkali digunakan sebagai mekanisme untuk mendapatkan informasi dari user melalui fill out form, mengakses basis data (database), atau menghasilkan halaman yang dinamis. meskipun secara prinsip mekanisme CGI tidak memiliki lubang keamana, program atau skrip yang dibuat sebagai CGI dapat memiliki lubang keamanan ataupun tidak sengaja). Potensi lubang keamanan yang digunakan dapat terjadi dengan CGI antara lain : 
-1.	Seorang pemakai yang nakal dapat memasang skrip CGI sehingga dapat mengirimkan berkas kata kunci (password) kepada pengunjung yang mengeksekusi CGI tersebut. 
-2.	Program CGI dipanggil berkali-kali sehingga server menjadi terbebani karena harus menjalankan beberapa program CGI yang menghabiskan memori dan CPU cycle dari web server.
-	
-\subsubsection{Tujuan CGI}
+\begin{enumerate}
+\item Seorang pemakai yang nakal dapat memasang skrip CGI sehingga dapat mengirimkan berkas kata kunci (password) kepada pengunjung yang mengeksekusi CGI tersebut. 
+\tem Program CGI dipanggil berkali-kali sehingga server menjadi terbebani karena harus menjalankan beberapa program CGI yang menghabiskan memori dan CPU cycle dari web server.
+	\end{enumerate}
+\subsection{Tujuan CGI}
 Tujuan dari CGI :
-1.	untuk menyediakan akses ke objek dengan overhead komputasi yang lebih sedikit daripada tipikal dari model program CGI.
-2.	untuk mengurangi biaya overhead sambil memberikan keamanan yang mencakup otentikasi, privasi, dan otorisasi.
+\begin{enumerate}
+\item untuk menyediakan akses ke objek dengan overhead komputasi yang lebih sedikit daripada tipikal dari model program CGI.
+\item untuk mengurangi biaya overhead sambil memberikan keamanan yang mencakup otentikasi, privasi, dan otorisasi.
 
-\subsubsection{ Tentang CGI}
+\subsection{ Tentang CGI}
 Sebuah aplikasi web berkomunikasi dengan perangkat lunak client melalui HTTP. HTTP, sebagai protokol yang berbicara menggunakan request dan response menjadikan aplikasi web bergantung kepada siklus ini untuk menghasilkan dokumen yang ingin diakses oleh pengguna. Secara umum, aplikasi web yang akan kita kembangkan harus memiliki satu cara untuk membaca HTTP Request dan mengembalikan HTTP Response ke pengguna. 
 	Pada pengembangan web tradisional, kita umumnya menggunakan sebuah web server seperti Apache HTTPD atau nginx sebagai penyalur konten statis seperti HTML, CSS, Javascript, maupun gambar. Untuk menambahkan aplikasi web kita kemudian menggunakan penghubung antar web server dengan program yang dikenal dengan nama CGI (Common Gateway Interface). 
 	CGI diimplementasikan pada web server sebagai antarmuka penghubung antara web server dengan program yang akan menghasilkan konten secara dinamis. Program-program CGI biasanya dikembangkan dalam bentuk script, meskipun dapat saja dikembangkan dalam bahasa apapun. Contoh dari bahasa pemrograman dan program yang hidup di dalam CGI adalah PHP.
@@ -56,52 +58,28 @@ Salah satu kelemahannya ialah kecepatan yang rendah. Untuk menghasilkan keluaran
 Keseluruhan siklus ini terjadi untuk setiap request. Dengan kata lain, terlalu banyak waktu yang dibuang untuk menciptakan proses dan tidak ada cache skrip yang telah dikompilasi
 Namun demikian, mungkin ini tidak lagi menjadi kendala di saat teknologi hardware untuk server sudah sedemikian maju; kecepata prosesor saat ini sudah cukup tinggi. Jika situs web menerima kurang dari sepuluh hingga dua puluh ribu hit CGI per hari, rata-rata mesin web server UNIX yang ada sekarang ini mampu menanganinya dengan baik. 
 
-Dalam kasus CGI Perl, prosesnya sbb: \par
-\noindent 
+Dalam kasus CGI Perl, prosesnya sbb: 
 \begin{itemize}
-	\item Web server terlebih dahulu akan menciptakan sebuah proses baru dan menjalankan interpreter Perl.  \par
-	\noindent 
+	\item Web server terlebih dahulu akan menciptakan sebuah proses baru dan menjalankan interpreter Perl.  
 	\item Perl kemudian mengkompilasi script CGI tersebut, baru kemudian menjalankan skrip.\end{itemize}
-\par
-\noindent 
-Keseluruhan siklus ini terjadi untuk setiap request. Dengan kata lain, terlalu banyak waktu dibuang untuk menciptakan proses dan tidak ada cache skrip yang telah dikompilasi. \par
-\noindent 
-Jika sebuah situs web menerima kurang dari sepuluh hingga dua puluh ribu hit CGI per hari, rata-rata mesin web server Unix yang ada sekarang ini mampu menanganinya dengan baik. \par
-\noindent 
-Angka ini relatif, bergantung pada: \par
-\noindent 
+Keseluruhan siklus ini terjadi untuk setiap request. Dengan kata lain, terlalu banyak waktu dibuang untuk menciptakan proses dan tidak ada cache skrip yang telah dikompilasi. 
+Jika sebuah situs web menerima kurang dari sepuluh hingga dua puluh ribu hit CGI per hari, rata-rata mesin web server Unix yang ada sekarang ini mampu menanganinya dengan baik. 
+Angka ini relatif, bergantung pada:
 \begin{itemize}
-	\item Tingkat pembebanan mesin web server untuk melakukan pekerjaan lain (misalnya, mengirim mail dan menjalankan server database) \par
-	\noindent 
+	\item Tingkat pembebanan mesin web server untuk melakukan pekerjaan lain (misalnya, mengirim mail dan menjalankan server database)
 	\item Aplikasi CGI itu sendiri (sebab beberapa aplikasi CGI berupa skrip tunggal berukuran besar hingga waktu loading-nya cukup lama; umumnya aplikasi CGI yang rumit memecah diri menjadi skrip-skrip terpisah untuk mengurangi waktu loading). \par
-	\noindent 
 	\item Cepat atau lambatnya penampilan halaman web yang diterima klien akan lebih bergantung pada koneksi jaringan.\end{itemize}
-\par
-\vspace{12pt}
-\noindent 
-\textbf{Penerapan CGI} \par
-Penerapan CGI yang paling umum adalah dalam pemrosesan . Umumnya, form dipergunakan untuk dua kegunaan~~~utama~.~ Yang  sederhana  adalah~~form~~yang  dipakai  untuk mengumpulkan informasi dari pengguna dan mengirimkanya~ke server. Namun  form~juga bisa dipakai untuk keperluan  yang~~lebih~ "canggih"  seperti timbal balik antara pengguna dan~server,~misalnya  form  yang memberikan sedaftar pilihan dokumen dalam~server kepada pengguna  untuk dipilih. Program CGI di server dibuat untuk~mengolah informasi ini  dan kemudian~~mengirimkan  dokumen - dokumen~~yang~~sesuai  dengan  pilihan pengguna. \par
-\vspace{12pt}
-Contoh nyata penerapan CGI untuk dokumen~~dinamis~~ini  misalnya  suatu "buku tamu". Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapat~menyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewat~e-mail~ke  suatu  alamat. Program~CGI~juga~bisa menampilkan dokumen yang  berisi  informasi  yang \par
-\noindent 
-baru~saja~dikirimkan~ oleh  pengguna  tadi~~sembari~~memberikan  ucapan  terima kasih atas partisipasinya. \par
-\vspace{12pt}
-Penerapan lain dari CGI adalah sebuah gateway.~Artinya~ adalah  program yang~dipergunakan sebagai penghubung  untuk~~mengakses~ informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna.Contoh yang nyata adalah gateway yang menghubungkan~antara~web  server  dengan dengan suatu database server yang besar semacam~oracle~~atau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisa~~memberikan~~query  dalam  SQL (structured query language, yaitu bahasa~yang~dipakai  untuk  melakukan pendefinisian maupun manipulasi terhadap~database)~ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya ke~dalam~bentuk~yang~bisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser. \par
-\vspace{12pt}
+\subsection{Penerapan CGI}
+Penerapan CGI yang paling umum adalah dalam pemrosesan . Umumnya, form dipergunakan untuk dua kegunaan~~~utama~.~ Yang  sederhana  adalah~~form~~yang  dipakai  untuk mengumpulkan informasi dari pengguna dan mengirimkanya~ke server. Namun  form~juga bisa dipakai untuk keperluan  yang~~lebih~ "canggih"  seperti timbal balik antara pengguna dan~server,~misalnya  form  yang memberikan sedaftar pilihan dokumen dalam~server kepada pengguna  untuk dipilih. Program CGI di server dibuat untuk~mengolah informasi ini  dan kemudian~~mengirimkan  dokumen - dokumen~~yang~~sesuai  dengan  pilihan pengguna.
+Contoh nyata penerapan CGI untuk dokumen~~dinamis~~ini  misalnya  suatu "buku tamu". Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapat~menyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewat~e-mail~ke  suatu  alamat. Program~CGI~juga~bisa menampilkan dokumen yang  berisi  informasi  yang
+baru~saja~dikirimkan~ oleh  pengguna  tadi~~sembari~~memberikan  ucapan  terima kasih atas partisipasinya.
+Penerapan lain dari CGI adalah sebuah gateway.~Artinya~ adalah  program yang~dipergunakan sebagai penghubung  untuk~~mengakses~ informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna.Contoh yang nyata adalah gateway yang menghubungkan~antara~web  server  dengan dengan suatu database server yang besar semacam~oracle~~atau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisa~~memberikan~~query  dalam  SQL (structured query language, yaitu bahasa~yang~dipakai  untuk  melakukan pendefinisian maupun manipulasi terhadap~database)~ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya ke~dalam~bentuk~yang~bisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser.
 Program CGI pada prinsipnya bisa ditulis~dalam~bahasa  pemrograman  apa saja,~namun~kenyataanya tidak  semua  bahasa~~pemrograman~ cocok  untuk pemrograman CGI. Penerapan CGI dapat sangat~kompleks, dan untuk membuat  suatu program CGI menuntut pengetahuan teknis~yang~~cukup  tinggi  akan pemrograman. \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-\textbf{Keamanan pada CGI} \par
+\subsection{Keamanan pada CGI}
 CGI dapat menimbulkan lubang keamanan, karena program CGI dapat dijalankan di server lokal dari luar sistem (remote) oleh siapa saja. Apabila program CGI tidak didisain dan dikonfigurasi dengan baik, maka akan terjadi lubang keamanan. Kesalahan yang dapat terjadi antara lain: \par
-\noindent 
 \begin{itemize}
-	\item program CGI mengakses berkas (file) yang seharusnya tidak boleh di akses. Misalnya pernah terjadi kesalahan dalam program phf sehingga digunakan oleh orang untuk mengakses berkas password dari server WW. \par
-	\noindent 
+	\item program CGI mengakses berkas (file) yang seharusnya tidak boleh di akses. Misalnya pernah terjadi kesalahan dalam program phf sehingga digunakan oleh orang untuk mengakses berkas password dari server WW.
 	\item runaway CGI-script, yaitu program berjalan di luar kontrol sehingga mengabiskan CPU cycle dari server WWW\end{itemize}
-\par
-\vspace{12pt}
-\noindent 
 \textbf{Lubang Keamanan CGI} \par
 \noindent 
 Beberapa contoh lubang keamanan pada CGI \par
