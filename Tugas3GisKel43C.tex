@@ -287,20 +287,20 @@ internal yang meliputi dua bagian :
      permutasi awal. Array yang mempunyai 256 elemen ini (dengan indeks 0
     sampai dengan 255) dinamakan S. Berikut adalah algoritma KSA dalam 
     bentuk pseudo-code dimana key adalah kunci enkripsi dan keylength adalah besar kunci enkripsi dalam bytes (untuk kunci 128 bit,         keylength = 16).
-    \begin {equation}
+    \begin {verbatim}
     for i = 0 to 255
     S [i] := i
     j := 0
     for i = 0 to 255
     j := (j + S[i] + key [I mod keylenght] ) mod 256
     swap (S[i], S[j])
-    \end {equation}
+    \end {verbatim}
     
     \item Tahap pseudo-random generation dimana state automaton beroperasi dan
     outputnya menghasilkan keystream. Setiap putaran, bagian keystream sebesar
     1 byte (dengan nilai antara 0 sampai dengan 255) dioutput oleh PRGA
     berdasarkan state S. Berikut adalah algoritma PRGA dalam bentuk pseudocode:
-    \begin {equation}
+    \begin {verbatim}
     i := 0
     j := 0
     loop
@@ -309,7 +309,7 @@ internal yang meliputi dua bagian :
     swap ( S[i], S[j] )
     output S[ (S[i] + S[j]) mod 256]
     \end
-    \end {equation}
+    \end {verbatim}
   \end {enumerate}
 
 \subsection {bentuk-bentuk basic syntax}
@@ -331,7 +331,7 @@ End Sub
 
 Kode program di atas adalah kode program yang digunakan untuk menampilkan pesan sebanyak 5 kali ketika program di load. Bayangkan jika pesan yang ingin ditampilkan bukan 5 kali tetapi 1000 kali, pastinya kita akan kesusahan jika harus menulis kode program \“ MsgBox \“ini adalah pesan ke #/” /“ Sebanyak 1000 kali. Untuk mempersingkat kode program maka sebenarnya kita tidak perlu menulis program sebanyak 1000 baris, kita cukup menulis 3 baris program yang hasilnya akan menampilkan pesan sebanyak 1000 kali yaitu sebagai berikut :
 
-\begin {equation}
+\begin {verbatim}
 For i = 1 To 1000
 MsgBox \“ini adalah pesan ke\ ” & i
 Next i
@@ -341,14 +341,14 @@ For i = 1 To 1000
 MsgBox \“ini adalah pesan ke \” & i
 Next i
 End Sub
-\end {equation}
+\end {verbatim}
 Dengan menggunakan struktur kondisi perulangan seperti source code di atas maka ketika program di load maka program akan menjalankan perulangan dan menampilkan pesan \“ini adalah pesan ke 1\”,angka 1 pada pesan karena pada perulangan For … Next nilai awalnya adalah 1 kemudian program menjalankan perintah Next i sehingga sekarang nilai i menjadi 2, kemudian program menampilkan pesan \“ini adalah pesan ke 2\”, kemudian begitu seterusnya sampai nilai i = 1000 dan program menampilkan pesan \“ini adalah pesan ke 1000\”, karena nilai i = nilai akhir yaitu 1000 maka program keluar dariperulangan. Dari contoh di atas dapat disimpulkan bahwa sebuah perulangan memiliki kondisi awal dan kondisi akhir, dan perulangan akan berjalan dan berhenti jika kondisi akhir terpenuhi.
 1.Macam – Macam Bentuk Perulangan
 Dalam Basic syntax terdapat beberapa macam struktur kondisi perulangan, diantaranya adalah Do … Loop dan For … Next. Untuk lebih jelasnya berikut adalah macam – macam bentuk perulangan dalam Basic syntax:
 A.Do While … Loop
 Digunakan sebagai statement kondisi dengan banyak pilihan.
 Select Case nilai_angka
-\begin {equation}
+\begin {verbatim}
 Case 0 to 50
 nilai huruf = \"D\"
 Case Is <= 70
@@ -358,14 +358,14 @@ nilai huruf = \"B\"
 Else Case
 nilai huruf = \"A\"
 End select
-\end {equation}
+\end {verbatim}
 
 Contoh :
-\bin {equation}
+\bin {verbatim}
 Dim str As String
 str = Belajar Visual Basic
 msgbox str &  =  & Len(str) & karakter
-\end {equation}
+\end {verbatim}
 \end
 
 \subsection {fungsi dari pemograman basix syntax}
