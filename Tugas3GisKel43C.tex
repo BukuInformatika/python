@@ -660,6 +660,40 @@ Python memiliki lima tipe data standar -
 \item Tuple
 \item Kamus
 
-\subsectio (Nomor Python)
+\subsection (Nomor Python)
 Nomor tipe data menyimpan nilai numerik. Nomor objek dibuat saat Anda memberikan
-nilai pada mereka.
+nilai pada mereka. Python mendukung empat jenis numerik yang berbeda int (bilangan bulat yang ditandatangani)
+Panjang (bilangan bulat panjang, mereka juga bisa diwakili dalam oktal dan heksadesimal)
+float (floating point real value)
+kompleks (bilangan kompleks)
+Python memungkinkan Anda untuk menggunakan huruf kecil l dengan panjang, tapi
+disarankan agar Anda hanya menggunakan huruf besar L untuk menghindari kebingungan
+dengan nomor 1. Python menampilkan bilangan bulat panjang dengan huruf besar L.
+Sebuah bilangan kompleks terdiri dari sepasang bilangan floating-point yang diinisialisasi
+langsung yang dinotasikan dengan x + yj, di mana x dan y adalah bilangan
+real dan j adalah unit imajiner.
+
+\subsection(String Python)
+String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang
+ditunjukkan dalam tanda petik. Python memungkinkan untuk kedua pasang tanda
+kutip tunggal atau ganda. Subset string dapat diambil dengan menggunakan operator
+slice ([] dan [:]) dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara
+mereka dari -1 di akhir. Tanda plus (+) adalah operator concatenation string dan tanda bintang (*) adalah
+operator pengulangan.
+
+\subsection(Kamus Python)
+Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif
+atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus
+bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi
+lain, bisa menjadi objek Python yang sewenang-wenang.
+Kamus ditutupi oleh kurung kurawal ( f g) dan nilai dapat diberikan dan diakses
+menggunakan kawat gigi persegi ([]). Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan
+bahwa unsur-unsurnya rusak. Mereka hanya unordered.
+
+\subsection(Konversi Tipe Data)
+Terkadang, Anda mungkin perlu melakukan konversi antara jenis built-in. Untuk
+mengonversi antar jenis, Anda cukup menggunakan nama jenis sebagai fungsi.
+Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe
+data yang lain. Fungsi ini mengembalikan objek baru yang mewakili nilai yang
+dikonversi.
+
