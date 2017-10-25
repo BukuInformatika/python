@@ -10,23 +10,23 @@ Kunci unik dalam kamus sementara nilai mungkin tidak. Nilai kamus bisa berupa ti
 Dictionary menyediakan wadah yang sangat berguna yang memungkinkan kita mencari nilai menggunakan kunci\cite{oliphant2007python}. Dalam sebuah Dictionary tidak boleh ada dua key yang sama, maka memberikan nilai ke key yang sudah ada akan menghapus nilai yang lama. Untuk menambah key baru, Python memiliki syntax yang sama. Ini bisa menimbulkan kerancuan pada saat akan melakukan penambahan key baru, tapi ternyata hanya mengubah key yang sudah ada. Sebagai catatan, key yang baru terletak di bagian tengah bukan di belakang. Hal tersebut kebetulan saja, karena sebenarnya pada Dictionary memang tidak ada standar pengurutan yang berlaku.
 
 \subsection{Accessing Values in Dictionary}
-Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana -
+Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana :
 \begin{verbatim}  
   \$  \#  \$!/usr/bin/python
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
  print "dict['Name']: ", dict['Name'] 
  print "dict['Age']: ", dict['Age']
 \end{verbatim}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut :
 dict['Name']:~ Zara
 dict['Age']:~ 7 
-Jika kita mencoba mengakses item data dengan sebuah kunci, yang bukan bagian dari kamus, kita mendapatkan error sebagai berikut -
+Jika kita mencoba mengakses item data dengan sebuah kunci, yang bukan bagian dari kamus, kita mendapatkan error sebagai berikut :
 \begin{verbatim} 
 \$  \#  \$!/usr/bin/python
 dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
 print "dict['Alice']: ", dict['Alice']
 \end{verbatim}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut :
 dict['Alice']: 
 Traceback (most recent call last):
 ~~ File "test.py", line 4, in <module>
@@ -34,7 +34,7 @@ Traceback (most recent call last):
 KeyError: 'Alice' 
 
 \subsection{Updating Dictionary}
-Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana -
+Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana :
 \begin{verbatim}
 \$  \#  \$!/usr/bin/python 
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$ 
@@ -43,13 +43,13 @@ Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai k
   print "dict['Age']: ", dict['Age']
   print "dict['School']: ", dict['School']
 \end{verbatim}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : 
   dict['Age']:~ 8 
   dict['School']:~ DPS School 
   
 \subsection{Delete Dictionary Elements}
 Anda dapat menghapus elemen kamus individual atau menghapus keseluruhan isi kamus. Anda juga dapat menghapus seluruh kamus dalam satu operasi. 
-Untuk menghapus seluruh kamus secara eksplisit, cukup gunakan del statement. Berikut adalah contoh sederhana – 
+Untuk menghapus seluruh kamus secara eksplisit, cukup gunakan del statement. Berikut adalah contoh sederhana : 
 \begin{verbatim}   
    \$  \#  \$!/usr/bin/python
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Class': 'First' \$  \}  \$
@@ -76,7 +76,7 @@ Lebih dari satu entri per kunci tidak diperbolehkan. Yang berarti tidak ada kunc
   dict =  \$  \{  \$'Name': 'Zara', 'Age': 7, 'Name': 'Manni' \$  \}  \$ 
   print "dict['Name']: ", dict['Name']
 \end{verbatim}  
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : 
   dict['Name']:~ Manni 
 (b) Tombol harus tidak berubah. Yang berarti Anda bisa menggunakan string, angka atau tupel sebagai tombol kamus tapi sesuatu seperti ['key'] tidak diperbolehkan. Berikut adalah contoh sederhana: 
 \begin{verbatim}   
@@ -84,7 +84,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
   dict =  \$  \{  \$['Name']: 'Zara', 'Age': 7 \$  \}  \$ 
   print "dict['Name']: ", dict['Name']
 \end{verbatim}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : 
   Traceback (most recent call last): 
 ~~     File "test.py", line 3, in <module> 
 ~~~~~     dict =  \$  \{  \$['Name']: 'Zara', 'Age': 7 \$  \}  \$; 
