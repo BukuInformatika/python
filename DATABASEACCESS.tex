@@ -47,10 +47,10 @@ Data dalam basis data bersifat integrated dan shared
 Terpadu (integrated), berkas-berkas data yang ada pada basis data saling terkait (terjadi dependensi data);
 Berbagi data (shared), data yang sama dapat dipakai oleh sejumlah pengguna dalam waktu yang bersamaan. Sering dinamakan sebagi sistem multiuser.
 
-\noindent 
+
 \begin{itemize}
 \item Internal~~~~~~~~:  kesatuan (integritas) dari file-file yang terlibat
-\noindent 
+
 \item Terbagi/share : elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).\end{itemize}
 \vspace{12pt}
  
@@ -60,9 +60,9 @@ Tipe Database Terdapat 12 tipe database, antara lain:
 \item Operational database: Database ini menyimpan data rinci yang diperlukan untuk mendukung operasi dari seluruh organisasi. Mereka juga disebut subject-area databases (SADB), transaksi database, dan produksi database. Contoh: database pelanggan, database pribadi, database inventaris, akuntansi database.
  
 \item Analytical database: Database ini menyimpan data dan informasi yang diambil dari operasional yang dipilih dan eksternal database. Mereka terdiri dari data dan informasi yang dirangkum paling dibutuhkan oleh sebuah organisasi manajemen dan End-user lainnya. Beberapa orang menyebut analitis multidimensi database sebagai database, manajemen database, atau informasi database. \par
-\noindent 
+
 \item Data warehouse: Sebuah data warehouse menyimpan data dari saat ini dan tahun- tahun sebelumnya - data yang diambil dari berbagai database operasional dari sebuah organisasi.
-\noindent 
+
 \item Distributed database: Ini adalah database-kelompok kerja lokal dan departemen di kantor regional, kantor cabang, pabrik-pabrik dan lokasi kerja lainnya. Database ini dapat mencakup kedua segmen yaitu operasional dan user database, serta data yang dihasilkan dan digunakan hanya pada pengguna situs sendiri. 
  
 \item End-user database: Database ini terdiri dari berbagai file data yang dikembangkan oleh end-user di workstation mereka. Contoh dari ini adalah koleksi dokumen dalam spreadsheet, word processing dan bahkan download file. 
@@ -70,42 +70,42 @@ Tipe Database Terdapat 12 tipe database, antara lain:
 \item External database: Database ini menyediakan akses ke eksternal, data milik pribadi online - tersedia untuk biaya kepada pengguna akhir dan organisasi dari layanan komersial. Akses ke kekayaan informasi dari database eksternal yang tersedia untuk biaya dari layanan online komersial dan dengan atau tanpa biaya dari banyak sumber di Internet.
 
 \item Hypermedia databases on the web: Ini adalah kumpulan dari halaman-halaman multimedia yang saling berhubungan di sebuah situs web. Mereka terdiri dari home page dan halaman hyperlink lain dari multimedia atau campuran media seperti teks, grafik, gambar foto, klip video, audio dll. 
-\noindent 
+
 \item Navigational database: Dalam navigasi database, queries menemukan benda terutama dengan mengikuti referensi dari objek lain. \par
-\noindent 
+ 
 \item In-memory databases: Database di memori terutama bergantung pada memori utama untuk penyimpanan data komputer. Ini berbeda dengan sistem manajemen database yang menggunakan disk berbasis mekanisme penyimpanan. Database memori utama lebih cepat daripada dioptimalkan disk database sejak Optimasi algoritma internal menjadi lebih sederhana dan lebih sedikit CPU mengeksekusi instruksi. \par
-\noindent 
+ 
 \item Document-oriented databases: Merupakan program komputer yang dirancang untuk aplikasi berorientasi dokumen. Sistem ini bisa diimplementasikan sebagai lapisan di atas sebuah database relasional atau objek database. Sebagai lawan dari database relasional, dokumen berbasis database tidak menyimpan data dalam tabel dengan ukuran seragam kolom untuk setiap record. Sebaliknya, mereka menyimpan setiap catatan sebagai dokumen yang memiliki karakteristik tertentu. Sejumlah bidang panjang apapun dapat ditambahkan ke dokumen. Bidang yang dapat juga berisi beberapa bagian data. 
-\noindent 
+ 
 \item Real-time databases Real-time: Database adalah sistem pengolahan dirancang untuk menangani beban kerja negara yang dapat berubah terus- menerus. Ini berbeda dari database tradisional yang mengandung data yang terus- menerus, sebagian besar tidak terpengaruh oleh waktu. 
-\noindent 
+ 
 \item Relational Database: Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.\end{enumerate}
  
 \vspace{12pt}
-\noindent 
+ 
 \textbf{Modul python}\textbf{ untuk mengakses database MySQL} 
 Untuk mengakses database MySQL dari Python, berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. 
-\noindent 
+
 \begin{enumerate}
 \item Instal server mysql dengan menjalankan perintah sudo apt-get install mysql-server. Jangan lupa memasukkan password akun root untuk server MySQL. 
-\noindent 
+ 
 \item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. Selanjutnya, kita akan masuk ke shell MySQL. Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
 mysql> create database teman; 
 mysql> use teman; \hspace*{1.69in}  
 mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); 
 \vspace{12pt}
-\noindent 
+
 \item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
 mysql> create user 'andri'@'localhost' identified by '123456'; 
 mysql> grant all on teman.* to 'andri'@'localhost' with grant option; 
-\noindent 
+
 \item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut. 
 \end{enumerate}
 
 \vspace{12pt}
 Modul terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. 
 \vspace{12pt}
-\noindent 
+
 import MySQLdb \par
 \noindent 
 def sambung (host,user,passwd):
