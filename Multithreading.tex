@@ -1,25 +1,29 @@
-Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut : \par
+\documentclass [12pt,a4paper,notitlepage,oneside,bahasa]{article}
+\usepackage[left=3.00 cm, right=2.00 cm, bottom=2.00 cm, top=3.00 cm]{geometry}
+\begin{document}
+\title{\textbf Multithreading}
+\maketitle
+
+Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut :
 \begin{itemize}
 	\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
-	\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
-\par
+	\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.
+\end{itemize}
+
 Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan. \par
 \begin{itemize}
-	\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})\end{itemize}
-\par
+	\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})
+	\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. 
+\end{itemize}
 \noindent 
-\begin{itemize}
-	\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
-\par
+\section{Memulai Thread Baru}
 \noindent 
-\textbf{1.}\textbf{1 }\textbf{Memulai }\textbf{\textit{Thread}}\textbf{ Baru} \par
+\hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} :
 \noindent 
-\hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} : \par
-\noindent 
-\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center} \par
-Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window. \par
-Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.   \par
-Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
+\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center}
+Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window.
+Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.
+Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.
 \noindent 
 \par
 \noindent 
@@ -35,27 +39,18 @@ Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil
 \noindent 
 Contoh : \par
 \noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
+\#\!/usr/bin/python
 \vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Import thread} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Import time} \par
+Import thread
+Import time
 \vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Define a function for the thread} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Def print $  \_  $time (threadNamw, delay):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Count = 0} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} While count <5:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Time.sleep(delay)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Count +=1} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
+\# Define a function for the thread
+\_ time (threadNamw, delay):
+\hspace*{0.5in} Count = 0
+\hspace*{0.5in} While count <5:
+\hspace*{0.5in} Time.sleep(delay)
+\hspace*{0.5in} Count +=1}
+\hspace*{0.5in} Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))
 \vspace{10pt}
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create two thread as follows} \par
