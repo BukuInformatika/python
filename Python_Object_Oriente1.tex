@@ -46,8 +46,7 @@ class Employee:
 ~~ empCount = 0 
 \vspace{12pt}
 ~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
-~~~~~ self.name = name 
-~~~~~ self.salary = salary 
+~~~~~ self.name = name ~~~~~ self.salary = salary 
 ~~~~~ Employee.empCount += 1 
 ~~~~~ def displayCount(self): 
 ~~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
@@ -55,14 +54,14 @@ class Employee:
 ~~ def displayEmployee(self): 
 \noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
-\end{verbatim}
+n\end{verbatim}
 
-\subsection{Variable empCount}
+e\subsection{Variable empCount}
 Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode.
 \vspace{12pt}
 
 \subsection{Membuat Instance Objects}
-Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. 
+eUntuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. 
 \vspace{12pt}
 "Ini akan menciptakan objek pertama kelas Karyawan" 
 Emp1 = Karyawan ("Zara", 2000) 
@@ -82,27 +81,19 @@ Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount
 \noindent
 
 Sekarang, meletakkan semua konsep bersama - 
-\noindent
+\begin{verbatim}
  $  \#  $!/usr/bin/python 
-\vspace{12pt
-\noindent 
 class Employee: 
-\noindent 
 ~~ 'Common base class for all employees' 
 ~~ empCount = 0 
-\vspace{12pt}
 ~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary):
 ~~~~~ self.name = name 
 ~~~~~ self.salary = salary 
 ~~~~~ Employee.empCount += 1 
 ~~ def displayCount(self): 
 ~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount
-\vspace{12pt}
 ~~ def displayEmployee(self): 
-\noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
-\vspace{12pt}
-\noindent 
 "This would create first object of Employee class" 
 emp1 = Employee("Zara", 2000) 
 "This would create second object of Employee class" 
@@ -110,7 +101,7 @@ emp2 = Employee("Manni", 5000)
 emp1.displayEmployee() 
 emp2.displayEmployee()
 print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
-
+\end{verbatim}
 When the above code is executed, it produces the following result  $ - $ 
  
 Name~:~ Zara ,Salary:  2000 
@@ -157,8 +148,7 @@ Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses meng
 \noindent 
 ~~~  $  \_  $ $  \_  $doc $  \_  $ $  \_  $: String dokumentasi kelas atau tidak, jika tidak terdefinisi. 
 \vspace{12pt}
-\noindent 
-~~~  $  \_  $ $  \_  $name $  \_  $ $  \_  $: nama kelas \
+\noindent ~~~  $  \_  $ $  \_  $name $  \_  $ $  \_  $: nama kelas \
 \vspace{12pt}
 \noindent 
 ~~~  $  \_  $ $  \_  $module $  \_  $ $  \_  $: Nama modul dimana kelas didefinisikan. Atribut ini " $  \_  $ $  \_  $main $  \_  $ $  \_  $" dalam mode interaktif. 
@@ -169,50 +159,26 @@ Setiap kelas Python terus mengikuti atribut bawaan dan mereka dapat diakses meng
 \noindent 
 
 Untuk kelas di atas mari kita coba untuk mengakses semua atribut ini – 
-\vspace{12pt}
-\noindent 
+\begin{verbatim}
  $  \#  $!/usr/bin/python 
-\vspace{12pt}
-\noindent 
 class Employee: 
-\noindent 
 ~~ 'Common base class for all employees' 
-\noindent 
 ~~ empCount = 0 
-\vspace{12pt}
-\noindent 
 ~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
-\noindent 
 ~~~~~ self.name = name 
-\noindent 
-~~~~~ self.salary = salary \par
-\noindent 
-~~~~~ Employee.empCount += 1 \par
-\noindent 
-~~  \par
-\noindent 
-~~ def displayCount(self): \par
-\noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount \par
-\vspace{12pt}
-\noindent 
+~~~~~ self.salary = salary 
+~~~~~ Employee.empCount += 1 
+~~ def displayCount(self): 
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
 ~~ def displayEmployee(self): \par
 \noindent 
-~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
-\vspace{12pt}
-\noindent 
-print "Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ \par
-\noindent 
-print "Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $ \par
-\noindent 
-print "Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $ \par
-\noindent 
-print "Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $ \par
-\noindent 
-print "Employee. $  \_  $ $  \_  $dict $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $dict $  \_  $ $  \_  $ \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
+~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
+print "Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $doc $  \_  $ $  \_  $ 
+print "Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $name $  \_  $ $  \_  $ 
+print "Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $module $  \_  $ $  \_  $ 
+print "Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $bases $  \_  $ $  \_  $ 
+print "Employee. $  \_  $ $  \_  $dict $  \_  $ $  \_  $:", Employee. $  \_  $ $  \_  $dict $  \_  $ $  \_  $ 
+\end{verbatim}
 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \vspace{12pt}
@@ -229,7 +195,7 @@ Karyawan . $  \_  $ $  \_  $ dict $  \_  $ $  \_  $:  $  \{  $' $  \_  $ $  \_  
 \noindent 
 <function displayCount at 0xb7c84994>, 'empCount': 2, \par
 \noindent 
-'DisplayEmployee': <function displayEmployee at 0xb7c8441c>, \par
+'DisplayEmployee': <function displayEmployee at 0xb7c8441c>, \pa
 \noindent 
 ' $  \_  $ $  \_  $doc $  \_  $ $  \_  $': 'Kelas dasar umum untuk semua karyawan', \pa
 \noindent 
@@ -238,7 +204,7 @@ Karyawan . $  \_  $ $  \_  $ dict $  \_  $ $  \_  $:  $  \{  $' $  \_  $ $  \_  
 \noindent 
 
 \subsection{Menghancurkan Objek (Pengumpulan Sampah)}
-Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \par
+Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \pa
 \vspace{12pt}
 \noindent 
 a = 40  $  \#  $ Buat objek <40> \par
