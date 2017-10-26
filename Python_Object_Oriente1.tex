@@ -6,7 +6,7 @@ Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, mencip
 Objek adalah sesuatu yang menamping nilai atau data dan dapat dikenakan operasi tertentu:
 \begin {enumerate}
 \item Class atau Kelas: adalah struktur data yang bisa digunakan untuk mendefinisikan objek yang menyimpan data bersama-sama nilai-nilai dan perilaku. Kelas adalah suatu entitas yang merupakan bentuk program dari suatu abstraksi untuk permasalahan dunia nyata, dan instans dari class merupakan realisasi dari beberapa objek.
-e\item Inheritace atau pewarisan merupakan konsep dalam pemrograman berbasis objek yang memungkinkan untuk membuat suatu kelas dengan didasarkan pada kelas yang sudah ada sehingga mewarisi semua method dan atributnya. Dengan cara seperti ini, semua method dan atribut yang terdapat pada kelas induk diturunkan ke kelas turunannya. Namun kelas turunannya dapat menambah method baru atau atribut baru tersendiri.
+\item Inheritace atau pewarisan merupakan konsep dalam pemrograman berbasis objek yang memungkinkan untuk membuat suatu kelas dengan didasarkan pada kelas yang sudah ada sehingga mewarisi semua method dan atributnya. Dengan cara seperti ini, semua method dan atribut yang terdapat pada kelas induk diturunkan ke kelas turunannya. Namun kelas turunannya dapat menambah method baru atau atribut baru tersendiri.
 \item Method Constructor merupakan sebuah method yang akan otomatis dipanggil ketika objek diinstantiasi. Construktor umumnya digunakan untuk melakukan inisialisasi terhadap suatu variabel atau method.
 \end {enumerate} 
 
@@ -54,14 +54,14 @@ class Employee:
 ~~ def displayEmployee(self): 
 \noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
-n\end{verbatim}
+\end{verbatim}
 
-e\subsection{Variable empCount}
+\subsection{Variable empCount}
 Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode.
 \vspace{12pt}
 
 \subsection{Membuat Instance Objects}
-eUntuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. 
+Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. 
 \vspace{12pt}
 "Ini akan menciptakan objek pertama kelas Karyawan" 
 Emp1 = Karyawan ("Zara", 2000) 
@@ -204,7 +204,7 @@ Karyawan . $  \_  $ $  \_  $ dict $  \_  $ $  \_  $:  $  \{  $' $  \_  $ $  \_  
 \noindent 
 
 \subsection{Menghancurkan Objek (Pengumpulan Sampah)}
-Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \pa
+Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis.
 \vspace{12pt}
 \noindent 
 a = 40  $  \#  $ Buat objek <40> \par
@@ -393,38 +393,23 @@ Berikut daftar tabel beberapa fungsionalitas generik yang dapat Anda timpa di ke
 \subsection{Operator overloading}
 Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa yang terjadi bila Anda menggunakan operator plus untuk menambahkannya? Kemungkinan besar Python akan berteriak pada Anda. Anda bisa, bagaimanapun, menentukan metode  $  \_  $ $  \_  $add $  \_  $ $  \_  $ di kelas Anda untuk melakukan penambahan vektor dan operator plus akan berperilaku sesuai harapan - \par
 Contoh \par
-\vspace{12pt}
-\noindent 
- $  \#  $! / Usr / bin / python \par
-\vspace{12pt}
-\noindent 
-Kelas vektor: \par
-\noindent 
-~~ def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, a, b): \par
-\noindent 
-~~~~~ Self.a = a \par
-\noindent 
-~~~~~ Self.b = b \par
-\vspace{12pt}
-\noindent 
-~~ def  $  \_  $ $  \_  $str  $  \_  $ $  \_  $ (diri): \par
-\noindent 
-~~~~~ Return 'Vector ( $  \%  $ d, $  \%  $ d)' $  \%  $ (self.a, self.b) \par
-\noindent 
-~~  \par
-\noindent 
-~~ Def  $  \_  $ $  \_  $add  $  \_  $ $  \_  $ (diri sendiri, lainnya): \par
-\noindent 
-~~~~~ return Vector (self.a + other.a, self.b + other.b) \par
-\vspace{12pt}
-\noindent 
-v1 = vektor (2,10) \par
-\noindent 
-v2 = vektor (5, -2) \par
-\noindent 
-cetak v1 + v2 \par
-\vspace{12pt}
-\noindent 
+
+\begin{verbatim}
+ $  \# $! / Usr / bin / python
+Kelas vektor:
+~~ def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, a, b):
+~~~~~ Self.a = a
+~~~~~ Self.b = b 
+~~ def  $  \_  $ $  \_  $str  $  \_  $ $  \_  $ (diri):
+~~~~~ Return 'Vector ( $  \%  $ d, $  \%  $ d)' $  \%  $ (self.a, self.b) 
+~~
+~~ Def  $  \_  $ $  \_  $add  $  \_  $ $  \_  $ (diri sendiri, lainnya): 
+~~~~~ return Vector (self.a + other.a, self.b + other.b) 
+v1 = vektor (2,10) 
+v2 = vektor (5, -2) 
+cetak v1 + v2 
+\end {verbatim}
+
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \vspace{12pt}
 \noindent 
@@ -434,35 +419,23 @@ Vektor (7,8) \par
 
 \subsection{Persembunyian data}
 Atribut objek mungkin atau mungkin tidak terlihat di luar definisi kelas. Anda perlu memberi nama atribut dengan awalan ganda ganda, dan atribut tersebut kemudian tidak langsung terlihat oleh orang luar. \par
-Contoh \par
-\vspace{12pt}
-\noindent 
- $  \#  $! / Usr / bin / python \par
-\vspace{12pt}
-\noindent 
+Contoh 
 
-Kelas JustCounter: \par
-\noindent 
-~~  $  \_  $ $  \_  $secretCount = 0 \par
-\noindent 
-~  \par
-\noindent 
-~~ def menghitung (diri): \par
-\noindent 
-~~~~~ self . $  \_  $ $  \_  $ secretCount + = 1 \par
-\noindent 
-~~~~~ cetak diri . $  \_  $ $  \_  $ secretCount \par
-\vspace{12pt}
-\noindent 
-counter = JustCounter () \par
-\noindent 
-Counter.count () \par
-\noindent 
-Counter.count () \par
-\noindent 
-print counter . $  \_  $ $  \_  $ secretCount \par
-\vspace{12pt}
-\noindent 
+\begin {verbatim}
+ $  \# $! / Usr / bin / python 
+
+Kelas JustCounter:  
+~~  $  \_  $ $  \_  $secretCount = 0 
+~  
+~~ def menghitung (diri): 
+~~~~~ self . $  \_  $ $  \_  $ secretCount + = 1 
+~~~~~ cetak diri . $  \_  $ $  \_  $ secretCount 
+counter = JustCounter () 
+Counter.count () 
+Counter.count ()  
+print counter . $  \_  $ $  \_  $ secretCount
+\end{verbatim}
+
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \vspace{12pt}
 \noindent 
@@ -582,6 +555,7 @@ Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ad
 Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: 
 \vspace{12pt}
 
+\begin{verbatim}
 Kelas Salam:
 ~~~ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, nama):
 ~~~~~~~ self.name = nama
@@ -589,3 +563,4 @@ Kelas Salam:
 ~~~~~~~ Cetak "Destructor dimulai"
 ~~~ Def SayHello (diri):
 ~~~~~~~ Cetak "Halo", self.name
+\end{verbatim}
