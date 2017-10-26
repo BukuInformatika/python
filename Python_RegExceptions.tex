@@ -336,251 +336,218 @@ Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih.
 
 Berikut adalah contoh kode HTML untuk form dengan dua tombol radio
 
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent
- $  \#  $ Import modules for CGI handling  \par
-\noindent
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Create instance of FieldStorage  \par
-\noindent
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Get data from fields \par
-\noindent
-if form.getvalue('subject'): \par
-\noindent
-~~ subject = form.getvalue('subject') \par
-\noindent
-else: \par
-\noindent
-~~ subject = "Not set" \par
-\vspace{12pt}
-\noindent
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
-\noindent
-print "<html>" \par
-\noindent
-print "<head>" \par
-\noindent
-print "<title>Radio - Fourth CGI Program</title>" \par
-\noindent
-print "</head>" \par
-\noindent
-print "<body>" \par
-\noindent
-print "<h2> Selected Subject is  $  \%  $s</h2>"  $  \%  $ subject \par
-\noindent
-print "</body>" \par
-\noindent
-print "</html>" \par
-\vspace{12pt}
-\noindent
-<form action="/cgi-bin/textarea.py" method="post" target=" $  \_  $blank"> \par
-\noindent
-<textarea name="textcontent" cols="40" rows="4"> \par
-\noindent
-Type your text here... \par
-\noindent
-</textarea> \par
-\noindent
-<input type="submit" value="Submit" /> \par
-\noindent
-</form> \par
-\vspace{12pt}
-\noindent
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent
- $  \#  $ Import modules for CGI handling  \par
-\noindent
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Create instance of FieldStorage  \par
-\noindent
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent
- $  \#  $ Get data from fields \par
-\noindent
-if form.getvalue('textcontent'): \par
-\noindent
-~~ text $  \_  $content = form.getvalue('textcontent') \par
-\noindent
-else: \par
-\noindent
-~~ text $  \_  $content = "Not entered" \par
-\vspace{12pt}
-\noindent
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
-\noindent
-print "<html>" \par
-\noindent
-print "<head>"; \par
-\noindent
-print "<title>Text Area - Fifth CGI Program</title>" \par
-\noindent
-print "</head>" \par
-\noindent
-print "<body>" \par
-\noindent
-print "<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content \par
-\noindent
-print "</body>" \par
-\vspace{12pt}
-\noindent
-{\fontsize{14pt}{14pt}\selectfont \textbf{Menggunakan Cookies di CGI} \\} \par
-\noindent
-Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik. \par
-\noindent
-Contoh dasar \par
-\noindent
-Joke: apa yang kamu sebut babi dengan tiga mata? Piiig! \par
-\vspace{12pt}
-\noindent
-Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string adalah: \par
-\noindent
-Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan  Semua pola harus dicocokkan, tapi tidak semua senar Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'. \par
-\noindent
-~  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere. \par
-\noindent
-~  $  \#  $ $  \#  $ On success, match.group() is matched text. \par
-\noindent
-~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii" \par
-\noindent
-~~match = re.search(r'igs', 'piiig') =>  not found, match == None \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $ . = any char but  $  \setminus  $n \par
-\noindent
-~~match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig" \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $  $  \setminus  $d = digit char,  $  \setminus  $w = word char \par
-\noindent
-~~match = re.search(r' $  \setminus  $d $  \setminus  $d $  \setminus  $d', 'p123g') =>  found, match.group() == "123" \par
-\noindent
-~~match = re.search(r' $  \setminus  $w $  \setminus  $w $  \setminus  $w', '@@abcd!!') =>  found, match.group() == "abc" \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent
-Pengulangan \par
-\vspace{12pt}
-\noindent
-Hal menjadi lebih menarik saat Anda menggunakan + dan * untuk menentukan pengulangan dalam polanya \par
-\vspace{12pt}
-\noindent
-~~~ + - 1 atau lebih kemunculan pola ke kiri, mis. 'I +' = satu atau lebih i's \par
-\noindent
-~~~ * - 0 atau lebih kemunculan pola ke kiri \par
-\noindent
-~~~ ? - cocokkan 0 atau 1 kemunculan pola ke kiri \par
-\vspace{12pt}
-\vspace{14pt}
-\noindent
-{\fontsize{14pt}{14pt}\selectfont \textbf{Paling kiri  $  \&  $ terbesar} \\} \par
-Pertama, pencarian menemukan kecocokan paling kiri untuk pola tersebut, dan kedua mencoba menggunakan sebanyak mungkin string - yaitu + dan * sejauh mungkin (huruf + dan * dikatakan "serakah"). \par
-\noindent
-Contoh pengulangan \par
-\vspace{12pt}
-\noindent
- $  \#  $ $  \#  $ i+ = one or more i's, as many as possible. \par
-\noindent
-~~match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii" \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the + \par
-\noindent
-~  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest'). \par
-\noindent
-~  $  \#  $ $  \#  $ In this example, note that it does not get to the second set of i's. \par
-\noindent
-~~match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii" \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $  $  \setminus  $s* = zero or more whitespace chars \par
-\noindent
-~  $  \#  $ $  \#  $ Here look for 3 digits, possibly separated by whitespace. \par
-\noindent
-~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d',~'xx1~2   3xx') =>  found, match.group() == "1 2   3" \par
-\noindent
-~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx12  3xx') =>  found, match.group() == "12  3" \par
-\noindent
-~~match = re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx123xx') =>  found, match.group() == "123" \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails: \par
-\noindent
-~~match = re.search(r' $  \string^  $b $  \setminus  $w+', 'foobar') =>  not found, match == None \par
-\noindent
-~  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds: \par
-\noindent
-~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar" \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent
+\$  \#  \$!/usr/bin/python
+
+ $  \#  $ Import modules for CGI handling
+
+import cgi, cgitb
+
+ \$  \#  \$ Create instance of FieldStorage
+
+form = cgi.FieldStorage()
+
+\$  \#  \$ Get data from fields
+
+if form.getvalue('subject'):
+
+~~ subject = form.getvalue('subject')
+
+else:
+
+~~ subject = "Not set"
+
+print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+
+print \"<html>\"
+
+print \"<head>\"
+
+print \"<title>Radio - Fourth CGI Program</title>\"
+
+print \"</head>\"
+
+print \"<body>\"
+
+print \verb|"<h2> Selected Subject is  $  \%  $s  $  \%  $s</h2>"  $  \%  $ subject
+
+print \"</body>\"
+
+print \"</html>\"
+
+<form action=\verb|"/cgi-bin/textarea.py" method="post" target=" $  \_  $blank">
+
+<textarea name="textcontent" cols="40" rows="4">
+
+Type your text here...
+
+</textarea>
+
+<input type="submit" value="Submit" />
+
+</form>
+
+ \$  \#  \$!/usr/bin/python
+
+ $  \#  $ Import modules for CGI handling
+
+import cgi, cgitb
+
+ \$  \#  \$ Create instance of FieldStorage
+
+form = cgi.FieldStorage()
+
+ \$  \#  \$ Get data from fields
+ 
+if form.getvalue('textcontent'):
+
+~~ text $  \_  $content = form.getvalue('textcontent')
+
+else:
+
+~~ text $  \_  $content = "Not entered"
+
+print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+
+print \"<html>\"
+
+print \"<head>\"
+
+print \"<title>Text Area - Fifth CGI Program</title>\"
+
+print \"</head>\"
+
+print \"<body>"
+
+print \verb|"<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content
+
+print \"</body>\"
+
+{\fontsize{14pt}{14pt}\selectfont \textbf{Menggunakan Cookies di CGI} \\}
+
+Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik. 
+
+Contoh dasar
+
+Joke: apa yang kamu sebut babi dengan tiga mata? Piiig!
+
+Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string adalah:
+
+Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan  Semua pola harus dicocokkan, tapi tidak semua senar Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok
+
+~  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'.
+
+~  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere.
+
+~  $  \#  $ $  \#  $ On success, match.group() is matched text.
+
+~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii"
+
+~~match = re.search(r'igs', 'piiig') =>  not found, match == None
+
+~  $  \#  $ $  \#  $ . = any char but  $  \setminus  $n
+
+~~match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig"
+
+~  $  \#  $ $  \#  $  $  \setminus  $d = digit char,  $  \setminus  $w = word char
+
+~~match = re.search(r' $  \setminus  $d $  \setminus  $d $  \setminus  $d', 'p123g') =>  found, match.group() == "123"
+
+~~match = re.search(r' $  \setminus  $w $  \setminus  $w $  \setminus  $w', '@@abcd!!') =>  found, match.group() == "abc"
+
+Pengulangan
+
+Hal menjadi lebih menarik saat Anda menggunakan + dan * untuk menentukan pengulangan dalam polanya
+
+~~~ + - 1 atau lebih kemunculan pola ke kiri, mis. 'I +' = satu atau lebih i's
+
+~~~ * - 0 atau lebih kemunculan pola ke kiri
+
+~~~ ? - cocokkan 0 atau 1 kemunculan pola ke kiri
+
+{\fontsize{14pt}{14pt}\selectfont \textbf{Paling kiri  $  \&  $ terbesar} \\}
+Pertama, pencarian menemukan kecocokan paling kiri untuk pola tersebut, dan kedua mencoba menggunakan sebanyak mungkin string - yaitu + dan * sejauh mungkin (huruf + dan * dikatakan "serakah").
+
+Contoh pengulangan
+
+ $  \#  $ $  \#  $ i+ = one or more i's, as many as possible.
+
+~~match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"
+
+~  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the +
+
+~  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest').
+
+~  $  \#  $ $  \#  $ In this example, note that it does not get to the second set of i's.
+
+~~match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"
+
+~  $  \#  $ $  \#  $  $  \setminus  $s* = zero or more whitespace chars
+
+~  $  \#  $ $  \#  $ Here look for 3 digits, possibly separated by whitespace.
+
+~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d',~'xx1~2   3xx') =>  found, match.group() == "1 2   3"
+
+~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx12  3xx') =>  found, match.group() == "12  3"
+
+~~match = re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx123xx') =>  found, match.group() == "123"
+
+~  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails:
+
+~~match = re.search(r' $  \string^  $b $  \setminus  $w+', 'foobar') =>  not found, match == None
+
+~  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds:
+
+~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar"
+
 {\fontsize{14pt}{14pt}\selectfont \textbf{Contoh email} \\} \par
-Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \setminus  $ w + @  $  \setminus  $ w +': \par
-\vspace{12pt}
-\noindent
-~ Str = 'ungu alice-b@google.com monyet pencuci piring' \par
-\noindent
-~ Match = re.search (r ' $  \setminus  $ w + @  $  \setminus  $ w +', str) \par
-\noindent
-~ Jika cocok: \par
-\noindent
-~~~ print match.group ()  $  \#  $ $  \#  $ 'b @ google' \par
-\vspace{12pt}
-Pencarian tidak mendapatkan keseluruhan alamat email dalam kasus ini karena  $  \setminus  $ w tidak cocok dengan '-' atau '.' Di alamat Kami akan memperbaikinya menggunakan fitur ekspresi reguler di bawah ini. Kurung persegi Tanda kurung siku dapat digunakan untuk menunjukkan sekumpulan karakter, jadi [abc] cocok dengan 'a' atau 'b' atau 'c'. Kode  $  \setminus  $ w,  $  \setminus  $ s dll bekerja di dalam kurung siku juga dengan satu pengecualian bahwa titik (.) Hanya berarti titik literal. Untuk masalah email, tanda kurung siku adalah cara mudah untuk menambahkan '.' Dan '-' ke kumpulan karakter yang dapat muncul di sekitar @ dengan pola r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +' untuk mendapatkan keseluruhan alamat email: \par
-\vspace{12pt}
-\noindent
-~ Match = re.search (r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +', str) \par
-\noindent
-~ Jika cocok: \par
-\noindent
-~~~ print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' \par
-\vspace{12pt}
+Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \setminus  $ w + @  $  \setminus  $ w +': 
+
+~ Str = 'ungu alice-b@google.com monyet pencuci piring'
+
+~ Match = re.search (r ' $  \setminus  $ w + @  $  \setminus  $ w +', str)
+
+~ Jika cocok:
+
+~~~ print match.group ()  $  \#  $ $  \#  $ 'b @ google'
+
+Pencarian tidak mendapatkan keseluruhan alamat email dalam kasus ini karena  $  \setminus  $ w tidak cocok dengan '-' atau '.' Di alamat Kami akan memperbaikinya menggunakan fitur ekspresi reguler di bawah ini. Kurung persegi Tanda kurung siku dapat digunakan untuk menunjukkan sekumpulan karakter, jadi [abc] cocok dengan 'a' atau 'b' atau 'c'. Kode  $  \setminus  $ w,  $  \setminus  $ s dll bekerja di dalam kurung siku juga dengan satu pengecualian bahwa titik (.) Hanya berarti titik literal. Untuk masalah email, tanda kurung siku adalah cara mudah untuk menambahkan '.' Dan '-' ke kumpulan karakter yang dapat muncul di sekitar @ dengan pola r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +' untuk mendapatkan keseluruhan alamat email:
+
+~ Match = re.search (r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +', str)
+
+~ Jika cocok:
+
+~~~ print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'
+
 (Lebih banyak fitur kotak-braket) Anda juga dapat menggunakan tanda hubung untuk menunjukkan jangkauan, jadi [a-z] cocok dengan semua huruf kecil. Untuk menggunakan tanda hubung tanpa menunjukkan jangkauan, pasang tanda hubung terakhir, mis. [abc-]. Top-up ( $  \string^  $) pada awal set persegi-braket telah membalikkannya, jadi [ $  \string^  $ ab] berarti karakter apapun kecuali 'a' atau 'b'. \par
 \vspace{16pt}
-{\fontsize{14pt}{14pt}\selectfont \textbf{Ekstraksi Grup} \\} \par
-Fitur "kelompok" dari ekspresi reguler memungkinkan Anda untuk memilih bagian dari teks yang sesuai. Misalkan untuk masalah email yang ingin kita ekstrak username dan host secara terpisah. Untuk melakukan ini, tambahkan kurung () di sekitar nama pengguna dan host dalam pola, seperti ini: r '([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)'. Dalam kasus ini, tanda kurung tidak mengubah pola yang akan cocok, sebaliknya mereka membentuk "kelompok" logis dalam teks pertandingan. Pada pencarian yang sukses, match.group (1) adalah teks kecocokan yang sesuai dengan tanda kurung kiri ke 1, dan match.group (2) adalah teks yang sesuai dengan kurung kiri ke-2. Match.group polos () masih merupakan keseluruhan teks pertandingan seperti biasa. \par
-\vspace{12pt}
-\noindent
-~ Str = 'ungu alice-b@google.com monyet pencuci piring' \par
-\noindent
-~ Match = re.search ('([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)', str) \par
-\noindent
-~ Jika cocok: \par
-\noindent
-~~~ Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' (keseluruhan pertandingan) \par
-\noindent
-~~~ Print match.group (1)  $  \#  $ $  \#  $ 'alice-b' (nama pengguna, grup 1) \par
-\noindent
-~~~ Print match.group (2)  $  \#  $ $  \#  $ 'google.com' (host, grup 2) \par
-\vspace{12pt}
-Alur kerja umum dengan ekspresi reguler adalah Anda menulis sebuah pola untuk hal yang Anda cari, menambahkan kelompok tanda kurung untuk mengekstrak bagian yang Anda inginkan. Temukan semua Findall () mungkin adalah fungsi tunggal yang paling kuat dalam modul re. Di atas kami menggunakan re.search () untuk menemukan kecocokan pertama untuk sebuah pola. Findall () menemukan * semua * kecocokan dan mengembalikannya sebagai daftar string, dengan masing-masing string mewakili satu kecocokan. \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $ Misalkan kita memiliki teks dengan banyak alamat email \par
-\noindent
-~ Str = 'ungu alice@google.com, bla monyet bob@abc.com blah pencuci piring' \par
-\vspace{12pt}
-\noindent
-~  $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan \par
-\noindent
-~ Email = re.findall (r '[ $  \setminus  $ w  $  \setminus  $ .-] + @ [ $  \setminus  $ w  $  \setminus  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com'] \par
-\noindent
-~ Untuk email di email: \par
-\noindent
-~~~  $  \#  $ Lakukan sesuatu dengan setiap string email yang ditemukan \par
-\noindent
-~~~ Cetak email \par
-\vspace{12pt}
+{\fontsize{14pt}{14pt}\selectfont \textbf{Ekstraksi Grup} \\}
+Fitur "kelompok" dari ekspresi reguler memungkinkan Anda untuk memilih bagian dari teks yang sesuai. Misalkan untuk masalah email yang ingin kita ekstrak username dan host secara terpisah. Untuk melakukan ini, tambahkan kurung () di sekitar nama pengguna dan host dalam pola, seperti ini: r '([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)'. Dalam kasus ini, tanda kurung tidak mengubah pola yang akan cocok, sebaliknya mereka membentuk "kelompok" logis dalam teks pertandingan. Pada pencarian yang sukses, match.group (1) adalah teks kecocokan yang sesuai dengan tanda kurung kiri ke 1, dan match.group (2) adalah teks yang sesuai dengan kurung kiri ke-2. Match.group polos () masih merupakan keseluruhan teks pertandingan seperti biasa.
+
+~ Str = 'ungu alice-b@google.com monyet pencuci piring'
+
+~ Match = re.search ('([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)', str)
+
+~ Jika cocok:
+
+~~~ Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' (keseluruhan pertandingan)
+
+~~~ Print match.group (1)  $  \#  $ $  \#  $ 'alice-b' (nama pengguna, grup 1)
+
+~~~ Print match.group (2)  $  \#  $ $  \#  $ 'google.com' (host, grup 2)
+
+Alur kerja umum dengan ekspresi reguler adalah Anda menulis sebuah pola untuk hal yang Anda cari, menambahkan kelompok tanda kurung untuk mengekstrak bagian yang Anda inginkan. Temukan semua Findall () mungkin adalah fungsi tunggal yang paling kuat dalam modul re. Di atas kami menggunakan re.search () untuk menemukan kecocokan pertama untuk sebuah pola. Findall () menemukan * semua * kecocokan dan mengembalikannya sebagai daftar string, dengan masing-masing string mewakili satu kecocokan.
+
+~  $  \#  $ $  \#  $ Misalkan kita memiliki teks dengan banyak alamat email
+
+~ Str = 'ungu alice@google.com, bla monyet bob@abc.com blah pencuci piring'
+
+~  $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan
+
+~ Email = re.findall (r '[ $  \setminus  $ w  $  \setminus  $ .-] + @ [ $  \setminus  $ w  $  \setminus  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com']
+
+~ Untuk email di email:
+
+~~~  $  \#  $ Lakukan sesuatu dengan setiap string email yang ditemukan
+
+~~~ Cetak email
+
