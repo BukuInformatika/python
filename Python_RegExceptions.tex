@@ -452,25 +452,25 @@ Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string ad
 
 Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan  Semua pola harus dicocokkan, tapi tidak semua senar Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok
 
-~  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'.
+\verb|~ $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'|.
 
-~  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere.
+\verb|~  $  \#  $ $  \#  $| All of the pattern must match, but it may appear anywhere.
 
-~  $  \#  $ $  \#  $ On success, match.group() is matched text.
+\verb|~  $  \#  $ $  \#  $| On success, match.group() is matched text.
 
-~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii"
+\verb|~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii"|
 
-~~match = re.search(r'igs', 'piiig') =>  not found, match == None
+\verb|~~match = re.search(r'igs', 'piiig') =>  not found, match == None|
 
-~  $  \#  $ $  \#  $ . = any char but  $  \setminus  $n
+\verb|~  $  \#  $ $  \#  $ . = any char but  $  \setminus  $n|
 
-~~match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig"
+\verb|~~match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig"|
 
-~  $  \#  $ $  \#  $  $  \setminus  $d = digit char,  $  \setminus  $w = word char
+\verb|~  $  \#  $ $  \#  $  $  \setminus  $d = digit char,  $  \setminus  $w = word char|
 
-~~match = re.search(r' $  \setminus  $d $  \setminus  $d $  \setminus  $d', 'p123g') =>  found, match.group() == "123"
+\verb|~~match = re.search(r' $  \setminus  $d $  \setminus  $d $  \setminus  $d', 'p123g') =>  found, match.group() == "123"|
 
-~~match = re.search(r' $  \setminus  $w $  \setminus  $w $  \setminus  $w', '@@abcd!!') =>  found, match.group() == "abc"
+\verb|~~match = re.search(r' $  \setminus  $w $  \setminus  $w $  \setminus  $w', '@@abcd!!') =>  found, match.group() == "abc"|
 
 Pengulangan
 
@@ -487,81 +487,81 @@ Pertama, pencarian menemukan kecocokan paling kiri untuk pola tersebut, dan kedu
 
 Contoh pengulangan
 
- $  \#  $ $  \#  $ i+ = one or more i's, as many as possible.
+ \verb|$  \#  $ $  \#  $ i+ = one or more i's, as many as possible|.
 
-~~match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"
+\verb|~~match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"|
 
-~  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the +
+\verb|~  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the +|
 
-~  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest').
+\verb|~  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest')|.
 
-~  $  \#  $ $  \#  $ In this example, note that it does not get to the second set of i's.
+\verb|~  $  \#  $ $  \#  $| In this example, note that it does not get to the second set of i's.
 
-~~match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"
+\verb|~~match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"|
 
-~  $  \#  $ $  \#  $  $  \setminus  $s* = zero or more whitespace chars
+\verb|~  $  \#  $ $  \#  $  $  \setminus  $s* = zero or more whitespace chars|
 
-~  $  \#  $ $  \#  $ Here look for 3 digits, possibly separated by whitespace.
+\verb|~  $  \#  $ $  \#  $| Here look for 3 digits, possibly separated by whitespace.
 
-~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d',~'xx1~2   3xx') =>  found, match.group() == "1 2   3"
+\verb|~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d',~'xx1~2   3xx') =>  found, match.group() == "1 2   3"|
 
-~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx12  3xx') =>  found, match.group() == "12  3"
+\verb|~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx12  3xx') =>  found, match.group() == "12  3"|
 
-~~match = re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx123xx') =>  found, match.group() == "123"
+\verb|~~match = re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx123xx') =>  found, match.group() == "123"|
 
-~  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails:
+\verb|~  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails:|
 
-~~match = re.search(r' $  \string^  $b $  \setminus  $w+', 'foobar') =>  not found, match == None
+\verb|~~match = re.search(r' $  \string^  $b $  \setminus  $w+', 'foobar') =>  not found, match == None|
 
-~  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds:
+\verb|~  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds:|
 
-~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar"
+\verb|~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar"|
 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Contoh email} \\} \par
+{\fontsize{14pt}{14pt}\selectfont \textbf{Contoh email} \\}
 Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \setminus  $ w + @  $  \setminus  $ w +':
 
 ~ Str = 'ungu alice-b@google.com monyet pencuci piring'
 
-~ Match = re.search (r ' $  \setminus  $ w + @  $  \setminus  $ w +', str)
+\verb|~ Match = re.search (r ' $  \setminus  $ w + @  $  \setminus  $ w +', str)|
 
 ~ Jika cocok:
 
-~~~ print match.group ()  $  \#  $ $  \#  $ 'b @ google'
+\verb|~~~ print match.group ()  $  \#  $ $  \#  $ 'b @ google'|
 
 Pencarian tidak mendapatkan keseluruhan alamat email dalam kasus ini karena  $  \setminus  $ w tidak cocok dengan '-' atau '.' Di alamat Kami akan memperbaikinya menggunakan fitur ekspresi reguler di bawah ini. Kurung persegi Tanda kurung siku dapat digunakan untuk menunjukkan sekumpulan karakter, jadi [abc] cocok dengan 'a' atau 'b' atau 'c'. Kode  $  \setminus  $ w,  $  \setminus  $ s dll bekerja di dalam kurung siku juga dengan satu pengecualian bahwa titik (.) Hanya berarti titik literal. Untuk masalah email, tanda kurung siku adalah cara mudah untuk menambahkan '.' Dan '-' ke kumpulan karakter yang dapat muncul di sekitar @ dengan pola r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +' untuk mendapatkan keseluruhan alamat email:
 
-~ Match = re.search (r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +', str)
+\verb|~ Match = re.search (r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +', str)|
 
 ~ Jika cocok:
 
-~~~ print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'
+\verb|~~~ print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'|
 
-(Lebih banyak fitur kotak-braket) Anda juga dapat menggunakan tanda hubung untuk menunjukkan jangkauan, jadi [a-z] cocok dengan semua huruf kecil. Untuk menggunakan tanda hubung tanpa menunjukkan jangkauan, pasang tanda hubung terakhir, mis. [abc-]. Top-up ( $  \string^  $) pada awal set persegi-braket telah membalikkannya, jadi [ $  \string^  $ ab] berarti karakter apapun kecuali 'a' atau 'b'. \par
-\vspace{16pt}
+(Lebih banyak fitur kotak-braket) Anda juga dapat menggunakan tanda hubung untuk menunjukkan jangkauan, jadi [a-z] cocok dengan semua huruf kecil. Untuk menggunakan tanda hubung tanpa menunjukkan jangkauan, pasang tanda hubung terakhir, mis. [abc-]. Top-up ( $  \string^  $) pada awal set persegi-braket telah membalikkannya, jadi [ $  \string^  $ ab] berarti karakter apapun kecuali 'a' atau 'b'.
+
 {\fontsize{14pt}{14pt}\selectfont \textbf{Ekstraksi Grup} \\}
 Fitur "kelompok" dari ekspresi reguler memungkinkan Anda untuk memilih bagian dari teks yang sesuai. Misalkan untuk masalah email yang ingin kita ekstrak username dan host secara terpisah. Untuk melakukan ini, tambahkan kurung () di sekitar nama pengguna dan host dalam pola, seperti ini: r '([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)'. Dalam kasus ini, tanda kurung tidak mengubah pola yang akan cocok, sebaliknya mereka membentuk "kelompok" logis dalam teks pertandingan. Pada pencarian yang sukses, match.group (1) adalah teks kecocokan yang sesuai dengan tanda kurung kiri ke 1, dan match.group (2) adalah teks yang sesuai dengan kurung kiri ke-2. Match.group polos () masih merupakan keseluruhan teks pertandingan seperti biasa.
 
 ~ Str = 'ungu alice-b@google.com monyet pencuci piring'
 
-~ Match = re.search ('([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)', str)
+\verb|~ Match = re.search ('([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)', str)|
 
 ~ Jika cocok:
 
-~~~ Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' (keseluruhan pertandingan)
+\verb|~~~ Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'| (keseluruhan pertandingan)
 
-~~~ Print match.group (1)  $  \#  $ $  \#  $ 'alice-b' (nama pengguna, grup 1)
+\verb|~~~ Print match.group (1)  $  \#  $ $  \#  $ 'alice-b'| (nama pengguna, grup 1)
 
-~~~ Print match.group (2)  $  \#  $ $  \#  $ 'google.com' (host, grup 2)
+\verb|~~~ Print match.group (2)  $  \#  $ $  \#  $ 'google.com'| (host, grup 2)
 
 Alur kerja umum dengan ekspresi reguler adalah Anda menulis sebuah pola untuk hal yang Anda cari, menambahkan kelompok tanda kurung untuk mengekstrak bagian yang Anda inginkan. Temukan semua Findall () mungkin adalah fungsi tunggal yang paling kuat dalam modul re. Di atas kami menggunakan re.search () untuk menemukan kecocokan pertama untuk sebuah pola. Findall () menemukan * semua * kecocokan dan mengembalikannya sebagai daftar string, dengan masing-masing string mewakili satu kecocokan.
 
-~  $  \#  $ $  \#  $ Misalkan kita memiliki teks dengan banyak alamat email
+\verb|~  $  \#  $ $  \#  $| Misalkan kita memiliki teks dengan banyak alamat email
 
 ~ Str = 'ungu alice@google.com, bla monyet bob@abc.com blah pencuci piring'
 
-~  $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan
+\verb|~  $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan|
 
-~ Email = re.findall (r '[ $  \setminus  $ w  $  \setminus  $ .-] + @ [ $  \setminus  $ w  $  \setminus  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com']
+\verb|~ Email = re.findall (r '[ $  \setminus  $ w  $  \setminus  $ .-] + @ [ $  \setminus  $ w  $  \setminus  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com']|
 
 ~ Untuk email di email:
 
