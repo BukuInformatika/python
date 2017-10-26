@@ -39,7 +39,7 @@ Sekarang, meletakkan semua konsep bersama
 class Employee: 
 ~~ 'Common base class for all employees' 
 ~~ empCount = 0 
-~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$(self, name, salary): 
+~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \${self, name, salary}: 
 \item 
 ~~ def displayCount{self}: 
 \item 
@@ -147,7 +147,7 @@ class Employee: \par
 ~~~~ print "Total Employee  \$  \%  \$d"  \$  \%  \$ Employee.empCount \par
 \begin{12pt}
 \item 
-~~ def displayEmployee(self): \par
+~~ def displayEmployee{self}: \par
 \item 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary \par
 \begin{12pt}
@@ -172,7 +172,7 @@ Karyawan . \$  \_  \$ \$  \_  \$ name \$  \_  \$ \$  \_  \$: Karyawan \par
 \noindent 
 Karyawan . \$  \_  \$ \$  \_  \$ modul \$  \_  \$ \$  \_  \$:  \$  \_  \$ \$  \_  \$main \$  \_  \$ \$  \_  \$ \par
 \noindent 
-Karyawan . \$  \_  \$ \$  \_  \$ bases \$  \_  \$ \$  \_  \$: () \par
+Karyawan . \$  \_  \$ \$  \_  \$ bases \$  \_  \$ \$  \_  \$: {}\par
 \noindent 
 Karyawan . \$  \_  \$ \$  \_  \$ dict \$  \_  \$ \$  \_  \$:  \$  \{  \$' \$  \_  \$ \$  \_  \$module \$  \_  \$ \$  \_  \$': ' \$  \_  \$ \$  \_  \$main \$  \_  \$ \$  \_  \$', 'displayCount': \par
 \noindent 
@@ -185,24 +185,10 @@ Karyawan . \$  \_  \$ \$  \_  \$ dict \$  \_  \$ \$  \_  \$:  \$  \{  \$' \$  \_
 ' \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$': <function  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$ di 0xb7c846bc> \$  \}  \$ 
 \vspace{12pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Menghancurkan Objek (Pengumpulan Sampah)} \\} \par
+{\fontsize{14pt}{14pt}\selectfont \textbf{Menghancurkan Objek {Pengumpulan Sampah} \\} \par
 \vspace{12pt}
-Python menghapus objek yang tidak dibutuhkan (tipe built-in atau instance kelas) secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah (daftar, tupel, atau kamus). Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \par
-\vspace{12pt}
-\noindent 
-a = 40  \$  \#  \$ Buat objek <40> \par
-\noindent 
-B = a  \$  \#  \$ Tingkatkan ref. Hitung <40> \par
-\noindent 
-c = [b]  \$  \#  \$ Tingkatkan ref. Hitung <40> \par
-\vspace{12pt}
-\noindent 
-Del  \$  \#  \$ Penurunan ref. Hitung <40> \par
-\noindent 
-b = 100  \$  \#  \$ Kurangi ref. Hitung <40> \par
-\noindent 
-C [0] = -1  \$  \#  \$ Kurangi ref. Hitung <40> \par
-\vspace{12pt}
+Python menghapus objek yang tidak dibutuhkan {tipe built-in atau instance kelas} secara otomatis untuk membebaskan ruang memori. Proses dimana Python secara berkala mengumpulkan kembali blok memori yang tidak lagi digunakan disebut Koleksi Sampah. Pengumpul sampah Python berjalan selama eksekusi program dan dipicu saat penghitungan referensi objek mencapai nol. Jumlah referensi referensi berubah karena jumlah alias yang menunjukkannya berubah. Jumlah referensi objek meningkat saat diberi nama baru atau ditempatkan dalam wadah {daftar, tupel, atau kamus}. Jumlah referensi objek berkurang saat dihapus dengan del, rujukannya ditugaskan kembali, atau rujukannya tidak sesuai. Ketika penghitungan referensi objek mencapai nol, Python mengumpulkannya secara otomatis. \par
+\begin{12pt}
 Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ {}, yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
 \noindent 
 Contoh \par
@@ -211,43 +197,28 @@ Contoh \par
 Penghancur  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ {} ini mencetak nama kelas sebuah instance yang akan dihancurkan - 
 \bf
  \$  \#  \$!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
+\begin12pt}
+\item 
 class Point: \par
-\noindent 
-~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$( self, x=0, y=0): \par
-\noindent 
-~~~~~ self.x = x \par
-\noindent 
-~~~~~ self.y = y \par
-\noindent 
-~~ def  \$  \_  \$ \$  \_  \$del \$  \_  \$ \$  \_  \${self}: \par
-\noindent 
-~~~~~ class \$  \_  \$name = self. \$  \_  \$ \$  \_  \$class \$  \_  \$ \$  \_  \$. \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ \par
 \item
 ~~~~~ print class \$  \_  \$name, "destroyed" \par
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\item
 pt1 = Point{} \par
-\noindent 
+\item 
 pt2 = pt1 \par
-\noindent 
+\item
 pt3 = pt1 \par
-\noindent 
+\item
 print id{pt1}, id{pt2}, id{pt3}  \$  \#  \$ prints the ids of the obejcts \par
-\noindent 
-del pt1 \par
-\noindent 
-del pt2 \par
-\noindent 
 del pt3 \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
+\begin{12pt}
+\begin{12pt}
+\item
 {\fontsize{14pt}{14pt}\selectfont \textbf{Kelas Warisan} \\} \par
 \begin{12pt}
 Alih-alih mulai dari nol, Anda dapat membuat kelas dengan menurunkannya dari kelas yang sudah ada sebelumnya dengan mencantumkan kelas induk dalam tanda kurung setelah nama kelas yang baru. Kelas anak mewarisi atribut kelas induknya, dan Anda dapat menggunakan atribut tersebut seolah-olah mereka didefinisikan di kelas anak. Kelas anak juga dapat mengesampingkan data anggota dan metode dari orang tua. Sintaksis Kelas turunan dinyatakan seperti kelas orang tua mereka; Namun, daftar kelas dasar yang diwarisi dari diberikan setelah nama kelas - \par
-\vspace{12pt}
+\begin12pt}
 \noindent 
 Kelas SubClassName {ParentClass1 [, ParentClass2, ...]}: \par
 \noindent 
@@ -282,38 +253,27 @@ class~Parent:~~~~~~   \$  \#  \$ define parent class \par
 ~~~~~ print "Parent attribute :", Parent.parentAttr \par
 \vspace{12pt}
 \noindent 
-class Child(Parent):  \$  \#  \$ define child class \par
+class Child{Parent}:  \$  \#  \$ define child class \par
 \noindent 
 ~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$(self): \par
 \noindent 
 ~~~~~ print "Calling child constructor" \par
 \vspace{12pt}
 \noindent 
-~~ def childMethod(self): \par
+~~ def childMethod{self}: \par
 \noindent 
 ~~~~~ print 'Calling child method' \par
 \vspace{12pt}
 \noindent 
-c~=~Child()~~~~~~~    \$  \#  \$ instance of child \par
+c~=~Child{}~~~~~~~    \$  \#  \$ instance of child \par
 \noindent 
-c.childMethod()~~~~~  \$  \#  \$ child calls its method \par
+c.childMethod{}~~~~~  \$  \#  \$ child calls its method \par
 \noindent 
-c.parentMethod()~~~~  \$  \#  \$ calls parent's method \par
+c.parentMethod{}~~~~  \$  \#  \$ calls parent's method \par
 \noindent 
-c.setAttr(200)~~~~~~  \$  \#  \$ again call parent's method \par
+c.setAttr{200}~~~~~~  \$  \#  \$ again call parent's method \par
 \noindent 
-c.getAttr()~~~~~~~~~  \$  \#  \$ again call parent's method \par
-\vspace{12pt}
-\noindent 
-Calling child constructor \par
-\noindent 
-Calling child method \par
-\noindent 
-Calling parent method \par
-\noindent 
-Parent attribute : 200 \par
-\vspace{12pt}
-\noindent 
+c.getAttr{}~~~~~~~~~  \$  \#  \$ again call parent's method \par
 class~A:~~~~~~   \$  \#  \$ define your class A \par
 \noindent 
 ..... \par
@@ -324,9 +284,9 @@ class~B:~~~~~~~   \$  \#  \$ define your class B \par
 ..... \par
 \vspace{12pt}
 \noindent 
-class~C(A,~B):    \$  \#  \$ subclass of A and B \par
-\vspace{12pt}
-Anda dapat menggunakan fungsi issubclass () atau isinstance () untuk memeriksa hubungan dua kelas dan contoh. Fungsi boolean issubclass (sub, sup) mengembalikan true jika sub subclass yang diberikan memang merupakan subclass dari superclass sup. The isinstance (obj, Class) fungsi boolean mengembalikan true jika obj adalah turunan dari Class Class atau merupakan instance dari subclass of Class. \par
+class~C{A,~B}:    \$  \#  \$ subclass of A and B \par
+\begin{12pt}
+Anda dapat menggunakan fungsi issubclass {} atau isinstance {} untuk memeriksa hubungan dua kelas dan contoh. Fungsi boolean issubclass {sub, sup} mengembalikan true jika sub subclass yang diberikan memang merupakan subclass dari superclass sup. The isinstance {obj, Class} fungsi boolean mengembalikan true jika obj adalah turunan dari Class Class atau merupakan instance dari subclass of Class. \par
 \vspace{12pt}
 \noindent 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Metode utama} \\} \par
@@ -345,16 +305,16 @@ class parent:  \$  \#  \$ define parent class \par
 ~~~~~ Cetak 'metode induk panggilan' \par
 \vspace{12pt}
 \noindent 
-Kelas anak (orang tua):  \$  \#  \$ define child class \par
+Kelas anak {orang tua}:  \$  \#  \$ define child class \par
 \noindent 
-~~ Def myMethod (diri): \par
+~~ Def myMethod {diri}: \par
 \noindent 
 ~~~~~ Cetak 'metode memanggil anak' \par
 \vspace{12pt}
 \noindent 
-C = Anak ()  \$  \#  \$ contoh anak \par
+C = Anak {}\$  \#  \$ contoh anak \par
 \noindent 
-C.myMethod ()  \$  \#  \$ metode panggilan balik anak \par
+C.myMethod {}  \$  \#  \$ metode panggilan balik anak \par
 \vspace{12pt}
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
@@ -370,37 +330,37 @@ Berikut daftar tabel beberapa fungsionalitas generik yang dapat Anda timpa di ke
 \vspace{14pt}
 \noindent 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Operator overloading} \\} \par
-\vspace{12pt}
+\begin{12pt}
 Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa yang terjadi bila Anda menggunakan operator plus untuk menambahkannya? Kemungkinan besar Python akan berteriak pada Anda. Anda bisa, bagaimanapun, menentukan metode  \$  \_  \$ \$  \_  \$add \$  \_  \$ \$  \_  \$ di kelas Anda untuk melakukan penambahan vektor dan operator plus akan berperilaku sesuai harapan - \par
 Contoh \par
 \vspace{12pt}
 \noindent 
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 \noindent 
 Kelas vektor: \par
 \noindent 
-~~ def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, a, b): \par
+~~ def  \$  \_  \$ \$  \_  \$init  \$  \_  \$ \$  \_  \$ diri, a, b): \par
 \noindent 
 ~~~~~ Self.a = a \par
 \noindent 
 ~~~~~ Self.b = b \par
 \vspace{12pt}
 \noindent 
-~~ def  $  \_  $ $  \_  $str  $  \_  $ $  \_  $ (diri): \par
+~~ def  \$  \_  \$ \$  \_  \$str  \$  \_  \$ \$  \_  \$ {diri}: \par
 \noindent 
-~~~~~ Return 'Vector ( $  \%  $ d, $  \%  $ d)' $  \%  $ (self.a, self.b) \par
+~~~~~ Return 'Vector {\$  \%  \$ d, \$  \%  \$ d)' \$  \%  \$ {self.a, self.b} \par
 \noindent 
 ~~  \par
 \noindent 
-~~ Def  $  \_  $ $  \_  $add  $  \_  $ $  \_  $ (diri sendiri, lainnya): \par
+~~ Def  \$  \_  \$ \$  \_  \$add  \$  \_  \$ \$  \_  \$ {diri sendiri, lainnya}: \par
 \noindent 
-~~~~~ return Vector (self.a + other.a, self.b + other.b) \par
+~~~~~ return Vector {self.a + other.a, self.b + other.b} \par
 \vspace{12pt}
 \noindent 
-v1 = vektor (2,10) \par
+v1 = vektor {2,10} \par
 \noindent 
-v2 = vektor (5, -2) \par
+v2 = vektor {5, -2} \par
 \noindent 
 cetak v1 + v2 \par
 \vspace{12pt}
@@ -408,7 +368,7 @@ cetak v1 + v2 \par
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \vspace{12pt}
 \noindent 
-Vektor (7,8) \par
+Vektor {7,8} \par
 \vspace{12pt}
 \noindent 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Persembunyian data} \\} \par
@@ -417,29 +377,29 @@ Atribut objek mungkin atau mungkin tidak terlihat di luar definisi kelas. Anda p
 Contoh \par
 \vspace{12pt}
 \noindent 
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 \noindent 
 Kelas JustCounter: \par
 \noindent 
-~~  $  \_  $ $  \_  $secretCount = 0 \par
+~~  \$  \_  \$ \$  \_  \$secretCount = 0 \par
 \noindent 
 ~  \par
 \noindent 
 ~~ def menghitung (diri): \par
 \noindent 
-~~~~~ self . $  \_  $ $  \_  $ secretCount + = 1 \par
+~~~~~ self . \$  \_  \$ \$  \_  \$ secretCount + = 1 \par
 \noindent 
-~~~~~ cetak diri . $  \_  $ $  \_  $ secretCount \par
+~~~~~ cetak diri . \$  \_  \$ \$  \_  \$ secretCount \par
 \vspace{12pt}
 \noindent 
-counter = JustCounter () \par
+counter = JustCounter {} \par
 \noindent 
-Counter.count () \par
+Counter.count {} \par
 \noindent 
-Counter.count () \par
+Counter.count {} \par
 \noindent 
-print counter . $  \_  $ $  \_  $ secretCount \par
+print counter . \$  \_  \$ \$  \_  \$ secretCount \par
 \vspace{12pt}
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
@@ -453,18 +413,18 @@ Traceback (panggilan terakhir): \par
 \noindent 
 ~ File "test.py", baris 12, di <module> \par
 \noindent 
-~~~ print counter . $  \_  $ $  \_  $ secretCount \par
+~~~ print counter . \$  \_  \$ \$  \_  \$ secretCount \par
 \noindent 
-AttributeError: instance JustCounter tidak memiliki atribut ' $  \_  $ $  \_  $secretCount' \par
+AttributeError: instance JustCounter tidak memiliki atribut ' \$  \_  \$ \$  \_  \$secretCount' \par
 \vspace{12pt}
-Python melindungi anggota tersebut dengan mengganti namanya secara internal untuk memasukkan nama kelas. Anda dapat mengakses atribut seperti object. $  \_  $className $  \_  $ $  \_  $attrName. Jika Anda akan mengganti baris terakhir Anda sebagai berikut, maka akan berhasil untuk Anda - \par
-\vspace{12pt}
-\noindent 
-print counter. $  \_  $JustCounter $  \_  $ $  \_  $secretCount \par
+Python melindungi anggota tersebut dengan mengganti namanya secara internal untuk memasukkan nama kelas. Anda dapat mengakses atribut seperti object. \$  \_  \$className \$  \_  \$ \$  \_  $attrName. Jika Anda akan mengganti baris terakhir Anda sebagai berikut, maka akan berhasil untuk Anda - \par
 \vspace{12pt}
 \noindent 
+print counter. \$  \_  \$JustCounter \$  \_  \$ \$  \_  \$secretCount \par
+\vspace{12pt}
+\item
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\vspace{12pt}
+\begin{12pt}
 \noindent 
 1 \par
 \noindent 
@@ -473,13 +433,13 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 2 \par
 \vspace{12pt}
 Contoh \par
-\vspace{12pt}
-Kelas bisa mewarisi kelas lainnya. Kelas dapat mewarisi atribut dan perilaku (metode) dari kelas lain, yang disebut kelas super. Sebuah kelas yang mewarisi dari kelas super disebut Sub-kelas. Kelas super kadang disebut nenek moyang juga. Ada hubungan hierarki antar kelas. Jika kita melihat lebih dekat contoh sebelumnya tentang akun kelas, kita dapat melihat bahwa model ini dapat memenuhi kebutuhan bank sebenarnya. Bank biasanya memiliki jenis akun yang berbeda, mis. Rekening Tabungan, Rekening Giro dan lain-lain. Meskipun jenis akun yang berbeda ini sangat berbeda, namun tetap memiliki banyak sifat dan metode yang sama. Misalnya. Setiap akun memiliki dan membutuhkan nomor rekening, pemegang dan saldo. Selanjutnya mungkin bagi masing-masing untuk menyetor atau menarik uang. \par
+\begin{12pt}
+Kelas bisa mewarisi kelas lainnya. Kelas dapat mewarisi atribut dan perilaku {metode} dari kelas lain, yang disebut kelas super. Sebuah kelas yang mewarisi dari kelas super disebut Sub-kelas. Kelas super kadang disebut nenek moyang juga. Ada hubungan hierarki antar kelas. Jika kita melihat lebih dekat contoh sebelumnya tentang akun kelas, kita dapat melihat bahwa model ini dapat memenuhi kebutuhan bank sebenarnya. Bank biasanya memiliki jenis akun yang berbeda, mis. Rekening Tabungan, Rekening Giro dan lain-lain. Meskipun jenis akun yang berbeda ini sangat berbeda, namun tetap memiliki banyak sifat dan metode yang sama. Misalnya. Setiap akun memiliki dan membutuhkan nomor rekening, pemegang dan saldo. Selanjutnya mungkin bagi masing-masing untuk menyetor atau menarik uang. \par
 Jadi, ada sesuatu seperti akun "mendasar" darimana mereka mewarisi. Warisan digunakan untuk membuat kelas baru dengan menggunakan kelas yang ada. Yang baru dapat diciptakan dengan memperluas dan dengan membatasi kelas yang ada. \par
 Sekarang saatnya untuk kembali ke Python dan melihat bagaimana kelas diimplementasikan dengan Python. Kita mulai dengan kelas yang paling sederhana, yang bisa didefinisikan. Kami hanya memberikan nama tapi menghilangkan semua spesifikasi lebih lanjut dengan menggunakan kata kunci n. \par
 \vspace{12pt}
 \noindent 
-Class Account (objek): \par
+Class Account {objek}: \par
 \vspace{12pt}
 \noindent 
 Kami belum mendefinisikan atribut atau metode apa pun di kelas akun sederhana kami. Sekarang kita akan membuat sebuah instance dari kelas kosong ini: \par
@@ -490,7 +450,7 @@ Kami belum mendefinisikan atribut atau metode apa pun di kelas akun sederhana ka
 \noindent 
 >>> dari Account import Account \par
 \noindent 
->>> x = Akun () \par
+>>> x = Akun {} \par
 \noindent 
 >>> cetak x \par
 \noindent 
@@ -510,37 +470,37 @@ Sebuah metode disebut tanpa parameter ini "diri" \par
 Kami memperluas kelas kami dengan mendefinisikan beberapa metode. Tubuh dari metode ini masih belum ditentukan: \par
 \vspace{12pt}
 \noindent 
-kelas Account (objek): \par
+kelas Account {objek}: \par
 \vspace{12pt}
 \noindent 
-~~~ Transfer def (self, target, amount): \par
+~~~ Transfer def {self, target, amount}: \par
 \noindent 
 ~~~~~~~ lulus \par
 \noindent 
   \par
 \noindent 
-~~~ Def deposit (self, amount): \par
+~~~ Def deposit {self, amount}: \par
 \noindent 
 ~~~~~~~ lulus \par
 \noindent 
   \par
 \noindent 
-~~~ Def withdraw (self, amount): \par
+~~~ Def withdraw {self, amount}: \par
 \noindent 
 ~~~~~~~ lulus \par
 \noindent 
   \par
 \noindent 
-~~~ def keseimbangan (diri): \par
+~~~ def keseimbangan {diri}: \par
 \noindent 
 ~~~~~~~ lulus \par
 \vspace{12pt}
 \noindent 
-Python tidak memiliki konstruktor eksplisit seperti C ++ atau Java, tapi metode  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ () dengan Python adalah sesuatu yang serupa, meskipun sebenarnya bukan konstruktor. Ini berperilaku dalam banyak hal seperti konstruktor, mis. Ini adalah kode pertama yang dijalankan, saat instance baru dari sebuah kelas dibuat. Nama itu terdengar seperti konstruktor " $  \_  $ $  \_  $init $  \_  $ $  \_  $". Tapi secara tegas, akan salah jika menyebutnya sebagai konstruktor, karena contoh baru sudah "dibangun" pada saat metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ dipanggil. Tapi bagaimanapun, metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $ digunakan - seperti konstruktor pada bahasa pemrograman berorientasi objek lainnya - untuk menginisialisasi variabel instance dari sebuah objek. Definisi metode init terlihat seperti definisi metode lainnya: \par
+Python tidak memiliki konstruktor eksplisit seperti C ++ atau Java, tapi metode  \$  \_  \$ \$  \_  \$init  \$  \_  \$ \$  \_  \$ () dengan Python adalah sesuatu yang serupa, meskipun sebenarnya bukan konstruktor. Ini berperilaku dalam banyak hal seperti konstruktor, mis. Ini adalah kode pertama yang dijalankan, saat instance baru dari sebuah kelas dibuat. Nama itu terdengar seperti konstruktor " \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$". Tapi secara tegas, akan salah jika menyebutnya sebagai konstruktor, karena contoh baru sudah "dibangun" pada saat metode  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$ dipanggil. Tapi bagaimanapun, metode  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$ digunakan - seperti konstruktor pada bahasa pemrograman berorientasi objek lainnya - untuk menginisialisasi variabel instance dari sebuah objek. Definisi metode init terlihat seperti definisi metode lainnya: \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (self, holder, number, balance, credit $  \_  $line = 1500): \par
+Def  \$  \_  \$ \$  \_  \$init  \$  \_  \$ \$  \_  \$ {}self, holder, number, balance, credit \$  \_  \$line = 1500}: \par
 \noindent 
 ~~~~~~~ self.Holder = pemegang \par
 \noindent 
@@ -548,9 +508,9 @@ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (self, holder, number, balance, cr
 \noindent 
 ~~~~~~~ self.Balance = keseimbangan \par
 \noindent 
-~~~~~~~ self.CreditLine = credit $  \_  $line \par
+~~~~~~~ self.CreditLine = credit \$  \_  \$line \par
 \vspace{12pt}
-Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ada destruktor "nyata", tapi ada yang serupa, yaitu metode  $  \_  $ $  \_  $del $  \_  $ $  \_  $. Hal ini disebut ketika contoh ini akan hancur. Jika kelas dasar memiliki metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () kelas turunan, jika ada, harus secara eksplisit memanggilnya untuk memastikan penghapusan komponen kelas dasar contoh yang tepat. \par
+Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ada destruktor "nyata", tapi ada yang serupa, yaitu metode  \$  \_  \$ \$  \_  \$del \$  \_  \$ \$  \_  \$. Hal ini disebut ketika contoh ini akan hancur. Jika kelas dasar memiliki metode  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ {}, metode  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ () kelas turunan, jika ada, harus secara eksplisit memanggilnya untuk memastikan penghapusan komponen kelas dasar contoh yang tepat. \par
 \noindent 
 Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: \par
 \vspace{12pt}
@@ -558,15 +518,15 @@ Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: \par
 \noindent 
 Kelas Salam: \par
 \noindent 
-~~~ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, nama): \par
+~~~ Def  \$  \_  \$ \$  \_  \$init  \$  \_  \$ \$  \_  \$ (diri, nama): \par
 \noindent 
 ~~~~~~~ self.name = nama \par
 \noindent 
-~~~ Def  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (diri): \par
+~~~ Def  \$  \_  \$ \$  \_  \$del  \$  \_  \$ \$  \_  \$ {diri}: \par
 \noindent 
 ~~~~~~~ Cetak "Destructor dimulai" \par
 \noindent 
-~~~ Def SayHello (diri): \par
+~~~ Def SayHello {diri}: \par
 \noindent 
 ~~~~~~~ Cetak "Halo", self.name \par
 \vspace{12pt}
