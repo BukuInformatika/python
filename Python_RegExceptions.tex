@@ -1,107 +1,61 @@
 \section {pengertian exceptions reguler}
-Exception adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Exception adalah objek Python yang mewakili kesalahan, Saat  skrip Python menimbulkan Exception, dia harus menangani Exception begitu saja sehingga berhenti dan berhenti kembali , exception juga bisa dikatakan kelas dasar untuk semua pengecualian .Exceptions reguler merupakan urutan khusus karakter yang membantu dalam mencocokkan atau menemukan string atau rangkaian lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola khusus. Ekspresi reguler banyak digunakan di dunia UNIX. Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul reguler meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler.Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai didalam karakter, yang tentunya memiliki arti khusus apabila digunakan di dalam ekspresi reguler. Untuk menghindari kesalahpahaman  saat berhadapan dengan ekspresi reguler didalam pyhton, kita akan menggunakan Raw Strings sebagai r'expression '.
+Exception adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Exception adalah objek Python yang mewakili kesalahan, Saat  skrip Python menimbulkan Exception, dia harus menangani Exception begitu saja sehingga berhenti dan berhenti kembali , exception juga bisa dikatakan kelas dasar untuk semua pengecualian .Exceptions reguler merupakan urutan khusus karakter yang membantu dalam mencocokkan atau menemukan string atau rangkaian lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola khusus. Ekspresi reguler banyak digunakan di dunia UNIX. Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul reguler meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler.Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai didalam karakter, yang tentunya memiliki arti khusus apabila digunakan di dalam ekspresi reguler. Untuk menghindari kesalahpahaman  saat berhadapan dengan ekspresi reguler didalam pyhton, kita akan menggunakan Raw Strings sebagai r\'expression \'.
 
-\subsection {Penggunaan expression syntax reguler}
+\subsection{Penggunaan expression syntax reguler}
 menjelaskan bagaimana dalam menentukan sekumpulan string yang bercocokan. berfungsi memungkinkan dalam memeriksa apakah setiap string
 tertentu sangat sesuai dengan ekspresi yang diberikan, ekspresi dapat digabungkan juga digabungkan dengan dalam membentuk ekspresi reguler yang terbaru, sebagai contoh Apabila A dan B  keduanya adalah ekspresi reguler, maka AB ekspresi reguler. ekspresi reguler 
 bisa berisikan karakter spesial dan juga biasa.
 
-\subsubsection {Deskripsi parameter}
+\subsubsection{Deskripsi parameter}
 Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini merupakan string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$  \vert  \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok (num) atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup(num=0) Metode ini mengembalikan seluruh kecocokan atau jumlah subkelompok tertentu.groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) 
 
 \subsubsection {Penawaran paramater ptyhon}
 python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default)
 
-Contoh \par
-\noindent 
+Contoh 
+
  \$  \#  \$!/usr/bin/python \par
-\noindent 
-import re \par
-\vspace{12pt}
-\noindent 
+import re 
 line = "Cats are smarter than dogs"; 
-\begin{12pt}
-\noindent 
-matchObj = re.match{r'dogs', line, re.M  \vert  re.I} 
-\noindent 
-if matchObj: \par
-\noindent 
+matchObj = re.match{r'dogs', line, re.M  \vert  re.I}  
+if matchObj: 
 ~~ print "match --> matchObj.group() : ", matchObj.group{} 
-\noindent 
-else: \par
-\noindent 
-~~ print "No match!!" \
-\vspace{12pt}
-\noindent 
+else: 
+~~ print "No match!!" 
 searchObj = re.search{r'dogs', line, re.M \$  \vert  \$re.I} 
-\noindent 
-if searchObj: \par
+if searchObj: 
 \item
 ~~ print "search --> searchObj.group{} : ", searchObj.group{} 
 \item
-else: \par
-\noindent 
+else: 
 ~~ print "Nothing found!!" 
-\vspace{12pt}
-\noindent 
-No match!! \par
-\noindent 
+No match!!
 search~--> matchObj.group{}:  dogs 
-\begin{12pt}
 \item
-Cari dan Ganti \par
-\begin{12pt}
-\noindent 
-Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub. 
-\noindent 
+Cari dan Ganti 
+Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub.  
 Sintaksis 
-\vspace{12pt}
 Re.sub {pola, repl, string, max = 0} 
-\vspace{12pt}
-\noindent 
 Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi. 
-Contoh \par
-\noindent 
+Contoh 
  \$  \#  \$!/usr/bin/python 
-\noindent 
-import re \par
-\vspace{12pt}
-\noindent 
+import re 
 phone = "2004-959-559  \$  \#  \$ This is Phone Number" 
-\vspace{12pt}
-\noindent 
  \$  \#  \$ Delete Python-style comments 
-\noindent 
 num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} 
-\noindent 
-print "Phone Num : ", num \par
-\begin{12pt}
+print "Phone Num : ", num 
 \item
  \$  \#  \$ Remove anything other than digits 
-\noindent 
 num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     a
-\noindent 
-print "Phone Num : ", num 
-\begin{12pt}
-\noindent 
+print "Phone Num : ", num  
 Phone~Num :  2004-959-559 
-\noindent 
 Phone~Num :  2004959559 
-\vspace{12pt}
-\noindent 
-Regular Expression Modifiers: Option Flags 
+\section{Regular Expression Modifiers: Option Flags}
 Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif (\$  \vert  \$), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description  \par
-\noindent 
 re.I \hspace*{0.5in}  
-\noindent 
 Lakukan pencocokan case-insensitive. 
-\vspace{12pt}
-\noindent 
 re.L \hspace*{0.5in}  
-\noindent 
 Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( \$  \setminus \$ w dan  \$  \setminus  \$ W), serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). 
-\vspace{12pt}
-\noindent 
 re.M \hspace*{0.5in}  
 \noindent 
 Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun (bukan hanya permulaan string). 
@@ -245,39 +199,39 @@ print "</body>" \par
 print "</html>" \par
 \vspace{12pt}
 \noindent 
-<form action="/cgi-bin/hello $  \_  $get.py" method="get"> \par
+<form action="/cgi-bin/hello \$  \_  \$get.py" method="get"> \par
 \noindent 
-First~Name: <input type="text" name="first $  \_  $name">  <br /> \par
+First~Name: <input type="text" name="first \$  \_  \$name">  <br /> \par
 \vspace{12pt}
 \noindent 
-Last Name: <input type="text" name="last $  \_  $name" /> \par
+Last Name: <input type="text" name="last \$  \_  \$name" /> \par
 \noindent 
 <input type="submit" value="Submit" /> \par
 \noindent 
 </form> \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Import modules for CGI handling  \par
+ \$  \#  \$ Import modules for CGI handling  \par
 \noindent 
 import cgi, cgitb  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Create instance of FieldStorage  \par
+ \$  \#  \$ Create instance of FieldStorage  \par
 \noindent 
 form = cgi.FieldStorage()  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Get data from fields \par
+ \$  \#  \$ Get data from fields \par
 \noindent 
-first $  \_  $name = form.getvalue('first $  \_  $name') \par
+first \$  \_  \$name = form.getvalue('first \$  \_  \$name') \par
 \noindent 
-last $  \_  $name~ = form.getvalue('last $  \_  $name') \par
+last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') \par
 \vspace{12pt}
 \noindent 
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
 \noindent 
 print "<html>" \par
 \noindent 
@@ -289,25 +243,25 @@ print "</head>" \par
 \noindent 
 print "<body>" \par
 \noindent 
-print "<h2>Hello  $  \%  $s  $  \%  $s</h2>"  $  \%  $ (first $  \_  $name, last $  \_  $name) \par
+print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>" \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) \par
 \noindent 
 print "</body>" \par
 \noindent 
 print "</html>" \par
 \vspace{12pt}
 \noindent 
-<form action="/cgi-bin/hello $  \_  $get.py" method="post"> \par
+<form action="/cgi-bin/hello \$  \_  \$get.py" method="post"> \par
 \noindent 
-First Name: <input type="text" name="first $  \_  $name"><br /> \par
+First Name: <input type="text" name="first \$  \_  \$name"><br /> \par
 \noindent 
-Last Name: <input type="text" name="last $  \_  $name" /> \par
+Last Name: <input type="text" name="last \$  \_  \$name" /> \par
 \vspace{12pt}
 \noindent 
 <input type="submit" value="Submit" /> \par
 \noindent 
 </form> \par
 \vspace{12pt}
-Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello $  \_  $get.py untuk menangani masukan ini. \par
+Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello \$  \_  \$get.py untuk menangani masukan ini. \par
 \noindent 
 Melewati Data Kotak Centang ke Program CGI \par
 \vspace{12pt}
@@ -328,20 +282,20 @@ Berikut adalah contoh kode HTML untuk form dengan dua tombol radio  \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Import modules for CGI handling  \par
+ \$  \#  \$ Import modules for CGI handling  \par
 \noindent 
 import cgi, cgitb  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Create instance of FieldStorage  \par
+ \$  \#  \$ Create instance of FieldStorage  \par
 \noindent 
 form = cgi.FieldStorage()  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Get data from fields \par
+ \$  \#  \$ Get data from fields \par
 \noindent 
 if form.getvalue('subject'): \par
 \noindent 
@@ -352,7 +306,7 @@ else: \par
 ~~ subject = "Not set" \par
 \vspace{12pt}
 \noindent 
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
 \noindent 
 print "<html>" \par
 \noindent 
@@ -364,14 +318,14 @@ print "</head>" \par
 \noindent 
 print "<body>" \par
 \noindent 
-print "<h2> Selected Subject is  $  \%  $s</h2>"  $  \%  $ subject \par
+print "<h2> Selected Subject is  \$  \%  \$s</h2>"  \$  \%  \$ subject \par
 \noindent 
 print "</body>" \par
 \noindent 
 print "</html>" \par
 \vspace{12pt}
 \noindent 
-<form action="/cgi-bin/textarea.py" method="post" target=" $  \_  $blank"> \par
+<form action="/cgi-bin/textarea.py" method="post" target=" \$  \_  \$blank"> \par
 \noindent 
 <textarea name="textcontent" cols="40" rows="4"> \par
 \noindent 
@@ -384,31 +338,31 @@ Type your text here... \par
 </form> \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+ \$  \#  \$!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Import modules for CGI handling  \par
+ \$  \#  \$ Import modules for CGI handling  \par
 \noindent 
 import cgi, cgitb  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Create instance of FieldStorage  \par
+ \$  \#  \$ Create instance of FieldStorage  \par
 \noindent 
 form = cgi.FieldStorage()  \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Get data from fields \par
+ \$  \#  \$ Get data from fields \par
 \noindent 
 if form.getvalue('textcontent'): \par
 \noindent 
-~~ text $  \_  $content = form.getvalue('textcontent') \par
+~~ text \$  \_  \$content = form.getvalue('textcontent') \par
 \noindent 
 else: \par
 \noindent 
-~~ text $  \_  $content = "Not entered" \par
+~~ text \$  \_  \$content = "Not entered" \par
 \vspace{12pt}
 \noindent 
-print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n" \par
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
 \noindent 
 print "<html>" \par
 \noindent 
