@@ -84,15 +84,14 @@ Tipe Database Terdapat 12 tipe database, antara lain:
  
 \item Relational Database: Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.\end{enumerate}
  
-\vspace{12pt}
- 
-\textbf{Modul python}\textbf{ untuk mengakses database MySQL} 
-Untuk mengakses database MySQL dari Python, berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. 
+\subsection {Modul python untuk mengakses database MySQL}
+	Untuk mengakses database MySQL dari Python,berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. 
 
-\begin{enumerate}
-\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysql-server. Jangan lupa memasukkan password akun root untuk server MySQL. 
- 
-\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. Selanjutnya, kita akan masuk ke shell MySQL. Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
+	\begin{enumerate}
+		\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysqlserver. Jangan lupa memasukkan password akun root untuk server MySQL. 
+		\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. 
+
+Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
 mysql> create database teman; 
 mysql> use teman; \hspace*{1.69in}  
 mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); 
