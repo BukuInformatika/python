@@ -282,9 +282,9 @@ class~Parent:~~~~~~   \$  \#  \$ define parent class \par
 ~~~~~ print "Parent attribute :", Parent.parentAttr \par
 \vspace{12pt}
 \noindent 
-class Child(Parent):  $  \#  $ define child class \par
+class Child(Parent):  \$  \#  \$ define child class \par
 \noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self): \par
+~~ def  \$  \_  \$ \$  \_  \$init \$  \_  \$ \$  \_  \$(self): \par
 \noindent 
 ~~~~~ print "Calling child constructor" \par
 \vspace{12pt}
@@ -294,15 +294,15 @@ class Child(Parent):  $  \#  $ define child class \par
 ~~~~~ print 'Calling child method' \par
 \vspace{12pt}
 \noindent 
-c~=~Child()~~~~~~~    $  \#  $ instance of child \par
+c~=~Child()~~~~~~~    \$  \#  \$ instance of child \par
 \noindent 
-c.childMethod()~~~~~  $  \#  $ child calls its method \par
+c.childMethod()~~~~~  \$  \#  \$ child calls its method \par
 \noindent 
-c.parentMethod()~~~~  $  \#  $ calls parent's method \par
+c.parentMethod()~~~~  \$  \#  \$ calls parent's method \par
 \noindent 
-c.setAttr(200)~~~~~~  $  \#  $ again call parent's method \par
+c.setAttr(200)~~~~~~  \$  \#  \$ again call parent's method \par
 \noindent 
-c.getAttr()~~~~~~~~~  $  \#  $ again call parent's method \par
+c.getAttr()~~~~~~~~~  \$  \#  \$ again call parent's method \par
 \vspace{12pt}
 \noindent 
 Calling child constructor \par
@@ -314,17 +314,17 @@ Calling parent method \par
 Parent attribute : 200 \par
 \vspace{12pt}
 \noindent 
-class~A:~~~~~~   $  \#  $ define your class A \par
+class~A:~~~~~~   \$  \#  \$ define your class A \par
 \noindent 
 ..... \par
 \vspace{12pt}
 \noindent 
-class~B:~~~~~~~   $  \#  $ define your class B \par
+class~B:~~~~~~~   \$  \#  \$ define your class B \par
 \noindent 
 ..... \par
 \vspace{12pt}
 \noindent 
-class~C(A,~B):    $  \#  $ subclass of A and B \par
+class~C(A,~B):    \$  \#  \$ subclass of A and B \par
 \vspace{12pt}
 Anda dapat menggunakan fungsi issubclass () atau isinstance () untuk memeriksa hubungan dua kelas dan contoh. Fungsi boolean issubclass (sub, sup) mengembalikan true jika sub subclass yang diberikan memang merupakan subclass dari superclass sup. The isinstance (obj, Class) fungsi boolean mengembalikan true jika obj adalah turunan dari Class Class atau merupakan instance dari subclass of Class. \par
 \vspace{12pt}
@@ -335,26 +335,26 @@ Anda selalu dapat mengganti metode kelas induk Anda. Salah satu alasan untuk men
 Contoh \par
 \vspace{12pt}
 \noindent 
- $  \#  $! / Usr / bin / python \par
+ \$  \#  \$! / Usr / bin / python \par
 \vspace{12pt}
 \noindent 
-class parent:  $  \#  $ define parent class \par
+class parent:  \$  \#  \$ define parent class \par
 \noindent 
 ~~ Def myMethod (diri): \par
 \noindent 
 ~~~~~ Cetak 'metode induk panggilan' \par
 \vspace{12pt}
 \noindent 
-Kelas anak (orang tua):  $  \#  $ define child class \par
+Kelas anak (orang tua):  \$  \#  \$ define child class \par
 \noindent 
 ~~ Def myMethod (diri): \par
 \noindent 
 ~~~~~ Cetak 'metode memanggil anak' \par
 \vspace{12pt}
 \noindent 
-C = Anak ()  $  \#  $ contoh anak \par
+C = Anak ()  \$  \#  \$ contoh anak \par
 \noindent 
-C.myMethod ()  $  \#  $ metode panggilan balik anak \par
+C.myMethod ()  \$  \#  \$ metode panggilan balik anak \par
 \vspace{12pt}
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
@@ -371,7 +371,7 @@ Berikut daftar tabel beberapa fungsionalitas generik yang dapat Anda timpa di ke
 \noindent 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Operator overloading} \\} \par
 \vspace{12pt}
-Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa yang terjadi bila Anda menggunakan operator plus untuk menambahkannya? Kemungkinan besar Python akan berteriak pada Anda. Anda bisa, bagaimanapun, menentukan metode  $  \_  $ $  \_  $add $  \_  $ $  \_  $ di kelas Anda untuk melakukan penambahan vektor dan operator plus akan berperilaku sesuai harapan - \par
+Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa yang terjadi bila Anda menggunakan operator plus untuk menambahkannya? Kemungkinan besar Python akan berteriak pada Anda. Anda bisa, bagaimanapun, menentukan metode  \$  \_  \$ \$  \_  \$add \$  \_  \$ \$  \_  \$ di kelas Anda untuk melakukan penambahan vektor dan operator plus akan berperilaku sesuai harapan - \par
 Contoh \par
 \vspace{12pt}
 \noindent 
