@@ -120,7 +120,7 @@ Proses penilaian dari sebuah ekspresi akan menghasilkan sebuah nilai, itulah men
 	\end{verbatim}
 	
 \subsubsection{Menetapkan Nilai ke Variabel}
-	Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel.Tanda sama (=) digunakan untuk menetapkan nilai pada variabel. 
+Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel.Tanda sama (\=) digunakan untuk menetapkan nilai pada variabel. 
 Operand di sebelah kiri = operator adalah nama variabel dan operan di sebelah kanan = operator adalah nilai yang tersimpan dalam variabel.Misalnya:
 \begin{verbatim}
 	counter~=~100~~~~~~~    An integer assignment 
@@ -131,16 +131,17 @@ Operand di sebelah kiri = operator adalah nama variabel dan operan di sebelah ka
 	print name
 \end{verbatim}
 Di sini, 100, 1000.0 dan "John" adalah nilai yang diberikan untuk melawan, mil, dan variabel nama masing-masing.Ini menghasilkan hasil sebagai berikut:
+\begin{verbatim}
 	100 
 	1000.0
 	John 
-	Beberapa Tugas 
-Python memungkinkan Anda untuk menetapkan nilai tunggal ke beberapa variabel secara bersamaan. 
+\end{verbatim}
+Beberapa Tugas Python memungkinkan Anda untuk menetapkan nilai tunggal ke beberapa variabel secara bersamaan. 
 Misalnya:
-	a = b = c = 1
+	\verb|a = b = c = 1|
 Di sini, sebuah objek bilangan bulat dibuat dengan nilai 1, dan ketiga variabel ditugaskan ke lokasi memori yang sama.Anda juga dapat menetapkan beberapa objek ke beberapa variabel. 
 Misalnya:
-	a,b,c = 1,2,"john" 
+	\verb|a,b,c = 1,2,"john" |
 Di sini, dua objek bilangan bulat dengan nilai 1 dan 2 masing-masing diberikan pada variabel a dan b masing-masing, dan satu objek string dengan nilai "john" diberikan ke variabel c. 
 
 \subsubsection{Tipe data standar}
@@ -160,7 +161,7 @@ Misalnya:
 	var1 = 1 
 	var2 = 10 
 Anda juga dapat menghapus referensi ke objek nomor dengan menggunakan del statement. Sintaks dari pernyataan del adalah 
-del var1[,var2[,var3[....,varN]]]] 
+\verb|del var1[,var2[,var3[....,varN]]]] |
 Anda dapat menghapus satu objek atau beberapa objek dengan menggunakan pernyataan del. 
 Misalnya:
 	del var 
@@ -177,8 +178,8 @@ Python menampilkan bilangan bulat panjang dengan huruf besar L.
 Sebuah bilangan kompleks terdiri dari sepasang bilangan floating-point yang diinisialisasi langsung yang dinotasikan dengan x + yj, di mana x dan y adalah bilangan real dan j adalah unit imajiner. 
 
 \subsubsection{String Python}
-String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik.Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda.Subset string dapat diambil dengan menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir. 
-Tanda plus (+) adalah operator concatenation string dan tanda bintang (*) adalah operator pengulangan.
+String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik.Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda.Subset string dapat diambil dengan menggunakan operator slice \verb|([] dan [:])| dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir. 
+Tanda plus \(+\) adalah operator concatenation string dan tanda bintang \(*\) adalah operator pengulangan.
 Misalnya:
 \begin{verbatim}
 	str = 'Hello World!' 
@@ -198,8 +199,8 @@ Ini akan menghasilkan hasil sebagai berikut:
 	Hello World!TEST
 
 \subsubsection{Daftar Python}
-	Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item yang dipisahkan dengan tanda koma dan dilampirkan dalam tanda kurung siku ([]). Sampai batas tertentu, daftar serupa dengan array di C. Salah satu perbedaan di antara keduanya adalah bahwa semua item yang termasuk dalam daftar dapat terdiri dari tipe data yang berbeda.
-Nilai yang tersimpan dalam daftar dapat diakses menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 di awal daftar dan bekerja dengan cara mereka untuk mengakhiri -1. Tanda plus (+) adalah daftar operator concatenation, dan asterisk (*) adalah operator pengulangan.
+	Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item yang dipisahkan dengan tanda koma dan dilampirkan dalam tanda kurung siku (\[]). Sampai batas tertentu, daftar serupa dengan array di C. Salah satu perbedaan di antara keduanya adalah bahwa semua item yang termasuk dalam daftar dapat terdiri dari tipe data yang berbeda.
+Nilai yang tersimpan dalam daftar dapat diakses menggunakan operator slice \verb|([] dan [:])| dengan indeks mulai dari 0 di awal daftar dan bekerja dengan cara mereka untuk mengakhiri -1. Tanda plus (\+) adalah daftar operator concatenation, dan asterisk (\*) adalah operator pengulangan.
 Misalnya :
 \begin{verbatim}
 	list = [ 'abcd', 786 , 2.23, 'john', 70.2 ] 
@@ -219,9 +220,9 @@ Ini menghasilkan hasil sebagai berikut:
 	[123, 'john', 123, 'john'] 
 	['abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john'] 
 \end{verbatim}
-\subsubsection{Tupel Pytho}
-	Sebuah tupel adalah jenis data urutan lain yang serupa dengan daftar.Sebuah tupel terdiri dari sejumlah nilai yang dipisahkan dengan koma. Tidak seperti daftar, bagaimanapun, tupel tertutup dalam tanda kurung. 
-Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung ([]) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam tanda kurung (()) dan tidak dapat diperbarui.Tupel bisa dianggap sebagai daftar hanya-baca. 
+\subsection{Tupel Python}
+Sebuah tupel adalah jenis data urutan lain yang serupa dengan daftar. Sebuah tupel terdiri dari sejumlah nilai yang dipisahkan dengan koma. Tidak seperti daftar, bagaimanapun, tupel tertutup dalam tanda kurung. 
+Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung \([]\) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam tanda kurung dan tidak dapat diperbarui.Tupel bisa dianggap sebagai daftar hanya-baca. 
 Misalnya:
 \begin{verbatim}
 	tuple = ( 'abcd',~786 , 2.23, 'john', 70.2  ) 
@@ -251,8 +252,8 @@ Kode berikut tidak valid dengan tupel, karena kami mencoba memperbarui tupel, ya
 \end{verbatim}
 
 \subsubsection{Kamus Python}
-	Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi lain, bisa menjadi objek Python yang sewenang-wenang. 
-Kamus ditutupi oleh kurung kurawal ( {  } ) dan nilai dapat diberikan dan diakses menggunakan kawat gigi persegi ([]). 
+Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi lain, bisa menjadi objek Python yang sewenang-wenang. 
+Kamus ditutupi oleh kurung kurawal \({}\) dan nilai dapat diberikan dan diakses menggunakan kawat gigi persegi \([]\). 
 Misalnya:
 \begin{verbatim}
 dict =  {  } 
@@ -273,8 +274,7 @@ Ini menghasilkan hasil sebagai berikut:
 		['dept', 'code', 'name'] 
 		['sales', 6734, 'john'] 
 	\end{verbatim}
-Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan bahwa unsur-unsurnya\"rusak\";.Mereka hanya unordered. 
+Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan bahwa unsur-unsurnya 'rusak';.Mereka hanya unordered. 
 \subsection{Konversi Tipe Data}
 Terkadang, Anda mungkin perlu melakukan konversi antara jenis built-in. Untuk mengonversi antar jenis, Anda cukup menggunakan nama jenis sebagai fungsi. 
-Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. $  $Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi. 
-
+Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi. 
