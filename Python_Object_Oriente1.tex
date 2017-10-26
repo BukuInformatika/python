@@ -1,12 +1,12 @@
 \sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Object Oriented} \\}\end{center} \par
+\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Object Oriented} \\}\end{center}
 Phyton merupakan bahasa pemrograman yang berorientasi obyek dinamis, dapat digunakan untuk bermacam-macam pengembangan perangkat lunak. Phyton menyediakan dukungan yang kuat untuk integrasi dengan bahasa pemrograman lain dan alat-alat bantu lainnya.
 Object Oriented Programming (OOP) adalah sebuah pendekatan pemrograman dimana objek didefinisikan dengan metode (fungsi, action, atau events) dan sifat (nilai serta karakteristik), sehingga mudah dibaca, lebih banyak kode yang dapat digunakan kembali.
 Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek
 Objek adalah sesuatu yang menamping nilai atau data dan dapat dikenakan operasi tertentu:
 \begin {enumerate}
 \item Class atau Kelas: adalah struktur data yang bisa digunakan untuk mendefinisikan objek yang menyimpan data bersama-sama nilai-nilai dan perilaku. Kelas adalah suatu entitas yang merupakan bentuk program dari suatu abstraksi untuk permasalahan dunia nyata, dan instans dari class merupakan realisasi dari beberapa objek.
-\item Inheritace atau pewarisan merupakan konsep dalam pemrograman berbasis objek yang memungkinkan untuk membuat suatu kelas dengan didasarkan pada kelas yang sudah ada sehingga mewarisi semua method dan atributnya. Dengan cara seperti ini, semua method dan atribut yang terdapat pada kelas induk diturunkan ke kelas turunannya. Namun kelas turunannya dapat menambah method baru atau atribut baru tersendiri.
+e\item Inheritace atau pewarisan merupakan konsep dalam pemrograman berbasis objek yang memungkinkan untuk membuat suatu kelas dengan didasarkan pada kelas yang sudah ada sehingga mewarisi semua method dan atributnya. Dengan cara seperti ini, semua method dan atribut yang terdapat pada kelas induk diturunkan ke kelas turunannya. Namun kelas turunannya dapat menambah method baru atau atribut baru tersendiri.
 \item Method Constructor merupakan sebuah method yang akan otomatis dipanggil ketika objek diinstantiasi. Construktor umumnya digunakan untuk melakukan inisialisasi terhadap suatu variabel atau method.
 \end {enumerate} 
 
@@ -40,7 +40,7 @@ Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \
 \vspace{12pt}
 
 Berikut adalah contoh kelas Python sederhana - 
-\vspace{12pt}
+\begin{verbatim}
 class Employee: 
 ~~ 'Common base class for all employees' 
 ~~ empCount = 0 
@@ -55,10 +55,10 @@ class Employee:
 ~~ def displayEmployee(self): 
 \noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
-\vspace{12pt}
+\end{verbatim}
 
 \subsection{Variable empCount}
-Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. 
+Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode.
 \vspace{12pt}
 
 \subsection{Membuat Instance Objects}
@@ -76,13 +76,13 @@ Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kel
 \vspace{12pt}
 \noindent 
 Emp1.displayEmployee () 
-Emp2.displayEmployee ()
+Emp2.displayEmployee (
 Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount 
 \vspace{12pt}
 \noindent
 
 Sekarang, meletakkan semua konsep bersama - 
-\noindent 
+\noindent
  $  \#  $!/usr/bin/python 
 \vspace{12pt
 \noindent 
@@ -91,7 +91,7 @@ class Employee:
 ~~ 'Common base class for all employees' 
 ~~ empCount = 0 
 \vspace{12pt}
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
+~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary):
 ~~~~~ self.name = name 
 ~~~~~ self.salary = salary 
 ~~~~~ Employee.empCount += 1 
