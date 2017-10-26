@@ -83,8 +83,7 @@ searchObj.group(1)~:  Cats
 searchObj.group(2)~:  smarter
 \end{verbatim}
 
-Pencocokan Versus Searching
-
+\subsection{Pencocokan Versus Searching}
 Python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default).
 Contoh:
 
@@ -122,41 +121,40 @@ No match!!
 search~--> matchObj.group() :  dogs
 \end{verbatim}
 
-Cari dan Ganti
 
+\subsection{Cari dan Ganti}
 Salah satu metode re yang paling penting yang menggunakan ekspresi reguler adalah sub.
 
-Sintaksis
+  \subsubsection{Sintaksis}
+  Re.sub (pola, repl, string, max = 0)
 
-Re.sub (pola, repl, string, max = 0)
+  Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi.
+  Contoh
+  \begin{verbatim}
+   $  \#  $!/usr/bin/python
 
-Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi.
-Contoh
-\begin{verbatim}
- $  \#  $!/usr/bin/python
+  import re
 
-import re
+  phone = "2004-959-559  $  #  $ This is Phone Number"
 
-phone = "2004-959-559  $  #  $ This is Phone Number"
+  $  #  $ Delete Python-style comments
 
-$  #  $ Delete Python-style comments
+  num = re.sub(r' $  #  $.* $  $  $', "", phone)
 
-num = re.sub(r' $  #  $.* $  $  $', "", phone)
+  print "Phone Num : ", num
 
-print "Phone Num : ", num
+  $  #  $ Remove anything other than digits
 
-$  #  $ Remove anything other than digits
+  num~=~re.sub(r' $  $D',~"", phone)
 
-num~=~re.sub(r' $  $D',~"", phone)
+  print "Phone Num : ", num
 
-print "Phone Num : ", num
+  Phone~Num :  2004-959-559
 
-Phone~Num :  2004-959-559
+  Phone~Num :  2004959559
+  \end{verbatim}
 
-Phone~Num :  2004959559
-\end{verbatim}
-
-Regular Expression Modifiers: Option Flags
+\subsection{Regular Expression Modifiers: Option Flags}
 Ekspresi reguler literal mungkin termasuk pengubah opsional untuk mengendalikan berbagai aspek pencocokan. Pengubah ditentukan sebagai bendera pilihan. Anda dapat memberikan beberapa pengubah menggunakan OR eksklusif ( \$   \$), seperti yang ditunjukkan sebelumnya dan dapat ditunjukkan oleh salah satu dari ini – Modifier Description
 re.I
 Lakukan pencocokan case-insensitive.
@@ -244,7 +242,7 @@ Halo kata! Ini adalah program CGI pertamaku
 
 Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  \verb|$    $ r  $    $ n  $    $ r  $    $| n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS.
 
-Header HTTP
+\subsection{Header HTTP}
 nt-type: text / html  \verb|$    $ r  $    $ n  $    $ r  $    $| n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut -
 
 \begin{verbatim}
@@ -452,25 +450,25 @@ Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string ad
 
 Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan  Semua pola harus dicocokkan, tapi tidak semua senar Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok
 
-\verb|~ $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'|.
+\verb|~  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'|.
 
-\verb|~  $  \#  $ $  \#  $| All of the pattern must match, but it may appear anywhere.
+~  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere.
 
-\verb|~  $  \#  $ $  \#  $| On success, match.group() is matched text.
+~  $  \#  $ $  \#  $ On success, match.group() is matched text.
 
-\verb|~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii"|
+~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii"
 
-\verb|~~match = re.search(r'igs', 'piiig') =>  not found, match == None|
+~~match = re.search(r'igs', 'piiig') =>  not found, match == None
 
-\verb|~  $  \#  $ $  \#  $ . = any char but  $  \setminus  $n|
+~  $  \#  $ $  \#  $ . = any char but  $  \setminus  $n
 
-\verb|~~match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig"|
+~~match = re.search(r'..g', 'piiig') =>  found, match.group() == "iig"
 
-\verb|~  $  \#  $ $  \#  $  $  \setminus  $d = digit char,  $  \setminus  $w = word char|
+~  $  \#  $ $  \#  $  $  \setminus  $d = digit char,  $  \setminus  $w = word char
 
-\verb|~~match = re.search(r' $  \setminus  $d $  \setminus  $d $  \setminus  $d', 'p123g') =>  found, match.group() == "123"|
+~~match = re.search(r' $  \setminus  $d $  \setminus  $d $  \setminus  $d', 'p123g') =>  found, match.group() == "123"
 
-\verb|~~match = re.search(r' $  \setminus  $w $  \setminus  $w $  \setminus  $w', '@@abcd!!') =>  found, match.group() == "abc"|
+~~match = re.search(r' $  \setminus  $w $  \setminus  $w $  \setminus  $w', '@@abcd!!') =>  found, match.group() == "abc"
 
 Pengulangan
 
@@ -487,81 +485,81 @@ Pertama, pencarian menemukan kecocokan paling kiri untuk pola tersebut, dan kedu
 
 Contoh pengulangan
 
- \verb|$  \#  $ $  \#  $ i+ = one or more i's, as many as possible|.
+ $  \#  $ $  \#  $ i+ = one or more i's, as many as possible.
 
-\verb|~~match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"|
+~~match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"
 
-\verb|~  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the +|
+~  $  \#  $ $  \#  $ Finds the first/leftmost solution, and within it drives the +
 
-\verb|~  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest')|.
+~  $  \#  $ $  \#  $ as far as possible (aka 'leftmost and largest').
 
-\verb|~  $  \#  $ $  \#  $| In this example, note that it does not get to the second set of i's.
+~  $  \#  $ $  \#  $ In this example, note that it does not get to the second set of i's.
 
-\verb|~~match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"|
+~~match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"
 
-\verb|~  $  \#  $ $  \#  $  $  \setminus  $s* = zero or more whitespace chars|
+~  $  \#  $ $  \#  $  $  \setminus  $s* = zero or more whitespace chars
 
-\verb|~  $  \#  $ $  \#  $| Here look for 3 digits, possibly separated by whitespace.
+~  $  \#  $ $  \#  $ Here look for 3 digits, possibly separated by whitespace.
 
-\verb|~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d',~'xx1~2   3xx') =>  found, match.group() == "1 2   3"|
+~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d',~'xx1~2   3xx') =>  found, match.group() == "1 2   3"
 
-\verb|~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx12  3xx') =>  found, match.group() == "12  3"|
+~~match~=~re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx12  3xx') =>  found, match.group() == "12  3"
 
-\verb|~~match = re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx123xx') =>  found, match.group() == "123"|
+~~match = re.search(r' $  \setminus  $d $  \setminus  $s* $  \setminus  $d $  \setminus  $s* $  \setminus  $d', 'xx123xx') =>  found, match.group() == "123"
 
-\verb|~  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails:|
+~  $  \#  $ $  \#  $  $  \string^  $ = matches the start of string, so this fails:
 
-\verb|~~match = re.search(r' $  \string^  $b $  \setminus  $w+', 'foobar') =>  not found, match == None|
+~~match = re.search(r' $  \string^  $b $  \setminus  $w+', 'foobar') =>  not found, match == None
 
-\verb|~  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds:|
+~  $  \#  $ $  \#  $ but without the  $  \string^  $ it succeeds:
 
-\verb|~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar"|
+~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar"
 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Contoh email} \\}
+{\fontsize{14pt}{14pt}\selectfont \textbf{Contoh email} \\} \par
 Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \setminus  $ w + @  $  \setminus  $ w +':
 
 ~ Str = 'ungu alice-b@google.com monyet pencuci piring'
 
-\verb|~ Match = re.search (r ' $  \setminus  $ w + @  $  \setminus  $ w +', str)|
+~ Match = re.search (r ' $  \setminus  $ w + @  $  \setminus  $ w +', str)
 
 ~ Jika cocok:
 
-\verb|~~~ print match.group ()  $  \#  $ $  \#  $ 'b @ google'|
+~~~ print match.group ()  $  \#  $ $  \#  $ 'b @ google'
 
 Pencarian tidak mendapatkan keseluruhan alamat email dalam kasus ini karena  $  \setminus  $ w tidak cocok dengan '-' atau '.' Di alamat Kami akan memperbaikinya menggunakan fitur ekspresi reguler di bawah ini. Kurung persegi Tanda kurung siku dapat digunakan untuk menunjukkan sekumpulan karakter, jadi [abc] cocok dengan 'a' atau 'b' atau 'c'. Kode  $  \setminus  $ w,  $  \setminus  $ s dll bekerja di dalam kurung siku juga dengan satu pengecualian bahwa titik (.) Hanya berarti titik literal. Untuk masalah email, tanda kurung siku adalah cara mudah untuk menambahkan '.' Dan '-' ke kumpulan karakter yang dapat muncul di sekitar @ dengan pola r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +' untuk mendapatkan keseluruhan alamat email:
 
-\verb|~ Match = re.search (r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +', str)|
+~ Match = re.search (r '[ $  \setminus  $ w .-] + @ [ $  \setminus  $ w .-] +', str)
 
 ~ Jika cocok:
 
-\verb|~~~ print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'|
+~~~ print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'
 
-(Lebih banyak fitur kotak-braket) Anda juga dapat menggunakan tanda hubung untuk menunjukkan jangkauan, jadi [a-z] cocok dengan semua huruf kecil. Untuk menggunakan tanda hubung tanpa menunjukkan jangkauan, pasang tanda hubung terakhir, mis. [abc-]. Top-up ( $  \string^  $) pada awal set persegi-braket telah membalikkannya, jadi [ $  \string^  $ ab] berarti karakter apapun kecuali 'a' atau 'b'.
-
+(Lebih banyak fitur kotak-braket) Anda juga dapat menggunakan tanda hubung untuk menunjukkan jangkauan, jadi [a-z] cocok dengan semua huruf kecil. Untuk menggunakan tanda hubung tanpa menunjukkan jangkauan, pasang tanda hubung terakhir, mis. [abc-]. Top-up ( $  \string^  $) pada awal set persegi-braket telah membalikkannya, jadi [ $  \string^  $ ab] berarti karakter apapun kecuali 'a' atau 'b'. \par
+\vspace{16pt}
 {\fontsize{14pt}{14pt}\selectfont \textbf{Ekstraksi Grup} \\}
 Fitur "kelompok" dari ekspresi reguler memungkinkan Anda untuk memilih bagian dari teks yang sesuai. Misalkan untuk masalah email yang ingin kita ekstrak username dan host secara terpisah. Untuk melakukan ini, tambahkan kurung () di sekitar nama pengguna dan host dalam pola, seperti ini: r '([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)'. Dalam kasus ini, tanda kurung tidak mengubah pola yang akan cocok, sebaliknya mereka membentuk "kelompok" logis dalam teks pertandingan. Pada pencarian yang sukses, match.group (1) adalah teks kecocokan yang sesuai dengan tanda kurung kiri ke 1, dan match.group (2) adalah teks yang sesuai dengan kurung kiri ke-2. Match.group polos () masih merupakan keseluruhan teks pertandingan seperti biasa.
 
 ~ Str = 'ungu alice-b@google.com monyet pencuci piring'
 
-\verb|~ Match = re.search ('([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)', str)|
+~ Match = re.search ('([ $  \setminus  $ w .-] +) @ ([ $  \setminus  $ w .-] +)', str)
 
 ~ Jika cocok:
 
-\verb|~~~ Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com'| (keseluruhan pertandingan)
+~~~ Print match.group ()  $  \#  $ $  \#  $ 'alice-b@google.com' (keseluruhan pertandingan)
 
-\verb|~~~ Print match.group (1)  $  \#  $ $  \#  $ 'alice-b'| (nama pengguna, grup 1)
+~~~ Print match.group (1)  $  \#  $ $  \#  $ 'alice-b' (nama pengguna, grup 1)
 
-\verb|~~~ Print match.group (2)  $  \#  $ $  \#  $ 'google.com'| (host, grup 2)
+~~~ Print match.group (2)  $  \#  $ $  \#  $ 'google.com' (host, grup 2)
 
 Alur kerja umum dengan ekspresi reguler adalah Anda menulis sebuah pola untuk hal yang Anda cari, menambahkan kelompok tanda kurung untuk mengekstrak bagian yang Anda inginkan. Temukan semua Findall () mungkin adalah fungsi tunggal yang paling kuat dalam modul re. Di atas kami menggunakan re.search () untuk menemukan kecocokan pertama untuk sebuah pola. Findall () menemukan * semua * kecocokan dan mengembalikannya sebagai daftar string, dengan masing-masing string mewakili satu kecocokan.
 
-\verb|~  $  \#  $ $  \#  $| Misalkan kita memiliki teks dengan banyak alamat email
+~  $  \#  $ $  \#  $ Misalkan kita memiliki teks dengan banyak alamat email
 
 ~ Str = 'ungu alice@google.com, bla monyet bob@abc.com blah pencuci piring'
 
-\verb|~  $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan|
+~  $  \#  $ $  \#  $ disini re.findall () mengembalikan daftar semua string email yang ditemukan
 
-\verb|~ Email = re.findall (r '[ $  \setminus  $ w  $  \setminus  $ .-] + @ [ $  \setminus  $ w  $  \setminus  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com']|
+~ Email = re.findall (r '[ $  \setminus  $ w  $  \setminus  $ .-] + @ [ $  \setminus  $ w  $  \setminus  $ .-] +', str)  $  \#  $ $  \#  $ ['alice@google.com', 'bob@abc.com']
 
 ~ Untuk email di email:
 
