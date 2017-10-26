@@ -1,315 +1,316 @@
-\begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{FURTHER EXPRESSION} \\}\end{center} \par
+\begin{center}{\fontsize{14pt}{14pt}\selectfont \textbf{FURTHER EXPRESSION} \\}\end{center} 
 \vspace{14pt}
-\noindent 
- \hspace*{0.5in} Stiap kode yang dituliskan menggunakan bahasa yang dikompilasi seperti C, C++ atau Java dapat diintegrasikan ke skrip Python lainnya. Kode ini diagnggap sebagai ektensi. \par
-\noindent 
- \hspace*{0.5in} Modul ekstensi Python tidak lebih dari sekedar perpustakaan C biasa. Pada mesin Unix, perpustakaan ini biasanya diakhiri dengan .so (untuk objek bersama). Pada mesin windows, biasanya melihat .dll (untuk perpusatkaan yang terhubung secara dinamis).  \par
+
+ \hspace*{0.5in} Stiap kode yang dituliskan menggunakan bahasa yang dikompilasi seperti C, C++ atau Java dapat diintegrasikan ke skrip Python lainnya. Kode ini diagnggap sebagai ektensi. 
+
+ \hspace*{0.5in} Modul ekstensi Python tidak lebih dari sekedar perpustakaan C biasa. Pada mesin Unix, perpustakaan ini biasanya diakhiri dengan .so (untuk objek bersama). Pada mesin windows, biasanya melihat .dll (untuk perpusatkaan yang terhubung secara dinamis).  
 \vspace{12pt}
-\noindent 
-\textbf{4.1 Pra-Persyaratan untuk Menulis Ekstensi} \par
-\noindent 
- \hspace*{0.5in} Untuk memulai ektensi, memerlukan file header Python. Pada mesin Unix, biasanya memerlukan instalasi paket khusus pengembang seperti python 2-5. \par
-\noindent 
- \hspace*{0.5in} Pengguna window mendapatkan header ini sebagai bagian dari paket saat menggunakan pemasang Python biner. \par
-\noindent 
- \hspace*{0.5in} Harus memiliki pengetahuan yang baik tentang C atau C++ untuk menulis ekstensi Python menggunakan pemrograman C. \par
-\noindent 
- \hspace*{0.5in} Untuk melihat modul ekstensi Python, perlu mengelompokkan kode menjadi empat bagian : \par
-\noindent 
+
+\textbf{4.1 Pra-Persyaratan untuk Menulis Ekstensi} 
+
+ \hspace*{0.5in} Untuk memulai ektensi, memerlukan file header Python. Pada mesin Unix, biasanya memerlukan instalasi paket khusus pengembang seperti python 2-5. 
+
+ \hspace*{0.5in} Pengguna window mendapatkan header ini sebagai bagian dari paket saat menggunakan pemasang Python biner. 
+
+ \hspace*{0.5in} Harus memiliki pengetahuan yang baik tentang C atau C++ untuk menulis ekstensi Python menggunakan pemrograman C. 
+ 
+ \hspace*{0.5in} Untuk melihat modul ekstensi Python, perlu mengelompokkan kode menjadi empat bagian : 
+
 \begin{itemize}
-\item File header Python h \par
-\noindent 
-\item Fungsi C yang ingin ditampilkan sebagai antarmuka dari modul \par
-\noindent 
-\item Sebuah tabel memetakan nama-nama fungsi saat pengembang Python melihat ke fungsi C didalam modul ekstensi \par
-\noindent 
+\item File header Python h 
+
+\item Fungsi C yang ingin ditampilkan sebagai antarmuka dari modul 
+ 
+\item Sebuah tabel memetakan nama-nama fungsi saat pengembang Python melihat ke fungsi C didalam modul ekstensi 
+
 \item Fungsi inilisasi\end{itemize}
- \par
+ 
 \vspace{12pt}
-Perlu menyertakan file header Python.h di file sumber C memberi akses ke API Python internal digunakan untuk menghitung modul ke penerjamah. \par
-Menyertakan header Python.h sebelum header lain yang mungkin dibutuhkan. Mengikuti termasuk dengan fungsi yang ingin dipanggil dari Python. \par
-Tanda tangan penerapan C fungsi selalu mengambil salah satu dari tiga bentuk berikut : \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont static PyObject *MyFunction( PyObject *self, PyObject *args );} \par
-\noindent 
+Perlu menyertakan file header Python.h di file sumber C memberi akses ke API Python internal digunakan untuk menghitung modul ke penerjamah. 
+Menyertakan header Python.h sebelum header lain yang mungkin dibutuhkan. Mengikuti termasuk dengan fungsi yang ingin dipanggil dari Python. 
+Tanda tangan penerapan C fungsi selalu mengambil salah satu dari tiga bentuk berikut : 
+
+{\fontsize{10pt}{10pt}\selectfont static PyObject *MyFunction( PyObject *self, PyObject *args );} 
+ 
 \vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont static PyObject *MyFunctionWithKeywords(PyObject *self,} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PyObject *args,} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PyObject *kw);} \par
-\noindent 
+ 
+{\fontsize{10pt}{10pt}\selectfont static PyObject *MyFunctionWithKeywords(PyObject *self,} 
+
+{\fontsize{10pt}{10pt}\selectfont ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PyObject *args,} 
+
+{\fontsize{10pt}{10pt}\selectfont ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PyObject *kw);} 
+
 \vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont static PyObject *MyFunctionWithNoArgs( PyObject *self );} \par
+
+{\fontsize{10pt}{10pt}\selectfont static PyObject *MyFunctionWithNoArgs( PyObject *self );} 
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Masing-masing deklarasi seelumnya mengembalikan objek Python. Tidak ada yang namanya fungsi void dengan Python seperti ada di C. Jika ingin fungsi mengembalikan nilai, Python. Header Python mendefinisikan makro. Py $  \_  $Return $  \_  $None yang melakukan ini. \par
-\noindent 
- \hspace*{0.5in} Nama-nama fungsi C bisa menjadi apapun yang disuka karena tidak pernah diluar modul ekstensi mendefinisikan sebagai statis. \par
-\noindent 
- \hspace*{0.5in} Fungi Cbiasanya diberi nama dengan menggabnungkan modul dan fungsi Python bersama-sama yang ditunjukan disini : \par
-\noindent 
-static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ \par
-\noindent 
-~~ /* Do your stuff here. */ \par
-\noindent 
-~~ Py $  \_  $RETURN $  \_  $NONE; \par
-\noindent 
- $  \}  $ \par
+
+ \hspace*{0.5in} Masing-masing deklarasi seelumnya mengembalikan objek Python. Tidak ada yang namanya fungsi void dengan Python seperti ada di C. Jika ingin fungsi mengembalikan nilai, Python. Header Python mendefinisikan makro. Py $  \_  $Return $  \_  $None yang melakukan ini. 
+
+ \hspace*{0.5in} Nama-nama fungsi C bisa menjadi apapun yang disuka karena tidak pernah diluar modul ekstensi mendefinisikan sebagai statis. 
+
+ \hspace*{0.5in} Fungi Cbiasanya diberi nama dengan menggabnungkan modul dan fungsi Python bersama-sama yang ditunjukan disini : 
+
+
+static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ 
+
+~~ /* Do your stuff here. */ 
+
+~~ Py $  \_  $RETURN $  \_  $NONE; 
+
+ $  \}  $ 
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Ini adalah fungsi Python yang disebut func didalam modul-modul. Memasukkan petunjuk ke fungsi C ke dalam tabel metode untuk modul yang biasanya muncul selanjutnya dikode sumber tael pemetaan metode. \par
-\noindent 
- \hspace*{0.5in} Tabel metode ini adalah susunan sederhana dari struktur PyMethodSef. Struktur itu terlihat seperti ini : \par
-\noindent 
-struct PyMethodDef  $  \{  $ \par
-\noindent 
-~~ char *ml $  \_  $name; \par
-\noindent 
-~~ PyCFunction ml $  \_  $meth; \par
-\noindent 
-~~ int ml $  \_  $flags; \par
-\noindent 
-~~ char *ml $  \_  $doc; \par
-\noindent 
- $  \}  $; \par
+ 
+ \hspace*{0.5in} Ini adalah fungsi Python yang disebut func didalam modul-modul. Memasukkan petunjuk ke fungsi C ke dalam tabel metode untuk modul yang biasanya muncul selanjutnya dikode sumber tael pemetaan metode. 
+
+ \hspace*{0.5in} Tabel metode ini adalah susunan sederhana dari struktur PyMethodSef. Struktur itu terlihat seperti ini : 
+
+struct PyMethodDef  $  \{  $ 
+ 
+~~ char *ml $  \_  $name; 
+ 
+~~ PyCFunction ml $  \_  $meth; 
+
+~~ int ml $  \_  $flags; 
+ 
+~~ char *ml $  \_  $doc; 
+
+ $  \}  $; 
 \vspace{12pt}
-\noindent 
-Inilai uraian anggota struktur ini : \par
-\noindent 
+
+Inilai uraian anggota struktur ini : 
+
 \begin{itemize}
-\item Ml $  \_  $name \par
-Nama fungsi yang digunakan penafsir Python saat digunakan dalam program Python \par
-\noindent 
-\item Ml $  \_  $meth \par
-Menjadi alamaat ke fungsi yang memiliki salah satu tanda tangan yang dijelaskan dalam penelusuran sebelumnya \par
-\noindent 
-\item Ml $  \_  $flags \par
-Memberitahu penafsir yang mana dari tiga tanda tangan yang digunakan ml $  \_  $meth. Bendera ini biasanya mmiliki nilai meth $  \_  $varargs. Bendera ini dapat digandakan dengan or’ed dengan meth $  \_  $keywords jika ingin memiarkan argumen kata kunci masuk ke fungsi. Ini juga bisa memiliki nilai meth $  \_  $noargs yang menunjukan bahwa tidak ingin menerima argumen apa pun. \par
-\noindent 
-\item Ml $  \_  $doc \par
-Ini adalah docstring untuk fungsi yang bisa jadi NULL jika tidak ingin menulisnya. \par
+\item Ml $  \_  $name 
+Nama fungsi yang digunakan penafsir Python saat digunakan dalam program Python 
+
+\item Ml $  \_  $meth 
+Menjadi alamaat ke fungsi yang memiliki salah satu tanda tangan yang dijelaskan dalam penelusuran sebelumnya 
+
+\item Ml $  \_  $flags 
+Memberitahu penafsir yang mana dari tiga tanda tangan yang digunakan ml $  \_  $meth. Bendera ini biasanya mmiliki nilai meth $  \_  $varargs. Bendera ini dapat digandakan dengan or’ed dengan meth $  \_  $keywords jika ingin memiarkan argumen kata kunci masuk ke fungsi. Ini juga bisa memiliki nilai meth $  \_  $noargs yang menunjukan bahwa tidak ingin menerima argumen apa pun. 
+
+\item Ml $  \_  $doc 
+Ini adalah docstring untuk fungsi yang bisa jadi NULL jika tidak ingin menulisnya. 
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Tabel ini perlu diakhiri dengan sentinel yang terdiri dari NULL dan 0 untuk anggota yang sesuai. \par
+
+ \hspace*{0.5in} Tabel ini perlu diakhiri dengan sentinel yang terdiri dari NULL dan 0 untuk anggota yang sesuai. 
 \vspace{12pt}
-\noindent 
-Contoh: \par
-\noindent 
-static PyMethodDef \textit{module} $  \_  $methods[] =  $  \{  $ \par
-\noindent 
-~~  $  \{  $ "\textit{func}", (PyCFunction)\textit{module $  \_  $func}, METH $  \_  $NOARGS, NULL  $  \}  $, \par
-\noindent 
-~~  $  \{  $ NULL, NULL, 0, NULL  $  \}  $ \par
-\noindent 
- $  \}  $; \par
+
+Contoh: 
+
+static PyMethodDef \textit{module} $  \_  $methods[] =  $  \{  $ 
+
+~~  $  \{  $ "\textit{func}", (PyCFunction)\textit{module $  \_  $func}, METH $  \_  $NOARGS, NULL  $  \}  $, 
+
+~~  $  \{  $ NULL, NULL, 0, NULL  $  \}  $ 
+
+ $  \}  $; 
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Bagian terakhir dari modul ekstensi adalah fungsi inialisasi. Fungsi ini dipanggil oleh juru bahasa Python saat modul diisikan. Hal ini diperlukan agar fungsi diberi nama intiModule dimana modul adalah nama modul. \par
-\noindent 
- \hspace*{0.5in} Fungsi inialisasi perlu diekspor dari perpustakaan yang akan dibangun. Header Python mendefinisikan PyMODINIT $  \_  $Func untuk memasukkan mantra yang sesuai agar terjadi pada lingkungan tertentu tempat menyuusun. Yang harus dilakukan adalah mengunakan saat menentukan fungsinya. \par
-\noindent 
- \hspace*{0.5in} Fungsi inialisasi C umumnya memiliki strktur keseluruhan berikut : \par
-\noindent 
-PyMODINIT $  \_  $FUNC init\textit{Module}()  $  \{  $ \par
-\noindent 
-~~ Py $  \_  $InitModule3(\textit{func}, \textit{module} $  \_  $methods, "docstring..."); \par
-\noindent 
- $  \}  $ \par
+
+ \hspace*{0.5in} Bagian terakhir dari modul ekstensi adalah fungsi inialisasi. Fungsi ini dipanggil oleh juru bahasa Python saat modul diisikan. Hal ini diperlukan agar fungsi diberi nama intiModule dimana modul adalah nama modul. 
+
+ \hspace*{0.5in} Fungsi inialisasi perlu diekspor dari perpustakaan yang akan dibangun. Header Python mendefinisikan PyMODINIT $  \_  $Func untuk memasukkan mantra yang sesuai agar terjadi pada lingkungan tertentu tempat menyuusun. Yang harus dilakukan adalah mengunakan saat menentukan fungsinya. 
+
+ \hspace*{0.5in} Fungsi inialisasi C umumnya memiliki strktur keseluruhan berikut : 
+
+PyMODINIT $  \_  $FUNC init\textit{Module}()  $  \{  $ 
+
+~~ Py $  \_  $InitModule3(\textit{func}, \textit{module} $  \_  $methods, "docstring..."); 
+
+ $  \}  $ 
 \vspace{12pt}
-\noindent 
-Berikut adalah penjelasan fugsi Py $  \_  $IntiModule : \par
-\noindent 
-\item Func  \par
-\noindent 
-Ini adalah fungsi yang akan diekspor \par
-\noindent 
-\item Module \par
-\noindent 
-Ini adalah nama tabel pemetaan yang didefinisikan diatas \par
-\noindent 
+
+Berikut adalah penjelasan fugsi Py $  \_  $IntiModule : 
+
+\item Func  
+
+Ini adalah fungsi yang akan diekspor 
+
+\item Module 
+
+Ini adalah nama tabel pemetaan yang didefinisikan diatas 
+
 \item Docstring\end{itemize}
- \par
-\noindent 
-Ini adalah komentar yang ingin diberikan diekstensi \par
+ 
+
+Ini adalah komentar yang ingin diberikan diekstensi 
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Menempatkan ini semua bersama-sama terlihat sebagai berikut : \par
-\noindent 
- $  \#  $include <Python.h> \par
+
+ \hspace*{0.5in} Menempatkan ini semua bersama-sama terlihat sebagai berikut : 
+
+ $  \#  $include <Python.h>
 \vspace{12pt}
-\noindent 
-static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ \par
-\noindent 
-~~ /* Do your stuff here. */ \par
-\noindent 
-~~ Py $  \_  $RETURN $  \_  $NONE; \par
-\noindent 
- $  \}  $ \par
+
+static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ 
+
+~~ /* Do your stuff here. */ 
+
+~~ Py $  \_  $RETURN $  \_  $NONE; 
+
+ $  \}  $ 
 \vspace{12pt}
-\noindent 
-static PyMethodDef \textit{module} $  \_  $methods[] =  $  \{  $ \par
-\noindent 
-~~  $  \{  $ "\textit{func}", (PyCFunction)\textit{module $  \_  $func}, METH $  \_  $NOARGS, NULL  $  \}  $, \par
-\noindent 
-~~  $  \{  $ NULL, NULL, 0, NULL  $  \}  $ \par
-\noindent 
- $  \}  $; \par
+
+static PyMethodDef \textit{module} $  \_  $methods[] =  $  \{  $ 
+
+~~  $  \{  $ "\textit{func}", (PyCFunction)\textit{module $  \_  $func}, METH $  \_  $NOARGS, NULL  $  \}  $, 
+ 
+~~  $  \{  $ NULL, NULL, 0, NULL  $  \}  $ 
+
+ $  \}  $; 
 \vspace{12pt}
-\noindent 
-PyMODINIT $  \_  $FUNC init\textit{Module}()  $  \{  $ \par
-\noindent 
-~~ Py $  \_  $InitModule3(\textit{func}, \textit{module} $  \_  $methods, "docstring..."); \par
-\noindent 
- $  \}  $ \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-Contoh : \par
-\noindent 
- $  \#  $include <Python.h> \par
-\vspace{12pt}
-\noindent 
-static PyObject* helloworld(PyObject* self) \par
-\noindent 
- $  \{  $ \par
-\noindent 
-~~~ return Py $  \_  $BuildValue("s", "Hello, Python extensions!!"); \par
-\noindent 
- $  \}  $ \par
-\vspace{12pt}
-\noindent 
-static char helloworld $  \_  $docs[] = \par
-static PyMethodDef helloworld $  \_  $funcs[] =  $  \{  $ \par
-\noindent 
-~~~  $  \{  $"helloworld", (PyCFunction)helloworld,  \par
-\noindent 
-~~~~ METH $  \_  $NOARGS, helloworld $  \_  $docs $  \}  $, \par
-\noindent 
-~~~  $  \{  $NULL $  \}  $ \par
-\noindent 
- $  \}  $; \par
-\vspace{12pt}
-\noindent 
-void inithelloworld(void) \par
-\noindent 
- $  \{  $ \par
-\noindent 
-~~~ Py $  \_  $InitModule3("helloworld", helloworld $  \_  $funcs, \par
-\noindent 
-~~~~~~~~~~~~~~~~~~ "Extension module example!"); \par
-\noindent 
- $  \}  $ \par
+
+PyMODINIT $  \_  $FUNC init\textit{Module}()  $  \{  $ 
+ 
+~~ Py $  \_  $InitModule3(\textit{func}, \textit{module} $  \_  $methods, "docstring..."); 
+
+ $  \}  $ 
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Disini fungsi Py $  \_  $BuildValue digunakan untuk membangun nilai Python.  \par
+
+Contoh : 
+ 
+ $  \#  $include <Python.h> 
+\vspace{12pt}
+ 
+static PyObject* helloworld(PyObject* self) 
+
+ $  \{  $ 
+ 
+~~~ return Py $  \_  $BuildValue("s", "Hello, Python extensions!!"); 
+
+ $  \}  $ 
+\vspace{12pt}
+ 
+static char helloworld $  \_  $docs[] = 
+static PyMethodDef helloworld $  \_  $funcs[] =  $  \{  $ 
+
+~~~  $  \{  $"helloworld", (PyCFunction)helloworld,  
+
+~~~~ METH $  \_  $NOARGS, helloworld $  \_  $docs $  \}  $, 
+
+~~~  $  \{  $NULL $  \}  $
+ 
+ $  \}  $; 
+\vspace{12pt}
+
+void inithelloworld(void) 
+ 
+ $  \{  $ 
+
+~~~ Py $  \_  $InitModule3("helloworld", helloworld $  \_  $funcs, 
+
+~~~~~~~~~~~~~~~~~~ "Extension module example!"); 
+ 
+ $  \}  $ 
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
-\textbf{4.2 Membangun dan Menginstal Ekstensi} \par
+ 
+ \hspace*{0.5in} Disini fungsi Py $  \_  $BuildValue digunakan untuk membangun nilai Python.  
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Distutils paket membuatnya sangat mudah mendistribusikan modul Python, baik Python murni dan modul ekstensi dengan cara standar. Modul didistribusikan dalam bentuk sumber dan dibangun dan diinstal melalui skrip setup yang iasa disebut seup.py sebagai berikut : \par
-\noindent 
+ 
+\textbf{4.2 Membangun dan Menginstal Ekstensi} 
+\vspace{12pt}
+\vspace{12pt}
+
+ \hspace*{0.5in} Distutils paket membuatnya sangat mudah mendistribusikan modul Python, baik Python murni dan modul ekstensi dengan cara standar. Modul didistribusikan dalam bentuk sumber dan dibangun dan diinstal melalui skrip setup yang iasa disebut seup.py sebagai berikut : 
+ 
 from distutils.core import setup, Extension \par
-~~~~~ ext $  \_  $modules=[Extension('helloworld', ['hello.c'])]). \par
+~~~~~ ext $  \_  $modules=[Extension('helloworld', ['hello.c'])]). 
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Sekarang gunakan perintah berikut yang aka melalakukan semua kompilasi dan langkah penghubunh yang diperlukan dengan perintah dan bendera penyusun dan penghubung yang benar dan menyalin perpustakaan dinamis yang dihasilkan ke dalam direktori yang sesuai . \par
+
+ \hspace*{0.5in} Sekarang gunakan perintah berikut yang aka melalakukan semua kompilasi dan langkah penghubunh yang diperlukan dengan perintah dan bendera penyusun dan penghubung yang benar dan menyalin perpustakaan dinamis yang dihasilkan ke dalam direktori yang sesuai . 
 \vspace{12pt}
-\noindent 
-Contoh : \par
-\noindent 
- $  \$  $ python setup.py install \par
+ 
+Contoh : 
+ 
+ $  \$  $ python setup.py install 
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Pada sistem berbasis Unix kemungkinan besar perlu menjalankan perintah ini sebagai root agar meminta izin untuk menulis ke direktori paket situs. Ini biasanya tidak menjadi masalah pada window. \par
-Setelah~menginstal ekstensi, akan dapat mengimpor dan memanggil ekstensi tersebut di skrip Python  sebagai berikut : \par
-\noindent 
- $  \#  $!/usr/bin/python \par
-\noindent 
-import helloworld \par
+ 
+ \hspace*{0.5in} Pada sistem berbasis Unix kemungkinan besar perlu menjalankan perintah ini sebagai root agar meminta izin untuk menulis ke direktori paket situs. Ini biasanya tidak menjadi masalah pada window. 
+Setelah~menginstal ekstensi, akan dapat mengimpor dan memanggil ekstensi tersebut di skrip Python  sebagai berikut : 
+
+ $  \#  $!/usr/bin/python 
+ 
+import helloworld 
 \vspace{12pt}
-\noindent 
-print helloworld.helloworld() \par
+
+print helloworld.helloworld() 
 \vspace{14pt}
-\noindent 
-Ini~akan menghasilkan hasil sebagai berikut  : \par
-\noindent 
-Hello, Python extensions!! \par
+ 
+Ini~akan menghasilkan hasil sebagai berikut  : 
+
+Hello, Python extensions!! 
 \vspace{12pt}
-Seperti kemungkinan besar ingin mendefinisikan fungsi yang menerima argumen, dapat menggunakan salah satu tanda tangan lain untuk fungsi C. Sebagai contoh, fungsi berikut yang menerima beberapa parameter akan didefinisikan seperti ini : \par
-\noindent 
-static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ \par
-\noindent 
-~~ /* Parse args and do something interesting here. */ \par
-\noindent 
-~~ Py $  \_  $RETURN $  \_  $NONE; \par
-\noindent 
- $  \}  $ \par
+Seperti kemungkinan besar ingin mendefinisikan fungsi yang menerima argumen, dapat menggunakan salah satu tanda tangan lain untuk fungsi C. Sebagai contoh, fungsi berikut yang menerima beberapa parameter akan didefinisikan seperti ini : 
+
+static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ 
+
+~~ /* Parse args and do something interesting here. */ 
+
+~~ Py $  \_  $RETURN $  \_  $NONE; 
+
+ $  \}  $ 
 \vspace{12pt}
-Tabel metode yang berisi entri untuk fungsi baru akan terlihat seperti ini : \par
-\noindent 
-static PyMethodDef \textit{module} $  \_  $methods[] =  $  \{  $ \par
-\noindent 
-~~  $  \{  $ "\textit{func}", (PyCFunction)\textit{module $  \_  $func}, METH $  \_  $NOARGS, NULL  $  \}  $, \par
-\noindent 
-~~  $  \{  $ "\textit{func}", \textit{module $  \_  $func}, METH $  \_  $VARARGS, NULL  $  \}  $, \par
-\noindent 
-~~  $  \{  $ NULL, NULL, 0, NULL  $  \}  $ \par
-\noindent 
- $  \}  $; \par
+Tabel metode yang berisi entri untuk fungsi baru akan terlihat seperti ini : 
+
+static PyMethodDef \textit{module} $  \_  $methods[] =  $  \{  $ 
+
+~~  $  \{  $ "\textit{func}", (PyCFunction)\textit{module $  \_  $func}, METH $  \_  $NOARGS, NULL  $  \}  $, 
+
+~~  $  \{  $ "\textit{func}", \textit{module $  \_  $func}, METH $  \_  $VARARGS, NULL  $  \}  $, 
+
+~~  $  \{  $ NULL, NULL, 0, NULL  $  \}  $ 
+
+ $  \}  $; 
 \vspace{12pt}
-Menggunakan fungsi API PyArg $  \_  $ParseTuple untuk mengekstrak argumen dari satu pointer PyObject yang dikirimkan ke fungsi C. Argumen pertama untuk PyArg $  \_  $ParseTuple adalah args argumen. Ini adalah objek yang akan parsing. Argumen kedua adalah string format yang menggambarkan argumen saat mengharapkannya muncul. Setiap argumen diwakili oleh satu atau lebih karakter dalam format string sebagai berikut : \par
-\noindent 
-static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ \par
-\noindent 
-~~ int i; \par
-\noindent 
-~~ double d; \par
-\noindent 
-~~ char *s; \par
+Menggunakan fungsi API PyArg $  \_  $ParseTuple untuk mengekstrak argumen dari satu pointer PyObject yang dikirimkan ke fungsi C. Argumen pertama untuk PyArg $  \_  $ParseTuple adalah args argumen. Ini adalah objek yang akan parsing. Argumen kedua adalah string format yang menggambarkan argumen saat mengharapkannya muncul. Setiap argumen diwakili oleh satu atau lebih karakter dalam format string sebagai berikut : 
+
+static PyObject *\textit{module $  \_  $func}(PyObject *self, PyObject *args)  $  \{  $ 
+
+~~ int i;
+
+~~ double d; 
+
+~~ char *s; 
 \vspace{12pt}
-\noindent 
-~~ if (!PyArg $  \_  $ParseTuple(args, "ids",  $  \&  $i,  $  \&  $d,  $  \&  $s))  $  \{  $ \par
-\noindent 
-~~~~~ return NULL; \par
-\noindent 
-~~  $  \}  $ \par
-\noindent 
-~~  \par
-\noindent 
-~~ /* Do something interesting here. */ \par
-\noindent 
-~~ Py $  \_  $RETURN $  \_  $NONE; \par
-\noindent 
- $  \}  $ \par
+
+~~ if (!PyArg $  \_  $ParseTuple(args, "ids",  $  \&  $i,  $  \&  $d,  $  \&  $s))  $  \{  $ 
+
+~~~~~ return NULL; 
+
+~~  $  \}  $ 
+
+~~  
+
+~~ /* Do something interesting here. */ 
+
+~~ Py $  \_  $RETURN $  \_  $NONE; 
+
+ $  \}  $ 
 \vspace{12pt}
-Mengkompilasi versi baru dari modul dan mengimpornya memungkinkan untuk memanggil fungsi baru dengan sejumlah argumen dari jenis apa pun : \par
-\noindent 
-module.func(1, s="three", d=2.0) \par
-\noindent 
-module.func(i=1, d=2.0, s="three") \par
-\noindent 
-module.func(s="three", d=2.0, i=1) \par
-\vspace{12pt}
-\vspace{12pt}
+Mengkompilasi versi baru dari modul dan mengimpornya memungkinkan untuk memanggil fungsi baru dengan sejumlah argumen dari jenis apa pun : 
+
+module.func(1, s="three", d=2.0) 
+
+module.func(i=1, d=2.0, s="three") 
+
+module.func(s="three", d=2.0, i=1) 
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} Berikut adalah tanda tangan standar untuk fungsi PyArg $  \_  $ParseTuple: \par
-\noindent 
-int PyArg $  \_  $ParseTuple(PyObject* tuple,char* format,...) \par
 \vspace{12pt}
-\noindent 
+\vspace{12pt}
+
+ \hspace*{0.5in} Berikut adalah tanda tangan standar untuk fungsi PyArg $  \_  $ParseTuple: 
+ 
+int PyArg $  \_  $ParseTuple(PyObject* tuple,char* format,...) 
+\vspace{12pt}
+
  \hspace*{0.5in} Fungsi ini mengembalikan 0 untuk kesalahan, dan nilai tidak sama dengan 0 untuk kesuksesan. Tuple adalah PyObject * yang merupakan argumen kedua dari fungsi C. Format berikut adalah string C yang menggambarkan argumen wajib dan opsional.\vspace{\baselineskip}
-~~~~~~ Berikut adalah daftar kode format untuk fungsi PyArg $  \_  $ParseTuple: \par
+~~~~~~ Berikut adalah daftar kode format untuk fungsi PyArg $  \_  $ParseTuple: 
 
 
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
@@ -336,62 +337,62 @@ int PyArg $  \_  $ParseTuple(PyObject* tuple,char* format,...) \par
 
 \vspace{12pt}
 \vspace{14pt}
-Py $  \_  $BuildValue~mengambil format string seperti PyArg $  \_  $ParseTuple. Alih-alih menyampaikan alamat nilai yang sedang  bangun, melewati nilai sebenarnya. Berikut adalah contoh yang menunjukkan bagaimana menerapkan fungsi tambah : \par
-\noindent 
-static PyObject *foo $  \_  $add(PyObject *self, PyObject *args)  $  \{  $ \par
-\noindent 
-~~ int a; \par
-\noindent 
-~~ int b; \par
+Py $  \_  $BuildValue~mengambil format string seperti PyArg $  \_  $ParseTuple. Alih-alih menyampaikan alamat nilai yang sedang  bangun, melewati nilai sebenarnya. Berikut adalah contoh yang menunjukkan bagaimana menerapkan fungsi tambah : 
+
+static PyObject *foo $  \_  $add(PyObject *self, PyObject *args)  $  \{  $ 
+
+~~ int a; 
+
+~~ int b; 
 \vspace{12pt}
-\noindent 
-~~ if (!PyArg $  \_  $ParseTuple(args, "ii",  $  \&  $a,  $  \&  $b))  $  \{  $ \par
-\noindent 
-~~~~~ return NULL; \par
-\noindent 
-~~  $  \}  $ \par
-\noindent 
-~~ return Py $  \_  $BuildValue("i", a + b); \par
-\noindent 
- $  \}  $ \par
+
+~~ if (!PyArg $  \_  $ParseTuple(args, "ii",  $  \&  $a,  $  \&  $b))  $  \{  $ 
+
+~~~~~ return NULL;
+
+~~  $  \}  $ 
+
+~~ return Py $  \_  $BuildValue("i", a + b); 
+
+ $  \}  $ 
 \vspace{14pt}
-Ini adalah apa yang akan terlihat seperti jika diimplementasikan dengan Python : \par
-\noindent 
-def add(a, b): \par
-\noindent 
-~~ return (a + b) \par
+Ini adalah apa yang akan terlihat seperti jika diimplementasikan dengan Python : 
+
+def add(a, b):
+
+~~ return (a + b) 
 \vspace{16pt}
-Mengembalikan dua nilai dari fungsi sebagai berikut, ini akan dipicu menggunakan daftar dengan Python : \par
-\noindent 
-static PyObject *foo $  \_  $add $  \_  $subtract(PyObject *self, PyObject *args)  $  \{  $ \par
-\noindent 
-~~ int a; \par
-\noindent 
-~~ int b; \par
+Mengembalikan dua nilai dari fungsi sebagai berikut, ini akan dipicu menggunakan daftar dengan Python :
+
+static PyObject *foo $  \_  $add $  \_  $subtract(PyObject *self, PyObject *args)  $  \{  $ 
+
+~~ int a; 
+
+~~ int b; 
 \vspace{12pt}
-\noindent 
-~~ if (!PyArg $  \_  $ParseTuple(args, "ii",  $  \&  $a,  $  \&  $b))  $  \{  $ \par
-\noindent 
-~~~~~ return NULL; \par
-\noindent 
-~~  $  \}  $ \par
-\noindent 
-~~ return Py $  \_  $BuildValue("ii", a + b, a - b); \par
-\noindent 
- $  \}  $ \par
+
+~~ if (!PyArg $  \_  $ParseTuple(args, "ii",  $  \&  $a,  $  \&  $b))  $  \{  $ 
+
+~~~~~ return NULL; 
+
+~~  $  \}  $ 
+
+~~ return Py $  \_  $BuildValue("ii", a + b, a - b); 
+
+ $  \}  $ 
 \vspace{16pt}
-Ini adalah apa yang akan terlihat seperti jika diimplementasikan dengan Python : \par
-\noindent 
-def add $  \_  $subtract(a, b): \par
-\noindent 
-~~ return (a + b, a - b) \par
+Ini adalah apa yang akan terlihat seperti jika diimplementasikan dengan Python : 
+
+def add $  \_  $subtract(a, b): 
+
+~~ return (a + b, a - b) 
 \vspace{14pt}
-Berikut~adalah tanda tangan standar untuk fungsi Py $  \_  $BuildValue  : \par
-\noindent 
-PyObject* Py $  \_  $BuildValue(char* format,...) \par
+Berikut~adalah tanda tangan standar untuk fungsi Py $  \_  $BuildValue  : 
+
+PyObject* Py $  \_  $BuildValue(char* format,...) 
 \vspace{14pt}
-Format berikut adalah string C yang menggambarkan objek Python untuk dibangun. Argumentasi berikut Py $  \_  $BuildValue adalah nilai C dari mana hasilnya dibuat. Hasil PyObject * adalah referensi baru.  \par
-Berikut daftar tabel string kode yang umum digunakan, yang nol atau lebihnya digabungkan ke dalam format string : \par
+Format berikut adalah string C yang menggambarkan objek Python untuk dibangun. Argumentasi berikut Py $  \_  $BuildValue adalah nilai C dari mana hasilnya dibuat. Hasil PyObject * adalah referensi baru.  
+Berikut daftar tabel string kode yang umum digunakan, yang nol atau lebihnya digabungkan ke dalam format string : 
 
 
  %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
@@ -433,6 +434,6 @@ Berikut daftar tabel string kode yang umum digunakan, yang nol atau lebihnya dig
 
 
 \vspace{12pt}
-Kode  $  \{  $... $  \}  $ membangun kamus dari sejumlah nilai C, kunci dan nilai bergantian. Misalnya, Py $  \_  $BuildValue (" $  \{  $issi $  \}  $", 23, "zig", "zag", 42) mengembalikan kamus seperti  $  \{  $23: 'zig', 'zag': 42 $  \}  $ Python. \par
-Setiap blok memori yang dialokasikan dengan malloc () pada akhirnya harus dikembalikan ke genangan memori yang tersedia dengan satu panggilan untuk membebaskan (). Penting untuk menelepon gratis () pada waktu yang tepat. Jika alamat blok dilupakan tapi gratis () tidak dipanggil untuk itu, memori yang ditempatinya tidak dapat digunakan kembali sampai program berakhir. Ini disebut kebocoran memori. Di sisi lain, jika sebuah program memanggil gratis () untuk satu blok dan kemudian terus menggunakan blok tersebut, itu menciptakan konflik dengan penggunaan ulang blok melalui panggilan malloc () yang lain. Ini disebut dengan menggunakan memori yang dibebaskan. Ini memiliki konsekuensi buruk yang sama seperti merujuk pada data yang tidak diinisiasi - dump inti, hasil yang salah, crash misterius. \par
-Karena Python membuat penggunaan malloc () dan gratis (), dibutuhkan strategi untuk menghindari kebocoran memori dan juga penggunaan memori yang bebas. Metode yang dipilih disebut penghitungan referensi. Prinsipnya sederhana: setiap objek berisi sebuah counter, yang bertambah saat referensi ke objek disimpan di suatu tempat, dan yang dikurangi saat referensi itu dihapus. Saat counter mencapai nol, referensi terakhir ke objek telah dihapus dan objeknya dibebaskan. \par
+Kode  $  \{  $... $  \}  $ membangun kamus dari sejumlah nilai C, kunci dan nilai bergantian. Misalnya, Py $  \_  $BuildValue (" $  \{  $issi $  \}  $", 23, "zig", "zag", 42) mengembalikan kamus seperti  $  \{  $23: 'zig', 'zag': 42 $  \}  $ Python. 
+Setiap blok memori yang dialokasikan dengan malloc () pada akhirnya harus dikembalikan ke genangan memori yang tersedia dengan satu panggilan untuk membebaskan (). Penting untuk menelepon gratis () pada waktu yang tepat. Jika alamat blok dilupakan tapi gratis () tidak dipanggil untuk itu, memori yang ditempatinya tidak dapat digunakan kembali sampai program berakhir. Ini disebut kebocoran memori. Di sisi lain, jika sebuah program memanggil gratis () untuk satu blok dan kemudian terus menggunakan blok tersebut, itu menciptakan konflik dengan penggunaan ulang blok melalui panggilan malloc () yang lain. Ini disebut dengan menggunakan memori yang dibebaskan. Ini memiliki konsekuensi buruk yang sama seperti merujuk pada data yang tidak diinisiasi - dump inti, hasil yang salah, crash misterius. 
+Karena Python membuat penggunaan malloc () dan gratis (), dibutuhkan strategi untuk menghindari kebocoran memori dan juga penggunaan memori yang bebas. Metode yang dipilih disebut penghitungan referensi. Prinsipnya sederhana: setiap objek berisi sebuah counter, yang bertambah saat referensi ke objek disimpan di suatu tempat, dan yang dikurangi saat referensi itu dihapus. Saat counter mencapai nol, referensi terakhir ke objek telah dihapus dan objeknya dibebaskan. 
