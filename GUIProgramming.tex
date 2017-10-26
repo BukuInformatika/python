@@ -1,5 +1,9 @@
-\dokumentclass{article}
-\chapter{GUI Programming}
+\documentclass [12pt,a4paper,notitlepage,oneside,bahasa]{article}
+\usepackage[left=3.00 cm, right=2.00 cm, bottom=2.00 cm, top=3.00 cm]{geometry}
+\begin{document}
+\title{\textbf GUI Programming}
+\maketitle
+
 Python menyediakan berbagai pilihan untuk mengembangkan antarmuka pengguna grafis (GUIs). 
 Berikut dibawah ini merupakan berbagai pilihan yang disediakan oleh Python :
 \begin{itemize}
@@ -9,17 +13,17 @@ Tkinter merupakan standar bahasa python yang ditetapkan untuk membangun suatu an
 wxPython adalah toolkit antarmuka pengguna grafis (GUI) yang digunakan dalam skripsi ini dan ini adalah pembungkus untuk toolkit wxWidgets.
 \item Jpython \par
 Port Python untuk java yang memberikan Python script akses tanpa batas ke perpustakaan kelas java pada mesin lokal \par
+\end{itemize}
 \vspace{12pt}
 \noindent 
-\section{Tkinter Pemrograman} \par
+\section{\textbf Tkinter Pemrograman}
 Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan dengan Tkinter menyediakan cara yang amat mudah dan cepat untuk membuat aplikasi GUI. Tkinter menyediakan antarmuka yang berorientasi objek yang kuat untuk toolkit Tk GUI.
-\noindent 
  \hspace*{0.5in} Membuat aplikasi GUI menggunakan Tkinter adalah tugas yang mudah. Yang diperlukan adalah melakukan langkah-langkah sebagai berikut : 
 \begin{enumerate} 
-\item 1. Mengimpor Tkinter modul 
-\item 2. Buat jendela utama aplikasi GUI
-\item 3. Tambahkan satu atau lebih dari widget tersebut diatas ke aplikasi GUI
-\item 4. Masukkan acara loop utama untuk mengambil tindakan terhadap setiap peristiwa dipicu oleh pengguna
+	\item Mengimpor Tkinter modul 
+	\item Buat jendela utama aplikasi GUI
+	\item Tambahkan satu atau lebih dari widget tersebut diatas ke aplikasi GUI
+	\item Masukkan acara loop utama untuk mengambil tindakan terhadap setiap peristiwa dipicu oleh pengguna
 \end{enumerate}
 
  %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
@@ -30,24 +34,17 @@ Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Contoh : \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import Tkinter} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont top = Tkinter.Tk()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont   $  \#  $ Code to add widgets will go here...} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont top.mainloop()} \par
-\vspace{10pt}
-\noindent 
-\textbf{3.2 Tkinter Widget} \par
+Contoh : 
+\# \!/usr/bin/python 
+import Tkinter 
+top = Tkinter.Tk()
+\#  Code to add widgets will go here...
+top.mainloop()
+
+\section{\textbf Tkinter Widget} \par
 \noindent 
  \hspace*{0.5in} Tkinter menyediakan berbagai kontrol seperti tombol, label dan kotak teks yang digunakan dalam aplikasi GUI. 
- Kontrol ini biasanya disebut widget.  \par
+ Kontrol ini biasanya disebut widget.
 \noindent 
  \hspace*{0.5in} Saat ini ada 15 jenis widget di Tkinter. berikut adalah contoh widget serta penjelasan singkat pada tabel ini: \par
 
@@ -56,14 +53,6 @@ Contoh : \par
 
 
 \begin{table}[ht]
-	\caption{Ukuran}
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
-		\hline
-		Operator & Penjelasan \cr
-		\hline
-		Button untuk Menampilkan tombol dalam aplikasi&\cr
-		Canvas untuk Menggambar bentuk seperti garis, oval, poligon dan persegi panjang dalam aplikasi&\cr
-		Checkbutton untuk Menampilkan sejumlah pilihan sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu&\cr
 		Entry untuk Menampilka bidang garis teks tunggal untuk menerima nilai-nilai dari pengguna\cr
 		Frame untuk Wadah untuk mengatur widget lainnya&\cr
 		Label untuk Memberikan keterangan garis single untuk widget lainnya. Hal ini berisi gambar&\cr
@@ -85,6 +74,14 @@ Contoh : \par
 	\begin{tablenotes}
 	\end{tablenotes}
 \end{table}
+	\caption{Ukuran}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\hline
+		Operator & Penjelasan \cr
+		\hline
+		Button untuk Menampilkan tombol dalam aplikasi&\cr
+		Canvas untuk Menggambar bentuk seperti garis, oval, poligon dan persegi panjang dalam aplikasi&\cr
+		Checkbutton untuk Menampilkan sejumlah pilihan sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu&\cr
 
 
  %%%%%%%%%%%%  Table No:1 Ends Here %%%%%%%%%%%%%%
@@ -453,3 +450,4 @@ Python (plus Tkinter) ini bersifat open-source, maka banyak sekali komunitas-kom
 \vspace{12pt}
 \vspace{12pt}
 
+\end{document}
