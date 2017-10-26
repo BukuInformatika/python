@@ -16,7 +16,7 @@ Berikut adalah sintaks untuk fungsi ini :
 \begin{verbatim}
 
 
- $  #  $! / Usr / bin / python
+ $  \#  $! / Usr / bin / python
 Impor kembali
 
 Line = "Kucing lebih pintar dari pada anjing"
@@ -56,7 +56,7 @@ Berikut adalah deskripsi parameternya:
 Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini adalah string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$    \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok (num) atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup(num=0) Metode ini mengembalikan seluruh kecocokan (atau jumlah subkelompok tertentu)groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada)
 
 \begin{verbatim}
- $  #  $!/usr/bin/python
+ $  \#  $!/usr/bin/python
 
 import re
 
@@ -91,7 +91,7 @@ Contoh:
 \begin{verbatim}
 
 
- $  #  $!/usr/bin/python
+ $  \#  $!/usr/bin/python
 
 import re
 
@@ -133,7 +133,7 @@ Re.sub (pola, repl, string, max = 0)
 Metode ini menggantikan semua kemunculan pola RE dalam string dengan repl, mengganti semua kejadian kecuali jika max diberikan. Metode ini mengembalikan string yang dimodifikasi.
 Contoh
 \begin{verbatim}
- $  #  $!/usr/bin/python
+ $  \#  $!/usr/bin/python
 
 import re
 
@@ -181,18 +181,18 @@ Kecuali karakter kontrol, (+?.  \verb|$   $  $   $  $  \$  $ () []  $  \{  $ $  
 
 Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python -
 \begin{verbatim}
- $  #  $!/usr/bin/python
+ $  \#  $!/usr/bin/python
 
 import re
 
 phone = "2004-959-559  $  #  $ This is Phone Number"
 
- $  #  $ Delete Python-style comments
+ $  \#  $ Delete Python-style comments
 num = re.sub(r' $  \#  $.* $  \$  $', "", phone)
 
 print "Phone Num : ", num
 
- $  #  $ Remove anything other than digits
+ $  \#  $ Remove anything other than digits
 
 num~=~re.sub(r' $    $D',~"", phone)
 
@@ -248,18 +248,18 @@ Header HTTP
 nt-type: text / html  \verb|$    $ r  $    $ n  $    $ r  $    $| n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut -
 
 \begin{verbatim}
-  
- $  #  $!/usr/bin/python
 
- $  #  $ Import modules for CGI handling
+ $  \#  $!/usr/bin/python
+
+ $  \#  $ Import modules for CGI handling
 
 import cgi, cgitb
 
- $  #  $ Create instance of FieldStorage
+ $  \#  $ Create instance of FieldStorage
 
 form = cgi.FieldStorage()
 
- $  #  $ Get data from fields
+ $  \#  $ Get data from fields
 
 first $  \_  $name = form.getvalue('first $  \_  $name')
 
@@ -293,17 +293,17 @@ Last Name: <input type="text" name="last $  \_  $name" />
 
 </form>
 
- $  #  $!/usr/bin/python
+ $  \#  $!/usr/bin/python
 
- $  #  $ Import modules for CGI handling
+ $  \#  $ Import modules for CGI handling
 
 import cgi, cgitb
 
- $  #  $ Create instance of FieldStorage
+ $  \#  $ Create instance of FieldStorage
 
 form = cgi.FieldStorage()
 
-$  #  $ Get data from fields
+$  \#  $ Get data from fields
 
 first $  \_  $name = form.getvalue('first $  \_  $name')
 
@@ -351,18 +351,18 @@ Melewati Data Tombol Radio ke Program CGI
 Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih.
 
 Berikut adalah contoh kode HTML untuk form dengan dua tombol radio
-
-\$  \#  \$!/usr/bin/python
+\begin{verbatim}
+$  \#  $!/usr/bin/python
 
  $  \#  $ Import modules for CGI handling
 
 import cgi, cgitb
 
- \$  \#  \$ Create instance of FieldStorage
+ $  \#  $ Create instance of FieldStorage
 
 form = cgi.FieldStorage()
 
-\$  \#  \$ Get data from fields
+$  \#  $ Get data from fields
 
 if form.getvalue('subject'):
 
@@ -372,25 +372,25 @@ else:
 
 ~~ subject = "Not set"
 
-print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"
 
-print \"<html>\"
+print "<html>"
 
-print \"<head>\"
+print "<head>"
 
-print \"<title>Radio - Fourth CGI Program</title>\"
+print "<title>Radio - Fourth CGI Program</title>"
 
-print \"</head>\"
+print "</head>"
 
-print \"<body>\"
+print "<body>"
 
-print \verb|"<h2> Selected Subject is  $  \%  $s  $  \%  $s</h2>"  $  \%  $ subject
+print "<h2> Selected Subject is  $  \%  $  $  \%  $s</h2>"  $  \%  $ subject
 
-print \"</body>\"
+print "</body>"
 
-print \"</html>\"
+print "</html>"
 
-<form action=\verb|"/cgi-bin/textarea.py" method="post" target=" $  \_  $blank">
+<form action="/cgi-bin/textarea.py" method="post" target=" $  \_  $blank">
 
 <textarea name="textcontent" cols="40" rows="4">
 
@@ -402,18 +402,18 @@ Type your text here...
 
 </form>
 
- \$  \#  \$!/usr/bin/python
+ $  \#  $!/usr/bin/python
 
  $  \#  $ Import modules for CGI handling
 
 import cgi, cgitb
 
- \$  \#  \$ Create instance of FieldStorage
+ $  \#  $ Create instance of FieldStorage
 
 form = cgi.FieldStorage()
 
- \$  \#  \$ Get data from fields
- 
+ $  \#  $ Get data from fields
+
 if form.getvalue('textcontent'):
 
 ~~ text $  \_  $content = form.getvalue('textcontent')
@@ -422,25 +422,27 @@ else:
 
 ~~ text $  \_  $content = "Not entered"
 
-print \verb|"Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"|
+print "Content-type:text/html $  \setminus  $r $  \setminus  $n $  \setminus  $r $  \setminus  $n"
 
-print \"<html>\"
+print "<html>"
 
-print \"<head>\"
+print "<head>"
 
-print \"<title>Text Area - Fifth CGI Program</title>\"
+print "<title>Text Area - Fifth CGI Program</title>"
 
-print \"</head>\"
+print "</head>"
 
-print \"<body>"
+print "<body>"
 
-print \verb|"<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content
+print "<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content
 
-print \"</body>\"
+print "</body>"
+
+\end{verbatim}
 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Menggunakan Cookies di CGI} \\}
 
-Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik. 
+Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik.
 
 Contoh dasar
 
@@ -516,7 +518,7 @@ Contoh pengulangan
 ~~match = re.search(r'b $  \setminus  $w+', 'foobar') =>  found, match.group() == "bar"
 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Contoh email} \\} \par
-Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \setminus  $ w + @  $  \setminus  $ w +': 
+Misalkan Anda ingin mencari alamat email di dalam string 'xyz alice-b@google.com ungu monyet'. Kami akan menggunakan ini sebagai contoh yang berjalan untuk menunjukkan fitur ekspresi reguler. Berikut adalah upaya menggunakan pola r ' $  \setminus  $ w + @  $  \setminus  $ w +':
 
 ~ Str = 'ungu alice-b@google.com monyet pencuci piring'
 
@@ -566,4 +568,3 @@ Alur kerja umum dengan ekspresi reguler adalah Anda menulis sebuah pola untuk ha
 ~~~  $  \#  $ Lakukan sesuatu dengan setiap string email yang ditemukan
 
 ~~~ Cetak email
-
