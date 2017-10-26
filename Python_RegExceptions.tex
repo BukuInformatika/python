@@ -1,4 +1,4 @@
-\section {pengertian exceptions reguler}
+\section{pengertian exceptions reguler}
 Exception adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Exception adalah objek Python yang mewakili kesalahan, Saat  skrip Python menimbulkan Exception, dia harus menangani Exception begitu saja sehingga berhenti dan berhenti kembali , exception juga bisa dikatakan kelas dasar untuk semua pengecualian .Exceptions reguler merupakan urutan khusus karakter yang membantu dalam mencocokkan atau menemukan string atau rangkaian lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola khusus. Ekspresi reguler banyak digunakan di dunia UNIX. Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul reguler meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler.Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai didalam karakter, yang tentunya memiliki arti khusus apabila digunakan di dalam ekspresi reguler. Untuk menghindari kesalahpahaman  saat berhadapan dengan ekspresi reguler didalam pyhton, kita akan menggunakan Raw Strings sebagai r\'expression \'.
 
 \subsection{Penggunaan expression syntax reguler}
@@ -9,7 +9,7 @@ bisa berisikan karakter spesial dan juga biasa.
 \subsubsection{Deskripsi parameter}
 Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini merupakan string, yang akan dicari agar sesuai dengan pola di manapun dalam string. Flags Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( \$  \vert  \$). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini.Fungsi re.search mengembalikan objek yang cocok pada kesuksesan, tidak ada yang gagal. Kami menggunakan fungsi kelompok (num) atau kelompok () dari objek pertandingan untuk mendapatkan ekspresi yang sesuai.Match Object Methods Descriptiongroup(num=0) Metode ini mengembalikan seluruh kecocokan atau jumlah subkelompok tertentu.groups()Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) 
 
-\subsubsection {Penawaran paramater ptyhon}
+\subsubsection{Penawaran paramater ptyhon}
 python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default)
 
 Contoh 
@@ -57,349 +57,175 @@ Lakukan pencocokan case-insensitive.
 re.L \hspace*{0.5in}  
 Menafsirkan kata-kata sesuai dengan lokal saat ini. Interpretasi ini mempengaruhi kelompok abjad ( \$  \setminus \$ w dan  \$  \setminus  \$ W), serta perilaku batas kata ( \$  \setminus  \$ b dan  \$  \setminus  \$ B). 
 re.M \hspace*{0.5in}  
-\noindent 
 Membuat  \$  \$  \$ cocok dengan akhir baris (bukan hanya akhir string) dan membuat  \$  \string^  \$ cocok dengan awal baris apapun (bukan hanya permulaan string). 
-\vspace{12pt}
-\noindent 
 re.S \hspace*{0.5in}  
 \noindent 
 Membuat sebuah periode (dot) cocok dengan karakter apapun, termasuk newline. 
-\noindent 
 re.U \hspace*{0.5in}  
-\noindent 
 Menginterpretasikan huruf sesuai dengan karakter Unicode. Flag ini mempengaruhi perilaku  $  \setminus  $ w,  $  \setminus  $ W,  $  \setminus  \$ b,  \$  \setminus  \$ B. 
-\vspace{12pt}
-\noindent 
-re.X \hspace*{0.5in}  
-\noindent 
+re.X \hspace*{0.5in}   
 Memungkinkan sintaks ekspresi reguler "manis". Ini mengabaikan spasi (kecuali di dalam himpunan [] atau saat diloloskan oleh garis miring terbalik) dan memperlakukan unescaped  \$  \#  \$ sebagai tanda komentar. 
-\vspace{12pt}
-\noindent 
-\textbf{Pola Ekspresi Reguler} 
-\vspace{12pt}
-\noindent 
+\textbf{Pola Ekspresi Reguler}  
 Kecuali karakter kontrol, {+?.  \$  \string^  \$  \$  \string^  \$  \$  \$  \$ {} []  \$  \{  \$ \$  \}  \$  \$  \vert  \$  \$  \setminus  \$}, Semua karakter cocok dengan karakter mereka sendiri. Anda bisa lolos dari karakter kontrol sebelum mendahului dengan garis miring terbalik. \par
 \noindent 
 Berikut daftar tabel sintaks ekspresi reguler yang tersedia dengan Python - 
-\noindent 
  \$  \#  \$!/usr/bin/python 
-\noindent 
 import re \par
 \BEGIN{12pt}
-\noindent 
 phone = "2004-959-559  \$  \#  \$ This is Phone Number" 
-\vspace{12pt}
-\noindent 
  \$  \#  \$ Delete Python-style comments 
-\noindent 
 num = re.sub{r' \$  \#  \$.* \$  \$  \$', "", phone} 
-\noindent 
 print "Phone Num : ", num 
-\vspace{12pt}
-\noindent 
  \$  \#  \$ Remove anything other than digits 
 \noindent 
 num~=~re.sub{r' \$  \setminus  \$D',~"", phone}     
-\noindent 
 print "Phone Num : ", num 
 \begin{12pt}
 \item 
 Phone~Num :  2004-959-559 
-\noindent 
 Phone~Num :  2004959559 
 \begin{12pt}
-\noindent 
 <Directory "/var/www/cgi-bin"> 
-\noindent 
-~~ AllowOverride None 
-\noindent 
-~~ Options ExecCGI 
-\noindent 
+~~ AllowOverride None  
+~~ Options ExecCGI  
 ~~ Order allow,deny 
-\noindent 
 ~~ Allow from all 
-\noindent 
 </Directory> 
 \vspace{12pt}
-\noindent 
 <Directory "/var/www/cgi-bin"> 
-\noindent 
 Options All
-\noindent 
 </Directory> 
-\vspace{12pt}
-\noindent 
 !/usr/bin/python 
-\vspace{12pt}
-\noindent 
 print "Content-type:text/html   \setminus  r   \setminus  n   \setminus  r   \setminus  n" 
-\noindent 
 print '<html>' 
-\noindent 
 print '<head>' 
-\noindent 
 print '<title>Hello Word - First CGI Program</title>' 
-\noindent 
 print '</head>' 
-\noindent 
 print '<body>' 
-\noindent 
 print '<h2>Hello Word! This is my first CGI program</h2>' 
-\noindent 
 print '</body>' 
-\noindent 
 print '</html>' 
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
 Halo kata! Ini adalah program CGI pertamaku 
-\vspace{12pt}
 Script hello.py ini adalah skrip Python yang sederhana, yang menuliskan hasilnya pada file STDOUT, yaitu layar. Ada satu fitur penting dan tambahan yang tersedia yang merupakan baris pertama yang akan dicetak Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \setminus  \$ r  \$  \setminus  \$ n. Baris ini dikirim kembali ke browser dan ini menentukan jenis konten yang akan ditampilkan di layar browser. Sekarang Anda pasti sudah mengerti konsep dasar CGI dan Anda bisa menulis banyak program CGI yang rumit dengan menggunakan Python. Script ini bisa berinteraksi dengan sistem eksternal lainnya juga untuk bertukar informasi seperti RDBMS. 
 Header HTTP 
-\vspace{12pt}
-\noindent 
-Baris Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \setminus  \$ r  \$  \setminus  \$ n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut - \par
-\noindent 
+Baris Content-type: text / html  \$  \setminus  \$ r  \$  \setminus  \$ n  \$  \setminus  \$ r  \$  \setminus  \$ n adalah bagian dari header HTTP yang dikirim ke browser untuk memahami isinya. Semua header HTTP akan berada dalam bentuk berikut - 
  \$  \#  \$!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Import modules for CGI handling  
-\noindent 
+ \$  \#  \$ Import modules for CGI handling   
 import cgi, cgitb  \par
-\vspace{12pt}
-\noindent 
  \$  \#  \$ Create instance of FieldStorage 
+form = cgi.FieldStorage()  
+   \#   Get data from fields 
+first \$  \_  \$name = form.getvalue('first \$  \_  \$name') 
+last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') 
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" 
+print "<html>" 
+print "<head>" 
+print "<title>Hello - Second CGI Program</title>" 
+print "</head>" 
+print "<body>" 
+print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>"  \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) 
+print "</body>" 
+print "</html>" 
+<form action="/cgi-bin/hello \$  \_  \$get.py" method="get"> 
+First~Name: <input type="text" name="first \$  \_  \$name">  <br /> 
+Last Name: <input type="text" name="last \$  \_  \$name" /> 
+<input type="submit" value="Submit" />
+</form>
+\vspace{12pt}
+ \$  \#  \$!/usr/bin/python 
+ \$  \#  \$ Import modules for CGI handling  
+import cgi, cgitb  
+ \$  \#  \$ Create instance of FieldStorage 
+form = cgi.FieldStorage()  
+ \$  \#  \$ Get data from fields
+first \$  \_  \$name = form.getvalue('first \$  \_  \$name') 
+last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') 
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n"
+print "<html>"
+print "<head>" 
+print "<title>Hello - Second CGI Program</title>" 
+print "</head>" 
+print "<body>" 
+print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>" \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) 
+print "</body>" 
+print "</html>" 
+<form action="/cgi-bin/hello \$  \_  \$get.py" method="post"> 
+First Name: <input type="text" name="first \$  \_  \$name"><br /> 
+Last Name: <input type="text" name="last \$  \_  \$name" /> 
+<input type="submit" value="Submit" /> 
+Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello \$  \_  \$get.py untuk menangani masukan ini. 
+Melewati Data Kotak Centang ke Program CGI 
+Kotak centang digunakan bila lebih dari satu pilihan diperlukan untuk dipilih. 
+Berikut adalah contoh kode HTML untuk form dengan dua kotak centang - 
+Melewati Data Tombol Radio ke Program CGI 
+Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih. 
+Berikut adalah contoh kode HTML untuk form dengan dua tombol radio  
+ \$  \#  \$!/usr/bin/python 
+
+ \$  \#  \$ Import modules for CGI handling  
+
+import cgi, cgitb 
+
+ \$  \#  \$ Create instance of FieldStorage  
 \noindent 
 form = cgi.FieldStorage()  
-\vspace{12pt}
-\noindent 
-   \#   Get data from fields 
-\noindent 
-first \$  \_  \$name = form.getvalue('first \$  \_  \$name') 
-\noindent 
-last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') 
-\vspace{12pt}
-\noindent 
+
+ \$  \#  \$ Get data from fields
+
+if form.getvalue('subject'): 
+
+~~ subject = form.getvalue('subject') 
+else: 
+~~ subject = "Not set" 
+
+print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" 
+print "<html>" 
+print "<head>" 
+print "<title>Radio - Fourth CGI Program</title>" 
+print "</head>"
+print "<body>" 
+print "<h2> Selected Subject is  \$  \%  \$s</h2>"  \$  \%  \$ subject 
+print "</body>" 
+print "</html>" 
+<form action="/cgi-bin/textarea.py" method="post" target=" \$  \_  \$blank"> 
+<textarea name="textcontent" cols="40" rows="4"> 
+Type your text here... 
+</textarea> 
+<input type="submit" value="Submit" /> 
+</form>  
+ \$  \#  \$!/usr/bin/python 
+ \$  \#  \$ Import modules for CGI handling  
+import cgi, cgitb  
+  \$  \#  \$ Create instance of FieldStorage  
+form = cgi.FieldStorage()  
+ \$  \#  \$ Get data from fields 
+if form.getvalue('textcontent'): 
+~~ text \$  \_  \$content = form.getvalue('textcontent') 
+else: 
+
+~~ text \$  \_  \$content = "Not entered" 
+
 print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" 
 \noindent 
 print "<html>" 
-\noindent 
-print "<head>" 
-\noindent 
-print "<title>Hello - Second CGI Program</title>" 
-\noindent 
+print "<head>"; 
+print "<title>Text Area - Fifth CGI Program</title>" 
 print "</head>" 
-\noindent 
 print "<body>" 
-\noindent 
-print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>"  \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) \par
-\noindent 
-print "</body>" \par
-\noindent 
-print "</html>" \par
-\vspace{12pt}
-\noindent 
-<form action="/cgi-bin/hello \$  \_  \$get.py" method="get"> \par
-\noindent 
-First~Name: <input type="text" name="first \$  \_  \$name">  <br /> \par
-\vspace{12pt}
-\noindent 
-Last Name: <input type="text" name="last \$  \_  \$name" /> \par
-\noindent 
-<input type="submit" value="Submit" /> \par
-\noindent 
-</form> \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Import modules for CGI handling  \par
-\noindent 
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Create instance of FieldStorage  \par
-\noindent 
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Get data from fields \par
-\noindent 
-first \$  \_  \$name = form.getvalue('first \$  \_  \$name') \par
-\noindent 
-last \$  \_  \$name~ = form.getvalue('last \$  \_  \$name') \par
-\vspace{12pt}
-\noindent 
-print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
-\noindent 
-print "<html>" \par
-\noindent 
-print "<head>" \par
-\noindent 
-print "<title>Hello - Second CGI Program</title>" \par
-\noindent 
-print "</head>" \par
-\noindent 
-print "<body>" \par
-\noindent 
-print "<h2>Hello  \$  \%  \$s  \$  \%  \$s</h2>" \$  \%  \$ (first \$  \_  \$name, last \$  \_  \$name) \par
-\noindent 
-print "</body>" \par
-\noindent 
-print "</html>" \par
-\vspace{12pt}
-\noindent 
-<form action="/cgi-bin/hello \$  \_  \$get.py" method="post"> \par
-\noindent 
-First Name: <input type="text" name="first \$  \_  \$name"><br /> \par
-\noindent 
-Last Name: <input type="text" name="last \$  \_  \$name" /> \par
-\vspace{12pt}
-\noindent 
-<input type="submit" value="Submit" /> \par
-\noindent 
-</form> \par
-\vspace{12pt}
-Mari kita ambil lagi contoh yang sama seperti di atas yang melewati dua nilai menggunakan HTML FORMULIR dan tombol kirim. Kami menggunakan skrip CGI yang sama hello \$  \_  \$get.py untuk menangani masukan ini. \par
-\noindent 
-Melewati Data Kotak Centang ke Program CGI \par
-\vspace{12pt}
-\noindent 
-Kotak centang digunakan bila lebih dari satu pilihan diperlukan untuk dipilih. \par
-\vspace{12pt}
-\noindent 
-Berikut adalah contoh kode HTML untuk form dengan dua kotak centang - \par
-\vspace{12pt}
-\noindent 
-Melewati Data Tombol Radio ke Program CGI \par
-\vspace{12pt}
-\noindent 
-Tombol Radio digunakan bila hanya satu pilihan yang harus dipilih. \par
-\vspace{12pt}
-\noindent 
-Berikut adalah contoh kode HTML untuk form dengan dua tombol radio  \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
- \$  \#  \$!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Import modules for CGI handling  \par
-\noindent 
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Create instance of FieldStorage  \par
-\noindent 
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Get data from fields \par
-\noindent 
-if form.getvalue('subject'): \par
-\noindent 
-~~ subject = form.getvalue('subject') \par
-\noindent 
-else: \par
-\noindent 
-~~ subject = "Not set" \par
-\vspace{12pt}
-\noindent 
-print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
-\noindent 
-print "<html>" \par
-\noindent 
-print "<head>" \par
-\noindent 
-print "<title>Radio - Fourth CGI Program</title>" \par
-\noindent 
-print "</head>" \par
-\noindent 
-print "<body>" \par
-\noindent 
-print "<h2> Selected Subject is  \$  \%  \$s</h2>"  \$  \%  \$ subject \par
-\noindent 
-print "</body>" \par
-\noindent 
-print "</html>" \par
-\vspace{12pt}
-\noindent 
-<form action="/cgi-bin/textarea.py" method="post" target=" \$  \_  \$blank"> \par
-\noindent 
-<textarea name="textcontent" cols="40" rows="4"> \par
-\noindent 
-Type your text here... \par
-\noindent 
-</textarea> \par
-\noindent 
-<input type="submit" value="Submit" /> \par
-\noindent 
-</form> \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Import modules for CGI handling  \par
-\noindent 
-import cgi, cgitb  \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Create instance of FieldStorage  \par
-\noindent 
-form = cgi.FieldStorage()  \par
-\vspace{12pt}
-\noindent 
- \$  \#  \$ Get data from fields \par
-\noindent 
-if form.getvalue('textcontent'): \par
-\noindent 
-~~ text \$  \_  \$content = form.getvalue('textcontent') \par
-\noindent 
-else: \par
-\noindent 
-~~ text \$  \_  \$content = "Not entered" \par
-\vspace{12pt}
-\noindent 
-print "Content-type:text/html \$  \setminus  \$r \$  \setminus  \$n \$  \setminus  \$r \$  \setminus  \$n" \par
-\noindent 
-print "<html>" \par
-\noindent 
-print "<head>"; \par
-\noindent 
-print "<title>Text Area - Fifth CGI Program</title>" \par
-\noindent 
-print "</head>" \par
-\noindent 
-print "<body>" \par
-\noindent 
-print "<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content \par
-\noindent 
-print "</body>" \par
-\vspace{12pt}
-\noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Menggunakan Cookies di CGI} \\} \par
-\noindent 
-Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik. \par
-\noindent 
-Contoh dasar \par
-\noindent 
-Joke: apa yang kamu sebut babi dengan tiga mata? Piiig! \par
-\vspace{12pt}
-\noindent 
-Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string adalah: \par
-\noindent 
-Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan  Semua pola harus dicocokkan, tapi tidak semua senar Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok \par
-\vspace{12pt}
-\noindent 
-~  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'. \par
-\noindent 
-~  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere. \par
-\noindent 
-~  $  \#  $ $  \#  $ On success, match.group() is matched text. \par
-\noindent 
-~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii" \par
+print "<h2> Entered Text Content is  $  \%  $s</h2>"  $  \%  $ text $  \_  $content 
+print "</body>" 
+{\fontsize{14pt}{14pt}\selectfont \textbf{Menggunakan Cookies di CGI} \\} 
+
+section{pengertian protokol}
+Protokol HTTP adalah protokol tanpa kewarganegaraan. Untuk situs komersial, diperlukan informasi sesi di antara halaman yang berbeda. Misalnya, satu pendaftaran pengguna berakhir setelah menyelesaikan banyak halaman. Bagaimana cara mempertahankan informasi sesi pengguna di semua halaman web? Dalam banyak situasi, menggunakan cookies adalah metode yang paling efisien untuk mengingat dan melacak preferensi, pembelian, komisi, dan informasi lainnya yang diperlukan untuk pengalaman pengunjung atau statistik situs yang lebih baik. 
+Contoh dasar 
+Joke: apa yang kamu sebut babi dengan tiga mata? Piiig! 
+Aturan dasar pencarian ekspresi reguler untuk sebuah pola dalam sebuah string adalah: \
+Hasil pencarian melalui string dari awal sampai akhir, berhenti pada pertandingan pertama yang ditemukan  Semua pola harus dicocokkan, tapi tidak semua senar Jika cocok = re.search (tepuk, str) berhasil, kecocokan tidak ada dan khususnya match.group () adalah teks yang cocok
+~  $  \#  $ $  \#  $ Search for pattern 'iii' in string 'piiig'. 
+~  $  \#  $ $  \#  $ All of the pattern must match, but it may appear anywhere. 
+~  $  \#  $ $  \#  $ On success, match.group() is matched text. 
+~~match = re.search(r'iii', 'piiig') =>  found, match.group() == "iii" 
 \noindent 
 ~~match = re.search(r'igs', 'piiig') =>  not found, match == None \par
 \vspace{12pt}
