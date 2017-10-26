@@ -40,7 +40,7 @@ item Untuk konten statis seperti CSS, Javascript, gambar, maupun HTML web server
 Meskipun terdapat banyak pengembangan selanjutnya dari CGI, ilustrasi sederhana di atas merupakan konsep inti ketika awal pengembangan CGI. Umumnya aplikasi web dengan CGI memiliki kelemahan di mana menjalankan script CGI mengharuskan web server untuk membuat sebuah proses baru. Pembuatan proses baru biasanya akan menggunakan banyak waktu dan memori dibandingkan dengan eksekusi script, dan karena setiap pengguna yang terkoneksi akan mengakibatkan hal ini terhadap server performa aplikasi akan menjadi kurang baik. 
 CGI sendiri menyediakan solusi untuk hal tersebut, misalnya FastCGI yang menjalankan aplikasi sebagai bagian dari web server. Bahasa lain juga menyediakan alternatif dari CGI, misalnya Java yang memiliki Servlet. Servlet pada Java merupakan sebuah program yang menambahkan fitur dari server secara langsung. Jadi pada pemrograman dengan Servlet, kita akan memiliki satu web server di dalam program kita, dan pada web server tersebut akan ditambahkan fitur-fitur spesifik aplikasi web kita.
 server aplikasi yang aman memiliki antarmuka aman yang menerima permintaan dari browser web. Server juga memiliki program aplikasi untuk mengakses objek, seperti database, dan antarmuka pemrograman aplikasi (API) antara antarmuka aman dan program aplikasi. 
-
+Server aplikasi yang aman dapat berjalan terus menerus sebagai sebuah proses dan dapat mempertahankan informasi keadaan tentang objek. Dalam kasus di mana objek adalah database, database dapat tetap terbuka antara panggilan ke database yang sama, dan server yang aman dapat menyimpan pointer ke rekaman berikutnya untuk dibaca.
 \subsection{Kelebihan CGI} 
 Kelebihan yang dimiliki CGI antara lain :
 \begin{enumerate}
@@ -118,158 +118,85 @@ Python 2.4.1 (#1, Apr 10 2005, 22:30:36)
 Type "help", "copyright", "credits" or "license" 
 for more information. 
 >>> 
-Tanda “>>>” merupakan suatu prompt dalam modus interaktif Python, selanjutnya Python siap menerima input kode yang dimasukkan. \par
-\vspace{12pt}
-Python didistribusikan dengan beberapa lisensi yang berbeda dari beberapa versi. Lihat sejarahnya di Python Copyright. Namun pada prinsipnya Python dapat diperoleh dan dipergunakan secara bebas, bahkan untuk kepentingan komersial. Lisensi Python tidak bertentangan baik menurut definisi Open Source maupun General Public License (GPL). \par
-\vspace{12pt}
-Python merupakan bahasa pemrograman yang mendukung pengembangan aplikasi berbasis desktop dan juga aplikasi berbasis web. Biasanya kalau berhubungan dengan WEB maka orang akan berfikir framework yang digunakan. Tentunya ada beberapa framework yang bisa digunakan untuk membangun aplikasi web berbasis python ini antara lain adalah Django, Web2py, Cherrypy dan lain-lain. Masing-masing framework memiliki aturan khusus dalam penulisan syntax. Framework tersebut mengadopsi struktur yang sama seperti pemrograman CGI. Untuk lebih jelasnya mari kita pelajari pemrograman CGI. \par
-\vspace{12pt}
-Common Gateway Interface atau disingkat CGI adalah suatu standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip sebuah program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML. \par
-\vspace{12pt}
-Python menyediakan modul CGI yang bisa digunakan untuk membuat aplikasi berbasis web. Tentunya python tidak kalah dengan pemrograman berbasis web lain seperti Java, PHP dan lain2. Mari kita lakukan percobaan untuk membuat web dengan menggunakan python. \par
-\noindent 
-Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa komponen aplikasi diantaranya adalah : \par
-\noindent 
+Tanda “>>>” merupakan suatu prompt dalam modus interaktif Python, selanjutnya Python siap menerima input kode yang dimasukkan. 
+Python didistribusikan dengan beberapa lisensi yang berbeda dari beberapa versi. Lihat sejarahnya di Python Copyright. Namun pada prinsipnya Python dapat diperoleh dan dipergunakan secara bebas, bahkan untuk kepentingan komersial. Lisensi Python tidak bertentangan baik menurut definisi Open Source maupun General Public License (GPL). 
+Python merupakan bahasa pemrograman yang mendukung pengembangan aplikasi berbasis desktop dan juga aplikasi berbasis web. Biasanya kalau berhubungan dengan WEB maka orang akan berfikir framework yang digunakan. Tentunya ada beberapa framework yang bisa digunakan untuk membangun aplikasi web berbasis python ini antara lain adalah Django, Web2py, Cherrypy dan lain-lain. Masing-masing framework memiliki aturan khusus dalam penulisan syntax. Framework tersebut mengadopsi struktur yang sama seperti pemrograman CGI. Untuk lebih jelasnya mari kita pelajari pemrograman CGI. 
+Common Gateway Interface atau disingkat CGI adalah suatu standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip sebuah program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML.
+Python menyediakan modul CGI yang bisa digunakan untuk membuat aplikasi berbasis web. Tentunya python tidak kalah dengan pemrograman berbasis web lain seperti Java, PHP dan lain2. Mari kita lakukan percobaan untuk membuat web dengan menggunakan python. 
+Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa komponen aplikasi diantaranya adalah : 
 \begin{enumerate}
-	\item Menginstal Program Python \par
-	\noindent 
-	\item Menginstal Program Web Server Seperti Apache2 atau Xampp \par
-	\noindent 
-	\item Setelah kedua program berhasil di instal maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. \par
-	\noindent 
-	\item Buka directory Xampp dan masuk ke folder apache  $  \rightarrow  $ Conf dan cari file httpd.conf \par
-	\noindent 
-	\item Buka file httpd.conf menggunakan notepad \par
-	\noindent 
-	\item Cari baris AddHandler cgi-script .cgi .pl .asp pada file setelah itu tambahkan extensi python seperti ini AddHandler cgi-script .cgi .pl .asp .py \par
-	\noindent 
-	\item Cari baris <Directory /> dan tambahkan ExecCGI pada list Options FollowSymLinks \par
-	\noindent 
-	\item Setelah itu simpan \par
-	\noindent 
-	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python’ \par
-	\noindent 
-	\item Buka Notepad dan ketikkan script dbawah ini : \par
-	\vspace{12pt}
-	\noindent 
-	$  \#  $!/Python27/python \par
-	\noindent 
-	print "Content-type:text/html" \par
-	\noindent 
-	print \par
-	\noindent 
-	print '<html>' \par
-	\noindent 
-	print '<head>' \par
-	\noindent 
-	print '<title>WEB Python </title>' \par
-	\noindent 
-	print '</head>' \par
-	\noindent 
-	print '<body>' \par
-	\noindent 
-	print '<h1><center>Tutorial Web Programming Python Bagian 1 Python</center></h1>' \par
-	\noindent 
-	print \par
-	\noindent 
-	print \par
-	\noindent 
-	print '<h2><center>Selamat Belajar Bagi Para Pecinta Python</h2></center>' \par
-	\noindent 
-	print '</body>' \par
-	\noindent 
-	print '</html>' \par
-	pada script diatas jangan lupa menuliskan posisi directory python.exe ( $  \#  $!/Python27/python) \par
-	\noindent 
-	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) \par
-	\noindent 
-	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya\end{enumerate}
-\par
-\vspace{12pt}
-\noindent 
-\textbf{Membuat Kamus Menggunakan CGI Python} \par
-Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia. \par
-\vspace{12pt}
-Jika~sudah save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus.json  \par
-\vspace{12pt}
-\noindent 
-Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. \par
-\noindent 
-$  \#  $!/usr/bin/python \par
-\noindent 
-import cgi \par
-\noindent 
-import~cgitb; cgitb.enable()   \par
-\noindent 
-import simplejson as json \par
-\vspace{12pt}
-\noindent 
-print "Content-type: text/html" \par
-\noindent 
-print \par
-\vspace{12pt}
-\noindent 
-print """ \par
-\noindent 
-<html> \par
-\noindent 
-<head><title>CGI Script</title></head> \par
-\noindent 
-<body> \par
-\noindent 
-~ <h1> Kamus sederhana dengan cgi python</h1> \par
-\noindent 
-~ <form method="post" action="index.cgi"> \par
-\noindent 
-~~~ Bahasa Indonesia<br/> \par
-\noindent 
-~~~ <input type="text" name="kata"/></p> \par
-\noindent 
-~~~ <input type="submit" name="submit" value="Terjemahkan"/></p> \par
-\noindent 
-~ </form> \par
-\noindent 
-~~Bahasa Inggris<br/>   \par
-\noindent 
-""" \par
-\vspace{12pt}
-\noindent 
-form = cgi.FieldStorage()  $  \#  $variable form \par
-\noindent 
-cari $  \_  $kata = form.getvalue("kata")  $  \#  $variable mengambil nilai dari input \par
-\vspace{12pt}
-\noindent 
-location $  \_  $database = open('/home/develop/DW/kamus.json', 'r')  $  \#  $membuka kosa kata bahasa inggris \par
-\noindent 
-bhs $  \_  $inggris = json.load(location $  \_  $database) \par
-\vspace{12pt}
-\noindent 
-if~cari $  \_  $kata:~   \par
-\noindent 
-~~ for bhs $  \_  $indonesia in cari $  \_  $kata.split(' '):  \par
-\noindent 
-~~~~for~arti $  \_  $kata in bhs $  \_  $inggris:    \par
-\noindent 
-~~~~ if arti $  \_  $kata["indonesia"] == bhs $  \_  $indonesia.replace(' ',''): \par
-\noindent 
-~~~~~~~~ hasil = arti $  \_  $kata['inggris']  \par
-\noindent 
-~~~~~~~ break \par
-\noindent 
-~~~ else: \par
-\noindent 
-~~~~~~~~hasil~= "arti kata tidak ditemukan"    \par
-\noindent 
-~~~~~~~~~~~~~~  \par
-\noindent 
-~~~ print """ \par
-\noindent 
-~~~ <input type="text" name="hasil" value=" $  \%  $s"/> \par
-\noindent 
-~~~ </body> \par
-\noindent 
-~~~ </html> \par
-\noindent 
-~~~ """  $  \%  $ cgi.escape(hasil) \par
-\vspace{12pt}
-Jika sudah save dengan nama kamus.cgi sebagai contoh dan buka browser ketikan pada url http//localhost/cgi-bin/kamus.cgi jika muncul form input coba di tester ketikan nama kata dalam bahasa indonesia. \par
+	\item Menginstal Program Python  
+	\item Menginstal Program Web Server Seperti Apache2 atau Xampp  
+	\item Setelah kedua program berhasil di instal maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. 
+	\item Buka directory Xampp dan masuk ke folder apache  $  \rightarrow  $ Conf dan cari file httpd.conf 
+	\item Buka file httpd.conf menggunakan notepad 
+	\item Cari baris AddHandler cgi-script .cgi .pl .asp pada file setelah itu tambahkan extensi python seperti ini AddHandler cgi-script .cgi .pl .asp .py 
+	\item Cari baris <Directory /> dan tambahkan ExecCGI pada list Options FollowSymLinks  
+	\item Setelah itu simpan 
+	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python’ 
+	\item Buka Notepad dan ketikkan script dbawah ini : 
+	$  \#  $!/Python27/python 
+	print "Content-type:text/html"
+	print 
+	print '<html>' 
+	print '<head>' 
+	print '<title>WEB Python </title>' 
+	print '</head>' 
+	print '<body>' 
+	print '<h1><center>Tutorial Web Programming Python Bagian 1 Python</center></h1>' 
+	print 
+	print 
+	print '<h2><center>Selamat Belajar Bagi Para Pecinta Python</h2></center>' 
+	
+	print '</body>' 
+	print '</html>' 
+	pada script diatas jangan lupa menuliskan posisi directory python.exe ( $  \#  $!/Python27/python) 
+	
+	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) 
+	
+	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya\
+end{enumerate}
+
+\subsection{Membuat Kamus Menggunakan CGI Python} 
+Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia. Jika~sudah save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus.json  
+Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. 
+$  \#  $!/usr/bin/python 
+import cgi 
+import~cgitb; cgitb.enable()   
+import simplejson as json 
+print "Content-type: text/html" 
+print 
+\vspace
+print """ 
+<html> 
+<head><title>CGI Script</title></head> 
+<body> 
+~ <h1> Kamus sederhana dengan cgi python</h1> 
+~ <form method="post" action="index.cgi"> 
+~~~ Bahasa Indonesia<br/> 
+~~~ <input type="text" name="kata"/></p> 
+~~~ <input type="submit" name="submit" value="Terjemahkan"/></p> 
+~ </form> 
+~~Bahasa Inggris<br/>   
+""" 
+form = cgi.FieldStorage()  $  \#  $variable form 
+cari $  \_  $kata = form.getvalue("kata")  $  \#  $variable mengambil nilai dari input 
+location $  \_  $database = open('/home/develop/DW/kamus.json', 'r')  $  \#  $membuka kosa kata bahasa inggris 
+bhs $  \_  $inggris = json.load(location $  \_  $database) 
+\vspace
+if~cari $  \_  $kata:~   
+~~ for bhs $  \_  $indonesia in cari $  \_  $kata.split(' '):  
+~~~~for~arti $  \_  $kata in bhs $  \_  $inggris:    
+~~~~ if arti $  \_  $kata["indonesia"] == bhs $  \_  $indonesia.replace(' ',''): 
+~~~~~~~~ hasil = arti $  \_  $kata['inggris']  
+~~~~~~~ break 
+~~~ else: 
+~~~~~~~~hasil~= "arti kata tidak ditemukan"    
+~~~~~~~~~~~~~~  
+~~~ print """ 
+~~~ <input type="text" name="hasil" value=" $  \%  $s"/> 
+~~~ </body> 
+~~~ </html> 
+~~~ """  $  \%  $ cgi.escape(hasil) 
+
+Jika sudah save dengan nama kamus.cgi sebagai contoh dan buka browser ketikan pada url http//localhost/cgi-bin/kamus.cgi jika muncul form input coba di tester ketikan nama kata dalam bahasa indonesia.
