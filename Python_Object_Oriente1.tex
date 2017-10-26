@@ -28,53 +28,30 @@ Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi o
 Salah satu alasan yang paling penting untuk mempertimbangkan bekerja di OOP adalah bahwa ia menyediakan pendekatan pemodelan langsung dan memecahkan masalah didunia nyata. 
 
 \vspace{12pt}
-\noindent 
 \subsection {Membuat Kelas}
 \vspace{12pt}
 Pernyataan kelas membuat definisi kelas baru. Nama kelas segera mengikuti kelas kata kunci diikuti oleh titik dua sebagai berikut - 
 \vspace{12pt}
-\vspace{12pt}
-\noindent 
 class ClassName: 
-\noindent 
-~~ 'Optional class documentation string' 
-\noindent
+~~ 'Optional class documentation string'
 ~~ class $  \_  $suite 
-\vspace{12pt}
 \vspace{12pt}
 Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $.  Class $  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data. 
 \vspace{12pt}
-\vspace{12pt}
-\noindent 
-Contoh 
-\vspace{12pt
-\noindent 
 
 Berikut adalah contoh kelas Python sederhana - 
 \vspace{12pt}
-\noindent 
 class Employee: 
-\noindent 
 ~~ 'Common base class for all employees' 
-\noindent 
 ~~ empCount = 0 
 \vspace{12pt}
-\noindent 
 ~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
-\noindent 
 ~~~~~ self.name = name 
-\noindent 
 ~~~~~ self.salary = salary 
-\noindent 
 ~~~~~ Employee.empCount += 1 
-\noindent 
-~~  
-\noindent 
-~~ def displayCount(self): 
-\noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
+~~~~~ def displayCount(self): 
+~~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
 \vspace{12pt}
-\noindent
 ~~ def displayEmployee(self): 
 \noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
@@ -83,19 +60,14 @@ class Employee:
 \subsection{Variable empCount}
 Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode. 
 \vspace{12pt}
-\noindent
 
 \subsection{Membuat Instance Objects}
 Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya. 
 \vspace{12pt}
-\noindent 
 "Ini akan menciptakan objek pertama kelas Karyawan" 
-\noindent 
 Emp1 = Karyawan ("Zara", 2000) 
-\noindent 
 "Ini akan menciptakan objek kedua dari kelas Karyawan" 
-\noindent 
-Emp2 = Karyawan ("Manni", 5000) 
+Emp2 = Karyawan ("Manni", 5000)
 \vspace{12pt}
 \noindent 
 
@@ -103,9 +75,8 @@ Emp2 = Karyawan ("Manni", 5000)
 Anda mengakses atribut objek menggunakan dot operator dengan objek. Variabel kelas akan diakses dengan menggunakan nama kelas sebagai berikut - 
 \vspace{12pt}
 \noindent 
-Emp1.displayEmployee () \noindent 
+Emp1.displayEmployee () 
 Emp2.displayEmployee ()
-\noindent 
 Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount 
 \vspace{12pt}
 \noindent
@@ -113,65 +84,42 @@ Cetak "Jumlah Karyawan $  \%  $ d" $  \%  $ Employee.empCount
 Sekarang, meletakkan semua konsep bersama - 
 \noindent 
  $  \#  $!/usr/bin/python 
-\vspace{12pt}
+\vspace{12pt
 \noindent 
 class Employee: 
 \noindent 
 ~~ 'Common base class for all employees' 
-\noindent 
 ~~ empCount = 0 
 \vspace{12pt}
-\noindent 
 ~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self, name, salary): 
-\noindent 
 ~~~~~ self.name = name 
-\noindent 
 ~~~~~ self.salary = salary 
-\noindent 
 ~~~~~ Employee.empCount += 1 
-\noindent 
-~~  
-\noindent 
 ~~ def displayCount(self): 
-\noindent 
-~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
+~~~~ print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount
 \vspace{12pt}
-\noindent 
 ~~ def displayEmployee(self): 
 \noindent 
 ~~~~~~print "Name : ", self.name,  ", Salary: ", self.salary 
 \vspace{12pt}
 \noindent 
 "This would create first object of Employee class" 
-\noindent 
 emp1 = Employee("Zara", 2000) 
-\noinden
 "This would create second object of Employee class" 
-\noindent 
 emp2 = Employee("Manni", 5000) 
-\noindent 
 emp1.displayEmployee() 
-\noindent 
-emp2.displayEmployee() 
-\noindent 
+emp2.displayEmployee()
 print "Total Employee  $  \%  $d"  $  \%  $ Employee.empCount 
-\noindent 
+
 When the above code is executed, it produces the following result  $ - $ 
-\noindent 
+ 
 Name~:~ Zara ,Salary:  2000 
-\noindent 
 Name~:~ Manni ,Salary:  5000 
-\noindent 
 Total Employee 2 
-\noindent 
 You can add, remove, or modify attributes of classes and objects at any time  $ - $ 
-\noindent 
 emp1.age~= 7   $  \#  $ Add an 'age' attribute. 
-\noindent 
 emp1.age~= 8   $  \#  $ Modify 'age' attribute. 
-\noindent 
 del~emp1.age   $  \#  $ Delete 'age' attribute. 
-\vspace{12pt}
 
 Alih-alih menggunakan pernyataan normal untuk mengakses atribut, Anda dapat menggunakan fungsi berikut - 
 \vspace{12pt}
@@ -664,22 +612,14 @@ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (self, holder, number, balance, cr
 \vspace{12pt}
 
 Apa yang kami katakan tentang konstruktor berlaku bagi penghancur juga. Tidak ada destruktor "nyata", tapi ada yang serupa, yaitu metode  $  \_  $ $  \_  $del $  \_  $ $  \_  $. Hal ini disebut ketika contoh ini akan hancur. Jika kelas dasar memiliki metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (), metode  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ () kelas turunan, jika ada, harus secara eksplisit memanggilnya untuk memastikan penghapusan komponen kelas dasar contoh yang tepat.
-\noindent 
-Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: \par
+ 
+Contoh berikut menunjukkan kelas dengan konstruktor dan destruktor: 
 \vspace{12pt}
 
-\vspace{12pt}
-\noindent 
 Kelas Salam:
-\noindent 
-~~~ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, nama): \par
-\noindent 
+~~~ Def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, nama):
 ~~~~~~~ self.name = nama
-\noindent 
 ~~~ Def  $  \_  $ $  \_  $del  $  \_  $ $  \_  $ (diri):
-\noindent 
 ~~~~~~~ Cetak "Destructor dimulai"
-\noindent 
 ~~~ Def SayHello (diri):
-\noindent 
 ~~~~~~~ Cetak "Halo", self.name
