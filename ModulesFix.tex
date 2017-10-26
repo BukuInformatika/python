@@ -3,46 +3,22 @@
 %Muhammad Nur Ikhsan_1154087
 %Emy Safitri_1154102
 %Andi Ikram Maulana_1154065
-%Ilman Mubarik Sidiq_1154114\sloppy
+%Ilman Mubarik Sidiq_1154114
 
 \sloppy
 \begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Modules} \\}\end{center}
 Modul memungkinkan Anda mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam suatu modul membuat kode lebih cepat dipahami dan digunakan. Modul ini merupakan objek Python dengan atribut yang diberi nama sewenang-wenang sehingga Anda bisa mengikat dan memberi referensi.
 Cukup, modul merupakan file yang terdiri dari kode Python. Modul bisa mendefinisikan fungsi, kelas dan variabel. Modul juga dapat menyertakan kode runnable.
 Example
-Kode Python untuk sebuah modul yang di beri nama aname biasanya berada pada sebuah file bernama aname.py. Berikut merupakan contoh modul sederhana, support.py 
- \hspace*{0.5in} def print $  \_  $func( par ): 
- \hspace*{0.5in} ~~ print "Hello : ", par 
- \hspace*{0.5in} ~~ return
-The $  $import $  $Statement
-Anda dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut: 
- \hspace*{0.5in} import module1[, module2[,... moduleN] 
+Kode Python untuk sebuah modul yang di beri nama aname biasanya berada pada sebuah file bernama aname.py. 
+
+\subsection{import}
 Ketika penafsir menemukan sebuah pernyataan impor, ia mengimpor modul apabila modul tersebut berada di jalur pencarian. Jalur pencarian merupakan daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Anda perlu meletakkan perintah berikut di bagian atas skrip - 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python 
- \hspace*{0.5in}  $  \#  $ Import module support 
- \hspace*{0.5in} import support 
- \hspace*{0.5in}  $  \#  $ Now you can call defined function that module as follows 
- \hspace*{0.5in} support.print $  \_  $func("Zara") 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
- \hspace*{0.5in} Hello : Zara 
-Modul hanya dimuat satu kali, berapa pun jumlahnya diimpor. Hal ini mencegah eksekusi modul terjadi berulang-ulang jika terjadi beberapa impor.
-The $  $from...import $  $Statement  
-Python dari pernyataan memungkinkan Anda mengimpor atribut tertentu dari modul ke dalam namespace saat ini. Dari ... impor memiliki sintaks berikut -
- \hspace*{0.5in} from modname import name1[, name2[, ... nameN]]
-Misalnya, untuk mengimpor fungsi fibonacci dari modul fib, gunakan pernyataan berikut - 
- \hspace*{0.5in} from fib import fibonacci
-Pernyataan ini tidak mengimpor seluruh modul fib ke dalam namespace saat ini; Itu hanya memperkenalkan item fibonacci dari modul fib ke dalam tabel simbol global modul pengimpor. 
-The $  $from...import * $  $Statement: \
-Hal ini juga memungkinkan untuk mengimpor semua nama dari modul ke dalam namespace saat ini dengan menggunakan pernyataan impor berikut - 
- \hspace*{0.5in} from modname import *
-Ini menyediakan cara mudah untuk mengimpor semua item dari modul ke dalam namespace saat ini; Namun, pernyataan ini harus digunakan dengan hemat.
-Locating Modules
-Saat mengimpor modul, juru bahasa Python mencari modul dalam urutan berikut -
- \hspace*{0.5in}  $ \bullet $ Direktori saat ini. 
- \hspace*{0.5in}  $ \bullet $ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  \hspace*{0.5in} PYTHONPATH.
- \hspace*{0.5in}  $ \bullet $ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini  \hspace*{0.5in} biasanya / usr / local / lib / python /. 
-Jalur pencarian modul disimpan dalam sistem modul sys sebagai sys.pathvariable. Variabel sys.path berisi direktori saat ini, PYTHONPATH, dan default pengaturan instalasi.
-The $  $PYTHONPATH $  $Variable: 
+ 
+\subsection{buat modul}Modul hanya dimuat satu kali, berapa pun jumlahnya diimpor. Hal ini mencegah eksekusi modul terjadi berulang-ulang jika terjadi beberapa impor.
+ 
+
+\subsection{PYTHONPATH} 
 The PYTHONPATH merupakan variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. 
 Berikut adalah PYTHONPATH khas dari sistem Windows:
  \hspace*{0.5in} set PYTHONPATH=c: $  \setminus  $python20 $  \setminus  $lib; 
