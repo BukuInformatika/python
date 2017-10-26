@@ -1,6 +1,6 @@
 
 \section{Phyton Modules} 
-Modul memungkinkan Anda mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami & digunakan. Modul merupakan objek Python dengan atribut yang diberi nama semena-mena sehingga Anda bisa mengikat & memberi referensi.
+Modul memungkinkan Kita mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami & digunakan. Modul merupakan objek Python dengan atribut yang diberi nama semena-mena sehingga Kita bisa mengikat & memberi referensi.
 \subsection{Modul Phyton}
 modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas & variabel. Modul juga bisa menyertakan kode runnable.
 Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py  
@@ -8,9 +8,9 @@ Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file be
  \hspace*{0.5in} ~~ print "Hello : ", par  
  \hspace*{0.5in} ~~ return  
 The \$  \$import \$  \Statement  
-Anda dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut:  
+Kita dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut:  
  \hspace*{0.5in} import module1[, module2[,... moduleN]  
-Ketika penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Anda perlu meletakkan perintah berikut di bagian atas skrip - 
+Ketika seorang penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Kita perlu meletakkan perintah berikut di bagian atas skrip - 
  \hspace*{0.5in}  \  \#  \!/usr/bin/python 
  \hspace*{0.5in}  \  \#  \ Import module support 
  \hspace*{0.5in} import support 
@@ -44,12 +44,12 @@ Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX:
  \hspace*{0.5in} set PYTHONPATH=/usr/local/lib/python  
 Namespaces & Scoping  
 Variabel adalah nama {identifiers} yang memetakan ke objek. Namespace adalah kamus dari nama variabel {kunci} & objek yang sesuai {nilai}.  
-Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local dan dalam sebuah namespace global, jika variable local dan variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. Dan pada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
+Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local & dalam sebuah namespace global, jika variable local & variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. & ada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
 
-Phyton membbuat tebakan terdidik tentang variable yang bersifat local atau global . ini tentu dapat mengasumsikan bahwa setiap variable yang diberi ilia dalam suatu fungsi merupakan variable local
+Phyton membuat tebakan terdidik tentang variable yang bersifat local atau global . ini tentu dapat mengasumsikan bahwa setiap variable yang diberi nilai dalam suatu fungsi merupakan variable local.
 
 Oleh karenanya, untuk menetapkan sebuah nilai pada variable global dalam suatu fungsi, kita harus terlebih dahulu menggunakan pernyataan global. Pernyataan gloval VarName akan memberitahu pada phyton bahwa VarName merupakan Variabel global. Phyton akan berhenti mencari namespace local untuk variable tersebut.
-Sebagai contohnya, kita mendefinisikan sebuah variable money in the global namespace.dalam fungsi tersebut, kita menetapkan money a value. Oleh karena itu, phyton mengasumsikan variable local moneyas. Namun, kami mengakses nilai variable local moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya, dan Uncommenting pernyataan global yang akan memperbaiki masalahnya.
+Sebagai contohnya, kita mendefinisikan sebuah variable money in the global namespace.dalam fungsi tersebut, kita menetapkan money a value. Oleh karena itu, phyton mengasumsikan variable local moneyas. Namun, kami mengakses nilai variable local moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya, & Uncommenting pernyataan global yang akan memperbaiki masalahnya.
  
  \hspace*{0.5in}  \  \#  \!/usr/bin/python  
  \hspace*{0.5in} Money = 2000  
@@ -75,7 +75,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
  \hspace*{0.5in} 'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',  
  \hspace*{0.5in} 'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',   
  \hspace*{0.5in} 'sqrt', 'tan', 'tanh']  
-Di sini, variabel string khusus  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ adalah nama modul, dan  \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$ adalah nama file tempat modul dimuat. 
+Di sini, variabel string khusus  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ adalah nama modul, &  \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$ adalah nama file tempat modul dimuat. 
 The \$  \$globals() \$  \$and \$  \$locals() \$  \$Functions  \$ - \$  
 Fungsi global () & penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global & lokal tergantung pada lokasi dari tempat mereka dipanggil.  
 Jika penduduk setempat () dipanggil dari dalam sebuah fungsi, maka semua nama yang dapat diakses secara lokal berasal dari fungsi itu. 
@@ -115,21 +115,21 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
  \hspace*{0.5in} I'm ISDN Phone  
 Pada contoh di atas, kita telah mengambil contoh fungsi tunggal di setiap file, namun Anda dapat menyimpan beberapa fungsi dalam file Anda. Anda juga dapat menentukan kelas Python yang berbeda dalam file tersebut dan kemudian Anda dapat membuat paket Anda dari kelas tersebut.
 Modules  
-Jika Anda berhenti dari juru bahasa Python & memasukkannya lagi, definisi yang telah Anda buat (fungsi dan variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
-Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat diimpor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator).  
-Modul adalah file yang berisi definisi dan pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut.  
+Jika Anda berhenti dari juru bahasa Python & memasukkannya lagi, definisi yang telah Anda buat (fungsi & variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
+Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat di impor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator).  
+Modul adalah file yang berisi definisi & pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut.  
 6.1. More on Modules 
 Modul dapat berisi pernyataan eksekusi serta definisi fungsi. Pernyataan ini dimaksudkan untuk menginisialisasi modul. Mereka dieksekusi hanya untuk pertama kalinya nama modul ditemukan dalam sebuah pernyataan impor. [1] (Mereka juga dijalankan jika file dijalankan sebagai skrip.)  
-Setiap modul memiliki tabel simbol pribadinya, yang digunakan sebagai tabel simbol global oleh semua fungsi yang didefinisikan dalam modul. Dengan demikian, penulis modul dapat menggunakan variabel global dalam modul tanpa mengkhawatirkan bentrokan kecelakaan dengan variabel global pengguna. Di sisi lain, jika Anda tahu apa yang Anda lakukan, Anda dapat menyentuh variabel global modul dengan notasi yang sama yang digunakan untuk merujuk pada fungsinya, nama modname.itemname. 
+Setiap modul memiliki tabel simbol pribadinya, yang digunakan sebagai tabel simbol global oleh semua fungsi yang didefinisikan dalam modul. Dengan demikian, penulis modul dapat menggunakan variabel global dalam modul tanpa mengkhawatirkan bentrokan kecelakaan dengan variabel global pengguna. Di sisi lain, jika kita tahu apa yang kita lakukan, kita dapat menyentuh variabel global modul dengan notasi yang sama yang digunakan untuk merujuk pada fungsinya, nama modname.itemname. 
 Modul bisa mengimpor modul lainnya. Sudah menjadi kebiasaan tapi tidak diharuskan untuk menempatkan semua pernyataan impor di awal modul (atau naskah, dalam hal ini). Nama modul yang diimpor ditempatkan di tabel simbol global modul pengimpor.  
 6.1.1. Executing modules as scripts  
 Saat Anda menjalankan modul Python dengan  
 python fibo.py <arguments>  
-Kode dalam modul akan dieksekusi, sama seperti jika Anda mengimpornya, tapi dengan    \_     \_  name   \_     \_   set ke "   \_     \_  main   \_     \_  ". Itu berarti bahwa dengan menambahkan kode ini di akhir modul Anda: 
+Kode dalam modul akan dieksekusi, sama seperti jika kita mengimpornya, tapi dengan    \_     \_  name   \_     \_   set ke "   \_     \_  main   \_     \_  ". Itu berarti bahwa dengan menambahkan kode ini di akhir modul Anda: 
 if    \_     \_  name   \_     \_   == "   \_     \_  main   \_     \_  ":  
 ~~~ import sys 
 ~~~ fib(int(sys.argv[1])) 
-Anda dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file "utama":  
+Kita dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file "utama":  
    \$   python fibo.py 50 t 
 1 1 2 3 5 8 13 21 34  
 Jika modul diimpor, kode tidak dijalankan:  
@@ -150,5 +150,5 @@ Beberapa tip untuk para ahli:
   \bullet  Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string    \_     \_  doc   \_     \_  . Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul "Dioptimalkan" memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. 
   \bullet  Program tidak berjalan lebih cepat saat dibaca dari file .pyc daripada saat dibaca dari file .py; Satu-satunya yang lebih cepat tentang file .pyc adalah kecepatan pengisiannya.  
   \bullet  Compileall modul dapat membuat file .pyc untuk semua modul dalam sebuah direktori.  
-  \bullet  Ada lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. 
+  \bullet  Kita lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. 
 
