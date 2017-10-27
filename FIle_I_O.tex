@@ -1,5 +1,4 @@
-\section
-\begin{center}{\fontsize{14pt}{14pt}\selectfont Python File I/O \\}\end{center} 
+\section{Phyton}
 
 input dan output pada phyton merupakan
 situasi dimana program yang sudah dibuat harus bisa berinteraksi dengan sesame penggunanya,
@@ -57,7 +56,7 @@ with open("test.txt",encoding = 'utf-8') as f:
 Untuk menulis ke file kita perlu membukanya dalam mode write 'w', tambahkan 'a' atau exclusive creation 'x'. Kita harus berhati-hati dengan mode 'w' karena akan menimpa file jika sudah ada. Semua data sebelumnya terhapus. Menulis string atau urutan byte (untuk file biner) dilakukan dengan menggunakan metode write (). Metode ini mengembalikan jumlah karakter yang ditulis ke file.  
 with open("test.txt",'w',encoding = 'utf-8') as f: 
 ~~ f.write("my first file \$  \setminus  \$n")  
-~~ f.write("This file \$  \setminus  \$n \$  \setminus  \$n") 
+~~ f.write("This file \$  \setminus  \$ \$  \setminus  \$") 
 ~~ f.write("contains three lines \$  \setminus  \$n")
 Program ini akan membuat file baru bernama 'test.txt' jika tidak ada. Jika memang ada, itu akan ditimpa. Kita harus menyertakan karakter newline sendiri untuk membedakan garis yang berbeda. 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Membaca Dari File} \\} 

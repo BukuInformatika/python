@@ -1,47 +1,54 @@
 
 \section{Phyton Modules} 
-Modul memungkinkan Kita mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami & digunakan. Modul merupakan objek Python dengan atribut yang diberi nama semena-mena sehingga Kita bisa mengikat & memberi referensi.
+Modul memungkinkan Kita mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami \& digunakan. Modul merupakan objek Python dengan atribut yang diberi nama semena-mena sehingga Kita bisa mengikat \& memberi referensi.
 \subsection{Modul Phyton}
-modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas & variabel. Modul juga bisa menyertakan kode runnable.
+modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas \& variabel. Modul juga bisa menyertakan kode runnable.
 Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py  
- \hspace*{0.5in} def print \  \_  \$func{ par }:  
- \hspace*{0.5in} ~~ print "Hello : ", par  
- \hspace*{0.5in} ~~ return  
-The \$  \$import \$  \Statement  
-Kita dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut:  
- \hspace*{0.5in} import module1[, module2[,... moduleN]  
-Ketika seorang penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Kita perlu meletakkan perintah berikut di bagian atas skrip - 
- \hspace*{0.5in}  \  \#  \!/usr/bin/python 
- \hspace*{0.5in}  \  \#  \ Import module support 
- \hspace*{0.5in} import support 
- \hspace*{0.5in}  \  \#  \ Now you can call defined function that module as follows 
- \hspace*{0.5in} support.print \  \_  \func{"Zara"} 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
- \hspace*{0.5in} Hello : Zara
+\begin{verbatim}
+def print _  _  \$func{ par }:  
+print "Hello : ", par  
+ return  
+The \$  \$import \$
+\end{verbatim}
+Kita dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Import memiliki sintaks berikut:  
+  import module1[, module2[,... moduleN]  
+Ketika seorang penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Kita perlu meletakkan perintah berikut di bagian atas skript - 
+ \begin{verbatim}
+#!/usr/bin/python 
+Import module support 
+import support 
+#  \ Now you can call defined function that module as follows 
+support.print_ func("Zara")
+A = “aku”
+B = “kamu”
+C = a+b
+Print(c)
+\end{verbatim}
+
 Modul hanya dimuat satu kali, berapa pun jumlahnya diimpor. Hal ini mencegah eksekusi modul terjadi berulang-ulang jika terjadi beberapa impor. 
-The \  \from...import \  \Statement 
+The \  \from...import \
 
 Python dari pernyataan memungkinkan Anda mengimpor atribut tertentu dari modul ke dalam namespace saat ini. Dari ... impor memiliki sintaks berikut - 
- \hspace*{0.5in} from modname import name1[, name2[, ... nameN]] 
+from modname import name1[, name2[, ... nameN]] 
 Misalnya, untuk mengimpor fungsi fibonacci dari modul fib, gunakan pernyataan berikut 
- \hspace*{0.5in} from fib import fibonacci 
+from fib import fibonacci 
 Pernyataan ini tidak mengimpor seluruh modul fib ke dalam namespace saat ini; Itu hanya memperkenalkan item fibonacci dari modul fib ke dalam tabel simbol global modul pengimpor.  
-The \  \from...import * \  \$Statement: 
+The \  \from...import * \  
 Hal ini juga memungkinkan untuk mengimpor semua nama dari modul ke dalam namespace saat ini dengan menggunakan pernyataan impor berikut 
- \hspace*{0.5in} from modname import * 
+from modname import * 
 Ini menyediakan cara mudah untuk mengimpor semua item dari modul ke dalam namespace saat ini; Namun, pernyataan ini harus digunakan dengan hemat.
 Locating Modules
 Saat mengimpor modul, juru bahasa Python mencari modul dalam urutan berikut - 
- \hspace*{0.5in}  \ \bullet \ Direktori saat ini. 
- \hspace*{0.5in}  \ \bullet \ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  \hspace*{0.5in} PYTHONPATH. 
- \hspace*{0.5in}  \ \bullet \ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini  \hspace*{0.5in} biasanya / usr / local / lib / python /. 
+ \ \bullet \ Direktori saat ini. 
+ \ \bullet \ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  PYTHONPATH. 
+  \ \bullet \ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini   biasanya / usr / local / lib / python /. 
 Jalur pencarian modul disimpan dalam sistem modul sys sebagai sys.pathvariable. Variabel sys.path berisi direktori saat ini, PYTHONPATH, & default pengaturan instalasi.
 The \  \PYTHONPATH \  \Variable:  
 The PYTHONPATH adalah variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. 
 Berikut adalah PYTHONPATH khas dari sistem Windows: 
- \hspace*{0.5in} set PYTHONPATH=c: \  \setminus  \python20 \  \setminus  \$lib;  
+set PYTHONPATH=c: \  \setminus  \python20 \  \setminus  \$lib;  
 Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX: 
- \hspace*{0.5in} set PYTHONPATH=/usr/local/lib/python  
+  set PYTHONPATH=/usr/local/lib/python  
 Namespaces & Scoping  
 Variabel adalah nama {identifiers} yang memetakan ke objek. Namespace adalah kamus dari nama variabel {kunci} & objek yang sesuai {nilai}.  
 Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local & dalam sebuah namespace global, jika variable local & variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. & ada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
@@ -51,71 +58,79 @@ Phyton membuat tebakan terdidik tentang variable yang bersifat local atau global
 Oleh karenanya, untuk menetapkan sebuah nilai pada variable global dalam suatu fungsi, kita harus terlebih dahulu menggunakan pernyataan global. Pernyataan gloval VarName akan memberitahu pada phyton bahwa VarName merupakan Variabel global. Phyton akan berhenti mencari namespace local untuk variable tersebut.
 Sebagai contohnya, kita mendefinisikan sebuah variable money in the global namespace.dalam fungsi tersebut, kita menetapkan money a value. Oleh karena itu, phyton mengasumsikan variable local moneyas. Namun, kami mengakses nilai variable local moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya, & Uncommenting pernyataan global yang akan memperbaiki masalahnya.
  
- \hspace*{0.5in}  \  \#  \!/usr/bin/python  
- \hspace*{0.5in} Money = 2000  
- \hspace*{0.5in} def AddMoney():  
- \hspace*{0.5in} ~~  \  \#  \ Uncomment the following line to fix the code:  
- \hspace*{0.5in} ~~  \  \#  \ global Money  
- \hspace*{0.5in} ~~ Money = Money + 1  
- \hspace*{0.5in} print Money  
- \hspace*{0.5in} AddMoney() 
- \hspace*{0.5in} print Money  
+\begin{verbatim}
+#!/usr/bin/python  
+Money = 2000  
+ def AddMoney():  
+#  \ Uncomment the following line to fix the code:  
+#  \ global Money  
+  Money = Money + 1  
+  print Money  
+  AddMoney() 
+  print Money
+ \end{verbatim}
 The dir( ) Function  
 Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul. 
 Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut adalah contoh sederhana - 
- \hspace*{0.5in}  \  \#  \!/usr/bin/python 
- \hspace*{0.5in}  \  \#  \ Import built-in module math  
- \hspace*{0.5in} import math  
- \hspace*{0.5in} content = dir(math) 
- \hspace*{0.5in} print content 
+\begin{verbatim}
+#!/usr/bin/python 
+ Import built-in module math  
+ import math  
+ content = dir(math) 
+ print content 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
- \hspace*{0.5in} [' \  \_  \ \  \_  \doc \  \_  \ \  \_  \', ' \  \_  \ \  \_  \file \  \_  \ \  \_  \', ' \  \_  \ \  \_  \name \  \_  \ \  \_  \', 'acos', 'asin', 'atan',
+ [' \  \_  \ \  \_  \doc \  \_  \ \  \_  \', ' \  \_  \ \  \_  \file \  \_  \ \  \_  \', ' \  \_  \ \  \_  \name \  \_  \ \  \_  \', 'acos', 'asin', 'atan',
+ \end{verbatim}
  
- \hspace*{0.5in} 'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',   
- \hspace*{0.5in} 'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',  
- \hspace*{0.5in} 'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',   
- \hspace*{0.5in} 'sqrt', 'tan', 'tanh']  
-Di sini, variabel string khusus  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ adalah nama modul, &  \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$ adalah nama file tempat modul dimuat. 
+'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',   
+'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',  
+'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',   
+'sqrt', 'tan', 'tanh']  
+Di sini, variabel string khusus  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ adalah nama modul, \&  \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$ adalah nama file tempat modul dimuat. 
 The \$  \$globals() \$  \$and \$  \$locals() \$  \$Functions  \$ - \$  
-Fungsi global () & penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global & lokal tergantung pada lokasi dari tempat mereka dipanggil.  
+Fungsi global  \& penduduk lokal \() dapat digunakan untuk mengembalikan nama di ruang nama global \& lokal tergantung pada lokasi dari tempat mereka dipanggil.  
 Jika penduduk setempat () dipanggil dari dalam sebuah fungsi, maka semua nama yang dapat diakses secara lokal berasal dari fungsi itu. 
 Jika globals () dipanggil dari dalam sebuah fungsi, maka akan mengembalikan semua nama yang dapat diakses secara global dari fungsi itu. 
 Jenis kembalian dari kedua fungsi ini adalah kamus. Oleh karena itu, nama dapat diekstrak dengan menggunakan tombol () fungsi.
 The \$  \$reload() \$  \$Function  
 Saat modul diimpor ke dalam skrip, kode di bagian tingkat atas dari modul hanya akan dijalankan satu kali.  
 Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, Anda dapat menggunakan fungsi reload (). Fungsi reload () mengimpor modul yang sebelumnya diimpor lagi. Sintaks fungsi reload () adalah ini -  
- \hspace*{0.5in} reload(module \$  \_  \$name) 
-Di sini, module \$  \_  \$name adalah nama modul yang ingin Anda muat ulang & bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut -  
- \hspace*{0.5in} reload(hello) 
+ \reload(module \$  \_  \$name) 
+Di sini, module \$  \_  \$name adalah nama modul yang ingin Anda muat ulang \& bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut -  
+ \reload(hello) 
 Packages in Python 
-Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul & subpackages dan sub-subpackages, & seterusnya.  
+Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul \& subpackages dan sub-subpackages, \& seterusnya.  
 Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut -  
- \hspace*{0.5in}  \  \#  \!/usr/bin/python 
- \hspace*{0.5in} def Pots():  
- \hspace*{0.5in} ~~ print "I'm Pots Phone"  
+ \begin{verbatim}
+ #!/usr/bin/python 
+ def Pots():  
+ print "I'm Pots Phone"  
+ \end{verbatim}
 Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas -  
 Phone/Isdn.py \  \file having function Isdn()  
 Phone/G3.py \$  \file having function G3() 
 Now, create one more file  \  \_  \ \  \_  \init \  \_  \ \  \_  \.py in \  \$Phone \  \$directory  \ - \ 
 Phone/ \  \_  \ \  \_  \init \  \_  \ \  \_  \.py  
 Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di    \_     \_  \init \  \_  \ \  \_  \.py sebagai berikut - 
- \hspace*{0.5in} from Pots import Pots 
- \hspace*{0.5in} from Isdn import Isdn  
- \hspace*{0.5in} from G3 import G3 
+ from Pots import Pots 
+ from Isdn import Isdn  
+ from G3 import G3 
 Setelah Anda menambahkan baris ini ke  \  \_  \ \  \_  \init \  \_  \ \  \_  \.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. 
- \hspace*{0.5in}  \  \#  \!/usr/bin/python 
- \hspace*{0.5in}  \  \#  \ Now import your Phone Package. 
- \hspace*{0.5in} import Phone 
- \hspace*{0.5in} Phone.Pots()  
- \hspace*{0.5in} Phone.Isdn() 
- \hspace*{0.5in} Phone.G3() 
+ \begin{verbatim}
+ #!/usr/bin/python 
+ Now import your Phone Package. 
+ import Phone 
+ Phone.Pots()  
+ Phone.Isdn() 
+ Phone.G3() 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -  
- \hspace*{0.5in} I'm Pots Phone  
- \hspace*{0.5in} I'm 3G Phone  
- \hspace*{0.5in} I'm ISDN Phone  
+ I'm Pots Phone  
+ I'm 3G Phone  
+ I'm ISDN Phone 
+ \end{verbatim}
 Pada contoh di atas, kita telah mengambil contoh fungsi tunggal di setiap file, namun Anda dapat menyimpan beberapa fungsi dalam file Anda. Anda juga dapat menentukan kelas Python yang berbeda dalam file tersebut dan kemudian Anda dapat membuat paket Anda dari kelas tersebut.
 Modules  
-Jika Anda berhenti dari juru bahasa Python & memasukkannya lagi, definisi yang telah Anda buat (fungsi & variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
+Jika Anda berhenti dari juru bahasa Python & memasukkannya lagi, definisi yang telah Anda buat (fungsi \& variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
 Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat di impor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator).  
 Modul adalah file yang berisi definisi & pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut.  
 6.1. More on Modules 
