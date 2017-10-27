@@ -4,12 +4,14 @@ Modul memungkinkan Kita mengatur kode Python secara logis. Mengelompokkan kode t
 \subsection{Modul Phyton}
 modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas \& variabel. Modul juga bisa menyertakan kode runnable.
 Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py  
-\hspace*{0.5in} def print \_  \_  \$func{ par }:  
-\hspace*{0.5in} ~~ print "Hello : ", par  
-\hspace*{0.5in} ~~ return  
-The \$  \$import \$ 
+\begin{verbatim}
+def print _  _  \$func{ par }:  
+print "Hello : ", par  
+ return  
+The \$  \$import \$
+\end{verbatim}
 Kita dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Import memiliki sintaks berikut:  
- \hspace*{0.5in} import module1[, module2[,... moduleN]  
+  import module1[, module2[,... moduleN]  
 Ketika seorang penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Kita perlu meletakkan perintah berikut di bagian atas skript - 
  \begin{verbatim}
 #!/usr/bin/python 
