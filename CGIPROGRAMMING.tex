@@ -41,6 +41,7 @@ Meskipun terdapat banyak pengembangan selanjutnya dari CGI, ilustrasi sederhana 
 CGI sendiri menyediakan solusi untuk hal tersebut, misalnya FastCGI yang menjalankan aplikasi sebagai bagian dari web server. Bahasa lain juga menyediakan alternatif dari CGI, misalnya Java yang memiliki Servlet. Servlet pada Java merupakan sebuah program yang menambahkan fitur dari server secara langsung. Jadi pada pemrograman dengan Servlet, kita akan memiliki satu web server di dalam program kita, dan pada web server tersebut akan ditambahkan fitur-fitur spesifik aplikasi web kita.
 server aplikasi yang aman memiliki antarmuka aman yang menerima permintaan dari browser web. Server juga memiliki program aplikasi untuk mengakses objek, seperti database, dan antarmuka pemrograman aplikasi (API) antara antarmuka aman dan program aplikasi. 
 Server aplikasi yang aman dapat berjalan terus menerus sebagai sebuah proses dan dapat mempertahankan informasi keadaan tentang objek. Dalam kasus di mana objek adalah database, database dapat tetap terbuka antara panggilan ke database yang sama, dan server yang aman dapat menyimpan pointer ke rekaman berikutnya untuk dibaca.
+Sistem ini membutuhkan komputasi dan overhead memori yang kurang. Server aman terukur di server tambahan tambahan itu dapat ditambahkan dan tugas mereka dapat dibagi sehingga server yang berbeda digunakan untuk tujuan yang berbeda. API antara antarmuka aman dan program aplikasi memungkinkan programmer untuk menggunakan model pemrograman CGI dalam program aplikasi.
 \subsection{Kelebihan CGI} 
 Kelebihan yang dimiliki CGI antara lain :
 \begin{enumerate}
@@ -166,7 +167,6 @@ import~cgitb; cgitb.enable()
 import simplejson as json 
 print "Content-type: text/html" 
 print 
-\vspace
 print """ 
 <html> 
 <head><title>CGI Script</title></head> 
@@ -183,7 +183,7 @@ form = cgi.FieldStorage()  $  \#  $variable form
 cari $  \_  $kata = form.getvalue("kata")  $  \#  $variable mengambil nilai dari input 
 location $  \_  $database = open('/home/develop/DW/kamus.json', 'r')  $  \#  $membuka kosa kata bahasa inggris 
 bhs $  \_  $inggris = json.load(location $  \_  $database) 
-\vspace
+
 if~cari $  \_  $kata:~   
 ~~ for bhs $  \_  $indonesia in cari $  \_  $kata.split(' '):  
 ~~~~for~arti $  \_  $kata in bhs $  \_  $inggris:    
