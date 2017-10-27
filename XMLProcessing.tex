@@ -6,8 +6,7 @@
 
 \section{Python XML Processing}
   XML adalah bahasa open source portable yang mungkinkan pemrogram mengemangkan aplikasi yang dapat dibaca oleh aplikasi lain, bahasa markup untuk keperluan umum yang disarankan oleh W3C untuk membuat dokumen markup keperluan pertukaran data antar sistem yang beraneka ragam. XML merupakan kelanjutan dari HTML (HyperText Markup Language) yang merupakan bahasa standar untuk melacak Internet.
-  Terdapat tiga elemen input yang diperlukan dalam prototip ini, yaitu: XMI, tipe output, dan lokasi output. 
-Setelah user memasukkan ketiga elemen input ini, sistem akan memeriksa kelengkapannya. Bila elemen input tidak lengkap,user diberi kesempatan untuk memasukkan kembali elemen input yang belum terisi. Setelah semua elemen input lengkap, sistem akan melakukan pemetaan XMI dan hasilnya disimpan ke dalam variabel.
+terlepas dari sistem operasi dan bahasa pengembangnya .
 \subsection{Apa itu XML}
   Extensible Markup Languange (XML) adalah bahasa markup seperti HTML atau SGML. 
 Ini direkomendasikan oleh World Wide Web Consortium dan tersedia sebagai standar terbuka.
@@ -23,9 +22,6 @@ Keunggulan dari python dapat dijabarkan dari faktor-faktor berikut ini :
 \item Productivity : penulisan program menggunakan python lebih mudah, karena interpreter menangani source code secara terpisah pada lower-level language.Interpreter menangani tipe deklarasi variabel,manajemen memory dan source code.
 \item Portability : program python dapat dieksekusi di berbagai jenis komputer.Dengan demikian proses eksekusi program dapat dilakukan tanpa mengubah source code program.
 \item Integration : phyton dirancang untuk dapat berinteraksi dengan aplikasi lain.Dengan demikian,program yang dibangun dengan bahasa pemrograman lain dapat dieksekusi dengan mudah padascript phyton dengan menggunakan function bahasa pemrograman lainnya.
-\item Informasi dapat dipertukarkan dari satu sistem ke sistem lain yang berbeda platform.Misalnya dari Windows ke Unix, dari PC ke Machintos, bahkan dari internet ke telepon genggam dengan teknologi WAP.
-\item File XML berbentuk teks sehingga bisa dibaca tanpa menggunakan perangkat lunak khusus.
-\item XML dibandingkan HTML lebih fleksibel dalam kemampuannya menyimpan informasi dan data.
 \end{enumerate}
  
 \subsection {Arsitektur XML dan API}
@@ -314,121 +310,62 @@ Ini akan menghasilkan hasil sebagai berikut: \par
 {\fontsize{10pt}{10pt}\selectfont Stars: 2} \par
 \noindent 
 \vspace{10pt}
-\noindent 
-\textbf{2.3 Parsing XML dengan API DOM} \par
-\noindent 
- \hspace*{0.5in} Document Ovject Model (DOM) adalah API lintas bahasa dari World Wide Web Consortium (W3C) untuk mengakses dan memodifikasi dokumen XML. \par
-\noindent 
- \hspace*{0.5in} DOM sangat berguna untuk aplikasi akses acak. SAX hanya memungkinkan melihat satu bit dokumen sekaligus. Jika melihat satu elemen SAX, tidak memiliki akses ke yang lain. \par
-\noindent 
- \hspace*{0.5in} Berikut adalah cara termudah untuk memuat dokumen XML dengan cepat dan membuat objek minidom menggunakan modul xml.dom. Objek minidom menyediakan metode parsing sederhana yang dengan cepat memuat pohon DOM dari file XML. \par
-\noindent 
- \hspace*{0.5in} Contoh~frase memanggil fungsi  parsing (file [,parsing]) dari objek minidokumen untuk mengurai file XML yang ditunjuk oleh file ke objek pohon DOM. \par
-\noindent 
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
-from xml.dom.minidom import parse \par
-\noindent 
-import xml.dom.minidom \par
-\vspace{12pt}
-\noindent 
- $  \#  $ Open XML document using minidom parser \par
-\noindent 
-DOMTree = xml.dom.minidom.parse("movies.xml") \par
-\noindent 
-collection = DOMTree.documentElement \par
-\noindent 
-if collection.hasAttribute("shelf"): \par
-\noindent 
-~~ print "Root element :  $  \%  $s"  $  \%  $ collection.getAttribute("shelf") \par
-\vspace{12pt}
-\noindent 
- $  \#  $ Get all the movies in the collection \par
-\noindent 
-movies = collection.getElementsByTagName("movie") \par
-\vspace{12pt}
-\noindent 
- $  \#  $ Print detail of each movie. \par
-\noindent 
-for movie in movies: \par
-\noindent 
-~~ print "*****Movie*****" \par
-\noindent 
-~~ if movie.hasAttribute("title"): \par
-\noindent 
-~~~~~ print "Title:  $  \%  $s"  $  \%  $ movie.getAttribute("title") \par
-\vspace{12pt}
-\noindent 
-~~ type = movie.getElementsByTagName('type')[0] \par
-\noindent 
-~~ print "Type:  $  \%  $s"  $  \%  $ type.childNodes[0].data \par
-\noindent 
-~~ format = movie.getElementsByTagName('format')[0] \par
-\noindent 
-~~ print "Format:  $  \%  $s"  $  \%  $ format.childNodes[0].data \par
-\noindent 
-~~ rating = movie.getElementsByTagName('rating')[0] \par
-\noindent 
-~~ print "Rating:  $  \%  $s"  $  \%  $ rating.childNodes[0].data \par
-\noindent 
-~~ description = movie.getElementsByTagName('description')[0] \par
-\noindent 
-~~ print "Description:  $  \%  $s"  $  \%  $ description.childNodes[0].data \par
-\vspace{12pt}
-\noindent 
-Ini akan menghasilkan hasil sebagai berikut : \par
-\noindent 
-Root element : New Arrivals \par
-\noindent 
-*****Movie***** \par
-\noindent 
-Title: Enemy Behind \par
-\noindent 
-Type: War, Thriller \par
-\noindent 
-Format: DVD \par
-\noindent 
-Rating: PG \par
-\noindent 
-Description: Talk about a US-Japan war \par
-\noindent 
-*****Movie***** \par
-\noindent 
-Title: Transformers \par
-\noindent 
-Type: Anime, Science Fiction \par
-\noindent 
-Format: DVD \par
-\noindent 
-Rating: R \par
-\noindent 
-Description: A schientific fiction \par
-\noindent 
-*****Movie***** \par
-\noindent 
-Title: Trigun \par
-\noindent 
-Type: Anime, Action \par
-\noindent 
-Format: DVD \par
-\noindent 
-Rating: PG \par
-\noindent 
-Description: Vash the Stampede! \par
-\noindent 
-*****Movie***** \par
-\noindent 
-Title: Ishtar \par
-\noindent 
-Type: Comedy \par
-\noindent 
-Format: VHS \par
-\noindent 
-Rating: PG \par
-\noindent 
-Description: Viewable boredom \par
-\vspace{12pt}
+
+\subsection{2.3 Parsing XML dengan API DOM} 
+Document Ovject Model (DOM) adalah API lintas bahasa dari World Wide Web Consortium (W3C) untuk mengakses dan memodifikasi dokumen XML.  DOM sangat berguna untuk aplikasi akses acak. SAX hanya memungkinkan melihat satu bit dokumen sekaligus. Jika melihat satu elemen SAX, tidak memiliki akses ke yang lain. Berikut adalah cara termudah untuk memuat dokumen XML dengan cepat dan membuat objek minidom menggunakan modul xml.dom. Objek minidom menyediakan metode parsing sederhana yang dengan cepat memuat pohon DOM dari file XML. \par
+Contoh~frase memanggil fungsi  parsing (file [,parsing]) dari objek minidokumen untuk mengurai file XML yang ditunjuk oleh file ke objek pohon DOM.
+\begin{enumerate}
+\item $  \#  $!/usr/bin/python
+from xml.dom.minidom import parse 
+import xml.dom.minidom 
+\item $  \#  $ Open XML document using minidom parser
+DOMTree = xml.dom.minidom.parse("movies.xml") 
+collection = DOMTree.documentElement 
+if collection.hasAttribute("shelf"): 
+print "Root element :  $  \%  $s"  $  \%  $ collection.getAttribute("shelf") 
+\item $  \#  $ Get all the movies in the collection 
+movies = collection.getElementsByTagName("movie") 
+\item $  \#  $ Print detail of each movie. 
+for movie in movies: 
+print "*****Movie*****" 
+if movie.hasAttribute("title"): 
+print "Title:  $  \%  $s"  $  \%  $ movie.getAttribute("title") 
+type = movie.getElementsByTagName('type')[0] 
+print "Type:  $  \%  $s"  $  \%  $ type.childNodes[0].data 
+format = movie.getElementsByTagName('format')[0] 
+print "Format:  $  \%  $s"  $  \%  $ format.childNodes[0].data 
+rating = movie.getElementsByTagName('rating')[0] 
+print "Rating:  $  \%  $s"  $  \%  $ rating.childNodes[0].data 
+description = movie.getElementsByTagName('description')[0] 
+print "Description:  $  \%  $s"  $  \%  $ description.childNodes[0].data 
+Ini akan menghasilkan hasil sebagai berikut : 
+Root element : New Arrivals 
+*****Movie***** 
+Title: Enemy Behind 
+Type: War, Thriller 
+Format: DVD 
+Rating: PG 
+Description: Talk about a US-Japan war 
+*****Movie***** 
+Title: Transformers 
+Type: Anime, Science Fiction 
+Format: DVD 
+Rating: R 
+Description: A schientific fiction 
+*****Movie***** 
+Title: Trigun 
+Type: Anime, Action 
+Format: DVD 
+Rating: PG 
+Description: Vash the Stampede! 
+*****Movie***** 
+Title: Ishtar 
+Type: Comedy 
+Format: VHS 
+Rating: PG
+Description: Viewable boredom 
+\end{enumerate}
+
 \noindent 
 \textbf{2.4}\textbf{ Membangun Parsing Document XML menggunakan Python} \par
 \noindent 
