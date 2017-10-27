@@ -1,349 +1,154 @@
 
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Modules} \\}\end{center} \par
-\vspace{12pt}
-\noindent 
-Modul memungkinkan Anda mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami dan digunakan. Modul adalah objek Python dengan atribut yang diberi nama sewenang-wenang sehingga Anda bisa mengikat dan memberi referensi. \par
-\noindent 
-Cukup, modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas dan variabel. Modul juga bisa menyertakan kode runnable. \par
-\vspace{12pt}
-\noindent 
-Example \par
-\noindent 
-Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py \par
-\noindent 
- \hspace*{0.5in} def print $  \_  $func( par ): \par
-\noindent 
- \hspace*{0.5in} ~~ print "Hello : ", par \par
-\noindent 
- \hspace*{0.5in} ~~ return \par
-\vspace{12pt}
-\noindent 
-The $  $import $  $Statement \par
-\noindent 
-Anda dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut: \par
-\noindent 
- \hspace*{0.5in} import module1[, module2[,... moduleN] \par
-\noindent 
-Ketika penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Anda perlu meletakkan perintah berikut di bagian atas skrip - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Import module support \par
-\noindent 
- \hspace*{0.5in} import support \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now you can call defined function that module as follows \par
-\noindent 
- \hspace*{0.5in} support.print $  \_  $func("Zara") \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} Hello : Zara \par
-\noindent 
-Modul hanya dimuat satu kali, berapa pun jumlahnya diimpor. Hal ini mencegah eksekusi modul terjadi berulang-ulang jika terjadi beberapa impor. \par
-\vspace{12pt}
-\noindent 
-The $  $from...import $  $Statement \par
-\noindent 
-Python dari pernyataan memungkinkan Anda mengimpor atribut tertentu dari modul ke dalam namespace saat ini. Dari ... impor memiliki sintaks berikut - \par
-\noindent 
- \hspace*{0.5in} from modname import name1[, name2[, ... nameN]] \par
-\noindent 
-Misalnya, untuk mengimpor fungsi fibonacci dari modul fib, gunakan pernyataan berikut - \par
-\noindent 
- \hspace*{0.5in} from fib import fibonacci \par
-\noindent 
-Pernyataan ini tidak mengimpor seluruh modul fib ke dalam namespace saat ini; Itu hanya memperkenalkan item fibonacci dari modul fib ke dalam tabel simbol global modul pengimpor. \par
-\vspace{12pt}
-\noindent 
-The $  $from...import * $  $Statement: \par
-\noindent 
-Hal ini juga memungkinkan untuk mengimpor semua nama dari modul ke dalam namespace saat ini dengan menggunakan pernyataan impor berikut - \par
-\noindent 
- \hspace*{0.5in} from modname import * \par
-\noindent 
-Ini menyediakan cara mudah untuk mengimpor semua item dari modul ke dalam namespace saat ini; Namun, pernyataan ini harus digunakan dengan hemat. \par
-\vspace{12pt}
-\noindent 
-Locating Modules \par
-\noindent 
-Saat mengimpor modul, juru bahasa Python mencari modul dalam urutan berikut - \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Direktori saat ini. \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  \hspace*{0.5in} PYTHONPATH. \par
-\noindent 
- \hspace*{0.5in}  $ \bullet $ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini  \hspace*{0.5in} biasanya / usr / local / lib / python /. \par
-\vspace{12pt}
-\noindent 
-Jalur pencarian modul disimpan dalam sistem modul sys sebagai sys.pathvariable. Variabel sys.path berisi direktori saat ini, PYTHONPATH, dan default pengaturan instalasi. \par
-\vspace{12pt}
-\noindent 
-The $  $PYTHONPATH $  $Variable: \par
-\noindent 
-The PYTHONPATH adalah variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. \par
-\noindent 
-Berikut adalah PYTHONPATH khas dari sistem Windows: \par
-\noindent 
- \hspace*{0.5in} set PYTHONPATH=c: $  \setminus  $python20 $  \setminus  $lib; \par
-\noindent 
-Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX: \par
-\noindent 
- \hspace*{0.5in} set PYTHONPATH=/usr/local/lib/python \par
-\vspace{12pt}
-\noindent 
-Namespaces and Scoping \par
-\noindent 
-Variabel adalah nama (identifiers) yang memetakan ke objek. Namespace adalah kamus dari nama variabel (kunci) dan objek yang sesuai (nilai). \par
-\noindent 
-Pernyataan Python dapat mengakses variabel dalam namespace lokal dan dalam namespace global. Jika variabel lokal dan global memiliki nama yang sama, variabel lokal membayangi variabel global. Setiap fungsi memiliki namespace lokal sendiri. Metode kelas mengikuti aturan pelingkupan yang sama dengan fungsi biasa. \par
-\noindent 
-Python membuat tebakan terdidik tentang apakah variabel bersifat lokal atau global. Ini mengasumsikan bahwa setiap variabel yang diberi nilai dalam suatu fungsi adalah lokal. \par
-\noindent 
-Oleh karena itu, untuk menetapkan nilai pada variabel global dalam suatu fungsi, Anda harus terlebih dahulu menggunakan pernyataan global. \par
-\noindent 
-Pernyataan global VarName memberitahu Python bahwa VarName adalah variabel global. Python berhenti mencari namespace lokal untuk variabel tersebut. \par
-\noindent 
-Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespace. Dalam fungsi Money, kita menetapkan Money a value, oleh karena itu Python mengasumsikan variabel lokal Moneyas. Namun, kami mengakses nilai variabel lokal Moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya. Uncommenting pernyataan global memperbaiki masalahnya. \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} Money = 2000 \par
-\noindent 
- \hspace*{0.5in} def AddMoney(): \par
-\noindent 
- \hspace*{0.5in} ~~  $  \#  $ Uncomment the following line to fix the code: \par
-\noindent 
- \hspace*{0.5in} ~~  $  \#  $ global Money \par
-\noindent 
- \hspace*{0.5in} ~~ Money = Money + 1 \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} print Money \par
-\noindent 
- \hspace*{0.5in} AddMoney() \par
-\noindent 
- \hspace*{0.5in} print Money \par
-\vspace{12pt}
-\noindent 
-The dir( ) Function \par
-\noindent 
-Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul. \par
-\noindent 
-Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut adalah contoh sederhana - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Import built-in module math \par
-\noindent 
- \hspace*{0.5in} import math \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} content = dir(math) \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} print content \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} [' $  \_  $ $  \_  $doc $  \_  $ $  \_  $', ' $  \_  $ $  \_  $file $  \_  $ $  \_  $', ' $  \_  $ $  \_  $name $  \_  $ $  \_  $', 'acos', 'asin', 'atan',  \par
-\noindent 
- \hspace*{0.5in} 'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',  \par
-\noindent 
- \hspace*{0.5in} 'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log', \par
-\noindent 
- \hspace*{0.5in} 'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',  \par
-\noindent 
- \hspace*{0.5in} 'sqrt', 'tan', 'tanh'] \par
-\noindent 
-Di sini, variabel string khusus  $  \_  $ $  \_  $name $  \_  $ $  \_  $ adalah nama modul, dan  $  \_  $ $  \_  $file $  \_  $ $  \_  $ adalah nama file tempat modul dimuat. \par
-\vspace{12pt}
-\noindent 
-The $  $globals() $  $and $  $locals() $  $Functions  $ - $ \par
-\noindent 
-Fungsi global () dan penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global dan lokal tergantung pada lokasi dari tempat mereka dipanggil. \par
-\noindent 
-Jika penduduk setempat () dipanggil dari dalam sebuah fungsi, maka semua nama yang dapat diakses secara lokal berasal dari fungsi itu. \par
-\noindent 
-Jika globals () dipanggil dari dalam sebuah fungsi, maka akan mengembalikan semua nama yang dapat diakses secara global dari fungsi itu. \par
-\noindent 
-Jenis kembalian dari kedua fungsi ini adalah kamus. Oleh karena itu, nama dapat diekstrak dengan menggunakan tombol () fungsi. \par
-\vspace{12pt}
-\noindent 
-The $  $reload() $  $Function \par
-\noindent 
-Saat modul diimpor ke dalam skrip, kode di bagian tingkat atas dari modul hanya akan dijalankan satu kali. \par
-\noindent 
-Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, Anda dapat menggunakan fungsi reload (). Fungsi reload () mengimpor modul yang sebelumnya diimpor lagi. Sintaks fungsi reload () adalah ini - \par
-\noindent 
- \hspace*{0.5in} reload(module $  \_  $name) \par
-\noindent 
-Di sini, module $  \_  $name adalah nama modul yang ingin Anda muat ulang dan bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut - \par
-\noindent 
- \hspace*{0.5in} reload(hello) \par
-\vspace{12pt}
-\noindent 
-Packages in Python \par
-\noindent 
-Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul dan subpackages dan sub-subpackages, dan seterusnya. \par
-\noindent 
-Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut - \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} def Pots(): \par
-\noindent 
- \hspace*{0.5in} ~~ print "I'm Pots Phone" \par
-\noindent 
-Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas - \par
-\noindent 
-Phone/Isdn.py $  $file having function Isdn() \par
-\noindent 
-Phone/G3.py $  $file having function G3() \par
-\vspace{12pt}
-\noindent 
-Now, create one more file  $  \_  $ $  \_  $init $  \_  $ $  \_  $.py in $  $Phone $  $directory  $ - $ \par
-\noindent 
-Phone/ $  \_  $ $  \_  $init $  \_  $ $  \_  $.py \par
-\noindent 
-Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di  $  \_  $ $  \_  $init $  \_  $ $  \_  $.py sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} from Pots import Pots \par
-\noindent 
- \hspace*{0.5in} from Isdn import Isdn \par
-\noindent 
- \hspace*{0.5in} from G3 import G3 \par
-\vspace{12pt}
-\noindent 
-Setelah Anda menambahkan baris ini ke  $  \_  $ $  \_  $init $  \_  $ $  \_  $.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. \par
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $ Now import your Phone Package. \par
-\noindent 
- \hspace*{0.5in} import Phone \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} Phone.Pots() \par
-\noindent 
- \hspace*{0.5in} Phone.Isdn() \par
-\noindent 
- \hspace*{0.5in} Phone.G3() \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} I'm Pots Phone \par
-\noindent 
- \hspace*{0.5in} I'm 3G Phone \par
-\noindent 
- \hspace*{0.5in} I'm ISDN Phone \par
-\noindent 
-Pada contoh di atas, kita telah mengambil contoh fungsi tunggal di setiap file, namun Anda dapat menyimpan beberapa fungsi dalam file Anda. Anda juga dapat menentukan kelas Python yang berbeda dalam file tersebut dan kemudian Anda dapat membuat paket Anda dari kelas tersebut. \par
-\vspace{12pt}
-\noindent 
-Modules \par
-\noindent 
-Jika Anda berhenti dari juru bahasa Python dan memasukkannya lagi, definisi yang telah Anda buat (fungsi dan variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program. \par
-\noindent 
-Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat diimpor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator). \par
-\noindent 
-Modul adalah file yang berisi definisi dan pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global  $  \_  $ $  \_  $name $  \_  $ $  \_  $. Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut. \par
-\vspace{12pt}
-\noindent 
-6.1. More on Modules \par
-\noindent 
-Modul dapat berisi pernyataan eksekusi serta definisi fungsi. Pernyataan ini dimaksudkan untuk menginisialisasi modul. Mereka dieksekusi hanya untuk pertama kalinya nama modul ditemukan dalam sebuah pernyataan impor. [1] (Mereka juga dijalankan jika file dijalankan sebagai skrip.) \par
-\noindent 
-Setiap modul memiliki tabel simbol pribadinya, yang digunakan sebagai tabel simbol global oleh semua fungsi yang didefinisikan dalam modul. Dengan demikian, penulis modul dapat menggunakan variabel global dalam modul tanpa mengkhawatirkan bentrokan kecelakaan dengan variabel global pengguna. Di sisi lain, jika Anda tahu apa yang Anda lakukan, Anda dapat menyentuh variabel global modul dengan notasi yang sama yang digunakan untuk merujuk pada fungsinya, nama modname.itemname. \par
-\noindent 
-Modul bisa mengimpor modul lainnya. Sudah menjadi kebiasaan tapi tidak diharuskan untuk menempatkan semua pernyataan impor di awal modul (atau naskah, dalam hal ini). Nama modul yang diimpor ditempatkan di tabel simbol global modul pengimpor. \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-6.1.1. Executing modules as scripts \par
-\noindent 
-Saat Anda menjalankan modul Python dengan \par
-\vspace{12pt}
-\noindent 
-python fibo.py <arguments> \par
-\noindent 
-Kode dalam modul akan dieksekusi, sama seperti jika Anda mengimpornya, tapi dengan  $  \_  $ $  \_  $name $  \_  $ $  \_  $ set ke " $  \_  $ $  \_  $main $  \_  $ $  \_  $". Itu berarti bahwa dengan menambahkan kode ini di akhir modul Anda: \par
-\vspace{12pt}
-\noindent 
-if  $  \_  $ $  \_  $name $  \_  $ $  \_  $ == " $  \_  $ $  \_  $main $  \_  $ $  \_  $": \par
-\noindent 
-~~~ import sys \par
-\noindent 
-~~~ fib(int(sys.argv[1])) \par
-\vspace{12pt}
-\noindent 
-Anda dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file "utama": \par
-\vspace{12pt}
-\noindent 
- $  \$  $ python fibo.py 50 \par
-\noindent 
-1 1 2 3 5 8 13 21 34 \par
-\noindent 
-Jika modul diimpor, kode tidak dijalankan: \par
-\noindent 
->>> \par
-\noindent 
->>> import fibo \par
-\noindent 
->>> \par
-\noindent 
-Hal ini sering digunakan untuk menyediakan antarmuka pengguna yang mudah digunakan ke modul, atau untuk tujuan pengujian (menjalankan modul saat skrip menjalankan test suite). \par
-\vspace{12pt}
-\noindent 
-6.1.2. The Module Search Path \par
-\noindent 
-Ketika sebuah modul bernama spam diimpor, penerjemah pertama-tama mencari modul built-in dengan nama itu. Jika tidak ditemukan, maka cari file bernama spam.py dalam daftar direktori yang diberikan oleh variabel sys.path. sys.path diinisialisasi dari lokasi ini: \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
- $ \bullet $ Direktori berisi skrip masukan (atau direktori saat ini bila tidak ada file yang ditentukan). \par
-\noindent 
- $ \bullet $ PYTHONPATH (daftar nama direktori, dengan sintaks yang sama dengan variabel shell PATH). \par
-\noindent 
- $ \bullet $ Default yang tergantung pada instalasi. \par
-\vspace{12pt}
-\noindent 
-Setelah inisialisasi, program Python dapat memodifikasi sys.path. Direktori yang berisi skrip yang dijalankan ditempatkan di awal jalur pencarian, di depan jalur perpustakaan standar. Ini berarti skrip di direktori itu akan dimuat alih-alih modul dengan nama yang sama di direktori perpustakaan. Ini adalah kesalahan kecuali penggantinya. Lihat bagian Modul Standar untuk informasi lebih lanjut. \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-6.1.3.  $ " $Compiled $ " $ Python files \par
-\noindent 
-Untuk mempercepat pemuatan modul, Python menyimpan versi yang dikompilasi setiap modul di direktori  $  \_  $ $  \_  $pycache $  \_  $ $  \_  $ dengan nama module.version.pyc, di mana versi tersebut mengkodekan format file yang dikompilasi; Umumnya berisi nomor versi Python. Sebagai contoh, dalam rilis CPython 3.3 versi terkompilasi dari spam.py akan di-cache sebagai  $  \_  $ $  \_  $pycache  $  \_  $ $  \_  $ / spam.cpython-33.pyc. Konvensi penamaan ini memungkinkan modul yang dikompilasi dari berbagai rilis dan versi Python yang berbeda untuk hidup berdampingan.  \par
-\vspace{12pt}
-\noindent 
-Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk melihat apakah sudah ketinggalan zaman dan perlu dikompilasi ulang. Ini adalah proses yang benar-benar otomatis. Selain itu, modul yang dikompilasi bersifat platform-independen, sehingga perpustakaan yang sama dapat dibagi antar sistem dengan arsitektur yang berbeda. Python tidak memeriksa cache dalam dua situasi. Pertama, selalu mengkompilasi ulang dan tidak menyimpan hasilnya untuk modul yang dimuat langsung dari baris perintah. Kedua, tidak memeriksa cache jika tidak ada modul sumber. Untuk mendukung distribusi non-source (dikompilasi saja), modul yang dikompilasi harus berada dalam direktori sumber, dan tidak boleh ada modul sumber. \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-Beberapa tip untuk para ahli: \par
-\noindent 
- $ \bullet $ Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string  $  \_  $ $  \_  $doc $  \_  $ $  \_  $. Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul "Dioptimalkan" memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. \par
-\noindent 
- $ \bullet $ Program tidak berjalan lebih cepat saat dibaca dari file .pyc daripada saat dibaca dari file .py; Satu-satunya yang lebih cepat tentang file .pyc adalah kecepatan pengisiannya. \par
-\noindent 
- $ \bullet $ Compileall modul dapat membuat file .pyc untuk semua modul dalam sebuah direktori. \par
-\noindent 
- $ \bullet $ Ada lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. \par
+\section{Phyton Modules} 
+Modul memungkinkan Kita mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam modul membuat kode lebih mudah dipahami & digunakan. Modul merupakan objek Python dengan atribut yang diberi nama semena-mena sehingga Kita bisa mengikat & memberi referensi.
+\subsection{Modul Phyton}
+modul adalah file yang terdiri dari kode Python. Modul dapat mendefinisikan fungsi, kelas & variabel. Modul juga bisa menyertakan kode runnable.
+Kode Python untuk sebuah modul bernama aname biasanya berada pada sebuah file bernama aname.py. Berikut adalah contoh modul sederhana, support.py  
+ \hspace*{0.5in} def print \  \_  \$func{ par }:  
+ \hspace*{0.5in} ~~ print "Hello : ", par  
+ \hspace*{0.5in} ~~ return  
+The \$  \$import \$  \Statement  
+Kita dapat menggunakan file sumber Python apapun sebagai modul dengan mengeksekusi pernyataan impor di file sumber Python lainnya. Impor memiliki sintaks berikut:  
+ \hspace*{0.5in} import module1[, module2[,... moduleN]  
+Ketika seorang penafsir menemukan sebuah pernyataan impor, ia mengimpor modul jika modul tersebut ada di jalur pencarian. Jalur pencarian adalah daftar direktori yang ditafsirkan juru bahasa sebelum mengimpor modul. Misalnya, untuk mengimpor modul support.py, Kita perlu meletakkan perintah berikut di bagian atas skrip - 
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python 
+ \hspace*{0.5in}  \  \#  \ Import module support 
+ \hspace*{0.5in} import support 
+ \hspace*{0.5in}  \  \#  \ Now you can call defined function that module as follows 
+ \hspace*{0.5in} support.print \  \_  \func{"Zara"} 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut 
+ \hspace*{0.5in} Hello : Zara
+Modul hanya dimuat satu kali, berapa pun jumlahnya diimpor. Hal ini mencegah eksekusi modul terjadi berulang-ulang jika terjadi beberapa impor. 
+The \  \from...import \  \Statement 
+
+Python dari pernyataan memungkinkan Anda mengimpor atribut tertentu dari modul ke dalam namespace saat ini. Dari ... impor memiliki sintaks berikut - 
+ \hspace*{0.5in} from modname import name1[, name2[, ... nameN]] 
+Misalnya, untuk mengimpor fungsi fibonacci dari modul fib, gunakan pernyataan berikut 
+ \hspace*{0.5in} from fib import fibonacci 
+Pernyataan ini tidak mengimpor seluruh modul fib ke dalam namespace saat ini; Itu hanya memperkenalkan item fibonacci dari modul fib ke dalam tabel simbol global modul pengimpor.  
+The \  \from...import * \  \$Statement: 
+Hal ini juga memungkinkan untuk mengimpor semua nama dari modul ke dalam namespace saat ini dengan menggunakan pernyataan impor berikut 
+ \hspace*{0.5in} from modname import * 
+Ini menyediakan cara mudah untuk mengimpor semua item dari modul ke dalam namespace saat ini; Namun, pernyataan ini harus digunakan dengan hemat.
+Locating Modules
+Saat mengimpor modul, juru bahasa Python mencari modul dalam urutan berikut - 
+ \hspace*{0.5in}  \ \bullet \ Direktori saat ini. 
+ \hspace*{0.5in}  \ \bullet \ Jika modul tidak ditemukan, Python kemudian mencari setiap direktori di variabel shell  \hspace*{0.5in} PYTHONPATH. 
+ \hspace*{0.5in}  \ \bullet \ Jika semuanya gagal, Python memeriksa jalur default. Di UNIX, jalur default ini  \hspace*{0.5in} biasanya / usr / local / lib / python /. 
+Jalur pencarian modul disimpan dalam sistem modul sys sebagai sys.pathvariable. Variabel sys.path berisi direktori saat ini, PYTHONPATH, & default pengaturan instalasi.
+The \  \PYTHONPATH \  \Variable:  
+The PYTHONPATH adalah variabel lingkungan, yang terdiri dari daftar direktori. Sintaksis PYTHONPATH sama dengan variabel shell PATH. 
+Berikut adalah PYTHONPATH khas dari sistem Windows: 
+ \hspace*{0.5in} set PYTHONPATH=c: \  \setminus  \python20 \  \setminus  \$lib;  
+Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX: 
+ \hspace*{0.5in} set PYTHONPATH=/usr/local/lib/python  
+Namespaces & Scoping  
+Variabel adalah nama {identifiers} yang memetakan ke objek. Namespace adalah kamus dari nama variabel {kunci} & objek yang sesuai {nilai}.  
+Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local & dalam sebuah namespace global, jika variable local & variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. & ada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
+
+Phyton membuat tebakan terdidik tentang variable yang bersifat local atau global . ini tentu dapat mengasumsikan bahwa setiap variable yang diberi nilai dalam suatu fungsi merupakan variable local.
+
+Oleh karenanya, untuk menetapkan sebuah nilai pada variable global dalam suatu fungsi, kita harus terlebih dahulu menggunakan pernyataan global. Pernyataan gloval VarName akan memberitahu pada phyton bahwa VarName merupakan Variabel global. Phyton akan berhenti mencari namespace local untuk variable tersebut.
+Sebagai contohnya, kita mendefinisikan sebuah variable money in the global namespace.dalam fungsi tersebut, kita menetapkan money a value. Oleh karena itu, phyton mengasumsikan variable local moneyas. Namun, kami mengakses nilai variable local moneybefore yang mengaturnya, jadi UnboundLocalError adalah hasilnya, & Uncommenting pernyataan global yang akan memperbaiki masalahnya.
+ 
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python  
+ \hspace*{0.5in} Money = 2000  
+ \hspace*{0.5in} def AddMoney():  
+ \hspace*{0.5in} ~~  \  \#  \ Uncomment the following line to fix the code:  
+ \hspace*{0.5in} ~~  \  \#  \ global Money  
+ \hspace*{0.5in} ~~ Money = Money + 1  
+ \hspace*{0.5in} print Money  
+ \hspace*{0.5in} AddMoney() 
+ \hspace*{0.5in} print Money  
+The dir( ) Function  
+Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul. 
+Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut adalah contoh sederhana - 
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python 
+ \hspace*{0.5in}  \  \#  \ Import built-in module math  
+ \hspace*{0.5in} import math  
+ \hspace*{0.5in} content = dir(math) 
+ \hspace*{0.5in} print content 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+ \hspace*{0.5in} [' \  \_  \ \  \_  \doc \  \_  \ \  \_  \', ' \  \_  \ \  \_  \file \  \_  \ \  \_  \', ' \  \_  \ \  \_  \name \  \_  \ \  \_  \', 'acos', 'asin', 'atan',
+ 
+ \hspace*{0.5in} 'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',   
+ \hspace*{0.5in} 'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',  
+ \hspace*{0.5in} 'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',   
+ \hspace*{0.5in} 'sqrt', 'tan', 'tanh']  
+Di sini, variabel string khusus  \$  \_  \$ \$  \_  \$name \$  \_  \$ \$  \_  \$ adalah nama modul, &  \$  \_  \$ \$  \_  \$file \$  \_  \$ \$  \_  \$ adalah nama file tempat modul dimuat. 
+The \$  \$globals() \$  \$and \$  \$locals() \$  \$Functions  \$ - \$  
+Fungsi global () & penduduk lokal () dapat digunakan untuk mengembalikan nama di ruang nama global & lokal tergantung pada lokasi dari tempat mereka dipanggil.  
+Jika penduduk setempat () dipanggil dari dalam sebuah fungsi, maka semua nama yang dapat diakses secara lokal berasal dari fungsi itu. 
+Jika globals () dipanggil dari dalam sebuah fungsi, maka akan mengembalikan semua nama yang dapat diakses secara global dari fungsi itu. 
+Jenis kembalian dari kedua fungsi ini adalah kamus. Oleh karena itu, nama dapat diekstrak dengan menggunakan tombol () fungsi.
+The \$  \$reload() \$  \$Function  
+Saat modul diimpor ke dalam skrip, kode di bagian tingkat atas dari modul hanya akan dijalankan satu kali.  
+Oleh karena itu, jika Anda ingin mengulang ulang kode tingkat atas dalam modul, Anda dapat menggunakan fungsi reload (). Fungsi reload () mengimpor modul yang sebelumnya diimpor lagi. Sintaks fungsi reload () adalah ini -  
+ \hspace*{0.5in} reload(module \$  \_  \$name) 
+Di sini, module \$  \_  \$name adalah nama modul yang ingin Anda muat ulang & bukan string yang berisi nama modul. Misalnya, untuk me-reload modul hello, lakukan hal berikut -  
+ \hspace*{0.5in} reload(hello) 
+Packages in Python 
+Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul & subpackages dan sub-subpackages, & seterusnya.  
+Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut -  
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python 
+ \hspace*{0.5in} def Pots():  
+ \hspace*{0.5in} ~~ print "I'm Pots Phone"  
+Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas -  
+Phone/Isdn.py \  \file having function Isdn()  
+Phone/G3.py \$  \file having function G3() 
+Now, create one more file  \  \_  \ \  \_  \init \  \_  \ \  \_  \.py in \  \$Phone \  \$directory  \ - \ 
+Phone/ \  \_  \ \  \_  \init \  \_  \ \  \_  \.py  
+Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di    \_     \_  \init \  \_  \ \  \_  \.py sebagai berikut - 
+ \hspace*{0.5in} from Pots import Pots 
+ \hspace*{0.5in} from Isdn import Isdn  
+ \hspace*{0.5in} from G3 import G3 
+Setelah Anda menambahkan baris ini ke  \  \_  \ \  \_  \init \  \_  \ \  \_  \.py, Anda memiliki semua kelas ini yang tersedia saat Anda mengimpor paket Telepon. 
+ \hspace*{0.5in}  \  \#  \!/usr/bin/python 
+ \hspace*{0.5in}  \  \#  \ Now import your Phone Package. 
+ \hspace*{0.5in} import Phone 
+ \hspace*{0.5in} Phone.Pots()  
+ \hspace*{0.5in} Phone.Isdn() 
+ \hspace*{0.5in} Phone.G3() 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -  
+ \hspace*{0.5in} I'm Pots Phone  
+ \hspace*{0.5in} I'm 3G Phone  
+ \hspace*{0.5in} I'm ISDN Phone  
+Pada contoh di atas, kita telah mengambil contoh fungsi tunggal di setiap file, namun Anda dapat menyimpan beberapa fungsi dalam file Anda. Anda juga dapat menentukan kelas Python yang berbeda dalam file tersebut dan kemudian Anda dapat membuat paket Anda dari kelas tersebut.
+Modules  
+Jika Anda berhenti dari juru bahasa Python & memasukkannya lagi, definisi yang telah Anda buat (fungsi & variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
+Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat di impor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator).  
+Modul adalah file yang berisi definisi & pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut.  
+6.1. More on Modules 
+Modul dapat berisi pernyataan eksekusi serta definisi fungsi. Pernyataan ini dimaksudkan untuk menginisialisasi modul. Mereka dieksekusi hanya untuk pertama kalinya nama modul ditemukan dalam sebuah pernyataan impor. [1] (Mereka juga dijalankan jika file dijalankan sebagai skrip.)  
+Setiap modul memiliki tabel simbol pribadinya, yang digunakan sebagai tabel simbol global oleh semua fungsi yang didefinisikan dalam modul. Dengan demikian, penulis modul dapat menggunakan variabel global dalam modul tanpa mengkhawatirkan bentrokan kecelakaan dengan variabel global pengguna. Di sisi lain, jika kita tahu apa yang kita lakukan, kita dapat menyentuh variabel global modul dengan notasi yang sama yang digunakan untuk merujuk pada fungsinya, nama modname.itemname. 
+Modul bisa mengimpor modul lainnya. Sudah menjadi kebiasaan tapi tidak diharuskan untuk menempatkan semua pernyataan impor di awal modul (atau naskah, dalam hal ini). Nama modul yang diimpor ditempatkan di tabel simbol global modul pengimpor.  
+6.1.1. Executing modules as scripts  
+Saat Anda menjalankan modul Python dengan  
+python fibo.py <arguments>  
+Kode dalam modul akan dieksekusi, sama seperti jika kita mengimpornya, tapi dengan    \_     \_  name   \_     \_   set ke "   \_     \_  main   \_     \_  ". Itu berarti bahwa dengan menambahkan kode ini di akhir modul Anda: 
+if    \_     \_  name   \_     \_   == "   \_     \_  main   \_     \_  ":  
+~~~ import sys 
+~~~ fib(int(sys.argv[1])) 
+Kita dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file "utama":  
+   \$   python fibo.py 50 t 
+1 1 2 3 5 8 13 21 34  
+Jika modul diimpor, kode tidak dijalankan:  
+>>>  
+>>> import fibo  
+>>>  
+Hal ini sering digunakan untuk menyediakan antarmuka pengguna yang mudah digunakan ke modul, atau untuk tujuan pengujian (menjalankan modul saat skrip menjalankan test suite). 
+6.1.2. The Module Search Path 
+Ketika sebuah modul bernama spam diimpor, penerjemah pertama-tama mencari modul built-in dengan nama itu. Jika tidak ditemukan, maka cari file bernama spam.py dalam daftar direktori yang diberikan oleh variabel sys.path. sys.path diinisialisasi dari lokasi ini:  
+  \bullet  Direktori berisi skrip masukan (atau direktori saat ini bila tidak ada file yang ditentukan).  
+  \bullet  PYTHONPATH (daftar nama direktori, dengan sintaks yang sama dengan variabel shell PATH).  
+  \bullet  Default yang tergantung pada instalasi. 
+Setelah inisialisasi, program Python dapat memodifikasi sys.path. Direktori yang berisi skrip yang dijalankan ditempatkan di awal jalur pencarian, di depan jalur perpustakaan standar. Ini berarti skrip di direktori itu akan dimuat alih-alih modul dengan nama yang sama di direktori perpustakaan. Ini adalah kesalahan kecuali penggantinya. Lihat bagian Modul Standar untuk informasi lebih lanjut.  
+6.1.3.   " Compiled  "  Python files  
+Untuk mempercepat pemuatan modul, Python menyimpan versi yang dikompilasi setiap modul di direktori    \_     \_  pycache   \_     \_   dengan nama module.version.pyc, di mana versi tersebut mengkodekan format file yang dikompilasi; Umumnya berisi nomor versi Python. Sebagai contoh, dalam rilis CPython 3.3 versi terkompilasi dari spam.py akan di-cache sebagai    \_     \_  pycache    \_     \_   / spam.cpython-33.pyc. Konvensi penamaan ini memungkinkan modul yang dikompilasi dari berbagai rilis dan versi Python yang berbeda untuk hidup berdampingan.  
+Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk melihat apakah sudah ketinggalan zaman dan perlu dikompilasi ulang. Ini adalah proses yang benar-benar otomatis. Selain itu, modul yang dikompilasi bersifat platform-independen, sehingga perpustakaan yang sama dapat dibagi antar sistem dengan arsitektur yang berbeda. Python tidak memeriksa cache dalam dua situasi. Pertama, selalu mengkompilasi ulang dan tidak menyimpan hasilnya untuk modul yang dimuat langsung dari baris perintah. Kedua, tidak memeriksa cache jika tidak ada modul sumber. Untuk mendukung distribusi non-source (dikompilasi saja), modul yang dikompilasi harus berada dalam direktori sumber, dan tidak boleh ada modul sumber. 
+Beberapa tip untuk para ahli:  
+  \bullet  Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string    \_     \_  doc   \_     \_  . Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul "Dioptimalkan" memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. 
+  \bullet  Program tidak berjalan lebih cepat saat dibaca dari file .pyc daripada saat dibaca dari file .py; Satu-satunya yang lebih cepat tentang file .pyc adalah kecepatan pengisiannya.  
+  \bullet  Compileall modul dapat membuat file .pyc untuk semua modul dalam sebuah direktori.  
+  \bullet  Kita lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. 
 
