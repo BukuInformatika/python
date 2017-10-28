@@ -35,6 +35,7 @@
 
 	Dengan segudang manfaat dan kegunaan yang dimiliki oleh database maka sudah seharusnya semua perusahaan baik itu perusahaan skala kecil apalagi perusahaan besar memiliki database yang dibangun dengan rancangan yang baik. Ditambah dengan pemanfaatan teknologi jaringan komputer maka manfaat database ini akan semakin besar. Penggunaan database sekaligus teknologi jaringan komputer telah banyak digunakan oleh berbagai macam perusahaan,contohnya saja perbankan yang memiliki cabang di setiap kotanya. Perusahaan Bank tersebut hanya memiliki satu database yang disimpan di server pusat, sedangkan cabang-cabangnya terhubung melalui jaringan komputer untuk mengakses database yang terletak di sever pusat tersebut.
 
+
 \subsection{Pengertian Character}
 	Charakter merupakan bagian data yang terkecil, dapat berupa karakter numerik, huruf ataupun karakter-karakter khusus (special characters) yang membentuk suatu item data / field.
 
@@ -100,6 +101,7 @@
 			Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.
 	\end{enumerate}
  
+ 
 \subsection {Modul python untuk mengakses database MySQL}
 	Untuk mengakses database MySQL dari Python, berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. 
 
@@ -107,25 +109,25 @@
 		\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysqlserver. Jangan lupa memasukkan password akun root untuk server MySQL. 
 		\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. 
 
+			Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
+			mysql> create database teman; 
+			mysql> use teman; \hspace*{1.69in}  
+			mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); 
+	\vspace{12pt}
 
-Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
-mysql> create database teman; 
-mysql> use teman; \hspace*{1.69in}  
-mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); 
+		\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
+			mysql> create user 'andri'@'localhost' identified by '123456'; 	
+			mysql> grant all on teman.* to 'andri'@'localhost' with grant option; 
+
+		\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut. 
+	\end{enumerate}
+	\vspace{12pt}
+
+\subsection{Sambung dan Selectall}
+Dalam modul python ini terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. Berikut Contoh selectall dalam python ;
 \vspace{12pt}
 
-\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
-mysql> create user 'andri'@'localhost' identified by '123456'; 
-mysql> grant all on teman.* to 'andri'@'localhost' with grant option; 
-
-\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut. 
-\end{enumerate}
-
-\vspace{12pt}
-Modul terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. 
-\vspace{12pt}
-
-import MySQLdb \par
+import MySQLdb
 \noindent 
 def sambung (host,user,passwd):
 \noindent 
@@ -144,7 +146,7 @@ def selectall(mycon, dbname, table):
 \noindent 
 ~ rows=mycur.fetchall() 
 \noindent 
-~ a=[] \par
+~ a=[]
 \noindent 
 ~ for i in rows: 
 \noindent 
@@ -161,7 +163,9 @@ def selectall(mycon, dbname, table):
 ~~~ a.append(i) 
 \noindent 
 ~ return a 
+
 Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat diakses melalui shell python karena belum ada fungsi main yang terdefinsi. Hal ini disebabkan karena rancangan input/ouput masih seadanya. Karenanya, mari masuk ke shell python dengan menjalankan perintah python di terminal. Yang perlu diperhatikan, penggunaan shell python harus dilakukan dari directory di mana modul ini disimpan. Berikut adalah gambaran ketika berada dalam shell python dan menggunakan modul ini. 
+
 \noindent 
 >>> from mymodul import * 
 \noindent 
@@ -172,28 +176,37 @@ Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat di
 Andri Jl. Sariasih, Sarijadi, Bandung 12450 08123456789 andri@poltekpos.ac.id 
 \noindent 
 >>>
+
 Di baris pertama, kita import modul dari nama file, untuk selanjutnya import semua fungsi yang ada di dalamnya. Selanjutnya, kita membuat variabel bernama mycon bertipe koneksi ke MySQL (dapat dilihat dengan cara menjalankan perintah type(mycon) dari shell python) dan meng-assigned nilainya dari memanggil fungsi sambung. Selanjutnya, variabel a di-assinged nilainya dari memanggil fungsi selectall. Terlihat bahwa fungsi selectall mencetak nilai yang diperoleh dari operasi select tabel. 
 \vspace{12pt}
+
 Dengan ilustrasi ini, diharapkan dapat memberi inspirasi dalam membuat modul python yang digunakan untuk sebuah aplikasi, misalnya dengan menjadikannya sebagai bagian dari hubungan SIGNAL-SLOT pada QT4. Semoga bermanfaat. 
 \vspace{12pt}
+
 Dalam era informasi dimana kita hidup sekarang, kita dapat melihat seberapa banyak data dunia berubah. Kita pada dasarnya membuat, menyimpan, dan menarik data, secara ekstensif. Harusnya ada sebuah cara untuk menangani semua itu. Semua itu tidak dapat disebarkan kemana-mana tanpa adanya manajemen bukan? Di sini hadir Database Management System (DBMS). DBMS adalah sebuah sistem software yang memungkinkanmu untuk membuat, menyimpan, memodifikasi, menarik, dan penanganan lainnya terhadap sebuah data dari database. Sistem ini juga bervariasi dalam ukuran, mulai dari sistem kecil yang cukup berjalan pada komputer personal hingga yang lebih besar yang berjalan dalam mainframe. 
 \vspace{12pt}
 \noindent 
-\textbf{Python Database API} 
+
+\subsection{Python Database API} 
 Python dapat berinteraksi dengan database. Namun, bagaimana cara melakukannya? Python menggunakan apa yang disebut Python Database API dengan tujuan untuk menjadi antarmuka dengan database. API ini mengijinkan kita untuk memprogram database management system (DBMS) yang berbeda. Untuk DBMS yang berbeda itu, bagaimana pun juga, proses yang diikuti pada tingkatan kode tetap sama, yaitu sebagai berikut: 
 \vspace{12pt}
 \noindent 
-\begin{itemize}
-\item Membangun sebuah koneksi ke database pilihanmu. Kita bisa membuat function koneksi, kemudian dipanggil dari file atau script atau halaman lain.Hanya menyediakan fungsi koneksi saja. 
-\noindent 
-\item Kita membuat class koneksi, kemudian dipanggil dari file atau script atau halaman lain.
+
+	\begin{enumerate}
+		\item Membangun sebuah koneksi ke database pilihanmu. Kita bisa membuat function koneksi, kemudian dipanggil dari file atau script atau halaman lain.Hanya menyediakan fungsi koneksi saja. 
+		\noindent
+		
+		\item Kita membuat class koneksi, kemudian dipanggil dari file atau script atau halaman lain.
 Menyediakan fungsi-fungsi dasar eksekusi perintah ke database seperti execute, mengambil data dan lainnya.
-\noindent 
-\item Memanipulasi data menggunakan SQL (berinteraksi). 
-\noindent 
-\item Memberitahu koneksi untuk entah menerapkan manipulasi SQL ke data dan membuatnya permanen (commit), atau memberitahunya untuk meninggalkan manipulasi itu (rollback), sehingga mengembalikan data ke keadaan sebelum interaksi terjadi. 
-\noindent 
-\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi.
+		\noindent
+		
+		\item Memanipulasi data menggunakan SQL (berinteraksi). 
+		\noindent
+		
+		\item Memberitahu koneksi untuk entah menerapkan manipulasi SQL ke data dan membuatnya permanen (commit), atau memberitahunya untuk meninggalkan manipulasi itu (rollback), sehingga mengembalikan data ke keadaan sebelum interaksi terjadi. 
+		\noindent 
+		
+		\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi.
 Menyediakan fitur-fitur lengkap tentang koneksi ke database, bahkan menyediakan berbagai pilihan jenis database.
 Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan teman-teman sudah menginstall web server (XAMPP/yang lainnya) dan python di komputer masing-masing. Setelah itu semua siap sekarang silahkan download mysql connector untuk python disini (Sesuaikan dengan versi python yang kalian punya). Setelah itu tinggal install. 
 Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu  $ " $trial $ " $ Lalu import sql berikut 
@@ -207,22 +220,26 @@ show-data.py
 lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal kalian run dari command prompt.
 \vspace{12pt}
 \noindent 
-\textbf{Koneksi Database MySQL dengan Python} 
+
+\subsection{Koneksi Database MySQL dengan Python} 
 \noindent 
-\begin{enumerate}
-\item Pastikan sudah mengintal package libmysqlclient-dev dengan: 
+	\begin{enumerate}
+		\item Pastikan sudah mengintal package libmysqlclient-dev dengan: 
 apt-get install libmysqlclient-dev 
 \noindent 
-\item Download modul MySQLdb. 
+		
+		\item Download modul MySQLdb. 
 \noindent 
-\item Instal modul tersebut dengan cara (Pastikan login sebagai root ya): 
+		
+		\item Instal modul tersebut dengan cara (Pastikan login sebagai root ya): 
  $  \$  $ gunzip MySQL-python-1.2.2.tar.gz 
  $  \$  $ tar -xvf MySQL-python-1.2.2.tar 
  $  \$  $ cd MySQL-python-1.2.2 
  $  \$  $ python setup.py build 
  $  \$  $ python setup.py install 
 \noindent 
-\item Buat satu script seperti berikut (contoh: test.py): 
+		
+		\item Buat satu script seperti berikut (contoh: test.py): 
 import MySQLdb 
  $  \#  $ Open database connection 
 db = MySQLdb.connect("localhost","root","password","nama $  \_  $database" ) 
@@ -236,7 +253,8 @@ print "Database version :  $  \%  $s "  $  \%  $ data
  $  \#  $ disconnect from server
 db.close()
 \noindent 
-\item Test dengan code berikut:\end{enumerate}
- \par
+
+		\item Test dengan code berikut:
 python test.py 
-\vspace{12pt}
+	\end{enumerate}
+	\vspace{12pt}
