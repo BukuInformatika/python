@@ -159,99 +159,98 @@ subsection{Warna Tkinter}
 Tkinter memiliki warna dengan string. Ada dua cara umum untuk menentukan sebuah warna di Tkiter, yaitu : \par
 \noindent 
 \begin{itemize}
-\item Menggunakan string menentukan proporsi merah, hijau dan biru didigit heksadesimal. Misalnya  $ " $ $  \#  $ffff $ " $ putih,  $ " $ $  \#  $000000 $ " $ hitam dan  $ " $ $  \#  $000fff000 $ " $ hijau. \par
+	\item Menggunakan string menentukan proporsi merah, hijau dan biru didigit heksadesimal. Misalnya  `` \#ffff '' putih,  ``  \#000000 '' hitam dan  ``\#000fff000 '' hijau.
 \noindent 
-\item Menggunakan lokal standar nama warna . warna-warna  $ " $white $ " $, $ " $black $ " $,  $ " $green $ " $ dan  $ " $magenta $ " $ akan selalu tersedia.\end{itemize}
- \par
+	\item Menggunakan lokal standar nama warna . warna-warna ``white'', ``black'',  ``green'' dan  ``magenta'' akan selalu tersedia.
+\end{itemize}
+
 \vspace{12pt}
-Pilihan warna umum : \par
+Pilihan warna umum :
 \noindent 
 \begin{itemize}
-\item activebackground \par
-Warna latar berlakang untuk widget ketika widget aktif \par
-\noindent 
-\item activeforeground \par
-Warna depan untuk widget ketika widget aktif \par
-\noindent 
-\item background \par
-Merepresentasikan sebagai \textit{bg} \par
-\noindent 
-\item disableforeground \par
-Warna depan untuk widget ketika widget dinonaktifkan \par
-\noindent 
-\item foreground \par
-Merepresentasikan fg \par
-\noindent 
-\item highlightbackground \par
-Warna latar belakang dari daerah puncak ketika widget memiliki fokus \par
-\noindent 
-\item hightlightcolor \par
-Warna depan dari wilayah puncak ketika widget memiliki fokus \par
-\noindent 
-\item selectbackground \par
-Warna latar belakang untuk item yang dipilih dari widget \par
-\noindent 
-\item selectforeground \par
-Warna depan untuk item yang dipilih dari widget \par
-\noindent 
-\item Font \par
-\noindent 
-Sebagai tupel yang elemen pertama adalah keluarga font diikuti dengan string yang berisi satu atau lebih gaya pengubah tebal,miring, garis bawah dan overstrike. \par
-\noindent 
+	\item activebackground \par
+	Warna latar berlakang untuk widget ketika widget aktif \par
+	\noindent 
+	\item activeforeground \par
+	Warna depan untuk widget ketika widget aktif \par
+	\noindent 
+	\item background \par
+	Merepresentasikan sebagai \textit{bg} \par
+	\noindent 
+	\item disableforeground \par
+	Warna depan untuk widget ketika widget dinonaktifkan \par
+	\noindent 
+	\item foreground \par
+	Merepresentasikan fg \par
+	\noindent 
+	\item highlightbackground \par
+	Warna latar belakang dari daerah puncak ketika widget memiliki fokus \par
+	\noindent 
+	\item hightlightcolor \par
+	Warna depan dari wilayah puncak ketika widget memiliki fokus \par
+	\noindent 
+	\item selectbackground \par
+	Warna latar belakang untuk item yang dipilih dari widget \par
+	\noindent 
+	\item selectforeground \par
+	Warna depan untuk item yang dipilih dari widget \par
+	\noindent 
+	\item Font \par
+	\noindent 
+	Sebagai tupel yang elemen pertama adalah keluarga font diikuti dengan string yang berisi satu atau lebih gaya pengubah tebal,miring, garis bawah dan overstrike. 
+	end{itemize}
+	\noindent 
 Contoh : \par
-\noindent 
-\item ( $ " $Helvetica $ " $, $ " $16 $ " $-point Helvetica biasa \par
-\noindent 
-\item ( $ " $Times $ " $, $ " $24 $ " $, $ " $beranimiring $ " $) untuk 24-point kali miring tebal\end{itemize}
- \par
+	\begin{itemize}
+		\noindent
+		\item ( ``Helvetica'', ``16 '') untuk 16 \- point Helvetica biasa \par
+		\noindent 
+		\item ( ``Times'', ``24 '',``beranimiring'') untuk 24 \- point kali miring tebal
+	\end{itemize}
+ 		\par
 \vspace{12pt}
-Dapat membuat  $ " $font object $ " $ dengan mengimpor modul tkFont dan menggunakan kelas konstruktor font nya : \par
+Dapat membuat  ``font object'' dengan mengimpor modul tkFont dan menggunakan kelas konstruktor font nya : \par
 Import tkFont \par
 Font = tkFont.Font (option, ....) \par
 \vspace{12pt}
 Berikut adalah daftar pilihan : \par
 \noindent 
 \begin{itemize}
-\item Family \par
-Font nama keluarga sebagai string \par
-\noindent 
-\item Size \par
-Font tinggi sebagai integer dalam poin \par
-\noindent 
-\item Weight \par
-Bold untuk teal, normal untuk berat badan secara teratur \par
-\noindent 
-\item Slant \par
-Italic untuk miring, roman untuk unstlanted \par
-\noindent 
-\item Underline \par
-1 untuk teks yang digarisbawahi, 0 untuk normal \par
-\noindent 
-\item Overstrike \par
-1 untuk teks telak, 0 untuk normal \par
-Jika berjalan di bawah X window system, dapat menggunakan salah satu nama font X. Sebagai contoh, font bernama  $ " $-*lucidatypewriter-medium-r-*-*-*-140-*-*-* $ " $ adalah favorit fixed-width font penulis untuk digunakan pada layar. \par
-\noindent 
-\item Jangkar \par
-\noindent 
-Jangkar digunakan untuk mendefinisikan mana teks diposisikan relatif terhadap titik acuan. Berikut adalah daftar kemungkinan konstanta yang dapat digunakan : \par
-\noindent 
-\item NW \par
-\noindent 
-\item N \par
-\noindent 
-\item NE \par
-\noindent 
-\item W \par
-\noindent 
-\item TENGAH \par
-\noindent 
-\item E \par
-\noindent 
-\item SW \par
-\noindent 
-\item S \par
-\noindent 
-\item SE\end{itemize}
+	\item Family \par
+	Font nama keluarga sebagai string \par
+	\noindent 
+	\item Size \par
+	Font tinggi sebagai integer dalam poin \par
+	\noindent 
+	\item Weight \par
+	Bold untuk teal, normal untuk berat badan secara teratur \par
+	\noindent 
+	\item Slant \par
+	Italic untuk miring, roman untuk unstlanted \par
+	\noindent 
+	\item Underline \par
+	1 untuk teks yang digarisbawahi, 0 untuk normal \par
+	\noindent 
+	\item Overstrike \par
+	1 untuk teks telak, 0 untuk normal \par
+	Jika berjalan di bawah X window system, dapat menggunakan salah satu nama font X. Sebagai contoh, font bernama  \verb|"-*lucidatypewriter-medium-r-*-*-*-140-*-*-*"| adalah favorit fixed-width font penulis untuk digunakan pada layar. \par
+	\noindent 
+	\item Jangkar \par
+	\noindent 
+	Jangkar digunakan untuk mendefinisikan mana teks diposisikan relatif terhadap titik acuan. Berikut adalah daftar kemungkinan konstanta yang dapat digunakan :
+	\noindent
+	\begin{itemize}
+		\item NW  
+		\item N
+		\item NE
+		\item W
+		\item TENGAH
+		\item E
+		\item SW
+		\item S
+		\item SE
+	\end{itemize}
+\end{itemize}
  \par
 \vspace{12pt}
 Jika menggunakan tengah sebagai jangkar tek, tek akan ditengahkan horizontal dan vertikal disekitar titik referensi. \par
@@ -259,21 +258,19 @@ Jangkar NW akan posisi teks sehingga titik referensi bertepatan dengan laut sudu
 Jangakr W akan pusat teks secara vertikal disekitar satu titik referensi dengan tepi kiri kotak teks yang melewati titik itu dan sebagainya. \par
 Jika membuat widget kecil didalam bingkai besar dan menggunakan jangkar = SE pilihan, widget akan ditempatkan disudut kanan bawah gambar. Jika menggunakan anchor = N sebaliknya widget akan dipusatkan disepanjang tepi atas. \par
 \noindent 
-Gaya relief \par
-\noindent 
-Widget mengacu pada efek 3-D simulasi terbaru disekitar bagian luar widget. Berikut adalah daftar konstanta yang mungkin dapat digunakan untuk atribut: \par
-\noindent 
+
+subsection{Gaya relief}
+
+Widget mengacu pada efek 3-D simulasi terbaru disekitar bagian luar widget. Berikut adalah daftar konstanta yang mungkin dapat digunakan untuk atribut:
 \begin{itemize}
-\item Datar \par
-\noindent 
-\item Dibesarkan \par
-\noindent 
-\item Cekung \par
-\noindent 
-\item Alur \par
-\noindent 
-\item Punggung bukit\end{itemize}
- \par
+	\item Datar
+	\item Dibesarkan
+	\item Cekung
+	\item Alur
+	\item Punggung bukit
+\end{itemize}
+
+
 \vspace{12pt}
 Contoh : \par
 {\fontsize{10pt}{10pt}\selectfont From Tkinter import *} \par
