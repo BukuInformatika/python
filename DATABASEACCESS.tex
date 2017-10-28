@@ -113,7 +113,6 @@
 			mysql> create database teman; 
 			mysql> use teman; \hspace*{1.69in}  
 			mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); 
-	\vspace{12pt}
 
 		\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
 			mysql> create user 'andri'@'localhost' identified by '123456'; 	
@@ -121,7 +120,7 @@
 
 		\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut. 
 	\end{enumerate}
-	\vspace{12pt}
+
 
 \subsection{Sambung dan Selectall}
 Dalam modul python ini terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. Berikut Contoh selectall dalam python ;
@@ -221,40 +220,34 @@ lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal ka
 \vspace{12pt}
 \noindent 
 
-\subsection{Koneksi Database MySQL dengan Python} 
-\noindent 
+\subsection {Koneksi Database MySQL dengan Python}
 	\begin{enumerate}
-		\item Pastikan sudah mengintal package libmysqlclient-dev dengan: 
-apt-get install libmysqlclient-dev 
-\noindent 
-		
-		\item Download modul MySQLdb. 
-\noindent 
-		
-		\item Instal modul tersebut dengan cara (Pastikan login sebagai root ya): 
- $  \$  $ gunzip MySQL-python-1.2.2.tar.gz 
- $  \$  $ tar -xvf MySQL-python-1.2.2.tar 
- $  \$  $ cd MySQL-python-1.2.2 
- $  \$  $ python setup.py build 
- $  \$  $ python setup.py install 
-\noindent 
-		
-		\item Buat satu script seperti berikut (contoh: test.py): 
-import MySQLdb 
- $  \#  $ Open database connection 
-db = MySQLdb.connect("localhost","root","password","nama $  \_  $database" ) 
- $  \#  $ prepare a cursor object using cursor() method 
-cursor = db.cursor()
- $  \#  $ execute SQL query using execute() method. 
-cursor.execute("SELECT VERSION()") \par
- $  \#  $ Fetch a single row using fetchone() method. 
-data = cursor.fetchone() 
-print "Database version :  $  \%  $s "  $  \%  $ data
- $  \#  $ disconnect from server
-db.close()
-\noindent 
-
+		\item  Pastikan kita sudah menginstal package libmysqlclient-dev dengan sebagai berikut: 
+		       apt-get install libmysqlclient-dev 
+		\item  Download modul MySQLdb.
+		\item  Instal modul tersebut ini dengan cara (Pastikan saat login sebagai root ya):
+			\begin{verbatim}
+			$ gunzip MySQL-python-1.2.2.tar.gz 
+			$ tar -xvf MySQL-python-1.2.2.tar 
+			$ cd MySQL-python-1.2.2 
+			$ python setup.py build 
+			$ python setup.py install 
+			\end{verbatim}
+		\item  Buat sebuah script seperti berikut (dengan contoh: test.py):
+			\begin{verbatim}
+			import MySQLdb 
+			# Open database connection 
+			db = MySQLdb.connect(”localhost”,”root”,”password”,”nama database” ) 
+			# prepare a cursor object using cursor() method 
+			cursor = db.cursor() 
+			# execute SQL query using execute() method. 
+			cursor.execute(”SELECT VERSION()”) 
+			# Fetch a single row using fetchone() method. 
+			data = cursor.fetchone() 
+			print ”Database version : %s ” % data 
+			# disconnect from server 
+			db.close()
+			\end{verbatim}
 		\item Test dengan code berikut:
-python test.py 
+		      python test.py 
 	\end{enumerate}
-	\vspace{12pt}
