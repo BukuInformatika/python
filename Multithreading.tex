@@ -20,7 +20,7 @@ Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan
 \noindent 
 \hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} :
 \noindent 
-\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center}
+\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start  \_  new   \_  thread (function, args [, kwargs] )}\end{center}
 Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window.
 Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.
 Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.
@@ -37,39 +37,31 @@ Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Contoh : \par
-\noindent 
-\#\!/usr/bin/python
-\vspace{10pt}
-Import thread
-Import time
-\vspace{10pt}
-\# Define a function for the thread
-\_ time (threadNamw, delay):
-\hspace*{0.5in} Count = 0
-\hspace*{0.5in} While count <5:
-\hspace*{0.5in} Time.sleep(delay)
-\hspace*{0.5in} Count +=1}
-\hspace*{0.5in} Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create two thread as follows} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont try:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  thread.start $  \_  $new $  \_  $thread(print $  \_  $time, ( $ " $Thread-1 $ " $, 2, ))} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  thread.start $  \_  $new $  \_  $thread(print $  \_  $time, ( $ " $Thread-2 $ " $, 4,))} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont except:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~ print  $ " $Error: unable to start thread $ " $} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont while 1:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont pass} \par
-{\fontsize{10pt}{10pt}\selectfont 
+Contoh : 
+\begin{verbatim}
+#!/usr/bin/python
+
+import thread
+import time
+
+# Define a function for the thread
+def print_time( threadName, delay):
+   count = 0
+   while count < 5:
+      time.sleep(delay)
+      count += 1
+      print "%s: %s" % ( threadName, time.ctime(time.time()) )
+
+# Create two threads as follows
+try:
+   thread.start_new_thread( print_time, ("Thread-1", 2, ) )
+   thread.start_new_thread( print_time, ("Thread-2", 4, ) )
+except:
+   print "Error: unable to start thread"
+
+while 1:
+   pass
+\end{verbatim}
 	
 	%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
 	
@@ -100,10 +92,12 @@ Import time
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:31 2009}\end{center} \par
 \noindent 
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:35 2009}\end{center} \par
+
 \vspace{12pt}
 Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
 \vspace{12pt}
-\textbf{1.2 }\textbf{Modul}\textbf{ Threading } \par
+\section{ Modul Threading } \par
+
 Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
 The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
 \begin{itemize}
@@ -132,7 +126,8 @@ The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread
 	Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
 	\item Mendefinisikan subclass dari \textit{thread} kelas \par
 	\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
-	\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai \end{itemize}
+	\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai 
+\end{itemize}
 \par
 \noindent 
 
@@ -143,7 +138,7 @@ The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread
 \newpage
 
 \vspace{12pt}
-Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
+Setelah membuat baru \textit{thread} subclass, dapat membuah sebuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
 \vspace{12pt}
 	Contoh :
 \par
