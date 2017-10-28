@@ -46,7 +46,7 @@ top.mainloop()
  \hspace*{0.5in} Tkinter menyediakan berbagai kontrol seperti tombol, label dan kotak teks yang digunakan dalam aplikasi GUI. 
  Kontrol ini biasanya disebut widget.
 \noindent 
- \hspace*{0.5in} Saat ini ada 15 jenis widget di Tkinter. berikut adalah contoh widget serta penjelasan singkat pada tabel ini: \par
+ \hspace*{0.5in} Saat ini ada 15 jenis widget di Tkinter. berikut adalah contoh widget serta penjelasan singkat pada tabel ini:
 
 
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
@@ -92,20 +92,17 @@ top.mainloop()
 
 
 \vspace{12pt}
+subsection{Atribut Tkinter}
 \noindent 
- \hspace*{0.5in} Beberapa atribut umum sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atribut standar : \par
+ \hspace*{0.5in} Beberapa atribut umum sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atribut standar :
 \noindent 
 \begin{enumerate}
-\item Ukuran \par
-\noindent 
-\end{enumerate}
-Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak unit yang berbeda seperti : \par
-\noindent 
-\begin{itemize}
-\item Jika menetapkan dimensi ke integer diasumsikan dalam piksel \par
-\noindent 
-\item Menentukan unit dengan menentukan dimensi untuk string yang berisi sejumlah diikuti oleh :\end{itemize}
- \par
+\item Ukuran 
+Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak unit yang berbeda seperti 
+\item Jika menetapkan dimensi ke integer diasumsikan dalam piksel 
+\item Menentukan unit dengan menentukan dimensi untuk string yang berisi sejumlah diikuti oleh :
+\end{itemize}
+ 
 
 
  %%%%%%%%%%%%  Table No:2 Here %%%%%%%%%%%%%%
@@ -113,16 +110,18 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 
 \begin{table}[ht]
 	\caption{Ukuran}
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+	\bein{center}
+	\begin{tabular}{|c|c|}
 		\hline
 		Karakter&  Penjelasan \cr
 		\hline
-		c&Sentimeter&\cr
-		i&Inci&\cr
-		m&Milimeter&\cr
-		p&Poin printer\cr
+		c&Sentimeter\\
+		i&Inci\\
+		m&Milimeter\\
+		p&Poin printer\\
 		\hline
-	\end{tabular*}
+	\end{tabular}
+	\end{center}
 	\begin{tablenotes}
 	\end{tablenotes}
 \end{table}
@@ -130,38 +129,32 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 
  %%%%%%%%%%%%  Table No:2 Ends Here %%%%%%%%%%%%%%
 
-
+ 
  \hspace*{0.5in} \vspace{12pt}
- \hspace*{0.5in} Tkinter mengungkapkan panjang sebagai integer jumlah piksel. Berikut ini adalah daftar pilihan panjang umum: \par
+ subsection{Panjang Tkinter}
+ \hspace*{0.5in} Tkinter mengungkapkan panjang sebagai integer jumlah piksel. Berikut ini adalah daftar pilihan panjang umum:
 \noindent 
 \begin{itemize}
-\item borderwidth \par
-Lebar batas yang memberikan tampilan tiga dimensi untuk widget \par
+	\item borderwidth
+	Lebar batas yang memberikan tampilan tiga dimensi untuk widget
+	\item highlightthickness
+	Lebar puncak persegi panjang ketika widget memiliki fokus
+ 	\item padX padY
+	Ruang tambahan widget dari manajer tata letak luar minimum widget perlu menampilkan isinya di x dan y arah
+	\item selectborderwidth
+	Lebar perbatasan tiga dimensi disekitar dipilih item widget
+	\item wraplength \par
+	Panjang garis maksimum untuk widget yang melakukan kata membungkus
+	\item height
+	Tinggi diinginkan widget
+	\item underline
+	Indeks karakter untuk menggarisawahi dalam teks widget 
+	\item width
+	\item Lebar diinginkan widget
+\end{itemize}
+ 
 \noindent 
-\item highlightthickness \par
-Lebar puncak persegi panjang ketika widget memiliki fokus \par
-\noindent 
-\item padX padY \par
-Ruang tambahan widget dari manajer tata letak luar minimum widget perlu menampilkan isinya di x dan y arah \par
-\noindent 
-\item selectborderwidth \par
-Lebar perbatasan tiga dimensi disekitar dipilih item widget \par
-\noindent 
-\item wraplength \par
-Panjang garis maksimum untuk widget yang melakukan kata membungkus \par
-\noindent 
-\item height \par
-Tinggi diinginkan widget \par
-\noindent 
-\item underline \par
-Indeks karakter untuk menggarisawahi dalam teks widget  \par
-\noindent 
-\item width \par
-\noindent 
-\item Lebar diinginkan widget\end{itemize}
- \par
-\noindent 
-Warna \par
+subsection{Warna Tkinter}
 \noindent 
 Tkinter memiliki warna dengan string. Ada dua cara umum untuk menentukan sebuah warna di Tkiter, yaitu : \par
 \noindent 
