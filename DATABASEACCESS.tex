@@ -119,11 +119,37 @@
 
 Dalam modul python ini terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. Berikut Contoh selectall dalam python ;
 
-
+	\begin{verbatim}
+		def sambung (host,user,passwd): 
+		mycon=MySQLdb.connect(host,user,passwd) 
+		return mycon
+		
+		def selectall(mycon, dbname, table): 
+		mycur=mycon.cursor() 
+		mycur.execute(’use ’ + dbname) 
+		mycur.execute(’select * from ’ + table) 
+		rows=mycur.fetchall() 
+		a=[] 
+		for i in rows: 
+		nama=i[1] 
+		alamat=i[2] 
+		telepon=i[3] 
+		surat=i[4] 
+		print(nama + ’ ’ + alamat + ’ ’ + telepon + ’ ’ + surat) 
+		a.append(i) 
+		return a 
+	\end{verbatim}
 
 Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat diakses melalui shell python karena belum ada fungsi main yang terdefinsi. Hal ini disebabkan karena rancangan input/ouput masih seadanya. Karenanya, mari masuk ke shell python dengan menjalankan perintah python di terminal. Yang perlu diperhatikan, penggunaan shell python harus dilakukan dari directory di mana modul ini disimpan. Berikut adalah gambaran ketika berada dalam shell python dan menggunakan modul ini. 
 
-
+	\begin{verbatim}
+		¿¿¿ from mymodul import * 
+		¿¿¿ mycon=sambung(”localhost”,”andri”,”123456”) 
+		¿¿¿ a=selectall(mycon,”teman”,”alamat”) 
+		Andri Jl. Sariasih, Sarijadi, Bandung 12450 08123456789 andri@poltekpos.ac.id 
+		¿¿¿ 
+	\end{verbatim}
+	
 Di baris pertama, kita import modul dari nama file, untuk selanjutnya import semua fungsi yang ada di dalamnya. Selanjutnya, kita membuat variabel bernama mycon bertipe koneksi ke MySQL (dapat dilihat dengan cara menjalankan perintah type(mycon) dari shell python) dan meng-assigned nilainya dari memanggil fungsi sambung. Selanjutnya, variabel a di-assinged nilainya dari memanggil fungsi selectall. Terlihat bahwa fungsi selectall mencetak nilai yang diperoleh dari operasi select tabel. 
 \vspace{12pt}
 
@@ -131,32 +157,19 @@ Dengan ilustrasi ini, diharapkan dapat memberi inspirasi dalam membuat modul pyt
 \vspace{12pt}
 
 Dalam era informasi dimana kita hidup sekarang, kita dapat melihat seberapa banyak data dunia berubah. Kita pada dasarnya membuat, menyimpan, dan menarik data, secara ekstensif. Harusnya ada sebuah cara untuk menangani semua itu. Semua itu tidak dapat disebarkan kemana-mana tanpa adanya manajemen bukan? Di sini hadir Database Management System (DBMS). DBMS adalah sebuah sistem software yang memungkinkanmu untuk membuat, menyimpan, memodifikasi, menarik, dan penanganan lainnya terhadap sebuah data dari database. Sistem ini juga bervariasi dalam ukuran, mulai dari sistem kecil yang cukup berjalan pada komputer personal hingga yang lebih besar yang berjalan dalam mainframe. 
-\vspace{12pt}
-\noindent 
 
-\subsection{Python Database API} 
+\subsection {Python Database API} 
 Python dapat berinteraksi dengan database. Namun, bagaimana cara melakukannya? Python menggunakan apa yang disebut Python Database API dengan tujuan untuk menjadi antarmuka dengan database. API ini mengijinkan kita untuk memprogram database management system (DBMS) yang berbeda. Untuk DBMS yang berbeda itu, bagaimana pun juga, proses yang diikuti pada tingkatan kode tetap sama, yaitu sebagai berikut: 
-\vspace{12pt}
-\noindent 
-
 	\begin{enumerate}
 		\item Membangun sebuah koneksi ke database pilihanmu. Kita bisa membuat function koneksi, kemudian dipanggil dari file atau script atau halaman lain.Hanya menyediakan fungsi koneksi saja. 
-		\noindent
-		
 		\item Kita membuat class koneksi, kemudian dipanggil dari file atau script atau halaman lain.
 Menyediakan fungsi-fungsi dasar eksekusi perintah ke database seperti execute, mengambil data dan lainnya.
-		\noindent
-		
 		\item Memanipulasi data menggunakan SQL (berinteraksi). 
-		\noindent
-		
 		\item Memberitahu koneksi untuk entah menerapkan manipulasi SQL ke data dan membuatnya permanen (commit), atau memberitahunya untuk meninggalkan manipulasi itu (rollback), sehingga mengembalikan data ke keadaan sebelum interaksi terjadi. 
-		\noindent 
-		
 		\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi.
 Menyediakan fitur-fitur lengkap tentang koneksi ke database, bahkan menyediakan berbagai pilihan jenis database.
 Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan teman-teman sudah menginstall web server (XAMPP/yang lainnya) dan python di komputer masing-masing. Setelah itu semua siap sekarang silahkan download mysql connector untuk python disini (Sesuaikan dengan versi python yang kalian punya). Setelah itu tinggal install. 
-Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu  $ " $trial $ " $ Lalu import sql berikut 
+Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu  \"trial\" Lalu import sql berikut 
 \noindent 
 trial.sql 
 \noindent 
