@@ -39,27 +39,23 @@
 \subsection{Pengertian Character}
 	Charakter merupakan bagian data yang terkecil, dapat berupa karakter numerik, huruf ataupun karakter-karakter khusus (special characters) yang membentuk suatu item data / field.
 
-\subsection{Pengertian Field} 
+\subsection{{Apa yang dimaksud dengan ﬁeld, record,table, ﬁle, data dan basisdata?}} 
 	Field merupakan kumpulan dari karakter yang membentuk satu arti, maka jika terdapat field misalnya seperti KeteranganBarang atau JumlahBarang, maka yang dimunculkan dalam field tersebut harus yang berkaitan dengan keterangan barang dan jumlah barang. Atau field juga bisa disebut sebagai tempat atau kolom yang terdapat dalam suatu tabel untuk mengisikan nama-nama (data) field yang akan di isikan. merepresentasikan suatu atribut dari record yang menunjukkan suatu item dari data, seperti misalnya nama, alamat dan lain sebagainya. Kumpulan dari field membentuk suatu record.
 
-\subsection{Pengertian Record}
 	Record merupakan kumpulan field yang sangat lengkap, dan biasanya dihitung dalam satuan baris. Tabel merupakan kumpulan dari beberapa record dan juga field. File terdiri dari kumpulan field yang menunjukan dari satu kesatuan data yang sejenis. Misalnya seperti file nama siswa berisikan data tentang semua nama siswa yang ada. Data adalah kumpulan fakta atau kejadian yang digunakan sebagai penyelesaian masalah dalam bentuk informasi. Basis data (database) terdiri dari dua kata, yaitu kata basis dan data. Basis merupakan tempat ataupun gudang, ataupun wadah.
 
-\subsection{Pengertian Data}
 	Data dapat disebut sebagai kumpulan dari fakta yang mewakili objek, misalnya seperti benda, manusia,barang dan sebagainya yang ditulis ke dalam bentuk angka, huruf, simbol, bunyi, teks, gambar ataupun gabungannya. Jadi dapat disimpulkan bahwa basis data merupakan kumpulan dari data-datayang terorganisasi yang saling berhubungan sedemikian rupa sehingga dapat dengan mudah disimpan, dimanipulasi, dan dipanggil oleh pemakainya. Karakter atau character yang ada didalam database merupakan bagian data yang terkecil, karakter tersebutdapat berupa karakter numerik, huruf ataupun karakter khusus (special characters) yang membentuk suatu item data atau field.
 
 \subsection{Sifat-sifat database / basis data}
 	Data dalam basis data bersifat integrated dan shared Terpadu (integrated), berkas-berkas data yang ada pada basis data saling terkait (terjadi dependensi data);
 	Berbagi data (shared), data yang sama dapat dipakai oleh sejumlah pengguna dalam waktu yang bersamaan. Sering dinamakan sebagi sistem multiuser.
-
 	\begin{enumerate}
 		\item Internal : 
 			Kesatuan (integritas) dari file-file yang terlibat
 
-		\item Terbagi/share : 
+		\item Terbagi atau share : 
 			Elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).
 	\end{enumerate}
-	\vspace{12pt}
  
 \subsection{Tipe Database} 
 	Tipe Database Terdapat 12 tipe database, antara lain: 
@@ -110,9 +106,9 @@
 		\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. 
 
 			Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
-			mysql> create database teman; 
-			mysql> use teman; \hspace*{1.69in}  
-			mysql> create table alamat(id int not null auto $  \_  $increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text); 
+			mysql¿ create database teman; 
+			mysql¿ use teman; 
+			mysql¿ create table alamat(id int not null auto increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text);
 
 		\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
 			mysql> create user 'andri'@'localhost' identified by '123456'; 	
@@ -121,60 +117,12 @@
 		\item Langkah selanjutnya adalah membuat modul python untuk mengakses database tersebut. Untuk kasus ini, modul hanya diberi kemampuan untuk melihat seluruh isi tabel, sehingga tabel sebaiknya diisi dulu. Sedangkan kemampuan untuk melakukan operasi update dan delete dapat dibangun menggunakan pola yang sama. Modul tersebut seperti code berikut. 
 	\end{enumerate}
 
-
-\subsection{Sambung dan Selectall}
 Dalam modul python ini terdiri dari dua fungsi, masing-masing sambung dan selectall. Fungsi pertama membutuhkan parameter terkait nama server, dan akun user serta mengembalikan variabel koneksi. Sedangkan fungsi selectall membutuhkan parameter koneksi yang diperoleh dari fungsi sambung, serta nama database dan nama tabel. Fungsi ini mengembalikan list yang berisi setiap row dalam tabel untuk kebutuhan lain yang belum terdefinisi dalam modul ini. Berikut Contoh selectall dalam python ;
-\vspace{12pt}
 
-import MySQLdb
-\noindent 
-def sambung (host,user,passwd):
-\noindent 
-~ mycon=MySQLdb.connect(host,user,passwd) 
-\noindent 
-~ return mycon 
-\vspace{12pt}
-\noindent 
-def selectall(mycon, dbname, table): 
-\noindent 
-~ mycur=mycon.cursor() 
-\noindent 
-~ mycur.execute('use ' + dbname) 
-\noindent 
-~ mycur.execute('select * from ' + table) 
-\noindent 
-~ rows=mycur.fetchall() 
-\noindent 
-~ a=[]
-\noindent 
-~ for i in rows: 
-\noindent 
-~~~ nama=i[1] 
-\noindent 
-~~~ alamat=i[2] 
-\noindent 
-~~~ telepon=i[3]
-\noindent 
-~~~ surat=i[4] 
-\noindent 
-~~~ print(nama + ' ' + alamat + ' ' + telepon + ' ' + surat)
-\noindent 
-~~~ a.append(i) 
-\noindent 
-~ return a 
+
 
 Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat diakses melalui shell python karena belum ada fungsi main yang terdefinsi. Hal ini disebabkan karena rancangan input/ouput masih seadanya. Karenanya, mari masuk ke shell python dengan menjalankan perintah python di terminal. Yang perlu diperhatikan, penggunaan shell python harus dilakukan dari directory di mana modul ini disimpan. Berikut adalah gambaran ketika berada dalam shell python dan menggunakan modul ini. 
 
-\noindent 
->>> from mymodul import * 
-\noindent 
->>> mycon=sambung("localhost","andri","123456") 
-\noindent 
->>> a=selectall(mycon,"teman","alamat") 
-\noindent 
-Andri Jl. Sariasih, Sarijadi, Bandung 12450 08123456789 andri@poltekpos.ac.id 
-\noindent 
->>>
 
 Di baris pertama, kita import modul dari nama file, untuk selanjutnya import semua fungsi yang ada di dalamnya. Selanjutnya, kita membuat variabel bernama mycon bertipe koneksi ke MySQL (dapat dilihat dengan cara menjalankan perintah type(mycon) dari shell python) dan meng-assigned nilainya dari memanggil fungsi sambung. Selanjutnya, variabel a di-assinged nilainya dari memanggil fungsi selectall. Terlihat bahwa fungsi selectall mencetak nilai yang diperoleh dari operasi select tabel. 
 \vspace{12pt}
