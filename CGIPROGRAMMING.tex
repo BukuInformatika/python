@@ -128,13 +128,13 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 \begin{enumerate}
 	\item Menginstal Program Python  
 	\item Menginstal Program Web Server Seperti Apache2 atau Xampp  
-	\item Setelah kedua program berhasil di instal maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. 
+	\item Setelah kedua program berhasil di install maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. 
 	\item Buka directory Xampp dan masuk ke folder apache  $  \rightarrow  $ Conf dan cari file httpd.conf 
 	\item Buka file httpd.conf menggunakan notepad 
-	\item Cari baris AddHandler cgi-script .cgi .pl .asp pada file setelah itu tambahkan extensi python seperti ini AddHandler cgi-script .cgi .pl .asp .py 
+	\item Cari baris AddHandler cgi-script .cgi .pl .asp pada file setelah itu tambahkan ekstensi python seperti ini AddHandler cgi-script .cgi .pl .asp .py 
 	\item Cari baris <Directory /> dan tambahkan ExecCGI pada list Options FollowSymLinks  
 	\item Setelah itu simpan 
-	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python’ 
+	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python 
 	\item Buka Notepad dan ketikkan script dbawah ini : 
 	$  \#  $!/Python27/python 
 	print "Content-type:text/html"
@@ -155,11 +155,11 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	
 	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) 
 	
-	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya\
-end{enumerate}
+	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya
+\end{enumerate}
 
 \subsection{Membuat Kamus Menggunakan CGI Python} 
-Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia. Jika~sudah save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus.json  
+Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia. Jika sudah save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus .json  
 Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. 
 $  \#  $!/usr/bin/python 
 import cgi 
