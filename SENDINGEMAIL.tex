@@ -23,40 +23,10 @@
 		\item  SMTP (Simple Mail Transfer Protocol) 
 		 	SMTP (Simple Mail Transfer Protocol) digunakan sebagai standar untuk menampung dan mendistribusikan email. Simple Mail Transfer Protocol atau SMTP digunakan untuk berkomunikasi dengan server guna mengirimkan email dari lokal email ke server, sebelum akhirnya dikirimkan ke server email penerima. Proses ini dikontrol dengan Mail Transfer Agent (MTA) yang ada dalam server email Anda. Port SMTP Default:
 			   
-			\begin{enumerate}
+			\begin{itemize}
 				\item Port~25 –  Port tanpa dienkripsi
 				\item Port 426 – Port SSL/TLS, nama lainnya SMTPS
-			\end{enumerate}
-\subsection {Menggunakan SMTP pada python}
-contoh client yang mengirim e-mail ke SMTP server ini:
-\begin {verbatim}
-
-import smtplib
-sender = 'mikail@website.com'
-recipient = ['sonanjaya@website.com']
-
-message = """From: From Person <%s>
-To: To Person <%s>
-Subject: Testing SMTP E-Mail
-
-Pesan ini dikirim melalui smtplib dan diterima oleh modul SMTP Server Python.
-
-""" % (sender, recipient)
-
-try:
-
-   	smtpObj = smtplib.SMTP('localhost', 1025)
-   	smtpObj.sendmail(sender, recipient, message)    
-
-   	print "Mengirim e-mail berhasil :D..."
-
-except Exception, e:
-
-	print str(e)
-   	print "Error: e-mail gagal terkirim :(..."
-\end{verbatim}
-
-Pada kode diatas dengan menggunakan smtplib cukup dengan mengakses URL dan port yang dituju, lalu kirim e-mail dengan menggunakan method sendmail() dengan melewatkan pengirim, penerima, dan pesan.
+			\end{itemize}
 
 		\item {POP3 Post Office Protocol v3}
 			POP3 (Post Office Protocol v3) dan IMAP (Internet Mail Application Protocol) digunakan agar user dapat mengambil dan membaca email secara remote yaitu tidak perlu login ke dalam sistem shelll mesin mail server tetapi cukup menguhubungi port tertentu dengan mail client yang mengimplementasikan protocol POP3 dan IMAP.
@@ -66,11 +36,11 @@ Pada kode diatas dengan menggunakan smtplib cukup dengan mengakses URL dan port 
 
 			POP3 adalah protokol komunikasi satu arah, yang artinya data diambil dari server dan dikirimkan ke email lokal di perangkat komputer Anda. 
 Port POP3 Default:
-		\begin{enumarate}
+			\begin{itemize}
 			\item Port 110 Port tanpa dienkripsi
 			\item Port 995 Port SSL/TLS, nama lainnya POP3S
-		\end{enumerate}
-\end{enumerate}
+			\end{itemize}
+	\end{enumerate}
 
 \subsubsection {Kelebihan Menggunakan POP3}
 	\begin{enumerate}
@@ -81,18 +51,47 @@ Port POP3 Default:
 	\end{enumarate}
 	
 \subsection {Kekurangan Menggunakan POP3} 
-\begin{enumarate}
-\item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. 
-\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer.
-\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.
-\end{enumerate}
+	\begin{enumarate}
+		\item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. 
+		\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer.
+		\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.
+	\end{enumerate}
 
 \subsection {IMAP (Internet Message Access Protocol)}
-IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja.
-IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3.
-Dalam IMAP, email disimpan di server. ketika Anda akan mengecek email, local mail akan menghubungi server untuk menampilkan pesan email. Sehingga untuk file pesan email tetap berada di server dan tidak didownload ke email lokal. Port IMAP Default: 
-\begin{enumerate}
-\item Port 143 – Port tanpa dienkripsi 
-\item Port 993 – Port SSL/TLS, nama lainnya IMAPS
-\end{enumarate}
+	IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja.
+	IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3.
+	Dalam IMAP, email disimpan di server. ketika Anda akan mengecek email, local mail akan menghubungi server untuk menampilkan pesan email. Sehingga untuk file pesan email tetap berada di server dan tidak didownload ke email lokal. Port IMAP Default: 
+	\begin{enumerate}
+		\item Port 143 – Port tanpa dienkripsi 
+		\item Port 993 – Port SSL/TLS, nama lainnya IMAPS
+	\end{enumarate}
 
+\subsection {Menggunakan SMTP pada python}
+	contoh client yang mengirim e-mail ke SMTP server ini:
+	\begin {verbatim}
+		import smtplib
+		sender = 'mikail@website.com'
+		recipient = ['sonanjaya@website.com']
+
+		message = """From: From Person <%s>
+		To: To Person <%s>
+		Subject: Testing SMTP E-Mail
+
+		Pesan ini dikirim melalui smtplib dan diterima oleh modul SMTP Server Python.
+
+		""" % (sender, recipient)
+
+		try:
+
+   		smtpObj = smtplib.SMTP('localhost', 1025)
+   		smtpObj.sendmail(sender, recipient, message)    
+
+   		print "Mengirim e-mail berhasil :D..."
+
+		except Exception, e:
+
+		print str(e)
+   		print "Error: e-mail gagal terkirim :(..."
+	\end{verbatim}
+
+Pada kode diatas dengan menggunakan smtplib cukup dengan mengakses URL dan port yang dituju, lalu kirim e-mail dengan menggunakan method sendmail() dengan melewatkan pengirim, penerima, dan pesan.
