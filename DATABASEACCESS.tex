@@ -38,10 +38,12 @@
 \subsection {Pengertian Character}
 	Charakter merupakan bagian data yang terkecil, dapat berupa karakter numerik, huruf ataupun karakter-karakter khusus (special characters) yang membentuk suatu item data / field.
 
-\subsection {Apa yang dimaksud dengan ﬁeld, record,table, ﬁle, data dan basisdata} 
+\subsection {Apa yang dimaksud dengan Field, Record, Table, File, Data dan Basisdata} 
 	Field merupakan kumpulan dari karakter yang membentuk satu arti, maka jika terdapat field misalnya seperti KeteranganBarang atau JumlahBarang, maka yang dimunculkan dalam field tersebut harus yang berkaitan dengan keterangan barang dan jumlah barang. Atau field juga bisa disebut sebagai tempat atau kolom yang terdapat dalam suatu tabel untuk mengisikan nama-nama (data) field yang akan di isikan. merepresentasikan suatu atribut dari record yang menunjukkan suatu item dari data, seperti misalnya nama, alamat dan lain sebagainya. Kumpulan dari field membentuk suatu record.
 
-	Record merupakan kumpulan field yang sangat lengkap, dan biasanya dihitung dalam satuan baris. Tabel merupakan kumpulan dari beberapa record dan juga field. File terdiri dari kumpulan field yang menunjukan dari satu kesatuan data yang sejenis. Misalnya seperti file nama siswa berisikan data tentang semua nama siswa yang ada. Data adalah kumpulan fakta atau kejadian yang digunakan sebagai penyelesaian masalah dalam bentuk informasi. Basis data (database) terdiri dari dua kata, yaitu kata basis dan data. Basis merupakan tempat ataupun gudang, ataupun wadah.
+	Record merupakan kumpulan field yang sangat lengkap, dan biasanya dihitung dalam satuan baris. Tabel merupakan kumpulan dari beberapa record dan juga field. 
+	
+	File terdiri dari kumpulan field yang menunjukan dari satu kesatuan data yang sejenis. Misalnya seperti file nama siswa berisikan data tentang semua nama siswa yang ada. Data adalah kumpulan fakta atau kejadian yang digunakan sebagai penyelesaian masalah dalam bentuk informasi. Basis data (database) terdiri dari dua kata, yaitu kata basis dan data. Basis merupakan tempat ataupun gudang, ataupun wadah.
 
 	Data dapat disebut sebagai kumpulan dari fakta yang mewakili objek, misalnya seperti benda, manusia,barang dan sebagainya yang ditulis ke dalam bentuk angka, huruf, simbol, bunyi, teks, gambar ataupun gabungannya. Jadi dapat disimpulkan bahwa basis data merupakan kumpulan dari data-datayang terorganisasi yang saling berhubungan sedemikian rupa sehingga dapat dengan mudah disimpan, dimanipulasi, dan dipanggil oleh pemakainya. Karakter atau character yang ada didalam database merupakan bagian data yang terkecil, karakter tersebutdapat berupa karakter numerik, huruf ataupun karakter khusus (special characters) yang membentuk suatu item data atau field.
 
@@ -161,10 +163,10 @@ Dalam era informasi dimana kita hidup sekarang, kita dapat melihat seberapa bany
 Menyediakan fungsi-fungsi dasar eksekusi perintah ke database seperti execute, mengambil data dan lainnya.
 		\item Memanipulasi data menggunakan SQL (berinteraksi). 
 		\item Memberitahu koneksi untuk entah menerapkan manipulasi SQL ke data dan membuatnya permanen (commit), atau memberitahunya untuk meninggalkan manipulasi itu (rollback), sehingga mengembalikan data ke keadaan sebelum interaksi terjadi. 
-		\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi.
-Menyediakan fitur-fitur lengkap tentang koneksi ke database, bahkan menyediakan berbagai pilihan jenis database.
-Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan teman-teman sudah menginstall web server (XAMPP/yang lainnya) dan python di komputer masing-masing. Setelah itu semua siap sekarang silahkan download mysql connector untuk python disini (Sesuaikan dengan versi python yang kalian punya). Setelah itu tinggal install. 
-Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu trial Lalu import sql berikut
+		\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi. Menyediakan fitur-fitur lengkap tentang koneksi ke database, bahkan menyediakan berbagai pilihan jenis database.
+	\begin{enumerate}
+	
+Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan teman-teman sudah menginstall web server (XAMPP/yang lainnya) dan python di komputer masing-masing. Setelah itu semua siap sekarang silahkan download mysql connector untuk python disini (Sesuaikan dengan versi python yang kalian punya). Setelah itu tinggal install. Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu trial Lalu import sql berikut
 
 \noindent 
 trial.sql 
@@ -209,7 +211,7 @@ lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal ka
 		      python test.py 
 	\end{enumerate}
 	
-	\subsection {Connection Class}
+\subsection {Connection Class}
 	Metode ini menggunakan kelas untuk menginisialisasi koneksi pada database. Pada contoh ini hanya menggunakan kelas sebagai inisiator untuk menghubungkan ke database, untuk querynya tetap menggunakan metode biasa.
 	\begin{enumerate}
 	\item pertama kita membuat kelas koneksi, buatlah file koneksi dengan nama connection.py dan masukan coding berikut :
@@ -288,6 +290,6 @@ buatlah file menggunakan nama connectionTes.py
 	mysqli.delCon()
 	\end{verbatim}
 
-dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
+Dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
 dan membuat object cursor pada db dengan memanggil object kelas mysql.getDB()
-\end{enumarate}
+	\end{enumarate}
