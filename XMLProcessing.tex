@@ -61,7 +61,7 @@ Server mengenalkan tipe data XML.Tipe data ini dapat digunakan dalam definisi ta
 
 SAX jelas tidak bisa memproses informasi secepat DOM saat bisa bekerjadengan file besar. Di sisi lain, menggunakan DOM secara eklusifenar-benar dapat membunuh sumber daya, terutama jika digunakan pada banyak file kecil. SAX hanya bisa dibaca sementara DOM mengizinkan perubahan pada file XML. Kedua API yang berbeda ini saling melengkapi satu sama lain, tidak ada alasan mengapa tidak dapat menggunakannya untuk proyek besar. 
 
-Contoh: 
+Contoh Do: 
 \begin{verbatim}
 <collection shelf="New Arrivals"> 
 <movie title="Enemy Behind"> 
@@ -98,6 +98,62 @@ Contoh:
 </collection> 
 \end{verbatim}
 
+Contoh Lainnya dari Parsing DOM : 
+
+Pertama - tama buat lah file xml seperti di bawah ini
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8" ?>
+<mahasiswa>
+    <nama>Abdul</nama>
+	<alamat>Bandung</alamat>
+	<jurusan>Teknik Informatika</jurusan>
+
+	<hobi name="Vlogging"/>
+	<hobi name="Membaca Komik"/>
+	<hobi name="Nonton Film"/>
+</mahasiswa>
+\end{verbatim}
+
+Lalu buatlah file python seperti di bawah ini.
+\begin{verbatim}
+import xml.dom.minidom as minidom
+
+def main():
+    doc = minidom.parse("mahasiswa.xml")
+
+    print doc.nodeName
+    print doc.firstChild.tagName
+
+    nama = doc.getElementsByTagName("nama")[0].firstChild.data
+    alamat = doc.getElementsByTagName("alamat")[0].firstChild.data
+    jurusan = doc.getElementsByTagName("jurusan")[0].firstChild.data
+    list_hobi = doc.getElementsByTagName("hobi")
+
+    print "Nama: {}\nAlamat: {}\nJurusan: {}\n".format(nama, alamat, jurusan)
+
+    print "Memiliki {} hobi:".format(len(list_hobi))
+
+    for hobi in list_hobi:
+        print "-", hobi.getAttribute("name")
+
+
+if __name__ == "__main__":
+    main()
+\end{verbatim}
+
+Jika code di atas di eksekusi maka akan menghasilkan seperti di bawah ini
+
+mahasiswa
+Nama: Abdul
+Alamat: Bandung
+Jurusan: Teknik Informatika
+
+Memiliki 3 hobi:
+\begin{enumerate}
+  \item Vlogging
+  \item Membaca Komik
+  \item Nonton Film
+\end{enumerate}
 
 \subsection{Parsing XML dengan API SAX}
   SAX adalah antarmuka standar untuk parsing XML berbasis event. Parsing XML dengan SAX umumnya mengharuskan untuk membuat dengan subclassing xml.sax.
