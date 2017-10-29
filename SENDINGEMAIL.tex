@@ -23,10 +23,10 @@
 		\item  SMTP (Simple Mail Transfer Protocol) 
 		 	SMTP (Simple Mail Transfer Protocol) digunakan sebagai standar untuk menampung dan mendistribusikan email. Simple Mail Transfer Protocol atau SMTP digunakan untuk berkomunikasi dengan server guna mengirimkan email dari lokal email ke server, sebelum akhirnya dikirimkan ke server email penerima. Proses ini dikontrol dengan Mail Transfer Agent (MTA) yang ada dalam server email Anda. Port SMTP Default:
 			   
-			\begin{itemize}
+			\begin{enumerate}
 				\item Port~25 –  Port tanpa dienkripsi
 				\item Port 426 – Port SSL/TLS, nama lainnya SMTPS
-			\end{itemize}
+			\end{enumerate}
  
 		\item {POP3 Post Office Protocol v3}
 			POP3 (Post Office Protocol v3) dan IMAP (Internet Mail Application Protocol) digunakan agar user dapat mengambil dan membaca email secara remote yaitu tidak perlu login ke dalam sistem shelll mesin mail server tetapi cukup menguhubungi port tertentu dengan mail client yang mengimplementasikan protocol POP3 dan IMAP.
@@ -36,42 +36,34 @@
 
 			POP3 adalah protokol komunikasi satu arah, yang artinya data diambil dari server dan dikirimkan ke email lokal di perangkat komputer Anda. 
 Port POP3 Default:
-		\begin{itemize}
+		\begin{enumarate}
 			\item Port 110 Port tanpa dienkripsi
 			\item Port 995 Port SSL/TLS, nama lainnya POP3S
-		\end{itemize}
+		\end{enumerate}
 \end{enumerate}
 
 \subsubsection {Kelebihan Menggunakan POP3}
-	\begin{itemize}
+	\begin{enumerate}
 		\item Ketika email sudah diunduh melalui aplikasi local mail di komputer, Anda tidak perlu terhubung ke internet apabila Anda ingin membukanya kembali. 
 		\item Kebanyakan tidak ada ukuran limit untuk email yang dikirim dan diterima. 
 		\item Dapat membuka ﬁle attachment dengan cepat.
 		\item Tidak ada ukuran maksimal untuk mailbox, kecuali harddisk komputer Anda penuh.
-	\end{itemize}
+	\end{enumarate}
 	
-\textbf{Kekurangan Menggunakan POP3} \par
-\noindent 
-\begin{itemize}
+\subsection {Kekurangan Menggunakan POP3} 
+\begin{enumarate}
 \item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. \par
-\noindent 
 \item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer. \par
-\noindent 
-\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \par
-\noindent 
-\item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.\end{itemize}
- \par
-\noindent 
-\item IMAP (Internet Message Access Protocol) \end{enumerate} \par
-IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja. \par
-\vspace{12pt}
-IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3. \par
-\vspace{12pt}
+\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.
+\end{enumerate}
+
+\subsection {IMAP (Internet Message Access Protocol)}
+IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja.
+IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3.
 Dalam IMAP, email disimpan di server. ketika Anda akan mengecek email, local mail akan menghubungi server untuk menampilkan pesan email. Sehingga untuk file pesan email tetap berada di server dan tidak didownload ke email lokal. Port IMAP Default: \par
-\noindent 
-\begin{itemize}
-\item Port 143 – Port tanpa dienkripsi \par
-\noindent 
-\item Port 993 – Port SSL/TLS, nama lainnya IMAPS\end{itemize}
- \par
-\vspace{12pt}
+
+\begin{enumerate}
+\item Port 143 – Port tanpa dienkripsi 
+\item Port 993 – Port SSL/TLS, nama lainnya IMAPS
+\end{enumarate}
+
