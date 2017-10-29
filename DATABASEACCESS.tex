@@ -22,7 +22,8 @@
 			
 		\item Kontrol data terpusat 
 		      Masih berkaitan dengan point ke dua, meskipun pada suatu perusahaan memiliki banyak bagian atau divisi tapi database yang diperlukan tetap satu saja. Hal ini mempermudah pengontrolan data seperti ketika ingin mengupdate data mahasiswa, maka kita perlu mengupdate semua data di masing-masing bagian atau divisi, tetapi cukup di satu database saja yang ada di server pusat. 
-			\item Menghemat biaya perangkat
+		
+		\item Menghemat biaya perangkat
 		      Dengan memiliki database secara terpusat maka di masing-masing divisi tidak memerlukan perangkat untuk menyimpan database berhubung database yang dibutuhkan hanya satu yaitu yang disimpan di server pusat, ini tentunya memangkas biaya pembelian perangkat.
  
 		\item Keamanan Data 
@@ -37,7 +38,7 @@ merupakan syarat mutlak dari suatu database yang baik. Ditambah dengan pemanfaat
 
 
 \subsection {Pengertian Character}
-	Charakter merupakan bagian data yang terkecil, dapat berupa karakter numerik, huruf ataupun karakter-karakter khusus (special characters) yang membentuk suatu item data / field.
+	Charakter merupakan bagian data yang terkecil, dapat berupa karakter numerik, huruf ataupun karakter-karakter khusus (special characters) yang membentuk suatu item data atau field.
 
 \subsection {Apa yang dimaksud dengan Field, Record, Table, File, Data dan Basisdata} 
 	Field merupakan kumpulan dari karakter yang membentuk satu arti, maka jika terdapat field misalnya seperti KeteranganBarang atau JumlahBarang, maka yang dimunculkan dalam field tersebut harus yang berkaitan dengan keterangan barang dan jumlah barang. Atau field juga bisa disebut sebagai tempat atau kolom yang terdapat dalam suatu tabel untuk mengisikan nama-nama (data) field yang akan di isikan. merepresentasikan suatu atribut dari record yang menunjukkan suatu item dari data, seperti misalnya nama, alamat dan lain sebagainya. Kumpulan dari field membentuk suatu record.
@@ -52,50 +53,36 @@ merupakan syarat mutlak dari suatu database yang baik. Ditambah dengan pemanfaat
 	Data dalam basis data bersifat integrated dan shared Terpadu (integrated), berkas-berkas data yang ada pada basis data saling terkait (terjadi dependensi data);
 	Berbagi data (shared), data yang sama dapat dipakai oleh sejumlah pengguna dalam waktu yang bersamaan. Sering dinamakan sebagi sistem multiuser.
 	\begin{enumerate}
-		\item Internal : 
-			Kesatuan (integritas) dari file-file yang terlibat
-		\item Terbagi atau share : 
-			Elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).
+		\item Internal : Kesatuan (integritas) dari file-file yang terlibat
+		\item Terbagi atau share : Elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).
 	\end{enumerate}
  
 \subsection {Tipe Database} 
 	Tipe Database Terdapat 12 tipe database, antara lain: 
 	\begin{enumerate}
-		\item Operational database: 
-			Database ini menyimpan data rinci yang diperlukan untuk mendukung operasi dari seluruh organisasi. Mereka juga disebut subject-area databases (SADB), transaksi database, dan produksi database. Contoh: database pelanggan, database pribadi, database inventaris, akuntansi database.
+		\item Operational database: Database ini menyimpan data rinci yang diperlukan untuk mendukung operasi dari seluruh organisasi. Mereka juga disebut subject-area databases (SADB), transaksi database, dan produksi database. Contoh: database pelanggan, database pribadi, database inventaris, akuntansi database.
  
-		\item Analytical database: 
-			Database ini menyimpan data dan informasi yang diambil dari operasional yang dipilih dan eksternal database. Mereka terdiri dari data dan informasi yang dirangkum paling dibutuhkan oleh sebuah organisasi manajemen dan End-user lainnya. Beberapa orang menyebut analitis multidimensi database sebagai database, manajemen database, atau informasi database.
+		\item Analytical database: Database ini menyimpan data dan informasi yang diambil dari operasional yang dipilih dan eksternal database. Mereka terdiri dari data dan informasi yang dirangkum paling dibutuhkan oleh sebuah organisasi manajemen dan End-user lainnya. Beberapa orang menyebut analitis multidimensi database sebagai database, manajemen database, atau informasi database.
 
-		\item Data warehouse: 
-			Sebuah data warehouse menyimpan data dari saat ini dan tahun- tahun sebelumnya - data yang diambil dari berbagai database operasional dari sebuah organisasi.
+		\item Data warehouse: Sebuah data warehouse menyimpan data dari saat ini dan tahun- tahun sebelumnya - data yang diambil dari berbagai database operasional dari sebuah organisasi.
 
-		\item Distributed database: 
-			Ini adalah database-kelompok kerja lokal dan departemen di kantor regional, kantor cabang, pabrik-pabrik dan lokasi kerja lainnya. Database ini dapat mencakup kedua segmen yaitu operasional dan user database, serta data yang dihasilkan dan digunakan hanya pada pengguna situs sendiri. 
+		\item Distributed database: Ini adalah database-kelompok kerja lokal dan departemen di kantor regional, kantor cabang, pabrik-pabrik dan lokasi kerja lainnya. Database ini dapat mencakup kedua segmen yaitu operasional dan user database, serta data yang dihasilkan dan digunakan hanya pada pengguna situs sendiri. 
  
-		\item End-user database: 
-			Database ini terdiri dari berbagai file data yang dikembangkan oleh end-user di workstation mereka. Contoh dari ini adalah koleksi dokumen dalam spreadsheet, word processing dan bahkan download file. 
+		\item End-user database: Database ini terdiri dari berbagai file data yang dikembangkan oleh end-user di workstation mereka. Contoh dari ini adalah koleksi dokumen dalam spreadsheet, word processing dan bahkan download file. 
 
-		\item External database: 
-			Database ini menyediakan akses ke eksternal, data milik pribadi online - tersedia untuk biaya kepada pengguna akhir dan organisasi dari layanan komersial. Akses ke kekayaan informasi dari database eksternal yang tersedia untuk biaya dari layanan online komersial dan dengan atau tanpa biaya dari banyak sumber di Internet.
+		\item External database: Database ini menyediakan akses ke eksternal, data milik pribadi online - tersedia untuk biaya kepada pengguna akhir dan organisasi dari layanan komersial. Akses ke kekayaan informasi dari database eksternal yang tersedia untuk biaya dari layanan online komersial dan dengan atau tanpa biaya dari banyak sumber di Internet.
 
-		\item Hypermedia databases on the web: 
-			Ini adalah kumpulan dari halaman-halaman multimedia yang saling berhubungan di sebuah situs web. Mereka terdiri dari home page dan halaman hyperlink lain dari multimedia atau campuran media seperti teks, grafik, gambar foto, klip video, audio dll. 
+		\item Hypermedia databases on the web: Ini adalah kumpulan dari halaman-halaman multimedia yang saling berhubungan di sebuah situs web. Mereka terdiri dari home page dan halaman hyperlink lain dari multimedia atau campuran media seperti teks, grafik, gambar foto, klip video, audio dll. 
 
-		\item Navigational database: 
-			Dalam navigasi database, queries menemukan benda terutama dengan mengikuti referensi dari objek lain.
+		\item Navigational database: Dalam navigasi database, queries menemukan benda terutama dengan mengikuti referensi dari objek lain.
  
-		\item In-memory databases: 
-			Database di memori terutama bergantung pada memori utama untuk penyimpanan data komputer. Ini berbeda dengan sistem manajemen database yang menggunakan disk berbasis mekanisme penyimpanan. Database memori utama lebih cepat daripada dioptimalkan disk database sejak Optimasi algoritma internal menjadi lebih sederhana dan lebih sedikit CPU mengeksekusi instruksi.
+		\item In-memory databases: Database di memori terutama bergantung pada memori utama untuk penyimpanan data komputer. Ini berbeda dengan sistem manajemen database yang menggunakan disk berbasis mekanisme penyimpanan. Database memori utama lebih cepat daripada dioptimalkan disk database sejak Optimasi algoritma internal menjadi lebih sederhana dan lebih sedikit CPU mengeksekusi instruksi.
 
-		\item Document-oriented databases: 
-			Merupakan program komputer yang dirancang untuk aplikasi berorientasi dokumen. Sistem ini bisa diimplementasikan sebagai lapisan di atas sebuah database relasional atau objek database. Sebagai lawan dari database relasional, dokumen berbasis database tidak menyimpan data dalam tabel dengan ukuran seragam kolom untuk setiap record. Sebaliknya, mereka menyimpan setiap catatan sebagai dokumen yang memiliki karakteristik tertentu. Sejumlah bidang panjang apapun dapat ditambahkan ke dokumen. Bidang yang dapat juga berisi beberapa bagian data. 
+		\item Document-oriented databases: Merupakan program komputer yang dirancang untuk aplikasi berorientasi dokumen. Sistem ini bisa diimplementasikan sebagai lapisan di atas sebuah database relasional atau objek database. Sebagai lawan dari database relasional, dokumen berbasis database tidak menyimpan data dalam tabel dengan ukuran seragam kolom untuk setiap record. Sebaliknya, mereka menyimpan setiap catatan sebagai dokumen yang memiliki karakteristik tertentu. Sejumlah bidang panjang apapun dapat ditambahkan ke dokumen. Bidang yang dapat juga berisi beberapa bagian data. 
  
-		\item Real-time databases Real-time: 
-			Database adalah sistem pengolahan dirancang untuk menangani beban kerja negara yang dapat berubah terus- menerus. Ini berbeda dari database tradisional yang mengandung data yang terus- menerus, sebagian besar tidak terpengaruh oleh waktu. 
+		\item Real-time databases Real-time: Database adalah sistem pengolahan dirancang untuk menangani beban kerja negara yang dapat berubah terus- menerus. Ini berbeda dari database tradisional yang mengandung data yang terus- menerus, sebagian besar tidak terpengaruh oleh waktu. 
  
-		\item Relational Database: 
-			Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.
+		\item Relational Database: Database yang paling umum digunakan saat ini. Menggunakan meja untuk informasi struktur sehingga mudah untuk mencari.
 	\end{enumerate}
  
  
@@ -105,9 +92,9 @@ merupakan syarat mutlak dari suatu database yang baik. Ditambah dengan pemanfaat
 		\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysqlserver. Jangan lupa memasukkan password akun root untuk server MySQL. 
 		\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. 
 			Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
-			mysql¿ create database teman; 
-			mysql¿ use teman; 
-			mysql¿ create table alamat(id int not null auto increment primary key, 
+			mysql> create database teman; 
+			mysql> use teman; 
+			mysql> create table alamat(id int not null auto increment primary key, 
 			nama varchar(35), alamat text, telepon varchar(15), surat text);
 
 		\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
@@ -143,11 +130,11 @@ Dalam modul python ini terdiri dari dua fungsi, masing-masing sambung dan select
 Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat diakses melalui shell python karena belum ada fungsi main yang terdefinsi. Hal ini disebabkan karena rancangan input/ouput masih seadanya. Karenanya, mari masuk ke shell python dengan menjalankan perintah python di terminal. Yang perlu diperhatikan, penggunaan shell python harus dilakukan dari directory di mana modul ini disimpan. Berikut adalah gambaran ketika berada dalam shell python dan menggunakan modul ini. 
 
 	\begin{verbatim}
-		¿¿¿ from mymodul import * 
-		¿¿¿ mycon=sambung(”localhost”,”andri”,”123456”) 
-		¿¿¿ a=selectall(mycon,”teman”,”alamat”) 
+		>>> from mymodul import * 
+		>>> mycon=sambung(”localhost”,”andri”,”123456”) 
+		>>> a=selectall(mycon,”teman”,”alamat”) 
 		Andri Jl. Sariasih, Sarijadi, Bandung 12450 08123456789 andri@poltekpos.ac.id 
-		¿¿¿ 
+		>>> 
 	\end{verbatim}
 	
 Di baris pertama, kita import modul dari nama file, untuk selanjutnya import semua fungsi yang ada di dalamnya. Selanjutnya, kita membuat variabel bernama mycon bertipe koneksi ke MySQL (dapat dilihat dengan cara menjalankan perintah type(mycon) dari shell python) dan meng-assigned nilainya dari memanggil fungsi sambung. Selanjutnya, variabel a di-assinged nilainya dari memanggil fungsi selectall. Terlihat bahwa fungsi selectall mencetak nilai yang diperoleh dari operasi select tabel. 
@@ -159,26 +146,20 @@ Dalam era informasi dimana kita hidup sekarang, kita dapat melihat seberapa bany
 \subsection {Python Database API} 
 	Python dapat berinteraksi dengan database. Namun, bagaimana cara melakukannya? Python menggunakan apa yang disebut Python Database API dengan tujuan untuk menjadi antarmuka dengan database. API ini mengijinkan kita untuk memprogram database management system (DBMS) yang berbeda. Untuk DBMS yang berbeda itu, bagaimana pun juga, proses yang diikuti pada tingkatan kode tetap sama, yaitu sebagai berikut: 
 	\begin{enumerate}
-		\item Membangun sebuah koneksi ke database pilihanmu. Kita bisa membuat function koneksi, kemudian dipanggil dari file atau script atau halaman lain.Hanya menyediakan fungsi koneksi saja. 
+		\item Membangun sebuah koneksi ke database pilihanmu. Kita bisa membuat function koneksi, kemudian dipanggil dari file atau script atau halaman lain. Hanya menyediakan fungsi koneksi saja. 
 		\item Kita membuat class koneksi, kemudian dipanggil dari file atau script atau halaman lain.
 Menyediakan fungsi-fungsi dasar eksekusi perintah ke database seperti execute, mengambil data dan lainnya.
 		\item Memanipulasi data menggunakan SQL (berinteraksi). 
 		\item Memberitahu koneksi untuk entah menerapkan manipulasi SQL ke data dan membuatnya permanen (commit), atau memberitahunya untuk meninggalkan manipulasi itu (rollback), sehingga mengembalikan data ke keadaan sebelum interaksi terjadi. 
 		\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi. Menyediakan fitur-fitur lengkap tentang koneksi ke database, bahkan menyediakan berbagai pilihan jenis database.
-	\begin{enumerate}
+	\end{enumerate}
 	
 Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan teman-teman sudah menginstall web server (XAMPP/yang lainnya) dan python di komputer masing-masing. Setelah itu semua siap sekarang silahkan download mysql connector untuk python disini (Sesuaikan dengan versi python yang kalian punya). Setelah itu tinggal install. Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu trial Lalu import sql berikut
-
-\noindent 
-trial.sql 
-\noindent 
-Setelah di impor, lalu buka teks editor dan copas-kan code berikut 
-\noindent 
-show-data.py
-\noindent 
-lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal kalian run dari command prompt.
-\vspace{12pt}
-\noindent 
+	trial.sql 
+	Setelah di impor, lalu buka teks editor dan copas-kan code berikut 
+	show-data.py 
+	lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal 
+	kalian run dari command prompt. 
 
 \subsection {Koneksi Database MySQL dengan Python}
 	\begin{enumerate}
@@ -215,58 +196,58 @@ lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal ka
 \subsection {Connection Class}
 	Metode ini menggunakan kelas untuk menginisialisasi koneksi pada database. Pada contoh ini hanya menggunakan kelas sebagai inisiator untuk menghubungkan ke database, untuk querynya tetap menggunakan metode biasa.
 	\begin{enumerate}
-	\item pertama kita membuat kelas koneksi, buatlah file koneksi dengan nama connection.py dan masukan coding berikut :
-		\begin{verbatim}
-		import MySQLdb as mysql
-		import hashlib
-		import sys
-		import warnings
-		class MysqlUserDB:
-    		# initialization Connection Database
-    		# Init Start
-    		warnings.filterwarnings('error')
-    		def __init__(self, DBrootHost, DBrootUser, DBrootPass, DBrootDatabase):
-        	self.DBrootHost = DBrootHost
-        	self.DBrootUser = DBrootUser
-        	self.DBrootPass = DBrootPass
-        	self.DBrootDatabase = DBrootDatabase
-        	try:
-            	print("Checking connection of MYSQL ...")
-            	self.con = mysql.connect(DBrootHost, DBrootUser, DBrootPass, DBrootDatabase)
-            	self.cursor = self.con.cursor()
-            	self.cursor.execute('Select version()')
-            	print("Connected to Mysql Database\n")
-        	# except mysql.Error as error:
-        	#    print("Error %s\n Stop.\n" % error)
-        	#    sys.exit()
-        	except Warning as warn:
-            	print("Warning", warn)
-    		def CreateDB(self, DBrootDatabase):
-        	print("Creating database...")
-        	try:
-            	self.cursor.execute('CREATE database if NOT exists ' + DBrootDatabase)
-            	self.cursor.execute("SHOW DATABASES LIKE %s", (DBrootDatabase,))
-            	dbs = self.cursor.fetchone()
-            	print("Database created: ", dbs[0])
-        	except Warning as warn:
-            	print("Warning: %s \nStopping Process.\n" % warn)
-            	sys.exit()
-    		def GrantsAccess(self, DBrootDatabase):
-        	print("Accessing Account ...")
-        	try:
-            	self.cursor.execute("SHOW DATABASES LIKE %s", (DBrootDatabase,))
-            	result = self.cursor.fetchone()
-            	print("Access Granted for Database", result[0])
-        	except Warning as warn:
-            	print("Warningg %s" % warn)
-    		def getDB(self):
-        	return self.cursor
-    		def delCon(self):
-        	print("Finishing operation ...")
-        	self.cursor.close()
-        	self.con.close()
-        	print("Finished")
-		# Init End
+		\item pertama kita membuat kelas koneksi, buatlah file koneksi dengan nama connection.py dan masukan coding berikut :
+			\begin{verbatim}
+			import MySQLdb as mysql
+			import hashlib
+			import sys
+			import warnings
+			class MysqlUserDB:
+    			# initialization Connection Database
+    			# Init Start
+    			warnings.filterwarnings('error')
+    			def __init__(self, DBrootHost, DBrootUser, DBrootPass, DBrootDatabase):
+        		self.DBrootHost = DBrootHost
+        		self.DBrootUser = DBrootUser
+        		self.DBrootPass = DBrootPass
+        		self.DBrootDatabase = DBrootDatabase
+        		try:
+            		print("Checking connection of MYSQL ...")
+            		self.con = mysql.connect(DBrootHost, DBrootUser, DBrootPass, DBrootDatabase)
+            		self.cursor = self.con.cursor()
+            		self.cursor.execute('Select version()')
+            		print("Connected to Mysql Database\n")
+        		# except mysql.Error as error:
+        		#    print("Error %s\n Stop.\n" % error)
+        		#    sys.exit()
+        		except Warning as warn:
+            		print("Warning", warn)
+    			def CreateDB(self, DBrootDatabase):
+        		print("Creating database...")
+        		try:
+            		self.cursor.execute('CREATE database if NOT exists ' + DBrootDatabase)
+            		self.cursor.execute("SHOW DATABASES LIKE %s", (DBrootDatabase,))
+            		dbs = self.cursor.fetchone()
+            		print("Database created: ", dbs[0])
+        		except Warning as warn:
+            		print("Warning: %s \nStopping Process.\n" % warn)
+            		sys.exit()
+    			def GrantsAccess(self, DBrootDatabase):
+        		print("Accessing Account ...")
+        		try:
+            		self.cursor.execute("SHOW DATABASES LIKE %s", (DBrootDatabase,))
+            		result = self.cursor.fetchone()
+            		print("Access Granted for Database", result[0])
+        		except Warning as warn:
+            		print("Warningg %s" % warn)
+    			def getDB(self):
+        		return self.cursor
+    			def delCon(self):
+        		print("Finishing operation ...")
+        		self.cursor.close()
+        		self.con.close()
+        		print("Finished")
+			# Init End
 		\end{verbatim}
 
 Dalam kelas fungsi diatas menginisialisasi paramater untuk koneksi yang dinisialisasi pada method init, 
@@ -274,22 +255,22 @@ Sedangkan untuk me-return hasil koneksi menggunakan method getDB hal ini untuk m
 	
 	\item Setelah itu, buatlah file baru untuk mengetes apakah koneksi berhasil dan melakukan query.
 buatlah file menggunakan nama connectionTes.py
-	\begin{verbatim}
-	import connection as dbs
-	import warnings
-	warnings.filterwarnings('error')
-	mysqli = dbs.MysqlUserDB(DBrootHost='127.0.0.1', DBrootUser='root',
+		\begin{verbatim}
+			import connection as dbs
+			import warnings
+			warnings.filterwarnings('error')
+			mysqli = dbs.MysqlUserDB(DBrootHost='127.0.0.1', DBrootUser='root',
         	                 DBrootPass='', DBrootDatabase='pos')
-	db = mysqli.getDB()
-	try:
-    	db.execute("select * from product")
-    	results = db.fetchall()
-    	for result in results:
-        	print(result)
-	except db.Error as error:
-	    print(error)
-	mysqli.delCon()
-	\end{verbatim}
+			db = mysqli.getDB()
+			try:
+    			db.execute("select * from product")
+    			results = db.fetchall()
+    			for result in results:
+        		print(result)
+			except db.Error as error:
+	   		print(error)
+			mysqli.delCon()
+		\end{verbatim}
 
 Dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
 dan membuat object cursor pada db dengan memanggil object kelas mysql.getDB()
