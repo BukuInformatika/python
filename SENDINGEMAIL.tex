@@ -27,7 +27,37 @@
 				\item Port~25 –  Port tanpa dienkripsi
 				\item Port 426 – Port SSL/TLS, nama lainnya SMTPS
 			\end{enumerate}
- 
+\subsection {Menggunakan SMTP pada python}
+contoh client yang mengirim e-mail ke SMTP server ini:
+\begin {verbatim}
+
+import smtplib
+sender = 'mikail@website.com'
+recipient = ['sonanjaya@website.com']
+
+message = """From: From Person <%s>
+To: To Person <%s>
+Subject: Testing SMTP E-Mail
+
+Pesan ini dikirim melalui smtplib dan diterima oleh modul SMTP Server Python.
+
+""" % (sender, recipient)
+
+try:
+
+   	smtpObj = smtplib.SMTP('localhost', 1025)
+   	smtpObj.sendmail(sender, recipient, message)    
+
+   	print "Mengirim e-mail berhasil :D..."
+
+except Exception, e:
+
+	print str(e)
+   	print "Error: e-mail gagal terkirim :(..."
+\end{verbatim}
+
+Pada kode diatas dengan menggunakan smtplib cukup dengan mengakses URL dan port yang dituju, lalu kirim e-mail dengan menggunakan method sendmail() dengan melewatkan pengirim, penerima, dan pesan.
+
 		\item {POP3 Post Office Protocol v3}
 			POP3 (Post Office Protocol v3) dan IMAP (Internet Mail Application Protocol) digunakan agar user dapat mengambil dan membaca email secara remote yaitu tidak perlu login ke dalam sistem shelll mesin mail server tetapi cukup menguhubungi port tertentu dengan mail client yang mengimplementasikan protocol POP3 dan IMAP.
 			POP3 (Post Office Protocol 3) adalah versi terbaru dari protokol standar untuk menerima email. POP3 merupakan protokol client/server dimana email dikirimkan dari server ke email lokal. Digunakan untuk berkomunikasi dengan email server dan mengunduh semua email ke email lokal (seperti Outlook, Thunderbird, Windows Mail, Mac Mail, dan sebagainya), tanpa menyimpan salinannya di server. Biasanya, dalam aplikasi email terdapat pilihan untuk tetap menyimpan salinan email yang diunduh pada server atau tidak.
@@ -53,7 +83,7 @@ Port POP3 Default:
 \subsection {Kekurangan Menggunakan POP3} 
 \begin{enumarate}
 \item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. 
-\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer. \par
+\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer.
 \item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.
 \end{enumerate}
 
