@@ -55,9 +55,7 @@ with open("test.txt",encoding = 'utf-8') as f:
 {\fontsize{14pt}{14pt}\selectfont \textbf{Menulis ke File} \\} 
 Untuk menulis ke file kita perlu membukanya dalam mode write 'w', tambahkan 'a' atau exclusive creation 'x'. Kita harus berhati-hati dengan mode 'w' karena akan menimpa file jika sudah ada. Semua data sebelumnya terhapus. Menulis string atau urutan byte (untuk file biner) dilakukan dengan menggunakan metode write (). Metode ini mengembalikan jumlah karakter yang ditulis ke file.  
 with open("test.txt",'w',encoding = 'utf-8') as f: 
-~~ f.write("my first file \$  \setminus  \$n")  
-~~ f.write("This file \$  \setminus  \$ \$  \setminus  \$") 
-~~ f.write("contains three lines \$  \setminus  \$n")
+
 Program ini akan membuat file baru bernama 'test.txt' jika tidak ada. Jika memang ada, itu akan ditimpa. Kita harus menyertakan karakter newline sendiri untuk membedakan garis yang berbeda. 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Membaca Dari File} \\} 
 Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. Ada berbagai metode yang tersedia untuk tujuan ini. Kita bisa menggunakan metode read (size) untuk membaca dalam jumlah ukuran data. Jika parameter ukuran tidak ditentukan, bunyinya dan kembali ke akhir file.  
@@ -206,7 +204,7 @@ Kode untuk melakukan ini diletakkan seperti pickle.load (object \$  \_  \$to \$ 
 ~~~ object \$  \_  \$to \$  \_  \$pickle adalah objek yang ingin Anda acar (yaitu simpan ke file)  
 ~~~ file \$  \_  \$object adalah objek file yang ingin Anda tulis (dalam kasus ini, objek file adalah 'file') 
 Setelah Anda menutup file tersebut, buka di notepad dan lihat apa yang Anda lihat. Seiring dengan beberapa kue gibblygook lainnya, Anda akan melihat potongan daftar yang kami buat.  
-Sekarang untuk membuka kembali, atau unpickle, file Anda. Untuk menggunakan ini, kita akan menggunakan pickle.load (): \par
+
 Contoh kode 4 - unpickletest.py 
  \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickletest.py 
  \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickle file 
