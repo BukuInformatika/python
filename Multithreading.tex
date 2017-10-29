@@ -212,95 +212,62 @@ print "Exiting Main Thread"
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Thread=2} \par
 \vspace{10pt}
+
 \section{Sinkronisasi Thread}
 \textit{Threading} modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
 The \textit{acquire}\textit{ }\textit{(blocking)}\textit{ }metode objek kunci baru digunakan untuk memaksa \textit{thread}\textit{ }untuk menjalankan serempak. Opsional \textit{blocking} parameter memungkikan untuk mengontrol apakah\textit{ thread} menunggu untuk mendapatkan kunci. \par
 Jika \textit{blocking} diatur ke 0, \textit{thread} segera kembali dengan nilai 0 jika kunci tidak dapat diperoleh dan dengan 1 jika kunci dikuisisi. Jika pemblokiran diatur ke 1, blok dan menunggu kunci yang akan dirilis. \par
 The \textit{release()} metode objek kunci baru digunakan untuk melepaskan kunci ketika tidak lagi diperlukan.  \par
 \noindent 
-Contoh: \par
+Contoh:
+\begin{verbatim}
 \noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import threading} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import time} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont class myThread (threading.Thread):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ def $  \_  $init $  \_  $(self, threadID, name, counter):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ threading.Thread. $  \_  $init $  \_  $(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ self.threadID = threadID} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ self.name = name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ self.counter = counter} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ def run(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ print  $ " $Starting  $ " $+ self.name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~  $  \#  $ Get lock to synchronize threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ ThreadLock.acquire()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ print $  \_  $time(self.name, self.counter, 3)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~  $  \#  $ Free lock to realease next thread} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ ThreadLock.release()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ } \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ Def print $  \_  $time(threadName, delay, counter):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~ while counter:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ time.sleep(delay)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ counter -= 1} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ threadLock = threading.Lock()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ threads = []} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create new threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread1 = myThread(1,  $ " $Thread-1,1 )} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread2 = myThread(2,  $ " $Thread-2,2 )} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Start new Threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread1.start()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread2.start()} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Add threads to thread list} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threads.append(thread1)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread2.append(thread2)} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Wait for all threads to complete} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Fort t in threads:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ t.join()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont print  $ " $Exiting Main thread $ " $} \par
-\vspace{10pt}
-\noindent 
+#!/usr/bin/python
+import threading
+import time
+class myThread (threading.Thread):
+  def_init_(self, threadID, name, counter):
+	threading.Thread._init_ (self)
+	self.threadID = threadID
+	self.name = name
+	self.counter = counter
+  def run(self)
+ 	print  "Starting" + self.name
+
+ 	#Get lock to synchronize threads
+	ThreadLock.acquire()
+print_time(self.name, self.counter, 3)
+
+#Free lock to realease next thread
+	ThreadLock.release()
+ 
+Def print_time(threadName, delay, counter):
+	while counter:
+	time.sleep(delay)
+	print  " \% s:\% s"\% (threadName, time.ctime(time.time()))
+	counter -= 1
+	
+threadLock = threading.Lock()
+	threads = []
+
+#  Create new threads
+thread1 = myThread(1, "Thread-1", 1)
+thread2 = myThread(2, "Thread-2", 2)
+
+#Start new Threads
+thread1.start()
+thread2.start()
+
+# Add threads to thread list
+threads.append(thread1)
+thread2.append(thread2)
+
+#Wait for all threads to complete}
+Fort t in threads:
+	t.join()
+	print "Exiting Main thread"
+\end{verbatim}
+
 Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 \vspace{10pt}
 \noindent 
@@ -322,7 +289,8 @@ Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
 \vspace{12pt}
-\textbf{1.5 Multithreaded Antrian Prioritas} \par
+
+\section{Multithreaded Antrian Prioritas} \par
 The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
 \begin{itemize}
 	\item \textbf{get()} \par
@@ -345,119 +313,69 @@ The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampu
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Contoh: \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import Queue} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import threading} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import time} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont exitFlag = 0} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont class myThread (threading.Thread):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~def   $  \_  $init $  \_  $(self, threadID, name, q):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ threading.Thread. $  \_  $init $  \_  $(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ self.name = name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ self.q = q} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  def run(self):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~ print  $ " $Starting  $ " $+ self.name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~ process $  \_  $data(self.name, self.q)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~ print  $ " $Exiting  $ " $+ self.name} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont def process $  \_  $data(threadName, q):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ while not exitFlag:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ queuLock.acquire()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ if not workQueu.empty():} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ data = q.get()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ queueLock.release()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ print  $ " $ $  \%  $s processing  $  \%  $s $ " $  $  \%  $ (threadName, data)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ else:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ queueLock.release()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ time.sleep(1)} \par
-\vspace{12pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threadList = [ $ " $Thread-1 $ " $,  $ " $Thread-2 $ " $,  $ " $Thread-3 $ " $]} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont nameList = [ $ " $One $ " $,  $ " $Two $ " $,  $ " $Three $ " $,  $ " $Four $ " $,  $ " $Five $ " $]} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont queueLock = threading.Lock()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont workLock = Queue.Queue(10)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threads = []} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threadID = 1} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create new threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont For tName in threadList:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ thread = myThread(threadID, tName, workQueue)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ thread.start()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ thread.append(thread)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ threadID +=1} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Fill the queue} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont queueLock.acquire()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont for word in nameList:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ workQueue.put(word)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont queueLock.release()} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Wait for queue to empty} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont while not workQueue.empty():} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont pass} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Notify threads it?s time to exit} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont exitFlag = 1} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Wait for all threads to complete} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont For t in threads:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ t.join()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont print  $ " $Exiting Main Thread $ " $} \par
-\vspace{10pt}
-\noindent 
+Contoh: 
+\begin{verbatim}
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+import Queue
+import threading
+import time
+
+exitFlag = 0
+
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, q):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.q = q
+    def run(self):
+        print "Starting " + self.name
+        process_data(self.name, self.q)
+        print "Exiting " + self.name
+
+def process_data(threadName, q):
+    while not exitFlag:
+        queueLock.acquire()
+        if not workQueue.empty():
+            data = q.get()
+            queueLock.release()
+            print "%s processing %s" % (threadName, data)
+        else:
+            queueLock.release()
+        time.sleep(1)
+
+threadList = ["Thread-1", "Thread-2", "Thread-3"]
+nameList = ["One", "Two", "Three", "Four", "Five"]
+queueLock = threading.Lock()
+workQueue = Queue.Queue(10)
+threads = []
+threadID = 1
+
+# Create new threadsfor tName in threadList:
+    thread = myThread(threadID, tName, workQueue)
+    thread.start()
+    threads.append(thread)
+    threadID += 1
+# Fill the queuequeueLock.acquire()
+for word in nameList:
+    workQueue.put(word)
+queueLock.release()
+
+# Wait for queue to empty} \par
+while not workQueue.empty():
+    pass
+    
+# Notify threads it?s time to exit} \par
+exitFlag = 1
+
+# Wait for all threads to complete} \par
+for t in threads:
+    t.join()
+print "Exiting Main Thread"
+\end{verbatim}
+
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 \vspace{12pt}
 \noindent 
