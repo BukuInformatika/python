@@ -3,6 +3,7 @@
 % M. Amran Hakim Siregar 1154106
 % Indah Rahmawati 1154070
 % Rizky Abdul Ghani Suherli 1154058
+% Ajrina Darman 1154079
 
 
 \section{Python XML Processing}
@@ -14,15 +15,6 @@ Ini direkomendasikan oleh World Wide Web Consortium dan tersedia sebagai standar
 XML sangat berguna untuk mencatat data berukuran kecil dan menengah tanpa memerlukan tulang punggung berbasis SQL  
 Pada kenyataanya dalam dunia komputer, sistem komputer dan database mengandung data yang tidak kompatibel satu sama lain. Dengan demikian tidak mungkin terjadinya pertukaran data melalui internet jika terdapat perbedaan sistem operasi dan aplikasi database yang digunakan.
 Dengan menggunakan XML untuk pertukaran data, masalah perbedaan platform dan aplikasi tidak perlu diresahkan lagi. karena data yang disimpan pada XML dapat dibaca oleh berbagai macam platform dan aplikasi.
-
-\subsection{Tipe XML Processing}
-\subsubsection{Tipe XML Processing}
-XML memiliki tiga tipe file yaitu sebagai berikut :
-\begin{enumerate}
-\item XML, merupakan standar format dari struktur berkas (file).
-\item XSL, merupakan standar untuk memodifikasi data yang di impor atau di ekspor.
-\item XSD, merupakan standar yang mendefinisikan struktur database dalam XML.
-\end{enumerate}
 
 \subsection{Keunggulan dan Kelemahan Python XML Processing}
 \subsubsection{Keunggulan Python XML Processing}
@@ -49,6 +41,11 @@ Keunggulan dari python dapat dijabarkan dari faktor-faktor berikut ini :
 \item Portabilitas secara luas seperti pemrograman antar platform tanpa ports.
 \item Kompilasi untuk portable kode byte sehingga kecepatan eksekusi bertambah dan melindungi kode sumber.
 \item Antarmuka terpasang untuk pelayanan keluar seperti perangkat Bantu system, GUI, persistence, database, dll.
+\item Mudah pemeliharaannya.
+\item Sederhana. xml lebih sederhana.
+\item Mudah dipindah-pindahkan (Portability). XML mempunyai kemudahan perbindahan (portabilitas) yang lebih bagus.
+\item Intelligence. XML dapat menangani beberapa tingkat (level) kompleksitas.
+\item Dapat beradaptasi. dapat mengadaptasi untuk membuat bahasa sendiri. Seperti microsoft membuat bahasa MSXML atau macromedia mengembangkan MXML.
 \end{enumerate}
  
 \subsection {Arsitektur XML dan API}
@@ -62,11 +59,30 @@ Server mengenalkan tipe data XML.Tipe data ini dapat digunakan dalam definisi ta
 \item lapisan aplikasi : Lapisan ini merupakan antarmuka menggunakan bahasa Indonesia. Bahasa pemrograman yang digunakan adalah Java.Java menyediakan banyak fasilitas yang memudahkan untuk mengimplementasikan system yang dibuat.
 \end{enumerate}
 
+\subsection {Kebutuhan Pengguna XML}
+\subsubsection {Pengguna XML}
+Dari perspektif bisnis hampir semua tipe data bisa direpresentasikan sebagai XML, dengan suatu grammar yang mendeskripsikan strukturnya. terdapat sejumlah lapangan bisnis yang akan mendapatkan keuntungan secara lansung dari pengguna XML, yaitu :
+\begin{enumerate}
+\item E-commerce.
+\item Platform indepedence.
+\item Kemampuan pengaksesan data.
+\item Penyerdahanaan aplikasi.
+\item Memungkinkan sharing data lewat internet.
+\end{enumerate}
+
+
 \subsubsection {SAX}
-  API sederhana untuk XML (SAX): mendaftarkan panggilan kemali untuk acara yang diminati dan kemudian membiarkan parser berjalan melalui dokumen. Ini berguna bila dokumen berukuran besar atau memiliki keterbatasan memori, ini memparsing file tidak pernah tersimpan dalam memori. Biasanya juga SAX ini dapat di pakai oleh Generator untuk membaca file XML dan pesan SAX ini juga biasa disebut dengan istilah event. SAX akan di kirimkan oleh Generator ke pipeline. SAX atau event ini juga dapat mengirimkan sebuah dokumen atau lampiran yang artinya SAX atau event ini dapat di proses nantinya.
+  SAX adalah singkatan dari Simple API for XML. API sendiri adalah singkatan dari Application Program Interface.Seperti namanya, dibanding DOM Parser, isi program SAX Parser lebih sederhana. SAX parser bekerja berdasarkan apa yang disebut event-based. API sederhana untuk XML (SAX): mendaftarkan panggilan kemali untuk acara yang diminati dan kemudian membiarkan parser berjalan melalui dokumen. Ini berguna bila dokumen berukuran besar atau memiliki keterbatasan memori, ini memparsing file tidak pernah tersimpan dalam memori. Biasanya juga SAX ini dapat di pakai oleh Generator untuk membaca file XML dan pesan SAX ini juga biasa disebut dengan istilah event. SAX akan di kirimkan oleh Generator ke pipeline. SAX atau event ini juga dapat mengirimkan sebuah dokumen atau lampiran yang artinya SAX atau event ini dapat di proses nantinya.
   
 \subsubsection {DOM}
-  API Document Objek Model (DOM): ini adalah rekomendasi World Wide Web Consortium dimana keseluruhan file dibaca ke memori dan disimpan dalam bentuk hierarkies (tree-based) untuk mewakili semua fitur dokumen XML. 
+  API Document Objek Model (DOM): ini adalah rekomendasi World Wide Web Consortium dimana keseluruhan file dibaca ke memori dan disimpan dalam bentuk hierarkies (tree-based) untuk mewakili semua fitur dokumen XML. DOM merupakan singkatan dari dari Document Object Model.DOM Parser menterjemahkan dokumen XML dan menempatkan elemen-elemen yang ditemuinya ketika memproses dokumen ke dalam struktur pohon.
+  DOM memproses struktur dokumen dengan perulangan.empat kondisi yang cocok untuk menggunakan DOM, yaitu:
+\begin{enumerate}
+\item Ketika terjadi modifikasi sebuah dokumen XML, seperti mengurutkan elemen atau mengubah letak elemen pada suatu pohon elemen satu ke lainnya.
+\item Ketika dokumen XML di memori harus dibagi dengan aplikasi lainnya setelah proses parsing.
+\item Ketika ukuran dokumen XML tidak terlalu besar.
+\item Ketika aplikasi memulai proses utama setelah proses pengesahan.
+\end{enumerate}
 
 SAX jelas tidak bisa memproses informasi secepat DOM saat bisa bekerjadengan file besar. Di sisi lain, menggunakan DOM secara eklusifenar-benar dapat membunuh sumber daya, terutama jika digunakan pada banyak file kecil. SAX hanya bisa dibaca sementara DOM mengizinkan perubahan pada file XML. Kedua API yang berbeda ini saling melengkapi satu sama lain, tidak ada alasan mengapa tidak dapat menggunakannya untuk proyek besar. 
 
@@ -119,15 +135,6 @@ Pertama - tama buat lah file xml seperti di bawah ini
 
 	<hobi name="Vlogging"/>
 	<hobi name="Membaca Komik"/>
-	<hobi name="Nonton Film"/>
-</mahasiswa>
-<mahasiswa>
-      <nama>AMRAN</nama>
-          <alamat>MEDAN</alamat>
-	  <jurusan>TEKNIK INFORMATIKA</jurusan>
-	
-	<hobi name="futsal"/>
-	<hobi name="play game"/>
 	<hobi name="Nonton Film"/>
 </mahasiswa>
 \end{verbatim}
