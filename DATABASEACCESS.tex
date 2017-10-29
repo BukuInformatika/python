@@ -5,9 +5,9 @@
 %Faisal Syarifuddin (1154104)
 %Muhamad Rifan Zamaludin (1154088)
 
-\section{Database Access}
+\section {Database Access}
 
-\subsection{Pengertian Database}
+\subsection {Pengertian Database}
 	Basis data adalah sekumpulan dari data yang telah disusun sesuai dengan aturan tertentu yang saling berhubungan sehingga memudahkan pengguna dalam mengelolanya juga memudahkan pengguna untuk memperoleh informasi. Selain itu ada juga yang menyebutkan bahwa database sebagai kumpulan ﬁle,tabel,atau arsip yang saling terhubung yang disimpan dalam media elektronik.
 	Istilah "basis data" berawal dari ilmu komputer. Meskipun kemudian artinya semakin luas , memasukkan hal-hal di luar bidang elektronika, artikel ini mengenai basis data komputer. Catatan yang mirip dengan basis data sebenarnya sudah ada sebelum revolusi industri yaitu dalam bentuk buku besar, kuitansi dan kumpulan data yang berhubungan dengan bisnis.
 	Jadi Database dapat disimpulkan adalah kumpulan informasi yang berkaitan dengan subjek atau tujuan tertentu , seperti pelacakan pesanan pelanggan atau menyimpan koleksi musik. Jika database tidak disimpan di komputer, atau hanya bagian dari dokumen tersebut, Anda dapat melacak semua jenis informasi dari berbagai sumber yang harus diseimbangkan dan ditata .
@@ -22,8 +22,7 @@
 			
 		\item Kontrol data terpusat 
 		      Masih berkaitan dengan point ke dua, meskipun pada suatu perusahaan memiliki banyak bagian atau divisi tapi database yang diperlukan tetap satu saja. Hal ini mempermudah pengontrolan data seperti ketika ingin mengupdate data mahasiswa, maka kita perlu mengupdate semua data di masing-masing bagian atau divisi, tetapi cukup di satu database saja yang ada di server pusat. 
-	
-		\item Menghemat biaya perangkat
+			\item Menghemat biaya perangkat
 		      Dengan memiliki database secara terpusat maka di masing-masing divisi tidak memerlukan perangkat untuk menyimpan database berhubung database yang dibutuhkan hanya satu yaitu yang disimpan di server pusat, ini tentunya memangkas biaya pembelian perangkat.
  
 		\item Keamanan Data 
@@ -36,28 +35,27 @@
 	Dengan segudang manfaat dan kegunaan yang dimiliki oleh database maka sudah seharusnya semua perusahaan baik itu perusahaan skala kecil apalagi perusahaan besar memiliki database yang dibangun dengan rancangan yang baik. Ditambah dengan pemanfaatan teknologi jaringan komputer maka manfaat database ini akan semakin besar. Penggunaan database sekaligus teknologi jaringan komputer telah banyak digunakan oleh berbagai macam perusahaan,contohnya saja perbankan yang memiliki cabang di setiap kotanya. Perusahaan Bank tersebut hanya memiliki satu database yang disimpan di server pusat, sedangkan cabang-cabangnya terhubung melalui jaringan komputer untuk mengakses database yang terletak di sever pusat tersebut.
 
 
-\subsection{Pengertian Character}
+\subsection {Pengertian Character}
 	Charakter merupakan bagian data yang terkecil, dapat berupa karakter numerik, huruf ataupun karakter-karakter khusus (special characters) yang membentuk suatu item data / field.
 
-\subsection{{Apa yang dimaksud dengan ﬁeld, record,table, ﬁle, data dan basisdata?}} 
+\subsection {Apa yang dimaksud dengan ﬁeld, record,table, ﬁle, data dan basisdata} 
 	Field merupakan kumpulan dari karakter yang membentuk satu arti, maka jika terdapat field misalnya seperti KeteranganBarang atau JumlahBarang, maka yang dimunculkan dalam field tersebut harus yang berkaitan dengan keterangan barang dan jumlah barang. Atau field juga bisa disebut sebagai tempat atau kolom yang terdapat dalam suatu tabel untuk mengisikan nama-nama (data) field yang akan di isikan. merepresentasikan suatu atribut dari record yang menunjukkan suatu item dari data, seperti misalnya nama, alamat dan lain sebagainya. Kumpulan dari field membentuk suatu record.
 
 	Record merupakan kumpulan field yang sangat lengkap, dan biasanya dihitung dalam satuan baris. Tabel merupakan kumpulan dari beberapa record dan juga field. File terdiri dari kumpulan field yang menunjukan dari satu kesatuan data yang sejenis. Misalnya seperti file nama siswa berisikan data tentang semua nama siswa yang ada. Data adalah kumpulan fakta atau kejadian yang digunakan sebagai penyelesaian masalah dalam bentuk informasi. Basis data (database) terdiri dari dua kata, yaitu kata basis dan data. Basis merupakan tempat ataupun gudang, ataupun wadah.
 
 	Data dapat disebut sebagai kumpulan dari fakta yang mewakili objek, misalnya seperti benda, manusia,barang dan sebagainya yang ditulis ke dalam bentuk angka, huruf, simbol, bunyi, teks, gambar ataupun gabungannya. Jadi dapat disimpulkan bahwa basis data merupakan kumpulan dari data-datayang terorganisasi yang saling berhubungan sedemikian rupa sehingga dapat dengan mudah disimpan, dimanipulasi, dan dipanggil oleh pemakainya. Karakter atau character yang ada didalam database merupakan bagian data yang terkecil, karakter tersebutdapat berupa karakter numerik, huruf ataupun karakter khusus (special characters) yang membentuk suatu item data atau field.
 
-\subsection{Sifat-sifat database / basis data}
+\subsection {Sifat-sifat database atau basis data}
 	Data dalam basis data bersifat integrated dan shared Terpadu (integrated), berkas-berkas data yang ada pada basis data saling terkait (terjadi dependensi data);
 	Berbagi data (shared), data yang sama dapat dipakai oleh sejumlah pengguna dalam waktu yang bersamaan. Sering dinamakan sebagi sistem multiuser.
 	\begin{enumerate}
 		\item Internal : 
 			Kesatuan (integritas) dari file-file yang terlibat
-
 		\item Terbagi atau share : 
 			Elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).
 	\end{enumerate}
  
-\subsection{Tipe Database} 
+\subsection {Tipe Database} 
 	Tipe Database Terdapat 12 tipe database, antara lain: 
 	\begin{enumerate}
 		\item Operational database: 
@@ -100,15 +98,14 @@
  
 \subsection {Modul python untuk mengakses database MySQL}
 	Untuk mengakses database MySQL dari Python, berikut adalah beberapa langkah sederhana. Yang pertama, server database MySQL harus siap dulu. Karenanya lakukan tahapan berikut ini. 
-
 	\begin{enumerate}
 		\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysqlserver. Jangan lupa memasukkan password akun root untuk server MySQL. 
 		\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. 
-
 			Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
 			mysql¿ create database teman; 
 			mysql¿ use teman; 
-			mysql¿ create table alamat(id int not null auto increment primary key, nama varchar(35), alamat text, telepon varchar(15), surat text);
+			mysql¿ create table alamat(id int not null auto increment primary key, 
+			nama varchar(35), alamat text, telepon varchar(15), surat text);
 
 		\item  ingin membuat user baru yang punya akses penuh ke database yang baru saja dibuat, lakukan tahapan berikut ini. 
 			mysql> create user 'andri'@'localhost' identified by '123456'; 	
@@ -151,15 +148,13 @@ Lalu, bagaimana menggunakannya? Untuk sementara, modul python ini hanya dapat di
 	\end{verbatim}
 	
 Di baris pertama, kita import modul dari nama file, untuk selanjutnya import semua fungsi yang ada di dalamnya. Selanjutnya, kita membuat variabel bernama mycon bertipe koneksi ke MySQL (dapat dilihat dengan cara menjalankan perintah type(mycon) dari shell python) dan meng-assigned nilainya dari memanggil fungsi sambung. Selanjutnya, variabel a di-assinged nilainya dari memanggil fungsi selectall. Terlihat bahwa fungsi selectall mencetak nilai yang diperoleh dari operasi select tabel. 
-\vspace{12pt}
 
 Dengan ilustrasi ini, diharapkan dapat memberi inspirasi dalam membuat modul python yang digunakan untuk sebuah aplikasi, misalnya dengan menjadikannya sebagai bagian dari hubungan SIGNAL-SLOT pada QT4. Semoga bermanfaat. 
-\vspace{12pt}
 
 Dalam era informasi dimana kita hidup sekarang, kita dapat melihat seberapa banyak data dunia berubah. Kita pada dasarnya membuat, menyimpan, dan menarik data, secara ekstensif. Harusnya ada sebuah cara untuk menangani semua itu. Semua itu tidak dapat disebarkan kemana-mana tanpa adanya manajemen bukan? Di sini hadir Database Management System (DBMS). DBMS adalah sebuah sistem software yang memungkinkanmu untuk membuat, menyimpan, memodifikasi, menarik, dan penanganan lainnya terhadap sebuah data dari database. Sistem ini juga bervariasi dalam ukuran, mulai dari sistem kecil yang cukup berjalan pada komputer personal hingga yang lebih besar yang berjalan dalam mainframe. 
 
 \subsection {Python Database API} 
-Python dapat berinteraksi dengan database. Namun, bagaimana cara melakukannya? Python menggunakan apa yang disebut Python Database API dengan tujuan untuk menjadi antarmuka dengan database. API ini mengijinkan kita untuk memprogram database management system (DBMS) yang berbeda. Untuk DBMS yang berbeda itu, bagaimana pun juga, proses yang diikuti pada tingkatan kode tetap sama, yaitu sebagai berikut: 
+	Python dapat berinteraksi dengan database. Namun, bagaimana cara melakukannya? Python menggunakan apa yang disebut Python Database API dengan tujuan untuk menjadi antarmuka dengan database. API ini mengijinkan kita untuk memprogram database management system (DBMS) yang berbeda. Untuk DBMS yang berbeda itu, bagaimana pun juga, proses yang diikuti pada tingkatan kode tetap sama, yaitu sebagai berikut: 
 	\begin{enumerate}
 		\item Membangun sebuah koneksi ke database pilihanmu. Kita bisa membuat function koneksi, kemudian dipanggil dari file atau script atau halaman lain.Hanya menyediakan fungsi koneksi saja. 
 		\item Kita membuat class koneksi, kemudian dipanggil dari file atau script atau halaman lain.
@@ -169,7 +164,8 @@ Menyediakan fungsi-fungsi dasar eksekusi perintah ke database seperti execute, m
 		\item Kita membuat library php yang isinya koneksi kemudian tinggal pakai dalam aplikasi.
 Menyediakan fitur-fitur lengkap tentang koneksi ke database, bahkan menyediakan berbagai pilihan jenis database.
 Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan teman-teman sudah menginstall web server (XAMPP/yang lainnya) dan python di komputer masing-masing. Setelah itu semua siap sekarang silahkan download mysql connector untuk python disini (Sesuaikan dengan versi python yang kalian punya). Setelah itu tinggal install. 
-Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu  \"trial\" Lalu import sql berikut 
+Setelah selesai installasi, buka phpmyadmin dan buat database dengan nama terserah. Contohnya yaitu trial Lalu import sql berikut
+
 \noindent 
 trial.sql 
 \noindent 
@@ -212,23 +208,21 @@ lalu simpan dengan nama terserah kalian (punya saya show-data.py) dan tinggal ka
 		\item Test dengan code berikut:
 		      python test.py 
 	\end{enumerate}
-\subsection {Connection Class}
-Metode ini menggunakan kelas untuk menginisialisasi koneksi pada database. 
-Pada contoh ini hanya menggunakan kelas sebagai inisiator untuk menghubungkan ke database, 
-untuk querynya tetap menggunakan metode biasa.
-\begin{enumerate}
-\item pertama kita membuat kelas koneksi, buatlah file koneksi dengan nama connection.py dan masukan coding berikut :
-
-\begin{verbatim}
-	import MySQLdb as mysql
-	import hashlib
-	import sys
-	import warnings
-	class MysqlUserDB:
-    	# initialization Connection Database
-    	# Init Start
-    	warnings.filterwarnings('error')
-    	def __init__(self, DBrootHost, DBrootUser, DBrootPass, DBrootDatabase):
+	
+	\subsection {Connection Class}
+	Metode ini menggunakan kelas untuk menginisialisasi koneksi pada database. Pada contoh ini hanya menggunakan kelas sebagai inisiator untuk menghubungkan ke database, untuk querynya tetap menggunakan metode biasa.
+	\begin{enumerate}
+	\item pertama kita membuat kelas koneksi, buatlah file koneksi dengan nama connection.py dan masukan coding berikut :
+		\begin{verbatim}
+		import MySQLdb as mysql
+		import hashlib
+		import sys
+		import warnings
+		class MysqlUserDB:
+    		# initialization Connection Database
+    		# Init Start
+    		warnings.filterwarnings('error')
+    		def __init__(self, DBrootHost, DBrootUser, DBrootPass, DBrootDatabase):
         	self.DBrootHost = DBrootHost
         	self.DBrootUser = DBrootUser
         	self.DBrootPass = DBrootPass
@@ -244,7 +238,7 @@ untuk querynya tetap menggunakan metode biasa.
         	#    sys.exit()
         	except Warning as warn:
             	print("Warning", warn)
-    	def CreateDB(self, DBrootDatabase):
+    		def CreateDB(self, DBrootDatabase):
         	print("Creating database...")
         	try:
             	self.cursor.execute('CREATE database if NOT exists ' + DBrootDatabase)
@@ -254,7 +248,7 @@ untuk querynya tetap menggunakan metode biasa.
         	except Warning as warn:
             	print("Warning: %s \nStopping Process.\n" % warn)
             	sys.exit()
-    	def GrantsAccess(self, DBrootDatabase):
+    		def GrantsAccess(self, DBrootDatabase):
         	print("Accessing Account ...")
         	try:
             	self.cursor.execute("SHOW DATABASES LIKE %s", (DBrootDatabase,))
@@ -262,23 +256,22 @@ untuk querynya tetap menggunakan metode biasa.
             	print("Access Granted for Database", result[0])
         	except Warning as warn:
             	print("Warningg %s" % warn)
-    	def getDB(self):
+    		def getDB(self):
         	return self.cursor
-    	def delCon(self):
+    		def delCon(self):
         	print("Finishing operation ...")
         	self.cursor.close()
         	self.con.close()
         	print("Finished")
-	# Init End
-\end{verbatim}
+		# Init End
+		\end{verbatim}
 
-dalam kelas fungsi diatas menginisialisasi paramater untuk koneksi yang dinisialisasi pada method init, 
+Dalam kelas fungsi diatas menginisialisasi paramater untuk koneksi yang dinisialisasi pada method init, 
 Sedangkan untuk me-return hasil koneksi menggunakan method getDB hal ini untuk mereturn cursor untuk dipanggil saat akan melakukan eksekusi, dan untuk memutuskan koneksi menggunakan method delcon, sedangkan sisa method lainnya hanya sebagai method pendukung.
+	
 	\item Setelah itu, buatlah file baru untuk mengetes apakah koneksi berhasil dan melakukan query.
 buatlah file menggunakan nama connectionTes.py
-\end{enumarate}
-
-\begin{verbatim}
+	\begin{verbatim}
 	import connection as dbs
 	import warnings
 	warnings.filterwarnings('error')
@@ -293,7 +286,8 @@ buatlah file menggunakan nama connectionTes.py
 	except db.Error as error:
 	    print(error)
 	mysqli.delCon()
-\end{verbatim}
+	\end{verbatim}
 
 dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
 dan membuat object cursor pada db dengan memanggil object kelas mysql.getDB()
+\end{enumarate}
