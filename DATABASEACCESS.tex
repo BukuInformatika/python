@@ -274,3 +274,26 @@ untuk querynya tetap menggunakan metode biasa.
 
 dalam kelas fungsi diatas menginisialisasi paramater untuk koneksi yang dinisialisasi pada method init, 
 Sedangkan untuk me-return hasil koneksi menggunakan method getDB hal ini untuk mereturn cursor untuk dipanggil saat akan melakukan eksekusi, dan untuk memutuskan koneksi menggunakan method delcon, sedangkan sisa method lainnya hanya sebagai method pendukung.
+	\item Setelah itu, buatlah file baru untuk mengetes apakah koneksi berhasil dan melakukan query.
+buatlah file menggunakan nama connectionTes.py
+\end{enumarate}
+
+\begin{verbatim}
+	import connection as dbs
+	import warnings
+	warnings.filterwarnings('error')
+	mysqli = dbs.MysqlUserDB(DBrootHost='127.0.0.1', DBrootUser='root',
+        	                 DBrootPass='', DBrootDatabase='pos')
+	db = mysqli.getDB()
+	try:
+    	db.execute("select * from product")
+    	results = db.fetchall()
+    	for result in results:
+        	print(result)
+	except db.Error as error:
+	    print(error)
+	mysqli.delCon()
+\end{verbatim}
+
+dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
+dan membuat object cursor pada db dengan memanggil object kelas mysql.getDB()
