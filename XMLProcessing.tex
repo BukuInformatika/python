@@ -62,6 +62,7 @@ Server mengenalkan tipe data XML.Tipe data ini dapat digunakan dalam definisi ta
 SAX jelas tidak bisa memproses informasi secepat DOM saat bisa bekerjadengan file besar. Di sisi lain, menggunakan DOM secara eklusifenar-benar dapat membunuh sumber daya, terutama jika digunakan pada banyak file kecil. SAX hanya bisa dibaca sementara DOM mengizinkan perubahan pada file XML. Kedua API yang berbeda ini saling melengkapi satu sama lain, tidak ada alasan mengapa tidak dapat menggunakannya untuk proyek besar. 
 
 Contoh: 
+\begin{verbatim}
 <collection shelf="New Arrivals"> 
 <movie title="Enemy Behind"> 
   <type>War, Thriller</type> 
@@ -95,250 +96,130 @@ Contoh:
   <description>Viewable boredom</description> 
 </movie> 
 </collection> 
+\end{verbatim}
 
 
 \subsection{Parsing XML dengan API SAX}
   SAX adalah antarmuka standar untuk parsing XML berbasis event. Parsing XML dengan SAX umumnya mengharuskan untuk membuat dengan subclassing xml.sax.
   ControlHandler menangani tag dan atribut tertentu dari XML. Objek ControlHandler menyediakan metode untuk menangani berbagai aktivitas parsing. Parsing memanggil metode ControlHandler saat memparsing file XML.
   Metode startDocument dan endDocument disebut awal dan akhir setiap elemen. Jika parsing tidak dalam mode namespace, metode startElement (tag attribute) dan endElement (tag) dipanggil. Jika tidak, metode yang sesuai startElemenNS dan endElemenNS dipanggil. 
-\begin{itemize}
+
 Berikut ini metode penting untuk memahami sebelum melanjutkan ke materi berikutnya : 
-\item Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing diuat akan menjadi tipe parsing pertama yang ditemukan sistem.
-\selectfont xml.sax.make $  \_  $parser([parser $  \_  $list])}
-\end{itemize}
+\begin{enumerate}
+  \item Metode berikut membuat objek parsing baru dan mengembalikannya. Objek parsing diuat akan menjadi tipe parsing pertama yang ditemukan sistem.
+  \item xml.sax.make parser([parser list])
+\end{enumerate}
 
-\begin{itemize}
 Berikut adalah detail parameternya : 
-Parser $  \_  $list : pilihan argumen yang terdiri dari daftar parsing untuk digunakan yang semuanya harus menerapkan metode \textit{make $  \_  $parse}
-\end{itemize}
+\begin{enumerate}
+  \item Parser list : pilihan argumen yang terdiri dari daftar parsing untuk digunakan yang semuanya harus menerapkan metode {make    parse}.
+  \item Metode berikut membuat parsing SAX dan menggunakannya untuk mengurai dokumen. xml.sax.parser(xmlfile, contenthandler[, errorhandler])
+\end{enumerate}
 
-\noindent 
-Metode\par
-Metode berikut membuat parsing SAX dan menggunakannya untuk mengurai dokumen \par
-\vspace{10pt}
-{\fontsize{10pt}{10pt}\selectfont xml.sax.parser(xmlfile, contenthandler[, errorhandler])} \par
-\vspace{10pt}
-Berikut adalah detail dari parameternya: \par
-\noindent 
-\begin{itemize}
-\item \textit{Xmlfile } \par
-Ini adalah nama file XML yang bisa dibaca. \par
-\noindent 
-\item \textit{ContentHandler } \par
-Ini harus menjadi objek \textit{ContenHandler} \par
-\noindent 
-\item \textit{ErrorHandler} \par
-Jika ditentukan, e\textit{rrorhandler} harus menjadi objek \textit{ErrorHandler} SAX \par
-\noindent 
-\item Metode\textit{ parseString}\end{itemize}
- \par
-Membuat parsing SAX dan mengurai string XML yang ditentukan : \par
-\vspace{12pt}
-{\fontsize{10pt}{10pt}\selectfont xml.sax.parsertring(xmlstring,contenthandler[, errorhandler])} \par
-\vspace{12pt}
-Brikut ini adalah detail nama dar parameter : \par
-\noindent 
-{XMLstring} \par
-Nama dari string yang bisa dibaca \par
-\noindent 
-{ContentHandler} \par
-Menjadi objek ContenHandler \par
-\noindent 
-{ErrorHandler} \par
-Menjadi objek ErorHandler SAX \par
-\vspace{12pt}
-\noindent 
-Contoh : \par
-\noindent 
- $  \#  $!/usr/bin/python \par
-\vspace{12pt}
-\noindent 
-import xml.sax \par
-\vspace{12pt}
-\noindent 
-class MovieHandler( xml.sax.ContentHandler ): \par
-\noindent 
-~~ def  $  \_  $ $  \_  $init $  \_  $ $  \_  $(self): \par
-\noindent 
-~~~~~ self.CurrentData = "" \par
-\noindent 
-~~~~~ self.type = "" \par
-\noindent 
-~~~~~ self.format = "" \par
-\noindent 
-~~~~~ self.year = "" \par
-\noindent 
-~~~~~ self.rating = "" \par
-\noindent 
-~~~~~ self.stars = "" \par
-\noindent 
-~~~~~ self.description = "" \par
-\vspace{12pt}
-\noindent 
-~~  $  \#  $ Call when an element starts \par
-\noindent 
-~~ def startElement(self, tag, attributes): \par
-\noindent 
-~~~~~ self.CurrentData = tag \par
-\noindent 
-~~~~~ if tag == "movie": \par
-\noindent 
-~~~~~~~~ print "*****Movie*****" \par
-\noindent 
-~~~~~~~~ title = attributes["title"] \par
-\noindent 
-~~~~~~~~ print "Title:", title \par
-\vspace{12pt}
-\noindent 
-~~  $  \#  $ Call when an elements ends \par
-\noindent 
-~~ def endElement(self, tag): \par
-\noindent 
-~~~~~ if self.CurrentData == "type": \par
-\noindent 
-~~~~~~~~ print "Type:", self.type \par
-\noindent 
-~~~~~ elif self.CurrentData == "format": \par
-\noindent 
-~~~~~~~~ print "Format:", self.format \par
-\noindent 
-~~~~~ elif self.CurrentData == "year": \par
-\noindent 
-~~~~~~~~ print "Year:", self.year \par
-\noindent 
-~~~~~ elif self.CurrentData == "rating": \par
-\noindent 
-~~~~~~~~ print "Rating:", self.rating \par
-\noindent 
-~~~~~ elif self.CurrentData == "stars": \par
-\noindent 
-~~~~~~~~ print "Stars:", self.stars \par
-\noindent 
-~~~~~ elif self.CurrentData == "description": \par
-\noindent 
-~~~~~~~~ print "Description:", self.description \par
-\noindent 
-~~~~~ self.CurrentData = "" \par
-\vspace{12pt}
-\noindent 
-~~  $  \#  $ Call when a character is read \par
-\noindent 
-~~ def characters(self, content): \par
-\noindent 
-~~~~~ if self.CurrentData == "type": \par
-\noindent 
-~~~~~~~~ self.type = content \par
-\noindent 
-~~~~~ elif self.CurrentData == "format": \par
-\noindent 
-~~~~~~~~ self.format = content \par
-\noindent 
-~~~~~ elif self.CurrentData == "year": \par
-\noindent 
-~~~~~~~~ self.year = content \par
-\noindent 
-~~~~~ elif self.CurrentData == "rating": \par
-\noindent 
-~~~~~~~~ self.rating = content \par
-\noindent 
-~~~~~ elif self.CurrentData == "stars": \par
-\noindent 
-~~~~~~~~ self.stars = content \par
-\noindent 
-~~~~~ elif self.CurrentData == "description": \par
-\noindent 
-~~~~~~~~ self.description = content \par
-\noindent 
-~  \par
-\noindent 
-if (  $  \_  $ $  \_  $name $  \_  $ $  \_  $ == " $  \_  $ $  \_  $main $  \_  $ $  \_  $"): \par
-\noindent 
-~~  \par
-\noindent 
-~~  $  \#  $ create an XMLReader \par
-\noindent 
-~~ parser = xml.sax.make $  \_  $parser() \par
-\noindent 
-~~  $  \#  $ turn off namepsaces \par
-\noindent 
-~~ parser.setFeature(xml.sax.handler.feature $  \_  $namespaces, 0) \par
-\vspace{12pt}
-\noindent 
-~~  $  \#  $ override the default ContextHandler \par
-\noindent 
-~~ Handler = MovieHandler() \par
-\noindent 
-~~ parser.setContentHandler( Handler ) \par
-\noindent 
-~~  \par
-\noindent 
-~~ parser.parse("movies.xml") \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-Ini akan menghasilkan hasil sebagai berikut: \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont *****Movie******} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Title: Enemy Behind} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Type: War, Thriller} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Format: DVD} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Year: 2003} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Rating: PG} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Stars: 10} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Description: Talk about a US-Japan war} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Title: Transformers} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Type: Anime, Science Fiction} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Format: DVD} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Year: 1989} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Rating: R} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Stars: 8} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Description: A schientific fiction} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Title: Trigun} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Type: Anime, Action} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Format: DVD} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Rating: PG} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Stars: 10} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Description: Vash the Stampede!} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont *****Movie*****} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Title: Ishtar} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Type: Comedy} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Format: VHS} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Rating: PG} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Stars: 2} \par
-\noindent 
-\vspace{10pt}
+Membuat parsing SAX dan mengurai string XML yang ditentukan : 
+xml.sax.parsertring(xmlstring,contenthandler[, errorhandler])
+
+Brikut ini adalah detail nama dari parameter : 
+\begin{enumerate}
+  \item  {XMLstring}  = Nama dari string yang bisa dibaca.
+  \item  {ContentHandler} = Menjadi objek ContenHandler.
+  \item  {ErrorHandler} = Menjadi objek ErorHandler SAX. 
+\end{enumerate}
+
+Contoh : 
+\begin{verbatim}
+  \#  
+  /usr/bin/python
+import xml.sax 
+class MovieHandler( xml.sax.ContentHandler ): 
+~~ def init (self): 
+~~~~~ self.CurrentData = "" 
+~~~~~ self.type = "" 
+~~~~~ self.format = "" 
+~~~~~ self.year = "" 
+~~~~~ self.rating = "" 
+~~~~~ self.stars = "" 
+~~~~~ self.description = "" 
+~~ \#  Call when an element starts 
+~~ def startElement(self, tag, attributes):
+~~~~~ self.CurrentData = tag 
+~~~~~ if tag == "movie": 
+~~~~~~~~ print "*****Movie*****" 
+~~~~~~~~ title = attributes["title"] 
+~~~~~~~~ print "Title:", title 
+~~ \#  Call when an elements ends 
+~~ def endElement(self, tag): 
+~~~~~ if self.CurrentData == "type":
+~~~~~~~~ print "Type:", self.type 
+~~~~~ elif self.CurrentData == "format": 
+~~~~~~~~ print "Format:", self.format 
+~~~~~ elif self.CurrentData == "year": 
+~~~~~~~~ print "Year:", self.year 
+~~~~~ elif self.CurrentData == "rating": 
+~~~~~~~~ print "Rating:", self.rating 
+~~~~~ elif self.CurrentData == "stars": 
+~~~~~~~~ print "Stars:", self.stars 
+~~~~~ elif self.CurrentData == "description": 
+~~~~~~~~ print "Description:", self.description 
+~~~~~ self.CurrentData = "" 
+~~ \#  Call when a character is read 
+~~ def characters(self, content): 
+~~~~~ if self.CurrentData == "type":
+~~~~~~~~ self.type = content 
+~~~~~ elif self.CurrentData == "format": 
+~~~~~~~~ self.format = content 
+~~~~~ elif self.CurrentData == "year": 
+~~~~~~~~ self.year = content 
+~~~~~ elif self.CurrentData == "rating": 
+~~~~~~~~ self.rating = content 
+~~~~~ elif self.CurrentData == "stars":
+~~~~~~~~ self.stars = content 
+~~~~~ elif self.CurrentData == "description": 
+~~~~~~~~ self.description = content 
+if (name  == " main "): 
+~~ \#  create an XMLReader 
+~~ parser = xml.sax.make parser() 
+~~ \#  turn off namepsaces
+~~ parser.setFeature(xml.sax.handler.feature namespaces, 0) 
+~~ \#  override the default ContextHandler 
+~~ Handler = MovieHandler() 
+~~ parser.setContentHandler( Handler )
+~~ parser.parse("movies.xml") 
+\end{verbatim}
+
+Ini akan menghasilkan hasil sebagai berikut: 
+\begin{verbatim}
+{*****Movie******} 
+{*****Movie*****} 
+{Title: Enemy Behind} 
+{Type: War, Thriller} 
+{Format: DVD} 
+{Year: 2003} 
+{Rating: PG} 
+{Stars: 10} 
+{Description: Talk about a US-Japan war}
+{*****Movie*****} 
+{Title: Transformers} 
+{Type: Anime, Science Fiction}
+{Format: DVD} 
+{Year: 1989} 
+{Rating: R}
+{Stars: 8} 
+{Description: A schientific fiction} 
+{*****Movie*****} 
+{Title: Trigun} 
+{Type: Anime, Action} 
+{Format: DVD}
+{Rating: PG} 
+{Stars: 10} 
+{Description: Vash the Stampede!} 
+{*****Movie*****} 
+{Title: Ishtar}
+{Type: Comedy} 
+{Format: VHS}
+{Rating: PG} 
+{Stars: 2} 
+\end{verbatim}
 
 \subsection{2.3 Parsing XML dengan API DOM} 
 Document Ovject Model (DOM) adalah API lintas bahasa dari World Wide Web Consortium (W3C) untuk mengakses dan memodifikasi dokumen XML.  DOM sangat berguna untuk aplikasi akses acak. SAX hanya memungkinkan melihat satu bit dokumen sekaligus. Jika melihat satu elemen SAX, tidak memiliki akses ke yang lain. Berikut adalah cara termudah untuk memuat dokumen XML dengan cepat dan membuat objek minidom menggunakan modul xml.dom. Objek minidom menyediakan metode parsing sederhana yang dengan cepat memuat pohon DOM dari file XML. \par
