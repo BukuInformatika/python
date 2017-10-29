@@ -167,15 +167,15 @@ Bagaimana caranya menampilkan data dari mysql menggunakan python. Saya asumsikan
 		       apt-get install libmysqlclient-dev 
 		\item  Download modul MySQLdb.
 		\item  Instal modul tersebut ini dengan cara (Pastikan saat login sebagai root ya):
-			\begin{verbatim}
+	    \begin{verbatim}
 			$ gunzip MySQL-python-1.2.2.tar.gz 
 			$ tar -xvf MySQL-python-1.2.2.tar 
 			$ cd MySQL-python-1.2.2 
 			$ python setup.py build 
 			$ python setup.py install 
-			\end{verbatim}
+		\end{verbatim}
 		\item  Buat sebuah script seperti berikut (dengan contoh: test.py):
-			\begin{verbatim}
+		    \begin{verbatim}
 			import MySQLdb 
 			# Open database connection 
 			db = MySQLdb.connect(”localhost”,”root”,”password”,”nama database” ) 
@@ -271,7 +271,7 @@ buatlah file menggunakan nama connectionTes.py
 	   		print(error)
 			mysqli.delCon()
 		\end{verbatim}
-
+    \end{enumerate}
 Dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
 dan membuat object cursor pada db dengan memanggil object kelas mysql.getDB()
-	\end{enumarate}
+
