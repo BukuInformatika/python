@@ -302,193 +302,70 @@ Ini akan menghasilkan hasil sebagai berikut:
 {Stars: 2} 
 \end{verbatim}
 
-\subsection{2.3 Parsing XML dengan API DOM} 
-Document Ovject Model (DOM) adalah API lintas bahasa dari World Wide Web Consortium (W3C) untuk mengakses dan memodifikasi dokumen XML.  DOM sangat berguna untuk aplikasi akses acak. SAX hanya memungkinkan melihat satu bit dokumen sekaligus. Jika melihat satu elemen SAX, tidak memiliki akses ke yang lain. Berikut adalah cara termudah untuk memuat dokumen XML dengan cepat dan membuat objek minidom menggunakan modul xml.dom. Objek minidom menyediakan metode parsing sederhana yang dengan cepat memuat pohon DOM dari file XML. \par
-Contoh~frase memanggil fungsi  parsing (file [,parsing]) dari objek minidokumen untuk mengurai file XML yang ditunjuk oleh file ke objek pohon DOM.
-\begin{enumerate}
-\item $  \#  $!/usr/bin/python
-from xml.dom.minidom import parse 
-import xml.dom.minidom 
-\item $  \#  $ Open XML document using minidom parser
-DOMTree = xml.dom.minidom.parse("movies.xml") 
-collection = DOMTree.documentElement 
-if collection.hasAttribute("shelf"): 
-print "Root element :  $  \%  $s"  $  \%  $ collection.getAttribute("shelf") 
-\item $  \#  $ Get all the movies in the collection 
-movies = collection.getElementsByTagName("movie") 
-\item $  \#  $ Print detail of each movie. 
-for movie in movies: 
-print "*****Movie*****" 
-if movie.hasAttribute("title"): 
-print "Title:  $  \%  $s"  $  \%  $ movie.getAttribute("title") 
-type = movie.getElementsByTagName('type')[0] 
-print "Type:  $  \%  $s"  $  \%  $ type.childNodes[0].data 
-format = movie.getElementsByTagName('format')[0] 
-print "Format:  $  \%  $s"  $  \%  $ format.childNodes[0].data 
-rating = movie.getElementsByTagName('rating')[0] 
-print "Rating:  $  \%  $s"  $  \%  $ rating.childNodes[0].data 
-description = movie.getElementsByTagName('description')[0] 
-print "Description:  $  \%  $s"  $  \%  $ description.childNodes[0].data 
-Ini akan menghasilkan hasil sebagai berikut : 
-Root element : New Arrivals 
-*****Movie***** 
-Title: Enemy Behind 
-Type: War, Thriller 
-Format: DVD 
-Rating: PG 
-Description: Talk about a US-Japan war 
-*****Movie***** 
-Title: Transformers 
-Type: Anime, Science Fiction 
-Format: DVD 
-Rating: R 
-Description: A schientific fiction 
-*****Movie***** 
-Title: Trigun 
-Type: Anime, Action 
-Format: DVD 
-Rating: PG 
-Description: Vash the Stampede! 
-*****Movie***** 
-Title: Ishtar 
-Type: Comedy 
-Format: VHS 
-Rating: PG
-Description: Viewable boredom 
-\end{enumerate}
-
 \subsection{Membangun Parsing Document XML menggunakan Python} 
 Python mendukung untuk bekerja dengan berbagai bentuk markup data terstruktur. Selain mengurai xml.etree. \textit{ElementTree} mendukung pembuatan dokumen XML yang terbentuk dengan baik dari objek elemen yang dibangun dalam aplikasi. Kelas elemen digunakakan saat sebuah dokumen diurai untuk mengetahui bagaimana menghasilkan bentuk serial dari isinya kemudian dapat ditulis ke sebuah file.  
 Untuk membuat instance elemeb gunakan fungsi elemen contructor dan \textit{SubElemen()} pabrik. 
-Import xml.etree.ElementTree as xml \par
-\vspace{12pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont filename =  $ " $/home/abc/Desktop/test $  \_  $xml.xml $ " $} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont toot = xml.Element( $ " $Users $ " $)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont userelement = xml.Element( $ " $user $ " $)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont root.append(userelement)} \par
-\noindent 
-\vspace{10pt}
-\noindent 
-Bila menjalankan ini, akan menghasilkan sebagai berikut : \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont <Users>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont </Users>} \par
-\vspace{10pt}
-\vspace{10pt}
-\vspace{10pt}
-\noindent 
-Tambahkan anak-anak pegguna \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Uid = xml.SubElement(userelement,  $ " $uid $ " $)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Uid.text =  $ " $1 $ " $} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont FirstName = xml.SubElement(userelement,  $ " $FirstName $ " $)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont FirstName.text =  $ " $testuser $ " $} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont LastName = xml.SubElement(userelement,  $ " $LastName $ " $} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont LastName.text =  $ " $testuser $ " $} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Email = xml.SubElement(userelement,  $ " $Email $ " $)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Email.text = {mailto:testuser@test.com}{testuser@test.com}
-} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont state = xml.SubElement(userelemet,  $ " $state $ " $)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont state.text =  $ " $xyz $ " $} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont location = xml.SubElement(userelement,  $ " $location)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont location.text = abc} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont tree = xml.ElementTree(root)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont with open(filename,  $ " $w $ " $) as fh:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont tree.write(fh)} \par
-\vspace{10pt}
-\noindent 
- \hspace*{0.5in} Pertama buat elemen root dengan mengunakan fungsi \textit{ElementTree}. Kemudian membuat elemen pegguna dan menambahkannya ke root. Selanjutnya membuat \textit{SubElement }dengan melewatkan elemen pengguna (userelement) ke \textit{SubElemen} beserta namanya seperto  $ " $FirstName $ " $. Kemudian untuk setiap \textit{SubElement} tetapkan properti teks untuk memberi nilai. Di akhir, membuat \textit{ElementTree} dan menggunakannya untuk menulis XML ke file. \par
-\noindent 
- \hspace*{0.5in} Jika menjalankan ini akan menjadi sebagai berikut : \par
-\noindent 
- {\fontsize{10pt}{10pt}\selectfont <users>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <uid>1</uid>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <FirstName>testuser</FirstName>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <LastName>testuser</LastName>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <state>xyz</state>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <location>abc</location>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} </user>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont </Users>} \par
-\vspace{10pt}
-\noindent 
-Parsing XML Documen : \par
-\vspace{12pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import xml.etree.ElementTree as ET} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont tree = ET.parse(‘Your $  \_  $XML $  \_  $file $  \_  $path’)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont root = tree.getroot()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont 
+Import xml.etree.ElementTree as xml
+\begin{verbatim}
+ filename =  $ " $/home/abc/Desktop/test $  \_  $xml.xml $ " $ 
+ toot = xml.Element( $ " $Users $ " $)
+ userelement = xml.Element( $ " $user $ " $)
+ root.append(userelement)
+ \end{verbatim}
+ 
+Bila menjalankan ini, akan menghasilkan sebagai berikut : 
+ <Users>
+ <user>
+ <user>
+ </Users>
+ 
+Tambahkan anak-anak pengguna 
+ Uid = xml.SubElement(userelement,  $ " $uid $ " $)
+ Uid.text =  $ " $1 $ " $
+ FirstName = xml.SubElement(userelement,  $ " $FirstName $ " $)
+ FirstName.text =  $ " $testuser $ " $
+ LastName = xml.SubElement(userelement,  $ " $LastName $ " $
+ LastName.text =  $ " $testuser $ " $
+ Email = xml.SubElement(userelement,  $ " $Email $ " $)
+ Email.text = {mailto:testuser@test.com}{testuser@test.com}
+ state = xml.SubElement(userelemet,  $ " $state $ " $)
+ state.text =  $ " $xyz $ " $
+ location = xml.SubElement(userelement,  $ " $location)
+ location.text = abc
+ tree = xml.ElementTree(root)
+ with open(filename,  $ " $w $ " $) as fh:
+ tree.write(fh)
 
- %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
-
+ Pertama buat elemen root dengan mengunakan fungsi \textit{ElementTree}. Kemudian membuat elemen pegguna dan menambahkannya ke root. Selanjutnya membuat \textit{SubElement }dengan melewatkan elemen pengguna (userelement) ke \textit{SubElemen} beserta namanya seperto  $ " $FirstName $ " $. Kemudian untuk setiap \textit{SubElement} tetapkan properti teks untuk memberi nilai. Di akhir, membuat \textit{ElementTree} dan menggunakannya untuk menulis XML ke file. \par
+ Jika menjalankan ini akan menjadi sebagai berikut : 
+ <users>
+ <user>
+ <uid>1</uid>
+ <FirstName>testuser</FirstName>
+ <LastName>testuser</LastName>
+ <state>xyz</state>
+ <location>abc</location>
+ </user>
+ </Users>
+ 
+Parsing XML Documen : 
+ import xml.etree.ElementTree as ET
+ tree = ET.parse(‘Your $  \_  $XML $  \_  $file $  \_  $path’)
+ root = tree.getroot()
 
 \newpage
 
-}\vspace{10pt}
-\vspace{10pt}
-\noindent 
-Disini \textit{getroot()} akan mengembalikan elemen dari dokumen XML \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont <Users version= $ " $1.0 $ " $ languange= $ " $SPA $ " $>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} <user>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <uid>1</uid>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <FirstName>testuser</FirstName>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <LastName>testuser</LastName>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <Email>testuser@tes.com/Email>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <state>xyz</state>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} <location>abc</location>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} </user>} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont </Users>} \par
-\vspace{12pt}
+\subsection
+Disini code getroot() akan mengembalikan elemen dari dokumen XML 
+\begin{verbatim}
+ <Users version= $ " $1.0 $ " $ languange= $ " $SPA $ " $>
+ <user>
+ <uid>1</uid>
+ <FirstName>testuser</FirstName>
+ <LastName>testuser</LastName>
+ <Email>testuser@tes.com/Email>
+ <state>xyz</state>
+ <location>abc</location>
+ </user>
+ </Users>
+\end{verbatim}
