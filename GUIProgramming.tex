@@ -4,6 +4,7 @@
 \title{\textbf GUI Programming}
 \maketitle
 
+
 Python menyediakan berbagai pilihan untuk mengembangkan antarmuka pengguna grafis (GUIs). 
 Berikut dibawah ini merupakan berbagai pilihan yang disediakan oleh Python :
 \begin{itemize}
@@ -17,8 +18,7 @@ Port Python untuk java yang memberikan Python script akses tanpa batas ke perpus
 \vspace{12pt}
 \noindent 
 \section{\textbf Tkinter Pemrograman}
-Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan dengan Tkinter menyediakan cara yang amat mudah dan cepat untuk membuat aplikasi GUI. Tkinter menyediakan antarmuka yang berorientasi objek yang kuat untuk toolkit Tk GUI.
- \hspace*{0.5in} Membuat aplikasi GUI menggunakan Tkinter adalah tugas yang mudah. Yang diperlukan adalah melakukan langkah-langkah sebagai berikut : 
+Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan dengan Tkinter menyediakan cara yang amat mudah dan cepat untuk membuat aplikasi GUI. Tkinter menyediakan antarmuka yang berorientasi objek yang kuat untuk toolkit Tk GUI.Membuat aplikasi GUI menggunakan Tkinter adalah tugas yang mudah. Yang diperlukan adalah melakukan langkah-langkah sebagai berikut : 
 \begin{enumerate} 
 	\item Mengimpor Tkinter modul 
 	\item Buat jendela utama aplikasi GUI
@@ -57,13 +57,15 @@ top.mainloop()
 \begin{table}[h]
 	\caption{Ukuran}
 		\begin{center}
-		\begin{tabular}{|c|c|}
+		\begin{tabular}{|l|l|}
 			\hline
 			Operator & Penjelasan \\
 			\hline
 			Button & Menampilkan tombol dalam aplikasi\\
-			Canvas & Menggambar bentuk seperti garis, oval, poligon dan persegi panjang dalam aplikasi\\
-			Checkbutton & Menampilkan sejumlah pilihan sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu
+			Canvas & Menggambar bentuk seperti garis, oval, 
+			poligon dan persegi panjang dalam aplikasi\\
+			Checkbutton & Menampilkan sejumlah pilihan 
+			sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu\\
 			Entry & Menampilkan bidang garis teks tunggal untuk menerima nilai-nilai dari pengguna\\
 			Frame & Wadah untuk mengatur widget lainnya\\
 			Label & Memberikan keterangan garis single untuk widget lainnya. Hal ini berisi gambar\\
@@ -79,12 +81,10 @@ top.mainloop()
 			PanedWindow & Wadah yang mengandung sejumlah panel disusun horizontal atau vertikal\\
 			LabelFrame & Wadah widget sederhana. Bertindak sebagai spacer atau wajah untuk layout jendela kompleks\\
 			TkMessageBox & Menampilkan kotak pesan dalam aplikasi\\
-			Spinbox & Memilih sejumlah tetap nilai-nilai&\\
+			Spinbox & Memilih sejumlah tetap nilai-nilai\\
 		\hline
 		\end{tabular}
 		\end{center}
-	\begin{tablenotes}
-	\end{tablenotes}
 \end{table}
 
 	
@@ -94,7 +94,7 @@ top.mainloop()
 
 
 \vspace{12pt}
-subsection{Atribut Tkinter}
+\subsection{Atribut Tkinter}
 \noindent 
  \hspace*{0.5in} Beberapa atribut umum sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atribut standar :
 \noindent 
@@ -103,7 +103,7 @@ subsection{Atribut Tkinter}
 Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak unit yang berbeda seperti 
 \item Jika menetapkan dimensi ke integer diasumsikan dalam piksel 
 \item Menentukan unit dengan menentukan dimensi untuk string yang berisi sejumlah diikuti oleh :
-\end{itemize}
+\end{enumerate}
  
 
 
@@ -112,7 +112,7 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 
 \begin{table}[ht]
 	\caption{Ukuran}
-	\bein{center}
+	\begin{center}
 	\begin{tabular}{|c|c|}
 		\hline
 		Karakter&  Penjelasan \cr
@@ -124,8 +124,6 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 		\hline
 	\end{tabular}
 	\end{center}
-	\begin{tablenotes}
-	\end{tablenotes}
 \end{table}
 
 
@@ -133,7 +131,7 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 
  
  \hspace*{0.5in} \vspace{12pt}
- subsection{Panjang Tkinter}
+\subsection{Panjang Tkinter}
  \hspace*{0.5in} Tkinter mengungkapkan panjang sebagai integer jumlah piksel. Berikut ini adalah daftar pilihan panjang umum:
 \noindent 
 \begin{itemize}
@@ -200,7 +198,7 @@ Pilihan warna umum :
 	\item Font \par
 	\noindent 
 	Sebagai tupel yang elemen pertama adalah keluarga font diikuti dengan string yang berisi satu atau lebih gaya pengubah tebal,miring, garis bawah dan overstrike. 
-	end{itemize}
+\end{itemize}
 	\noindent 
 Contoh : \par
 	\begin{verbatim}
@@ -404,32 +402,30 @@ top.mainloop()
 Tkinter sangat sederhana. Berikut manfaat Tkinter dibandingkan GUI toolkit : \par
 \noindent 
 \begin{itemize}
-	\item Tkinter terdiri dari sejumlah modul.  (Tkinter)\vspace{\baselineskip}
-	Antarmuka Tk terletak di modul biner bernama _tkinter (ini adalah tkinter di versi sebelumnya). Modul ini berisi lowlevel antarmuka ke Tk, dan tidak boleh digunakan langsung oleh pemrogram aplikasi. inibiasanya shared library (atau DLL), tapi mungkin dalam beberapa kasus secara statis terkait denganPenerjemah Python. \par
-\noindent
-	\item Tkinter mudah diakses oleh siapa saja. (Accessibilty)\vspace{\baselineskip}
-	Tkinter merupakan toolkit yang ringan dan satu-satunya solusi GUI yang paling sederhana untuk Python sampai saat ini. Cukup menuliskan beberapa baris kode Python untuk membuat aplikasi GUI sederhana dengan Tkinter. Untuk menambahkan komponen baru pada Tkinter, dapat membuatnya dalam kode Python atau menambahkan paket ekstensi seperti Pmw, Tix, atau ttk. \par
-\noindent 
-	\item widget root tk (widget root tk)\vspace{\baselineskip}
+	\item Tkinter terdiri dari sejumlah modul.  (Tkinter)\vspace{\baselineskip} \par
+	Antarmuka Tk terletak di modul biner bernama \_ tkinter (ini adalah tkinter di versi sebelumnya). Modul ini berisi lowlevel antarmuka ke Tk, dan tidak boleh digunakan langsung oleh pemrogram aplikasi. inibiasanya shared library (atau DLL), tapi mungkin dalam beberapa kasus secara statis terkait denganPenerjemah Python.
+	\item Tkinter mudah diakses oleh siapa saja. (Accessibilty)\vspace{\baselineskip} \par
+	Tkinter merupakan toolkit yang ringan dan satu-satunya solusi GUI yang paling sederhana untuk Python sampai saat ini. Cukup menuliskan beberapa baris kode Python untuk membuat aplikasi GUI sederhana dengan Tkinter. Untuk menambahkan komponen baru pada Tkinter, dapat membuatnya dalam kode Python atau menambahkan paket ekstensi seperti Pmw, Tix, atau ttk.
+	
+	\item widget root tk (widget root tk)\vspace{\baselineskip} \par
 	Untuk menginisialisasi Tkinter, kita harus membuat widget root Tk. Ini adalah jendela biasa, dengan judul bar dan hiasan lainnya yang disediakan oleh window manager Anda. Anda seharusnya saja buat satu widget root untuk setiap program, dan itu harus dibuat sebelum widget lainnya. \par
 \noindent 
-	\item Tkinter mudah digunakan di semua platform (Portability)\vspace{\baselineskip}
+	\item Tkinter mudah digunakan di semua platform (Portability)\vspace{\baselineskip} \par
 	Sebuah program Python yang dibangun menggunakan Tkinter dapat berjalan dengan baik di semua platform sistem operasi seperti Microsoft Windows, Linux, dan Macintosh. Dan dari segi tampilan window, akan terlihat sama dengan standar platform yang digunakan. \par
 \noindent 
-	\item Tkinter selalu tersedia di Python (Availability)\vspace{\baselineskip}
+	\item Tkinter selalu tersedia di Python (Availability)\vspace{\baselineskip} \par
 	Tkinter merupakan modul standar pada pustaka Python. Sebagian besar paket instalasi Python sudah langsung berisi Tkinter. Khusus untuk beberapa distro Linux, perlu menambahkan paket Tkinter secara terpisah. Pada Windows, bisa langsung menggunakan Tkinter sesaat setelah menginstal paket instalasi Python. \par
 \noindent 
-	\item handles bagus di gunakan di Python (Handles)\vspace{\baselineskip}
+	\item handles bagus di gunakan di Python (Handles)\vspace{\baselineskip} \par
 	item kandles merupakan nilai integer yang digunakan untuk mengidentifikasi item tertentu pada kanvas. Tkinter secara otomatis menugaskan pegangan baru ke setiap item baru yang dibuat di atas kanvas. Item Handles dapat di lewatkan ke berbagai metode kanvas baik sebagai bilangan bulat atau sebagai string. Tag adalah nama simbolis yang dilekatkan pada item. Tag adalah string biasa, dan bisa berisi apa saja kecuali spasi (asalkan tidak sesuai dengan item pegangan). \par
 \noindent 
-	\item Modul Tkinter menyediakan kelas yang sesuai dengan berbagai jenis widget di Tk (Module)\vspace{\baselineskip}
+	\item Modul Tkinter menyediakan kelas yang sesuai dengan berbagai jenis widget di Tk (Module)\vspace{\baselineskip} \par
 	dan sejumlah mixin dan kelas pembantu lainnya (mixin adalah kelas yang dirancang untuk menjadi dikombinasikan dengan kelas lain menggunakan multiple inheritance). Bila Anda menggunakan Tkinter, Anda jangan pernah mengakses kelas mixin secara langsung. \par
 \noindent 
-	\item Dokumentasi Tkinter sangat LUAR BIASA (Documentation)\vspace{\baselineskip}
+	\item Dokumentasi Tkinter sangat LUAR BIASA (Documentation)\vspace{\baselineskip} \par
 	Python (plus Tkinter) ini bersifat open-source, maka banyak sekali komunitas-komunitas yng membahas Python dan Tkinter dan bisa belajar dan bertanya langsung dengan para ahli.
 \end{itemize}
- \par
-\vspace{12pt}
-\vspace{12pt}
 
 \end{document}
+
+
