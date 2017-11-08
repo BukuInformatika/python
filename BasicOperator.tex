@@ -1,5 +1,7 @@
 \sloppy
-Python Basic Operator \par
+\section{Python Basic Operator}
+
+
 \vspace{12pt}
 \noindent 
 Operator adalah konstruksi yang dapat memanipulasi nilai operan. \par
@@ -8,33 +10,26 @@ Operator adalah konstruksi yang dapat memanipulasi nilai operan. \par
 Perhatikan ungkapan 4 + 5 = 9. Di sini, 4 dan 5 disebut operan dan + disebut operator. \par
 \vspace{12pt}
 \noindent 
-Jenis Operator \par
+\begin{enumerate}
+\item Jenis Operator 
+\end{enumerate}
+
 \vspace{12pt}
 \noindent 
 Bahasa Python mendukung jenis operator berikut. \par
 \vspace{12pt}
 \noindent 
-Operator Aritmatika \par
-\vspace{12pt}
-\noindent 
-Operator Perbandingan (Relasional) \par
-\vspace{12pt}
-\noindent 
-Operator Penugasan \par
-\vspace{12pt}
-\noindent 
-Operator Logis \par
-\vspace{12pt}
-\noindent 
-Bitwise Operator \par
-\vspace{12pt}
-\noindent 
-Operator keanggotaan \par
-\vspace{12pt}
-\noindent 
-Operator Identitas \par
-\vspace{12pt}
-\noindent 
+\begin{enumerate}
+	\item Operator Aritmatika 
+	\item Operator Perbandingan (Relasional) 
+	\item Operator Penugasan \par
+	\item Operator Logis \par
+	\item Bitwise Operator \par
+	\item Operator keanggotaan \par
+	\item Operator Identitas \par
+\end{enumerate}
+
+
 Mari kita lihat semua operator satu per satu. \par
 \vspace{12pt}
 \noindent 
@@ -218,27 +213,16 @@ Operator Bitwise Python \par
 \vspace{12pt}
 \noindent 
 Operator Bitwise bekerja pada bit dan melakukan operasi bit by bit. $  $Asumsikan jika a = 60; $  $Dan b = 13; $  $Sekarang dalam format biner mereka akan menjadi seperti berikut - \par
-\vspace{12pt}
-\noindent 
-a = 0011 1100 \par
-\vspace{12pt}
-\noindent 
-b = 0000 1101 \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-a  $  \&  $ b = 0000 1100 \par
-\vspace{12pt}
-\noindent 
-A  $  \vert  $ b = 0011 1101 \par
-\vspace{12pt}
-\noindent 
-a  $  \string^  $ b = 0011 0001 \par
-\vspace{12pt}
-\noindent 
- $  \sim  $ a = 1100 0011 \par
-\vspace{12pt}
-\noindent 
+
+\begin{verbatim}
+a = 0011 1100
+b = 0000 1101
+a & b = 0000 1100
+A | b = 0011 1101
+a ^ b = 0011 0001
+~ a = 1100 0011
+\end{verbatim}
+
 Ada beberapa operator Bitwise berikut yang didukung oleh bahasa Python \par
 \vspace{12pt}
 \noindent 
@@ -412,15 +396,15 @@ y $  $dan $  $z $  $disebut sebagai operan dari operator $  $+. Tabel di bawah i
 \vspace{12pt}
 \noindent 
 Jika sebuah ekspresi melibatkan lebih dari satu operator, Python secara otomatis akan memilih operator mana yang akan diutamakan dahulu. Sebagai contoh: \par
-\noindent 
->>> x=7+3*6\vspace{\baselineskip}
->>> x\vspace{\baselineskip}
-25\vspace{\baselineskip}
->>> y=100/4*5\vspace{\baselineskip}
->>> y\vspace{\baselineskip}
-125 \par
-\vspace{12pt}
-\noindent 
+\begin{verbatim}
+>>> x=7+3*6
+>>> x
+25
+>>> y=100/4*5
+>>> y
+125
+
+\end{verbatim}
 Operator $  $** $  $memiliki urutan tertinggi diantara operator lainnya. Operator $  $* $  $mempunyai urutan lebih tinggi daripada operator $  $+, dan operator $  $/ $  $mempunyai urutan yang sama dengan operator $  $*. Pada ekspresi $  $x = 7 + 3 * 6, bagian $  $3 * 6 $  $akan dieksekusi pertama kali menghasilkan $  $18, yang kemudian ditambahkan dengan $  $7. Sedangkan ekspresi $  $y = 100/4*5, bagian $  $100/4dieksekusi terlebih dahulu karena operator $  $/ $  $berada disebelah kiri dari operator $  $*. \par
 \vspace{12pt}
 \noindent 
