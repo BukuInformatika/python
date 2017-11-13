@@ -52,10 +52,10 @@ merupakan syarat mutlak dari suatu database yang baik. Ditambah dengan pemanfaat
 \subsection {Sifat-sifat database atau basis data}
 	Data dalam basis data bersifat integrated dan shared Terpadu (integrated), berkas-berkas data yang ada pada basis data saling terkait (terjadi dependensi data);
 	Berbagi data (shared), data yang sama dapat dipakai oleh sejumlah pengguna dalam waktu yang bersamaan. Sering dinamakan sebagi sistem multiuser.
-	\begin{enumerate}
+	\begin{itemize}
 		\item Internal : Kesatuan (integritas) dari file-file yang terlibat
 		\item Terbagi atau share : Elemen-elemen database dapat dibagikan pada para user baik secara sendiri-sendiri maupun secara serentak dan pada waktu yang sama (concurrent sharing).
-	\end{enumerate}
+	\end{itemize}
  
 \subsection {Tipe Database} 
 	Tipe Database Terdapat 12 tipe database, antara lain: 
@@ -91,8 +91,10 @@ merupakan syarat mutlak dari suatu database yang baik. Ditambah dengan pemanfaat
 	\begin{enumerate}
 		\item Instal server mysql dengan menjalankan perintah sudo apt-get install mysqlserver. Jangan lupa memasukkan password akun root untuk server MySQL. 
 		\item Siapkan database dan tabel. Jalankan perintah mysql -u root -p dari terminal. 
-			Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja). 
+			Selanjutnya kita akan buat tabel yang skemanya seperti berikut ini (hanya ilustrasi saja).
+			\begin{equation} 
 			mysql> create database teman; 
+			\end{equation}
 			mysql> use teman; 
 			mysql> create table alamat(id int not null auto increment primary key, 
 			nama varchar(35), alamat text, telepon varchar(15), surat text);
@@ -275,3 +277,25 @@ buatlah file menggunakan nama connectionTes.py
 Dalam hal ini mengimport kelas connection sebagai db. Setelah itu di inisialisasi dengan variabel baru bernama mysqli.
 dan membuat object cursor pada db dengan memanggil object kelas mysql.getDB()
 
+\begin{table}[ht]
+	\caption{Arsitektur Database}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		No&Keterangani&\\
+		\hline
+		.1&Database Connection&\\
+		.2&SQL Statements&\\
+		.3&Result Set&\\
+		.4&Database Metadata&\\
+		.5&Prepared Statement\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\ref{DA.png}:
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{figures/DA.png}}
+	\caption{Arsitektur}
+	\label{DA.png}
+\end{figure}
