@@ -1,3 +1,4 @@
+
 \documentclass [12pt,a4paper,notitlepage,oneside,bahasa]{article}
 \usepackage[left=3.00 cm, right=2.00 cm, bottom=2.00 cm, top=3.00 cm]{geometry}
 \begin{document}
@@ -26,10 +27,36 @@ Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan
 	\item Masukkan acara loop utama untuk mengambil tindakan terhadap setiap peristiwa dipicu oleh pengguna
 \end{enumerate}
 
- %%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
 
+antarmuka Python open-source untuk wxWindows 
+ 
+\item Jpython 
 
-\newpage
+Port Python untuk java yang memberikan Python script akses tanpa batas ke perpustakaan kelas java pada mesin lokal 
+
+\subsection{Tkinter Pemrograman} 
+\hspace*{0.5in} Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan dengan Tkinter menyediakan cara yang mudah dan cepat untuk membuat aplikasi GUI. Tkinter menyediakan antarmuka berorientasi ojek yang kuat untuk toolkit Tk GUI. 
+ 
+\hspace*{0.5in} Membuat aplikasi GUI menggunakan Tkinter adalah tugas yang mudah. Yang diperlukan adalah melakukan langkah-langkah sebagai berikut : 
+ 
+\item Mengimpor Tkinter modul 
+\item Buat jendela utama aplikasi GUI 
+\item Tambahkan satu atau lebih dari widget tersebut diatas ke aplikasi GUI 
+\item Masukkan acara loop utama untuk mengambil tindakan terhadap setiap peristiwa dipicu oleh pengguna\end{itemize}
+ 
+\vspace{12pt} 
+Contoh : 
+\begin{verbatim}
+$  \#  $!/usr/bin/python} 
+import Tkinter} 
+
+top = Tkinter.Tk()} 
+
+ $  \#  $ Code to add widgets will go here...} 
+
+top.mainloop()} 
+\end{verbatim}
+
 
 \vspace{12pt}
 \vspace{12pt}
@@ -43,12 +70,14 @@ top = Tkinter.Tk()
 top.mainloop()
 \end{verbatim}
 
-\section{\textbf Tkinter Widget} \par
-\noindent 
- \hspace*{0.5in} Tkinter menyediakan berbagai kontrol seperti tombol, label dan kotak teks yang digunakan dalam aplikasi GUI. 
- Kontrol ini biasanya disebut widget.
-\noindent 
- \hspace*{0.5in} Saat ini ada 15 jenis widget di Tkinter. berikut adalah contoh widget serta penjelasan singkat pada tabel ini:
+
+\vspace{10pt}
+\subsection{Tkinter Widget} 
+\hspace*{0.5in} Tkinter menyediakan berbagai kontrol seperti tombol, label dan kotak teks yang digunakan dalam aplikasi GUI. Kontrol ini biasanya disebut widget.  
+ 
+\hspace*{0.5in} Saat ini ada 15 jenis widget di Tkinter. Menyajikan widget serta penjelasan singkat pada tabel berikut ini : 
+\vspace{100pt}
+
 
 
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
@@ -94,16 +123,23 @@ top.mainloop()
 
 
 \vspace{12pt}
+
 \subsection{Atribut Tkinter}
 \noindent 
- \hspace*{0.5in} Beberapa atribut umum sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atribut standar :
-\noindent 
-\begin{enumerate}
+
+\hspace*{0.5in} Beberapa atribut sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atribut standar : 
+ 
+\begin{itemize}
 \item Ukuran 
-Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak unit yang berbeda seperti 
+ 
+Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak unit yang berbeda seperti : 
+ 
 \item Jika menetapkan dimensi ke integer diasumsikan dalam piksel 
+ 
 \item Menentukan unit dengan menentukan dimensi untuk string yang berisi sejumlah diikuti oleh :
-\end{enumerate}
+\end{itemize}
+\vspace{100pt}
+
  
 
 
@@ -128,6 +164,7 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 
 
  %%%%%%%%%%%%  Table No:2 Ends Here %%%%%%%%%%%%%%
+
 
  
  \hspace*{0.5in} \vspace{12pt}
@@ -210,10 +247,12 @@ Contoh : \par
 Dapat membuat  ``font object'' dengan mengimpor modul tkFont dan menggunakan kelas konstruktor font nya : \par
 Import tkFont \par
 Font = tkFont.Font (option, ....) \par
+
 \vspace{12pt}
-Berikut adalah daftar pilihan : \par
-\noindent 
+Berikut adalah daftar pilihan : 
+ 
 \begin{itemize}
+
 	\item Family \par
 	Font nama keluarga sebagai string \par
 	\noindent 
@@ -427,5 +466,4 @@ Tkinter sangat sederhana. Berikut manfaat Tkinter dibandingkan GUI toolkit : \pa
 \end{itemize}
 
 \end{document}
-
 

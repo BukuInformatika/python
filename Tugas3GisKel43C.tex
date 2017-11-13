@@ -1,0 +1,715 @@
+% Tugas 3 GIS Kelompok 4 
+% Akbar Pambudi Utomo (1154094)
+% Pebridayanti Hasibuan (1154118)
+% Andi Nurfadillah Ali (1154041)
+% Julham Ramadhana (1154069)
+% Hanna Theresia Siregar (1154009)
+% Andi Wadi Afriyandika (1154113)
+
+
+\section{Basic Syntax}
+\subsection{Pengenalan Python}
+    \begin{figure} [ht]
+    \centerline{\includegraphics[width=1\textwidth](plagiarisme/logopython.JPG}}
+    \caption{Gambar Logo Python}
+    \label{logopython}
+    \end{figure}
+\ref {logopython}Python dikembangkan oleh Guido van Rossum (programmer kelahiran belanda) pada tahun 1990 di CWI, Amsterdam sebagai
+kelanjutan dari bahasa pemrograman ABC. Python adalah bahasa pemrograman interpretatif yang dianggap mudah dipelajari 
+serta berfokus pada keterbacaan kode. Dengan kata lain, Python diklaim sebagai bahasa perograman yang memiliki kode-kode
+pemrograman yang sangat jelas, lengkap dan mudah untuk dipahami. Python secara umum berbentuk pemrograman berorientasi
+objek, pemrograman imperatif, dan pemrograman fungsional. Python dapat digunakan dalam berbagai pengembangan perangkat 
+lunak dan dapat berjalan diberbagai platform sistem operasi.
+Pengenal Python adalah nama yang digunakan untuk mengidentifikasi variabel, fungsi, kelas, modul ataupun objek lainnya.
+pengenal dimulai dengan huruf \"A\" sampai \"Z\" atau huruf \"a\" sampai \"z\" atau garis \"_\" diikuti oleh nol atau lebih
+huruf, garis bawah dan angka (0 sampai 9). Python tidak mengisinkan karakter tanda baca seperti \"@\", \"$\", san \"%\" 
+dalam pengenal karena Python adalah bahasa pemrograman yang sensitif. 
+Bahasa Python memiliki banyak kesamaan dengan Pemrograman Perl, C, dan Java. Namun, ada beberapa perbedaan yang pasti antara 
+bahasa.
+Python adalah salah satu bahasa pemrograman tingkat tinggi. Yang mana, Python berada diperingkat ke-5 yaitu  pada tahun 2016. Python juga banyak digunakan oleh para programmer. Python dapat pula digunakan untuk membangun sebuah aplikasi desktop, web, mobile dan sebagainya. Dan untuk membangun aplikasi seperti aplikasi berbasi web, maka programmer dapat menggunakan framework ataupun tanpa framework. Sehingga apabila membangun aplikasi web tanpa framework, terdapat juga kekurangan yaitu salah satunya membutuhkan waktu yang relatif lama karena harus membuatnya dari awal. Dan berdasarkan kekurangan tersebut maka dibuatlah framework agar dapat membangun web menjadi lebih cepat, serta terstruktur dan reusable.
+Fitur Python sendiri mudah dipelajari karena Python memiliki beberapa kata kunci, struktur sederhana, dan sintaks yang jelas. Hal ini memungkinkan siswa untuk mengambil bahasa dengan cepat. Mudah dibaca karena kode Python lebih jelas dan terlihat oleh mata. Mudah dipelihara karena kode sumber Python cukup mudah untuk dipelihara.
+Perpustakaan standar yang luas: sebagian besar perpustakaan Python sangat portabel dan kompatibel dengan platform cross-platform di UNIX, Windows, dan Macintosh. 
+Python sendiri tidak mengizinkan karakter tanda baca. Python merupakan  bahasa pemrograman yang termasuk sensitif. Dengan demikian, Tenaga Kerja adalah dua pengidentifikasi yang berbeda dengan Python. Pengenal Python adalah nama yang digunakan untuk mengidentifikasi variabel, fungsi, kelas, modul atau objek lainnya. Pengenal dimulai dengan huruf A sampai Z atau huruf a sampai z atau garis bawah (_) diikuti oleh nol atau lebih huruf, garis bawah dan angka (0 sampai 9). Bahasa pemrograman python ini mempunyai filosofi sendiri, atara lain adalah:
+Coherence. Bahasa pemrograman skrip tidak sulit sulit untuk dibaca, ditulis, maupun dimaintain. Power (kekuatan) berarti Bahasa pemrograman ekstensi tidak mempunyai fungsi yang terbatas. Scope (jangkauan) berarti Bahasa pemrograman dinamis dapat digunakan untuk berbagai macam tugas. Tidak ada alasan bahwa bahasa pemrograman tidak dapat menyediakan tanggapan yang cepat selama masa pembuatan sistem aplikasi dan juga mempunyai kelebihan yang membuatnya berguna untuk membuat lebih daripada sistem aplikasi tingkat tinggi.
+
+
+\subsection{keunggulan phyton}
+\begin{enumerate}
+    \item Tidak ada tahapan kompilasi dan penyambungan (link) sehingga kecepatan perubahan pada masa pembuatan sistem aplikasi                meningkat. 
+    \item Tidak ada deklarasi tipe data yang merumitkan sehingga program menjadi lebih sederhana, singkat, dan fleksible. 
+    \item Manajemen memori otomatis yaitu kumpulan sampah memori sehingga dapat menghindari pencacatan kode. 
+    \item Tipe data dan operasi tingkat tinggi yaitu kecepatan pembuatan sistem aplikasi menggunakan tipe objek yang telah ada. 
+    \item Pemrograman berorientasi objek. 
+    \item Pelekatan dan perluasan dalam C.
+    \item Terdapat kelas, modul, eksepsi sehingga terdapat dukungan pemrograman skala besar secara modular.
+    \item Pemuatan dinamis modul C sehingga ekstensi menjadi sederhana dan berkas biner yang 
+    \item Pemuatan kembali secara dinamis modul phyton seperti memodifikasi aplikasi tanpa menghentikannya. 
+    \item Model objek universal kelas Satu. Konstruksi pada saat aplikasi berjalan. 
+    \item Interaktif, dinamis dan alamiah.\item Akses hingga informasi interpreter. 
+    \item Portabilitas secara luas seperti pemrograman antar platform tanpa ports.
+    \item Kompilasi untuk portable kode byte sehingga kecepatan eksekusi bertambah dan melindungi kode sumber. 
+    \item Antarmuka terpasang untuk pelayanan keluar seperti perangkat Bantu system, GUI, persistence, database, dll. 
+\end{enumerate}
+
+\subsection{Kekurangan phyton}
+\begin{enumerate}
+    \item Beberapa penugasan terdapat diluar dari jangkauan python,
+    seperti bahasa pemrograman dinamis lainnya, python tidak
+    secepat atau efisien sebagai statis, tidak seperti bahasa
+    pemrograman kompilasi seperti bahasa C.
+    \item Disebabkan python merupakan interpreter, python bukan
+    merupakan perangkat bantu terbaik untuk pengantar komponen performa kritis.
+    \item Python tidak dapat digunakan sebagai dasar bahasa pemrograman implementasi untuk beberapa komponen, tetapi
+    dapat bekerja dengan baik sebagai bagian depan skrip antarmuka untuk mereka.
+    \item Python memberikan efisiensi dan fleksibilitas tradeoff by
+    dengan tidak memberikannya secara menyeluruh. Python
+    menyediakan bahasa pemrograman optimasi untuk kegunaan, bersama dengan perangkat bantu yang dibutuhkan
+    untuk diintegrasikan dengan bahasa pemrograman lainnya.
+    \item Banyak terdapat referensi lama terutama dari pencarian
+    google, python adalah pemrograman yang sangat lambat.
+    Namun belum lama ini ditemukan bahwa Google, Youtube,
+    DropBox dan beberapa software sistem banyak menggunakan Python.
+    \item Kini Python menjadi salah satu bahasa pemrograman yang
+    populer digunakan oleh pengembangan web, aplikasi web,
+    aplikasi perkantoran, simulasi, dan masih banyak lagi. Hal
+    ini disebabkan karena Python bahasa pemrograman yang
+    dinamis dan mudah dipahami.
+    \item Python memiliki hak cipta. Seperti Perl, kode sumber
+    Python sekarang tersedia di bawah GNU General Public
+    License (GPL).
+    \item Python sekarang dikelola oleh tim pengembangan inti
+    di institut tersebut, walaupun Guido van Rossum masih
+    memegang peran penting dalam mengarahkan kemajuannya.
+\end{enumerate}
+
+\subsection{konvensi penamaan untuk pengenal Python}
+\begin{enumerate}
+    \item Nama kelas dimulai dengan huruf besar. Semua pengenal lainnya mulai dengan huruf kecil.
+    \item Memulai pengenal dengan satu garis bawah terkemuka menunjukkan bahwa pengenal bersifat pribadi.
+    \item Memulai pengenal dengan dua garis bawah terkemuka menunjukkan pengenal yang sangat pribadi.
+    \item Jika pengenal juga diakhiri dengan dua tanda garis bawah, identifier adalah bahasa yang didefinisikan nama khusus
+\end{enumerate}
+
+\subsection{Python Software Foundation}
+Python software foundation adalah sebuah organisasi non-profit yang dibentuk sebagai pemegang Hak cipta intelektual Python sejak versi 2.1 dan dengan demikian mencegah Python dimiliki oleh Perusahaan momersial. Salah satu fitur yang tersedia pada Python adalah sebagai bahasa pemrograman dinamis yang dilengkapi dengan manajemen memori otomatis. Seperti halnya pada bahasa pemrograman dinamis lainnya, Python umumnya digunakan sebagai bahasa skrip meskk pada prakteknya penggunaan bahasa ini lebih luas mencakup konteks pemanfaatan yang umumnya tidak dilakukan dengan menggunakan bahasa skrip. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan diberbagai platform sistem operasi.
+
+\subsubsection{Kata-kata yang dicadangkan}
+Ini adalah kata-kata yang dicadangkan dan Anda tidak dapat menggunakannya sebagai konstan atau variabel 
+atau nama pengenal lainnya. Semua kata kunci Python mengandung huruf kecil saja.
+\begin{enumerate}
+    \item Dan, exec, Tidak
+    \item Menegaskan, akhirnya, atau
+    \item Istirahat, untuk, lulus
+    \item Kelas, dari, mencetak
+    \item Terus, global, menaikkan
+    \item def, jika, kembali
+    \item del, impor, mencoba
+    \item elif, di, sementara
+    \item lain, aku s, dengan
+    \item kecuali, lambda, menghasilkan
+\end{enumerate}
+
+\subsection{Program Python}
+Mari kita jalankan program dalam mode pemrograman yang berbeda. pemrograman mode interaktif memohon interpreter tanpa melewatkan file script sebagai parameter menampilkan prompt berikut :
+    \begin{verbatim}
+          Python
+          
+          Python 2.4.3 (#1,Okt 20 2017, 19:14:34)
+          [GCC 4.1.2 20080704 (Red Hat 4.1.2.-48)] on Linux2
+          Type "help", "copyright", "credits", or "license" for more information.
+          
+          Ketik teks berikut pada prompt Python dan tekan Enter :
+          
+          print "Hello, Python!"
+          
+     \end{verbatim}
+Jika anda menjalankan versi baru Python, Anda perlu menggunakan pernyataan cetak dengan tanda kurung seperti pada cetak $("Hallo, Python!");$. Namun dengan versi Python 2.4.3, ini hasilnya sebagai berikut :
+Hello, Python!
+
+\subsuction{Masukan / Keluaran}
+Berikut ini merupakan contoh program masukan ataupun keluaran:
+\begin{verbatim}
+    Contoh masukan : 
+        nama = input("Masukkan nama Anda: ")
+    Contoh keluaran :
+        print ("Halo", nama, ":)"
+       Halo Dunia
+Perintah ini biasanya digunakan untuk menguji keberhasilan pemasangan Python dalam komputer.
+    print ("Halo dunia!")
+Keluaran yang seharusnya ditampilkan adalah seperti di bawah ini.
+    Halo dunia!
+\end{verbatim}
+
+
+\subsection{Fitur Python}
+Fitur Python meliputi :
+    \begin{enumerate}
+        \item Mudah dipelajari : Python memiliki beberapa kata kunci, struktur sederhana, dan sintaks yang jelas. Hal ini memungkinkan
+        pengguna untuk mengerti bahasa dengan cepat.
+        \item Mudah dibaca : kode Python lebih jelas dan terlihat oleh mata.
+        \item Mudah dipelihara : kode sumber Python cukup mudah untuk dipelihara.
+        \item Perpustakaan standar yang luas : sebagian besar perpustakaan Python sangat portabel dan kompatibel dengan platform cross-           platform di UNIX, Windows, Macintosh.
+        \item Mode Interaktif : Python memiliki dukungan untuk mode interaktif yang memungknkan pengujian interaktif dan debugging dari         cuplikan kode.
+        \item Portable : Python dapat berjalan di berbagai platform perangkat keras dan memiliki anarmuka yang sama pada semua platform.
+        \item Dapat diperpanjang : Anda dapat menambahkan modul tingkat rendah ke penerjemah Python. Modul ini memugkinkan Programmer            untuk menambahkan atau menyeseuaikan alat mereka agar lebih efisien.
+     \end{enumerate}
+
+\subsection{Garis dan indentasi}
+Python tidak memberikan tanda kurung untuk menunjukkan blok kode untuk definisi dan alur kelas dan fungsi
+kontrol. Blok kode dilambangkan dengan garis indentasi, yang ditegakkan secara kaku.
+Jumlah ruang dalam indentasi bervariasi, namun semua pernyataan di dalam blok harus
+menjulurkan jumlah yang sama, Misalnya :
+    \begin{verbatim}
+            if True:
+                print "True"
+            else:
+               print "False"
+    \end{verbatim}
+    
+Namun, Blok tersebut menghasilkan kesalahan
+    \begin{verbatim}
+            if True:
+                print "Answer"
+                print "True"
+            else:
+                print "Answer"
+               print "False"
+    \end{verbatim}
+Jadi, dengan Python semua garis kontinu yang menjorok dengan jumlah spasi yang sama akan membentuk satu blok. Contoh berikut memiliki berbagai blok pernyataan
+Note : Jangan mencoba memahami logika pada saat ini. Pastikan Anda memahami berbagai blok meskipun tanpa tanda kurung.
+
+\subsubsection {Pernyataan Multi-Line}
+Pernyataan di Python biasanya diakhiri dengan baris baru. Python, bagaimanapun, memungkinkan penggunaan karakter kelanjutan baris (\) untuk menunjukkan bahwa garis tersebut harus dilanjutkan. Misalnya:
+\bin {equation}
+total = item_one + \
+        item_two + \
+        item_three
+\end {equation}
+
+Pernyataan yang ada di dalam kurung [], {}, atau () tidak perlu menggunakan karakter kelanjutan baris. Misalnya –
+\bin {equation}
+days = ['Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday']
+\end {equation}
+
+\subection{Kutipan pada Python}
+Python menerima kutipan tunggal ('), ganda (") dan triple (' '' atau '" ") untuk menunjukkan literal string, selama jenis kutipan yang sama dimulai dan mengakhiri string.
+
+Tanda kutip triple digunakan untuk membentang string di beberapa baris. Misalnya:
+\bin {equation}
+word = \'word\'
+sentence = \"This is a sentence.\"
+paragraph = \"""This is a paragraph. It is
+made up of multiple lines and sentences.\"""
+\end {equation}
+
+\subsection{Komentar pada Python}
+Tanda hash (#) yang tidak berada di dalam string literal memulai sebuah komentar. Semua karakter setelah # dan sampai akhir garis fisik adalah bagian dari komentar dan penafsir Python mengabaikannya.
+\bin {equation}
+#!/usr/bin/python
+
+# First comment
+print \"Hello, Python!\" # second comment
+\end {equation}
+
+ Dan hasilnya sebagai berikut –
+\bin {equation}
+    Hello, Python!
+\end {equation}
+
+Anda bisa mengetikkan komentar di baris yang sama setelah sebuah pernyataan atau ungkapan –
+\bin {equation}
+    name = \"Madisetti\" # This is again comment
+\end {equation}
+
+Anda dapat mengomentari beberapa baris sebagai berikut –
+\bin {equation}
+# This is a comment.
+# This is a comment, too.
+# This is a comment, too.
+# I said that already.
+\end {equation}
+
+\subsection{Menggunakan Blank Lines}
+Baris yang hanya berisi spasi putih, yaitu dengan komentar dan dikenal sebagai garis kosong dan Python sama sekali mengabaikannya.
+Dalam sesi juru bahasa interaktif, Anda harus memasukkan baris fisik kosong untuk mengakhiri pernyataan multiline.
+
+\subsection{Menunggu Pengguna}
+Baris berikut dari program menampilkan prompt, pernyataan yang mengatakan "Tekan tombol enter untuk keluar", dan menunggu pengguna melakukan tindakan –
+\bin {equation}
+#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")
+\end {equation}
+	
+Di sini, "\ n \ n" digunakan untuk membuat dua baris baru sebelum menampilkan baris sebenarnya. Begitu pengguna menekan tombolnya, program akan berakhir. Ini adalah trik bagus untuk menjaga jendela konsol terbuka sampai pengguna selesai dengan aplikasi.
+
+\subsection{Beberapa Pernyataan pada Baris Tunggal}
+Titik koma (;) memungkinkan beberapa pernyataan pada satu baris karena tidak ada pernyataan yang memulai blok kode baru. Berikut adalah sampel snip menggunakan titik koma, contohnya :
+\bin{equation}
+	import sys; x = 'foo'; sys.stdout.write(x + '\n')
+\end{equation}
+
+\subsection{Deklarasi Tipe Sederhana dan Tipe Casting}
+    Hanya tipe numerik dari int dan float yang akan digunakan di sini:int memegang nilai integer dan tidak ada titik desimal: 
+    float menyimpan nilai floating point dan memiliki titik desimal.Kedua tipe memiliki representasi internal yang berbeda. 
+    Sebelum digunakan variabel alfanumerik harus dinyatakan sebagai tipe tertentu dengan:
+\begin{enumerate}
+    \item Menetapkannya menjadi konstan seperti dalam a = 0,0
+    \item Makin banyak tugas seperti pada a, b, c = 0,0,1,2
+    \item Menugaskannya ke nilai ekspresi seperti pada a = b / c, di mana b dan c sebelumnya telah diumumkan
+ \end{enumerate}
+Variabel dari satu jenis dapat dilemparkan sebagai yang lain dengan menggunakan fungsi int () dan float () \cite{gray2017snake}
+
+\subsection{Ekspresi Bersyarat, Operator Relasional dan Logis}
+Python memiliki pemeran 'semua tersangka yang biasa' untuk operator relasionalnya, yaitu: 
+\begin{enumerate}
+    \item ==	sama dengan. Catatan: bahwa satu = hanya digunakan untuk deklarasi atau tugas 
+    \item ! = 	tidak sama 
+    \item >  	lebih besar dari 
+    \item > =	lebih besar dari atau sama dengan 
+    \item < 	kurang dari 
+    \item <= 	kurang dari atau sama dengan 
+\end{enumerate}
+Ini semua mengembalikan nilai Boolean yang benar atau salah dan berada di bawah '+, -' agar lebih diutamakan. Mereka dapat dirantai bersama untuk membentuk beberapa ekspresi relasional seperti x <y <z. Operator logika dapat digunakan untuk menggabungkan 
+nilai Boolean tersebut ke dalam ekspresi kondisional komposit dengan nilai true atau false. Mereka peringkatnya 
+lebih rendah dari operator relasional dan memiliki urutan prioritas berikut:
+\begin{enumerate}
+    \item Tidak expr - true jika expr salah, false sebaliknya. 
+    \item Expr1 dan expr2 - benar jika kedua expr1 dan expr2 benar, salah. 
+    \item Expr1 atau expr1 - true jika salah satu expr1 atau expr2 benar, salah. 
+\end{enumerate}
+Ekspresi bersyarat dapat dibuat dari satu, atau lebih, ekspresi relasional yang diikat dengan operator logis.
+
+
+\subsection {Basic syntax}
+Basic syntax adalah salah suatu developement tools untuk membangun aplikasi dalam lingkungan Windows. Dalam pengembangan aplikasi, Basic syntax menggunakan pendekatan windows untuk merancang user interface dalam bentuk form, sedangkan untuk kodingnya menggunakan dialek bahasa Basic yang cenderung mudah dipelajari.Basic syntax telah menjadi tools yang terkenal bagi para pemula maupun para developer. Dalam lingkungan Window’s User-interface sangat memegang peranan penting, karena dalam pemakaian aplikasi yang kita buat, pemakai senantiasa berinteraksi dengan User-interface tanpa menyadari bahwa dibelakangnya berjalan instruksi-instruksi program yang mendukung tampilan dan proses yang dilakukan.
+Pada pemrograman Basic syntax, pengembangan aplikasi dimulai dengan pembentukkan user interface, kemudian mengatur properti dari objek-objek yang digunakan dalam user interface, dan baru dilakukan penulisan kode program untuk menangani kejadian-kejadian (event). Tahap pengembangan aplikasi demikian dikenal dengan istilah pengembangan aplikasi dengan pendekatan Bottom Up.
+
+\subsection {permasalahan yang terdapat di basic syntax}
+Permasalahan yang dibahas adalah membuat suatu pengkodean dengan
+menggunakan algoritma RC4. Masalah enkripsi data dengan algoritma RC4
+muncul ketika proses enkripsi dalam sistem sedang. Pembahasan masalah lebih
+ditekankan pada proses indeks kerja algoritma RC4.
+Algoritma RC4 mengenkripsi dengan mengombinasikannya dengan
+plainteks dengan menggunakan bit-wise Xor (Exclusive-or). RC4 menggunakan
+panjang kunci dari 1 sampai 256 byte yang digunakan untuk menginisialisasikan
+tabel sepanjang 256 byte. Tabel ini digunakan untuk generasi yang berikut dari
+pseudo random yang menggunakan XOR dengan plaintext untuk menghasilkan
+ciphertext. Masing - masing elemen dalam tabel saling ditukarkan minimal sekali.
+Proses dekripsinya dilakukan dengan cara yang sama (karena Xor merupakan
+fungsi simetrik). Untuk menghasilkan keystream, cipher menggunakan state
+internal yang meliputi dua bagian :
+\begin{enumerate}
+    \item Tahap key scheduling dimana state automaton diberi nilai awal berdasarkan
+     kunci enkripsi. State yang diberi nilai awal berupa array yang merepresentasikan suatu
+     permutasi dengan 256 elemen, jadi hasil dari algoritma KSA adalah
+     permutasi awal. Array yang mempunyai 256 elemen ini (dengan indeks 0
+    sampai dengan 255) dinamakan S. Berikut adalah algoritma KSA dalam 
+    bentuk pseudo-code dimana key adalah kunci enkripsi dan keylength adalah besar kunci enkripsi dalam bytes (untuk kunci 128 bit,         keylength = 16).
+    \begin {verbatim}
+    for i = 0 to 255
+    S [i] := i
+    j := 0
+    for i = 0 to 255
+    j := (j + S[i] + key [I mod keylenght] ) mod 256
+    swap (S[i], S[j])
+    \end {verbatim}
+    
+    \item Tahap pseudo-random generation dimana state automaton beroperasi dan
+    outputnya menghasilkan keystream. Setiap putaran, bagian keystream sebesar
+    1 byte (dengan nilai antara 0 sampai dengan 255) dioutput oleh PRGA
+    berdasarkan state S. Berikut adalah algoritma PRGA dalam bentuk pseudocode:
+    \begin {verbatim}
+    i := 0
+    j := 0
+    loop
+    i := ( i + 1 ) mod 256
+    j := ( j + S[i] ) mod 256
+    swap ( S[i], S[j] )
+    output S[ (S[i] + S[j]) mod 256]
+    \end
+    \end {verbatim}
+  \end {enumerate}
+
+\subsection {bentuk-bentuk basic syntax}
+Bentuk-bentuk kondisi yang ada pada Basic syntax adalah :
+A.Kondisi Perulangan
+Dalam pemrograman ada kalanya kita memerlukan perulangan untuk melakukan suatu perintah yang sama untuk beberapa kali, misalkan pada program untuk mencari data maka diperlukan perulangan untuk mencari data dari record awal sampai record akhir atau sampai data yang dicari ditemukan. 
+Perhatikan contoh sederhana yang menunjukkan penggunaan kondisi perulangan dalam program berikut ini :
+
+\begin {equation}
+Top of Form
+Private Sub Form_Load()
+MsgBox \“ini adalah pesan ke 1\”
+MsgBox \“ini adalah pesan ke 2\”
+MsgBox \“ini adalah pesan ke 3\”
+MsgBox \“ini adalah pesan ke 4\”
+MsgBox \“ini adalah pesan ke 5\”
+End Sub
+\end {equation}
+
+Kode program di atas adalah kode program yang digunakan untuk menampilkan pesan sebanyak 5 kali ketika program di load. Bayangkan jika pesan yang ingin ditampilkan bukan 5 kali tetapi 1000 kali, pastinya kita akan kesusahan jika harus menulis kode program \“ MsgBox \“ini adalah pesan ke #/” /“ Sebanyak 1000 kali. Untuk mempersingkat kode program maka sebenarnya kita tidak perlu menulis program sebanyak 1000 baris, kita cukup menulis 3 baris program yang hasilnya akan menampilkan pesan sebanyak 1000 kali yaitu sebagai berikut :
+
+\begin {verbatim}
+For i = 1 To 1000
+MsgBox \“ini adalah pesan ke\ ” & i
+Next i
+Sehingga source kodenya menjadi :
+Private Sub Form_Load()
+For i = 1 To 1000
+MsgBox \“ini adalah pesan ke \” & i
+Next i
+End Sub
+\end {verbatim}
+Dengan menggunakan struktur kondisi perulangan seperti source code di atas maka ketika program di load maka program akan menjalankan perulangan dan menampilkan pesan \“ini adalah pesan ke 1\”,angka 1 pada pesan karena pada perulangan For … Next nilai awalnya adalah 1 kemudian program menjalankan perintah Next i sehingga sekarang nilai i menjadi 2, kemudian program menampilkan pesan \“ini adalah pesan ke 2\”, kemudian begitu seterusnya sampai nilai i = 1000 dan program menampilkan pesan \“ini adalah pesan ke 1000\”, karena nilai i = nilai akhir yaitu 1000 maka program keluar dariperulangan. Dari contoh di atas dapat disimpulkan bahwa sebuah perulangan memiliki kondisi awal dan kondisi akhir, dan perulangan akan berjalan dan berhenti jika kondisi akhir terpenuhi.
+
+1.Macam – Macam Bentuk Perulangan
+Dalam Basic syntax terdapat beberapa macam struktur kondisi perulangan, diantaranya adalah Do … Loop dan For … Next. Untuk lebih jelasnya berikut adalah macam – macam bentuk perulangan dalam Basic syntax:
+
+A.Do While … Loop
+Digunakan sebagai statement kondisi dengan banyak pilihan.
+Select Case nilai_angka
+\begin {verbatim}
+Case 0 to 50
+nilai huruf = \"D\"
+Case Is <= 70
+nilai huruf = \"C\"
+Case Is <= 80
+nilai huruf = \"B\"
+Else Case
+nilai huruf = \"A\"
+End select
+\end {verbatim}
+
+Contoh :
+\bin {verbatim}
+Dim str As String
+str = Belajar Visual Basic
+msgbox str &  =  & Len(str) & karakter
+\end {verbatim}
+\end
+
+\subsection {fungsi dari pemograman basix syntax}
+fungsi dalam pemrograman basix syntax terdiri dari function header dan function body. Berikut adalah semua bagian dari sebuah fungsi: 
+\begin{enumerate}
+\item Return Type −  Fungsi dapat mengembalikan nilai. Return_type adalah tipe data dari nilai fungsi yang dikembalikan. 		Beberapa fungsi melakukan operasi yang diinginkan tanpa mengembalikan nilai.
+\item Function Name − Ini adalah nama sebenarnya dari fungsi. Nama fungsi dan daftar parameter bersama merupakan function signature.
+\item Parameter List − Parameter seperti placeholder. Saat sebuah fungsi dipanggil, Anda melewatkan sebuah nilai sebagai parameter. Nilai ini disebut sebagai parameter atau argumen Daftar parameter mengacu pada tipe, urutan, dan jumlah parameter fungsi. Parameter bersifat opsional; Artinya, fungsi tidak mengandung parameter.
+\item Function Body − berisi kumpulan pernyataan yang mendefinisikan fungsi yang dilakukannya.
+\end{enumerate}
+
+Memanggil Function
+Untuk menggunakan fungsi, Anda harus memanggil fungsi itu untuk melakukan tugas yang ditentukan.
+
+Sekarang, mari tulis contoh di atas dengan bantuan sebuah fungsi
+\begin {verbatim}
+#include <stdio.h>
+ 
+int getMax( int set[] ) {
+ 
+   int i, max;
+    
+   max = set[0];
+   i = 1;    
+   while( i < 5 ) {
+   
+      if( max <  set[i] ) {
+     
+         max = set[i];
+      }
+      i = i + 1;
+   }
+     
+   return max;
+}
+ 
+main() {
+ 
+   int set1[5] = {10, 20, 30, 40, 50};
+   int set2[5] = {101, 201, 301, 401, 501};
+   int max;
+ 
+   /* Process first set of numbers available in set1[] */
+   max = getMax(set1);
+   printf("Max in first set = %dn", max );
+     
+   /* Now process second set of numbers available in set2[] */
+   max = getMax(set2);
+   printf("Max in second set = %dn", max );
+}
+\end {verbatim}
+Outpunya adalah: 
+\begin {verbatim}
+Max in first set = 50
+Max in second set = 501
+\end {verbatim}
+
+\subsection {Function dalam bahasa Java}
+Jika Anda jelas tentang fungsi dalam pemrograman C, maka mudah untuk memahaminya di bahasa java, java menyebut function sebagai methods tapi sisa konsepnya kurang lebih sama. 
+Berikut ini adalah program sama seperti di atas yang ditulis di bahasa java 
+\begin {verbatim}
+public class DemoJava {
+     
+   public static void main(String []args) {
+  
+      int[] set1 = {10, 20, 30, 40, 50};
+      int[] set2 = {101, 201, 301, 401, 501};
+      int max;
+ 
+      /* Process first set of numbers available in set1[] */
+      max = getMax(set1);
+      System.out.format(\"Max in first set = %dn\", max );
+ 
+      /* Now process second set of numbers available in set2[] */
+      max = getMax(set2);
+      System.out.format(\"Max in second set = %dn\", max );
+   }
+    
+   public static int getMax( int set[] ) {
+  
+      int i, max;
+    
+      max = set[0];
+      i = 1;    
+      while( i < 5 ) {
+ 
+         if( max <  set[i] ) {
+            max = set[i];
+         }
+         i = i + 1;
+      }
+     
+      return max;
+   
+}
+\end {verbatim}
+Outputnya adalah: 
+\begin {verbatim}
+Max in first set = 50
+Max in second set = 501
+\end {verbatim}
+
+\section{Variable Types}
+\subsection{Python Variabel Type}
+Satu dari fitur yang paling powerful dari sebuah bahasa pemrograman adalah kemampuan utnuk memanipulasi variabel. Sebuah variabel adalah nama yang merujuk kesebuah nilai tertentu. Dalam Python, untuk membentuk variabel cukup memberi nama pada nilai yang kita inginkan. Satatement yang melakukan hal tersebut disebut asiignment.
+    \begin{verbatim}
+        >>> pesan = "Hi, Apa Kabar Brother"
+        >>> n = 19
+        >>> pi = 3.14159
+     \end{verbatim}
+Contoh diatas menunjukkan tiga buah assignment. Contoh pertama memberi nilai "Hi, Apa Kabar Brother" pada variabel pesan, kedua memberi nilai 19 pada variabel n, dan ketiga memberi nilai 3.14159 pada variabel pi. Variabel akan memiliki tipe sesuai dengan nilainya.
+    \begin{verbatim}
+        >>> type(mesg)
+        <type 'string'>
+        >>> type(n)
+        <type 'int'>
+        >>> type(pi)
+        <type 'float'>
+     \end{verbatim}
+
+\subsection {Function dalan bahasa Python}
+Jika Anda tahu konsep fungsi dalam pemrograman C dan Java, maka Python tidak jauh berbeda. Berikut basic syntax untuk mengunakan fucntion di python 
+
+\begin {verbatim}
+def function_name( parameter list ):
+   body of the function
+   
+   return [expression]
+\end {verbatim}
+Berikut ini adalah program sama seperti di atas yang ditulis di bahasa python 
+\begin {verbatim}
+def getMax( set ):
+   max = set[0]
+   i = 1  
+   while( i < 5 ):
+      if( max <  set[i] ):
+         max = set[i]
+      i = i + 1
+   return max
+ 
+ 
+set1 = [10, 20, 30, 40, 50]
+set2 = [101, 201, 301, 401, 501]
+\end {verbatim}
+ 
+# Process first set of numbers available in set1[]
+max = getMax(set1)
+print \"Max in first set = \"\, max
+     
+# Now process second set of numbers available in set2[]
+max = getMax(set2)
+print \"Max in second set = \"\, max
+Outputnya adalah: 
+\begin {verbatim}
+Max in first set =  50
+Max in second set =  501
+\end {verbatim}
+
+\subsection{Contoh Script Garis dan indentasi}
+\begin{verbatim}
+#!/usr/bin/python
+
+import sys
+
+try:
+   # open file stream
+   file = open(file_name, "w")
+except IOError:
+   print "There was an error writing to", file_name
+   sys.exit()
+print "Enter '", file_finish,
+print "' When finished"
+while file_text != file_finish:
+   file_text = raw_input("Enter text: ")
+   if file_text == file_finish:
+      # close the file
+      file.close
+      break
+   file.write(file_text)
+   file.write("\n")
+file.close()
+file_name = raw_input("Enter filename: ")
+if len(file_name) == 0:
+   print "Next time please enter something"
+   sys.exit()
+try:
+   file = open(file_name, "r")
+except IOError:
+   print "There was an error reading file"
+   sys.exit()
+file_text = file.read()
+file.close()
+print file_text
+\end{verbatim}
+
+\subsection{Daftar Python}
+Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item
+yang dipisahkan dengan tanda koma dan dilampirkan dalam tanda kurung siku ([]).
+Sampai batas tertentu, daftar serupa dengan array di C. Salah satu perbedaan di antara
+keduanya adalah bahwa semua item yang termasuk dalam daftar dapat terdiri dari
+tipe data yang berbeda.
+Nilai yang tersimpan dalam daftar dapat diakses menggunakan operator slice ([] dan
+[:]) dengan indeks mulai dari 0 di awal daftar dan bekerja dengan cara mereka untuk
+mengakhiri -1. Tanda plus (+) adalah daftar operator concatenation, dan asterisk (*)
+adalah operator pengulangan. Misalnya
+\begin{verbatim}
+list = [ ’abcd’, 786 , 2.23, ’john’, 70.2 ]
+tinylist = [123, ’john’]
+print list Prints complete list
+print list[0] Prints first element of the list
+print list[1:3] Prints elements starting from 2nd till 3rd
+print list[2:] Prints elements starting from 3rd element
+print tinylist * 2 Prints list two times
+print list + tinylist Prints concatenated lists
+\end{verbatim}
+Ini menghasilkan hasil sebagai berikut 
+\begin{verbatim}
+[’abcd’, 786, 2.23, ’john’, 70.200000000000003]
+abcd
+[786, 2.23]
+[2.23, ’john’, 70.200000000000003]
+[123, ’john’, 123, ’john’]
+[’abcd’, 786, 2.23, ’john’, 70.200000000000003, 123, ’john’]
+\end{verbatim}
+
+\subsection{Tupel Python}
+Sebuah tupel adalah jenis data urutan lain yang serupa dengan daftar. Sebuah tupel terdiri dari sejumlah nilai yang dipisahkan dengan koma. Tidak seperti daftar,
+bagaimanapun, tupel tertutup dalam tanda kurung.
+Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung
+([]) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam
+\begin{verbatim}
+tanda kurung (()) dan tidak dapat diperbarui. Tupel bisa dianggap sebagai daftar
+hanya-baca . Misalnya -
+tuple = ( ’abcd’, 786 , 2.23, ’john’, 70.2 )
+tinytuple = (123, ’john’)
+print tuple Prints complete list
+print tuple[0] Prints first element of the list
+print tuple[1:3] Prints elements starting from 2nd till 3rd
+print tuple[2:] Prints elements starting from 3rd element
+print tinytuple * 2 Prints list two times
+print tuple + tinytuple Prints concatenated lists
+Ini menghasilkan hasil sebagai berikut
+(’abcd’, 786, 2.23, ’john’, 70.200000000000003)
+abcd
+(786, 2.23)
+(2.23, ’john’, 70.200000000000003)
+(123, ’john’, 123, ’john’)
+(’abcd’, 786, 2.23, ’john’, 70.200000000000003, 123, ’john’)
+\end{verbatim}
+Kode berikut tidak valid dengan tupel, karena kami mencoba memperbarui tupel,
+yang tidak diizinkan. Kasus serupa dimungkinkan dengan daftar 
+\begin{verbatim}
+tuple = ( ’abcd’, 786 , 2.23, ’john’, 70.2 )
+list = [ ’abcd’, 786 , 2.23, ’john’, 70.2 ]
+tuple[2] = 1000 Invalid syntax with tuple
+list[2] = 1000 Valid syntax with list
+\end{verbatim}
+
+\subsection{Kamus Python}
+Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif
+atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus
+bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi
+lain, bisa menjadi objek Python yang sewenang-wenang.
+Kamus ditutupi oleh kurung kurawal ( { }) dan nilai dapat diberikan dan diakses
+menggunakan kawat gigi persegi ([]). Misalnya -
+\begin{verbatim}
+dict = { }
+dict[’one’] = ”This is one”
+dict[2] = ”This is two”
+tinydict = {’name’: ’john’,’code’:6734, ’dept’: ’sales’ }
+print dict[’one’] Prints value for ’one’ key
+print dict[2] Prints value for 2 key
+print tinydict Prints complete dictionary
+print tinydict.keys() Prints all the keys
+print tinydict.values() Prints all the values
+Ini menghasilkan hasil sebagai berikut -
+This is one
+This is two
+{’dept’: ’sales’, ’code’: 6734, ’name’: ’john’ }
+[’dept’, ’code’, ’name’]
+[’sales’, 6734, ’john’]
+\end{verbatim}
+Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan
+bahwa unsur-unsurnya ”rusak”; Mereka hanya unordered.
+
+Ini salah satu contoh program python sederhana yang menggunakan dictionary.Di sini,
+saya akan menentukan nama bulan berdasarkan hasil inputan user. Berikut listing programnya:
+
+\begin{verbatim}
+a=int(raw_input("Masukkan bulan ke: "))
+seleksi={1:'januari', 2:'februari', 3:'maret', 4:'april', 5:'mei', 6:'Juni', 7:'Juli', 8:'agustus', 9:'September', 10:'Oktober', 11:'November', 12:'Desember'}
+print "Bulan ke- ",a,"adalah bulan",seleksi[a]
+\end{verbatim}
+
+\subsection{Menilai Ekspresi}
+Sebuah ekspresi merupakan perpaduan antara nilai, variabel, operator, dan pemanggilan fungsi. Jika kamu mengetik sebuah ekspresi pada Python prompt, maka si interpreter akan menilainya dan menampilkan hasilnya:
+	\begin{verbatim}
+		1 + 1 
+		2 
+		len(”hello”) 
+		5 
+	\end{verbatim}
+Pada contoh ini len merupakan fungsi built-in yang ada di Python yang akan menghasilkan jumlah karakter dari sebuah string. Sebelumnya kita sudah melihat fungsi print dan type, jadi ini adalah contoh fungsi ketiga kita.
+
+Proses penilaian dari sebuah ekspresi akan menghasilkan sebuah nilai, itulah mengapa ekspresi bisa ada di sisi sebelah kanan dari pernyataan pemberian nilai. Nilai dengan sendirinya adalah ekspresi sederhana, dan begitu juga variabel.
+	\begin{verbatim}
+		17
+		17 
+		y = 3.14 
+		x = len(”hello”) 
+		x 
+		5 
+		Y
+
+		3.14
+	\end{verbatim}
+	
+
+\subsection {tingkat bahasa phyton}
+Dalam tingkatan bahasa pemrograman, Python termasuk bahasa tingkat tinggi. Python menjadi salah satu bahasa pemrograman yang dapat membangun aplikasi, baik itu berbasis web ataupun berbasis mobile. Bahasa phyton ini termasuk kedalam bahasa pemorgraman yang cukup mudah bagi pemula, karena bahasa tersebut mudah untuk dibaca dengan syntax yang mudah untuk dipahami juga. 
+Banyak perusahaan besar menggunanakn Phyton dalam pengembanganya seperti Instagram, Pinterest dan Rdio. 
+Python juga digunakan oleh para pengembang Google, Yahoo!, dan juga NASA.
+Di Indonesia sendiri terdapat grup Facebook yang membahas tentang Python yang telah memiliki lebih dari 6000 anggota.
+Grup ini cukup aktif, grup ini bernama Python Indonesia.
+\end

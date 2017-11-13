@@ -1,3 +1,4 @@
+
 \documentclass [12pt,a4paper,notitlepage,oneside,bahasa]{article}
 \usepackage[left=3.00 cm, right=2.00 cm, bottom=2.00 cm, top=3.00 cm]{geometry}
 \begin{document}
@@ -17,26 +18,34 @@ Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan
 \end{itemize}
 \noindent 
 \section{Memulai Thread Baru}
+
 \noindent 
 \hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} :
 \noindent 
-\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start  \_  new   \_  thread (function, args [, kwargs] )}\end{center}
-Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window.
-Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.
-Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.
-\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start  \_  new   \_  thread (function, args [, kwargs] )}\end{center}
-Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window.
-Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.
-Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.
-\noindent 
-\par
-\noindent 
+
+\begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center} \par
+Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window. \par
+\hspace*{0.5in} Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir. Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
 
 
-%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+\vspace{12pt}
+Contoh : 
+\begin{verbatim}
+\#  $!/usr/bin/python} 
 
+Import thread
+Import time
 
-\newpage
+#  $ Define a function for the thread 
+
+Def print $  \_  $time (threadNamw, delay):
+Count = 0
+While count <5:
+Time.sleep(delay)
+Count +=1 
+Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ 
+(hreadName, time.ctime(time.time()))
+
 
 \vspace{12pt}
 \vspace{12pt}
@@ -73,6 +82,7 @@ while 1:
 	\newpage
 	
 	Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : \par
+
 \vspace{10pt}
 \noindent 
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:17 2009}\end{center} \par
@@ -98,53 +108,94 @@ while 1:
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:35 2009}\end{center} \par
 
 \vspace{12pt}
-Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
-\vspace{12pt}
-\section{ Modul Threading } \par
+\hspace*{0.5in} Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
 
-Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
-The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
+\vspace{12pt}
+
+
+\subsection {Modul Threading} \par
+\hspace*{0.5in} Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
+\hspace*{0.5in} The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
+
 \begin{itemize}
-	\item \textbf{t}\textbf{hreading.activeCount() } \par
-	Mengembalikan jumlah objek \textit{thread} yang aktif \par
-	\item \textbf{t}\textbf{hreading.currentThread() } \par
-	Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
-	\item \textbf{t}\textbf{hreading.enumerate() } \par
-	Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
-	\vspace{12pt}
-	Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
-	\item \textbf{run()} \par
-	Metode adalah titik masuk untuk \textit{thread} \par
-	\item \textbf{start()} \par
-	Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
-	\item \textbf{join(}\textbf{[time]}\textbf{)} \par
-	Menunggu benang untuk mengakhiri \par
-	\item \textbf{isAlive()} \par
-	Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
-	\item \textbf{getName()} \par
-	Metode mengambalikan nama\textbf{ }\textit{thread} \par
-	\item \textbf{setName()} \par
-	Metode menetapkan nama\textbf{ }\textit{thread} \par
-	\end{itemize}
-	\vspace{12pt}
-	
-\section{Membuat Thread Menggunakan Threading Modul} 
-Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
-	\begin{itemize}
-		\item Mendefinisikan subclass dari \textit{thread} kelas \par
-		\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
-		\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai 
-	\end{itemize}
-\par
-\noindent 
+\item \textbf{t}\textbf{hreading.activeCount() } \par
+Mengembalikan jumlah objek \textit{thread} yang aktif \par
+\item \textbf{t}\textbf{hreading.currentThread() } \par
+Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
+\item \textbf{t}\textbf{hreading.enumerate() } \par
+Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
 
-
-%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
-
-
-\newpage
 
 \vspace{12pt}
+\hspace*{0.5in} Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
+\item \textbf{run()} \par
+Metode adalah titik masuk untuk \textit{thread} \par
+\item \textbf{start()} \par
+Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
+\item \textbf{join(}\textbf{[time]}\textbf{)} \par
+Menunggu benang untuk mengakhiri \par
+\item \textbf{isAlive()} \par
+Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
+\item \textbf{getName()} \par
+Metode mengambalikan nama\textbf{ }\textit{thread} \par
+\item \textbf{setName()} \par
+Metode menetapkan nama\textbf{ }\textit{thread} \par
+
+\vspace{12pt}
+\subsection {Membuat Thread Menggunakan Modul} \par
+\hspace*{0.5in} Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
+\item Mendefinisikan subclass dari \textit{thread} kelas \par
+\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
+\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai 
+\end{itemize}
+
+\vspace{12pt}
+\hspace*{0.5in} Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
+\vspace{50pt}
+
+Contoh :
+\begin{verbatim} 
+#  $!/usr/bin/python
+
+import threading
+import time
+
+exitFlag = 0
+
+class myThread (threading.Thread): 
+def $  \_  $init $  \_  $(self, threadID, name, 
+counter) :
+threading.Thread. $  \_  $init $  \_  $(self)} 
+self.threadID = threadID
+self.name = name 
+self.counter = counter 
+def run (self) :
+print  $ " $Starting  $ " $ + self.name 
+print $  \_  $time(self.name, self.counter, 5)
+print  $ " $Exiting  $ " $+ self.name
+
+def print $  \_  $time(threadName, delay, counter):} 
+
+while counter:
+
+if exitFlag: 
+threadName.exit() 
+time.sleep(delay) 
+print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  
+$ (threadName, time.ctime(time.time()))
+counter -= 1} 
+
+#  $ Create new threads
+thread1 = myThread(1,  $ " $Thread-1 $ " $, 1)
+thread2 = myThread(2,  $ " $Thread-2 $ " $, 2)
+#  $ Start new threads
+thread1.start()
+thread2.start()
+print  $ " $Exiting Main Thread $ " $
+\end{verbatim}
+
+\vspace{12pt}
+
 Setelah membuat baru \textit{thread} subclass, dapat membuah sebuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
 \vspace{12pt}
 	Contoh :
@@ -186,6 +237,7 @@ thread2.start()
 print "Exiting Main Thread"
 \end{verbatim}
 	Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
+
 \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
@@ -215,7 +267,9 @@ print "Exiting Main Thread"
 {\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:12 2013} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Thread=2} \par
+
 \vspace{10pt}
+
 
 \section{Sinkronisasi Thread}
 \textit{Threading} modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
@@ -272,9 +326,8 @@ Fort t in threads:
 	print "Exiting Main thread"
 \end{verbatim}
 
+
 Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
-\vspace{10pt}
-\noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-2} \par
@@ -292,10 +345,12 @@ Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 {\fontsize{10pt}{10pt}\selectfont Thread-2: Thu Mar 21 09:11:36 2013} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
+
 \vspace{12pt}
 
 \section{Multithreaded Antrian Prioritas} \par
 The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
+
 \begin{itemize}
 	\item \textbf{get()} \par
 		Menghapus dan mengembalikan item dari antrian
@@ -312,19 +367,18 @@ The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampu
 	\item \textbf{full()}\end{itemize}
 \par
 	Mengembalikan benar jika antrian penuh jika tidak, salah
-\par
+
+
 \vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-Contoh: 
+Contoh:  
 \begin{verbatim}
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
+#  $!/usr/bin/python}  
+
 
 import Queue
 import threading
 import time
+
 
 exitFlag = 0
 
@@ -380,6 +434,7 @@ for t in threads:
 print "Exiting Main Thread"
 \end{verbatim}
 
+
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 \vspace{12pt}
 \noindent 
@@ -406,6 +461,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 {\fontsize{10pt}{10pt}\selectfont Exiting Thread-2} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
+
 \vspace{12pt}
 
 \end{document}

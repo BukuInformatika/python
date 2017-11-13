@@ -1,3 +1,4 @@
+
 \sloppy
 \begin{center}{\fontsize{14pt}{14pt}\selectfont Python File I/O \\}\end{center} \par
 Unit~input~adalah (masukan) suatu  data yang berbentuk documet bait itu data data foto, data data hurup ataupun data tanggal ke dalam sebuah system yang  terkomputerisasi.  unit output (keluaran) biasanya digunakan untuk menampilkan data, atau dengan kata lain untuk menangkap data yang telah diinputkan terlebih dahulu dalam sebuah penyimpanan media elektronic , contohnya data yang akan ditampilkan pada layar monitor atau printer. \par
@@ -79,7 +80,7 @@ Ketika kita selesai dengan operasi ke file, kita perlu menutupinya dengan benar.
 \noindent 
 f = open("test.txt",encoding = 'utf-8') \par
 \noindent 
- $  \#  $ perform file operations \par
+$  \#  $ perform file operations \par
 \noindent 
 f.close() \par
 \vspace{12pt}
@@ -220,10 +221,10 @@ Ada berbagai metode yang tersedia dengan objek file. Beberapa di antaranya telah
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+$  \#  $ Open a file \par
 \noindent 
 fo = open("foo.txt", "wb") \par
 \noindent 
@@ -243,24 +244,24 @@ Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih m
 Sintaksis \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+$  \#  $ Open a file \par
 \noindent 
 fo = open("foo.txt", "wb") \par
 \noindent 
 fo.write( "Python is a great language. $  \setminus  $nYeah its great!! $  \setminus  $n"); \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Close opend file \par
+$  \#  $ Close opend file \par
 \noindent 
 fo.close() \par
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+$  \#  $ Open a file \par
 \noindent 
 fo = open("foo.txt", "r+") \par
 \noindent 
@@ -269,7 +270,7 @@ str = fo.read(10); \par
 print "Read String is : ", str \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Close opend file \par
+$  \#  $ Close opend file \par
 \noindent 
 fo.close() \par
 \vspace{12pt}
@@ -277,10 +278,10 @@ fo.close() \par
 Read~String is :  Python is \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Open a file \par
+$  \#  $ Open a file \par
 \noindent 
 fo = open("foo.txt", "r+") \par
 \noindent 
@@ -289,14 +290,14 @@ str = fo.read(10); \par
 print "Read String is : ", str \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Check current position \par
+$  \#  $ Check current position \par
 \noindent 
 position = fo.tell(); \par
 \noindent 
 print "Current file position : ", position \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Reposition pointer at the beginning once again \par
+$  \#  $ Reposition pointer at the beginning once again \par
 \noindent 
 position = fo.seek(0, 0); \par
 \noindent 
@@ -304,7 +305,7 @@ str = fo.read(10); \par
 \noindent 
 print "Again read String is : ", str \par
 \noindent 
- $  \#  $ Close opend file \par
+$  \#  $ Close opend file \par
 \noindent 
 fo.close() \par
 \vspace{12pt}
@@ -319,22 +320,22 @@ Again~read String is :  Python is \par
 os.rename(current $  \_  $file $  \_  $name, new $  \_  $file $  \_  $name) \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Rename a file from test1.txt to test2.txt \par
+$  \#  $ Rename a file from test1.txt to test2.txt \par
 \noindent 
 os.rename( "test1.txt", "test2.txt" ) \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Delete file test2.txt \par
+$  \#  $ Delete file test2.txt \par
 \noindent 
 os.remove("text2.txt") \par
 \vspace{12pt}
@@ -342,42 +343,42 @@ os.remove("text2.txt") \par
 os.mkdir("newdir") \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Create a directory "test" \par
+$  \#  $ Create a directory "test" \par
 \noindent 
 os.mkdir("test") \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Changing a directory to "/home/newdir" \par
+$  \#  $ Changing a directory to "/home/newdir" \par
 \noindent 
 os.chdir("/home/newdir") \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $ This would give location of the current directory \par
+$  \#  $ This would give location of the current directory \par
 \noindent 
 os.getcwd() \par
 \vspace{12pt}
 \noindent 
- $  \#  $!/usr/bin/python \par
+$  \#  $!/usr/bin/python \par
 \noindent 
 import os \par
 \vspace{12pt}
 \noindent 
- $  \#  $~This~would  remove "/tmp/test"  directory. \par
+$  \#  $~This~would  remove "/tmp/test"  directory. \par
 \noindent 
 os.rmdir(~"/tmp/test"  ) \par
 \vspace{12pt}
@@ -433,36 +434,36 @@ Mmm, acar Pickles, dengan Python, harus dimakan. Rasa mereka hanya untuk membiar
 Contoh Kode 3 - pickletest.py \par
 \vspace{12pt}
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ pickletest.py \par
+$  \#  $ $  \#  $ $  \#  $ pickletest.py \par
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ PICKLE AN OBJECT \par
+$  \#  $ $  \#  $ $  \#  $ PICKLE AN OBJECT \par
 \vspace{12pt}
 \noindent 
- $  \#  $ mengimpor modul acar \par
+$  \#  $ mengimpor modul acar \par
 \noindent 
 Acar impor \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Mari membuat sesuatu untuk menjadi acar \par
+$  \#  $ Mari membuat sesuatu untuk menjadi acar \par
 \noindent 
- $  \#  $ Bagaimana dengan daftar? \par
+$  \#  $ Bagaimana dengan daftar? \par
 \noindent 
 picklelist = ['one', 2, 'three', 'four', 5, 'dapatkah kamu menghitung?'] \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Sekarang buat file \par
+$  \#  $ Sekarang buat file \par
 \noindent 
- $  \#  $ ganti nama file dengan file yang ingin Anda buat \par
+$  \#  $ ganti nama file dengan file yang ingin Anda buat \par
 \noindent 
 File = open ('filename', 'w') \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Sekarang mari kita pilih picklelist \par
+$  \#  $ Sekarang mari kita pilih picklelist \par
 \noindent 
 pickle.dump (picklelist, file) \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Tutup file, dan pengawetan Anda sudah selesai \par
+$  \#  $ Tutup file, dan pengawetan Anda sudah selesai \par
 \noindent 
 file.close () \par
 \vspace{12pt}
@@ -482,34 +483,34 @@ Sekarang untuk membuka kembali, atau unpickle, file Anda. Untuk menggunakan ini,
 Contoh kode 4 - unpickletest.py \par
 \vspace{12pt}
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ unpickletest.py \par
+$  \#  $ $  \#  $ $  \#  $ unpickletest.py \par
 \noindent 
- $  \#  $ $  \#  $ $  \#  $ unpickle file \par
+$  \#  $ $  \#  $ $  \#  $ unpickle file \par
 \vspace{12pt}
 \noindent 
- $  \#  $ mengimpor modul acar \par
+$  \#  $ mengimpor modul acar \par
 \noindent 
 Acar impor \par
 \vspace{12pt}
 \noindent 
- $  \#  $ sekarang buka file untuk dibaca \par
+$  \#  $ sekarang buka file untuk dibaca \par
 \noindent 
- $  \#  $ ganti nama file dengan path ke file yang Anda buat di pickletest.py \par
+$  \#  $ ganti nama file dengan path ke file yang Anda buat di pickletest.py \par
 \noindent 
 unpicklefile = open ('filename', 'r') \par
 \vspace{12pt}
 \noindent 
- $  \#  $ sekarang muat daftar yang kita acar ke objek baru \par
+$  \#  $ sekarang muat daftar yang kita acar ke objek baru \par
 \noindent 
 unpickledlist = pickle.load (unpicklefile) \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Tutup file, hanya untuk keamanan \par
+$  \#  $ Tutup file, hanya untuk keamanan \par
 \noindent 
 unpicklefile.close () \par
 \vspace{12pt}
 \noindent 
- $  \#  $ Mencoba menggunakan daftar \par
+$  \#  $ Mencoba menggunakan daftar \par
 \noindent 
 untuk item dalam unpickledlist: \par
 \noindent 

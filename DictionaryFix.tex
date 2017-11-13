@@ -1,6 +1,4 @@
-
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Dictionary} \\}\end{center} \par
+ \section{Python Dictionary}
 \vspace{12pt}
 \noindent 
 Setiap kunci dipisahkan dari nilainya oleh titik dua (:), item dipisahkan oleh koma, dan semuanya tertutup dalam kurung kurawal. Kamus kosong tanpa barang ditulis hanya dengan dua kurung kurawal, seperti ini:  $  \{  $ $  \}  $. \par
@@ -8,76 +6,74 @@ Setiap kunci dipisahkan dari nilainya oleh titik dua (:), item dipisahkan oleh k
 Kunci unik dalam kamus sementara nilai mungkin tidak. Nilai kamus bisa berupa tipe apa pun, namun kunci harus berupa tipe data yang tidak berubah seperti string, angka, atau tupel. \par
 \vspace{12pt}
 \noindent 
+\vspace{\baselineskip}
 Accessing Values in Dictionary: \par
 \noindent 
 Untuk mengakses elemen kamus, Anda dapat menggunakan tanda kurung siku yang sudah dikenal bersama dengan kunci untuk mendapatkan nilainya. Berikut adalah contoh sederhana - \par
 \noindent 
+\begin{verbatim}
+
  \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+ dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in} print "dict['Name']: ", dict['Name'] \par
+ print "dict['Name']: ", dict['Name'] \par
 \noindent 
- \hspace*{0.5in} print "dict['Age']: ", dict['Age'] \par
+ print "dict['Age']: ", dict['Age'] \par
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
- \hspace*{0.5in} dict['Name']:~ Zara \par
+ dict['Name']:~ Zara \par
 \noindent 
- \hspace*{0.5in} dict['Age']:~ 7 \par
+ dict['Age']:~ 7 \par
 \noindent 
 Jika kita mencoba mengakses item data dengan sebuah kunci, yang bukan bagian dari kamus, kita mendapatkan error sebagai berikut - \par
 \noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
+ $  \#  $!/usr/bin/python \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+ dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in} print "dict['Alice']: ", dict['Alice'] \par
+ print "dict['Alice']: ", dict['Alice'] \par
 \noindent 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
- \hspace*{0.5in} dict['Alice']: \par
+ dict['Alice']: \par
 \noindent 
- \hspace*{0.5in} Traceback (most recent call last): \par
+ Traceback (most recent call last): 
 \noindent 
- \hspace*{0.5in} ~~ File "test.py", line 4, in <module> \par
-\noindent 
-~~~~~  \hspace*{0.5in}  \hspace*{0.5in} print "dict['Alice']: ", dict['Alice']; \par
-\noindent 
- \hspace*{0.5in}  \hspace*{0.5in} KeyError: 'Alice' \par
+ File "test.py", line 4, in <module>  
+ print "dict['Alice']: ",     dict['Alice'];  
+ KeyError: 'Alice' 
+\end{verbatim}
 \vspace{12pt}
-\vspace{12pt}
-\noindent 
+\noindent
+\vspace{\baselineskip}
 Updating Dictionary \par
 \noindent 
 Anda dapat memperbarui kamus dengan menambahkan entri baru atau pasangan nilai kunci, memodifikasi entri yang ada, atau menghapus entri yang ada seperti yang ditunjukkan di bawah ini dalam contoh sederhana - \par
 \noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ \par
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\begin{verbatim}
+ $  \#  $!/usr/bin/python \par
+\vspace{12pt} 
+  dict =  $  \{  $'Name': 'Zara', 'Age': 7, 'Class': 'First' $  \}  $ 
 \vspace{12pt}
-\noindent 
- \hspace*{0.5in} dict['Age'] = 8;  $  \#  $ update existing entry \par
-\noindent 
- \hspace*{0.5in} dict['School'] = "DPS School";  $  \#  $ Add new entry \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} print "dict['Age']: ", dict['Age'] \par
-\noindent 
- \hspace*{0.5in} print "dict['School']: ", dict['School'] \par
-\noindent 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\noindent 
- \hspace*{0.5in} dict['Age']:~ 8 \par
-\noindent 
- \hspace*{0.5in} dict['School']:~ DPS School \par
-\vspace{12pt}
+
+  dict['Age'] = 8;  $  \#  $ update existing entry 
+  dict['School'] = "DPS School";  $  \#  $ Add new entry  
+  print "dict['Age']: ", dict['Age'] 
+ print "dict['School']: ", dict['School'] 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+ dict['Age']:~ 8 \par 
+ dict['School']:~ DPS School 
+ \end{verbatim}
+ 
 \vspace{12pt}
 \noindent 
 Delete Dictionary Elements \par
@@ -119,6 +115,9 @@ Ini menghasilkan hasil berikut. Perhatikan bahwa pengecualian diajukan karena se
 Note: del () metode dibahas di bagian selanjutnya. \par
 \vspace{12pt}
 \noindent 
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
 Properties of Dictionary Keys \par
 \noindent 
 Nilai kamus tidak memiliki batasan. Mereka bisa menjadi objek Python yang sewenang-wenang, baik objek standar atau objek yang ditentukan pengguna. Namun, hal yang sama tidak berlaku untuk kunci. \par
@@ -140,6 +139,7 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
 \noindent 
  \hspace*{0.5in} dict['Name']:~ Manni \par
 \vspace{12pt}
+\vspace{\baselineskip}
 \noindent 
 (b) Tombol harus tidak berubah. Yang berarti Anda bisa menggunakan string, angka atau tupel sebagai tombol kamus tapi sesuatu seperti ['key'] tidak diperbolehkan. Berikut adalah contoh sederhana: \par
 \vspace{12pt}
@@ -174,7 +174,13 @@ Python includes following dictionary methods  $ - $ \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Dictionaries \par
+\vspace{\baselineskip}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\begin{enumerate}
+	\item Dictionaries
+\end{enumerate}
 \vspace{12pt}
 \noindent 
 Introductions \par
@@ -188,8 +194,9 @@ Kamus tidak mendukung urutan operasi dari jenis data urutan seperti string, tupe
 Di akhir bab ini, kami akan menunjukkan bagaimana kamus dapat diubah menjadi satu daftar, berisi (kunci, nilai) -tupel atau dua daftar, yaitu satu dengan kunci dan satu dengan nilainya. Transformasi ini bisa dilakukan secara terbalik juga. \par
 \vspace{12pt}
 \noindent 
-How to create a dictionary? \par
-\noindent 
+\begin{itemize}
+	\item How to create a dictionary?
+\end{itemize}
 Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  $  \{  $ $  \}  $ dipisahkan dengan koma. Item memiliki kunci dan nilai yang sesuai dinyatakan sebagai pasangan, kunci: nilai. Sementara nilai dapat berupa tipe data apa pun dan dapat diulang, kunci harus terdiri dari tipe yang tidak dapat diubah (string, number atau tupel dengan elemen yang tidak berubah) dan harus unik. \par
 \noindent 
  \hspace*{0.5in}  $  \#  $ empty dictionary \par
@@ -218,7 +225,9 @@ Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal  $  \{ 
 \noindent 
 Seperti yang bisa Anda lihat di atas, kita juga bisa membuat kamus menggunakan fungsi built-in dict (). \par
 \noindent 
-How to access elements from a dictionary? \par
+\begin{itemize}
+	\item How to access elements from a dictionary?
+\end{itemize}
 \noindent 
 Sementara pengindeksan digunakan dengan jenis wadah lain untuk mengakses nilai, kamus menggunakan tombol. Kunci dapat digunakan baik di dalam tanda kurung siku atau dengan metode get (). Perbedaan saat menggunakan get () adalah mengembalikan Elemen alih-alih KeyError, jika kuncinya tidak ditemukan. \par
 \noindent 
@@ -245,7 +254,9 @@ Jack \par
 26 \par
 \vspace{12pt}
 \noindent 
-How to change or add elements in a dictionary? \par
+\begin{itemize}
+	\item How to change or add elements in a dictionary? \par
+\end{itemize}
 \noindent 
 Kamus bisa berubah-ubah. Kita bisa menambahkan item baru atau mengubah nilai barang yang ada menggunakan operator penugasan. \par
 \noindent 
@@ -283,7 +294,9 @@ Saat menjalankan program, hasilnya adalah: \par
  $  \{  $'name': 'Jack', 'age': 27, 'address': 'Downtown' $  \}  $ \par
 \vspace{12pt}
 \noindent 
-How to delete or remove elements from a dictionary? \par
+\begin{itemize}
+	\item How to delete or remove elements from a dictionary? \par
+\end{itemize}
 \noindent 
 Kita bisa menghapus item tertentu dalam kamus dengan menggunakan metode pop (). Metode ini menghilangkan item dengan tombol yang disediakan dan mengembalikan nilainya. \par
 \noindent 
@@ -371,6 +384,18 @@ When you run the program, the output will be: \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
+
+\begin{itemize}
+	\item Method Build Dictionary
+\end{itemize}
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{figures/Method}}
+	\caption{Method Build Dictionary Python}
+	\label{Method Build Dictionary Python}
+\end{figure}
+
+\vspace{12pt}
 Tipe data daftar memiliki beberapa metode lagi. Berikut adalah semua metode daftar objek: \par
 \vspace{12pt}
 \noindent 
@@ -417,4 +442,77 @@ Urutkan item daftar di tempat (argumen dapat digunakan untuk kustomisasi sortir,
 list.reverse () \par
 \noindent 
 Membalik unsur daftar, di tempat. \par
+
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\subsection{Dictionaries Introductions}
+\vspace{\baselineskip}
+\noindent Dictionaris\par
+
+
+\noindent \hspace*{0.5in}Introductions\par
+
+
+\noindent \hspace*{0.5in}Kami sudah mengenal daftar di bab sebelumnya. Di bab kursus Python online kami, kami \hspace*{0.5in}akan mempresentasikan kamus dan operator dan metode pada kamus. Program atau skrip \hspace*{0.5in}Python tanpa daftar dan kamus hampir tidak dapat dibayangkan. Seperti daftar kamus yang \hspace*{0.5in}bisa dengan mudah diubah, bisa menyusut dan berkembang ad libitum pada saat run time. \hspace*{0.5in}Mereka menyusut dan tumbuh tanpa perlu membuat salinan. Kamus dapat dimuat dalam \hspace*{0.5in}daftar dan sebaliknya. Tapi apa perbedaan antara daftar dan kamus? Daftar diurutkan dari \hspace*{0.5in}objek, sedangkan kamus tidak berurutan. Tapi perbedaan utamanya adalah item dalam \hspace*{0.5in}kamus diakses melalui kunci dan tidak melalui posisinya. Kamus adalah array asosiatif \hspace*{0.5in}(juga dikenal sebagai hash). Kunci kamus mana pun dikaitkan (atau dipetakan) ke sebuah \hspace*{0.5in}nilai. Nilai kamus bisa berupa tipe data Python. Jadi kamus adalah pasangan kunci-nilai \hspace*{0.5in}tak berurutan.\par
+
+
+\vspace{\baselineskip}
+\noindent \hspace*{0.5in}Kamus tidak mendukung urutan operasi dari jenis data urutan seperti string, tupel dan \hspace*{0.5in}daftar. Kamus termasuk tipe pemetaan built-in. Mereka adalah satu-satunya wakil \hspace*{0.5in}semacam ini!\par
+
+
+\vspace{\baselineskip}
+\noindent \hspace*{0.5in}Di akhir bab ini, kami akan menunjukkan bagaimana kamus dapat diubah menjadi satu \hspace*{0.5in}daftar, berisi (kunci, nilai) -tupel atau dua daftar, yaitu satu dengan kunci dan satu dengan \hspace*{0.5in}nilainya. Transformasi ini bisa dilakukan secara terbalik juga.\par
+
+\vspace{\baselineskip}
+\vspace{12pt}
+\vspace{\baselineskip}
+
+\noindent \hspace*{0.5in}Membuat kamus sama mudahnya dengan menempatkan item dalam kurung kurawal $ \{ $ $ \} $  \hspace*{0.5in}dipisahkan dengan koma. Item memiliki kunci dan nilai yang sesuai dinyatakan sebagai \hspace*{0.5in}pasangan, kunci: nilai. Sementara nilai dapat berupa tipe data apa pun dan dapat diulang, \hspace*{0.5in}kunci harus terdiri dari tipe yang tidak dapat diubah (string, number atau tupel dengan \hspace*{0.5in}elemen yang tidak berubah) dan harus unik.\par
+
+\vspace{\baselineskip}
+\vspace{12pt}
+\noindent \hspace*{0.5in}Sementara pengindeksan digunakan dengan jenis wadah lain untuk mengakses nilai, kamus \hspace*{0.5in}menggunakan tombol. Kunci dapat digunakan baik di dalam tanda kurung siku atau dengan \hspace*{0.5in}metode get (). Perbedaan saat menggunakan get () adalah mengembalikan Elemen alih-alih \hspace*{0.5in}KeyError, jika kuncinya tidak ditemukan.\par
+
+\vspace{\baselineskip}
+\noindent \hspace*{0.5in}\hspace*{0.5in}my$ \_ $ dict = $ \{ $ 'name':'Jack', 'age': 26$ \} $ \par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}$\#$  Output: Jack\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}print(my$ \_ $ dict['name'])\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}$\#$  Output: 26\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}print(my$ \_ $ dict.get('age'))\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}$\#$  Trying to access keys which doesn't exist throws error\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}$\#$  my$ \_ $ dict.get('address')\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}$\#$  my$ \_ $ dict['address']\par
+
+
+\noindent \hspace*{0.5in}Saat menjalankan program, hasilnya adalah:\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}Jack\par
+
+
+\noindent \hspace*{0.5in}\hspace*{0.5in}26\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+
+
 
