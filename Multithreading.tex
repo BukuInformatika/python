@@ -1,30 +1,32 @@
-\section{Multithreading}
-\hspace*{0.5in} Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut : \par
 
+\documentclass [12pt,a4paper,notitlepage,oneside,bahasa]{article}
+\usepackage[left=3.00 cm, right=2.00 cm, bottom=2.00 cm, top=3.00 cm]{geometry}
+\begin{document}
+\title{\textbf Multithreading}
+\maketitle
+
+Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut :
 \begin{itemize}
-\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
+	\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
+	\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.
+\end{itemize}
 
-\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
-\par
-
-\vspace{12pt}
-\hspace*{0.5in} Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan. \par
-
+Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan. \par
 \begin{itemize}
-\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})\end{itemize}
-\par
+	\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})
+	\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. 
+\end{itemize}
 \noindent 
-\begin{itemize}
-\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
-\par
+\section{Memulai Thread Baru}
+
 \noindent 
-\subsection{Memulai Thread Baru} \par
+\hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} :
 \noindent 
-\hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} : \par
-\noindent 
+
 \begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center} \par
 Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window. \par
 \hspace*{0.5in} Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir. Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
+
 
 \vspace{12pt}
 Contoh : 
@@ -42,23 +44,45 @@ While count <5:
 Time.sleep(delay)
 Count +=1 
 Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ 
-(threadName, time.ctime(time.time()))
+(hreadName, time.ctime(time.time()))
 
-#  $ Create two thread as follows
+
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Contoh : 
+\begin{verbatim}
+#!/usr/bin/python
+
+import thread
+import time
+
+# Define a function for the thread
+def print_time( threadName, delay):
+   count = 0
+   while count < 5:
+      time.sleep(delay)
+      count += 1
+      print "%s: %s" % ( threadName, time.ctime(time.time()) )
+
+# Create two threads as follows
 try:
-thread.start $  \_  $new $  \_  $thread(print $  \_  
-$time, ( $ " $Thread-1 $ " $, 2, ))
-thread.start $  \_  $new $  \_  $thread(print $  \_  
-$time, ( $ " $Thread-2 $ " $, 4,))
-except: 
-print " $Error: unable to start thread 
+   thread.start_new_thread( print_time, ("Thread-1", 2, ) )
+   thread.start_new_thread( print_time, ("Thread-2", 4, ) )
+except:
+   print "Error: unable to start thread"
 
 while 1:
-pass 
+   pass
 \end{verbatim}
+	
+	%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
+	
+	
+	\newpage
+	
+	Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : \par
 
-\vspace{80pt}	
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : \par
 \vspace{10pt}
 \noindent 
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:17 2009}\end{center} \par
@@ -87,6 +111,8 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : \par
 \hspace*{0.5in} Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
 
 \vspace{12pt}
+
+
 \subsection {Modul Threading} \par
 \hspace*{0.5in} Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
 \hspace*{0.5in} The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
@@ -98,6 +124,7 @@ Mengembalikan jumlah objek \textit{thread} yang aktif \par
 Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
 \item \textbf{t}\textbf{hreading.enumerate() } \par
 Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
+
 
 \vspace{12pt}
 \hspace*{0.5in} Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
@@ -168,7 +195,49 @@ print  $ " $Exiting Main Thread $ " $
 \end{verbatim}
 
 \vspace{12pt}
-Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
+
+Setelah membuat baru \textit{thread} subclass, dapat membuah sebuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
+\vspace{12pt}
+	Contoh :
+\begin{verbatim}
+#!/usr/bin/python
+
+import threading
+import time
+
+exitFlag = 0
+
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+    def run(self):
+        print "Starting " + self.name
+        print_time(self.name, self.counter, 5)
+        print "Exiting " + self.name
+
+def print_time(threadName, delay, counter):
+    while counter:
+        if exitFlag:
+            threadName.exit()
+        time.sleep(delay)
+        print "%s: %s" % (threadName, time.ctime(time.time()))
+        counter -= 1
+
+# Create new threads
+thread1 = myThread(1, "Thread-1", 1)
+thread2 = myThread(2, "Thread-2", 2)
+
+# Start new Threads
+thread1.start()
+thread2.start()
+
+print "Exiting Main Thread"
+\end{verbatim}
+	Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
+
 \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
@@ -200,62 +269,64 @@ Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
 {\fontsize{10pt}{10pt}\selectfont Exiting Thread=2} \par
 
 \vspace{10pt}
-\subsection{Sinkronisasi Thread} \par
-\hspace*{0.5in} \textit{T}\textit{hread}\textit{ing }modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
-\hspace*{0.5in} The \textit{acquire}\textit{ }\textit{(blocking)}\textit{ }metode objek kunci baru digunakan untuk memaksa \textit{thread}\textit{ }untuk menjalankan serempak. Opsional \textit{blocking} parameter memungkikan untuk mengontrol apakah\textit{ thread} menunggu untuk mendapatkan kunci. \par
-\hspace*{0.5in} Jika \textit{blocking} diatur ke 0, \textit{thread} segera kembali dengan nilai 0 jika kunci tidak dapat diperoleh dan dengan 1 jika kunci dikuisisi. Jika pemblokiran diatur ke 1, blok dan menunggu kunci yang akan dirilis. \par
-\hspace*{0.5in}The \textit{release()} metode objek kunci baru digunakan untuk melepaskan kunci ketika tidak lagi diperlukan.  \par
+
+
+\section{Sinkronisasi Thread}
+\textit{Threading} modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
+The \textit{acquire}\textit{ }\textit{(blocking)}\textit{ }metode objek kunci baru digunakan untuk memaksa \textit{thread}\textit{ }untuk menjalankan serempak. Opsional \textit{blocking} parameter memungkikan untuk mengontrol apakah\textit{ thread} menunggu untuk mendapatkan kunci. \par
+Jika \textit{blocking} diatur ke 0, \textit{thread} segera kembali dengan nilai 0 jika kunci tidak dapat diperoleh dan dengan 1 jika kunci dikuisisi. Jika pemblokiran diatur ke 1, blok dan menunggu kunci yang akan dirilis. \par
+The \textit{release()} metode objek kunci baru digunakan untuk melepaskan kunci ketika tidak lagi diperlukan.  \par
 \noindent 
-
-\vspace{12pt}
-Contoh: 
+Contoh:
 \begin{verbatim}
-#  $!/usr/bin/python
-
+\noindent 
+#!/usr/bin/python
 import threading
 import time
+class myThread (threading.Thread):
+  def_init_(self, threadID, name, counter):
+	threading.Thread._init_ (self)
+	self.threadID = threadID
+	self.name = name
+	self.counter = counter
+  def run(self)
+ 	print  "Starting" + self.name
 
-class myThread (threading.Thread): 
-def $  \_  $init $  \_  $(self, threadID, name, 
-counter):
-threading.Thread. $  \_  $init $  \_  $(self)
-self.threadID = threadID
-self.name = name
-self.counter = counter
-def run(self) 
-print  $ " $Starting  $ " $+ self.name 
-$  \#  $ Get lock to synchronize threads 
-ThreadLock.acquire() 
-print $  \_  $time(self.name, self.counter, 3) 
-#  $ Free lock to realease next thread
-ThreadLock.release()
-Def print $  \_  $time(threadName, delay, counter):
-while counter:
-time.sleep(delay)
-print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  $ 
-(threadName, time.ctime(time.time()))
-counter -= 1
-threadLock = threading.Lock() 
-threads = []
-#  $ Create new threads
-thread1 = myThread(1,  $ " $Thread-1,1 ) 
-thread2 = myThread(2,  $ " $Thread-2,2 )
-#  $ Start new Threads} 
-thread1.start() 
+ 	#Get lock to synchronize threads
+	ThreadLock.acquire()
+print_time(self.name, self.counter, 3)
+
+#Free lock to realease next thread
+	ThreadLock.release()
+ 
+Def print_time(threadName, delay, counter):
+	while counter:
+	time.sleep(delay)
+	print  " \% s:\% s"\% (threadName, time.ctime(time.time()))
+	counter -= 1
+	
+threadLock = threading.Lock()
+	threads = []
+
+#  Create new threads
+thread1 = myThread(1, "Thread-1", 1)
+thread2 = myThread(2, "Thread-2", 2)
+
+#Start new Threads
+thread1.start()
 thread2.start()
 
-#Add threads to thread list} 
-threads.append(thread1)} 
-thread2.append(thread2)} 
-\vspace{10pt}
+# Add threads to thread list
+threads.append(thread1)
+thread2.append(thread2)
 
-#  $ Wait for all threads to complete}  
+#Wait for all threads to complete}
 Fort t in threads:
-t.join()
-print  $ " $Exiting Main thread $ " $
+	t.join()
+	print "Exiting Main thread"
 \end{verbatim}
 
-\vspace{8pt}
+
 Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
 \noindent 
@@ -275,10 +346,11 @@ Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
 
-\vspace{8pt}
-\subsection{Multithreaded Antrian Prioritas} \par
-\hspace*{0.5in} The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
-\vspace{15pt}
+\vspace{12pt}
+
+\section{Multithreaded Antrian Prioritas} \par
+The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
+
 \begin{itemize}
 	\item \textbf{get()} \par
 		Menghapus dan mengembalikan item dari antrian
@@ -296,74 +368,73 @@ Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 \par
 	Mengembalikan benar jika antrian penuh jika tidak, salah
 
+
 \vspace{12pt}
 Contoh:  
 \begin{verbatim}
 #  $!/usr/bin/python}  
 
+
 import Queue
 import threading
 import time
 
-exitFlag = 0 
 
-class myThread (threading.Thread): 
-def   $  \_  $init $  \_  $(self, threadID, name, q):
-threading.Thread. $  \_  $init $  \_  $(self) 
-self.name = name
-self.q = q
-def run(self):
-print  $ " $Starting  $ " $+ self.name
-process $  \_  $data(self.name, self.q) 
-print  $ " $Exiting  $ " $+ self.name 
-def process $  \_  $data(threadName, q):
-while not exitFlag:
-queuLock.acquire()
-if not workQueu.empty(): 
-data = q.get() 
-queueLock.release() 
-print  $ " $ $  \%  $s processing  $  \%  $s $ " $ 
-$  \%  $ (threadName, data) 
-else: 
-queueLock.release()
-time.sleep(1) 
+exitFlag = 0
 
-threadList = [ $ " $Thread-1 $ " $,  $ " $Thread-2 $
-" $,  $ " $Thread-3 $ " $]
-nameList = [ $ " $One $ " $,  $ " $Two $ " $,  $ "
-$Three $ " $,  $ " $Four $ " $,  $ " $Five $ " $]
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, q):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.q = q
+    def run(self):
+        print "Starting " + self.name
+        process_data(self.name, self.q)
+        print "Exiting " + self.name
+
+def process_data(threadName, q):
+    while not exitFlag:
+        queueLock.acquire()
+        if not workQueue.empty():
+            data = q.get()
+            queueLock.release()
+            print "%s processing %s" % (threadName, data)
+        else:
+            queueLock.release()
+        time.sleep(1)
+
+threadList = ["Thread-1", "Thread-2", "Thread-3"]
+nameList = ["One", "Two", "Three", "Four", "Five"]
 queueLock = threading.Lock()
-workLock = Queue.Queue(10)
-threads = [] 
-threadID = 1 
+workQueue = Queue.Queue(10)
+threads = []
+threadID = 1
 
-#  $ Create new threads
-For tName in threadList: 
-thread = myThread(threadID, tName, workQueue)
-thread.start()
-thread.append(thread)
-threadID +=1
-
-#  $ Fill the queue 
-queueLock.acquire() 
+# Create new threadsfor tName in threadList:
+    thread = myThread(threadID, tName, workQueue)
+    thread.start()
+    threads.append(thread)
+    threadID += 1
+# Fill the queuequeueLock.acquire()
 for word in nameList:
-workQueue.put(word) 
+    workQueue.put(word)
 queueLock.release()
 
-#  $ Wait for queue to empty
-while not workQueue.empty(): 
-pass 
-
-#  $ Notify threads it?s time to exit
+# Wait for queue to empty} \par
+while not workQueue.empty():
+    pass
+    
+# Notify threads it?s time to exit} \par
 exitFlag = 1
 
-#  $ Wait for all threads to complete
-For t in threads:
-t.join()
-print  $ " $Exiting Main Thread $ " $
+# Wait for all threads to complete} \par
+for t in threads:
+    t.join()
+print "Exiting Main Thread"
 \end{verbatim}
 
-\vspace{10pt} 
+
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 \vspace{12pt}
 \noindent 
@@ -391,30 +462,6 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
 
-\section{Cara menggunakan Threading untuk Membuat Benang}
-\hspace*{0.5in} Threading menggabungkan semua metode thread dan menampilkan beberapa metode tambahan. Terlepas dari metode di atas, threading juga menyajikan kelas Thread yang dapat dicoba untuk mengimplementasikan thread. Ini adalah varian object-oriented dari multithreading Python. Kelas <Thread> menerbitkan metode berikut :
+\vspace{12pt}
 
-\begin{table}[ht]
-	\caption{Ukuran}
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
-		\hline
-		Kelas&  Penjelasan Metode&\cr
-		\hline
-		run():&Ini adalah fungsi entry point untuk thread manapun&\cr
-		start():&Metode start () memicu thread saat metode dijalankan dipanggil&\cr
-		join([time]):&Metode join () memungkinkan sebuah program untuk menunggu thread untuk diakhiri&\cr
-		\hline
-	\end{tabular*}
-	\begin{tablenotes}
-	\end{tablenotes}
-\end{table}
-
-\section{Mengimplementasikan Thread menggunakan Threading}
-\hspace*{0.5in} Buatlah subkelas dari kelas Thread. Timpa metode (self [, args]) untuk memberi argumen sesuai persyaratan. Selanjutnya, timpa metode run (self [args]) untuk mengkodekan logika bisnis benang.
-
-\hspace*{0.5in} Setelah mendefinisikan subclass Thread baru, harus memberi instantiate untuk memulai thread baru. Berikut \ref{Mengimplementasikan Thread menggunakan Threading} Mengimplementasikan Thread menggunakan Threading :
-\begin{figure}[ht]
-	\centerline{\includegraphics[width=0.75\textwidth]{figures/Thread}}
-	\caption{Mengimplementasikan Thread menggunakan Threading}
-	\label{Mengimplementasikan Thread menggunakan Threading}
-\end{figure}
+\end{document}

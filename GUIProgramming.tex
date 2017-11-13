@@ -1,10 +1,32 @@
-\section{GUI Programming}
-\hspace*{0.5in} Python menyediakan berbagai pilihan untuk mengembangkan antarmuka pengguna grafis (GUIs). Yang paling tercantum dibawah ini : 
-\begin{itemize}
-\item Tkinter 
 
-Antarmuka Python ke toolkit Tk GUI dikirimkan dengan Python.  
-\item wxPython 
+\documentclass [12pt,a4paper,notitlepage,oneside,bahasa]{article}
+\usepackage[left=3.00 cm, right=2.00 cm, bottom=2.00 cm, top=3.00 cm]{geometry}
+\begin{document}
+\title{\textbf GUI Programming}
+\maketitle
+
+
+Python menyediakan berbagai pilihan untuk mengembangkan antarmuka pengguna grafis (GUIs). 
+Berikut dibawah ini merupakan berbagai pilihan yang disediakan oleh Python :
+\begin{itemize}
+\item Tkinter \par
+Tkinter merupakan standar bahasa python yang ditetapkan untuk membangun suatu antarmuka pengguna grafik (GUI). 
+\item wxPython \par
+wxPython adalah toolkit antarmuka pengguna grafis (GUI) yang digunakan dalam skripsi ini dan ini adalah pembungkus untuk toolkit wxWidgets.
+\item Jpython \par
+Port Python untuk java yang memberikan Python script akses tanpa batas ke perpustakaan kelas java pada mesin lokal \par
+\end{itemize}
+\vspace{12pt}
+\noindent 
+\section{\textbf Tkinter Pemrograman}
+Tkinter adalah perpustakaan GUI standar untuk Python. Python bila dikombinasikan dengan Tkinter menyediakan cara yang amat mudah dan cepat untuk membuat aplikasi GUI. Tkinter menyediakan antarmuka yang berorientasi objek yang kuat untuk toolkit Tk GUI.Membuat aplikasi GUI menggunakan Tkinter adalah tugas yang mudah. Yang diperlukan adalah melakukan langkah-langkah sebagai berikut : 
+\begin{enumerate} 
+	\item Mengimpor Tkinter modul 
+	\item Buat jendela utama aplikasi GUI
+	\item Tambahkan satu atau lebih dari widget tersebut diatas ke aplikasi GUI
+	\item Masukkan acara loop utama untuk mengambil tindakan terhadap setiap peristiwa dipicu oleh pengguna
+\end{enumerate}
+
 
 antarmuka Python open-source untuk wxWindows 
  
@@ -35,6 +57,20 @@ top = Tkinter.Tk()}
 top.mainloop()} 
 \end{verbatim}
 
+
+\vspace{12pt}
+\vspace{12pt}
+\noindent 
+Contoh : 
+\begin{verbatim}
+#!/usr/bin/python 
+import Tkinter 
+top = Tkinter.Tk()
+# Code to add widgets will go here...
+top.mainloop()
+\end{verbatim}
+
+
 \vspace{10pt}
 \subsection{Tkinter Widget} 
 \hspace*{0.5in} Tkinter menyediakan berbagai kontrol seperti tombol, label dan kotak teks yang digunakan dalam aplikasi GUI. Kontrol ini biasanya disebut widget.  
@@ -43,45 +79,54 @@ top.mainloop()}
 \vspace{100pt}
 
 
+
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
 
 
-\begin{table}[ht]
+\begin{table}[h]
 	\caption{Ukuran}
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline
+			Operator & Penjelasan \\
+			\hline
+			Button & Menampilkan tombol dalam aplikasi\\
+			Canvas & Menggambar bentuk seperti garis, oval, 
+			poligon dan persegi panjang dalam aplikasi\\
+			Checkbutton & Menampilkan sejumlah pilihan 
+			sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu\\
+			Entry & Menampilkan bidang garis teks tunggal untuk menerima nilai-nilai dari pengguna\\
+			Frame & Wadah untuk mengatur widget lainnya\\
+			Label & Memberikan keterangan garis single untuk widget lainnya. Hal ini berisi gambar\\
+			Listbox & Menyediakan daftar pilihan kepada pengguna\\
+			Menubutton & Menampilkan menu dalam aplikasi\\
+			Menu & Memberikan berbagai perintah untuk pengguna. Perintah-perintah ini terkandung di dalam MenuButton\\
+			Message & Menampilkan bidang teks multiline untuk menerima nilai-nilai dari pengguna\\
+			RadioButton & Menampilkan sejumah pilihan sebagai tombol radio. Pengguna dapat memilih hanya satu pilihan pada suatu waktu\\
+			Scale & Menyediakan widget slide\\
+			Scrollbar & Menambah kemampuan bergulir ke berbagai widget seperti kotak daftar\\
+			Text & Menampilka teks dalam beberapa garis\\
+			Toplevel & Menyediakan wajah jendela terpisah\\
+			PanedWindow & Wadah yang mengandung sejumlah panel disusun horizontal atau vertikal\\
+			LabelFrame & Wadah widget sederhana. Bertindak sebagai spacer atau wajah untuk layout jendela kompleks\\
+			TkMessageBox & Menampilkan kotak pesan dalam aplikasi\\
+			Spinbox & Memilih sejumlah tetap nilai-nilai\\
 		\hline
-		Operator& Penjelasan \cr
-		\hline
-		Button&SMenampilkan tombol dalam aplikasi&\cr
-		Canvas&Menggambar bentuk seperti garis, oval, poligon dan persegi panjang dalam aplikasi&\cr
-		Checkbutton&Menampilkan sejumlah pilihan sebagai kotak centang. Pengguna dapat memilih beberapa pilihan pada suatu waktu&\cr
-		Entry&Menampilka bidang garis teks tunggal untuk menerima nilai-nilai dari pengguna\cr
-		Frame&Wadah untuk mengatur widget lainnya&\cr
-		Label &Memberikan keterangan garis single untuk widget lainnya. Hal ini berisi gambar&\cr
-		Listbox &Menyediakan daftar pilihan kepada pengguna&\cr
-		Menubutton&Menampilkan menu dalam aplikasi&\cr
-		Menu&Memberikan berbagai perintah untuk pengguna. Perintah-perintah ini terkandung di dalam MenuButton&\cr
-		Message&Menampilkan bidang teks multiline untuk menerima nilai-nilai dari pengguna&\cr
-		RadioButton&Menampilkan sejumah pilihan sebagai tombol radio. Pengguna dapat memilih hanya satu pilihan pada suatu waktu&\cr
-		Scale&Menyediakan widget slide&\cr
-		Scrollbar &Menambah kemampuan bergulir ke berbagai widget seperti kotak daftar&\cr
-		Text&Menampilka teks dalam beberapa garis&\cr
-		Toplevel&Menyediakan wajah jendela terpisah&\cr
-		PanedWindow&Wadah yang mengandung sejumlah panel disusun horizontal atau vertikal&\cr
-		LabelFrame&Wadah widget sederhana. Bertindak sebagai spacer atau wajah untuk layout jendela kompleks&\cr
-		TkMessageBox&Menampilkan kotak pesan dalam aplikasi&\cr
-		Spinbox &Memilih sejumlah tetap nilai-nilai&\cr
-		\hline
-	\end{tabular*}
-	\begin{tablenotes}
-	\end{tablenotes}
+		\end{tabular}
+		\end{center}
 \end{table}
+
+	
 
 
  %%%%%%%%%%%%  Table No:1 Ends Here %%%%%%%%%%%%%%
 
 
 \vspace{12pt}
+
+\subsection{Atribut Tkinter}
+\noindent 
+
 \hspace*{0.5in} Beberapa atribut sebagai ukuran, warna dan font ditentukan. Berikut adalah beberapa atribut standar : 
  
 \begin{itemize}
@@ -94,6 +139,7 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 \item Menentukan unit dengan menentukan dimensi untuk string yang berisi sejumlah diikuti oleh :
 \end{itemize}
 \vspace{100pt}
+
  
 
 
@@ -102,373 +148,322 @@ Berbagai panjang, lebar, dan dimensi lain dari widget digambarkan dalam banyak u
 
 \begin{table}[ht]
 	\caption{Ukuran}
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+	\begin{center}
+	\begin{tabular}{|c|c|}
 		\hline
 		Karakter&  Penjelasan \cr
 		\hline
-		c&Sentimeter&\cr
-		i&Inci&\cr
-		m&Milimeter&\cr
-		p&Poin printer\cr
+		c&Sentimeter\\
+		i&Inci\\
+		m&Milimeter\\
+		p&Poin printer\\
 		\hline
-	\end{tabular*}
-	\begin{tablenotes}
-	\end{tablenotes}
+	\end{tabular}
+	\end{center}
 \end{table}
 
 
  %%%%%%%%%%%%  Table No:2 Ends Here %%%%%%%%%%%%%%
 
 
-\hspace*{0.5in} Tkinter mengungkapkan panjang sebagai integer jumlah piksel. Berikut ini adalah daftar pilihan panjang umum: 
  
+ \hspace*{0.5in} \vspace{12pt}
+\subsection{Panjang Tkinter}
+ \hspace*{0.5in} Tkinter mengungkapkan panjang sebagai integer jumlah piksel. Berikut ini adalah daftar pilihan panjang umum:
+\noindent 
 \begin{itemize}
-\item borderwidth 
-
-Lebar batas yang memberikan tampilan tiga dimensi untuk widget 
-\item highlightthickness 
-
-Lebar puncak persegi panjang ketika widget memiliki fokus 
-\item padX padY 
-
-Ruang tambahan widget dari manajer tata letak luar minimum widget perlu menampilkan isinya di x dan y arah 
-\item selectborderwidth 
-
-Lebar perbatasan tiga dimensi disekitar dipilih item widget 
-\item wraplength 
-
-Panjang garis maksimum untuk widget yang melakukan kata membungkus 
-\item height 
-
-Tinggi diinginkan widget 
-\item underline 
-
-Indeks karakter untuk menggarisawahi dalam teks widget  
-\item width 
- 
-\item Lebar diinginkan widget
-
-\item Warna 
-\end{itemize}
-\vspace{12pt}
- 
-\hspace*{0.5in} Tkinter memiliki warna dengan string. Ada dua cara umum untuk menentukan warna di Tkiter, yaitu : 
- 
-\begin{itemize}
-\item Menggunakan string menentukan proporsi merah, hijau dan biru didigit heksadesimal. Misalnya  $ " $ $  \#  $ffff $ " $ putih,  $ " $ $  \#  $000000 $ " $ hitam dan  $ " $ $  \#  $000fff000 $ " $ hijau. 
- 
-\item Menggunakan lokal standar nama warna . warna-warna  $ " $white $ " $, $ " $black $ " $,  $ " $green $ " $ dan  $ " $magenta $ " $ akan selalu tersedia.\end{itemize}
- 
-\vspace{12pt}
-Pilihan warna umum : 
- 
-\begin{itemize}
-\item activebackground 
-
-Warna latar berlakang untuk widget ketika widget aktif 
-\item activeforeground 
-
-Warna depan untuk widget ketika widget aktif 
-\item background 
-
-Merepresentasikan sebagai \textit{bg} 
-\item disableforeground 
-
-Warna depan untuk widget ketika widget dinonaktifkan 
-\item foreground 
-
-Merepresentasikan fg 
-\item highlightbackground 
-
-Warna latar belakang dari daerah puncak ketika widget memiliki fokus 
-\item hightlightcolor 
-
-Warna depan dari wilayah puncak ketika widget memiliki fokus 
-\item selectbackground 
-
-Warna latar belakang untuk item yang dipilih dari widget 
-\item selectforeground 
-
-Warna depan untuk item yang dipilih dari widget 
-\item Font 
- 
-Sebagai tupel yang elemen pertama adalah keluarga font diikuti dengan string yang berisi satu atau lebih gaya pengubah tebal,miring, garis bawah dan overstrike. 
+	\item borderwidth
+	Lebar batas yang memberikan tampilan tiga dimensi untuk widget
+	\item highlightthickness
+	Lebar puncak persegi panjang ketika widget memiliki fokus
+ 	\item padX padY
+	Ruang tambahan widget dari manajer tata letak luar minimum widget perlu menampilkan isinya di x dan y arah
+	\item selectborderwidth
+	Lebar perbatasan tiga dimensi disekitar dipilih item widget
+	\item wraplength \par
+	Panjang garis maksimum untuk widget yang melakukan kata membungkus
+	\item height
+	Tinggi diinginkan widget
+	\item underline
+	Indeks karakter untuk menggarisawahi dalam teks widget 
+	\item width
+	\item Lebar diinginkan widget
 \end{itemize}
  
+\noindent 
+subsection{Warna Tkinter}
+\noindent 
+Tkinter memiliki warna dengan string. Ada dua cara umum untuk menentukan sebuah warna di Tkiter, yaitu : \par
+\noindent 
+\begin{itemize}
+	\item Menggunakan string menentukan proporsi merah, hijau dan biru didigit heksadesimal. Misalnya  `` \#ffff '' putih,  ``  \#000000 '' hitam dan  ``\#000fff000 '' hijau.
+\noindent 
+	\item Menggunakan lokal standar nama warna . warna-warna ``white'', ``black'',  ``green'' dan  ``magenta'' akan selalu tersedia.
+\end{itemize}
+
 \vspace{12pt}
-\hspace*{0.5in} Dapat membuat  $ " $font object $ " $ dengan mengimpor modul tkFont dan menggunakan kelas konstruktor font nya : 
-Import tkFont 
-Font = tkFont.Font (option, ....) 
+Pilihan warna umum :
+\noindent 
+\begin{itemize}
+	\item activebackground \par
+	Warna latar berlakang untuk widget ketika widget aktif \par
+	\noindent 
+	\item activeforeground \par
+	Warna depan untuk widget ketika widget aktif \par
+	\noindent 
+	\item background \par
+	Merepresentasikan sebagai \textit{bg} \par
+	\noindent 
+	\item disableforeground \par
+	Warna depan untuk widget ketika widget dinonaktifkan \par
+	\noindent 
+	\item foreground \par
+	Merepresentasikan fg \par
+	\noindent 
+	\item highlightbackground \par
+	Warna latar belakang dari daerah puncak ketika widget memiliki fokus \par
+	\noindent 
+	\item hightlightcolor \par
+	Warna depan dari wilayah puncak ketika widget memiliki fokus \par
+	\noindent 
+	\item selectbackground \par
+	Warna latar belakang untuk item yang dipilih dari widget \par
+	\noindent 
+	\item selectforeground \par
+	Warna depan untuk item yang dipilih dari widget \par
+	\noindent 
+	\item Font \par
+	\noindent 
+	Sebagai tupel yang elemen pertama adalah keluarga font diikuti dengan string yang berisi satu atau lebih gaya pengubah tebal,miring, garis bawah dan overstrike. 
+\end{itemize}
+	\noindent 
+Contoh : \par
+	\begin{verbatim}
+		("Helvetica","16") untuk 16 - point Helvetica biasa
+		("Times","24","beranimiring") untuk 24 - point kali miring tebal
+	\end{verbatim}
+ 		\par
+\vspace{12pt}
+Dapat membuat  ``font object'' dengan mengimpor modul tkFont dan menggunakan kelas konstruktor font nya : \par
+Import tkFont \par
+Font = tkFont.Font (option, ....) \par
+
 \vspace{12pt}
 Berikut adalah daftar pilihan : 
  
 \begin{itemize}
-\item Family 
 
-Font nama keluarga sebagai string 
-\item Size 
-
-Font tinggi sebagai integer dalam poin 
-\item Weight 
-
-Bold untuk teal, normal untuk berat badan secara teratur 
-\item Slant 
-
-Italic untuk miring, roman untuk unstlanted 
-\item Underline 
-
-1 untuk teks yang digarisbawahi, 0 untuk normal 
-\item Overstrike 
-
-1 untuk teks telak, 0 untuk normal 
-Jika berjalan di bawah X window system, dapat menggunakan salah satu nama font X. Sebagai contoh, font bernama  $ " $-*lucidatypewriter-medium-r-*-*-*-140-*-*-* $ " $ adalah favorit fixed-width font penulis untuk digunakan pada layar. 
-\item Jangkar  
-
-Jangkar digunakan untuk mendefinisikan mana teks diposisikan relatif terhadap titik acuan. 
+	\item Family \par
+	Font nama keluarga sebagai string \par
+	\noindent 
+	\item Size \par
+	Font tinggi sebagai integer dalam poin \par
+	\noindent 
+	\item Weight \par
+	Bold untuk teal, normal untuk berat badan secara teratur \par
+	\noindent 
+	\item Slant \par
+	Italic untuk miring, roman untuk unstlanted \par
+	\noindent 
+	\item Underline \par
+	1 untuk teks yang digarisbawahi, 0 untuk normal \par
+	\noindent 
+	\item Overstrike \par
+	1 untuk teks telak, 0 untuk normal \par
+	Jika berjalan di bawah X window system, dapat menggunakan salah satu nama font X. Sebagai contoh, font bernama  \verb|"-*lucidatypewriter-medium-r-*-*-*-140-*-*-*"| adalah favorit fixed-width font penulis untuk digunakan pada layar. \par
+	\noindent 
+	\item Jangkar \par
+	\noindent 
+	Jangkar digunakan untuk mendefinisikan mana teks diposisikan relatif terhadap titik acuan. Berikut adalah daftar kemungkinan konstanta yang dapat digunakan :
+	\noindent
+	\begin{itemize}
+		\item NW  
+		\item N
+		\item NE
+		\item W
+		\item TENGAH
+		\item E
+		\item SW
+		\item S
+		\item SE
+	\end{itemize}
 \end{itemize}
- 
+ \par
 \vspace{12pt}
-\hspace*{0.5in} Jika menggunakan tengah sebagai jangkar tek, tek akan ditengahkan horizontal dan vertikal disekitar titik referensi. 
-Jangkar NW akan posisi teks sehingga titik referensi bertepatan dengan laut sudut kotak berisi teks 
-Jangakr W akan pusat teks secara vertikal disekitar titik referensi dengan tepi kiri kotak teks yang melewati titik itu dan sebagainya. 
-Jika membuat widget kecil didalam bingkai besar dan menggunakan jangkar = SE pilihan, widget akan ditempatkan disudut kanan bawah gambar. Jika menggunakan anchor = N sebaliknya widget akan dipusatkan disepanjang tepi atas. 
+Jika menggunakan tengah sebagai jangkar tek, tek akan ditengahkan horizontal dan vertikal disekitar titik referensi. \par
+Jangkar NW akan posisi teks sehingga titik referensi bertepatan dengan laut sudut kotak berisi teks \par
+Jangakr W akan pusat teks secara vertikal disekitar satu titik referensi dengan tepi kiri kotak teks yang melewati titik itu dan sebagainya. \par
+Jika membuat widget kecil didalam bingkai besar dan menggunakan jangkar = SE pilihan, widget akan ditempatkan disudut kanan bawah gambar. Jika menggunakan anchor = N sebaliknya widget akan dipusatkan disepanjang tepi atas. \par
+\noindent 
 
-\hspace*{0.5in}Widget mengacu pada efek 3-D simulasi terbaru disekitar bagian luar widget. Berikut adalah daftar konstanta yang mungkin dapat digunakan untuk atribut: 
- 
+subsection{Gaya relief}
+
+Widget mengacu pada efek 3-D simulasi terbaru disekitar bagian luar widget. Berikut adalah daftar konstanta yang mungkin dapat digunakan untuk atribut:
 \begin{itemize}
-\item Datar 
- 
-\item Dibesarkan 
- 
-\item Cekung 
- 
-\item Alur 
- 
-\item Punggung bukit
+	\item Datar
+	\item Dibesarkan
+	\item Cekung
+	\item Alur
+	\item Punggung bukit
 \end{itemize}
- 
+
+
 \vspace{12pt}
-Contoh : 
+Contoh : \par
 \begin{verbatim}
-From Tkinter import *} 
+from Tkinter import *
+import Tkinter
 
-Import Tkinter} 
+top = Tkinter.Tk()
 
- top = Tkinter.Tk()} 
-B1 = Tkinter.Button(top, text= $ " $FLAT $ " $, relief
-=FLAT)} 
-B2 = Tkinter.Button(top, text= $ " $RAISED $ " $, relief
-=RAISED)} 
-B3 =Tkinter.Button(top, text= $ " $SUNKEN $ " $, relief
-=SUNKEN)} 
-B4=Tkinter.Button(top, text= $ " $GROOVE $ " $, relief
-=GROOVE)} 
-B5=Tkinter.Button(top, text= $ " $RIDGE $ " $, relief
-=RIDGE)} 
+B1 = Tkinter.Button(top, text ="FLAT", relief=FLAT )
+B2 = Tkinter.Button(top, text ="RAISED", relief=RAISED )
+B3 = Tkinter.Button(top, text ="SUNKEN", relief=SUNKEN )
+B4 = Tkinter.Button(top, text ="GROOVE", relief=GROOVE )
+B5 = Tkinter.Button(top, text ="RIDGE", relief=RIDGE )
 
- B1.pack()} 
- B2.pack()} 
- B3.pack()} 
- B4.pack()} 
- B5.pack()} 
- top.mainloop()} 
- \end{verbatim}
- 
-Ada beberapa jenis bitmap yang tersedia, diantaranya:  
-\begin{itemize}
-\item Kesalahan 
- 
-\item Gray75 
- 
-\item Gray50 
- 
-\item Gray12 
- 
-\item Jam Pasir 
- 
-\item Info 
- 
-\item Questhead 
- 
-\item Perantanyaan  
- 
-\item Peringatan\end{itemize}
- 
-\vspace{12pt}
-Contoh: 
-\begin{verbatim}
- From Tkinter import *} 
- 
- Import Tkinter} 
-
- Top = Tkinter.Tk()} 
-
- B1 = Tkinter.Button(top, text = $ " $error $ " $, relief
- =RAISED,  $    $ bitmap= $ " $error $ " $)} 
- B2 = Tkinter.Button(top, text = $ " $hourglass $ " $, relief
- =RAISED,  $    $ bitmap= $ " $hourglass $ " $)} 
- B3 = Tkinter.Button(top, text = $ " $info $ " $, relief
- =RAISED,  $    $ bitmap= $ " $info $ " $)} 
- B4 = Tkinter.Button(top, text = $ " $question $ " $, relief
- =RAISED,  $    $ bitmap= $ " $question $ " $)} 
- B5 = Tkinter.Button(top, text = $ " $warning $ " $, relief
- =RAISED,  $    $ bitmap= $ " $warning $ " $)} 
-
- B1.pack()} 
- B2.pack()} 
- B3.pack()} 
- B4.pack()} 
- B5.pack()} 
- top.mainloop()} 
+B1.pack()
+B2.pack()
+B3.pack()
+B4.pack()
+B5.pack()
+top.mainloop()
 \end{verbatim}
 
-\vspace{12pt}
-Berikut daftar menarik : 
- 
+\noindent 
+\subsection{Britmaps}
+\noindent 
+Ada beberapa jenis bitmap yang tersedia, diantaranya: \par
+\noindent 
 \begin{itemize}
-\item Panah 
- 
-\item Lingkaran 
- 
-\item Jam 
- 
-\item Menyebrang 
- 
-\item Dotbox 
- 
-\item Bertukar 
- 
-\item Fluer 
- 
-\item Jantung 
- 
-\item Manusia 
- 
-\item Tikus 
- 
-\item Bajak laut 
- 
-\item Tamah 
- 
-\item Antar jemput 
- 
-\item Perekat 
- 
-\item Laba-laba 
- 
-\item Kaleng semprot 
- 
-\item Bintang 
- 
-\item Target 
- 
-\item Tcross 
- 
-\item Melakukan perjalanan 
- 
-\item Menonton
-\end{itemize}
- 
-\vspace{12pt}
-Contoh : 
-\begin{verbatim}
-From Tkinter import *} 
-
-Import Tkinter} 
-
-Top = Tkinter.Tk()} 
-
-B1 = Tkinter.Button(top, text = $ " $circle $ " $, relief
-=RAISED,  $    $ bitmap= $ " $circle $ " $)} 
-B2 = Tkinter.Button(top, text = $ " $plus $ " $, relief
-=RAISED,  $    $ bitmap= $ " $plus $ " $)} 
-
-B1.pack()} 
-B2.pack()} 
-font top.mainloop()} 
-\end{verbatim}
-
-\vspace{10pt}
-\subsection{Manajemen Geometri} 
- 
-\hspace*{0.5in} Semua widget tkinter memiliki akses ke metode manajemen geometri tertentu, yang memiliki tujuan menggorganisir widget diseluruh wilayah widget induk. Tkinter mengekspos kelas manager geometri berikut : 
- 
-\begin{itemize}
-\item Metode the \textit{pack()} 
- 
-Manajer geometri ini mengatur widget diblok sebelum menempatkan mereka di widget induk 
-\item Metode the \textit{grid()} 
- 
-Manajer geometri ini mengatur widget dalam struktur tabel seperti di widget induk 
-\item Metode~the  \textit{place()}\end{itemize}
-  
-Manajer geometri ini mengatur widget dengan menempatkan dalam posisi tertentu dalam widget induk 
-\vspace{12pt}
- 
-\subsection{Manfaat Tkinter} 
-\hspace*{0.5in} Tkinter sangat sederhana. Erikut manfaat Tkinter dibandingkan GUI toolkit : 
- 
-\begin{itemize}
-\item Tkinter mudah diakses oleh siapa saja (Accessibilty)
-
-Tkinter merupakan toolkit yang ringan dan satu-satunya solusi GUI yang paling sederhana untuk Python sampai saat ini. Cukup menuliskan beberapa baris kode Python untuk membuat aplikasi GUI sederhana dengan Tkinter. Untuk menambahkan komponen baru pada Tkinter, dapat membuatnya dalam kode Python atau menambahkan paket ekstensi seperti Pmw, Tix, atau ttk. 
-\item Tkinter mudah digunakan di semua platform (Portability)
-
-Sebuah program Python yang dibangun menggunakan Tkinter dapat berjalan dengan baik di semua platform sistem operasi seperti Microsoft Windows, Linux, dan Macintosh. Dan dari segi tampilan window, akan terlihat sama dengan standar platform yang digunakan. 
- 
-\item Tkinter selalu tersedia di Python (Availability)
-
-Tkinter merupakan modul standar pada pustaka Python. Sebagian besar paket instalasi Python sudah langsung berisi Tkinter. Khusus untuk beberapa distro Linux, perlu menambahkan paket Tkinter secara terpisah. Pada Windows, bisa langsung menggunakan Tkinter sesaat setelah menginstal paket instalasi Python. 
- 
-\item Dokumentasi Tkinter (Documentation)
-
-Python (plus Tkinter) ini bersifat open-source, maka banyak sekali komunitas-komunitas yng membahas Python dan Tkinter dan bisa belajar dan bertanya langsung dengan para ahli
+	\item Kesalahan
+	\item Gray75 
+	\item Gray50 
+	\item Gray12
+	\item Jam Pasir 
+	\item Info 
+	\item Questhead
+	\item Perantanyaan
+	\item Peringatan
 \end{itemize}
 
-\section{Contoh GUI Programming}
-\hspace*{0.5in} Dalam contoh ini, menulis naskah yang membuka jendela yang memiliki dua kotak masuk diantaranya satu nama depan berlabel dan nama belakang lainnya. Jendela memiliki dua tombol yaitu Greeting yang menampilkan kotak pesan selamat datang ke pengguna dan Close yang menutup aplikasi
-
+\vspace{12pt}
+Contoh: \par
 \begin{verbatim}
-import tkinter
-from tkinter import *
+from Tkinter import *
+import Tkinter
 
-det DisplayMsgBox():
+top = Tkinter.Tk()
 
-    tkinter.messagebox.showinfo("Your Name", "Welcome"+ 
-    Entry.get()+ "" +Entry2.get())
-
-mainwindow = Tk()
-Label(mainwindow, text="Firstname").grid(row=0)
-Label(mainwindow, text="Lastname").grid(row=0)
-
-Entry1 = Entry(mainwindow)
-Entry2 = Entry(mainwindow)
-
-Entry1.grid(row=0, column=1)
-Entry2.grid(row=1, column=1)
-Entry1.focus()
-
-Button(mainwindow, text='Greeting', command=DisplayMsgBox)
-.grid(row=3, column=0)
-Button(mainwindow, text='Close', command=DisplayMsgBox)
-.grid(row=3, column=1)
-
-mainloop()
+B1 = Tkinter.Button(top, text ="error", relief=RAISED,\
+                         bitmap="error")
+B2 = Tkinter.Button(top, text ="hourglass", relief=RAISED,\
+                         bitmap="hourglass")
+B3 = Tkinter.Button(top, text ="info", relief=RAISED,\
+                         bitmap="info")
+B4 = Tkinter.Button(top, text ="question", relief=RAISED,\
+                         bitmap="question")
+B5 = Tkinter.Button(top, text ="warning", relief=RAISED,\
+                         bitmap="warning")
+B1.pack()
+B2.pack()
+B3.pack()
+B4.pack()
+B5.pack()
+top.mainloop()
 \end{verbatim}
 
-\vspace{12pt}
-Ketik nama depan dan nama belakang, lalu tekan "Greeting", \ref{Contoh} Lihat Contoh dibawah ini :
-\begin{figure}[ht]
-	\centerline{\includegraphics[width=0.70\textwidth]{figures/Contoh}}
-	\caption{Contoh}
-	\label{Contoh}
-\end{figure}
+\noindent 
+\subsection{Kursor} \par
+\noindent 
+Berikut daftar menarik : \par
+\noindent 
+\begin{itemize}
+	\item Panah 
+	\item Lingkaran
+	\item Jam 
+	\item Menyebrang 
+	\item Dotbox 
+	\item Bertukar
+	\item Fluer 
+	\item Jantung 
+	\item Manusia 
+	\item Tikus
+	\item Bajak laut 
+	\item Tamah 
+	\item Antar jemput 
+	\item Perekat
+	\item Laba-laba
+	\item Kaleng semprot
+	\item Bintang
+	\item Target 
+	\item Tcross 
+	\item Melakukan perjalanan
+	\item Menonton
+\end{itemize}
 
 \vspace{12pt}
-Tekan "Close" akan menghentikan aplikasi 
+Contoh : \par
+\begin{verbatim}
+from Tkinter import *
+import Tkinter
 
-*******
+top = Tkinter.Tk()
 
-\vspace{12pt}
-\hspace*{0.5in} Tkinter berisi sebagian besar kelas dan metode yang dibutuhkan untuk membuat aplikasi GUI yang bagus. Menggunakan kelas Tk untuk membuat master (jendela utama) dan instantiated objek untuk memasukkan berbagai kontrol pada jendela aplikasi.
+B1 = Tkinter.Button(top, text ="circle", relief=RAISED,\
+                         cursor="circle")
+B2 = Tkinter.Button(top, text ="plus", relief=RAISED,\
+                         cursor="plus")
+B1.pack()
+B2.pack()
+top.mainloop()
+
+\end{verbatim}
+\section{Manajemen Geometri}
+\noindent 
+ \hspace*{0.5in} Semua widget tkinter memiliki akses ke metode manajemen geometri tertentu, yang memiliki tujuan menggorganisir widget diseluruh wilayah widget induk. Tkinter mengekspos kelas manager geometri berikut : \par
+\noindent 
+\begin{itemize}
+	\item Metode the \textit{pack()} \par
+	\noindent 
+	Manajer geometri ini mengatur widget diblok sebelum menempatkan mereka di widget induk \par
+	\noindent 
+	\item Metode the \textit{grid()} \par
+	\noindent 
+	Manajer geometri ini mengatur widget dalam struktur tabel seperti di widget induk \par
+	\noindent 
+	\item Metode the  \textit{place()}\end{itemize} \par
+	\noindent 
+	Manajer geometri ini mengatur widget dengan menempatkan dalam posisi tertentu dalam widget induk \par
+	\vspace{12pt}
+	\noindent 
+\section{Manfaat Tkinter} \par
+Tkinter sangat sederhana. Berikut manfaat Tkinter dibandingkan GUI toolkit : \par
+\noindent 
+\begin{itemize}
+	\item Tkinter terdiri dari sejumlah modul.  (Tkinter)\vspace{\baselineskip} \par
+	Antarmuka Tk terletak di modul biner bernama \_ tkinter (ini adalah tkinter di versi sebelumnya). Modul ini berisi lowlevel antarmuka ke Tk, dan tidak boleh digunakan langsung oleh pemrogram aplikasi. inibiasanya shared library (atau DLL), tapi mungkin dalam beberapa kasus secara statis terkait denganPenerjemah Python.
+	\item Tkinter mudah diakses oleh siapa saja. (Accessibilty)\vspace{\baselineskip} \par
+	Tkinter merupakan toolkit yang ringan dan satu-satunya solusi GUI yang paling sederhana untuk Python sampai saat ini. Cukup menuliskan beberapa baris kode Python untuk membuat aplikasi GUI sederhana dengan Tkinter. Untuk menambahkan komponen baru pada Tkinter, dapat membuatnya dalam kode Python atau menambahkan paket ekstensi seperti Pmw, Tix, atau ttk.
+	
+	\item widget root tk (widget root tk)\vspace{\baselineskip} \par
+	Untuk menginisialisasi Tkinter, kita harus membuat widget root Tk. Ini adalah jendela biasa, dengan judul bar dan hiasan lainnya yang disediakan oleh window manager Anda. Anda seharusnya saja buat satu widget root untuk setiap program, dan itu harus dibuat sebelum widget lainnya. \par
+\noindent 
+	\item Tkinter mudah digunakan di semua platform (Portability)\vspace{\baselineskip} \par
+	Sebuah program Python yang dibangun menggunakan Tkinter dapat berjalan dengan baik di semua platform sistem operasi seperti Microsoft Windows, Linux, dan Macintosh. Dan dari segi tampilan window, akan terlihat sama dengan standar platform yang digunakan. \par
+\noindent 
+	\item Tkinter selalu tersedia di Python (Availability)\vspace{\baselineskip} \par
+	Tkinter merupakan modul standar pada pustaka Python. Sebagian besar paket instalasi Python sudah langsung berisi Tkinter. Khusus untuk beberapa distro Linux, perlu menambahkan paket Tkinter secara terpisah. Pada Windows, bisa langsung menggunakan Tkinter sesaat setelah menginstal paket instalasi Python. \par
+\noindent 
+	\item handles bagus di gunakan di Python (Handles)\vspace{\baselineskip} \par
+	item kandles merupakan nilai integer yang digunakan untuk mengidentifikasi item tertentu pada kanvas. Tkinter secara otomatis menugaskan pegangan baru ke setiap item baru yang dibuat di atas kanvas. Item Handles dapat di lewatkan ke berbagai metode kanvas baik sebagai bilangan bulat atau sebagai string. Tag adalah nama simbolis yang dilekatkan pada item. Tag adalah string biasa, dan bisa berisi apa saja kecuali spasi (asalkan tidak sesuai dengan item pegangan). \par
+\noindent 
+	\item Modul Tkinter menyediakan kelas yang sesuai dengan berbagai jenis widget di Tk (Module)\vspace{\baselineskip} \par
+	dan sejumlah mixin dan kelas pembantu lainnya (mixin adalah kelas yang dirancang untuk menjadi dikombinasikan dengan kelas lain menggunakan multiple inheritance). Bila Anda menggunakan Tkinter, Anda jangan pernah mengakses kelas mixin secara langsung. \par
+\noindent 
+	\item Dokumentasi Tkinter sangat LUAR BIASA (Documentation)\vspace{\baselineskip} \par
+	Python (plus Tkinter) ini bersifat open-source, maka banyak sekali komunitas-komunitas yng membahas Python dan Tkinter dan bisa belajar dan bertanya langsung dengan para ahli.
+\end{itemize}
+
+\end{document}
 
