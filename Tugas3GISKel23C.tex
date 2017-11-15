@@ -89,7 +89,7 @@ linux dan max os x. Untuk mengecek apakah python sudah terinstall atau belum, pe
 tama bukalah command prompt atau terminal komputer dan ketikan python. Akan muncul info 
 atau status mengenai apakah python sudah terinstall dan berapa versinya atau belum terinstall sama sekali.
   \begin{figure}[ht]
-	\centerline{\includegraphics[width=1\textwidth]{Plagiarisme/cmd.PNG}}
+	\centerline{\includegraphics[width=1\textwidth]{Plagiarisme/cmd.png}}
 	\caption{Contoh skirpt pada command prompt.}
 	\label{cmd}
 	\end{figure}
@@ -186,9 +186,9 @@ Lokasi standar penginstallan python ada pada /usr/local/bin dan libraries nya be
 \subsection{Setting Path pada Unix/Linux}
 Untuk menambahkan direktori python di path pada Unix
 \begin{enumerate}
-\item In the csh shell – ketik setenv PATH $PATH:/usr/local/bin/python lalu tekan enter
-\item In the bash shell(Linux) – ketik export ATH=$PATH:/usr/local/bin/python lalu tekan enter
-\item In the sh or ksh shell – ketik PATH=$PATH:/usr/local/bin/python lalu tekan enter
+\item In the csh shell – ketik setenv PATH PATH:/usr/local/bin/python lalu tekan enter
+\item In the bash shell(Linux) – ketik export ATH=PATH:/usr/local/bin/python lalu tekan enter
+\item In the sh or ksh shell – ketik PATH=PATH:/usr/local/bin/python lalu tekan enter
 \item Note - /usr/local/bin/python adalah path untuk direktori Python
 \end{enumerate}
 
@@ -215,16 +215,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 hello world
 >>>
 
-Cara kedua: buat file hello.py, yang isinya print “hello world”, simpan di mana saja suka-suka kamu, misalnya di D:\python-code. Buka command prompt, Run -> cmd. Kemudian masuk ke folder D:\python-code, lalu ketik python hello.py untuk menjalankan file Python yang telah dibuat.
-
-D:\python-code>python hello.py
-hello world
 
 
 \subsection{Alasan Menggunakan Phyton}
 
 Python memiliki konsep desain yang bagus dan sederhana, yang berfokus pada kemudahan dalam penggunaan. Kode Python dirancang untuk mudah dibaca, dipelajari, digunakan ulang, dan dirawat. Selain itu, Python juga mendukung pemograman berorientasi objek dan pemograman fungsional.
-Python dapat meningkatkan produktivias dan menghemat waktu bagi para programmer. Untuk memperoleh hasil program yang sama, kode Python juga jauh lebih sedikit dibandngkan dengan kode yang ditulis menggunakan bahasa-bahasa pemograman lain seperti C, C++,C# maupun Java.
 
 
 \subsection{Tipe Data Phyton}
@@ -249,7 +244,7 @@ Kita dapat menghapus sebuah obyek ataupun banyak obyek dengan menggunakan pernya
 Python mengelompokkan tipe Number dalam 4 macam, yaitu:
 
 Plain Integer
-Plain integer atau bilangan bulat merupakan tipe data yang sering kita temui pada semua bahasa pemrograman. Integer ini mempunyai range nilai antara -2^32 sampai 2^31 – 1. Tipe ini juga dapat ditulis dalam bentuk octal (di tanda awalan “0”) maupun hexadesimal (ditandai awalan “0x” atau “0X”). Contoh:
+Plain integer atau bilangan bulat merupakan tipe data yang sering kita temui pada semua bahasa pemrograman. Integer ini mempunyai range nilai antara $-2^32$ sampai $2^31 – 1$. Tipe ini juga dapat ditulis dalam bentuk octal (di tanda awalan “0”) maupun hexadesimal (ditandai awalan “0x” atau “0X”). Contoh:
 10 100 6542 -784
 083 -042 -0x43 0X61
 
@@ -291,7 +286,7 @@ Dari contoh di atas, ketika kita memanggil variabel secara langsung maka akan di
 
 Menampilkan Tanda Petik Sebagai String
 
-Di dalam sebuah string tidak dapat berisi tanda petik yang sama dengan tanda petik yang digunakan oleh string tersebut. Misalkan, ketika kita menuliskan 'Py'thon' maka akan muncul pesan kesalahan (syntax error). Agar tidak muncul pesan kesalahan, kita bisa mengganti tanda petik luarnya dengan tanda petik ganda, misalnya "Py'thon". Tanda petik juga dapat ditulis setelah tanda backslash (\) agar dapat ditampilkan sebagai string.
+Di dalam sebuah string tidak dapat berisi tanda petik yang sama dengan tanda petik yang digunakan oleh string tersebut. Misalkan, ketika kita menuliskan 'Py'thon' maka akan muncul pesan kesalahan (syntax error). Agar tidak muncul pesan kesalahan, kita bisa mengganti tanda petik luarnya dengan tanda petik ganda, misalnya "Py'thon". Tanda petik juga dapat ditulis setelah tanda backslash agar dapat ditampilkan sebagai string.
 
 >>> str = "Py'thon"
 >>> str
@@ -302,13 +297,13 @@ Di dalam sebuah string tidak dapat berisi tanda petik yang sama dengan tanda pet
 >>> "\"OK, \" sampai ketemu lagi."
 '"OK, " sampai ketemu lagi.'
 
-Kode \n atau Triple Quotes Juga Boleh!
+Kode n atau Triple Quotes Juga Boleh!
 
-Jika kita ingin menuliskan string yang panjang dalam beberapa baris, maka kita perlu menambahkan tanda backslash diikuti huruf n (\n) sebagai tanda baris baru.
+Jika kita ingin menuliskan string yang panjang dalam beberapa baris, maka kita perlu menambahkan tanda backslash diikuti huruf n (n) sebagai tanda baris baru.
 
->>> teks = "Python adalah bahasa pemrograman yang powerfull.\nTerbukti Python bisa dijalankan di segala platform OS.\nJadi, saatnya kita menggunakan Python sebagai bahasa permrograman \nsehari-hari. Salam Python Dahsyat!"
+>>> teks = "Python adalah bahasa pemrograman yang powerfull.nTerbukti Python bisa dijalankan di segala platform OS.nJadi, saatnya kita menggunakan Python sebagai bahasa permrograman nsehari-hari. Salam Python Dahsyat!"
 
-Tanda \n akan memberikan perintah membuat baris baru jika kita memanggil teks dengan pernyataan print.
+Tanda n akan memberikan perintah membuat baris baru jika kita memanggil teks dengan pernyataan print.
 
 >>> print teks
 Python adalah bahasa pemrograman yang powerfull.
