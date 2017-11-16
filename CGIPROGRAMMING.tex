@@ -8,7 +8,7 @@ Pada tahun 1993, tim National Center for Supercomputing Applications (NCSA) menu
 \item Tony Sanders (penulis Web Server Plexus)
 \item George Phillips (pengelola server Web di University of British Columbia)
 \end{itemize}
-Secara historis skrip CGI sering ditulis menggunakan bahasa C. RFC 3875 "Common Gateway Interface (CGI)" secara parsial mendefinisikan CGI menggunakan C, [7] seperti dalam mengatakan bahwa variabel lingkungan ``diakses oleh perpustakaan perpustakaan umum getenv () atau variabel lingkungan``.  \cite{mccool1993common}
+Secara historis skrip CGI sering ditulis menggunakan bahasa C. RFC 3875 Common Gateway Interface (CGI) secara parsial mendefinisikan CGI menggunakan C, [7] seperti dalam mengatakan bahwa variabel lingkungan ``diakses oleh perpustakaan perpustakaan umum getenv () atau variabel lingkungan``.  \cite{mccool1993common}
 \subsection{Common Gateway Interface}
 Common Gateway Interface atau disingkat CGI merupakan standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip dengan program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML. CGI (Common Gateway Interface) adalah bentuk dari hubungan interaktif di mana client (browser) bisa mengirimkan suatu masukan kepada server, dan server mengolah masukan tersebut serta mengembalikannya kepada client (browser). Contoh sederhana adalah saat kita menggunakan sebuah mesin pencari. Saat kita menuliskan keyword dan menekan tombol Search maka browser akan mengirimkan keyword tersebut ke server. Keyword tersebut lalu diolah oleh server dan server mengirimkan data hasil pengolahan (yang sesuai dengan keyword yang kita masukkan) ke browser kita. Jadi yang akan kita lihat pada browser adalah  hanya data yang sesuai dengan keyword yang kita masukkan. 
 \subsection{Common Gateway Interface}
@@ -75,7 +75,7 @@ Angka ini relatif, bergantung pada:
 	\item Cepat atau lambatnya penampilan halaman web yang diterima klien akan lebih bergantung pada koneksi jaringan.\end{itemize}
 \subsection{Penerapan CGI}
 Penerapan CGI yang paling umum adalah dalam pemrosesan . Umumnya, form dipergunakan untuk dua kegunaan utama. Yang  sederhana  adalah form yang  dipakai  untuk mengumpulkan informasi dari pengguna dan mengirimkanya ke server. Namun  form juga bisa dipakai untuk keperluan  yang lebih  ``canggih``  seperti timbal balik antara pengguna dan server, misalnya  form  yang memberikan sedaftar pilihan dokumen dalam server kepada pengguna  untuk dipilih. Program CGI di server dibuat untuk mengolah informasi ini  dan kemudian mengirimkan  dokumen – dokumen yang sesuai  dengan  pilihan pengguna.
-Contoh nyata penerapan CGI untuk dokumen~~dinamis~~ini  misalnya  suatu "buku tamu". Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapat~menyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewat~e-mail~ke  suatu  alamat. Program~CGI~juga~bisa menampilkan dokumen yang  berisi  informasi  yang
+Contoh nyata penerapan CGI untuk dokumen~~dinamis~~ini  misalnya  suatu buku tamu. Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapat~menyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewat~e-mail~ke  suatu  alamat. Program~CGI~juga~bisa menampilkan dokumen yang  berisi  informasi  yang
 baru~saja~dikirimkan~ oleh  pengguna  tadi~~sembari~~memberikan  ucapan  terima kasih atas partisipasinya.
 Penerapan lain dari CGI adalah sebuah gateway.~Artinya~ adalah  program yang~dipergunakan sebagai penghubung  untuk~~mengakses~ informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna.Contoh yang nyata adalah gateway yang menghubungkan~antara~web  server  dengan dengan suatu database server yang besar semacam~oracle~~atau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisa~~memberikan~~query  dalam  SQL (structured query language, yaitu bahasa~yang~dipakai  untuk  melakukan pendefinisian maupun manipulasi terhadap~database)~ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya ke~dalam~bentuk~yang~bisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser.
 Program CGI pada prinsipnya bisa ditulis~dalam~bahasa  pemrograman  apa saja,~namun~kenyataanya tidak  semua  bahasa~~pemrograman~ cocok  untuk pemrograman CGI. Penerapan CGI dapat sangat~kompleks, dan untuk membuat  suatu program CGI menuntut pengetahuan teknis~yang~~cukup  tinggi  akan pemrograman.
@@ -111,17 +111,20 @@ Python adalah bahasa pemrograman dinamis yang mendukung pemrograman berorientasi
 	\item Palm 
 	\item Symbian (untuk produk-produk Nokia) \end{itemize}
 Pada dasarnya Python merupakan perangkat lunak yang secara default termasuk dalam suatu paket distribusi GNU/Linux. Untuk GNU/Linux distribusi Slackware menggunakan Python versi 2.4, biasanya terdapat pada CD I direktori /slackware/d. Toolkit yang digunakan untuk melakukan instalasi paket di Slackware adalah installpkg, berikut langkah instalasinya: 
+\begin{verbatim}
 # mount /mnt/cdrom 
 # cd /mnt/cdrom/slackware/d 
 # installpkg python-2.4.1-i486-1.tgz 
+\end{verbatim}
 Dari proses instalasi di atas akan membuat beberapa informasi yang tersimpan dalam direktori /usr termasuk di dalamnya berisi library, dokumentasi, file binary, dan informasi lainnya.\par
 Kelebihan Python adalah menyediakan modus interaktif yang sangat berguna dalam melakukan latihan dan tes kode. Untuk menulis kode dalam modus interaktif dilakukan dengan memanggil toolkit python pada shell Linux. 
+\begin{verbatim}
 # python 
 Python 2.4.1 (#1, Apr 10 2005, 22:30:36) 
 [GCC 3.3.5] on linux2 
 Type "help", "copyright", "credits" or "license" 
 for more information. 
->>> 
+>>> \end{verbatim}
 Tanda “>>>” merupakan suatu prompt dalam modus interaktif Python, selanjutnya Python siap menerima input kode yang dimasukkan. 
 Python didistribusikan dengan adanya beberapa lisensi yang berbeda dari beberapa versi. Lihat sejarahnya di Python Copyright. Namun pada prinsipnya Python dapat diperoleh dan dipergunakan secara bebas, bahkan untuk kepentingan komersial. Lisensi Python tidak bertentangan baik menurut definisi sebuah Open Source maupun General Public License (GPL). 
 Python merupakan bahasa pemrograman yang mendukung pengembangan aplikasi berbasis desktop dan juga aplikasi berbasis web. Biasanya kalau berhubungan dengan WEB maka orang akan berfikir framework yang digunakan. Tentunya ada beberapa framework yang bisa digunakan untuk membangun aplikasi web berbasis python ini antara lain adalah Django, Web2py, Cherrypy dan lain-lain. Masing-masing framework memiliki aturan khusus dalam penulisan syntax. Framework tersebut mengadopsi struktur yang sama seperti pemrograman CGI. Untuk lebih jelasnya mari kita pelajari pemrograman CGI. 
@@ -132,7 +135,7 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	\item Menginstal Program Python  
 	\item Menginstal Program Web Server Seperti Apache2 atau Xampp  
 	\item Setelah kedua program berhasil di install maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. 
-	\item Buka directory Xampp dan masuk ke folder apache  $  \rightarrow  $ Conf dan cari file httpd.conf 
+	\item Buka directory Xampp dan masuk ke folder apache  \$  \rightarrow  \$ Conf dan cari file httpd.conf 
 	\item Buka file httpd.conf menggunakan notepad 
 	\item Cari baris AddHandler cgi-script .cgi .pl .asp pada file setelah itu tambahkan ekstensi python seperti ini AddHandler cgi-script .cgi .pl .asp .py 
 	\item Cari baris <Directory /> dan tambahkan ExecCGI pada list Options FollowSymLinks  
@@ -152,12 +155,11 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	print 
 	print 
 	print '<h2><center>Selamat Belajar Bagi Para Pecinta Python</h2></center>' 
-	
 	print '</body>' 
 	print '</html>' 
   \end{verbatim}
   
-	pada script diatas jangan lupa menuliskan posisi directory python.exe ( $  \#  $!/Python27/python) 
+	pada script diatas jangan lupa menuliskan posisi directory python.exe ( \$  \#  $!/Python27/python) 
 	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) 
 	
 	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya
@@ -166,7 +168,7 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 \subsection{Membuat Kamus Menggunakan CGI Python} 
 Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia. Jika sudah save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus .json  
 Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. 
-\begin{algorithm}
+\begin{verbatim}
 $  \#  $!/usr/bin/python 
 import cgi 
 import~cgitb; cgitb.enable()   
@@ -204,5 +206,5 @@ if~cari $  \_  $kata:~
 ~~~ </body> 
 ~~~ </html> 
 ~~~ """  $  \%  $ cgi.escape(hasil) 
-\end{algorithm}
+\end{verbatim}
 Jika sudah save dengan nama kamus.cgi sebagai contoh dan buka browser ketikan pada url http//localhost/cgi-bin/kamus.cgi jika muncul form input coba di tester ketikan nama kata dalam bahasa indonesia.
