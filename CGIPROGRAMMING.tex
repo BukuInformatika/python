@@ -1,4 +1,4 @@
-﻿\section{Common Gateway Interface}
+\section{Common Gateway Interface}
 \subsection{Sejarah Common Gateway Interface}
 Pada tahun 1993, tim National Center for Supercomputing Applications (NCSA) menulis spesifikasi untuk memanggil executable command line di milis www-talk. [2] [3] [4] Pengembang server Web lainnya menggunakannya, dan telah menjadi standar untuk server Web sejak saat itu. Sebuah kelompok kerja yang dipimpin oleh Ken Coar dimulai pada bulan November 1997 untuk mendapatkan definisi NCSA tentang CGI yang lebih formal. [5] Karya ini menghasilkan RFC 3875, yang menentukan Versi CGI 1.1. Secara khusus disebutkan di RFC adalah kontributor berikut: [6]
 \begin{itemize}
@@ -139,6 +139,7 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	\item Setelah itu simpan 
 	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python 
 	\item Buka Notepad dan ketikkan script dbawah ini : 
+  \begin{verbatim}
 	$  \#  $!/Python27/python 
 	print "Content-type:text/html"
 	print 
@@ -154,8 +155,9 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	
 	print '</body>' 
 	print '</html>' 
+  \end{verbatim}
+  
 	pada script diatas jangan lupa menuliskan posisi directory python.exe ( $  \#  $!/Python27/python) 
-	
 	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) 
 	
 	\item Buka browser dan ketikkan localhost/cgi-bin/web.py pada url dan lihatlah hasilnya
@@ -164,6 +166,7 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 \subsection{Membuat Kamus Menggunakan CGI Python} 
 Pertama yang kita butuhkan adalah sebuah kosa kata yang akan digunakan sebagai database, kosa kata tersebut kita convert kedalam format JSON. Untuk prosesnya sebagai berikut. Buatlah sebuah kosa kata bahasa indonesia dan bahasa inggris pada excel dengan header inggris dan indonesia. Jika sudah save as kedalam format .csv lalu di convert ke dalam format .json proses convert  bisa dilakukan secara online disini dan hasilnya akan seperti berikut dan simpan dengan nama kamus .json  
 Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. 
+\begin{algorithm}
 $  \#  $!/usr/bin/python 
 import cgi 
 import~cgitb; cgitb.enable()   
@@ -201,5 +204,5 @@ if~cari $  \_  $kata:~
 ~~~ </body> 
 ~~~ </html> 
 ~~~ """  $  \%  $ cgi.escape(hasil) 
-
+\end{algorithm}
 Jika sudah save dengan nama kamus.cgi sebagai contoh dan buka browser ketikan pada url http//localhost/cgi-bin/kamus.cgi jika muncul form input coba di tester ketikan nama kata dalam bahasa indonesia.
