@@ -53,7 +53,7 @@ Kita dapat menggunakan indeks atau irisan untuk mengakses nilai yang ada di dala
 >>> KotaBesar[1][0] 
 'Bandung' 
 
->>> TupleAku = (\"a\", 2, 3, 4) 
+>>> TupleAku = ("a", 2, 3, 4) 
 >>> TupleAku 
 ('a', 2, 3, 4) 
 >>> TupleDia = ("b", 5, 6, 7) 
@@ -63,16 +63,19 @@ Kita dapat menggunakan indeks atau irisan untuk mengakses nilai yang ada di dala
 >>> TupleGab 
 ('a', 2, 3, 4, 'b', 5, 6, 7) 
 \end{verbatim}
-Contoh di atas, dua Tuple dibuat secara terpisah, TupleAku dan TupleDia. Dua Tuple ini dicocokkan pada Tuple lainnya TupleGab menggunakan operator \+. Perlu dicatat bahwa TupleGab berisi nilai dari TupleAku dan TupleDia. Metode ini dapat digunakan untuk menambahkan elemen data lain pada sebuah Tuple. 
+Contoh di atas, dua Tuple dibuat secara terpisah, TupleAku dan TupleDia. 
+Dua Tuple ini dicocokkan pada Tuple lainnya TupleGab menggunakan operator +.
+Perlu dicatat bahwa TupleGab berisi nilai dari TupleAku dan TupleDia. 
+Metode ini dapat digunakan untuk menambahkan elemen data lain pada sebuah Tuple. 
 \begin{verbatim}
->>> IniTuple = (\"x\", \"y\", \"z\") 
->>> IniTuple = IniTuple + (\"a\", \"b\")
+>>> IniTuple = ("x", "y", "z") 
+>>> IniTuple = IniTuple + ("a", "b")
 >>> IniTuple 
 ('x', 'y', 'z', 'a', 'b') 
 \end{verbatim}
 Dan kita juga dapat membuat Tuple dengan objek-objek yang immutable yaitu seperti List. Sedemikian sehingga, kita dapat mengubah nilai yang ada dalam List tersebut. Berikut contohnya: 
 \begin{verbatim}
->>> TupleData = (222, \"ayam\", [555, \"telur\", \"sapi\"]) 
+>>> TupleData = (222, "ayam", [555, "telur", "sapi"]) 
 >>> TupleData 
 (222, 'ayam', [555, 'telur', 'sapi']) 
 >>> TupleData[2][1] = 777 
@@ -126,9 +129,9 @@ Tup2 = (1, 2, 3, 4, 5);
 Tup3 = "a", "b", "c", "d"; 
 \end{verbatim}
 Tuple kosong ditulis sebagai dua tanda kurung yang tidak berisi apa : 
-tup1 \= \(\); 
+tup1 = (); 
 Untuk menulis tupel yang berisi satu nilai, Anda harus menyertakan koma, meskipun hanya ada satu nilai : 
-Tup1 \= \(50,\); 
+Tup1 = (50,); 
 Seperti indeks string, indeks tuple mulai dari 0, dan mereka dapat diiris, digabungkan, dan seterusnya. 
 \section{Mengakses Nilai pada Tuples} 
 Untuk mengakses nilai dalam tupel, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut. Misalnya : 
@@ -182,7 +185,7 @@ Traceback \(panggilan terakhir\):
 \~ Cetak tup; 
 NameError: nama 'tup' tidak didefinisikan 
 \section{Operasi Tuple Dasar}
-Tupel merespons operator \+ dan \* seperti string; Mereka berarti penggabungan dan pengulangan di sini juga, kecuali hasilnya adalah tupel baru, bukan string. 
+Tupel merespons operator + dan * seperti string; Mereka berarti penggabungan dan pengulangan di sini juga, kecuali hasilnya adalah tupel baru, bukan string. 
 Sebenarnya, tupel menanggapi semua operasi urutan umum yang kami gunakan pada senar di bab sebelumnya : 
 Python Expression, Results, dan Description 
 \begin{verbatim}
@@ -194,7 +197,7 @@ for x in (1, 2, 3): print x, 1 2 3 Iteration
 \end{verbatim}
 \subsection{Indexing, Slicing, dan Matrixes}
 Karena tupel adalah urutan, pengindeksan dan pengiris bekerja dengan cara yang sama untuk tupel seperti yang mereka lakukan untuk string. Dengan asumsi masukan berikut : 
-L \= \('spam', 'Spam', 'SPAM!'\)
+L = ('spam', 'Spam', 'SPAM!')
 
 Python Expression  Results   Description
 L[2]  'SPAM!'  Offsets start at zero 
@@ -242,8 +245,8 @@ Karena, tupel sangat mirip dengan daftar, keduanya juga digunakan dalam situasi 
 \item Jika Anda memiliki data yang tidak berubah, menerapkannya sebagai tupel akan menjamin bahwa itu tetap dilindungi penulisan. 
 \end{enumerate}
 Dalam pemrograman Python, tuple mirip dengan daftar. Perbedaan antara keduanya adalah kita tidak bisa mengubah unsur tuple begitu diberikan sedangkan dalam daftar, elemen bisa diubah.
-section\{Membuat Tuple}
-Sebuah tuple dibuat dengan menempatkan semua item \(elemen\) di dalam tanda kurung \(\), dipisahkan dengan koma. Tanda kurung bersifat opsional namun merupakan praktik yang baik untuk menuliskannya. Sebuah tuple dapat memiliki sejumlah item dan mereka mungkin memiliki tipe yang berbeda (integer, float, list, string etc.). 
+\section{Membuat Tuple}
+Sebuah tuple dibuat dengan menempatkan semua item (elemen) di dalam tanda kurung (), dipisahkan dengan koma. Tanda kurung bersifat opsional namun merupakan praktik yang baik untuk menuliskannya. Sebuah tuple dapat memiliki sejumlah item dan mereka mungkin memiliki tipe yang berbeda (integer, float, list, string etc.). 
 \ref{3afs1} 
 \ref{3afs2} 
 
@@ -260,7 +263,7 @@ Sebuah tuple dibuat dengan menempatkan semua item \(elemen\) di dalam tanda kuru
 			\end{figure}
    
 
-section\(Membuat tuple dengan satu elemen} 
+\section{Membuat tuple dengan satu elemen} 
 Memiliki satu elemen dalam kurung saja tidak cukup. Kita membutuhkan koma trailing untuk menunjukkan bahwa sebenarnya ada tupel. 
 \begin{verbatim}
  $  \#  $ only parentheses is not enough 
