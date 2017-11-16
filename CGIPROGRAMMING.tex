@@ -135,9 +135,9 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	\item Menginstal Program Python  
 	\item Menginstal Program Web Server Seperti Apache2 atau Xampp  
 	\item Setelah kedua program berhasil di install maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. 
-	\item Buka directory Xampp dan masuk ke folder apache  \$  \rightarrow  \$ Conf dan cari file httpd.conf 
+	\item Buka directory Xampp dan masuk ke folder apache  \$  \rightarrow  \$ Conf dan cari file httpd dot conf 
 	\item Buka file httpd dot conf menggunakan notepad 
-	\item Cari baris <Directory /> dan tambahkan ExecCGI pada list Options FollowSymLinks  
+	\item Cari baris dan tambahkan ExecCGI pada list Options FollowSymLinks  
 	\item Setelah itu simpan 
 	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python 
 	\item Buka Notepad dan ketikkan script dbawah ini : 
@@ -158,9 +158,8 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	print '</html>' 
   \end{verbatim}
   
-	pada script diatas jangan lupa menuliskan posisi directory python.exe ( \$  \#  $!/Python27/python) 
-	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) 
-	
+	pada script diatas jangan lupa menuliskan posisi directory python.exe ( \$  \#  \$!/Python27/python) 
+	setelah itu simpan pada directory xampp folder cgi-bin dengan nama webpy (terserah nama apa saja asalhkan ekstensinya .py) 	
 	\item Buka browser dan ketikkan localhost slash cgi-bin slash web dot py pada url dan lihatlah hasilnya
 \end{enumerate}
 
