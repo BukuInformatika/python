@@ -1,15 +1,35 @@
 
-\sloppy
-\begin{center}{\fontsize{14pt}{14pt}\selectfont Python File I/O \\}\end{center} \par
+
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.60\textwidth]{Gambar/dapi7.jpg}}
+	\caption{File I/O}
+	\label{File I/O}
+\end{figure}
+
+
+
+\section {Pengertian }
+\subsection {Python File I/O}
+
 Unit~input~adalah (masukan) suatu  data yang berbentuk documet bait itu data data foto, data data hurup ataupun data tanggal ke dalam sebuah system yang  terkomputerisasi.  unit output (keluaran) biasanya digunakan untuk menampilkan data, atau dengan kata lain untuk menangkap data yang telah diinputkan terlebih dahulu dalam sebuah penyimpanan media elektronic , contohnya data yang akan ditampilkan pada layar monitor atau printer. \par
 I/O Input/Ouput Read [IOR] dan untuk tulis I/O Input/Output Write [IOW]. File adalah lokasi bernama pada disk untuk menyimpan informasi terkait. Ini digunakan untuk menyimpan data secara permanen dalam memori non-volatile (misalnya hard disk). Karena, random access memory (RAM) bersifat volatile sehingga kehilangan datanya saat komputer dimatikan, kita menggunakan file untuk penggunaan data masa depan. Bila kita ingin membaca dari atau menulis ke file kita perlu membukanya terlebih dahulu. Bila sudah selesai, perlu ditutup, agar sumber yang diikat dengan file tersebut dibebaskan.Oleh karena itu, dengan Python, sebuah operasi file berlangsung dengan urutan sebagai berikut. \par
 \vspace{12pt}
 \noindent 
-1. \hspace*{0.5in} Buka file \par
-\noindent 
-2. \hspace*{0.5in} Membaca atau menulis (melakukan operasi) \par
-\noindent 
-3. \hspace*{0.5in} Tutup file tersebu \par
+
+\includegraphics[width=15cm,height=7cm]{Gambar/dapi8.jpg}
+\begin{equation}Python File I/O\end{equation}
+
+
+\begin{enumerate}
+	
+
+
+	\item Buka file 
+
+	\item Membaca atau menulis (melakukan operasi) 
+	\item Tutup file tersebu 
+	\end {enumerate}
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
@@ -19,63 +39,91 @@ Membuka sebuah file \par
 Python memiliki built-in function open () untuk membuka file. Fungsi ini mengembalikan objek file, juga disebut handle, karena digunakan untuk membaca atau memodifikasi file yang sesuai. \par
 \vspace{12pt}
 \noindent 
->>>~f~=~open("test.txt")     $  \#  $ open file in current directory \par
+
+\begin{verbatim}
+
+>>>~f~=~open("test.txt")    
+ $  \#  $ open file in current directory \par
 \noindent 
->>>~f = open("C:/Python33/README.txt")   $  \#  $ specifying full path \par
+>>>~f = open("C:/Python33/README.txt")  
+ $  \#  $ specifying full path \par
 \vspace{12pt}
+
+\end{verbatim}
+
 Kita bisa menentukan mode saat membuka file. Dalam mode, kami menentukan apakah kita ingin membaca 'r', menulis 'w' atau menambahkan 'a' ke file. Kita juga menentukan apakah kita ingin membuka file dalam mode teks atau mode biner. Defaultnya adalah membaca dalam mode teks. Dalam mode ini, kita mendapatkan string saat membaca dari file. Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan digunakan saat berhadapan dengan file non-teks seperti file gambar atau exe. \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-'r' \hspace*{0.5in}  \par
+
+\begin{enumerate}
+
+
+\item 'r' \hspace*{0.5in}  \par
 \noindent 
 Buka file untuk dibaca. (default) \par
 \vspace{12pt}
 \noindent 
-'w' \hspace*{0.5in}  \par
+
+\item 'w' \hspace*{0.5in}  \par
 \noindent 
 Buka file untuk menulis. Membuat file baru jika tidak ada atau memotong file jika file tersebut ada. \par
 \vspace{12pt}
 \noindent 
-'x' \hspace*{0.5in}  \par
+
+\item 'x' \hspace*{0.5in}  \par
 \noindent 
 Buka file untuk pembuatan eksklusif. Jika file sudah ada, operasi gagal \par
 \vspace{12pt}
 \noindent 
-'a' \hspace*{0.5in}  \par
+
+\item 'a' \hspace*{0.5in}  \par
 \noindent 
 Buka untuk menambahkan di akhir file tanpa memotongnya. Membuat file baru jika tidak ada. \par
 \vspace{12pt}
 \noindent 
-'t' \hspace*{0.5in}  \par
+
+\item 't' \hspace*{0.5in}  \par
 \noindent 
 Buka dalam mode teks. (default) \par
 \vspace{12pt}
 \noindent 
-'b' \par
+
+\item 'b' \par
 \noindent 
 Buka dalam mode biner. \par
 \vspace{12pt}
 \noindent 
-'+' \par
+\item '+' \par
 \noindent 
 Buka file untuk mengupdate (membaca dan menulis) \par
 \vspace{12pt}
 \noindent 
-f~=~open("test.txt")~~~    $  \#  $ equivalent to 'r' or 'rt' \par
+
+\end {enumerate}
+
+\begin{verbatim}
+
+f~=~open("test.txt")~~~   
+ $  \#  $ equivalent to 'r' or 'rt' \par
 \noindent 
-f~= open("test.txt",'w')   $  \#  $ write in text mode \par
+f~= open("test.txt",'w')  
+ $  \#  $ write in text mode \par
 \noindent 
-f = open("img.bmp",'r+b')  $  \#  $ read and write in binary mode \par
+f = open("img.bmp",'r+b') 
+ $  \#  $ read and write in binary mode \par
 \vspace{12pt}
 \noindent 
+
+\end{verbatim}
+
 Tidak seperti bahasa lain, karakter 'a' tidak menyiratkan angka 97 sampai dikodekan menggunakan ASCII (atau pengkodean setara lainnya). Apalagi, pengkodean default bergantung pada platform. Di jendela, itu adalah 'cp1252' tapi 'utf-8' di Linux. Jadi, kita juga tidak harus bergantung pada pengkodean default atau kode kita akan berperilaku berbeda di berbagai platform. Oleh karena itu, ketika bekerja dengan file dalam mode teks, sangat disarankan untuk menentukan jenis pengkodean. \par
 \vspace{12pt}
 \noindent 
 f = open("test.txt",mode = 'r',encoding = 'utf-8') \par
 \vspace{12pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Menutup sebuah File} \\} \par
+\section{Menutup sebuah File}
 Ketika kita selesai dengan operasi ke file, kita perlu menutupinya dengan benar. Menutup file akan membebaskan sumber daya yang terkait dengan file dan dilakukan dengan menggunakan metode close (). Python memiliki pengumpul sampah untuk membersihkan benda yang tidak difermentasi tapi, kita tidak boleh bergantung padanya untuk menutup file. \par
 \noindent 
 f = open("test.txt",encoding = 'utf-8') \par
@@ -106,7 +154,7 @@ with open("test.txt",encoding = 'utf-8') as f: \par
 ~~  $  \#  $ perform file operations \par
 \vspace{12pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Menulis ke File} \\} \par
+\section{Menulis ke File}
 Untuk menulis ke file kita perlu membukanya dalam mode write 'w', tambahkan 'a' atau exclusive creation 'x'. Kita harus berhati-hati dengan mode 'w' karena akan menimpa file jika sudah ada. Semua data sebelumnya terhapus. Menulis string atau urutan byte (untuk file biner) dilakukan dengan menggunakan metode write (). Metode ini mengembalikan jumlah karakter yang ditulis ke file. \par
 \vspace{12pt}
 \noindent 

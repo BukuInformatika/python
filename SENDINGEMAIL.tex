@@ -1,203 +1,218 @@
+\section {Server Pada Mail Server dan Penjelasannya} 
+Pada mail server terdapat 2 server yang berbeda yaitu :  
+\begin{enumerate}
+\item Outgoing Server (Sending email) : Protocol server yang menangani adalah SMTP (Simple Mail Transfer Protocol) pada port 25. 
+\item Incoming Server (Receiving email) : Protocol server yang menangani adalah POP3 (Post Office Protocol) pada port 110 atau IMAP (Internet Message Access Protocol) pada port 143.
+ \end{enumerate}
+Penjelasan dari Server yang menangani outgoing email dan incoming email sebagai berikut 
+\begin{enumerate}
+\item SMTP Server : Saat anda mengirimkan email maka email anda akan ditangani SMTP Server dan akan dikirim ke SMTP Server tujuan, baik secara langsung maupun melalui beberapa SMTP Server dijalurnya. Apabila server tujuan terkoneksi maka email akan dikirim, namun apabila tidak terjadi koneksi maka akan dimasukan ke dalam queue dan di resend setiap 15 menit, apabila dalam 5 hari tidak ada perubahan maka akan diberikan undeliver notice ke inbox pengirim. 
+\item POP3 Server : Jika menggunakan POP3 Server, apabila kita akan membaca email maka email pada server di download sehingga email hanya akan ada pada mesin yang mendownload email tersebut (kita hanya bisa membaca email tersebut pada device yang mendownload email tersebut). 
+\item IMAP Server : Jika menggunakan IMAP Server, email dapat dibuka kembali lewat device yang berbeda. Fungsinya adalah mengelola email yang disimpan di server, kemudian email tersebut di ambil oleh client, selain itu IMAP juga meneruskan packet data. Kemampuan ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil/download semua pesan yang ada tanpa kecuali. IMAP adalah suatu  protokol yang umum digunakan untuk pengiriman surat elektronik atau email di Internet. Protokol ini gunakan untuk mengirimkan data dari komputer pengirim surat elektronik ke server surat elektronik penerima. Untuk menggunakan SMTP bisa dari Microsoft Outlook. biasanya untuk menggunakan SMTP di perlukan settingan :
+\end{enumerate} 
+\begin{itemize}
+\item Email Address : contoh; 
+\begin{enumerate}
+\item anda@domainanda.com 
+\item Incoming Mail (POP3, IMAP or HTTP) server : mail.domainanda.com 
+\item Outgoing (SMTP) server : mail.domainanda.com 
+\item Account Name : anda@domainanda.com 
+\item Password : password yang telah anda buat sebelumnya
+\end{enumerate} 
+\end{itemize}
+Pada ilustrasi diatas Siti memiliki alamat email siti@a.id menulis email nya di komputer menggunakan Thunderbird atau Evolution. Pada kolom To: dia ketikkan alamat tujuan yaitu hendra@b.id. Setelah siti menekan tombol send, email yang dikirim langsung menuju ke mesin SMTP server milik ISP 1 yang bernama smtp.a.id
+Pada server smtp.a.id menerima email dari siti (siti@a.id) yang ditujukan kepada hendra (hendra@b.id). Server mengecek smtp.a.id mencek alamat email tujuan yaitu hendra.@b.id. Mesin server smtp.a.id membutuhkan informasi ke server mana email untuk mesin.b.id harus ditujukan. Untuk memperoleh informasi tersebut tentang domain b.id. 
+Kemudian pada mesin Name Server ns.b.id memberitahukan mesin smtp.a.id bahwa semua email yang ditujukan kepada b.id harus dikirim kepada mesin smtp.b.id.Setelah memperoleh jawaban dari ns.c.id bahwa email harus dikirm ke mesin smtp.b.id maka mesin smtp.a.id berusaha untuk menghubungi mesin smtp.b.id.Setelah mesin smtp.b.id berhasil dihubungi, mesin smtp.a.id mengirimkan teks email dari Siti (siti@a.id) yang ditujukan kepada Hendra(henra@b.id) ke mesin smtp.b.id 
+Hendra (hendra@b.id)yang sedang menjalankan perangkat lunak pembaca email dan mengambil email tersebut dari eail server smtp.b.id barulah email dari Siti (siti@a.id) dapat diunduh melalui PC hendra dan di tampilkan isi emailnya. 
+E-mail disampaikan oleh mail client (MUA, mail user agent) ke mail server (MSA, mail submission agent) menggunakan SMTP pada port 587 atau menggunakan traditional port 25. Dari sini, MSA mengirim mail tersebut ke mail transfer agent miliknya (MTA, mail transfer agent). MTA batas harus menemukan host target, dengan menggunakan DNS untuk mencari mail exchange record (MX record) untuk domain penerima. MX record yang kembali berisi nama dari host target. MTA selanjutnya menghubungkan ke exchange server sebagai SMTP client. Ketika MX target menerima pesan yang masuk, akan ditangani oleh mail delivery agent (MDA) untuk pengiriman pesan secara local. 
+Analisis: Saat PC siti diberi perintah mengirim email ke PC Hendra, kemudian email tersebut terlebih dahulu masuk ke server network dimana dia berada server 1(smtp.a.id), disini server dapat melakukan kegiatan sniffing, Pada server sebelumnya sudah saling terkoneksi dan mendapat authentifikasi dari antar server untuk meneruskan paket email yang akan dikirim protokol yang bekerja pada tahap ini adalah SMTP, kemudian email masuk pada server2 (smtp.b.id).Untuk selanjutnya email dikirim ke PC Hendra (PC Destination) pada tahap ini protokol yang bekerja adalah protokol IMAP. Sehingga dari ilustrasi yang diberikan dapat menggambarkan proses pengiriman email,dan apa saja yang terjadidalam prosesnya. 
+Pada proses pengiriman email terjadi kegiatan sniffing yang dilakukan oleh server. Sniffing adalah kegiatan pengendusan traffic data packet pada suatu jaringan. 
+Selain itu Prinsip kerja dan Porses Pengiriman Email, email juga dibedakan berdasarkan format isinya, yakni sebagai berikut
+\begin{itemize} 
+\item Plain Text Email adalah jenis email yang sisanya diformat menggunakan sistem America Standart Code for Information Interchange (ASCII). Tulisan yang dibuat dengan format ini tidak dapat dimodifikasi seperti warna, ukuran jenis font dan lain sebagainya, Tidak ada pengolahan atau penambahan aksesoris. 
+\item HTML Email adalah bahasa standar yang digunakan untuk mengatur tampilan informasi di Internet. Email yang menggunakan format ini umumnya dapat disesuaikan dengan selera pengirimnya, Dengan begitu email tersebut dapat ditambahkan macam-macam aksesoris seperti; penggantian jenis font, warna font dan juga besaran font pada tiap bagian surat.
+\end{itemize}
+\subsection {Apa Itu Port ?} 
+Port adalah socket atau jack koneksi yang terletak di luar unit sistem sebagai tempat kabel - kabel yang berbeda ditancapkan. Port berfungsi untuk mentransmisikan data. Berikut macam - macam port : 
+\begin{enumerate}
+\item Port Serial adalah port seri merupakan sebuah port pada personal computer yang berfungsi untuk mentransmisikan satu bit informasi pada satu satuan waktu. 
+\item Port Pararel adalah sebuah port pada personal computer yang berfungsi sebagai alat komunikasi komputer (motherboard) dengan perangkat luar yang bersifat paralel. 
+\item Port SCSI (Scuzzy) adalah port berkinerja tinggi yang didefinisikan oleh American National Standart Institute yang digunakan untuk menangani perangkat input/output atau perangkat media penyimpanan. 
+\item Port USB adalah suatu teknologi yang memungkinkan untuk menghubungkan alat eksternal (peripheral) seperti scenner, printer, mouse, dan perangkat lainnya ke komputer. \par
+\end{enumerate}
+\subsection {Cara Kerja Mail Server (singkat)} 
+Cara kerja mail server mempunyai berbagai macam versi penjelasan mengenai cara kerjanya, dalam artikel ini saya akan menjelaskan 2 versi cara kerja mail server yang sudah saya rangkum dari berbagai sumber. Sebenarnya cara kerja antara versi 1 dan 2 mempunyai inti yang sama, hanya saja penjelasannya yang beda, silahkan anda pilih yang mana.\par  
+\begin{itemize}
+\item Cara Kerja Mail Server Versi 1 :
+Proses pengiriman e-mail malalui tahapan yang sedikit panjang. Saat e-mail di kirim, maka e-mail tersebut disimpan pada mail server menjadi satu file berdasarkan tujuan e-mail. File ini berisi informasi sumber dan tujuan, serta dilengkapi tanggal dan waktu pengiriman. Pada saat user membaca e-mail berarti user telah mengakses server e-mail dan membaca file yang tersimpan dalam server yang di tampilkan melalui browser user 
+\item Cara Kerja Mail Server Versi 2:
+Cara kerja ini saya ambil dari Xmodulo, sebelum memahami proses cara kerja mail server sebaiknya anda mengenal terlebih dahulu singkatan - singkatan dari MUA, MTA, MDA dll. Berikut penjelasannya : 
+\begin{enumerate}
+\item Mail User Agent (MUA) : MUA adalah komponen yang berinteraksi dengan pengguna akhir secara langsung. Contoh dari MUA yaitu Thunderbird, MS Outlook, Zimbra Desktop. Interface webmail seperti Gmail. 
+\item Mail Transfer Agent (MTA) : MTA bertanggung jawab untuk mentransfer email dari mail server mengirimkan sampai ke server penerima email. Contoh MTA yaitu sendmail dan postfix 
+\item Mail Delivery Agent (MDA) : Dalam surat server tujuan, MTA lokal menerima email masuk dari MTA yang paling jauh. Email tersebut kemudian dikirimkan ke kotak surat pengguna dengan MDA. 
+\item POP / IMAP : POP dan IMAP adalah protokol yang digunakan untuk mengambil email dari kotak surat penerima server untuk penerima MUA. 
+\item Mail Exchanger Record (MX) : Record MX adalah entri DNS untuk mail server. Catatan ini menunjuk ke alamat IP ke arah mana email harus ditembak. MX record terendah selalu menang, yaitu mendapat prioritas tertinggi. Sebagai contoh, MX 10 adalah lebih baik daripada MX 20, alamat IP dari MX record dapat bervariasi berdasarkan desain dan konfigurasi persyaratan. seperti yang akan dibahas nanti dalam artikel.
+Ketika pengirim mengklik tombol kirim, SMTP (MTA) memastikan ujung ke ujung pengiriman email dari pengirim-sisi server ke server tujuan. Setelah mencapai server tujuan, MTA lokal ke server tujuan menerima email, dan di pindahkan ke MDA setempat. MDA kemudian menulis email ke kotak pesan penerima. Ketika penerima memeriksa email, mereka diambil oleh MUA dengan menggunakan protokol seperti POP atau IMAP. 
+\end{enumerate}
+\end{itemize}
 
-Mail Server adalah perangkat lunak program yang mendistribusikan file atau informasi sebagai respons atas permintaan yang dikirim via email, mail server juga digunakan pada bitnet untuk menyediakan layanan serupa ftp. Selain itu mail server juga dapat dikatakan sebagai aplikasi yang digunakan untuk penginstalan email.  \par
-\vspace{12pt}
-Mail Server juga bisa disebut sebagai sebuah komputer yang didedikasikan untuk menjalankan jenis aplikasi perangkat lunak komputer, hal ini dianggap sebagai bagian terpenting dari setiap email sistem. Mail Server biasanya dikelola oleh seorang yang biasanya dipanggil post master. \par
-\vspace{12pt}
-\noindent 
-Tugas Post Master  \par
-\noindent 
-\begin{itemize}
-\item Mengelola Account \par
-\noindent 
-\item Memonitor Kinerja Server \par
-\noindent 
-\item Tugas Administratif Lainnya\end{itemize}
- \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-\textbf{Protokol Pada Mail Server} \par
-\noindent 
-Protokol yang umum digunakan antara lain protokol SMTP, POP3 dan IMAP. \par
-\noindent 
-\begin{enumerate}
-\item SMTP (Simple Mail Transfer Protocol) \par
-SMTP (Simple Mail Transfer Protocol) digunakan sebagai standar untuk menampung dan mendistribusikan email. \par
-\vspace{12pt}
-Simple Mail Transfer Protocol atau SMTP digunakan untuk berkomunikasi dengan server guna mengirimkan email dari lokal email ke server, sebelum akhirnya dikirimkan ke server email penerima. Proses ini dikontrol dengan Mail Transfer Agent (MTA) yang ada dalam server email Anda. Port SMTP Default: \par
-\noindent 
-\begin{itemize}
-\item Port~25 –  Port tanpa dienkripsi \par
-\noindent 
-\item Port 426 – Port SSL/TLS, nama lainnya SMTPS\end{itemize}
- \par
-\vspace{12pt}
-\noindent 
-\item POP3 (Post Office Protocol v3) \par
-POP3 (Post Office Protocol v3) dan IMAP (Internet Mail Application Protocol) digunakan agar user dapat mengambil dan membaca email secara remote yaitu tidak perlu login ke dalam sistem shelll mesin mail server tetapi cukup menguhubungi port tertentu dengan mail client yang mengimplementasikan protocol POP3 dan IMAP. \par
-POP3 (Post Office Protocol 3) adalah versi terbaru dari protokol standar untuk menerima email. POP3 merupakan protokol client/server dimana email dikirimkan dari server ke email lokal. Digunakan untuk berkomunikasi dengan email server dan mengunduh semua email ke email lokal (seperti Outlook, Thunderbird, Windows Mail, Mac Mail, dan sebagainya), tanpa menyimpan salinannya di server. Biasanya, dalam aplikasi email terdapat pilihan untuk tetap menyimpan salinan email yang diunduh pada server atau tidak. \par
-\vspace{12pt}
-Apabila kita mengakses akun email yang sama dari perangkat berbeda, akan sangat direkomendasikan untuk menyimpan backup. Hal ini perlu dilakukan sebagai langkah antisipasi apabila perangkat kedua tidak bisa mengunduh email, sementara perangkat pertama sudah menghapusnya. \par
-\vspace{12pt}
-POP3 adalah protokol komunikasi satu arah, yang artinya data diambil dari server dan dikirimkan ke email lokal di perangkat komputer Anda. Port POP3 Default: \par
-\noindent 
-\begin{itemize}
-\item Port 110 – Port tanpa dienkripsi \par
-\noindent 
-\item Port 995 – Port SSL/TLS, nama lainnya POP3S\end{itemize}
- \par
-\vspace{12pt}
-\textbf{Kelebihan Menggunakan POP3} \par
-\noindent 
-\begin{itemize}
-\item Ketika email sudah diunduh melalui aplikasi local mail di komputer, Anda tidak perlu terhubung ke internet apabila Anda ingin membukanya kembali. \par
-\noindent 
-\item Kebanyakan tidak ada ukuran limit untuk email yang dikirim dan diterima. \par
-\noindent 
-\item Dapat membuka file attachment dengan cepat . \par
-\noindent 
-\item Tidak ada ukuran maksimal untuk mailbox, kecuali harddisk komputer Anda penuh.\end{itemize}
- \par
-\vspace{12pt}
-\textbf{Kekurangan Menggunakan POP3} \par
-\noindent 
-\begin{itemize}
-\item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. \par
-\noindent 
-\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer. \par
-\noindent 
-\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \par
-\noindent 
-\item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.\end{itemize}
- \par
-\noindent 
-\item IMAP (Internet Message Access Protocol) \end{enumerate} \par
-IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja. \par
-\vspace{12pt}
-IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3. \par
-\vspace{12pt}
-Dalam IMAP, email disimpan di server. ketika Anda akan mengecek email, local mail akan menghubungi server untuk menampilkan pesan email. Sehingga untuk file pesan email tetap berada di server dan tidak didownload ke email lokal. Port IMAP Default: \par
-\noindent 
-\begin{itemize}
-\item Port 143 – Port tanpa dienkripsi \par
-\noindent 
-\item Port 993 – Port SSL/TLS, nama lainnya IMAPS\end{itemize}
- \par
-\vspace{12pt}
-\textbf{Kelebihan Menggunakan IMAP} \par
-\noindent 
-\begin{itemize}
-\item Anda dapat mengakses email dari mana saja melalui perangkat berbeda. \par
-\noindent 
-\item Email dapat diakses melalui web browser tanpa aplikasi email. \par
-\noindent 
-\item Anda hanya mengunduh pesan yang ingin dibuka, sehingga tidak perlu menunggu semua pesan diunduh. \par
-\noindent 
-\item Attachment tidak secara otomatis diunduh oleh IMAP, sehingga email dapat diakses lebih cepat. Anda juga dapat memilih attachment tertentu yang ingin Anda buka.\end{itemize}
- \par
-Banyaknya pengguna mobile dewasa ini mengakibatkan IMAP lebih banyak digunakan disini. Hal ini dikarenakan file dari pesan email tersimpan dalam server dan Anda hanya tinggal mengaksesnya saja. \par
-\vspace{12pt}
-\textbf{Kekurangan Menggunakan IMAP} \par
-\noindent 
-\begin{itemize}
-\item Ada beberapa layanan hosting yang tidak mendukung IMAP. \par
-\noindent 
-\item Email disimpan pada server sehingga mengurangi disk space hosting. \par
-\noindent 
-\item Email dengan IMAP hanya dapat diakses ketika terkoneksi internet.\end{itemize}
- \par
-\vspace{12pt}
-\noindent 
-\textbf{Server Pada Mail Server dan Penjelasannya} \par
-\noindent 
-Pada mail server terdapat 2 server yang berbeda yaitu : \par
-\noindent 
-\begin{enumerate}
-\item Outgoing Server (Sending email) : Protocol server yang menangani adalah SMTP (Simple Mail Transfer Protocol) pada port 25. \par
-\noindent 
-\item Incoming Server (Receiving email) : Protocol server yang menangani adalah POP3 (Post Office Protocol) pada port 110 atau IMAP (Internet Message Access Protocol) pada port 143.\end{enumerate}
- \par
-\vspace{12pt}
-\noindent 
-Penjelasan dari Server yang menangani outgoing email dan incoming email sebagai berikut : \par
-\noindent 
-\begin{enumerate}
-\item SMTP Server : Saat anda mengirimkan email maka email anda akan ditangani SMTP Server dan akan dikirim ke SMTP Server tujuan, baik secara langsung maupun melalui beberapa SMTP Server dijalurnya. Apabila server tujuan terkoneksi maka email akan dikirim, namun apabila tidak terjadi koneksi maka akan dimasukan ke dalam queue dan di resend setiap 15 menit, apabila dalam 5 hari tidak ada perubahan maka akan diberikan undeliver notice ke inbox pengirim. \par
-\vspace{12pt}
-\noindent 
-\item POP3 Server : Jika menggunakan POP3 Server, apabila kita akan membaca email maka email pada server di download sehingga email hanya akan ada pada mesin yang mendownload email tersebut (kita hanya bisa membaca email tersebut pada device yang mendownload email tersebut). \par
-\vspace{12pt}
-\noindent 
-\item IMAP Server : Jika menggunakan IMAP Server, email dapat dibuka kembali lewat device yang berbeda. Fungsinya adalah mengelola email yang disimpan di server, kemudian email tersebut di ambil oleh client, selain itu IMAP juga meneruskan packet data. Kemampuan~ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil/download semua pesan yang ada tanpa kecuali. IMAP adalah suatu  protokol yang umum digunakan untuk pengiriman surat elektronik atau email di dalam Internet. Protokol ini gunakan untuk mengirimkan data dari komputer pengirim surat elektronik ke server surat elektronik penerima. Untuk menggunakan SMTP bisa dari Microsoft Outlook. biasanya untuk menggunakan SMTP di perlukan secara settingan :\end{enumerate}
- \par
-\vspace{12pt}
-\noindent 
-\begin{itemize}
-\item Email Address : contoh —> anda@domainanda.com 2. Incoming Mail (POP3, IMAP or HTTP) server : mail.doaminanda.com 3. Outgoing (SMTP) server : mail.domainanda.com 4. Account Name : anda@domainanda.com 5. Password : password yang telah anda buat sebelumnya \par
-\vspace{12pt}
-Pada ilustrasi diatas Siti memiliki alamat email siti@a.id menulis email nya di komputer menggunakan Thunderbird atau Evolution. Pada kolom To: dia ketikkan alamat tujuan yaitu hendra@b.id. Setelah siti menekan tombol send, email yang dikirim langsung menuju ke mesin SMTP server milik ISP 1 yang bernama smtp.a.id. \par
-\vspace{12pt}
-Pada server smtp.a.id menerima email dari siti (siti@a.id) yang ditujukan kepada hendra (hendra@b.id). Server mengecek smtp.a.id mencek alamat email tujuan yaitu hendra.@b.id. Mesin server smtp.a.id membutuhkan informasi ke server mana email untuk mesin.b.id harus ditujukan. Untuk memperoleh informasi tersebut tentang domain b.id. \par
-\vspace{12pt}
-Kemudian pada mesin Name Server ns.b.id memberitahukan mesin smtp.a.id bahwa semua email yang ditujukan kepada b.id harus dikirim kepada mesin smtp.b.id.Setelah memperoleh jawaban dari ns.c.id bahwa email harus dikirm ke mesin smtp.b.id maka mesin smtp.a.id berusaha untuk menghubungi mesin smtp.b.id.Setelah mesin smtp.b.id berhasil dihubungi, mesin smtp.a.id mengirimkan teks email dari Siti (siti@a.id) yang ditujukan kepada Hendra(henra@b.id) ke mesin smtp.b.id \par
-\vspace{12pt}
-Hendra (hendra@b.id)yang sedang menjalankan perangkat lunak pembaca email dan mengambil email tersebut dari eail server smtp.b.id barulah email dari Siti (siti@a.id) dapat diunduh melalui PC hendra dan di tampilkan isi emailnya. \par
-\vspace{12pt}
-E-mail disampaikan oleh mail client (MUA, mail user agent) ke mail server (MSA, mail submission agent) menggunakan SMTP pada port 587 atau menggunakan traditional port 25. Dari sini, MSA mengirim mail tersebut ke mail transfer agent miliknya (MTA, mail transfer agent). MTA batas harus menemukan host target, dengan menggunakan DNS untuk mencari mail exchange record (MX record) untuk domain penerima. MX record yang kembali berisi nama dari host target. MTA selanjutnya menghubungkan ke exchange server sebagai SMTP client. Ketika MX target menerima pesan yang masuk, akan ditangani oleh mail delivery agent (MDA) untuk pengiriman pesan secara local. \par
-\vspace{12pt}
-Analisis: \par
-Saat PC siti diberi perintah mengirim email ke PC Hendra, kemudian email tersebut terlebih dahulu masuk ke server network dimana dia berada server 1(smtp.a.id), disini server dapat melakukan kegiatan sniffing, Pada server sebelumnya sudah saling terkoneksi dan mendapat authentifikasi dari antar server untuk meneruskan paket email yang akan dikirim protokol yang bekerja pada tahap ini adalah SMTP, kemudian email masuk pada server2 (smtp.b.id).Untuk selanjutnya email dikirim ke PC Hendra (PC Destination) pada tahap ini protokol yang bekerja adalah protokol IMAP. Sehingga dari ilustrasi yang diberikan dapat menggambarkan proses pengiriman email,dan apa saja yang terjadidalam prosesnya. \par
-\vspace{12pt}
-Pada proses pengiriman email terjadi kegiatan sniffing yang dilakukan oleh server. Sniffing adalah kegiatan pengendusan traffic data packet pada suatu jaringan. \par
-\vspace{12pt}
-Selain itu Prinsip kerja dan Porses Pengiriman Email, email juga dibedakan berdasarkan format isinya, yakni sebagai berikut: \par
-\vspace{12pt}
-\noindent 
-\item Plain Text Email \par
-Adalah~jenis email yang sisnya diformat menggunakan sistem America  Standart Code for Information Interchange (ASCII). Tulisan yang dibuat dengan format ini tidak dapat dimodifikasi seperti warna, ukuran jenis font dan lain sebagainya. emua sesuai dengan aslinya. Tidak ada pengolahan atau penambahan aksesories. \par
-\noindent 
-\item HTML Email\end{itemize}
- \par
-Merupakan bahasa standar yang digunakan untuk mengatur tampilan informasi di Internet. Email yang menggunakan format ini umunya dapat disesuaikan dengan selera pengirimnya. Dengan begitu email tersebut dapat ditambahkan macam-macam aksesoris, seperti penggantian jenis font, wat=rna font dan juga besaran font pada tiap bagian surat. \par
-\vspace{12pt}
-\noindent 
-\textbf{Apa Itu Port ?} \par
-Port adalah socket atau jack koneksi yang terletak di luar unit sistem sebagai tempat kabel - kabel yang berbeda ditancapkan. Port berfungsi untuk mentransmisikan data. Berikut macam - macam port : \par
-\noindent 
-\begin{enumerate}
-\item Port Serial \par
-\noindent 
-\item Port Pararel \par
-\noindent 
-\item Port SCSI (Scuzzy) \par
-\noindent 
-\item Port USB \end{enumerate}
- \par
-\vspace{12pt}
-\noindent 
-\textbf{Cara Kerja Mail Server (singkat)} \par
-Cara kerja mail server mempunyai berbagai macam versi penjelasan mengenai cara kerjanya, dalam artikel ini saya akan menjelaskan 2 versi cara kerja mail server yang sudah saya rangkum dari berbagai sumber. Sebenarnya cara kerja antara versi 1 dan 2 mempunyai inti yang sama, hanya saja penjelasannya yang beda, silahkan anda pilih yang mana. \par
-\vspace{12pt}
-\noindent 
-\textbf{Cara Kerja Mail Server  $  \#  $Versi 1} \par
-Proses pengiriman e-mail malalui tahapan yang sedikit panjang. Saat e-mail di kirim, maka e-mail tersebut disimpan pada mail server menjadi satu file berdasarkan tujuan e-mail. File ini berisi informasi sumber dan tujuan, serta dilengkapi tanggal dan waktu pengiriman. Pada saat user membaca e-mail berarti user telah mengakses server e-mail dan membaca file yang tersimpan dalam server yang di tampilkan melalui browser user. \par
-\vspace{12pt}
-\noindent 
-\textbf{Cara Kerja Mail Server  $  \#  $Versi 2} \par
-Cara kerja ini saya ambil dari Xmodulo, sebelum memahami proses cara kerja mail server sebaiknya anda mengenal terlebih dahulu singkatan - singkatan dari MUA, MTA, MDA dll. Berikut penjelasannya : \par
-\vspace{12pt}
-\noindent 
-\begin{enumerate}
-\item Mail User Agent (MUA) : MUA adalah komponen yang berinteraksi dengan pengguna akhir secara langsung. Contoh dari MUA yaitu Thunderbird, MS Outlook, Zimbra Desktop. Interface webmail seperti Gmail dan Yahoo juga MUA. \par
-\noindent 
-\item Mail Transfer Agent (MTA) : MTA bertanggung jawab untuk mentransfer email dari mail server mengirimkan sampai ke server penerima email. Contoh MTA yaitu sendmail dan postfix. \par
-\noindent 
-\item Mail Delivery Agent (MDA) : Dalam surat server tujuan, MTA lokal menerima email masuk dari MTA terpencil. Email tersebut kemudian dikirimkan ke kotak surat pengguna dengan MDA. \par
-\noindent 
-\item POP / IMAP : POP dan IMAP adalah protokol yang digunakan untuk mengambil email dari kotak surat penerima server untuk penerima MUA. \par
-\noindent 
-\item Mail Exchanger Record (MX) : Record MX adalah entri DNS untuk mail server. Catatan ini menunjuk ke alamat IP ke arah mana email harus ditembak. MX record terendah selalu menang, yaitu, mendapat prioritas tertinggi. Sebagai contoh, MX 10 adalah lebih baik daripada MX 20. Alamat IP dari MX record dapat bervariasi berdasarkan desain dan konfigurasi persyaratan, seperti yang akan dibahas nanti dalam artikel.\end{enumerate}
- \par
-Ketika pengirim mengklik tombol kirim, SMTP (MTA) memastikan ujung ke ujung pengiriman email dari pengirim-sisi server ke server tujuan. Setelah mencapai server tujuan, MTA lokal ke server tujuan menerima email, dan di pindahkan ke MDA setempat. MDA kemudian menulis email ke kotak pesan penerima. Ketika penerima memeriksa email, mereka diambil oleh MUA dengan menggunakan protokol seperti POP atau IMAP. \par
-\vspace{12pt}
-\vspace{12pt}
+\section{Sending Email}
+	Mail Server adalah perangkat lunak program yang mendistribusikan ﬁle atau informasi sebagai respons atas permintaan yang dikirim via email, mail server juga digunakanpadabitnetuntukmenyediakanlayananserupaftp. Selainitumailserverjuga dapat dikatakan sebagai aplikasi yang digunakan untuk penginstalan email.	\par \vspace{12pt}
+	Tak hanya sebagai sebuah program mail server juga bisa berupa sebuah komputer yang memang dikhususkan untuk menjalankan sebuah aplikasi perangkat lunak program ini. nah komputer ini di ibaratkan sebagai jantung dari system sebuah email. Program ini biasanya dikelola oleh programer yang disebut dengan post master.	\par \vspace{12pt}
+	Mail server ini dikelola oleh seorang post master yang memiliki beberapa tugas pokok yaitu mengelola kaun, memonitor bagaimana kinerja server dan melaksanakan tugas administrative lainnya. Biasanya program ini menggunakan protocol antara lain smtp, pop3 dan imap.	\par \vspace{12pt}
+	
+	\textbf{Cara Kerja Mail Server}	\par \vspace{12pt}
+	
+	Setelah kamu tahu apa itu mail server, kini saatnya kamu tahu bagaimana mail server bekerja. Pada dasarnya ada dua cara kerja program ini. pertama, proses pengiriman email akan melewati tahapan yang agak panjang. saat email dikirim karena email akan disimpan pada server utama atau email server itu sendiri berdasarkan tujuan email akan dikirimkan kemana. Umumnya file ini berisi informasi yang dimana sumber tujuan, serta adanya waktu pengiriman. Nah saat kamu sebagai user membaca email berarti user telah mengakses server email tersebut dan membaca email yang tersimpan pada server yang di tampilkan pada browser pengguna.	\par \vspace{12pt}
+	
+	Untuk memahami cara kerja mail server yang kedua ini,kamu harus memahami ada beberapa istilah penting yaitu MUA atau mail user agent yaitu sebuah komponen yang berinteraksi secara langsung, misalnya adalah thunderbird, ms outlook, zimbra atau interface webmail seperti gmail ataupun yahoo.	\par \vspace{12pt}
+	
+	Selain itu istilah penting mail server lainnya adalah MTA atau mail transfer agent yang bertanggung jawab mentransfer email dari server mail kemudian sampai server mail penerima, contohnya adalah karena sendmail dan postfix. Selain itu MDA atau mail delivery agent, jika mta lokasi menerima email masuk dari mta terpencil maka email akan dikirim kek otak pengguna dengan mda.	\par \vspace{12pt}
+	
+	Istilah lain dalam mail server ada POP atau IMAP kedua singkatan ini merupakan sesuatu protocol yang digunakan untuk mengunduh email dari kotak penerima server untuk penerima MUA. Kemudian ada mail exchange record atau MX. Istilah ini merujuk pada entri dns untuk server mail. Record mx ini akan menunjuk pada alamt ip dimana email harus ditembakkan. Mx record yang rendah akan selalu menang karena mendapat priritas tertinggi. Contohnya misal mx 10 akan lebih baik dibandingkan dengan mx 20.	\par \vspace{12pt}
+	
+	Mail Server juga bisa disebut sebagai sebuah komputer yang didedikasikan untuk menjalankan jenis aplikasi perangkat lunak komputer, hal ini dianggap sebagai bagian terpenting dari setiap email sistem. Mail Server biasanya dikelola oleh seorang yang biasanya dipanggil post master.
+ 
+	Tugas Post Master:
+	\begin{itemize}
+		\item Mengelola Account  
+		\item Memonitor Kinerja Server 
+		\item Tugas Administratif Lainnya
+	\end{itemize}
+
+\subsection {Protokol Pada Mail Server}
+	Protokol yang umum digunakan antara lain protokol SMTP, POP3 dan IMAP.
+	
+	\begin{enumerate}
+		\item  SMTP (Simple Mail Transfer Protocol) 
+		 	Protokol ini digunakan untuk mengirimkan data dari komputer pengirim surat elektronik ke server surat elektronik penerima. Protokol ini timbul karena desain sistem surat elektronik yang mengharuskan adanya server surat elektronik yang menampung sementara, sampai surat elektronik diambil oleh penerima yang berhak.
+		 	\par \vspace{12pt}
+		 	
+		 	SMTP bisa kita katakan sebagai Sebuah Kantor pos, yang pada dasarnya jika kita mengirim sebuah surat pastinya Surat itu akan dibawa Ke Gudang kantor pos untuk di lakukan penyortiran, Gudang inilah yang dimaksud dengan SMTP, Setelah dilakukan penyortiran maka surat siap untuk diantarkan ketujuan, tapi tidak proses tidak berhenti disini, Jadi surat ini akan dibawa oleh si kurir lalu si Kurir Meletakkanya di Kotak Pos yang biasa kita katakan sebagai PO BOX (PO BOX inilah yang dimaksud dengan POP3) itulah penjelasan singkat tentang SMTP.
+		 	\par \vspace{12pt}
+		 	
+		 	SMTP adalah protokol yang cukup sederhana, berbasis teks dimana protokol ini menyebutkan satu atau lebih penerima email untuk kemudian diverifikasi. Jika penerima email valid, maka email akan segera dikirim. SMTP menggunakan port 25 dan dapat dihubungi melalui program telnet. Agar dapat menggunakan SMTP server lewat nama domain, maka record DNS (Domain Name Server) pada bagian MX (Mail Exchange) digunakan.
+		 	\par \vspace{12pt}
+		 	
+		 	SMTP (Simple Mail Transfer Protocol) digunakan sebagai standar untuk menampung dan mendistribusikan email. Simple Mail Transfer Protocol atau SMTP digunakan untuk berkomunikasi dengan server guna mengirimkan email dari lokal email ke server, sebelum akhirnya dikirimkan ke server email penerima. Proses ini dikontrol dengan Mail Transfer Agent (MTA) yang ada dalam server email Anda. Port SMTP Default:
+			   
+			\begin{itemize}
+				\item Port~25 –  Port tanpa dienkripsi
+				\item Port 426 – Port SSL/TLS, nama lainnya SMTPS
+			\end{itemize}
+
+		\item {POP3 Post Office Protocol v3}
+			POP3 (Post Office Protocol v3) dan IMAP (Internet Mail Application Protocol) digunakan agar user dapat mengambil dan membaca email secara remote yaitu tidak perlu login ke dalam sistem shelll mesin mail server tetapi cukup menguhubungi port tertentu dengan mail client yang mengimplementasikan protocol POP3 dan IMAP.
+			POP3 (Post Office Protocol 3) adalah versi terbaru dari protokol standar untuk menerima email. POP3 merupakan protokol client/server dimana email dikirimkan dari server ke email lokal. Digunakan untuk berkomunikasi dengan email server dan mengunduh semua email ke email lokal (seperti Outlook, Thunderbird, Windows Mail, Mac Mail, dan sebagainya), tanpa menyimpan salinannya di server. Biasanya, dalam aplikasi email terdapat pilihan untuk tetap menyimpan salinan email yang diunduh pada server atau tidak.
+
+			Apabila kita mengakses akun email yang sama dari perangkat berbeda, akan sangat direkomendasikan untuk menyimpan backup. Hal ini perlu dilakukan sebagai langkah antisipasi apabila perangkat kedua tidak bisa mengunduh email, sementara perangkat pertama sudah menghapusnya.\par \vspace{12pt} 
+
+			POP3 adalah sebuah protocol internet yang digunakan untuk mengakses email atau surat elektronik yang masuk ke dalam email client. Fungsi utama dari POP3 ini adalah untuk menyimpan sementara email yang terkirim di dalam sebuah email server, dan kemudian meneruskannya ke dalam email client, dimana baru akan terespon ketika email tersebut sudah dibuka oleh user yang berhak (dalam hal ni adalah mereka yang memegang username dan juga password dari alamat email).
+			\par \vspace{12pt}
+			
+			POP3 adalah protokol komunikasi satu arah, yang artinya data diambil dari server dan dikirimkan ke email lokal di perangkat komputer Anda. 
+Port POP3 Default:
+			\begin{itemize}
+			\item Port 110 Port tanpa dienkripsi
+			\item Port 995 Port SSL/TLS, nama lainnya POP3S
+			\end{itemize}
+	\end{enumerate}
+
+\subsubsection {Kelebihan Menggunakan POP3}
+	\begin{enumerate}
+		\item Ketika email sudah diunduh melalui aplikasi local mail di komputer, Anda tidak perlu terhubung ke internet apabila Anda ingin membukanya kembali. 
+		\item Kebanyakan tidak ada ukuran limit untuk email yang dikirim dan diterima. 
+		\item Dapat membuka ﬁle attachment dengan cepat.
+		\item Tidak ada ukuran maksimal untuk mailbox, kecuali harddisk komputer Anda penuh.
+	\end{enumerate}
+	
+\subsection {Kekurangan Menggunakan POP3} 
+	\begin{enumerate}
+		\item Jika JavaScript pada email reader diaktifkan, email phishing dengan embed JavaScript dapat terbaca di email. 
+		\item Semua pesan akan disimpan di komputer. Hal ini dapat mengurangi space pada harddisk komputer.
+		\item Semua file attachment diunduh dan disimpan dalam komputer. Karenanya, potensi komputer terinfeksi virus dari email lebih besar. \item Folder email terkadang hilang. Jika ini yang terjadi, upaya restore cukup sulit dilakukan.
+	\end{enumerate}
+
+\subsection {IMAP (Internet Message Access Protocol)}
+	 IMAP (Internet Message Access Protocol) adalah protokol standar untuk mengakses/mengambil e-mail dari server. IMAP memungkinkan pengguna memilih pesan e-mail yang akan ia ambil, membuat folder di server, mencari pesan e-mail tertentu, bahkan menghapus pesan e-mail yang ada. Kemampuan ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil/download semua pesan yang ada tanpa kecuali.\par \vspace{12pt}
+	Internet Message Access Protocol merupakan salah satu dari dua protokol penerimaan email (email retrieval protocol). Juga dikenal dengan singkatan IMAP, Internet Message Access Protocol merupakan Internet protocol yang beroperasi pada Application layer. Dengan IMAP, mailbox dapat dibaca dan dikelola secara simultan (bersamaan) oleh sejumlah email client berbeda. IMAP seringkali digunakan oleh sebagian besar pengguna Internet untuk mendownload email dari web mail server.\par \vspace{12pt}
+	Awalnya disebut sebagai Interim Mail Access Protocol, versi IMAP pertama telah menjalani beberapa revisi sejak dibuat pada tahun 1986. Saat ini disebut sebagai Internet Message Access Protocol, versi IMAP ini merupakan versi IMAP keempat yang telah menjadi standar pada tahun 1994, dan dipublikasikan pada RFC 1730. Pop Office Protocol (POP) merupakan Internet protocol umum lainnya untuk email retrieval. Sebagian besar email server dan email client mendukung baik IMAP dan POP sebagai pilihan lain terhadap protokol unik mereka sendiri. Dibandingkan dengan POP, IMAP memiliki beberapa keunggulan termasuk kemampuan untuk memuat bagian dari email ketimbang menunggu semua attachment di dalamnya. IMAP juga dapat juga menerima konten pesan menggunakan mekanisme MIME. IMAP client juga cenderung tetap dapat terhubung dengan mail server dalam periode waktu yang lebih lama, yang dapat meningkatkan response time secara keseluruhan. \par \vspace{12pt}
+	 Cara kerja IMAP adalah email client melakukan koneksi ke server email, lalu melakukan sinkronisasi folder. Apabila kita mengklik/ mengakses sebuah folder, maka daftar email berikut isinya (?) juga didownload. Apabila kita menghapus sebuah email, maka email pada server juga dihapus. Dengan kata lain, protokol IMAP seakan-akan memindahkan semua isi mailbox kita ke e-mail clent kita sendiri.\par \vspace{12pt}
+	Pada dasranya Protokol IMAP ini dirancang agar user dapat mengakses e-mail pada milbox serta dapat berinteraksi dengan server. PORT yang digunakan untuk protocol ini dalam bentuk TCP/IP yaitu pada PORT nomer 143. Protocol ini menggunakan koneksi yang terus menerus ke server. Ketika e-mail masuk maka anda akan melihat langsung di e-mail kmputer Client (dengan posisi online). Karena e-mail yang masuk ke server maka akan cepat masuk dan dapat segera dilihat juga di Client. Seringkali lebih cepat prosesnya dibandingkan jika menggunakan web interface sendiri yang mirip seperti Blackberry. Namun untuk menggunakan IMAP anda harus menggunakan Koneksi Internet yang cukup baik atau dengan bandwidth yang lumayan besar. Bahkan dengan IMAP jika anda menggunakan 10 client interface web, missal menggunakan Netbook,Notbook,Dekstop, Ponsel danlain sebagainya maka semua akan memperlihatkan e-mail yang sama. Jika anda menggunakan banyak device untuk mengakses e-mail, maka pilihan yang tepat adalah menggunakan IMAP. Karena IMAP lebih baik dengan POP. Tapi IMAP biasanya digunakan untuk dalam jaringan LAN saja karena untuk kapasitas jaringan kecil akan lebih maksimal, jika untuk kapasitas yang lebih besar lagi pilihan yang tepat adalah menggunakan Protokol POP3.\par \vspace{12pt}
+	IMAP (Internet Message Access Protocol), seperti halnya POP3, juga digunakan untuk mengirimkan email ke local mail, hanya saja terdapat sedikit perbedaan cara kerja.
+	IMAP merupakan protokol komunikasi dua arah sebagai perubahan yang dibuat pada local mail yang dikirimkan ke server. Pada dasarnya, isi email tetap berada di server. Protokol IMAP lebih direkomendasikan oleh penyedia email seperti Gmail dibandingkan menggunakan POP3.
+	Dalam IMAP, email disimpan di server. ketika Anda akan mengecek email, local mail akan menghubungi server untuk menampilkan pesan email. Sehingga untuk file pesan email tetap berada di server dan tidak didownload ke email lokal. Port IMAP Default: 
+	\begin{enumerate}
+		\item Port 143 – Port tanpa dienkripsi 
+		\item Port 993 – Port SSL/TLS, nama lainnya IMAPS
+	\end{enumerate}
+
+\subsection {Menggunakan SMTP pada python}
+Python memiliki sebuah modul bernama SMTP Server yang dapat digunakan untuk menerima e-mail dari client dan menampilkan isinya ke stdout alias konsol. 
+	contoh client yang mengirim e-mail ke SMTP server ini:
+	\begin {verbatim}
+		import smtplib
+		sender = 'mikail@website.com'
+		recipient = ['sonanjaya@website.com']
+
+		message = """From: From Person <%s>
+		To: To Person <%s>
+		Subject: Testing SMTP E-Mail
+
+		Pesan ini dikirim melalui smtplib dan diterima oleh modul SMTP Server Python.
+
+		""" % (sender, recipient)
+
+		try:
+
+   		smtpObj = smtplib.SMTP('localhost', 1025)
+   		smtpObj.sendmail(sender, recipient, message)    
+
+   		print "Mengirim e-mail berhasil :D..."
+
+		except Exception, e:
+
+		print str(e)
+   		print "Error: e-mail gagal terkirim :(..."
+	\end{verbatim}
+
+Pada kode diatas dengan menggunakan smtplib cukup dengan mengakses URL dan port yang dituju, lalu kirim e-mail dengan menggunakan method sendmail() dengan melewatkan pengirim, penerima, dan pesan.
+
+\begin{table}[ht]
+	\caption{Contoh email yahoo yang memiliki smtp}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		No&Keterangani&\\
+		\hline
+		.1&Yahoo POP Server - pop.mail.yahoo.com port-995&\\
+		.2&Requires SSL-Yes&\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\ref{smtp.png}:
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{figures/smtp.png}}
+	\caption{SMTP}
+	\label{smtp.png}
+\end{figure}
+
+\textbf{Skema Singkat}\par \vspace{12pt}
+Mail Server atau yang sering disebut juga E-Mail server, digunakan untuk mengirim surat melalui Internet. Dengan begitu, dapat mempermudah dalam penggunanya, karena lebih cepat dan efisien. Untuk membuat Mail Server, harus terdapat SMTP dan POP3 server, yang digunakan untuk mengirim dan menerima email. Proses pengiriman email bisa terjadi karena adanya SMTP Server (Simple Mail Transfer Protocol). Setelah dikirim, email tersebut akan ditampung sementara di POP3 Server (Post Office Protocol ver. 3). Dan ketika user yang mempunyai email account tersebut online, mail client akan secara otomatis melakukan sinkronisasi dari POP3 Server.
+\par \vspace{12pt}
+Mungkin kita dulu pernah bahkan sering menggunakan kantor pos sebagai jasa untuk mengirim surat kepada kerabat atau teman kita yang jauh dari tempat kita tinggal, di Kantor pos itu juga terdapat Kurir sebagai tukang mengantarkan surat dari Kantor Pos kepada penerima.
+\par \vspace{12pt}
+SMTP ini singkatan dengan kepanjangan Simple Mail Transfer Protocol. Dengan pengertian singkat SMTP adalah protokol yang mengatur pengiriman email dari pengirim (Ongoing).
+Cara kerja SMTP ini sama dengan Kantor Pos, tempat dimana kita menitipkan surat kita agar dikirimkan kepada penerima yang tertera di surat tersebut.
+Terdapat pada port berapa SMTP? SMTP terdapat pada port 25.
+\par \vspace{12pt}
+POP3 ini singkatan dari kepanjangan Post Office Protocol ver.3 dan IMAP ini singkatan dari kepanjangan Internet Message Access Protocol. Dengan pengertian singkat POP3/IMAP adalah protokol yang mengatur penerimaan email kepada penerima (Ingoing).\par \vspace{12pt}
+Cara kerja POP3 dan IMAP sama dengan kurir yang mengantarkan surat, tugasnya menyampaikan surat yang sebelumnya sudah dititipkan di Kantor Pos (SMTP) kepada penerima surat.
+Terdapat pada port berapa POP3? POP3 terdapat pada port 110.
+Terdapat pada port berapa IMAP? IMAP terdapat pada port 143.
+
+Ada perbedaan antara POP3 dan IMAP, mudahnya. kalau IMAP itu protokol yang biasa kita pakai kalau kita pakai Web Based Mail, contohnya seperti (gmail.com, yahoo.com) dan menggunakan Browser sebagai antarmukanya, kalau POP3 menggunakan Aplikasi Email Client, sebut saja Outlook, Thunderbird, Outlook Express dll.
+
+Bedanya jika kita pakai IMAP, kita hanya bisa melihat isi dari email yang ada pada mailbox kita secara online dan tidak bisa di download ke localdisk kita, berbeda dengan POP3 yang bisa membuka email secara offline dengan syarat ketika komputer online dia mendownload semua email ke local disk sehingga bisa dibaca offline.

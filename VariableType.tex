@@ -4,6 +4,7 @@
 % Hanna Theresia Siregar (1154009)
 % Pebridayanti Hasibuan (1154118)
 % Andi Nurfadllah Ali (1154041)
+% Andi Wadi Afryandika (1154115)
 
 \section{Python Variabel Type}
 Satu dari fitur yang paling powerful dari sebuah bahasa pemrograman adalah kemampuan untuk memanipulasi variabel. Sebuah variabel adalah nama yang merujuk ke sebuah nilai. Variabel tidak lain hanyalah lokasi memori yang dipesan untuk menyimpan nilai. Ini berarti bahwa ketika kita membuat variabel, maka kita memesan beberapa ruang di memori. Berdasarkan tipe data sebuah variabel, penafsir mengalokasikan memori dan memutuskan apa yang dapat disimpan dalam memori yang dipesan. Oleh karena itu, dengan menetapkan tipe data yang berbeda ke variabel, kita dapat menyimpan bilangan bulat, desimal atau karakter dalam variabel ini.
@@ -39,24 +40,27 @@ Kita menggunakan variabel-variabel pada program untuk mengingat hal-hal, misalny
 	hari = 21
 	hari 
 	21 
-/end{verbatim}
+\end{verbatim}
 Kamu akan menyadari kita mengubah nilai dari hari sebanyak tiga kali, dan ketika pemberian nilai yang ketiga kita bahkan membuatnya merujuk pada nilai yang berbeda tipe dari yang sebelumnya. 
 Pemrograman itu kebanyakan tentang bagaimana komputer mengingat sesuatu, misal, Jumlah panggilan tak terjawab pada handphone mu,dan kemudian mengatur untuk memperbaharui atau merubah variabel ketika kamu melewatkan panggilan lainnya. 
 
-/subsection{Nama Variabel dan Keywords}
+\subsection{Nama Variabel dan Keywords}
 	Nama variabel bisa ditulis panjang. Mereka bisa berisi huruf maupun digit angka, tapi harus diawali dengan huruf atau underscore. Meskipun dibolehkan untuk menggunakan huruf besar, tapi pada umumnya kita tidak menggunakannya. Jika kamu menggunakannya, ingat kalau besar kecilnya huruf itu berpengaruh. Wayandan dan wayan itu merupakan dua variabel yang berbeda.
 
-Karakter underscore _  bisa ada pada nama. Biasanya digunakan pada nama yang terdiri dari lebih dari satu kata, misalnya seperti nama_ atau harga_ jual_produk.
+
+Karakter underscore  bisa ada pada nama. Biasanya digunakan pada nama yang terdiri dari lebih dari satu kata, misalnya seperti \verb|nama atau hargajualproduk.|
+
 Ada beberapa situasi yang mana nama yang diawali dengan underscore memiliki arti yang spesial, jadi aturan yang paling aman untuk pemula adalah memulai sebuah nama hanya dengan menggunakan huruf kecil.
 Jika kamu memberikan variabel nama yang ilegal, kamu akan mendapatkan syntax error: 
-/begin{verbatim}
+\begin{verbatim}
 	123doremi = "tiga not awal" 
 	SyntaxError: invalid syntax 
 	gaji  \$   = 1000000 
 	SyntaxError: invalid syntax 
 	class = "Kewirausahaan 121" 
 	SyntaxError: invalide syntax 
-/end{verbatim}
+\end{verbatim}
+
 
 \subsection{Tipe data standar}
 Data yang tersimpan dalam memori bisa bermacam-macam. Misalnya, usia seseorang disimpan sebagai nilai numerik dan alamatnya disimpan sebagai karakter alfanumerik. Python memiliki berbagai jenis data standar yang digunakan untuk menentukan operasi yang mungkin dilakukan pada mereka dan metode penyimpanan untuk masing-masingnya.
@@ -68,13 +72,12 @@ Python memiliki lima tipe data standar -
 	\item Daftar
 	\item Tuple
 	\item Kamus
-\end{itemize
-}
+\end{itemize}
 123doremi adalah ilegal karena tidak dimulai dengan huruf. gaji \$ juga ilegal karena memakai karakter ilegal, tanda dollar seharusnya tidak boleh. Tapi apa yang salah dengan class ?
 Ternyata karena class merupakan satu dari keyword (kata kunci) yang dimiliki Python. Keyword mendefinisikan aturan syntax bahasa dan struktur, dan maka dari itu tidak diperkenakan untuk digunakan sebagai nama variabel. 
 Python memiliki tiga puluhan keyword (dan hingga kini Python masih meningkatkannya dengan memperkenalkan atau menghilangkan satu atau dua). 
 Kamu mungkin berniat untuk menyimpan daftar ini untuk mempermudah. Jika si interpreter komplain mengenai satu sari nama variabel mu dan kamu tidak tahu mengapa demikian, lihatlah apakah nama variabel yang kamu buat masuk daftar diatas. Jika iya, ganti dengan nama yang lain.  
-Programer umumnya memilih nama untuk variabel mereka agar memiliki arti dan bisa dimengerti oleh pembaca manusia -- dengan demikian maka akan membantu si programer untuk mendokumentasikan, atau mengingat, apa gunanya variabel tersebut.  
+Programer umumnya memilih nama untuk variabel mereka agar memiliki arti dan bisa dimengerti oleh pembaca manusia \(--\) dengan demikian maka akan membantu si programer untuk mendokumentasikan, atau mengingat, apa gunanya variabel tersebut.  
 
 Pemula biasanya bingung dengan maksud dari berguna untuk pembaca manusia dengan berguna untuk mesin atau komputer. Jadi mungkin mereka akan berpikir salah, bahwa ketika mereka memanggil beberapa variabel dengan nama average ataupi, itu akan dengain ajaib menghitung sebuah average / rata-rata, atau dengan ajaib tahu kalau pi memiliki nilai seperti 3.14159. Tidak ! Komputer tidak akan mengerti itu, komputer tidak akan mengerti apa yang kamu inginkan dari variabel hanya karena namanya unik. 
 
@@ -95,7 +98,7 @@ Penulisan variabel Python sendiri juga memiliki aturan tertentu, yaitu :
 	\item Karakter pada nama variabel bersifat sensitif (case-sensitif). Artinya huruf kecil dan huruf besar dibedakan. 
 	Sebagai contoh, variabel namaDepan dan namadepan adalah variabel yang berbeda.
 \end{enumerate}
-Untuk mulai membuat variabel di Python caranya sangat mudah, Anda cukup menuliskan variabel lalu mengisinya dengan suatu nilai dengan cara menambahkan tanda sama dengan = diikuti dengan nilai yang ingin dimasukan. 
+Untuk mulai membuat variabel di Python caranya sangat mudah, Anda cukup menuliskan variabel lalu mengisinya dengan suatu nilai dengan cara menambahkan tanda sama dengan \(=\) diikuti dengan nilai yang ingin dimasukan. 
 
 \subsubsection{Menilai Ekspresi}
 	Sebuah ekspresi merupakan perpaduan antara nilai, variabel, operator, dan pemanggilan fungsi. Jika kamu mengetik sebuah ekspresi pada Python prompt, maka si interpreter akan menilainya dan menampilkan hasilnya:
@@ -120,7 +123,7 @@ Proses penilaian dari sebuah ekspresi akan menghasilkan sebuah nilai, itulah men
 	\end{verbatim}
 	
 \subsubsection{Menetapkan Nilai ke Variabel}
-	Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel.Tanda sama (=) digunakan untuk menetapkan nilai pada variabel. 
+	Variabel Python tidak memerlukan deklarasi eksplisit untuk memesan ruang memori. Deklarasi terjadi secara otomatis saat Anda menetapkan nilai ke variabel.Tanda sama \(=\) digunakan untuk menetapkan nilai pada variabel. 
 Operand di sebelah kiri = operator adalah nama variabel dan operan di sebelah kanan = operator adalah nilai yang tersimpan dalam variabel.Misalnya:
 \begin{verbatim}
 	counter~=~100~~~~~~~    An integer assignment 
@@ -130,18 +133,20 @@ Operand di sebelah kiri = operator adalah nama variabel dan operan di sebelah ka
 	print miles 
 	print name
 \end{verbatim}
-Di sini, 100, 1000.0 dan "John" adalah nilai yang diberikan untuk melawan, mil, dan variabel nama masing-masing.Ini menghasilkan hasil sebagai berikut:
+Di sini, 100, 1000.0 dan \"John\" adalah nilai yang diberikan untuk melawan, mil, dan variabel nama masing-masing.Ini menghasilkan hasil sebagai berikut:
 	100 
 	1000.0
 	John 
 	Beberapa Tugas 
 Python memungkinkan Anda untuk menetapkan nilai tunggal ke beberapa variabel secara bersamaan. 
 Misalnya:
+\begin{verbatim}
 	a = b = c = 1
+\end{verbatim}
 Di sini, sebuah objek bilangan bulat dibuat dengan nilai 1, dan ketiga variabel ditugaskan ke lokasi memori yang sama.Anda juga dapat menetapkan beberapa objek ke beberapa variabel. 
 Misalnya:
-	a,b,c = 1,2,"john" 
-Di sini, dua objek bilangan bulat dengan nilai 1 dan 2 masing-masing diberikan pada variabel a dan b masing-masing, dan satu objek string dengan nilai "john" diberikan ke variabel c. 
+	\verb|a,b,c = 1,2,"john"| 
+Di sini, dua objek bilangan bulat dengan nilai 1 dan 2 masing-masing diberikan pada variabel a dan b masing-masing, dan satu objek string dengan nilai \"john\" diberikan ke variabel c. 
 
 \subsubsection{Tipe data standar}
 	Data yang tersimpan dalam memori bisa bermacam-macam. Misalnya, usia seseorang disimpan sebagai nilai numerik dan alamatnya disimpan sebagai karakter alfanumerik. Python memiliki berbagai jenis data standar yang digunakan untuk menentukan operasi yang mungkin dilakukan pada mereka dan metode penyimpanan untuk masing-masing metode.
@@ -157,14 +162,18 @@ Python memiliki lima tipe data standar :
 \subsubsection{Nomor Python}
 Nomor tipe data menyimpan nilai numerik. Nomor objek dibuat saat Anda memberikan nilai pada mereka. 
 Misalnya: 
+\begin{verbatim}
 	var1 = 1 
-	var2 = 10 
+	var2 = 10
+\end{verbatim}
 Anda juga dapat menghapus referensi ke objek nomor dengan menggunakan del statement. Sintaks dari pernyataan del adalah 
-del var1[,var2[,var3[....,varN]]]] 
+\verb|del var1[,var2[,var3[....,varN]]]] |
 Anda dapat menghapus satu objek atau beberapa objek dengan menggunakan pernyataan del. 
 Misalnya:
+\begin{verbatim}
 	del var 
 	del var a, var b 
+\end{verbatim}
 Python mendukung empat jenis numerik yang berbeda:
 \begin{enumerate}
 	\item int (bilangan bulat yang ditandatangani) 
@@ -177,8 +186,8 @@ Python menampilkan bilangan bulat panjang dengan huruf besar L.
 Sebuah bilangan kompleks terdiri dari sepasang bilangan floating-point yang diinisialisasi langsung yang dinotasikan dengan x + yj, di mana x dan y adalah bilangan real dan j adalah unit imajiner. 
 
 \subsubsection{String Python}
-String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik.Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda.Subset string dapat diambil dengan menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir. 
-Tanda plus (+) adalah operator concatenation string dan tanda bintang (*) adalah operator pengulangan.
+String dengan Python diidentifikasi sebagai kumpulan karakter bersebelahan yang ditunjukkan dalam tanda petik.Python memungkinkan untuk kedua pasang tanda kutip tunggal atau ganda.Subset string dapat diambil dengan menggunakan operator slice \verb|([] dan [:])| dengan indeks mulai dari 0 pada awal string dan bekerja dengan cara mereka dari -1 di akhir. 
+Tanda plus \(+\) adalah operator concatenation string dan tanda bintang \(*\) adalah operator pengulangan.
 Misalnya:
 \begin{verbatim}
 	str = 'Hello World!' 
@@ -198,8 +207,8 @@ Ini akan menghasilkan hasil sebagai berikut:
 	Hello World!TEST
 
 \subsubsection{Daftar Python}
-	Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item yang dipisahkan dengan tanda koma dan dilampirkan dalam tanda kurung siku ([]). Sampai batas tertentu, daftar serupa dengan array di C. Salah satu perbedaan di antara keduanya adalah bahwa semua item yang termasuk dalam daftar dapat terdiri dari tipe data yang berbeda.
-Nilai yang tersimpan dalam daftar dapat diakses menggunakan operator slice ([] dan [:]) dengan indeks mulai dari 0 di awal daftar dan bekerja dengan cara mereka untuk mengakhiri -1. Tanda plus (+) adalah daftar operator concatenation, dan asterisk (*) adalah operator pengulangan.
+	Daftar adalah jenis data majemuk Python yang paling serbaguna. Daftar berisi item yang dipisahkan dengan tanda koma dan dilampirkan dalam tanda kurung siku \([]\). Sampai batas tertentu, daftar serupa dengan array di C. Salah satu perbedaan di antara keduanya adalah bahwa semua item yang termasuk dalam daftar dapat terdiri dari tipe data yang berbeda.
+Nilai yang tersimpan dalam daftar dapat diakses menggunakan operator slice \verb|([] dan [:])| dengan indeks mulai dari 0 di awal daftar dan bekerja dengan cara mereka untuk mengakhiri -1. Tanda plus \(+\) adalah daftar operator concatenation, dan asterisk \(*\) adalah operator pengulangan.
 Misalnya :
 \begin{verbatim}
 	list = [ 'abcd', 786 , 2.23, 'john', 70.2 ] 
@@ -221,7 +230,7 @@ Ini menghasilkan hasil sebagai berikut:
 \end{verbatim}
 \subsubsection{Tupel Pytho}
 	Sebuah tupel adalah jenis data urutan lain yang serupa dengan daftar.Sebuah tupel terdiri dari sejumlah nilai yang dipisahkan dengan koma. Tidak seperti daftar, bagaimanapun, tupel tertutup dalam tanda kurung. 
-Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung ([]) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam tanda kurung (()) dan tidak dapat diperbarui.Tupel bisa dianggap sebagai daftar hanya-baca. 
+Perbedaan utama antara daftar dan tupel adalah: Daftar tertutup dalam tanda kurung \([]\) dan elemen dan ukurannya dapat diubah, sementara tupel dilampirkan dalam tanda kurung \(()\) dan tidak dapat diperbarui.Tupel bisa dianggap sebagai daftar hanya-baca. 
 Misalnya:
 \begin{verbatim}
 	tuple = ( 'abcd',~786 , 2.23, 'john', 70.2  ) 
@@ -252,7 +261,7 @@ Kode berikut tidak valid dengan tupel, karena kami mencoba memperbarui tupel, ya
 
 \subsubsection{Kamus Python}
 	Kamus Python adalah jenis tipe tabel hash. Mereka bekerja seperti array asosiatif atau hash yang ditemukan di Perl dan terdiri dari pasangan kunci-nilai. Kunci kamus bisa hampir sama dengan tipe Python, tapi biasanya angka atau string. Nilai, di sisi lain, bisa menjadi objek Python yang sewenang-wenang. 
-Kamus ditutupi oleh kurung kurawal ( {  } ) dan nilai dapat diberikan dan diakses menggunakan kawat gigi persegi ([]). 
+Kamus ditutupi oleh kurung kurawal \({}\) dan nilai dapat diberikan dan diakses menggunakan kawat gigi persegi \([]\). 
 Misalnya:
 \begin{verbatim}
 dict =  {  } 
@@ -276,5 +285,4 @@ Ini menghasilkan hasil sebagai berikut:
 Kamus tidak memiliki konsep keteraturan antar elemen. Tidak benar mengatakan bahwa unsur-unsurnya\"rusak\";.Mereka hanya unordered. 
 \subsection{Konversi Tipe Data}
 Terkadang, Anda mungkin perlu melakukan konversi antara jenis built-in. Untuk mengonversi antar jenis, Anda cukup menggunakan nama jenis sebagai fungsi. 
-Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. $  $Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi. 
-
+Ada beberapa fungsi built-in untuk melakukan konversi dari satu tipe data ke tipe data yang lain. \$  Fungsi ini mengembalikan objek baru yang mewakili nilai yang dikonversi. 

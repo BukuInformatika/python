@@ -36,11 +36,11 @@
     Keuntungan dari penggunaan Jenis Jaringan Komputer LAN seperti lebih irit dalam pengeluaran biaya operasional, lebih irit dalam penggunaan kabel, transfer data antar node dan komputer labih cepat karena mencakup wilayah yang sempit atau lokal, dan tidak memerlukan operator telekomunikasi untuk membuat sebuah jaringan LAN.
     Kerugian dari penggunaan Jenis Jaringan LAN adalah cakupan wilayah jaringan lebih sempit sehingga untuk berkomunikasi ke luar jaringan menjadi lebih sulit dan area cakupan transfer data tidak begitu luas.
     Berbeda dengan Jaringan Area Luas atau Wide Area Network(WAN), maka LAN mempunyai karakteristik sebagai berikut:
-    \begin{enumerate}
+    \begin{itemize}
     \item Mempunyai pesat data yang lebih tinggi.
     \item Meliputi wilayah geografi yang lebih sempit.
     \item Tidak membutuhkan jalur telekomunikasi yang disewa dari dari operator telekomunikasi.
-    \end{enumerate}
+    \end{itemize}
     \subsubsection{MAN}
       Metropolitan Area Network atau MAN merupakan jaringan yang mencakup suatu kota dengan dibekali kecepatan transfer data yang tinggi. Bisa dibilang, jaringan MAN merupakan gabungan dari beberapa jaringan LAN.
     Jangakauan dari jaringan MAN berkisar 10-50 km. MAN hanya memiliki satu atau dua kabel dan tidak dilengkapi dengan elemen switching yang berfungsi membuat rancangan menjadi lebih simple.
@@ -100,7 +100,8 @@
     \caption{Topologi mesh.}
     \label{mesh}
     \end{figure}
-    Gambar ini \ref{mesh} adalah topologi mesh, berdasarkan artikel dari yudianto Topologi mesh adalah suatu bentuk hubungan antar perangkat dimana setiap perangkat terhubung secara langsung ke perangkat lainnya yang ada di dalam jaringan\cite{yudianto2007jaringan}. Akibatnya, dalam topologi mesh setiap perangkat dapat berkomunikasi langsung dengan perangkat yang dituju (dedicated links). Dengan demikian maksimal banyaknya koneksi antar perangkat pada jaringan bertopologi mesh ini dapat dihitung yaitu sebanyak n(n-1)/2. Selain itu karena setiap perangkat dapat terhubung dengan perangkat lainnya yang ada di dalam jaringan maka setiap perangkat harus memiliki sebanyak n-1 Port Input/Output (I/O ports).Berdasarkan pemahaman di atas, dapat dicontohkan bahwa apabila sebanyak 5(lima) komputer akan dihubungkan dalam bentuk topologi mesh maka agar seluruh koneksi antar komputer dapat berfungsi optimal, diperlukan kabel koneksi sebanyak 5(5-1)/2 = 10 kabel koneksi, dan masing-masing komputer harus memiliki port I/O sebanyak 5-1 = 4 port.
+    Gambar ini \ref{mesh} adalah topologi mesh, berdasarkan artikel dari yudianto Topologi mesh adalah suatu bentuk hubungan antar perangkat dimana setiap perangkat terhubung secara langsung ke perangkat lainnya yang ada di dalam jaringan\cite{yudianto2007jaringan}. Akibatnya, dalam topologi mesh setiap perangkat dapat berkomunikasi langsung dengan perangkat yang dituju (dedicated links). Dengan demikian maksimal banyaknya koneksi antar perangkat pada jaringan bertopologi mesh ini dapat dihitung yaitu sebanyak \begin{equation}n(n-1)/2\end{equation}. 
+    Selain itu karena setiap perangkat dapat terhubung dengan perangkat lainnya yang ada di dalam jaringan maka setiap perangkat harus memiliki sebanyak n-1 Port Input/Output (I/O ports).Berdasarkan pemahaman di atas, dapat dicontohkan bahwa apabila sebanyak 5(lima) komputer akan dihubungkan dalam bentuk topologi mesh maka agar seluruh koneksi antar komputer dapat berfungsi optimal, diperlukan kabel koneksi sebanyak \begin{verbatim}5(5-1)/2 = 10 \end{verbatim} kabel koneksi, dan masing-masing komputer harus memiliki port I/O sebanyak 5-1 = 4 port.
   \subsubsection{Topologi Tree}
     \ref{tree}
     \begin{figure}[ht]
@@ -117,6 +118,20 @@
     \label{linier}
     \end{figure}
     Gambar ini \ref{linier} adalah topologi linier, Topologi ini biasa disebut dengan topologi bus beruntut, tata letak ini termasuk tata letak umum.
+
+\begin{table}[ht]
+	\caption{Kekurangan dan Kelebihan}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		No&Kelebihan&Kekurangan&\\
+		\hline
+		.1&Hemat kabel&Deteksi dan isolasi kesalahan sangat kecil&\\
+		.2&Tata letak kabel sederhana&Kepadatan lalu lintas tinggi&\\
+		.3&Mudah dikembangkan& Keamanan dta kurang terjamin&\\
+		\hline
+	\end{tabular}
+\end{table}
 
 \section{Alat-alat jaringan}
 Macam-macam alat jaringan antara lain :
@@ -143,3 +158,19 @@ Penjelasan fungsi-fungsi tsb akan dijelaskan dibawah ini:
 \end{enumerate}
 Sebelumnya pesan diatas tidak akan muncul sebelum kita menjalankan script client.py pada tab terminal lain.
 maka setiap kali kita menjalankan script client.py akan terus mengirimkan pesan kepada server maupun client.
+
+contoh networking:
+\begin{verbatim}
+192.168.0.0/24 subnet mask 255.255.255.0, 256 IP rumus-nya
+
+(jumlah IP network diatas / 2) + (subnetmask diatasnya)= subnetmask yang digunakan
+
+(256/2) + n = 128, jadi subnet mask buat 128 ip adalah 255.255.255.128
+(128/2) + 128 = 192, jadi subnetmask buat 64 ip adalah 255.255.255.192
+(64/2) + 192 = 224, jadi subnet mask buat 32 ip adalah 255.255.255.224
+(32/2) + 224 = 240, jadi subnet mask buat 16 ip adalah 255.255.255.240
+(16/2) + 240 = 248, jadi subnet mask buat 8 ip adalah 255.255.255.248
+(8/2) + 248 = 252, jadi subnet mask buat 4 ip adalah 255.255.255.252
+(4/2) + 252 = 254, jadi subnet mask buat 2 ip adalah 255.255.255.254
+(2/2) + 254 = 255, jadi subnet mask buat 1 ip adalah 255.255.255.255
+\end{verbatim}

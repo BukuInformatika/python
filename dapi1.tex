@@ -1,41 +1,60 @@
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Regular Exceptions} \\}\end{center} \par
+
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.80\textwidth]{Gambar/dapi2.jpg}}
+	\caption{Exceptions reguler}
+	\label{Exceptions reguler}
+\end{figure}
+
+\section {Pengertian }
+\subsection {Exceptions reguler}
 Exceptions reguler adalah urutan khusus karakter yang membantu Anda mencocokkan atau menemukan string atau rangkaian senar lainnya, menggunakan sintaks khusus yang dipegang dalam sebuah pola. Ekspresi reguler banyak digunakan di dunia UNIX. Modul ini memberikan dukungan penuh untuk ekspresi reguler seperti Perl dengan Python. Modul re meningkatkan pengecualian re.error jika terjadi kesalahan saat mengkompilasi atau menggunakan ekspresi reguler.Kami akan membahas dua fungsi penting, yang akan digunakan untuk menangani ekspresi reguler. Tapi ada hal kecil dulu: Ada berbagai karakter, yang tentunya memiliki arti khusus bila digunakan dalam ekspresi reguler. Untuk menghindari kebingungan saat berhadapan dengan ekspresi reguler, kita akan menggunakan Raw Strings sebagai r'expression '. \par
 \vspace{14pt}
-\noindent 
-Fungsi Pertandingan \par
+\noindent
+
+
+\includegraphics[width=10cm,height=7cm]{Gambar/dapi1.jpg}
+\begin{equation}python regular expression\end{equation}
+
+ \section{Berikut adalah sintaks untuk fungsi ini }
+ 
+ \begin{itemize}
+\item Fungsi Pertandingan \par
 \noindent 
 Fungsi ini mencoba mencocokkan pola RE dengan string dengan flag pilihan. \par
 \vspace{12pt}
 \noindent 
-Berikut adalah sintaks untuk fungsi ini - \par
+
 \noindent 
   \par
 \noindent 
-Parameter \hspace*{0.5in}  \par
+
+\item Parameter 
 \noindent 
 pattern \hspace*{0.5in}  \par
 \noindent 
 Ini adalah ekspresi reguler yang harus disesuaikan. \par
 \vspace{12pt}
 \noindent 
-string \hspace*{0.5in}  \par
+\item string 
 \noindent 
 Ini adalah string, yang akan dicari agar sesuai dengan pola pada awal string. \par
 \vspace{12pt}
 \noindent 
-flags \hspace*{0.5in}  \par
-\noindent 
+\item flags 
+
 Anda dapat menentukan flag yang berbeda menggunakan bitwise OR ( $  \vert  $). Ini adalah pengubah, yang tercantum dalam tabel di bawah ini. \par
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
-Fungsi re.match  \par
-\noindent 
+
+\item Fungsi re.match  
+ 
 mengembalikan objek yang cocok pada kesuksesan, None on failure. Kami mengelompokkan (num) atau kelompok () fungsi objek pencocokan untuk mendapatkan ekspresi yang sesuai. \par
 \noindent 
-Match Object Methods \hspace*{0.5in} Description \par
-\noindent 
+
+
+\item Match Object Methods 
+ 
 group(num=0) \hspace*{0.5in} Metode ini mengembalikan seluruh kecocokan (atau jumlah subkelompok tertentu) \par
 \vspace{12pt}
 groups() \hspace*{0.5in}  \par
@@ -43,7 +62,11 @@ groups() \hspace*{0.5in}  \par
 Metode ini mengembalikan semua subkelompok yang cocok dalam tupel (kosong jika tidak ada) \par
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
+\noindent
+
+\end{itemize} 
+
+\begin{verbatim}
  $  \#  $! / Usr / bin / python \par
 \noindent 
 Impor kembali \par
@@ -76,11 +99,16 @@ MatchObj.group (): Kucing lebih pintar dari pada anjing \par
 MatchObj.group (1): Kucing \par
 \noindent 
 MatchObj.group (2): lebih pintar \par
+
+\end{verbatim}
+
 \vspace{12pt}
-Fungsi Pencarian \par
+\section{Fungsi Pencarian} \par
 \vspace{12pt}
 Fungsi ini mencari kejadian pertama dari pola RE dalam string dengan flag pilihan. \par
 \vspace{12pt}
+
+\subsection{Pengertian}
 Berikut adalah sintaks untuk fungsi ini: \par
 \vspace{12pt}
 Re.search (pola, string, flag = 0) \par
@@ -91,6 +119,8 @@ Parameter pattern Ini adalah ekspresi reguler yang harus disesuaikan. String Ini
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
+
+\begin{verbatim}
  $  \#  $!/usr/bin/python \par
 \noindent 
 import re \par
@@ -123,6 +153,11 @@ searchObj.group(2)~:  smarter \par
 \noindent 
 Pencocokan Versus Searching \par
 \vspace{12pt}
+
+\end{verbatim}
+
+
+
 Python menawarkan dua operasi primitif yang berbeda berdasarkan ekspresi reguler: cek kecocokan untuk kecocokan hanya di awal string, sementara pencarian memeriksa kecocokan di manapun dalam string (inilah yang Perl lakukan secara default). \par
 Contoh \par
 \noindent 
