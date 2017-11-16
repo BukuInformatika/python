@@ -12,10 +12,19 @@ Pengenal Python Pengenal Python adalah nama yang digunakan untuk mengidentiﬁka
 Bahasa Python memiliki banyak kesamaan dengan Perl, C, dan Java. Namun, ada beberapa perbedaan yang pasti antara bahasa. Program Python Pertama Mari kita jalankan program dalam mode pemrograman yang berbeda. Pemrograman Mode Interaktif Memohon interpreter tanpa melewatkan ﬁle script sebagai parameter menampilkan prompt berikut :
 	\begin{verbatim}
 		Python
+
 		Python 2.4.3 (#1, Nov 11 2010, 13:34:43) 
 		[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2 Type ”help”, ”copyright”, ”credits” or ”license” for more information.
 		
 		Ketik teks berikut pada prompt Python dan tekan Enter:
+		Python 2.4.3 ( #1, Nov 11 2010, 13:34:43) 
+		[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] 
+		on linux2 Type ”help”, ”copyright”, 
+		”credits” or ”license” for more information.
+
+		Ketik teks berikut pada prompt Python dan 
+		tekan Enter:
+
 		
 		print ”Hello, Python!”
 	\end{verbatim}
@@ -38,7 +47,7 @@ Python adalah salah satu pemrograman yang terus berkembang dan bertahan dikarena
 	\end{figure}
 Gambar berikut \ref{logopython} adalah gambar logo python dengan lambang 2 ular python yang saling membelakangi. ular diatas berwarna biru dan ular dibawah berwarna kuning. 
 
-\subsubsection{Kelebihan dan Kekurangan Python}
+\subsection{Kelebihan dan Kekurangan Python}
 Kelebihan yang dimiliki oleh Python :
 	\begin{itemize}
 		\item Tidak ada tahapan kompilasi dan penyambungan (link) sehingga kecepatan perubahan pada masa pembuatan sistem aplikasi meningkat. 
@@ -68,7 +77,7 @@ Kekurangan yang dimiliki Python :
 	\end{itemize}
 Dibalik kelebihan dan kekurangan yang dimiliki, Kini Python menjadi salah satu bahasa pemrograman yang populer digunakan oleh pengembangan web, aplikasi web, aplikasi perkantoran, simulasi, dan masih banyak lagi. Hal ini disebabkan karena Python bahasa pemrograman yang dinamis dan mudah dipahami. Python memiliki hak cipta. Seperti Perl, kode sumber Python sekarang tersedia di bawah GNU General Public License (GPL). Python sekarang dikelola oleh tim pengembangan inti di institut tersebut, walaupun Guido van Rossum masih memegangperanpentingdalammengarahkankemajuannya.
 
-\subsubsection{Fitur Python}
+\subsection{Fitur Python}
 Python memiliki fitur yang meliputi:
 	\begin{enumerate}
 		\item Mudah dipelajari: Python memiliki beberapa kata kunci, struktur sederhana, dan sintaks yang jelas. Hal ini memungkinkan siswa untuk mengambil bahasa dengan cepat.
@@ -96,15 +105,21 @@ Fitur Python meliputi:
 	\end{enumerate}
 
 
+
 \subsection{Pernyataan Multi-Line}
 Pernyataan di Python biasanya diakhiri dengan baris baru. Python, bagaimanapun, memungkinkan penggunaan karakter kelanjutan baris (\\)\ untuk menunjukkan bahwa garis tersebut harus dilanjutkan. Misalnya –
 	\begin {verbatim}
+\subsection {Pernyataan Multi-Line}
+Pernyataan di Python biasanya diakhiri dengan baris baru. Python, bagaimanapun, memungkinkan penggunaan karakter kelanjutan baris untuk menunjukkan bahwa garis tersebut harus dilanjutkan. Misalnya –
+	\begin {equation}
+
 	total = item_one + \
 		item_two + \
 		item_three
 	\end {verbatim}
 
 Pernyataan yang ada di dalam kurung [], {}, atau () tidak perlu menggunakan karakter kelanjutan baris. Misalnya –
+
 	\begin{verbatim}
 	days = ['Monday', 'Tuesday', 'Wednesday',
 		'Thursday', 'Friday']
@@ -148,6 +163,46 @@ Anda dapat mengomentari beberapa baris sebagai berikut –
 	\end{verbatim}
 
 \subsubsection{Variabel}	
+	\begin{equation}
+	days = ['Monday', 'Tuesday', 'Wednesday',
+		'Thursday', 'Friday']
+	\end{equation}
+	
+\subsection{Kutipan pada Python}
+Python menerima kutipan tunggal ('), ganda (") dan triple (' '' atau '" ") untuk menunjukkan literal string, selama jenis kutipan yang sama dimulai dan mengakhiri string.
+Tanda kutip triple digunakan untuk membentang string di beberapa baris. Misalnya:
+	\begin{equation}
+	word = 'word'
+	sentence = "This is a sentence.
+	\end{equation}
+
+\subsection{Komentar pada Python}
+Tanda hash yang tidak berada di dalam string literal memulai sebuah komentar. Semua karakter setelah dan sampai akhir garis fisik adalah bagian dari komentar dan penafsir Python mengabaikannya.
+	\begin{equation}
+	!/usr/bin/python
+	print "Hello, Python!" 
+	\end{equation}
+
+	 Dan hasilnya sebagai berikut –
+	\begin{equation}
+	    Hello, Python!
+	\end{equation}
+
+Anda bisa mengetikkan komentar di baris yang sama setelah sebuah pernyataan atau ungkapan –
+	\begin{equation}
+	    name = "Madisetti"  This is again comment
+	\end{equation}
+
+Anda dapat mengomentari beberapa baris sebagai berikut –
+	\begin{equation}
+	This is a comment.
+	I said that already.
+	\end{equation}
+	
+	
+
+\subsection{Variabel}	
+
  Jadi variable itu untuk menyimpan data sebagai penampung nya dan nilai adalah isi dari variable itu sendiri.
 Contoh variable katakana saja my int = 7 itu juga bisa di ubah menjadi my int =3  
 Code merubah nilai variablenya  
@@ -155,7 +210,7 @@ Code merubah nilai variablenya
 	My int = 
 	Print my int 
 
-\subsubsection{Whitespace} 
+\subsection{Whitespace} 
 Whitespace adalah penyusun kode untuk penulisan oleh karena itu harus berhati hati karena sangat sensitive
 Contoh code nya: 
  \begin{verbatim}
@@ -187,7 +242,9 @@ Maka akan muncul print yang sesuai inputan yang kalian buat.
 Selain itu bisa juga perpangkatan 
 
 Kalkulator pangkatan meggunakan eight 
+
 Contohnya \verb|eight = \2** 3\| 
+
 Eight itu adalah variable baru yang kita buat untuk mengeset nilai menjadi 8.
 
 Contoh: stopwatch sederhana yang biasa nya di gunakan untuk ujian peraktek.  

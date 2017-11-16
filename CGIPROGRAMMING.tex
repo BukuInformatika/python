@@ -1,8 +1,15 @@
+\section{Common Gateway Interface (CGI)}
+\ref{CGI}:
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=1\textwidth]{figures/CGI.png}}
+	\caption{CGI}
+	\label{CGI}
+\end{figure}
 Common Gateway Interface atau disingkat CGI merupakan standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip dengan program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML.  \par
 	\vspace{12pt}
 CGI (Common Gateway Interface) adalah bentuk dari hubungan interaktif di mana client (browser) bisa mengirimkan suatu masukan kepada server, dan server mengolah masukan tersebut serta mengembalikannya kepada client (browser). Contoh sederhana adalah saat kita menggunakan sebuah mesin pencari. Saat kita menuliskan keyword dan menekan tombol Search maka browser akan mengirimkan keyword tersebut ke server. Keyword tersebut lalu diolah oleh server dan server mengirimkan data hasil pengolahan (yang sesuai dengan keyword yang kita masukkan) ke browser kita. Jadi yang akan kita lihat pada browser adalah  hanya data yang sesuai dengan keyword yang kita masukkan. \par
-	\vspace{12pt}
-	\noindent
+	
+\subsection{Penggunaan CGI}
 Untuk dapat menggunakan CGI syarat yang utama adalah server dengan sistem operasi UNIX (beserta variantnya). Namun perlu kita perhatikan bahwa tidak semua server UNIX (gratis) mampu menangani dan melayani CGI. Server-server yang melayani penempatan web yang berlayanan gratis seperti Geocities dan Homepage, tidak akan mengijinkan penggunaan script CGI dalam web kita. Untuk itu kita bisa mencoba Virtual Avenue, Tripod, atau Hypermart. \par
 	\vspace{12pt}
 	\noindent
@@ -143,30 +150,29 @@ Beberapa contoh lubang keamanan pada CGI \par
 \vspace{12pt}
 \noindent 
 \textbf{Web Programming }\textbf{Python} \par
-Python adalah bahasa pemrograman dinamis yang mendukung pemrograman berorientasi obyek. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Seperti halnya bahasa pemrograman dinamis, python seringkali digunakan sebagai bahasa skrip dengan interpreter yang teintergrasi dalam sistem operasi. Saat ini kode python dapat dijalankan pada sistem berbasis: \par
-\noindent 
-\begin{itemize}
-	\item Linux/Unix \par
-	\noindent 
-	\item Windows \par
-	\noindent 
-	\item Mac OS X \par
-	\noindent 
-	\item Java Virtual Machine \par
-	\noindent 
-	\item OS/2 \par
-	\noindent 
-	\item Amiga \par
-	\noindent 
-	\item Palm \par
-	\noindent 
-	\item Symbian (untuk produk-produk Nokia)\end{itemize}
-\par
-\vspace{12pt}
-Python didistribusikan dengan beberapa lisensi yang berbeda dari beberapa versi. Lihat sejarahnya di Python Copyright. Namun pada prinsipnya Python dapat diperoleh dan dipergunakan secara bebas, bahkan untuk kepentingan komersial. Lisensi Python tidak bertentangan baik menurut definisi Open Source maupun General Public License (GPL). \par
-\vspace{12pt}
-Python merupakan bahasa pemrograman yang mendukung pengembangan aplikasi berbasis desktop dan juga aplikasi berbasis web. Biasanya kalau berhubungan dengan WEB maka orang akan berfikir framework yang digunakan. Tentunya ada beberapa framework yang bisa digunakan untuk membangun aplikasi web berbasis python ini antara lain adalah Django, Web2py, Cherrypy dan lain-lain. Masing-masing framework memiliki aturan khusus dalam penulisan syntax. Framework tersebut mengadopsi struktur yang sama seperti pemrograman CGI. Untuk lebih jelasnya mari kita pelajari pemrograman CGI. \par
-\vspace{12pt}
+Python adalah bahasa pemrograman dinamis yang mendukung pemrograman berorientasi obyek. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Seperti halnya bahasa pemrograman dinamis, python seringkali digunakan sebagai bahasa skrip dengan interpreter yang teintergrasi dalam sistem operasi.
+
+\begin{table}[ht]
+	\caption{Sistem Basis Kode Python}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		No&Sistem Operasi&\\
+		\hline
+		.1&Linux / Unix&\\
+		.2&Windows&\\
+		.3&Mac OS X&\\
+		.4&Java Virtual Machine&\\
+		.5&OS/2&\\
+		.6&Amiga&\\
+		.7&Palm&\\
+		.8&Symbian (untukproduk-produk Nokia)&\\
+		\hline
+	\end{tabular}
+\end{table}
+
+Python didistribusikan dengan beberapa lisensi yang berbeda dari beberapa versi. Lihat sejarahnya di Python Copyright. Namun pada prinsipnya Python dapat diperoleh dan dipergunakan secara bebas, bahkan untuk kepentingan komersial. Lisensi Python tidak bertentangan baik menurut definisi Open Source maupun General Public License (GPL).
+Python merupakan bahasa pemrograman yang mendukung pengembangan aplikasi berbasis desktop dan juga aplikasi berbasis web. Biasanya kalau berhubungan dengan WEB maka orang akan berfikir framework yang digunakan. Tentunya ada beberapa framework yang bisa digunakan untuk membangun aplikasi web berbasis python ini antara lain adalah Django, Web2py, Cherrypy dan lain-lain. Masing-masing framework memiliki aturan khusus dalam penulisan syntax. Framework tersebut mengadopsi struktur yang sama seperti pemrograman CGI. Untuk lebih jelasnya mari kita pelajari pemrograman CGI. 
 Common Gateway Interface atau disingkat CGI adalah suatu standar untuk menghubungkan berbagai program aplikasi ke halaman web. CGI mirip sebuah program komputer yang menjadi perantara antara standar HTML yang menjadikan tampilan web dengan program lain, seperti basis data (database). Hasil yang diperoleh dari proses pencarian dikirimkan kembali ke halaman web untuk ditampilkan dalam format HTML. \par
 \vspace{12pt}
 Python menyediakan modul CGI yang bisa digunakan untuk membuat aplikasi berbasis web. Tentunya python tidak kalah dengan pemrograman berbasis web lain seperti Java, PHP dan lain2. Mari kita lakukan percobaan untuk membuat web dengan menggunakan python. \par
@@ -195,33 +201,23 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	\item Buka Notepad dan ketikkan script dbawah ini : \par
 	\vspace{12pt}
 	\noindent 
-	$  \#  $!/Python27/python \par
-	\noindent 
-	print "Content-type:text/html" \par
-	\noindent 
-	print \par
-	\noindent 
-	print '<html>' \par
-	\noindent 
-	print '<head>' \par
-	\noindent 
-	print '<title>WEB Python </title>' \par
-	\noindent 
-	print '</head>' \par
-	\noindent 
-	print '<body>' \par
-	\noindent 
-	print '<h1><center>Tutorial Web Programming Python Bagian 1 Python</center></h1>' \par
-	\noindent 
-	print \par
-	\noindent 
-	print \par
-	\noindent 
+	\begin{verbatim}
+	$  \#  $!/Python27/python
+	print "Content-type:text/html" 
+	print 
+	print '<html>' 
+	print '<head>' 
+	print '<title>WEB Python </title>' 
+	print '</head>' 
+	print '<body>'
+	print '<h1><center>Tutorial Web Programming Python Bagian 1 Python</center></h1>' 
+	print 
+	print
 	print '<h2><center>Selamat Belajar Bagi Para Pecinta Python</h2></center>' \par
 	\noindent 
-	print '</body>' \par
-	\noindent 
-	print '</html>' \par
+	print '</body>' 
+	print '</html>'
+	\end{verbatim}
 	pada script diatas jangan lupa menuliskan posisi directory python.exe ( $  \#  $!/Python27/python) \par
 	\noindent 
 	setelah itu simpan pada directory xampp folder cgi-bin dengan nama web.py (terserah nama apa saja asalhkan ekstensinya .py) \par
@@ -238,10 +234,12 @@ Jika~sudah save as kedalam format .csv lalu di convert ke dalam format .json pro
 \noindent 
 Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin diserver localhost, tutorial ini menggunakan OS linux, ketikan script berikut. \par
 \noindent 
+
 $  \#  $!/usr/bin/python \par
 \noindent 
-import cgi \par
-\noindent 
+\begin{equation}
+import cgi
+\end{equation}
 import~cgitb; cgitb.enable()   \par
 \noindent 
 import simplejson as json \par
@@ -266,6 +264,7 @@ print """ \par
 \noindent 
 ~~~ Bahasa Indonesia<br/> \par
 \noindent 
+
 ~~~ <input type="text" name="kata"/></p> \par
 \noindent 
 ~~~ <input type="submit" name="submit" value="Terjemahkan"/></p> \par
