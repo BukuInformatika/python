@@ -54,17 +54,6 @@ Kelebihan :
 \item Tidak ada tahapan kompilasi dan penyambungan (link) sehingga kecepatan perubahan pada masa pembuatan sistem aplikasi meningkat.
 \item Tidak ada deklarasi tipe data yang merumitkan sehingga program menjadi lebih sederhana, singkat, dan fleksible.
 \end {enumetare}
-Manajemen memori otomatis yaitu kumpulan sampah memori sehingga dapat menghindari pencacatan kode.
-Tipe data dan operasi tingkat tinggi yaitu kecepatan pembuatan sistem aplikasi menggunakan tipe objek yang telah ada.
-Pemrograman berorientasi objek.
-Pelekatan dan perluasan dalam C.\
-Terdapat kelas, modul, eksepsi sehingga terdapat dukungan
-pemrograman skala besar secara modular.
-Pemuatan dinamis modul C sehingga ekstensi menjadi
-sederhana dan berkas biner yang kecil
-Pemuatan kembali secara dinamis modul phyton seperti
-memodifikasi aplikasi tanpa menghentikannya.
-Model objek universal kelas Satu.
 
 \subsection{Paradigma Pemrogramman Python}
 Pada program yang selama ini kita buat, kita mendesain program kita berdasarkan fungsi (blok statemen yang memanipulasi data). Hal ini disebut pemrograman procedure-oriented.Ada cara lain untuk mengorganisasi program dengan menggabungkan data dan operasi yang dibungkus dalam suatu obyek yaitu paradigma pemrograman berorientasi obyek.
@@ -94,11 +83,3 @@ Berikut adalah langkah-langkah sederhana untuk menginstal Python di mesin Unix /
 Python adalah bahasa yang diketik secara dinamis , nilai Python , bukan variabel, tipe carry. Ini berimplikasi pada banyak aspek dari cara fungsi bahasa.
 Semua variabel dalam Python menyimpan referensi ke objek, dan referensi ini dilewatkan ke fungsi; sebuah fungsi tidak dapat mengubah nilai referensi variabel dalam fungsi pemanggilannya. Beberapa orang telah memanggil skema parameter-passing ini "Call by object reference."
 Di antara bahasa yang diketik secara dinamis, Python cukup tipe-check. Konversi implisit didefinisikan untuk tipe numerik (dan juga boolean), jadi seseorang dapat secara sah mengalikan bilangan kompleks dengan bilangan bulat panjang (misalnya) tanpa pengecoran eksplisit. Namun, tidak ada konversi implisit antara (misalnya) angka dan string; string adalah argumen yang tidak valid terhadap fungsi matematis yang mengharapkan sebuah angka.
-ini merupakan contoh sederhana dengan variabel interpolasi (menggunakan % string-format operator) adalah:
-\begin{verbatim}
-  print("""Dear %(recipient)s,
-  I wish you to leave Sunnydale and never return. 
-  Not Quite Love,
-  %(sender)s
-  """ % {'sender': 'Buffy the Vampire Slayer', 'recipient': 'Spike'})
-\end{verbatim}
