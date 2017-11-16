@@ -135,14 +135,13 @@ Hal Yang paling utama sebelum membuat aplikasi adalah mempersiapkan beberapa kom
 	\item Menginstal Program Python  
 	\item Menginstal Program Web Server Seperti Apache2 atau Xampp  
 	\item Setelah kedua program berhasil di install maka langkah selanjutnya adalah mengkonfigurasi file httpd.conf yang berada pada directory web server, pada kesempatan ini saya menggunakan Xampp. 
-	\item Buka directory Xampp dan masuk ke folder apache  \$  \rightarrow  \$ Conf dan cari file httpd dot conf 
+	\item Buka directory Xampp dan masuk ke folder apache Conf dan cari file httpd dot conf 
 	\item Buka file httpd dot conf menggunakan notepad 
-	\item Cari baris dan tambahkan ExecCGI pada list Options FollowSymLinks  
 	\item Setelah itu simpan 
 	\item Selanjutnya kita akan mencoba membuat halaman web dasar pada python 
 	\item Buka Notepad dan ketikkan script dbawah ini : 
   \begin{verbatim}
-	$  \#  $!/Python27/python 
+	  \#  !/Python27/python 
 	print "Content-type:text/html"
 	print 
 	print '<html>' 
