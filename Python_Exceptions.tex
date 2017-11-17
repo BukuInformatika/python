@@ -102,22 +102,6 @@ Sintaks untuk menegaskan adalah - menegaskan Ekspresi [, Argumen]
 Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, maka mereka akan menghentikan program dan menghasilkan traceback.
 Contoh: 
 Berikut merupakan fungsi yang mengubah suhu dari derajat Kelvin sampai ke derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur apabila melihat suhu negatif -
- $  \#  $!/usr/bin/python
-def KelvinToFahrenheit(Temperature): 
-~~ assert (Temperature >= 0),"Colder than absolute zero!" 
-~~ return ((Temperature-273)*1.8)+32 
-print KelvinToFahrenheit(273) 
-print int(KelvinToFahrenheit(505.78)) 
-print KelvinToFahrenheit(-5) 
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut – 
-32.0 
-451 
-Traceback (most recent call last): 
-File "test.py", line 9, in  
-print KelvinToFahrenheit(-5) 
-File "test.py", line 4, in KelvinToFahrenheit 
-assert (Temperature >= 0),"Colder than absolute zero!" 
-AssertionError: Colder than absolute zero! 
 
 \subsection{Apa itu Exception?}
 Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python mendapatkan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. Ketika skrip Python menimbulkan pengecualian, ia harus menangani pengecualian begitu saja sehingga berhenti dan berhenti. Menangani pengecualian 
@@ -133,25 +117,11 @@ Di blok percobaan, pengecualian yang ditentukan pengguna dinaikkan dan ditangkap
 \subsection{General Error Catching}
 Terkadang, Anda ingin menangkap semua kesalahan yang mungkin dihasilkan, tapi biasanya Anda tidak melakukannya. Dalam kebanyakan kasus, Anda ingin menjadi sespesifik mungkin (CatchWhatYouCanHandle). Pada contoh pertama di atas, jika Anda menggunakan klausul pengecualian catch-all dan pengguna menekan Ctrl-C, menghasilkan KeyboardInterrupt, Anda tidak ingin program mencetak "bagi dengan nol".
 Namun, ada beberapa situasi di mana yang terbaik untuk menangkap semua kesalahan.
-Misalnya, Anda menulis modul ekstensi ke layanan web. Anda ingin informasi kesalahan untuk output output halaman web, dan server untuk terus berjalan, jika mungkin. Tapi Anda tidak tahu kesalahan apa yang mungkin Anda masukkan ke dalam kode Anda. Dalam situasi seperti ini, Anda mungkin ingin mengode sesuatu seperti ini: 
- 1 import sys
-~~ 2 try: 
-~~~3~  untrusted.execute()
-~~ 4 except:  $  \#  $ catch *all* exceptions 
-~~~5~  e = sys.exc $  \_  $info()[0] 
-~~~6~  write $  \_  $to $  \_  $page( "<p>Error:  $  \%  $s</p>"  $  \%  $ e )
-Mendapatkan Nama Pengecualian Spesifik
-Pengecualian standar yang bisa diajukan dijelaskan secara rinci pada:
-~~~ http://docs.python.org/library/exceptions.html
-Lihatlah dokumentasi kelas untuk mengetahui pengecualian apa yang bisa diberikan oleh kelas tertentu.
-Lihat juga:
-Di wiki ini: WritingExceptionClasses, TracebackModule.
-Untuk gagasan umum (non-Python specific) tentang pengecualian, berkonsultasilah dengan ExceptionPatterns.
-
+Misalnya, Anda menulis modul ekstensi ke layanan web. Anda ingin informasi kesalahan untuk output output halaman web, dan server untuk terus berjalan, jika mungkin. 
 \subsubsection{Atribut}
 .args pengecualian adalah tuple dari semua argumen yang dilewatkan (biasanya argumen satu dan satu-satunya adalah pesan kesalahannya). Dengan cara ini Anda bisa mengubah argumen dan menaikkan kembali, dan informasi tambahan akan ditampilkan. Anda juga bisa membuat pernyataan cetak atau login di blok kecuali.
-Perhatikan bahwa tidak semua pengecualian subclass Exception (meski hampir semua dilakukan), jadi ini mungkin tidak menangkap beberapa pengecualian; Selain itu, pengecualian tidak diperlukan untuk memiliki atribut .args (meskipun jika pengecualian subclass Exception dan tidak mengesampingkan  $  \_  $ $  \_  $init $  \_  $ $  \_  $ tanpa memanggil superclass-nya), maka kode yang ditulis mungkin gagal Namun dalam prakteknya hampir tidak pernah (dan Jika ya, Anda harus memperbaiki pengecualian yang tidak sesuai!)
-Bukankah lebih baik mencegahnya untuk melakukan remediasi?
+Perhatikan bahwa tidak semua pengecualian subclass Exception (meski hampir semua dilakukan), jadi ini mungkin tidak menangkap beberapa pengecualian; Selain itu, pengecualian tidak diperlukan untuk memiliki atribut .
+
 Joel Spolsky mungkin programmer hebat C ++, dan sarannya untuk desain antarmuka pengguna sangat berharga, tapi Python bukan C ++ atau Java, dan argumennya tentang pengecualian tidak berlaku dengan Python.
 Joel berpendapat: 
 "Mereka tidak terlihat dalam kode sumber Melihat kumpulan kode, termasuk fungsi yang mungkin atau mungkin tidak membuang pengecualian, tidak ada cara untuk melihat pengecualian mana yang mungkin dilempar dan dari mana.Ini berarti bahwa pemeriksaan kode yang hati-hati pun tidak. Saya bisa mengungkapkan potensi bug. "
