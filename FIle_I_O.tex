@@ -65,7 +65,7 @@ Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. Ada berb
 >>>~f.read(4)~~   \$  \#  \$ read the next 4 data 
 ' is '  
 >>>~f.read()~~~   \$  \#  \$ read in the rest till end of file  
-'my first file \$  \setminus  \$nThis file \$  \setminus  \$ncontains three lines \$  \setminus  \$n' 
+
 >>>~f.read()   \$  \#  \$ further reading returns empty sting 
 Kita dapat melihat, metode read () mengembalikan baris baru sebagai ' \$  \setminus  \$ n'. Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. Kita bisa mengubah kursor file kita saat ini (posisi) dengan menggunakan metode seek (). Demikian pula metode tell () mengembalikan posisi kita saat ini (dalam jumlah byte).  
 >>>~f.tell()~~   \$  \#  \$ get the current file position  
@@ -203,9 +203,8 @@ file.close ()
 Kode untuk melakukan ini diletakkan seperti pickle.load (object \$  \_  \$to \$  \_  \$pickle, file \$  \_  \$object) di mana: 
 ~~~ object \$  \_  \$to \$  \_  \$pickle adalah objek yang ingin Anda acar (yaitu simpan ke file)  
 ~~~ file \$  \_  \$object adalah objek file yang ingin Anda tulis (dalam kasus ini, objek file adalah 'file') 
-Setelah Anda menutup file tersebut, buka di notepad dan lihat apa yang Anda lihat. Seiring dengan beberapa kue gibblygook lainnya, Anda akan melihat potongan daftar yang kami buat.  
+Setelah Anda menutup file tersebut, buka di notepad dan lihat apa yang Anda lihat. Seiring dengan beberapa kue gibblygook lainnya, Anda akan melihat potongan daftar yang kami buat.
 
-Contoh kode 4 - unpickletest.py 
  \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickletest.py 
  \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickle file 
  \$  \#  \$ mengimpor modul acar 
