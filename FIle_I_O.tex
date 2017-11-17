@@ -67,7 +67,7 @@ Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. Ada berb
 >>>~f.read()~~~   \$  \#  \$ read in the rest till end of file  
 
 >>>~f.read()   \$  \#  \$ further reading returns empty sting 
-Kita dapat melihat, metode read () mengembalikan baris baru sebagai ' \$  \setminus  \$ n'. Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. Kita bisa mengubah kursor file kita saat ini (posisi) dengan menggunakan metode seek (). Demikian pula metode tell () mengembalikan posisi kita saat ini (dalam jumlah byte).  
+Kita dapat melihat, metode read mengembalikan baris baru sebagai Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. Kita bisa mengubah kursor file kita saat ini posisi dengan menggunakan metode seek . Demikian pula metode tell mengembalikan posisi kita saat ini dalam jumlah byte.  
 >>>~f.tell()~~   \$  \#  \$ get the current file position  
 56 
 >>>~f.seek(0)~   \$  \#  \$ bring file cursor to initial position  
