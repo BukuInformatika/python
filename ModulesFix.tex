@@ -51,7 +51,7 @@ Dan berikut ini adalah PYTHONPATH khas dari sistem UNIX:
   set PYTHONPATH=/usr/local/lib/python  
 Namespaces \& Scoping  
 Variabel adalah nama (identifiers) yang memetakan ke objek. Namespace adalah kamus dari nama variabel (kunci) \& objek yang sesuai (nilai).  
-Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local & dalam sebuah namespace global, jika variable local \& variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. \& ada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
+Pernyataan pada phyton yang dapat mengakses sebuah variable di dalam namespace local  dalam sebuah namespace global, jika variable local  variable global memiliki kesamaan pada namanya, maka variable global memiliki satu kesamaan pada namanya, maka variable local akan membayangi variable global. ada setiap fungsi tentu memiliki namespace lokalnya sendiri, metode kelas ini mengikuti suatu aturan perlingkupan yang sama dengan fungsi seperti biasanya. 
 
 Phyton membuat tebakan terdidik tentang variable yang bersifat local atau global . ini tentu dapat mengasumsikan bahwa setiap variable yang diberi nilai dalam suatu fungsi merupakan variable local.
 
@@ -101,15 +101,15 @@ reload(hello)
 Packages in Python 
 Paket adalah struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul \& subpackages dan sub-subpackages, \& seterusnya.  
 Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut -  
- \begin{verbatim}
- #!/usr/bin/python 
- def Pots():  
- print "I'm Pots Phone"  
- \end{verbatim}
+
+
+
+
+
 Cara yang sama, kita memiliki dua file lain yang memiliki fungsi berbeda dengan nama yang sama seperti di atas -  
 Phone/Isdn.py file having function Isdn()  
 Phone/G3.py \$  file having function G3() 
-Now, create one more file   \_   \_  \init  \_ \_  .py in \$Phone  \$directory   
+Now, create one more file   \_   \_  init  \_ \_  .py in \$Phone  \$directory   
 Phone/  \_   \_  init  \_  \_  .py  
 Untuk membuat semua fungsi Anda tersedia saat mengimpor Telepon, Anda harus memasukkan pernyataan impor secara eksplisit di    \_     \_  init   \_  \_  .py sebagai berikut - 
  from Pots import Pots 
@@ -129,9 +129,9 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut -
  \end{verbatim}
 Pada contoh di atas, kita telah mengambil contoh fungsi tunggal di setiap file, namun Anda dapat menyimpan beberapa fungsi dalam file Anda. Anda juga dapat menentukan kelas Python yang berbeda dalam file tersebut dan kemudian Anda dapat membuat paket Anda dari kelas tersebut.
 Modules  
-Jika Anda berhenti dari juru bahasa Python & memasukkannya lagi, definisi yang telah Anda buat (fungsi \& variabel) hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
+Jika Anda berhenti dari juru bahasa Python  memasukkannya lagi, definisi yang telah Anda buat fungsi  variabel hilang. Oleh karena itu, jika Anda ingin menulis program yang agak lama, sebaiknya Anda menggunakan editor teks untuk menyiapkan masukan bagi penerjemah dan menjalankannya dengan file itu sebagai masukan. Ini dikenal dengan membuat skrip. Seiring program Anda semakin lama, Anda mungkin ingin membaginya menjadi beberapa file untuk memudahkan perawatan. Anda mungkin juga ingin menggunakan fungsi praktis yang telah Anda tulis di beberapa program tanpa menyalin definisinya ke dalam setiap program.  
 Untuk mendukung ini, Python memiliki cara untuk menempatkan definisi dalam file dan menggunakannya dalam naskah atau dalam contoh juru bahasa interaktif. File seperti itu disebut modul; definisi dari modul dapat di impor ke modul lain atau masuk ke modul utama (kumpulan variabel yang Anda akses ke dalam naskah yang dieksekusi di tingkat atas dan dalam mode kalkulator).  
-Modul adalah file yang berisi definisi & pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut.  
+Modul adalah file yang berisi definisi  pernyataan Python. Nama file adalah nama modul dengan akhiran .py ditambahkan. Dalam sebuah modul, nama modul (sebagai string) tersedia sebagai nilai dari variabel global    \_     \_  name   \_     \_  . Misalnya, gunakan editor teks favorit Anda untuk membuat file bernama fibo.py di direktori saat ini dengan konten berikut.  
 6.1. More on Modules 
 Modul dapat berisi pernyataan eksekusi serta definisi fungsi. Pernyataan ini dimaksudkan untuk menginisialisasi modul. Mereka dieksekusi hanya untuk pertama kalinya nama modul ditemukan dalam sebuah pernyataan impor. [1] (Mereka juga dijalankan jika file dijalankan sebagai skrip.)  
 Setiap modul memiliki tabel simbol pribadinya, yang digunakan sebagai tabel simbol global oleh semua fungsi yang didefinisikan dalam modul. Dengan demikian, penulis modul dapat menggunakan variabel global dalam modul tanpa mengkhawatirkan bentrokan kecelakaan dengan variabel global pengguna. Di sisi lain, jika kita tahu apa yang kita lakukan, kita dapat menyentuh variabel global modul dengan notasi yang sama yang digunakan untuk merujuk pada fungsinya, nama modname.itemname. 
