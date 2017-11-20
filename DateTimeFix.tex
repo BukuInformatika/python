@@ -1,44 +1,42 @@
 
 \sloppy
 \begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Date  $  \&  $ Time} \\}\end{center} \par
-\vspace{12pt}
-\vspace{12pt}
+
+ \section{Python Date and Time}
 \noindent 
- \hspace*{0.5in} Program Python dapat menangani tanggal dan waktu dengan beberapa cara. Mengkonversi antara format tanggal adalah tugas umum untuk komputer. Waktu dan modul kalender Python membantu melacak tanggal dan waktu. \par
-\vspace{12pt}
+ Program Python dapat menangani tanggal dan waktu dengan beberapa cara. Mengkonversi antara format tanggal adalah tugas umum untuk komputer. Waktu dan modul kalender Python membantu melacak tanggal dan waktu. \par
+
 \noindent 
-What is Tick? \par
+\begin{itemize}
+	\item What is Tick?
+\end{itemize}
 \noindent 
 Selang waktu adalah bilangan floating-point dalam satuan detik. Instansi tertentu dalam waktu dinyatakan dalam hitungan detik sejak pukul 12:00 pagi, 1 Januari 1970 (epoch). \par
 \noindent 
 Ada modul waktu populer yang tersedia dengan Python yang menyediakan fungsi untuk bekerja dengan waktu, dan untuk mengkonversi antara representasi. Fungsi time.time () mengembalikan waktu sistem saat ini di kutu sejak pukul 12:00, 1 Januari 1970 (zaman). \par
 \vspace{12pt}
+\vspace{\baselineskip}
 \noindent 
-Example \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\noindent 
- \hspace*{0.5in} import~time;   $  \#  $ This is required to include time module. \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} ticks = time.time() \par
-\noindent 
- \hspace*{0.5in} print "Number of ticks since 12:00am, January 1, 1970:", ticks \par
-\vspace{12pt}
-\noindent 
+\begin{verbatim}
+Example 
+#!/usr/bin/python
+import~time;#This is required to include time module.
+ticks = time.time() 
+print "Number of ticks since 
+12:00am, January 1, 1970:", ticks \par 
+\end{verbatim}
+\vspace{10pt}
 Hal ini akan menghasilkan sesuatu sebagai berikut - \par
 \noindent 
- \hspace*{0.5in} Number of ticks since 12:00am, January 1, 1970: 7186862.73399 \par
-\vspace{12pt}
-\vspace{12pt}
+Number of ticks since 12:00am, January 1, 1970: 7186862.73399 \par
+\vspace{\baselineskip}
 \noindent 
 Tanggal aritmatika mudah dilakukan dengan kutu. Namun, tanggal sebelum zaman tidak dapat diwakili dalam formulir ini. Tanggal di masa depan juga tidak dapat diwakili dengan cara ini - titik potong adalah sekitar 2038 untuk UNIX dan Windows. \par
-\vspace{12pt}
-\vspace{12pt}
+\vspace{\baselineskip}
 \noindent 
-What is TimeTuple? \par
-\vspace{12pt}
+\begin{itemize}
+	\item What is TimeTuple?
+\end{itemize}
 \noindent 
 Banyak fungsi waktu Python menangani waktu sebagai tuple dari 9 nomor, seperti yang ditunjukkan di bawah ini – \par
 \vspace{12pt}
@@ -46,26 +44,23 @@ Banyak fungsi waktu Python menangani waktu sebagai tuple dari 9 nomor, seperti y
 Tuple di atas setara dengan struct $  \_  $time structure. Struktur ini memiliki atribut berikut – \par
 \vspace{12pt}
 \noindent 
-Getting current time \par
+\begin{enumerate}
+	\item Getting current time
+\end{enumerate}
 \noindent 
- \hspace*{0.5in} Untuk menerjemahkan waktu instan dari satu detik sejak nilai floating-point ke waktu tupel, lewati nilai floating-point ke fungsi (mis., Localtime) yang mengembalikan waktu tupel dengan semua sembilan item valid. \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
-\noindent 
- \hspace*{0.5in} import time; \par
-\vspace{12pt}
-\noindent 
- \hspace*{0.5in} localtime = time.localtime(time.time()) \par
-\noindent 
- \hspace*{0.5in} print "Local current time :", localtime \par
-\vspace{12pt}
-\noindent 
+Untuk menerjemahkan waktu instan dari satu detik sejak nilai floating-point ke waktu tupel, lewati nilai floating-point ke fungsi (mis., Localtime) yang mengembalikan waktu tupel dengan semua sembilan item valid. \par
+ 
+ \begin{verbatim}
+#!/usr/bin/python
+import time; 
+localtime = time.localtime(time.time()) \par
+print "Local current time :", localtime \par
+ \end{verbatim}
 Ini akan menghasilkan hasil berikut, yang dapat diformat dalam bentuk lain yang sesuai - \par
 \noindent 
- \hspace*{0.5in} Local current time : time.struct $  \_  $time(tm $  \_  $year=2013, tm $  \_  $mon=7,  \par
+Local current time : time.struct $  \_  $time(tm $  \_  $year=2013, tm $  \_  $mon=7,  \par
 \noindent 
- \hspace*{0.5in} tm $  \_  $mday=17, tm $  \_  $hour=21, tm $  \_  $min=26, tm $  \_  $sec=3, tm $  \_  $wday=2, tm $  \_  $yday=198, tm $  \_  $isdst=0) \par
+tm $  \_  $mday=17, tm $  \_  $hour=21, tm $  \_  $min=26, tm $  \_  $sec=3, tm $  \_  $wday=2, tm $  \_  $yday=198, tm $  \_  $isdst=0) \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
@@ -74,10 +69,24 @@ Ini akan menghasilkan hasil berikut, yang dapat diformat dalam bentuk lain yang 
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
+
+\begin{itemize}
+	\item Support Opperation
+\end{itemize}
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.90\textwidth]{figures/DateTime2}}
+	\caption{Support Operation}
+	\label{Support Opperation}
+\end{figure}
+
+\vspace{\baselineskip}
 \noindent 
-Getting formatted time \par
+\begin{enumerate}
+	\item Getting formatted time \par
+\end{enumerate}
 \noindent 
- \hspace*{0.5in} Anda dapat memformat kapan saja sesuai kebutuhan Anda, namun metode sederhana untuk mendapatkan waktu dalam format yang mudah dibaca adalah asctime () - \par
+Anda dapat memformat kapan saja sesuai kebutuhan Anda, namun metode sederhana untuk mendapatkan waktu dalam format yang mudah dibaca adalah asctime () - \par
 \noindent 
  \hspace*{0.5in}  $  \#  $!/usr/bin/python \par
 \noindent 
@@ -106,14 +115,9 @@ public static String getCurrentTimeStamp ()  $  \{  $ \par
  $  $ $  $ $  $ $  $ kembali strDate; \par
 \noindent 
  $  \}  $ \par
+\vspace{\baselineskip}
 \noindent 
 Saya mendapatkan tanggal dalam format 2009-09-22 16:47:08 (YYYY-MM-DD HH: MI: Sec). \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
 \vspace{12pt}
 \noindent 
 Tapi saya ingin mengambil waktu sekarang dalam format 2009-09-22 16: 47: 08.128 ((YYYY-MM-DD HH: MI: Sec.Ms). \par
@@ -127,8 +131,23 @@ SimpleTextFormat akan bekerja dengan baik. Di sini satuan waktu paling rendah ad
 FYI, kelas tanggal tua yang merepotkan seperti java.util.Date, java.util.Calendar, dan java.text.SimpleTextFormat sekarang warisan, digantikan oleh kelas java.time. \par
 \vspace{12pt}
 \vspace{14pt}
+
+\begin{itemize}
+	\item Instance Attributes
+\end{itemize}
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.90\textwidth]{figures/DateTime}}
+	\caption{Instance Attributes}
+	\label{Instance Attributes}
+\end{figure}
+
+
+\vspace{\baselineskip}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont Getting calendar for a month \\} \par
+\begin{enumerate}
+	\item Getting calendar for a month
+\end{enumerate}
 \noindent 
 Modul kalender memberikan berbagai macam metode untuk dimainkan dengan kalender tahunan dan bulanan. Di sini, kami mencetak kalender untuk bulan tertentu (Jan 2008) - \par
 \noindent 
@@ -142,16 +161,7 @@ Modul kalender memberikan berbagai macam metode untuk dimainkan dengan kalender 
  \hspace*{0.5in} print "Here is the calendar:" \par
 \noindent 
  \hspace*{0.5in} print cal \par
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
+\vspace{\baselineskip}
 \noindent 
 Ini akan menghasilkan hasil sebagai berikut - \par
 \noindent 
@@ -170,11 +180,10 @@ Ini akan menghasilkan hasil sebagai berikut - \par
  \hspace*{0.5in}  \hspace*{0.5in} 21 22 23 24 25 26 27 \par
 \noindent 
  \hspace*{0.5in}  \hspace*{0.5in} 28 29 30 31 \par
-\vspace{12pt}
-\vspace{12pt}
 \noindent 
- \hspace*{0.5in} {\fontsize{16pt}{16pt}\selectfont Android \\} \par
-\vspace{12pt}
+
+ \subsection {Android}
+ \vspace{\baselineskip}
 \noindent 
 Pergi ke hari tertentu \par
 \noindent 
@@ -199,11 +208,9 @@ Buka Google Kalender app Calendar. \par
 Di sudut kiri atas, tekan Menu Menu. \par
 \noindent 
 Pilih tampilan, seperti Jadwal atau Bulan. Untuk melihat semua acara, sasaran, dan pengingat Anda dalam daftar yang dipecah berdasarkan hari, pilih "Jadwal". \par
-\vspace{12pt}
-\vspace{12pt}
 \noindent 
- \hspace*{0.5in} {\fontsize{16pt}{16pt}\selectfont Computer \\} \par
-\vspace{12pt}
+
+ \subsection {Computer}
 \noindent 
 Ubah tampilan kalender Anda \par
 \noindent 
@@ -228,11 +235,10 @@ Artikel terkait \par
 Ubah pengaturan kalender Anda \par
 \noindent 
 Buat kalender baru \par
-\vspace{12pt}
-\vspace{12pt}
+
+
 \noindent 
- \hspace*{0.5in} {\fontsize{16pt}{16pt}\selectfont Iphone dan Ipad \\} \par
-\vspace{12pt}
+ \subsection { Iphone dan Ipad }
 \noindent 
 Pergi ke hari tertentu \par
 \noindent 
@@ -261,10 +267,11 @@ Pilih tampilan, seperti Jadwal atau Bulan. Untuk melihat semua acara, sasaran, d
 Ubah pengaturan Anda \par
 \noindent 
 Pelajari cara mengubah setelan kalender Anda, termasuk tampilan kalender dan hari dimulai. \par
-\vspace{12pt}
-\vspace{12pt}
+\vspace{\baselineskip}
 \noindent 
-{\fontsize{16pt}{16pt}\selectfont The $  $time $  $Module \\} \par
+\begin{itemize}
+\item The time Module
+\end{itemize}
 \noindent 
  \hspace*{0.5in} Ada modul waktu populer yang tersedia dengan Python yang menyediakan fungsi untuk bekerja dengan waktu dan untuk mengkonversi antara representasi. Berikut adalah daftar semua metode yang tersedia – \par
 \noindent 
@@ -304,10 +311,11 @@ Lihat struct $  \_  $time untuk deskripsi objek ini. \par
 \vspace{12pt}
 \noindent 
 Berubah dalam versi 2.2: Urutan nilai waktu diubah dari tupel menjadi struct $  \_  $time, dengan penambahan nama atribut untuk field. \par
-\vspace{12pt}
-\vspace{12pt}
+\vspace{\baselineskip}
 \noindent 
-{\fontsize{16pt}{16pt}\selectfont The $  $calendar $  $Module \\} \par
+\begin{itemize}
+\item The calendar Module
+\end{itemize}
 \noindent 
 Modul kalender memasok fungsi yang berhubungan dengan kalender, termasuk fungsi untuk mencetak kalender teks untuk bulan atau tahun tertentu. \par
 \noindent 
@@ -442,7 +450,9 @@ formatyearpage (theyear [, width [, css [, encoding]]]) \par
 Kembali a \par
 \vspace{12pt}
 \noindent 
-{\fontsize{16pt}{16pt}\selectfont Other Modules  $  \&  $ Functions: \\} \par
+\begin{itemize}
+\item Other Modules\&Functions:
+\end{itemize}
 \noindent 
 Jika Anda tertarik, maka di sini Anda akan menemukan daftar modul dan fungsi penting lainnya untuk bermain dengan tanggal  $  \&  $ waktu dengan Python: \par
 \vspace{12pt}

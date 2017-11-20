@@ -3,14 +3,28 @@
 %Muhammad Nur Ikhsan_1154087
 %Emy Safitri_1154102
 %Andi Ikram Maulana_1154065
-%Ilman Mubarik Sidiq_1154114\sloppy
+%Ilman Mubarik Sidiq_1154114
 
+
+\sloppy
 \begin{center}{\fontsize{24pt}{24pt}\selectfont \textbf{Python File I/O} \\}\end{center}
 \textbf{Unit input}~adalah~(masukan) suatu  data yang berbentuk documet bait itu data data foto, data data hurup ataupun data tanggal ke dalam sebuah system yang  terkomputerisasi. 
 \textbf{unit output} (keluaran) biasanya digunakan untuk menampilkan data, atau dengan kata lain untuk menangkap data yang telah diinputkan terlebih dahulu dalam sebuah penyimpanan media elektronic , contohnya data yang akan ditampilkan pada layar \href{https://id.wikipedia.org/wiki/Monitor}{monitor}
  atau \href{https://id.wikipedia.org/wiki/Printer}{printer}
 .
 I/O \textit{Input/Ouput Read} [IOR] dan untuk tulis I/O \textit{Input/Output Write} [IOW].
+
+\sloppy
+\begin{center}{\fontsize{24pt}{24pt}\selectfont \textbf{Python File I/O} \\}\end{center
+
+\textbf{Unit input}~adalah~(masukan) suatu  data yang berbentuk documet bait itu data data foto, data data hurup ataupun data tanggal ke dalam sebuah system yang  terkomputerisasi.  
+ 
+\textbf{unit output} (keluaran) biasanya digunakan untuk menampilkan data, atau dengan kata lain untuk menangkap data yang telah diinputkan terlebih dahulu dalam sebuah penyimpanan media elektronic , contohnya data yang akan ditampilkan pada layar \href{https://id.wikipedia.org/wiki/Monitor}{monitor}
+ atau \href{https://id.wikipedia.org/wiki/Printer}{printer}
+. 
+
+I/O \textit{Input/Ouput Read} [IOR] dan untuk tulis I/O \textit{Input/Output Write} [IOW]. 
+ 
 
 
  %%%%%%%%%%%%  Figure/Image No:1 here %%%%%%%%%%%%%%
@@ -29,6 +43,7 @@ I/O \textit{Input/Ouput Read} [IOR] dan untuk tulis I/O \textit{Input/Output Wri
 \vspace{12pt}
 \vspace{12pt}
 \vspace{14pt}
+
 \noindent 
 File merupakan lokasi bernama pada disk untuk menyimpan sebuah informasi terkait. Ini dapat digunakan untuk menyimpan data secara permanen dalam memori non-volatile (misalnya hard disk). 
 \vspace{12pt}
@@ -52,7 +67,52 @@ Python memiliki built-in function open () untuk membuka file. Fungsi ini dapat m
 Kita bisa menentukan mode saat membuka file. Dalam mode, kami menentukan apakah kita ingin membaca 'r', menulis 'w' atau menambahkan 'a' ke file. Kita juga menentukan apakah kita ingin membuka file dalam mode teks atau mode biner. 
 Defaultnya adalah membaca dalam mode teks. Dalam mode ini, kita mendapatkan string saat membaca dari file.
 Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan digunakan saat berhadapan dengan file non-teks seperti file gambar atau exe.
+=======
 
+File adalah lokasi bernama pada disk untuk menyimpan informasi terkait. Ini digunakan untuk menyimpan data secara permanen dalam memori non-volatile (misalnya hard disk). 
+
+\vspace{12pt}
+
+Karena, random access memory (RAM) bersifat volatile sehingga kehilangan datanya saat komputer dimatikan, kita menggunakan file untuk penggunaan data masa depan. 
+
+\vspace{12pt}
+
+Bila kita ingin membaca dari atau menulis ke file kita perlu membukanya terlebih dahulu. Bila sudah selesai, perlu ditutup, agar sumber yang diikat dengan file tersebut dibebaskan. 
+
+\vspace{12pt}
+
+Oleh karena itu, dengan Python, sebuah operasi file berlangsung dengan urutan sebagai berikut. 
+\vspace{12pt}
+
+\begin{myEnumerate}
+\item Buka file 
+
+\item Membaca atau menulis (melakukan operasi) 
+
+\item Tutup file tersebu\end{myEnumerate}
+ 
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+ 
+Membuka sebuah file 
+
+Python memiliki built-in function open () untuk membuka file. Fungsi ini mengembalikan objek file, juga disebut handle, karena digunakan untuk membaca atau memodifikasi file yang sesuai. 
+\vspace{12pt}
+ 
+>>> f = open("test.txt")~~~  $  \#  $ open file in current directory 
+
+>>> f = open("C:/Python33/README.txt")~  $  \#  $ specifying full path 
+\vspace{12pt}
+
+Kita bisa menentukan mode saat membuka file. Dalam mode, kami menentukan apakah kita ingin membaca 'r', menulis 'w' atau menambahkan 'a' ke file. Kita juga menentukan apakah kita ingin membuka file dalam mode teks atau mode biner. 
+\vspace{12pt}
+
+Defaultnya adalah membaca dalam mode teks. Dalam mode ini, kita mendapatkan string saat membaca dari file. 
+\vspace{12pt}
+
+Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan digunakan saat berhadapan dengan file non-teks seperti file gambar atau exe. 
+\vspace{12pt}
 
  %%%%%%%%%%%%  Table No:1 Here %%%%%%%%%%%%%%
 
@@ -78,6 +138,7 @@ Di sisi lain, mode biner mengembalikan byte dan ini adalah mode yang akan diguna
 
 
 \vspace{12pt}
+
 \noindent 
 f = open("test.txt")~~~~~  $  \#  $ equivalent to 'r' or 'rt'
 f = open("test.txt",'w')~  $  \#  $ write in text mode 
@@ -302,3 +363,615 @@ Contoh kode 4 - unpickletest.py
 {\fontsize{10pt}{10pt}\selectfont  $  \#  $ Mencoba menggunakan daftar} 
 {\fontsize{10pt}{10pt}\selectfont untuk item dalam unpickledlist:}
 {\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $Item cetak} 
+
+
+f = open("test.txt")~~~~~  $  \#  $ equivalent to 'r' or 'rt' 
+
+f = open("test.txt",'w')~  $  \#  $ write in text mode 
+
+f = open("img.bmp",'r+b')  $  \#  $ read and write in binary mode 
+\vspace{12pt}
+
+Tidak seperti bahasa lain, karakter 'a' tidak menyiratkan angka 97 sampai dikodekan menggunakan ASCII (atau pengkodean setara lainnya). 
+\vspace{12pt}
+
+Apalagi, pengkodean default bergantung pada platform. Di jendela, itu adalah 'cp1252' tapi 'utf-8' di Linux. 
+\vspace{12pt}
+
+Jadi, kita juga tidak harus bergantung pada pengkodean default atau kode kita akan berperilaku berbeda di berbagai platform. 
+
+\vspace{12pt}
+ 
+Oleh karena itu, ketika bekerja dengan file dalam mode teks, sangat disarankan untuk menentukan jenis pengkodean. 
+\vspace{12pt}
+
+f = open("test.txt",mode = 'r',encoding = 'utf-8') 
+\vspace{12pt}
+ 
+Menutup sebuah File 
+\vspace{12pt}
+
+Ketika kita selesai dengan operasi ke file, kita perlu menutupinya dengan benar. 
+\vspace{12pt}
+ 
+Menutup file akan membebaskan sumber daya yang terkait dengan file dan dilakukan dengan menggunakan metode close (). 
+\vspace{12pt}
+
+Python memiliki pengumpul sampah untuk membersihkan benda yang tidak difermentasi tapi, kita tidak boleh bergantung padanya untuk menutup file. 
+
+f = open("test.txt",encoding = 'utf-8') 
+
+ $  \#  $ perform file operations 
+ 
+f.close() 
+\vspace{16pt}
+ 
+Metode ini tidak sepenuhnya aman. Jika pengecualian terjadi saat kita melakukan operasi dengan file, kode keluar tanpa menutup file. 
+\vspace{12pt}
+
+Cara yang lebih aman adalah dengan menggunakan try ... akhirnya blok. 
+\vspace{12pt}
+
+try: 
+
+~~ f = open("test.txt",encoding = 'utf-8') 
+
+~~  $  \#  $ perform file operations 
+
+finally: 
+
+~~ f.close() 
+\vspace{12pt}
+
+Dengan cara ini, kita dijamin bahwa file tersebut benar tertutup bahkan jika pengecualian dinaikkan, menyebabkan aliran program berhenti. 
+\vspace{12pt}
+
+Cara terbaik untuk melakukannya adalah dengan menggunakan pernyataan. Ini memastikan file ditutup saat blok di dalam dengan keluar. 
+\vspace{12pt}
+
+Kita tidak perlu secara eksplisit memanggil metode close (). Hal itu dilakukan secara internal. 
+\vspace{12pt}
+
+with open("test.txt",encoding = 'utf-8') as f:
+
+~~  $  \#  $ perform file operations 
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+
+Menulis ke File 
+\vspace{12pt}
+ 
+Untuk menulis ke file kita perlu membukanya dalam mode write 'w', tambahkan 'a' atau exclusive creation 'x'. 
+\vspace{12pt}
+
+Kita harus berhati-hati dengan mode 'w' karena akan menimpa file jika sudah ada. Semua data sebelumnya terhapus. 
+\vspace{12pt}
+
+Menulis string atau urutan byte (untuk file biner) dilakukan dengan menggunakan metode write (). Metode ini mengembalikan jumlah karakter yang ditulis ke file. 
+\vspace{12pt}
+
+with open("test.txt",'w',encoding = 'utf-8') as f: 
+
+~~ f.write("my first file $  \textbackslash  $n") 
+
+~~ f.write("This file $  \textbackslash  $n $  \textbackslash  $n") 
+
+~~ f.write("contains three lines $  \textbackslash  $n") 
+\vspace{12pt}
+
+Program ini akan membuat file baru bernama 'test.txt' jika tidak ada. Jika memang ada, itu akan ditimpa. 
+\vspace{12pt}
+
+Kita harus menyertakan karakter newline sendiri untuk membedakan garis yang berbeda. 
+
+Membaca Dari File 
+\vspace{12pt}
+
+Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. 
+\vspace{12pt}
+ 
+Ada berbagai metode yang tersedia untuk tujuan ini. Kita bisa menggunakan metode read (size) untuk membaca dalam jumlah ukuran data. Jika parameter ukuran tidak ditentukan, bunyinya dan kembali ke akhir file. 
+\vspace{12pt}
+\vspace{12pt}
+
+>>> f = open("test.txt",'r',encoding = 'utf-8') 
+
+>>> f.read(4)~~~  $  \#  $ read the first 4 data \
+
+'This' 
+\vspace{12pt}
+
+>>> f.read(4)~~~  $  \#  $ read the next 4 data 
+
+' is ' 
+\vspace{12pt}
+ 
+>>> f.read()~~~~  $  \#  $ read in the rest till end of file 
+
+'my first file $  \textbackslash  $nThis file $  \textbackslash  $ncontains three lines $  \textbackslash  $n' 
+\vspace{12pt}
+ 
+>>> f.read()~  $  \#  $ further reading returns empty sting 
+\vspace{12pt}
+\vspace{12pt}
+
+Kita dapat melihat, metode read () mengembalikan baris baru sebagai ' $  \textbackslash  $ n'. Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. 
+\vspace{12pt}
+
+Kita bisa mengubah kursor file kita saat ini (posisi) dengan menggunakan metode seek (). Demikian pula metode tell () mengembalikan posisi kita saat ini (dalam jumlah byte). 
+\vspace{12pt}
+
+>>> f.tell()~~~  $  \#  $ get the current file position 
+
+56 
+\vspace{12pt}
+ 
+>>> f.seek(0)~~  $  \#  $ bring file cursor to initial position 
+
+0 
+\vspace{12pt}
+ 
+>>> print(f.read())~  $  \#  $ read the entire file 
+
+This is my first file
+
+This file 
+
+contains three lines 
+\vspace{12pt}
+\vspace{16pt}
+ 
+Kita bisa membaca file line-by-line menggunakan for loop. Ini efisien dan cepat. 
+\vspace{12pt}
+
+>>> for line in f: 
+
+...~~~~ print(line, end = '') 
+
+... 
+
+This is my first file 
+
+This file 
+
+contains three lines 
+\vspace{12pt}
+\vspace{12pt}
+ 
+Baris dalam file itu sendiri memiliki karakter baris baru ' $  \textbackslash  $ n'. 
+\vspace{12pt}
+
+Terlebih lagi, print () parameter akhir untuk menghindari dua baris baru saat mencetak. 
+\vspace{12pt}
+ 
+Sebagai alternatif, kita dapat menggunakan metode readline () untuk membaca setiap baris file. Metode ini membaca sebuah file sampai newline, termasuk newline character. 
+\vspace{12pt}
+
+>>> f.readline() 
+
+'This is my first file $  \textbackslash  $n' 
+\vspace{12pt}
+
+>>> f.readline() 
+
+'This file $  \textbackslash  $n' 
+\vspace{12pt}
+
+>>> f.readline() 
+
+'contains three lines $  \textbackslash  $n' 
+\vspace{12pt}
+
+>>> f.readline() 
+
+'' 
+\vspace{16pt}
+ 
+Terakhir, metode readlines () mengembalikan daftar baris yang tersisa dari keseluruhan file. Semua metode membaca ini mengembalikan nilai kosong saat akhir file (EOF) tercapai. 
+\vspace{12pt}
+
+>>> f.readlines() 
+
+['This is my first file $  \textbackslash  $n', 'This file $  \textbackslash  $n', 'contains three lines $  \textbackslash  $n'] 
+
+\vspace{12pt}
+\vspace{12pt}
+
+Metode Berkas Python 
+\vspace{12pt}
+ 
+Ada berbagai metode yang tersedia dengan objek file. Beberapa di antaranya telah digunakan pada contoh di atas. 
+\vspace{12pt}
+ 
+Berikut adalah daftar lengkap metode dalam mode teks dengan deskripsi singkat. 
+\vspace{12pt}
+
+Atribut Objek file 
+\vspace{12pt}
+ 
+Setelah file dibuka dan Anda memiliki satu file objek, Anda bisa mendapatkan berbagai informasi yang berkaitan dengan file tersebut. 
+\vspace{12pt}
+
+Berikut adalah daftar semua atribut yang terkait dengan objek file:
+\vspace{16pt}
+\vspace{16pt}
+\vspace{16pt}
+
+ $  \#  $!/usr/bin/python 
+\vspace{12pt}
+ 
+ $  \#  $ Open a file 
+ 
+fo = open("foo.txt", "wb") 
+
+print "Name of the file: ", fo.name 
+
+print "Closed or not : ", fo.closed 
+
+print "Opening mode : ", fo.mode 
+
+print "Softspace flag : ", fo.softspace 
+\vspace{12pt}
+
+Membaca dan Menulis File 
+\vspace{12pt}
+
+Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih mudah. Kita akan melihat bagaimana menggunakan metode read () dan write () untuk membaca dan menulis file. 
+
+Metode tulis () 
+\vspace{12pt}
+
+Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. 
+\vspace{12pt}
+
+Metode write () tidak menambahkan karakter baris baru (' $  \textbackslash  $ n') ke akhir string - 
+
+Sintaksis 
+\vspace{12pt}
+ 
+ $  \#  $!/usr/bin/python 
+\vspace{12pt}
+
+ $  \#  $ Open a file 
+ 
+fo = open("foo.txt", "wb") 
+
+fo.write( "Python is a great language. $  \textbackslash  $nYeah its great!! $  \textbackslash  $n"); 
+\vspace{12pt}
+
+ $  \#  $ Close opend file 
+ 
+fo.close() 
+
+ $  \#  $!/usr/bin/python 
+\vspace{12pt}
+
+ $  \#  $ Open a file 
+ 
+fo = open("foo.txt", "r+") 
+
+str = fo.read(10); 
+
+print "Read String is : ", str 
+\vspace{12pt}
+
+ $  \#  $ Close opend file
+ 
+fo.close() 
+\vspace{12pt}
+ 
+Read String is :~ Python is 
+\vspace{16pt}
+ 
+ $  \#  $!/usr/bin/python 
+\vspace{12pt}
+
+ $  \#  $ Open a file 
+ 
+fo = open("foo.txt", "r+") 
+
+str = fo.read(10); 
+
+print "Read String is : ", str 
+\vspace{12pt}
+ 
+ $  \#  $ Check current position 
+ 
+position = fo.tell(); 
+
+print "Current file position : ", position 
+\vspace{12pt}
+
+ $  \#  $ Reposition pointer at the beginning once again 
+ 
+position = fo.seek(0, 0); 
+
+str = fo.read(10); 
+
+print "Again read String is : ", str 
+
+ $  \#  $ Close opend file 
+ 
+fo.close() 
+\vspace{14pt}
+
+Read String is :~ Python is 
+
+Current file position :~ 10 
+
+Again read String is :~ Python is 
+\vspace{14pt}
+
+os.rename(current $  \_  $file $  \_  $name, new $  \_  $file $  \_  $name) 
+\vspace{14pt}
+
+ $  \#  $!/usr/bin/python 
+ 
+import os 
+\vspace{12pt}
+
+ $  \#  $ Rename a file from test1.txt to test2.txt 
+ 
+os.rename( "test1.txt", "test2.txt" ) 
+\vspace{14pt}
+
+ $  \#  $!/usr/bin/python 
+ 
+import os 
+\vspace{12pt}
+ 
+ $  \#  $ Delete file test2.txt 
+ 
+os.remove("text2.txt") 
+\vspace{14pt}
+ 
+os.mkdir("newdir") 
+\vspace{14pt}
+
+ $  \#  $!/usr/bin/python 
+ 
+import os 
+\vspace{12pt}
+
+ $  \#  $ Create a directory "test" 
+ 
+os.mkdir("test") 
+\vspace{14pt}
+
+ $  \#  $!/usr/bin/python 
+ 
+import os 
+\vspace{12pt}
+ 
+ $  \#  $ Changing a directory to "/home/newdir" 
+ 
+os.chdir("/home/newdir") 
+\vspace{14pt}
+
+ $  \#  $!/usr/bin/python 
+ 
+import os
+\vspace{12pt}
+
+ $  \#  $ This would give location of the current directory 
+ 
+os.getcwd() 
+\vspace{14pt}
+ 
+ $  \#  $!/usr/bin/python 
+
+import os 
+\vspace{12pt}
+
+ $  \#  $~This~would  remove "/tmp/test"  directory. 
+ 
+os.rmdir( "/tmp/test"~ ) 
+\vspace{14pt}
+\vspace{14pt}
+ 
+Membuka sebuah file 
+
+\vspace{12pt}
+
+Untuk membuka file teks yang Anda gunakan, well, open () function. Sepertinya masuk akal. Anda melewatkan parameter tertentu untuk membuka () untuk memberitahukannya di mana file harus dibuka - 'r' untuk dibaca saja, 'w' untuk tulisan saja (jika ada file lama, akan dituliskan), 'a 'Untuk menambahkan (menambahkan sesuatu ke akhir file) dan' r + 'untuk membaca dan menulis. Tapi kurang bicara, mari kita buka file untuk membaca (Anda bisa melakukan ini dengan mode idle python Anda). Buka file teks biasa. Kami kemudian akan mencetak apa yang kita baca di dalam file: 
+
+Contoh Kode 1 - Membuka sebuah file 
+
+\vspace{12pt}
+
+Openfile = open ('pathtofile', 'r')
+
+Openfile.read () 
+
+\vspace{12pt}
+
+Itu menarik. Anda akan melihat banyak simbol ' $  \textbackslash  $ n'. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. 
+
+Carilah dan Anda Temukan 
+
+\vspace{12pt}
+ 
+Apakah Anda mencoba mengetik di print openfile.read ()? Apakah itu gagal? Kemungkinan besar, dan alasannya adalah karena 'kursor' telah mengubah tempatnya. Kursor Kursor apa Nah, kursor yang sebenarnya tidak bisa kamu lihat, tapi tetap kursor. Kursor tak terlihat ini memberitahukan fungsi baca (dan banyak fungsi I / O lainnya) dari mana mulai. Untuk mengatur di mana kursor berada, Anda menggunakan fungsi seek (). Ini digunakan dalam bentuk seek (offset, dari mana). 
+
+\vspace{12pt}
+
+Mana yang opsional, dan menentukan mana yang harus dicari. Jika darimana 0, byte / huruf dihitung dari awal. Jika 1, byte dihitung dari posisi kursor saat ini. Jika 2, maka byte dihitung dari akhir file. Jika tidak ada yang diletakkan di sana, 0 diasumsikan. 
+
+\vspace{12pt}
+
+Offset menggambarkan seberapa jauh dari mana kursor bergerak. sebagai contoh:
+
+\vspace{12pt}
+ 
+ $  $ $  $ $  $ $  $openfile.seek (45,0) akan memindahkan kursor ke 45 byte / huruf setelah permulaan file. 
+ 
+ $  $ $  $ $  $ $  $Openfile.seek (10,1) akan memindahkan kursor ke 10 byte / huruf setelah posisi kursor saat ini. 
+ 
+ $  $ $  $ $  $ $  $openfile.seek (-77,2) akan memindahkan kursor ke 77 byte / huruf sebelum akhir file (perhatikan - sebelum angka 77) 
+ 
+\vspace{12pt}
+ 
+Cobalah sekarang juga. Gunakan openfile.seek () untuk pergi ke tempat manapun di file dan kemudian mencoba mengetik print openfile.read (). Ini akan dicetak dari tempat yang Anda inginkan. Tapi sadari bahwa openfile.read () memindahkan kursor ke akhir file - Anda harus mencari lagi. 
+\vspace{14pt}
+
+Fungsi I / O Lainnya 
+
+\vspace{12pt}
+
+Ada banyak fungsi lain yang membantu Anda dalam berurusan dengan file. Mereka memiliki banyak kegunaan yang memberdayakan Anda untuk berbuat lebih banyak, dan membuat hal-hal yang dapat Anda lakukan lebih mudah. Mari kita lihat kirim (), readline (), readlines (), tulis () dan close (). 
+
+\vspace{12pt}
+
+Kirim () mengembalikan tempat kursor berada dalam file. Tidak memiliki parameter, ketik saja (seperti contoh di bawah ini yang akan ditampilkan). Ini sangat berguna, untuk mengetahui apa yang Anda maksud, di mana letaknya, dan kontrol kursor yang sederhana. Untuk menggunakannya, ketik fileobjectname.tell () - dimana fileobjectname adalah nama dari file objek yang Anda buat saat Anda membuka file (di openfile = open ('pathtofile', 'r') nama objek file adalah openfile). 
+
+\vspace{12pt}
+ 
+Readline () membaca dari mana kursor sampai akhir baris. Ingat bahwa akhir baris bukan tepi layar Anda - garis berakhir saat Anda menekan enter untuk membuat baris baru. Ini berguna untuk hal-hal seperti membaca log peristiwa, atau mengalami sesuatu yang progresif untuk mengolahnya. Tidak ada parameter yang harus Anda lewati ke readline (), meskipun secara opsional Anda dapat memberi tahu jumlah maksimal byte / huruf untuk dibaca dengan meletakkan nomor di tanda kurung. Gunakan dengan fileobjectname.readline (). 
+
+\vspace{12pt}
+
+Readlines () sama seperti readline (), namun readlines () membaca semua baris dari kursor dan seterusnya, dan mengembalikan sebuah daftar, dengan setiap elemen daftar memegang satu baris kode. Gunakan dengan fileobjectname.readlines (). Misalnya, jika Anda memiliki file teks: 
+
+Contoh Kode 2 - contoh file teks 
+
+\vspace{12pt}
+ 
+Baris 1 
+
+\vspace{12pt}
+
+Baris 3
+
+Baris 4 
+
+\vspace{12pt}
+
+Baris 6 
+\vspace{14pt}
+
+Fungsi write (), menulis ke file. Bagaimana kamu menebak nya??? Ini menulis dari mana kursor berada, dan menimpa teks di depannya - seperti di MS Word, di mana Anda menekan 'insert' dan menulis di atas teks lama. Untuk memanfaatkan fungsi yang paling penting ini, letakkan string di antara tanda kurung untuk ditulis mis. fileobjectname.write ('ini adalah string'). 
+
+\vspace{12pt}
+
+Dekat, Anda bisa mencari, menutup file sehingga Anda tidak dapat lagi membaca atau menulis sampai Anda membuka kembali lagi. Cukup sederhana Untuk menggunakan, Anda akan menulis fileobjectname.close (). Sederhana! 
+
+\vspace{12pt}
+
+Dengan mode siaga Python, buka file uji (atau buat yang baru ...) dan mainkan fungsi ini. Anda bisa melakukan penyuntingan teks yang sederhana (dan sangat merepotkan). 
+
+Mmm, acar 
+
+\vspace{12pt}
+ 
+Pickles, dengan Python, harus dimakan. Rasa mereka hanya untuk membiarkan pemrogram meninggalkan mereka di lemari es. 
+
+\vspace{12pt}
+ 
+Ok, hanya bercanda disana. Pickles, dengan Python, adalah objek yang disimpan ke sebuah file. Objek dalam kasus ini bisa berupa variabel, instance dari kelas, atau daftar, kamus, atau tupel. Hal lain juga bisa acar, tapi dengan batas. Objek kemudian dapat dipulihkan, atau tidak dicemari, nanti. Dengan kata lain, Anda 'menyimpan' benda Anda. 
+
+\vspace{12pt}
+ 
+Jadi bagaimana kita acar? Dengan fungsi dump (), yang ada di dalam modul acar - jadi pada awal program Anda, Anda harus menulis acar impor. Cukup sederhana Kemudian buka file kosong, dan gunakan pickle.dump () untuk menjatuhkan objek ke file itu. Mari kita coba itu: 
+
+Contoh Kode 3 - pickletest.py
+
+\vspace{12pt}
+
+ $  \#  $ $  \#  $ $  \#  $ pickletest.py 
+ 
+ $  \#  $ $  \#  $ $  \#  $ PICKLE AN OBJECT 
+ 
+\vspace{12pt}
+
+ $  \#  $ mengimpor modul acar 
+ 
+Acar impor 
+
+\vspace{12pt}
+ 
+ $  \#  $ Mari membuat sesuatu untuk menjadi acar 
+ 
+ $  \#  $ Bagaimana dengan daftar? 
+ 
+picklelist = ['one', 2, 'three', 'four', 5, 'dapatkah kamu menghitung?'] 
+
+\vspace{12pt}
+ 
+ $  \#  $ Sekarang buat file 
+ $  \#  $ ganti nama file dengan file yang ingin Anda buat 
+ 
+File = open ('filename', 'w') 
+ 
+\vspace{12pt}
+ 
+ $  \#  $ Sekarang mari kita pilih picklelist 
+ 
+pickle.dump (picklelist, file) 
+
+\vspace{12pt}
+
+ $  \#  $ Tutup file, dan pengawetan Anda sudah selesai 
+ 
+file.close () 
+\vspace{14pt}
+ 
+Kode untuk melakukan ini diletakkan seperti pickle.load (object $  \_  $to $  \_  $pickle, file $  \_  $object) di mana: 
+
+\vspace{12pt}
+ 
+ $  $ $  $ $  $ $  $object $  \_  $to $  \_  $pickle adalah objek yang ingin Anda acar (yaitu simpan ke file) 
+ 
+ $  $ $  $ $  $ $  $file $  \_  $object adalah objek file yang ingin Anda tulis (dalam kasus ini, objek file adalah 'file') \par
+ 
+\vspace{12pt}
+ 
+Setelah Anda menutup file tersebut, buka di notepad dan lihat apa yang Anda lihat. Seiring dengan beberapa kue gibblygook lainnya, Anda akan melihat potongan daftar yang kami buat. 
+
+\vspace{12pt}
+
+Sekarang untuk membuka kembali, atau unpickle, file Anda. Untuk menggunakan ini, kita akan menggunakan pickle.load (): 
+
+Contoh kode 4 - unpickletest.py 
+
+\vspace{10pt}
+
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ $  \#  $ $  \#  $ unpickletest.py} 
+
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ $  \#  $ $  \#  $ unpickle file} 
+ 
+\vspace{10pt}
+ 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ mengimpor modul acar} 
+ 
+{\fontsize{10pt}{10pt}\selectfont Acar impor}
+
+\vspace{10pt}
+
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ sekarang buka file untuk dibaca}
+
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ ganti nama file dengan path ke file yang Anda buat di pickletest.py} 
+
+{\fontsize{10pt}{10pt}\selectfont unpicklefile = open ('filename', 'r')} 
+
+\vspace{10pt}
+
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ sekarang muat daftar yang kita acar ke objek baru}
+
+{\fontsize{10pt}{10pt}\selectfont unpickledlist = pickle.load (unpicklefile)} 
+
+\vspace{10pt}
+
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Tutup file, hanya untuk keamanan} 
+
+{\fontsize{10pt}{10pt}\selectfont unpicklefile.close ()} 
+
+\vspace{10pt}
+ 
+{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Mencoba menggunakan daftar} 
+
+{\fontsize{10pt}{10pt}\selectfont untuk item dalam unpickledlist:} 
+
+{\fontsize{10pt}{10pt}\selectfont  $  $ $  $ $  $ $  $Item cetak}
+\vspace{14pt}
