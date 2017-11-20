@@ -1,6 +1,6 @@
-<<<<<<< master
-\sloppy
-\begin{center}{\fontsize{16pt}{16pt}\selectfont \textbf{Python Object Oriented} \\}\end{center}
+
+\section {Pengertian }
+\subsection {Python Object Oriented}
 Phyton merupakan bahasa pemrograman yang berorientasi obyek dinamis, dapat digunakan untuk bermacam-macam pengembangan perangkat lunak. Phyton menyediakan dukungan yang kuat untuk integrasi dengan bahasa pemrograman lain dan alat-alat bantu lainnya.
 Object Oriented Programming (OOP) adalah sebuah pendekatan pemrograman dimana objek didefinisikan dengan metode (fungsi, action, atau events) dan sifat (nilai serta karakteristik), sehingga mudah dibaca, lebih banyak kode yang dapat digunakan kembali.
 Python telah menjadi bahasa berorientasi objek sejak itu ada. Karena itu, menciptakan dan menggunakan kelas dan objek sangat mudah. Bab ini membantu Anda menjadi ahli dalam menggunakan dukungan pemrograman berorientasi objek
@@ -10,7 +10,6 @@ Objek adalah sesuatu yang menamping nilai atau data dan dapat dikenakan operasi 
 \item Inheritace atau pewarisan merupakan konsep dalam pemrograman berbasis objek yang memungkinkan untuk membuat suatu kelas dengan didasarkan pada kelas yang sudah ada sehingga mewarisi semua method dan atributnya. Dengan cara seperti ini, semua method dan atribut yang terdapat pada kelas induk diturunkan ke kelas turunannya. Namun kelas turunannya dapat menambah method baru atau atribut baru tersendiri.
 \item Method Constructor merupakan sebuah method yang akan otomatis dipanggil ketika objek diinstantiasi. Construktor umumnya digunakan untuk melakukan inisialisasi terhadap suatu variabel atau method.
 \end {enumerate}
-
 Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi objek (OO), Anda mungkin  ingin berkonsultasi dengan kursus perkenalan atau setidaknya tutorial semacam itu sehingga Anda dapat memahami konsep dasarnya. Namun, di sini adalah pengenalan kecil Object-Oriented Programming (OOP) untuk membawa Anda pada kecepatan - Ikhtisar Terminologi OOP.
 
 \begin {enumerate}
@@ -21,7 +20,8 @@ Jika Anda tidak memiliki pengalaman sebelumnya dengan pemrograman berorientasi o
 \item Contoh variabel: Variabel yang didefinisikan di dalam metode dan hanya dimiliki oleh instance kelas saat ini.
 \item Warisan: Pengalihan karakteristik kelas ke kelas lain yang berasal darinya. Contoh: Objek individual dari kelas tertentu. Obyek obj yang termasuk dalam Lingkaran kelas, misalnya, adalah turunan dari Lingkaran kelas.
 \item Instansiasi: Pembuatan sebuah instance dari sebuah kelas.
-\item Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas.  
+
+\item Metode: Jenis fungsi khusus yang didefinisikan dalam definisi kelas.  
 \item Objek: Contoh unik dari struktur data yang didefinisikan oleh kelasnya. Objek terdiri dari kedua anggota data (variabel kelas dan variabel contoh) dan metode.
 \item Operator overloading: Penugasan lebih dari satu fungsi ke operator tertentu.
 \end{enumerate}
@@ -37,8 +37,8 @@ class ClassName:
 ~~ 'Optional class documentation string'
 ~~ class $  \_  $suite
 
-Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $.  Class $  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data.
 
+Kelas memiliki kumpulan dokumentasi, yang bisa diakses melalui ClassName . $  \_  $ $  \_  $ doc $  \_  $ $  \_  $.  Class $  \_  $suite terdiri dari semua pernyataan komponen yang mendefinisikan anggota kelas, atribut dan fungsi data.
 
 Berikut adalah contoh kelas Python sederhana -
 \begin{verbatim}
@@ -57,8 +57,8 @@ class Employee:
 \end{verbatim}
 
 \subsection{Variable empCount}
-Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode.
 
+Variabel empCount adalah variabel kelas yang nilainya dibagi di antara semua contoh kelas ini. Ini bisa diakses sebagai Employee.empCount dari dalam kelas atau di luar kelas. Metode pertama  $  \_  $ $  \_  $init  $  \_  $ $  \_ $ () adalah metode khusus, yang disebut metode konstruktor kelas atau inisialisasi yang Python panggil saat Anda membuat instance baru dari kelas ini. Anda menyatakan metode kelas lain seperti fungsi normal dengan pengecualian bahwa argumen pertama untuk setiap metode adalah self. Python menambahkan argumen diri ke daftar untuk Anda; Anda tidak perlu memasukkannya saat Anda memanggil metode.
 
 \subsection{Membuat Instance Objects}
 Untuk membuat contoh kelas, Anda memanggil kelas menggunakan nama kelas dan meneruskan argumen apa pun yang diterima metode  $  \_  $ $  \_  $init $  \_  $ $  \_  $-nya.
@@ -182,6 +182,7 @@ Del  $  \#  $ Penurunan ref. Hitung <40>
 b = 100  $  \#  $ Kurangi ref. Hitung <40>
 C [0] = -1  $  \#  $ Kurangi ref. Hitung <40>
 
+
 Anda biasanya tidak akan memperhatikan kapan pengumpul sampah menghancurkan contoh yatim piatu dan mengembalikan ruangnya. Tapi kelas bisa menerapkan metode khusus  $  \_  $ $  \_  $del  $  \_  $ $  \_ $ (), yang disebut destructor, yang dipanggil saat instance tersebut hendak dimusnahkan. Metode ini bisa digunakan untuk membersihkan sumber daya non memori yang digunakan oleh sebuah instance. \par
 
 Contoh
@@ -271,9 +272,9 @@ Misalkan Anda telah membuat kelas Vektor untuk mewakili vektor dua dimensi, apa 
 Contoh
 
 \begin{verbatim}
- $  \# $! / Usr / bin / python
+ $  \# $! / Usr / bin / python
 Kelas vektor:
-~~ def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, a, b):
+~~ def  $  \_  $ $  \_  $init  $  \_  $ $  \_  $ (diri, a, b):
 ~~~~~ Self.a = a
 ~~~~~ Self.b = b
 ~~ def  $  \_  $ $  \_  $str  $  \_  $ $  \_  $ (diri):
@@ -294,8 +295,7 @@ Atribut objek mungkin atau mungkin tidak terlihat di luar definisi kelas. Anda p
 Contoh
 
 \begin {verbatim}
- $  \# $! / Usr / bin / python
-
+ $  \# $! / Usr / bin / python
 Kelas JustCounter:
 ~~  $  \_  $ $  \_  $secretCount = 0
 ~
