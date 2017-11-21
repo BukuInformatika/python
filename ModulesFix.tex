@@ -157,7 +157,11 @@ Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk mel
 Beberapa tip untuk para ahli:  
  Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string    \_     \_  doc   \_     \_  . Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul Dioptimalkan memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. 
 
+
 \section
+
+\section{modul}
+
 Modul memungkinkan Anda mengatur kode Python secara logis. Mengelompokkan kode terkait ke dalam suatu modul membuat kode lebih cepat dipahami dan digunakan. Modul ini merupakan objek Python dengan atribut yang diberi nama sewenang-wenang sehingga Anda bisa mengikat dan memberi referensi.
 Cukup, modul merupakan file yang terdiri dari kode Python. Modul bisa mendefinisikan fungsi, kelas dan variabel. Modul juga dapat menyertakan kode runnable.
 Example
@@ -177,8 +181,8 @@ Berikut adalah PYTHONPATH khas dari sistem Windows:
 Pernyataan global VarName memberitahu Python bahwa VarName merupakan variabel global. Python berhenti mencari namespace lokal untuk variabel tersebut. 
 Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespace. Dalam fungsi Money, kita menetapkan Money a value, oleh karena itu Python mengasumsikan variabel lokal Moneyas. Namun, kami mengakses nilai variabel lokal Moneybefore yang mengaturnya, jadi UnboundLocalError merupakan hasilnya. Uncommenting pernyataan global memperbaiki masalahnya.
  
-\subsection{the dir( ) Function}
-Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul.
+\subsection{the dir Function}
+Fungsi dir built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul.
 Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut merupakan contoh sederhana - 
 
 \subsection{paket}
