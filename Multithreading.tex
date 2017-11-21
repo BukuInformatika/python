@@ -1,87 +1,64 @@
-Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut : \par
+\section{Multithreading}
+\hspace*{0.5in} Menjalankan beberapa\textit{ thread} mirip dengan menjalankan beberapa program yang berbeda secara bersamaan, namun dengan manfaat berikut : \par
+
 \begin{itemize}
-	\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
-	\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
+\item Beberapa \textit{thread} dalam proses berbagi ruang data yang sama dengan benang induk dan karena dapat saling berbagi informasi atau berkomunikasi satu sama lain dengan lebih muda daripada jika prosesnya terpisah \par
+
+\item \textit{thread} terkadang disebut proses ringan dan tidak membutuhkan banyak memori atas, mereka lebih murah daripada proses.\end{itemize}
 \par
-Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan. \par
+
+\vspace{12pt}
+\hspace*{0.5in} Sebuah \textit{thread} memiliki permulaan, urutan eksekusi dan sebuah kesimpulan. Ini memiliki pointer perintah yang melacak dari mana dalam konteksnya saat ini berjalan. \par
+
 \begin{itemize}
-	\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})\end{itemize}
+\item Hal ini dapat dilakukan sebelum pre-\textit{empted} (\textit{inturrepted})\end{itemize}
 \par
 \noindent 
 \begin{itemize}
-	\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
+\item Untuk sementara dapat ditunda sementara \textit{thread} lainnya yang sedang berjalan ini disebut unggul. \end{itemize}
 \par
 \noindent 
-\textbf{1.}\textbf{1 }\textbf{Memulai }\textbf{\textit{Thread}}\textbf{ Baru} \par
+\subsection{Memulai Thread Baru} \par
 \noindent 
 \hspace*{0.5in} Untuk melakukan \textit{thread} lain, perlu memanggil metode berikut yang tersedia dimodul \textit{thread} : \par
 \noindent 
 \begin{center}{\fontsize{9pt}{9pt}\selectfont Thread.start $  \_  $new $  \_  $thread (function, args [, kwargs] )}\end{center} \par
 Pemanggilan metode ini memungkinkan cara cepat dan tepat untuk membuat \textit{thread} baru di linux dan window. \par
-Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir.   \par
-Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
-\noindent 
-\par
-\noindent 
-
-
-%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
-
-
-\newpage
+\hspace*{0.5in} Pemanggilan metode segera kembali dan anak  \textit{thread} dimulai dan fungsi pemanggilan dengan daftar \textit{args} telah berlalu. Saat fungsi kembali ujung \textit{thread} akan berakhir. Disini, \textit{args }adalah tupel argumen. Gunakan tupel kosong untuk memanggil fungsi tanpa melewati argumen. \textit{Kwargs} adalah kamus opsional argumen kata kunci.  \par
 
 \vspace{12pt}
-\vspace{12pt}
-\noindent 
-Contoh : \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Import thread} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Import time} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Define a function for the thread} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Def print $  \_  $time (threadNamw, delay):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Count = 0} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} While count <5:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Time.sleep(delay)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Count +=1} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create two thread as follows} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont try:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  thread.start $  \_  $new $  \_  $thread(print $  \_  $time, ( $ " $Thread-1 $ " $, 2, ))} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  thread.start $  \_  $new $  \_  $thread(print $  \_  $time, ( $ " $Thread-2 $ " $, 4,))} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont except:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~ print  $ " $Error: unable to start thread $ " $} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont while 1:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont pass} \par
-{\fontsize{10pt}{10pt}\selectfont 
-	
-	%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
-	
-	
-	\newpage
-	
-	Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut :} \par
+Contoh : 
+\begin{verbatim}
+\#  $!/usr/bin/python} 
+
+Import thread
+Import time
+
+#  $ Define a function for the thread 
+
+Def print $  \_  $time (threadNamw, delay):
+Count = 0
+While count <5:
+Time.sleep(delay)
+Count +=1 
+Print  $ " $ $  \%  $s :  $  \%  $s $ " $  $  \%  $ 
+(threadName, time.ctime(time.time()))
+
+#  $ Create two thread as follows
+try:
+thread.start $  \_  $new $  \_  $thread(print $  \_  
+$time, ( $ " $Thread-1 $ " $, 2, ))
+thread.start $  \_  $new $  \_  $thread(print $  \_  
+$time, ( $ " $Thread-2 $ " $, 4,))
+except: 
+print " $Error: unable to start thread 
+
+while 1:
+pass 
+\end{verbatim}
+
+\vspace{80pt}	
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut : \par
 \vspace{10pt}
 \noindent 
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-1 : Thu Jan 22 15:42:17 2009}\end{center} \par
@@ -105,116 +82,93 @@ Contoh : \par
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:31 2009}\end{center} \par
 \noindent 
 \begin{center}{\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Jan 22 15:42:35 2009}\end{center} \par
+
 \vspace{12pt}
-Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
+\hspace*{0.5in} Meskipun sangat efektif untuk benang tingkat rendah, namun modul \textit{thread} sangat terbatas dibandingkan dengan modul yang baru. \par
+
 \vspace{12pt}
-\textbf{1.2 }\textbf{Modul}\textbf{ Threading } \par
-Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
-The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
+\subsection {Modul Threading} \par
+\hspace*{0.5in} Modul threading yang lebih baru disertakan dengan Python 2.4 memberikan jauh lebih kuat, dukungan tingkat tinggi untuk \textit{thread}\textit{ }dari modul\textit{ }\textit{thread}\textit{ }dibahas pada bagian sebelumnya. \par
+\hspace*{0.5in} The \textit{thread}\textit{ing }modul mengekpos semua metode dari \textit{thread}\textit{ }dan menyediakan beberapa metode tambahan : \par
+
 \begin{itemize}
-	\item \textbf{t}\textbf{hreading.activeCount() } \par
-	Mengembalikan jumlah objek \textit{thread} yang aktif \par
-	\item \textbf{t}\textbf{hreading.currentThread() } \par
-	Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
-	\item \textbf{t}\textbf{hreading.enumerate() } \par
-	Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
-	\vspace{12pt}
-	Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
-	\item \textbf{run()} \par
-	Metode adalah titik masuk untuk \textit{thread} \par
-	\item \textbf{start()} \par
-	Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
-	\item \textbf{join(}\textbf{[time]}\textbf{)} \par
-	Menunggu benang untuk mengakhiri \par
-	\item \textbf{isAlive()} \par
-	Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
-	\item \textbf{getName()} \par
-	Metode mengambalikan nama\textbf{ }\textit{thread} \par
-	\item \textbf{setName()} \par
-	Metode menetapkan nama\textbf{ }\textit{thread} \par
-	\vspace{12pt}
-	\textbf{1.3 }\textbf{Membuat }\textbf{\textit{Thread }}\textbf{Menggunakan }\textbf{\textit{Threading}}\textbf{ Modul} \par
-	Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
-	\item Mendefinisikan subclass dari \textit{thread} kelas \par
-	\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
-	\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai \end{itemize}
-\par
-\noindent 
-
-
-%%%%%%%%%%%%  Start New Page here %%%%%%%%%%%%%%
-
-
-\newpage
+\item \textbf{t}\textbf{hreading.activeCount() } \par
+Mengembalikan jumlah objek \textit{thread} yang aktif \par
+\item \textbf{t}\textbf{hreading.currentThread() } \par
+Mengembalikan jumlah objek \textit{thread} dalam kontrol benang pemanggil \par
+\item \textbf{t}\textbf{hreading.enumerate() } \par
+Mengembalikan daftar semua benda \textit{thread}\textit{ }yang sedang aktif \par
 
 \vspace{12pt}
-Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
+\hspace*{0.5in} Selain metode, modul \textit{thread}\textit{ing }memiliki \textit{thread}\textit{ }kelas yang mengimplementasikan \textit{thread}\textit{ing. }Metode yang disediakan oleh \textit{thread}\textit{ }kelas adalah sebagai berikut : \par
+\item \textbf{run()} \par
+Metode adalah titik masuk untuk \textit{thread} \par
+\item \textbf{start()} \par
+Metode dimulai\textbf{ }\textit{thread}\textit{ }dengan memanggil metode run \par
+\item \textbf{join(}\textbf{[time]}\textbf{)} \par
+Menunggu benang untuk mengakhiri \par
+\item \textbf{isAlive()} \par
+Metode memeriksa apakah\textbf{ }\textit{thread}\textit{ }masih mengeksekusi\textbf{ } \par
+\item \textbf{getName()} \par
+Metode mengambalikan nama\textbf{ }\textit{thread} \par
+\item \textbf{setName()} \par
+Metode menetapkan nama\textbf{ }\textit{thread} \par
+
 \vspace{12pt}
-	Contoh :
-\par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import threading} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import time} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont exitFlag = 0} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont class myThread (threading.Thread):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} def $  \_  $init $  \_  $(self, threadID, name, counter) :} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~ threading.Thread. $  \_  $init $  \_  $(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} self.threadID = threadID} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  \hspace*{0.5in} self.name = name} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont self.counter = counter} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont def run (self) :} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print  $ " $Starting  $ " $ + self.name} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print $  \_  $time(self.name, self.counter, 5)} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print  $ " $Exiting  $ " $+ self.name} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont def print $  \_  $time(threadName, delay, counter):} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont while counter:} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} if exitFlag:} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in}  \hspace*{0.5in} threadName.exit()} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} time.sleep(delay)} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  \hspace*{0.5in} print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont counter -= 1} \par
-\vspace{9pt}
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  $  \#  $ Create new threads} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont thread1 = myThread(1,  $ " $Thread-1 $ " $, 1)} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont thread2 = myThread(2,  $ " $Thread-2 $ " $, 2)} \par
-\vspace{9pt}
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont  $  \#  $ Start new threads} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont thread1.start()} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont thread2.start()} \par
-\noindent 
-{\fontsize{9pt}{9pt}\selectfont print  $ " $Exiting Main Thread $ " $} \par
+\subsection {Membuat Thread Menggunakan Modul} \par
+\hspace*{0.5in} Untuk melaksanakan \textit{thread}\textit{ }baru menggunakan\textit{ threading} harus melakukan hal berikut : \par
+\item Mendefinisikan subclass dari \textit{thread} kelas \par
+\item Menimpa  $  \_  $init $  \_  $ (self [args]) metode untuk menambahkan argumen tambahan \par
+\item Menimpa run(self[args]) metode untuk menerapkan apa \textit{thread} harus dilakukan ketika mulai 
+\end{itemize}
+
 \vspace{12pt}
-	Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
+\hspace*{0.5in} Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari itu dan kemudian memulai \textit{thread} baru dengan menerapkan \textit{start(),} yang ada gilirinnya panggilan \textit{run()} metode. \par
+\vspace{50pt}
+
+Contoh :
+\begin{verbatim} 
+#  $!/usr/bin/python
+
+import threading
+import time
+
+exitFlag = 0
+
+class myThread (threading.Thread): 
+def $  \_  $init $  \_  $(self, threadID, name, 
+counter) :
+threading.Thread. $  \_  $init $  \_  $(self)} 
+self.threadID = threadID
+self.name = name 
+self.counter = counter 
+def run (self) :
+print  $ " $Starting  $ " $ + self.name 
+print $  \_  $time(self.name, self.counter, 5)
+print  $ " $Exiting  $ " $+ self.name
+
+def print $  \_  $time(threadName, delay, counter):} 
+
+while counter:
+
+if exitFlag: 
+threadName.exit() 
+time.sleep(delay) 
+print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  
+$ (threadName, time.ctime(time.time()))
+counter -= 1} 
+
+#  $ Create new threads
+thread1 = myThread(1,  $ " $Thread-1 $ " $, 1)
+thread2 = myThread(2,  $ " $Thread-2 $ " $, 2)
+#  $ Start new threads
+thread1.start()
+thread2.start()
+print  $ " $Exiting Main Thread $ " $
+\end{verbatim}
+
+\vspace{12pt}
+Ketika kode diatas dijalankan, menghasilkan hasil sebagai berikut:
 \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
@@ -244,99 +198,65 @@ Setelah membuat baru \textit{thread} subclass, dapat membuah seuah instance dari
 {\fontsize{10pt}{10pt}\selectfont Thread-2 : Thu Mar 21 09:10:12 2013} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Thread=2} \par
+
 \vspace{10pt}
-\textbf{ 1.4 Sinkronisasi }\textbf{\textit{Thread}} \par
-\textit{T}\textit{hread}\textit{ing }modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
-The \textit{acquire}\textit{ }\textit{(blocking)}\textit{ }metode objek kunci baru digunakan untuk memaksa \textit{thread}\textit{ }untuk menjalankan serempak. Opsional \textit{blocking} parameter memungkikan untuk mengontrol apakah\textit{ thread} menunggu untuk mendapatkan kunci. \par
-Jika \textit{blocking} diatur ke 0, \textit{thread} segera kembali dengan nilai 0 jika kunci tidak dapat diperoleh dan dengan 1 jika kunci dikuisisi. Jika pemblokiran diatur ke 1, blok dan menunggu kunci yang akan dirilis. \par
-The \textit{release()} metode objek kunci baru digunakan untuk melepaskan kunci ketika tidak lagi diperlukan.  \par
+\subsection{Sinkronisasi Thread} \par
+\hspace*{0.5in} \textit{T}\textit{hread}\textit{ing }modul disediakan dengan Python termasuk sederhana untuk menerapkan mekanisme bahwa memungkinkan untuk menyinkronkan \textit{thread}\textit{ }penguncian. Sebuah kunci baru dibuat dengan memanggil \textit{lock() }metode yang mengembalikan kunci baru. \par
+\hspace*{0.5in} The \textit{acquire}\textit{ }\textit{(blocking)}\textit{ }metode objek kunci baru digunakan untuk memaksa \textit{thread}\textit{ }untuk menjalankan serempak. Opsional \textit{blocking} parameter memungkikan untuk mengontrol apakah\textit{ thread} menunggu untuk mendapatkan kunci. \par
+\hspace*{0.5in} Jika \textit{blocking} diatur ke 0, \textit{thread} segera kembali dengan nilai 0 jika kunci tidak dapat diperoleh dan dengan 1 jika kunci dikuisisi. Jika pemblokiran diatur ke 1, blok dan menunggu kunci yang akan dirilis. \par
+\hspace*{0.5in}The \textit{release()} metode objek kunci baru digunakan untuk melepaskan kunci ketika tidak lagi diperlukan.  \par
 \noindent 
-Contoh: \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
+
+\vspace{12pt}
+Contoh: 
+\begin{verbatim}
+#  $!/usr/bin/python
+
+import threading
+import time
+
+class myThread (threading.Thread): 
+def $  \_  $init $  \_  $(self, threadID, name, 
+counter):
+threading.Thread. $  \_  $init $  \_  $(self)
+self.threadID = threadID
+self.name = name
+self.counter = counter
+def run(self) 
+print  $ " $Starting  $ " $+ self.name 
+$  \#  $ Get lock to synchronize threads 
+ThreadLock.acquire() 
+print $  \_  $time(self.name, self.counter, 3) 
+#  $ Free lock to realease next thread
+ThreadLock.release()
+Def print $  \_  $time(threadName, delay, counter):
+while counter:
+time.sleep(delay)
+print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  $ 
+(threadName, time.ctime(time.time()))
+counter -= 1
+threadLock = threading.Lock() 
+threads = []
+#  $ Create new threads
+thread1 = myThread(1,  $ " $Thread-1,1 ) 
+thread2 = myThread(2,  $ " $Thread-2,2 )
+#  $ Start new Threads} 
+thread1.start() 
+thread2.start()
+
+#Add threads to thread list} 
+threads.append(thread1)} 
+thread2.append(thread2)} 
 \vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import threading} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import time} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont class myThread (threading.Thread):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ def $  \_  $init $  \_  $(self, threadID, name, counter):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ threading.Thread. $  \_  $init $  \_  $(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ self.threadID = threadID} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ self.name = name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ self.counter = counter} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ def run(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ print  $ " $Starting  $ " $+ self.name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~  $  \#  $ Get lock to synchronize threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ ThreadLock.acquire()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ print $  \_  $time(self.name, self.counter, 3)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~  $  \#  $ Free lock to realease next thread} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ ThreadLock.release()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ } \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ Def print $  \_  $time(threadName, delay, counter):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~ while counter:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ time.sleep(delay)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ print  $ " $ $  \%  $s:  $  \%  $s $ " $  $  \%  $ (threadName, time.ctime(time.time()))} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ counter -= 1} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ threadLock = threading.Lock()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~ threads = []} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create new threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread1 = myThread(1,  $ " $Thread-1,1 )} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread2 = myThread(2,  $ " $Thread-2,2 )} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Start new Threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread1.start()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread2.start()} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Add threads to thread list} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threads.append(thread1)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont thread2.append(thread2)} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Wait for all threads to complete} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont Fort t in threads:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ t.join()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont print  $ " $Exiting Main thread $ " $} \par
-\vspace{10pt}
-\noindent 
+
+#  $ Wait for all threads to complete}  
+Fort t in threads:
+t.join()
+print  $ " $Exiting Main thread $ " $
+\end{verbatim}
+
+\vspace{8pt}
 Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
-\vspace{10pt}
-\noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-1} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Starting Thread-2} \par
@@ -354,9 +274,11 @@ Bila kode diatas dieksekusi, maka menghasilkan sebagai berikut : \par
 {\fontsize{10pt}{10pt}\selectfont Thread-2: Thu Mar 21 09:11:36 2013} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
-\vspace{12pt}
-\textbf{1.5 Multithreaded Antrian Prioritas} \par
-The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
+
+\vspace{8pt}
+\subsection{Multithreaded Antrian Prioritas} \par
+\hspace*{0.5in} The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampung jumlah tertentu item. Ada metode berikut untuk mengontrol antrian : \par
+\vspace{15pt}
 \begin{itemize}
 	\item \textbf{get()} \par
 		Menghapus dan mengembalikan item dari antrian
@@ -373,124 +295,75 @@ The queue modul memungkinkan untuk membuat objek antrian baru yang dapat menampu
 	\item \textbf{full()}\end{itemize}
 \par
 	Mengembalikan benar jika antrian penuh jika tidak, salah
-\par
+
 \vspace{12pt}
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-Contoh: \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $!/usr/bin/python} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import Queue} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import threading} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont import time} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont exitFlag = 0} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont class myThread (threading.Thread):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~def   $  \_  $init $  \_  $(self, threadID, name, q):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ threading.Thread. $  \_  $init $  \_  $(self)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ self.name = name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ self.q = q} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  def run(self):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~ print  $ " $Starting  $ " $+ self.name} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~ process $  \_  $data(self.name, self.q)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~ print  $ " $Exiting  $ " $+ self.name} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont def process $  \_  $data(threadName, q):} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ while not exitFlag:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ queuLock.acquire()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ if not workQueu.empty():} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ data = q.get()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ queueLock.release()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ print  $ " $ $  \%  $s processing  $  \%  $s $ " $  $  \%  $ (threadName, data)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~ else:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ queueLock.release()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~~~~~ time.sleep(1)} \par
-\vspace{12pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threadList = [ $ " $Thread-1 $ " $,  $ " $Thread-2 $ " $,  $ " $Thread-3 $ " $]} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont nameList = [ $ " $One $ " $,  $ " $Two $ " $,  $ " $Three $ " $,  $ " $Four $ " $,  $ " $Five $ " $]} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont queueLock = threading.Lock()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont workLock = Queue.Queue(10)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threads = []} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont threadID = 1} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Create new threads} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont For tName in threadList:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ thread = myThread(threadID, tName, workQueue)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ thread.start()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ thread.append(thread)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ threadID +=1} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Fill the queue} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont queueLock.acquire()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont for word in nameList:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ workQueue.put(word)} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont queueLock.release()} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Wait for queue to empty} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont while not workQueue.empty():} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont pass} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Notify threads it?s time to exit} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont exitFlag = 1} \par
-\vspace{10pt}
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont  $  \#  $ Wait for all threads to complete} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont For t in threads:} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont ~~~ t.join()} \par
-\noindent 
-{\fontsize{10pt}{10pt}\selectfont print  $ " $Exiting Main Thread $ " $} \par
-\vspace{10pt}
-\noindent 
+Contoh:  
+\begin{verbatim}
+#  $!/usr/bin/python}  
+
+import Queue
+import threading
+import time
+
+exitFlag = 0 
+
+class myThread (threading.Thread): 
+def   $  \_  $init $  \_  $(self, threadID, name, q):
+threading.Thread. $  \_  $init $  \_  $(self) 
+self.name = name
+self.q = q
+def run(self):
+print  $ " $Starting  $ " $+ self.name
+process $  \_  $data(self.name, self.q) 
+print  $ " $Exiting  $ " $+ self.name 
+def process $  \_  $data(threadName, q):
+while not exitFlag:
+queuLock.acquire()
+if not workQueu.empty(): 
+data = q.get() 
+queueLock.release() 
+print  $ " $ $  \%  $s processing  $  \%  $s $ " $ 
+$  \%  $ (threadName, data) 
+else: 
+queueLock.release()
+time.sleep(1) 
+
+threadList = [ $ " $Thread-1 $ " $,  $ " $Thread-2 $
+" $,  $ " $Thread-3 $ " $]
+nameList = [ $ " $One $ " $,  $ " $Two $ " $,  $ "
+$Three $ " $,  $ " $Four $ " $,  $ " $Five $ " $]
+queueLock = threading.Lock()
+workLock = Queue.Queue(10)
+threads = [] 
+threadID = 1 
+
+#  $ Create new threads
+For tName in threadList: 
+thread = myThread(threadID, tName, workQueue)
+thread.start()
+thread.append(thread)
+threadID +=1
+
+#  $ Fill the queue 
+queueLock.acquire() 
+for word in nameList:
+workQueue.put(word) 
+queueLock.release()
+
+#  $ Wait for queue to empty
+while not workQueue.empty(): 
+pass 
+
+#  $ Notify threads it?s time to exit
+exitFlag = 1
+
+#  $ Wait for all threads to complete
+For t in threads:
+t.join()
+print  $ " $Exiting Main Thread $ " $
+\end{verbatim}
+
+\vspace{10pt} 
 Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 \vspace{12pt}
 \noindent 
@@ -517,4 +390,31 @@ Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut: \par
 {\fontsize{10pt}{10pt}\selectfont Exiting Thread-2} \par
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont Exiting Main Thread} \par
-\vspace{12pt}
+
+\section{Cara menggunakan Threading untuk Membuat Benang}
+\hspace*{0.5in} Threading menggabungkan semua metode thread dan menampilkan beberapa metode tambahan. Terlepas dari metode di atas, threading juga menyajikan kelas Thread yang dapat dicoba untuk mengimplementasikan thread. Ini adalah varian object-oriented dari multithreading Python. Kelas <Thread> menerbitkan metode berikut :
+
+\begin{table}[ht]
+	\caption{Ukuran}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+		\hline
+		Kelas&  Penjelasan Metode&\cr
+		\hline
+		run():&Ini adalah fungsi entry point untuk thread manapun&\cr
+		start():&Metode start () memicu thread saat metode dijalankan dipanggil&\cr
+		join([time]):&Metode join () memungkinkan sebuah program untuk menunggu thread untuk diakhiri&\cr
+		\hline
+	\end{tabular*}
+	\begin{tablenotes}
+	\end{tablenotes}
+\end{table}
+
+\section{Mengimplementasikan Thread menggunakan Threading}
+\hspace*{0.5in} Buatlah subkelas dari kelas Thread. Timpa metode (self [, args]) untuk memberi argumen sesuai persyaratan. Selanjutnya, timpa metode run (self [args]) untuk mengkodekan logika bisnis benang.
+
+\hspace*{0.5in} Setelah mendefinisikan subclass Thread baru, harus memberi instantiate untuk memulai thread baru. Berikut \ref{Mengimplementasikan Thread menggunakan Threading} Mengimplementasikan Thread menggunakan Threading :
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.75\textwidth]{figures/Thread}}
+	\caption{Mengimplementasikan Thread menggunakan Threading}
+	\label{Mengimplementasikan Thread menggunakan Threading}
+\end{figure}
