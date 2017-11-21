@@ -48,18 +48,24 @@ Tidak seperti bahasa lain, karakter 'a' tidak menyiratkan angka 97 sampai dikode
 f = open("test.txt",mode = 'r',encoding = 'utf-8')  
 {\fontsize{14pt}{14pt}\selectfont \textbf{Menutup sebuah File} \\} 
 Ketika kita selesai dengan operasi ke file, kita perlu menutupinya dengan benar. Menutup file akan membebaskan sumber daya yang terkait dengan file dan dilakukan dengan menggunakan metode close (). Python memiliki pengumpul sampah untuk membersihkan benda yang tidak difermentasi tapi, kita tidak boleh bergantung padanya untuk menutup file. 
+
+\begin{verbatim}
 f = open("test.txt",encoding = 'utf-8')  
  \$  \#  \$ perform file operations 
 f.close() 
+\end{verbatim}
+
 Metode ini tidak sepenuhnya aman. Jika pengecualian terjadi saat kita melakukan operasi dengan file, kode keluar tanpa menutup file. Cara yang lebih aman adalah dengan menggunakan try ... akhirnya blok.
 try:  
+\begin{verbatim}
 ~~ f = open("test.txt",encoding = 'utf-8')  
 ~~  \$  \#  \$ perform file operations 
 finally: 
 ~~ f.close() 
+\end{verbatim}
+
 Dengan cara ini, kita dijamin bahwa file tersebut benar tertutup bahkan jika pengecualian dinaikkan, menyebabkan aliran program berhenti. Cara terbaik untuk melakukannya adalah dengan menggunakan pernyataan. Ini memastikan file ditutup saat blok di dalam dengan keluar. Kita tidak perlu secara eksplisit memanggil metode close (). Hal itu dilakukan secara internal.  
-with open("test.txt",encoding = 'utf-8') as f:  
-~~  \$  \#  \$ perform file operations 
+
 {\fontsize{14pt}{14pt}\selectfont \textbf{Menulis ke File} \\} 
 Untuk menulis ke file kita perlu membukanya dalam mode write 'w', tambahkan 'a' atau exclusive creation 'x'. Kita harus berhati-hati dengan mode 'w' karena akan menimpa file jika sudah ada. Semua data sebelumnya terhapus. Menulis string atau urutan byte (untuk file biner) dilakukan dengan menggunakan metode write (). Metode ini mengembalikan jumlah karakter yang ditulis ke file.  
 with open("test.txt",'w',encoding = 'utf-8') as f: 
@@ -90,7 +96,7 @@ Untuk membuka file teks yang Anda gunakan, well, open () function. Sepertinya ma
 Contoh Kode 1 - Membuka sebuah file  
 Openfile = open ('pathtofile', 'r') 
 Openfile.read ()
-Itu menarik. Anda akan melihat banyak simbol ' \$  \setminus  \$ n'. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. Carilah dan Anda Temukan Apakah Anda mencoba mengetik di print openfile.read ()? Apakah itu gagal? Kemungkinan besar, dan alasannya adalah karena 'kursor' telah mengubah tempatnya. Kursor Kursor apa Nah, kursor yang sebenarnya tidak bisa kamu lihat, tapi tetap kursor. Kursor tak terlihat ini memberitahukan fungsi baca (dan banyak fungsi I / O lainnya) dari mana mulai. Untuk mengatur di mana kursor berada, Anda menggunakan fungsi seek (). Ini digunakan dalam bentuk seek (offset, dari mana). Mana yang opsional, dan menentukan mana yang harus dicari. Jika darimana 0, byte / huruf dihitung dari awal. Jika 1, byte dihitung dari posisi kursor saat ini. Jika 2, maka byte dihitung dari akhir file. Jika tidak ada yang diletakkan di sana, 0 diasumsikan.  
+Itu menarik. Anda akan melihat banyak simbol. Ini merupakan baris baru (di mana Anda menekan enter untuk memulai baris baru). Teksnya benar-benar tidak diformat, tapi jika Anda melewati keluaran openfile.read () untuk mencetak (dengan mengetikkan print openfile.read ()) akan diformat dengan baik. Carilah dan Anda Temukan Apakah Anda mencoba mengetik di print openfile.read ()? Apakah itu gagal? Kemungkinan besar, dan alasannya adalah karena 'kursor' telah mengubah tempatnya. Kursor Kursor apa Nah, kursor yang sebenarnya tidak bisa kamu lihat, tapi tetap kursor. Kursor tak terlihat ini memberitahukan fungsi baca (dan banyak fungsi I / O lainnya) dari mana mulai. Untuk mengatur di mana kursor berada, Anda menggunakan fungsi seek (). Ini digunakan dalam bentuk seek (offset, dari mana). Mana yang opsional, dan menentukan mana yang harus dicari. Jika darimana 0, byte / huruf dihitung dari awal. Jika 1, byte dihitung dari posisi kursor saat ini. Jika 2, maka byte dihitung dari akhir file. Jika tidak ada yang diletakkan di sana, 0 diasumsikan.  
 Offset menggambarkan seberapa jauh dari mana kursor bergerak. sebagai contoh: 
 ~~~ openfile.seek (45,0) akan memindahkan kursor ke 45 byte / huruf setelah permulaan file. 
 ~~~ Openfile.seek (10,1) akan memindahkan kursor ke 10 byte / huruf setelah posisi kursor saat ini.  
