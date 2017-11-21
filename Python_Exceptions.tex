@@ -1,3 +1,144 @@
+%Kelompok 1 D4 TI 3D
+%Wahyu Maruti Adjie_1154034
+%Muhammad Nur Ikhsan_1154087
+%Emy Safitri_1154102
+%Andi Ikram Maulana_1154065
+%Ilman Mubarik Sidiq_1154114
+
+
+                                  \section{Python Exceptions Handling}
+
+
+
+\subsection{Penjelasan}
+Python adalah bahasa pemrograman interpretatif multiguna dengan filosofi perancangan yang berfokus pada tingkat keterbacaan kode.Python diklaim sebagai bahasa yang menggabungkan kapabilitas, kemampuan, dengan sintaksis kode yang sangat jelas, dan dilengkapi dengan fungsionalitas pustaka standar yang besar serta komprehensif.
+Python mendukung multi paradigma pemrograman, utamanya; namun tidak dibatasi; pada pemrograman berorientasi objek, pemrograman imperatif, dan pemrograman fungsional. Salah satu fitur yang tersedia pada python adalah sebagai bahasa pemrograman dinamis yang dilengkapi dengan manajemen memori otomatis. Seperti halnya pada bahasa pemrograman dinamis lainnya, python umumnya digunakan sebagai bahasa skrip meski pada praktiknya penggunaan bahasa ini lebih luas mencakup konteks pemanfaatan yang umumnya tidak dilakukan dengan menggunakan bahasa skrip. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi.
+Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut ini merupakan daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar.
+Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. 
+Daftar Pengecualian Standar 
+\subsection{EXCEPTION NAME DESCRIPTION}
+
+\subsubsection{Exception}
+Kelas dasar untuk semua pengecualian.
+
+\subsubsection{StopIteration}
+Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke suatu objek apa pun.
+
+\subsubsection{SystemExit}
+Dibesarkan oleh fungsi sys.exit ()
+
+\subsubsection{StandardError}
+Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit.
+
+\subsubsection{ArithmeticError}
+Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik.
+
+\subsubsection{OverflowError}
+Dibesarkan saat perhitungan melebihi batas maksimum untuk suatu tipe numerik.
+
+\subsubsection{FloatingPointError}
+Dibesarkan saat perhitungan floating point gagal.
+
+\subsubsection{ZeroDivisionError}
+Dibesarkan saat pembagian atau modul nol dilakukan untuk semua tipe numerik.
+
+\subsubsection{AssertionError}
+Dibesarkan jika terjadi kegagalan pernyataan Assert.
+
+\subsubsection{AttributeError}
+Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan. 
+
+\subsubsection{EOFError}
+Dibesarkan bila tidak ada input dari fungsi raw $ / $input () atau input () dan akhir file tercapai.
+
+\subsubsection{ImportError}
+Dibesarkan saat sebuah pernyataan impor gagal.
+
+\subsubsection{KeyboardInterrupt}
+Dibesarkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c.
+
+\subsubsection{LookupError}
+Kelas dasar untuk semua kesalahan pencarian.
+
+\subsubsection{IndexError}
+
+\subsubsection{KeyError}
+Dibesarkan saat sebuah indeks tidak ditemukan secara berurutan. Dibesarkan saat kunci yang ditentukan tidak ditemukan dalam kamus.
+
+\subsubsection{NameError}
+Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global.
+
+\subsubsection{UnboundLocalError}
+
+\subsubsection{EnvironmentError}
+Dibesarkan saat kita mencoba mengakses suatu variabel lokal di dalam suatu fungsi atau metode namun tidak terdapat nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkup Python.
+
+\subsubsection{IOError}
+IOError Dibesarkan saat operasi i/o gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi.
+
+\subsubsection{SyntaxError} 
+
+\subsubsection{IndentationError}
+Dibesarkan saat ada kesalahan dengan sintaks Python.
+Dibesarkan saat indentasi tidak ditentukan dengan benar. 
+
+\subsubsection{SystemError} 
+Dibesarkan saat penafsir menemukan masalah internal, bila kesalahan ini ditemui juru bahasa Python tidak keluar.
+\subsubsection{SystemExit} 
+Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Apabila tidak ditangani dalam kode, menyebabkan penafsir untuk keluar
+
+\subsubsection{TypeError} 
+Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan.
+\subsubsection{ValueError}
+Dibesarkan saat fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan
+
+\subsubsection{RuntimeError} 
+Dibesarkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun.
+
+\subsection{Penegasan dengan Python}
+Penegasan adalah pemeriksaan kewarasan yang dapat Anda aktifkan atau matikan saat Anda selesai dengan pengujian program Anda.
+Cara termudah untuk memikirkan sebuah pernyataan adalah menyamakannya dengan pernyataan kenaikan gaji-jika (atau lebih akurat, pernyataan kenaikan-jika-tidak). Sebuah ekspresi diuji, dan jika hasilnya muncul salah, pengecualian akan meningkat.
+Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, diperkenalkan di versi 1.5.
+Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid.
+Pernyataan tegas, Ketika mendapatkan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Apabila ungkapannya salah, Python menimbulkan pengecualian AssertionError.
+Sintaks untuk menegaskan adalah - menegaskan Ekspresi [, Argumen] 
+Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, maka mereka akan menghentikan program dan menghasilkan traceback.
+Contoh: 
+Berikut merupakan fungsi yang mengubah suhu dari derajat Kelvin sampai ke derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur apabila melihat suhu negatif -
+
+\subsection{Apa itu Exception?}
+Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python mendapatkan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. Ketika skrip Python menimbulkan pengecualian, ia harus menangani pengecualian begitu saja sehingga berhenti dan berhenti. Menangani pengecualian 
+Jika Anda memiliki beberapa kode yang mencurigakan yang mungkin menimbulkan pengecualian, Anda dapat mempertahankan program Anda dengan menempatkan kode yang mencurigakan di coba: blokir. Setelah dicoba: blokir, sertakan sebuah pernyataan kecuali:, diikuti oleh blok kode yang menangani masalah ini seaman mungkin.
+Jika Anda menuliskan sebuah kode untuk menangani satu pengecualian, Anda bisa memiliki variabel mengikuti nama pengecualian dalam pernyataan kecuali. Jika Anda menjebak beberapa pengecualian, Anda bisa memiliki variabel mengikuti tuple pengecualian.
+Variabel ini menerima nilai pengecualian yang sebagian besar mengandung penyebab pengecualian. Variabel tersebut bisa menerima satu nilai atau beberapa nilai dalam bentuk tuple. Tuple ini biasanya berisi error string, error number, dan error location.
+
+\subsection{Pengecualian yang Ditentukan Pengguna}
+Python juga memungkinkan Anda membuat pengecualian sendiri dengan menurunkan kelas dari pengecualian standar built-in.
+Berikut adalah contoh yang berkaitan dengan RuntimeError. Di sini, sebuah kelas dibuat yang dikelompokkan dari RuntimeError. Ini berguna saat Anda perlu menampilkan informasi yang lebih spesifik saat pengecualian tertangkap.
+Di blok percobaan, pengecualian yang ditentukan pengguna dinaikkan dan ditangkap di blok kecuali. Variabel e digunakan untuk membuat sebuah instance dari class Networkerror.
+
+\subsection{General Error Catching}
+Terkadang, Anda ingin menangkap semua kesalahan yang mungkin dihasilkan, tapi biasanya Anda tidak melakukannya. Dalam kebanyakan kasus, Anda ingin menjadi sespesifik mungkin (CatchWhatYouCanHandle). Pada contoh pertama di atas, jika Anda menggunakan klausul pengecualian catch-all dan pengguna menekan Ctrl-C, menghasilkan KeyboardInterrupt, Anda tidak ingin program mencetak "bagi dengan nol".
+Namun, ada beberapa situasi di mana yang terbaik untuk menangkap semua kesalahan.
+Misalnya, Anda menulis modul ekstensi ke layanan web. Anda ingin informasi kesalahan untuk output output halaman web, dan server untuk terus berjalan, jika mungkin. 
+\subsubsection{Atribut}
+.args pengecualian adalah tuple dari semua argumen yang dilewatkan (biasanya argumen satu dan satu-satunya adalah pesan kesalahannya). Dengan cara ini Anda bisa mengubah argumen dan menaikkan kembali, dan informasi tambahan akan ditampilkan. Anda juga bisa membuat pernyataan cetak atau login di blok kecuali.
+Perhatikan bahwa tidak semua pengecualian subclass Exception (meski hampir semua dilakukan), jadi ini mungkin tidak menangkap beberapa pengecualian; Selain itu, pengecualian tidak diperlukan untuk memiliki atribut .
+
+Joel Spolsky mungkin programmer hebat C ++, dan sarannya untuk desain antarmuka pengguna sangat berharga, tapi Python bukan C ++ atau Java, dan argumennya tentang pengecualian tidak berlaku dengan Python.
+Joel berpendapat: 
+"Mereka tidak terlihat dalam kode sumber Melihat kumpulan kode, termasuk fungsi yang mungkin atau mungkin tidak membuang pengecualian, tidak ada cara untuk melihat pengecualian mana yang mungkin dilempar dan dari mana.Ini berarti bahwa pemeriksaan kode yang hati-hati pun tidak. Saya bisa mengungkapkan potensi bug. "
+(Perhatikan bahwa ini juga merupakan argumen di balik pengecualian yang diperiksa oleh Java - sekarang eksplisit bahwa pengecualian bisa dilemparkan - kecuali bahwa RuntimeException masih bisa dibuang ke mana saja. -jJ)
+Saya tidak mengerti argumen ini. Dalam kode sumber acak, tidak ada cara untuk mengetahui apakah akan gagal hanya dengan inspeksi. Jika Anda melihat:
+x = 1 
+result = myfunction (x) 
+
+Anda tidak bisa mengetahui apakah fungsi saya gagal pada saat runtime hanya dengan inspeksi, jadi mengapa harus itu penting apakah gagal menabrak pada saat runtime atau gagal dengan meningkatkan pengecualian? 
+(Crashing itu buruk Dengan secara eksplisit menyatakan pengecualian, Anda memperingatkan orang-orang bahwa mereka mungkin ingin mengatasinya Jawa melakukannya dengan canggung C tidak memiliki cara yang baik untuk melakukannya sama sekali, karena kesalahan kembali masih di band Untuk pengembalian reguler Di python, pengecualian passthrough tidak ditandai, namun kondisi kesalahan menonjol di tempat mereka diciptakan, dan biasanya tidak meniru hasil yang benar. -jJ)
+
+Argumen Joel yang mengemukakan pengecualian hanyalah sebuah goto yang menyamar sebagian benar. Tapi begitu juga untuk loop, sementara loop, fungsi dan metode! Seperti konstruksi lainnya, pengecualian adalah gotos yang dijinakkan dan dipekerjakan untuk Anda, bukan yang liar dan berbahaya. Anda tidak bisa melompat * di mana saja *, hanya tempat yang sangat terbatas.
+Joel juga menulis:
+"Mereka membuat terlalu banyak titik keluar yang mungkin untuk sebuah fungsi.Untuk menulis kode yang benar, Anda benar-benar harus memikirkan setiap jalur kode yang mungkin melalui fungsi Anda. Setiap kali Anda memanggil fungsi yang bisa meningkatkan pengecualian dan tidak menangkapnya di Spot, Anda menciptakan peluang untuk kejutan bug yang disebabkan oleh fungsi yang dihentikan tiba-tiba, meninggalkan data dalam keadaan tidak konsisten, atau jalur kode lainnya yang tidak Anda pikirkan.
 
 \begin{center}{\fontsize{14pt}{14pt}\selectfont Python Exceptions Handling \\}\end{center} \par
 Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya - \par
@@ -29,7 +170,7 @@ AssertionError \hspace*{0.5in} Dibesarkan jika terjadi kegagalan pernyataan Asse
 \vspace{12pt}
 AttributeError \hspace*{0.5in} Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan. \par
 \vspace{12pt}
-EOFError \hspace*{0.5in} Dibesarkan bila tidak ada input dari fungsi raw $  \_  $input () atau input () dan akhir file tercapai. \par
+EOFError \hspace*{0.5in} Dibesarkan bila tidak ada sebuah input dari fungsi raw $  \_  $input () atau input () dan akhir file tercapai. \par
 \vspace{12pt}
 ImportError \hspace*{0.5in} Dibesarkan saat sebuah pernyataan impor gagal. \par
 \vspace{12pt}
@@ -375,3 +516,4 @@ Joel juga menulis: \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
+

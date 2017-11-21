@@ -1,143 +1,166 @@
-\sloppy
-\begin{center}{\fontsize{24pt}{24pt}\selectfont \textbf{Python Exceptions Handling}  \\}\end{center} 
-\vspace{12pt}
-\vspace{12pt}
- 
-EXCEPTION NAME \hspace*{0.5in}  \hspace*{0.5in}  \hspace*{0.5in}  \hspace*{0.5in}  
 
-Exception \hspace*{0.5in}  \hspace*{0.5in}  
-
-Kelas dasar untuk semua pengecualian 
-\vspace{12pt}
+ \begin{figure}[ht]
+ 	\centerline{\includegraphics[width=0.60\textwidth]{Gambar/dapi6.jpg}}
+ 	\caption{Python Exceptions Handling}
+ 	\label{Python Exceptions Handling}
+ \end{figure}
  
-StopIteration \hspace*{0.5in}  
+ 
+ 
+ \section {Pengertian }
+ \subsection {Python Exceptions Handling}
+ 
+ 
+ \hspace*{0.64in} Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut adalah daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar. Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. Daftar Pengecualian Standar – Penegasan dengan Python Penegasan adalah pemeriksaan kewarasan yang dapat Anda aktifkan atau matikan saat Anda selesai dengan pengujian program Anda. Cara termudah untuk memikirkan sebuah pernyataan adalah menyamakannya dengan pernyataan kenaikan gaji-jika (atau lebih akurat, pernyataan kenaikan-jika-tidak). Sebuah ekspresi diuji, dan jika hasilnya muncul salah, pengecualian akan meningkat. Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, diperkenalkan di versi 1.5. Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid. Pernyataan tegas Ketika menemukan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Jika ungkapannya salah, Python menimbulkan pengecualian AssertionError. Sintaks untuk menegaskan adalah -menegaskan Ekspresi [, Argumen]. 
+ 
+ \includegraphics[width=15cm,height=7cm]{Gambar/dapi5.jpg}
+ \begin{equation}Python Exceptions Handling\end{equation}
+ 
+
+\section{Kelas dasar untuk semua pengecualian } 
+
+\subsection{EXCEPTION NAME }
+
+\vspace{12pt}
+ \begin{enumerate}
+\item StopIteration 
 
 Dibesarkan ketika metode (iterator) berikutnya dari iterator tidak mengarah ke objek apa pun. 
 \vspace{12pt}
 
-SystemExit \hspace*{0.5in}  \hspace*{0.5in}  
-
+\item SystemExit 
 Dibesarkan oleh fungsi sys.exit () 
 \vspace{12pt}
 
-StandardError \hspace*{0.5in}  
+\item StandardError 
  
 Kelas dasar untuk semua pengecualian built-in kecuali StopIteration dan SystemExit 
 \vspace{12pt}
 
-ArithmeticError \hspace*{0.5in}  \hspace*{0.5in}  
+\item ArithmeticError 
  
 Kelas dasar untuk semua kesalahan yang terjadi untuk perhitungan numerik. 
 \vspace{12pt}
 
-OverflowError \hspace*{0.5in}  \hspace*{0.5in}  
+\item OverflowError 
 
 Dibesarkan saat perhitungan melebihi batas maksimum untuk tipe numerik.
 \vspace{12pt}
 
-FloatingPointError \hspace*{0.5in}  
+\item FloatingPointError   
 
 Dibesarkan saat perhitungan floating point gagal. 
 \vspace{12pt}
 
-ZeroDivisionError \hspace*{0.5in}  
+\item ZeroDivisionError  
 
 Dibesarkan saat pembagian atau modulo nol dilakukan untuk semua tipe numerik. 
 \vspace{12pt}
 \vspace{12pt}
 
-AssertionError \hspace*{0.5in}  \hspace*{0.5in}  
+\item AssertionError 
 
 Dibesarkan jika terjadi kegagalan pernyataan Assert. 
 \vspace{12pt}
 
-AttributeError \hspace*{0.5in}  \hspace*{0.5in}  
+\item AttributeError 
  
 Dibesarkan jika terjadi kegagalan referensi atribut atau penugasan.
 \vspace{12pt}
 
-EOFError \hspace*{0.5in}  
+\item EOFError 
 
 Dibesarkan bila tidak ada input dari fungsi raw $  \_  $input () atau input () dan akhir file tercapai. 
 \vspace{12pt}
 
-ImportError \hspace*{0.5in}  \hspace*{0.5in}  
+\item ImportError 
 
 Dibesarkan saat sebuah pernyataan impor gagal. 
 \vspace{12pt}
 
-KeyboardInterrupt \hspace*{0.5in}  
+\item KeyboardInterrupt  
 
 Dibesarkan saat pengguna menyela eksekusi program, biasanya dengan menekan Ctrl + c. 
 \vspace{12pt}
 
-LookupError \hspace*{0.5in}  \hspace*{0.5in}  
+\item LookupError  
 
 Kelas dasar untuk semua kesalahan pencarian. 
 \vspace{12pt}
 
-IndexError 
- 
-KeyError \hspace*{0.5in}  \hspace*{0.5in}  
+
+\item KeyError 
  
 Dibesarkan saat sebuah indeks tidak ditemukan secara berurutan. Dibesarkan saat kunci yang ditentukan tidak ditemukan dalam kamus. 
 \vspace{12pt}
 
-NameError \hspace*{0.5in}  \hspace*{0.5in}  
+\item NameError 
 
 Dibesarkan saat pengenal tidak ditemukan di namespace lokal atau global. 
 \vspace{12pt}
 
-UnboundLocalError 
 
-EnvironmentError \hspace*{0.5in}  
+
+\item EnvironmentError  
  
 Dibesarkan saat mencoba mengakses variabel lokal dalam suatu fungsi atau metode namun tidak nilai yang ditugaskan padanya. Kelas dasar untuk semua pengecualian yang terjadi di luar lingkungan Python. 
 \vspace{12pt}
 
-IOError 
+
+\item IOError 
 
 IOError Dibesarkan saat operasi input / output gagal, seperti pernyataan cetak atau fungsi open () saat mencoba membuka file yang tidak ada. Dibangkitkan untuk kesalahan terkait sistem operasi. 
 \vspace{12pt}
- 
-SyntaxError 
 
-IndentationError \hspace*{0.5in}  
+\end {enumerate}
+ 
+\section{SyntaxError} 
+
+\begin{enumerate}
+
+
+\item IndentationError 
 
 Dibesarkan saat ada kesalahan dengan sintaks Python. Dibesarkan saat indentasi tidak ditentukan dengan benar. 
 
-SystemError \hspace*{0.5in}  
+
+\item SystemError  
 
 Dibesarkan saat penafsir menemukan masalah internal, namun bila kesalahan ini ditemui juru bahasa Python tidak keluar. 
 \vspace{12pt}
 
-SystemExit \hspace*{0.5in}  
+
+
+
+\item SystemExit  
 
 Dibesarkan saat juru bahasa Python berhenti dengan menggunakan fungsi sys.exit (). Jika tidak ditangani dalam kode, menyebabkan penafsir untuk keluar. 
 \vspace{12pt}
 
-TypeError \hspace*{0.5in}  
+
+\item TypeError 
 
 Dibesarkan saat operasi atau fungsi dicoba yang tidak valid untuk tipe data yang ditentukan. 
 \vspace{12pt}
 
-ValueError \hspace*{0.5in}  
+
+\item ValueError 
 
 Dibesarkan saat fungsi bawaan untuk tipe data memiliki jenis argumen yang valid, namun argumen tersebut memiliki nilai yang tidak valid yang ditentukan. 
 \vspace{12pt}
 
-RuntimeError \hspace*{0.5in}  
+\item RuntimeError 
 
 Dibesarkan saat kesalahan yang dihasilkan tidak termasuk dalam kategori apa pun. 
 \vspace{12pt}
 
- \hspace*{0.64in} Python menyediakan dua fitur yang sangat penting untuk menangani kesalahan tak terduga dalam program Python Anda dan menambahkan kemampuan debugging di dalamnya Exception Handling: Ini akan dibahas dalam tutorial ini. Berikut adalah daftar standar Pengecualian yang tersedia dengan Python: Pengecualian Standar. Penegasan: Ini akan dibahas dalam Asertions dengan tutorial Python. Daftar Pengecualian Standar – Penegasan dengan Python Penegasan adalah pemeriksaan kewarasan yang dapat Anda aktifkan atau matikan saat Anda selesai dengan pengujian program Anda. Cara termudah untuk memikirkan sebuah pernyataan adalah menyamakannya dengan pernyataan kenaikan gaji-jika (atau lebih akurat, pernyataan kenaikan-jika-tidak). Sebuah ekspresi diuji, dan jika hasilnya muncul salah, pengecualian akan meningkat. Penegasan dilakukan dengan pernyataan tegas, kata kunci terbaru untuk Python, diperkenalkan di versi 1.5. Pemrogram sering menempatkan asersi pada awal fungsi untuk memeriksa masukan yang valid, dan setelah pemanggilan fungsi untuk memeriksa keluaran yang valid. Pernyataan tegas Ketika menemukan pernyataan tegas, Python mengevaluasi ekspresi yang menyertainya, yang semoga benar. Jika ungkapannya salah, Python menimbulkan pengecualian AssertionError. Sintaks untuk menegaskan adalah -menegaskan Ekspresi [, Argumen]. 
+ \end {enumerate}
 
  \hspace*{0.5in} Jika asersi gagal, Python menggunakan ArgumentExpression sebagai argumen untuk AssertionError. Penegasan Pengecualian pengecualian dapat ditangkap dan ditangani seperti pengecualian lainnya dengan menggunakan perintah try-except, namun jika tidak ditangani, mereka akan menghentikan program dan menghasilkan traceback. 
  
 Contoh Berikut adalah fungsi yang mengubah suhu dari derajat Kelvin sampai derajat Fahrenheit. Karena nol derajat Kelvin sedingin yang didapatnya, fungsi itu mundur jika melihat suhu negatif –
 \vspace{12pt}
-
+\begin{verbatim}
  $  \#  $!/usr/bin/python 
  
 def KelvinToFahrenheit(Temperature): 
@@ -172,7 +195,7 @@ assert (Temperature >= 0),"Colder than absolute zero!"
 
 AssertionError: Colder than absolute zero! 
 \vspace{12pt}
-
+\end{verbatim}
 Apa itu Exception? 
 
 Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program yang mengganggu aliran normal instruksi program. Secara umum, ketika skrip Python menemukan situasi yang tidak dapat diatasi, hal itu menimbulkan pengecualian. Pengecualian adalah objek Python yang mewakili kesalahan. 
@@ -181,6 +204,7 @@ Pengecualian adalah sebuah peristiwa, yang terjadi selama pelaksanaan program ya
 Ketika skrip Python menimbulkan pengecualian, ia harus menangani pengecualian begitu saja sehingga berhenti dan berhenti. Menangani pengecualian Jika Anda memiliki beberapa kode yang mencurigakan yang mungkin menimbulkan pengecualian, Anda dapat mempertahankan program Anda dengan menempatkan kode yang mencurigakan di coba: blokir. Setelah dicoba: blokir, sertakan sebuah pernyataan kecuali:, diikuti oleh blok kode yang menangani masalah ini seaman mungkin. Sintaksis Berikut adalah sintaks sederhana coba .... kecuali ... blok lain – 
 \vspace{12pt}
 
+\begin{verbatim}
 try: 
 
 ~~ You do your operations here; 
@@ -203,6 +227,8 @@ else:
 \vspace{12pt}
 \vspace{12pt}
 
+\end{verbatim}
+
 Berikut adalah beberapa poin penting tentang sintaks yang disebutkan di atas - 
 
  \hspace*{0.5in} \vspace{12pt}
@@ -210,6 +236,8 @@ Berikut adalah beberapa poin penting tentang sintaks yang disebutkan di atas -
 
  \hspace*{0.5in} Pernyataan percobaan tunggal dapat memiliki banyak kecuali pernyataan. Ini berguna saat blok coba berisi pernyataan yang mungkin membuang berbagai jenis pengecualian. $  $Anda juga bisa memberikan klausa umum kecuali klausul, yang menangani pengecualian apapun.Setelah klausa kecuali, Anda bisa memasukkan klausul lain. Kode di blok yang lain dijalankan jika kode di coba: blok tidak menimbulkan pengecualian.Blok yang lain adalah tempat yang baik untuk kode yang tidak perlu dicoba: perlindungan blokir. Contoh Contoh ini membuka file, menulis konten di file, dan keluar dengan anggun karena tidak ada masalah sama sekali - 
 \vspace{16pt}
+
+\begin{verbatim}
 
  $  \#  $!/usr/bin/python 
 \vspace{12pt}
@@ -237,8 +265,12 @@ Ini menghasilkan hasil sebagai berikut -
 Written content in the file successfully 
 \vspace{12pt}
  
+ \end{verbatim}
+ 
 Klausul kecuali tanpa pengecualian anda juga dapat menggunakan pernyataan kecuali tanpa pengecualian yang didefinisikan sebagai berikut - 
 \vspace{12pt}
+
+\begin{verbatim}
 
 try: 
 
@@ -257,6 +289,8 @@ else:
 ~~ If there is no exception then execute this block.  
 \vspace{12pt}
 \vspace{16pt}
+
+\end{verbatim}
 
  \hspace*{0.5in} Pernyataan try-except semacam ini menangkap semua pengecualian yang terjadi. Dengan menggunakan jenis try-except statement ini tidak dianggap sebagai praktik pemrograman yang bagus, karena menangkap semua pengecualian namun tidak membuat programmer mengenali akar permasalahan yang mungkin terjadi. Klausul Kecuali dengan Beberapa Pengecualian Anda juga dapat menggunakan pernyataan kecuali yang sama untuk menangani beberapa pengecualian sebagai berikut - 
 \vspace{12pt}
