@@ -70,9 +70,11 @@ Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. Ada berb
 
 Terakhir, metode readlines () mengembalikan daftar baris yang tersisa dari keseluruhan file. Semua metode membaca ini mengembalikan nilai kosong saat akhir file (EOF) tercapai.  
 >>> f.readlines()  
-['This is my first file \$  \setminus  \$n', 'This file \$  \setminus  \$n', 'contains three lines \$  \setminus  \$n'] 
+
 {\fontsize{14pt}{14pt}\selectfont \textbf{Metode Berkas Python} \\} 
 Ada berbagai metode yang tersedia dengan objek file. Beberapa di antaranya telah digunakan pada contoh di atas. Berikut adalah daftar lengkap metode dalam mode teks dengan deskripsi singkat. Atribut Objek file Setelah file dibuka dan Anda memiliki satu file objek, Anda bisa mendapatkan berbagai informasi yang berkaitan dengan file tersebut. Berikut adalah daftar semua atribut yang terkait dengan objek file: 
+
+\begin{verbatim}
  \$  \#  \$!/usr/bin/python 
  \$  \#  \$ Open a file  
 fo = open("foo.txt", "wb") 
@@ -80,6 +82,8 @@ print "Name of the file: ", fo.name
 print "Closed or not : ", fo.closed 
 print "Opening mode : ", fo.mode 
 print "Softspace flag : ", fo.softspace  
+\end{verbatim}
+
 Membaca dan Menulis File 
 Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih mudah. Kita akan melihat bagaimana menggunakan metode read () dan write () untuk membaca dan menulis file. Metode tulis () Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. Metode write () tidak menambahkan karakter baris baru 
 Untuk membuka file teks yang Anda gunakan, well, open () function. Sepertinya masuk akal. Anda melewatkan parameter tertentu untuk membuka () untuk memberitahukannya di mana file harus dibuka - 'r' untuk dibaca saja, 'w' untuk tulisan saja (jika ada file lama, akan dituliskan), 'a 'Untuk menambahkan (menambahkan sesuatu ke akhir file) dan' r + 'untuk membaca dan menulis. Tapi kurang bicara, mari kita buka file untuk membaca (Anda bisa melakukan ini dengan mode idle python Anda). Buka file teks biasa. Kami kemudian akan mencetak apa yang kita baca di dalam file: 
