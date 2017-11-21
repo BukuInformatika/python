@@ -91,7 +91,7 @@ Kita bisa membaca file line-by-line menggunakan for loop. Ini efisien dan cepat.
 This is my first file 
 This file  
 contains three lines 
-Baris dalam file itu sendiri memiliki karakter baris baru ' \$  \setminus  \$ n'. Terlebih lagi, print () parameter akhir untuk menghindari dua baris baru saat mencetak. Sebagai alternatif, kita dapat menggunakan metode readline () untuk membaca setiap baris file. Metode ini membaca sebuah file sampai newline, termasuk newline character.
+
 >>> f.readline()  
 'This is my first file \$  \setminus  \$n'  
 >>> f.readline()  
@@ -192,37 +192,4 @@ Baris 3
 Baris 4  
 Baris 6 
 Fungsi write (), menulis ke file. Bagaimana kamu menebak nya??? Ini menulis dari mana kursor berada, dan menimpa teks di depannya - seperti di MS Word, di mana Anda menekan 'insert' dan menulis di atas teks lama. Untuk memanfaatkan fungsi yang paling penting ini, letakkan string di antara tanda kurung untuk ditulis mis. fileobjectname.write ('ini adalah string'). \hspace*{0.5in} Dekat, Anda bisa mencari, menutup file sehingga Anda tidak dapat lagi membaca atau menulis sampai Anda membuka kembali lagi. Cukup sederhana Untuk menggunakan, Anda akan menulis fileobjectname.close (). Sederhana! Dengan mode siaga Python, buka file uji (atau buat yang baru ...) dan mainkan fungsi ini. Anda bisa melakukan penyuntingan teks yang sederhana (dan sangat merepotkan). 
-Mmm, acar Pickles, dengan Python, harus dimakan. Rasa mereka hanya untuk membiarkan pemrogram meninggalkan mereka di lemari es.Ok, hanya bercanda disana. Pickles, dengan Python, adalah objek yang disimpan ke sebuah file. Objek dalam kasus ini bisa berupa variabel, instance dari kelas, atau daftar, kamus, atau tupel. Hal lain juga bisa acar, tapi dengan batas. Objek kemudian dapat dipulihkan, atau tidak dicemari, nanti. Dengan kata lain, Anda 'menyimpan' benda Anda. Jadi bagaimana kita acar? Dengan fungsi dump (), yang ada di dalam modul acar - jadi pada awal program Anda, Anda harus menulis acar impor. Cukup sederhana Kemudian buka file kosong, dan gunakan pickle.dump () untuk menjatuhkan objek ke file itu. Mari kita coba itu: 
-Contoh Kode 3 - pickletest.py 
- \$  \#  \$ \$  \#  \$ \$  \#  \$ pickletest.py  
- \$  \#  \$ \$  \#  \$ \$  \#  \$ PICKLE AN OBJECT 
- \$  \#  \$ mengimpor modul acar  
-Acar impor 
- \$  \#  \$ Mari membuat sesuatu untuk menjadi acar  
- \$  \#  \$ Bagaimana dengan daftar?  
-picklelist = ['one', 2, 'three', 'four', 5, 'dapatkah kamu menghitung?']
- \$  \#  \$ Sekarang buat file  
- \$  \#  \$ ganti nama file dengan file yang ingin Anda buat 
-File = open ('filename', 'w') 
- \$  \#  \$ Sekarang mari kita pilih picklelist 
-pickle.dump (picklelist, file) 
- \$  \#  \$ Tutup file, dan pengawetan Anda sudah selesai  
-file.close () 
-Kode untuk melakukan ini diletakkan seperti pickle.load (object \$  \_  \$to \$  \_  \$pickle, file \$  \_  \$object) di mana: 
-~~~ object \$  \_  \$to \$  \_  \$pickle adalah objek yang ingin Anda acar (yaitu simpan ke file)  
-~~~ file \$  \_  \$object adalah objek file yang ingin Anda tulis (dalam kasus ini, objek file adalah 'file') 
-Setelah Anda menutup file tersebut, buka di notepad dan lihat apa yang Anda lihat. Seiring dengan beberapa kue gibblygook lainnya, Anda akan melihat potongan daftar yang kami buat.
- \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickletest.py 
- \$  \#  \$ \$  \#  \$ \$  \#  \$ unpickle file 
- \$  \#  \$ mengimpor modul acar 
-Acar impor 
- \$  \#  \$ sekarang buka file untuk dibaca 
- \$  \#  \$ ganti nama file dengan path ke file yang Anda buat di pickletest.py 
-unpicklefile = open ('filename', 'r') 
- \$  \#  \$ sekarang muat daftar yang kita acar ke objek baru 
-unpickledlist = pickle.load (unpicklefile) 
- \$  \#  \$ Tutup file, hanya untuk keamanan  
-unpicklefile.close () 
- \$  \#  \$ Mencoba menggunakan daftar
-untuk item dalam unpickledlist: 
-~~~ Item cetak 
+Mmm, acar Pickles, dengan Python, harus dimakan. Rasa mereka hanya untuk membiarkan pemrogram meninggalkan mereka di lemari es.Ok, hanya bercanda disana. Pickles, dengan Python, adalah objek yang disimpan ke sebuah file. Objek dalam kasus ini bisa berupa variabel, instance dari kelas, atau daftar, kamus, atau tupel. Hal lain juga bisa acar, tapi dengan batas. Objek kemudian dapat dipulihkan, atau tidak dicemari, nanti. Dengan kata lain, Anda 'menyimpan' benda Anda. Jadi bagaimana kita acar? Dengan fungsi dump (), yang ada di dalam modul acar - jadi pada awal program Anda, Anda harus menulis acar impor. Cukup sederhana Kemudian buka file kosong, dan gunakan pickle.dump () untuk menjatuhkan objek ke file itu.
