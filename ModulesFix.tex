@@ -131,7 +131,7 @@ Kode dalam modul akan dieksekusi, sama seperti jika kita mengimpornya, tapi deng
 if    \_     \_  name   \_     \_   == "   \_     \_  main   \_     \_  ":  
 ~~~ import sys 
 ~~~ fib(int(sys.argv[1])) 
-Kita dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file \"utama\":  
+Kita dapat membuat file tersebut dapat digunakan sebagai skrip dan juga modul yang dapat diimpor, karena kode yang mem-parsing baris perintah hanya berjalan jika modul dijalankan sebagai file.  
    \$   python fibo.py 50 t 
 1 1 2 3 5 8 13 21 34  
 Jika modul diimpor, kode tidak dijalankan:  
@@ -150,6 +150,7 @@ Untuk mempercepat pemuatan modul, Python menyimpan versi yang dikompilasi setiap
 Python memeriksa tanggal modifikasi sumber dari versi yang dikompilasi untuk melihat apakah sudah ketinggalan zaman dan perlu dikompilasi ulang. Ini adalah proses yang benar-benar otomatis. Selain itu, modul yang dikompilasi bersifat platform-independen, sehingga perpustakaan yang sama dapat dibagi antar sistem dengan arsitektur yang berbeda. Python tidak memeriksa cache dalam dua situasi. Pertama, selalu mengkompilasi ulang dan tidak menyimpan hasilnya untuk modul yang dimuat langsung dari baris perintah. Kedua, tidak memeriksa cache jika tidak ada modul sumber. Untuk mendukung distribusi non-source (dikompilasi saja), modul yang dikompilasi harus berada dalam direktori sumber, dan tidak boleh ada modul sumber. 
 Beberapa tip untuk para ahli:  
  Anda dapat menggunakan switch -O atau -OO pada perintah Python untuk mengurangi ukuran modul yang dikompilasi. Sakelar -O menghapus pernyataan tegas, tombol -OO menghapus kedua pernyataan tegas dan string    \_     \_  doc   \_     \_  . Karena beberapa program mungkin bergantung pada ketersediaan ini, Anda sebaiknya hanya menggunakan opsi ini jika Anda tahu apa yang Anda lakukan. Modul "Dioptimalkan" memiliki pilihan dan biasanya lebih kecil. Rilis masa depan dapat mengubah efek pengoptimalan. 
+
   Program tidak berjalan lebih cepat saat dibaca dari file .pyc daripada saat dibaca dari file .py; Satu-satunya yang lebih cepat tentang file .pyc adalah kecepatan pengisiannya.  
   Compileall modul dapat membuat file .pyc untuk semua modul dalam sebuah direktori.  
   Kita lebih banyak rincian mengenai proses ini, termasuk bagan alir keputusan, dalam PEP 3147. 
@@ -178,8 +179,6 @@ Sebagai contoh, kita mendefinisikan sebuah variabel Money in the global namespac
 Fungsi dir () built-in mengembalikan daftar string yang diurutkan yang berisi nama yang ditentukan oleh sebuah modul.
 Daftar berisi nama semua modul, variabel dan fungsi yang didefinisikan dalam modul. Berikut merupakan contoh sederhana - 
 
-
-
 \subsection{paket}
 Paket merupakan struktur direktori file hirarkis yang mendefinisikan satu lingkungan aplikasi Python yang terdiri dari modul dan subpackages dan sub-subpackages, dan seterusnya.
 Pertimbangkan sebuah file Pots.py yang tersedia di direktori Phone. File ini memiliki baris kode sumber berikut -
@@ -191,4 +190,3 @@ Modul merupakan file yang berisi definisi dan pernyataan Python. Nama file merup
 Modul dapat berisi pernyataan eksekusi serta definisi fungsi. Pernyataan ini dimaksudkan untuk menginisialisasi modul. Mereka dieksekusi hanya untuk pertama kalinya nama modul ditemukan dalam sebuah pernyataan impor. [1] (Mereka juga dijalankan jika file dijalankan sebagai skrip.
 Setiap modul memiliki tabel simbol pribadinya, yang digunakan sebagai tabel simbol global oleh semua fungsi yang didefinisikan dalam modul. Dengan demikian, penulis modul dapat menggunakan variabel global dalam modul tanpa mengkhawatirkan bentrokan kecelakaan dengan variabel global pengguna. Di sisi lain, jika Anda tahu apa yang Anda lakukan, Anda dapat menyentuh variabel global modul dengan notasi yang sama yang digunakan untuk merujuk pada fungsinya, nama modname.itemname.
 Modul bisa mengimpor modul lainnya. Sudah menjadi kebiasaan tapi tidak diharuskan untuk menempatkan semua pernyataan impor di awal modul (atau naskah, dalam hal ini). Nama modul yang diimpor ditempatkan di tabel simbol global modul pengimpor.
-
