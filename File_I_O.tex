@@ -67,39 +67,7 @@ with open("test.txt",'w',encoding = 'utf-8') as f:
 Program ini akan membuat file baru bernama 'test.txt' jika tidak ada. Jika memang ada, itu akan ditimpa. Kita harus menyertakan karakter newline sendiri untuk membedakan garis yang berbeda. 
 {\fontsize{14pt}{14pt}\selectfont \textbf{Membaca Dari File} \\} 
 Untuk membaca isi sebuah file, kita harus membuka file dalam mode baca. Ada berbagai metode yang tersedia untuk tujuan ini. Kita bisa menggunakan metode read (size) untuk membaca dalam jumlah ukuran data. Jika parameter ukuran tidak ditentukan, bunyinya dan kembali ke akhir file.  
->>> f = open("test.txt",'r',encoding = 'utf-8')  
->>>~f.read(4)~~   \$  \#  \$ read the first 4 data 
-'This' 
->>>~f.read(4)~~   \$  \#  \$ read the next 4 data 
-' is '  
->>>~f.read()~~~   \$  \#  \$ read in the rest till end of file  
 
->>>~f.read()   \$  \#  \$ further reading returns empty sting 
-Kita dapat melihat, metode read mengembalikan baris baru sebagai Begitu akhir file tercapai, kita mendapatkan string kosong untuk dibaca lebih lanjut. Kita bisa mengubah kursor file kita saat ini posisi dengan menggunakan metode seek . Demikian pula metode tell mengembalikan posisi kita saat ini dalam jumlah byte.  
->>>~f.tell()~~   \$  \#  \$ get the current file position  
-56 
->>>~f.seek(0)~   \$  \#  \$ bring file cursor to initial position  
-0  
->>>~print(f.read())   \$  \#  \$ read the entire file  
-This is my first file  
-This file 
-contains three lines 
-Kita bisa membaca file line-by-line menggunakan for loop. Ini efisien dan cepat. 
->>> for line in f:  
-...~~~~ print(line, end = '')  
-... 
-This is my first file 
-This file  
-contains three lines 
-
->>> f.readline()  
-'This is my first file \$  \setminus  \$n'  
->>> f.readline()  
-'This file \$  \setminus  \$n'  
->>> f.readline()  
-'contains three lines \$  \setminus  \$n' 
->>> f.readline()  
-'' 
 Terakhir, metode readlines () mengembalikan daftar baris yang tersisa dari keseluruhan file. Semua metode membaca ini mengembalikan nilai kosong saat akhir file (EOF) tercapai.  
 >>> f.readlines()  
 ['This is my first file \$  \setminus  \$n', 'This file \$  \setminus  \$n', 'contains three lines \$  \setminus  \$n'] 
@@ -113,66 +81,7 @@ print "Closed or not : ", fo.closed
 print "Opening mode : ", fo.mode 
 print "Softspace flag : ", fo.softspace  
 Membaca dan Menulis File 
-Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih mudah. Kita akan melihat bagaimana menggunakan metode read () dan write () untuk membaca dan menulis file. Metode tulis () Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. Metode write () tidak menambahkan karakter baris baru (' \$  \setminus  \$ n') ke akhir string - 
-Sintaksis 
- \$  \#  \$!/usr/bin/python 
- \$  \#  \$ Open a file  
-fo = open("foo.txt", "wb") 
-fo.write( "Python is a great language. \$  \setminus  \$nYeah its great!! \$  \setminus  \$n");  
- \$  \#  \$ Close opend file  
-fo.close()  
- \$  \#  \$!/usr/bin/python  
- \$  \#  \$ Open a file 
-fo = open("foo.txt", "r+") 
-str = fo.read(10); 
-print "Read String is : ", str 
- \$  \#  \$ Close opend file 
-fo.close()  
-Read~String is :  Python is 
- \$  \#  \$!/usr/bin/python 
- \$  \#  \$ Open a file  
-fo = open("foo.txt", "r+") 
-str = fo.read(10);
-print "Read String is : ", str 
- \$  \#  \$ Check current position 
-position = fo.tell(); 
-print "Current file position : ", position 
- \$  \#  \$ Reposition pointer at the beginning once again  
-position = fo.seek(0, 0);  
-str = fo.read(10); 
-print "Again read String is : ", str 
- \$  \#  \$ Close opend file 
-fo.close() 
-Read~String is :  Python is 
-Current~file position :  10 
-Again~read String is :  Python is 
-os.rename(current \$  \_  \$file \$  \_  \$name, new \$  \_  \$file \$  \_  \$name) 
- \$  \#  \$!/usr/bin/python 
-import os 
- \$  \#  \$ Rename a file from test1.txt to test2.txt 
-os.rename( "test1.txt", "test2.txt" ) 
- \$  \#  \$!/usr/bin/python 
-import os 
- \$  \#  \$ Delete file test2.txt  
-os.remove("text2.txt") 
-os.mkdir("newdir") 
- \$  \#  \$!/usr/bin/python 
-import os 
- \$  \#  \$ Create a directory "test" 
-os.mkdir("test") 
- \$  \#  \$!/usr/bin/python 
-import os  
- \$  \#  \$ Changing a directory to "/home/newdir" 
-os.chdir("/home/newdir")  
- \$  \#  \$!/usr/bin/python 
-import os 
- \$  \#  \$ This would give location of the current directory 
-os.getcwd() 
- \$  \#  \$!/usr/bin/python 
-import os  
- \$  \#  \$~This~would  remove "/tmp/test"  directory.
-os.rmdir(~"/tmp/test"  )  
-{\fontsize{14pt}{14pt}\selectfont \textbf{Membuka sebuah file} \\}
+Objek file menyediakan seperangkat metode akses untuk membuat hidup kita lebih mudah. Kita akan melihat bagaimana menggunakan metode read () dan write () untuk membaca dan menulis file. Metode tulis () Metode write () menulis string apapun ke file yang terbuka. Penting untuk dicatat bahwa string Python dapat memiliki data biner dan bukan hanya teks. Metode write () tidak menambahkan karakter baris baru 
 Untuk membuka file teks yang Anda gunakan, well, open () function. Sepertinya masuk akal. Anda melewatkan parameter tertentu untuk membuka () untuk memberitahukannya di mana file harus dibuka - 'r' untuk dibaca saja, 'w' untuk tulisan saja (jika ada file lama, akan dituliskan), 'a 'Untuk menambahkan (menambahkan sesuatu ke akhir file) dan' r + 'untuk membaca dan menulis. Tapi kurang bicara, mari kita buka file untuk membaca (Anda bisa melakukan ini dengan mode idle python Anda). Buka file teks biasa. Kami kemudian akan mencetak apa yang kita baca di dalam file: 
 Contoh Kode 1 - Membuka sebuah file  
 Openfile = open ('pathtofile', 'r') 
