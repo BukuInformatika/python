@@ -75,10 +75,10 @@ Angka ini relatif, bergantung pada:
 	\item Cepat atau lambatnya penampilan halaman web yang diterima klien akan lebih bergantung pada koneksi jaringan.\end{itemize}
 \subsection{Penerapan CGI}
 Penerapan CGI yang paling umum adalah dalam pemrosesan . Umumnya, form dipergunakan untuk dua kegunaan utama. Yang  sederhana  adalah form yang  dipakai  untuk mengumpulkan informasi dari pengguna dan mengirimkanya ke server. Namun  form juga bisa dipakai untuk keperluan  yang lebih  ``canggih``  seperti timbal balik antara pengguna dan server, misalnya  form  yang memberikan sedaftar pilihan dokumen dalam server kepada pengguna  untuk dipilih. Program CGI di server dibuat untuk mengolah informasi ini  dan kemudian mengirimkan  dokumen – dokumen yang sesuai  dengan  pilihan pengguna.
-Contoh nyata penerapan CGI untuk dokumendinamisini  misalnya  suatu buku tamu. Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapatmenyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewate-mailke  suatu  alamat. ProgramCGIjugabisa menampilkan dokumen yang  berisi  informasi  yang
-barusajadikirimkan oleh  pengguna  tadisembarimemberikan  ucapan  terima kasih atas partisipasinya.
-Penerapan lain dari CGI adalah sebuah gateway.Artinya adalah  program yangdipergunakan sebagai penghubung  untukmengakses informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna.Contoh yang nyata adalah gateway yang menghubungkanantaraweb  server  dengan dengan suatu database server yang besar semacamoracleatau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisamemberikanquery  dalam  SQL (structured query language, yaitu bahasayangdipakai  untuk  melakukan pendefinisian maupun manipulasi terhadapdatabase)ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya kedalambentukyangbisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser.
-Program CGI pada prinsipnya bisa ditulisdalambahasa  pemrograman  apa saja,namunkenyataanya tidak  semua  bahasapemrograman cocok  untuk pemrograman CGI. Penerapan CGI dapat sangatkompleks, dan untuk membuat  suatu program CGI menuntut pengetahuan teknisyangcukup  tinggi  akan pemrograman.
+Contoh nyata penerapan CGI untuk dokumen dinamis ini  misalnya  suatu buku tamu. Pengguna memasukkan informasi seperti nama, alamat, alamat e-mail, dan komentar-komentarnya ke dalam form. Setelah server menerima informasi-informasi tadi, program CGI dapat menyimpanya ke dalam  suatu File atau secara otomatis mengirimkanya lewat e-mailke  suatu  alamat. ProgramCGIjugabisa menampilkan dokumen yang  berisi  informasi  yang
+baru saja dikirimkan oleh  pengguna  tadi sembari memberikan  ucapan  terima kasih atas partisipasinya.
+Penerapan lain dari CGI adalah sebuah gateway. Artinya adalah  program yangdipergunakan sebagai penghubung  untukmengakses informasi  yang tidak dapat secara langsung dibaca oleh program browser pengguna. Contoh yang nyata adalah gateway yang menghubungkan antara web  server  dengan dengan suatu database server yang besar semacamoracleatau  DB2, yang  memang dapat dilakukan dengan mempergunakan bahasa pemrograman Perl dan DBI extentionta sehingga web server bisamemberikanquery  dalam  SQL (structured query language, yaitu bahasayangdipakai  untuk  melakukan pendefinisian maupun manipulasi terhadapdatabase)ke  server  database Oracle. Setelah informasi dari database keluar, program CGI mengubahnya kedalambentukyangbisa dibaca browser (HTML)  dan  web  server  pada giliranya mengirimkanya kepada browser.
+Program CGI pada prinsipnya bisa ditulis dalam bahasa  pemrograman  apa saja,namunkenyataanya tidak  semua  bahasapemrograman cocok  untuk pemrograman CGI. Penerapan CGI dapat sangat kompleks, dan untuk membuat  suatu program CGI menuntut pengetahuan teknis yangcukup  tinggi  akan pemrograman.
 \subsection{Keamanan pada CGI} 
 CGI dapat menimbulkan lubang keamanan, karena program CGI dapat dijalankan di server lokal dari luar sistem (remote) oleh siapa saja. Apabila program CGI tidak didisain dan dikonfigurasi dengan baik, maka akan terjadi lubang keamanan. Kesalahan yang dapat terjadi antara lain: 
 \begin{enumerate}
@@ -168,7 +168,7 @@ Selanjutnya kita mulai membuat script, buat sebuah file pada folder cgi-bin dise
 \begin{verbatim}
 $  \#  $!/usr/bin/python 
 import cgi 
-importcgitb; cgitb.enable()   
+import cgitb; cgitb.enable()   
 import simplejson as json 
 print "Content-type: text/html" 
 print 
@@ -189,9 +189,9 @@ cari $  \_  $kata = form.getvalue("kata")  $  \#  $variable mengambil nilai dari
 location $  \_  $database = open('/home/develop/DW/kamus.json', 'r')  $  \#  $membuka kosa kata bahasa inggris 
 bhs $  \_  $inggris = json.load(location $  \_  $database) 
 
-ifcari $  \_  $kata:   
+if cari $  \_  $kata:   
  for bhs $  \_  $indonesia in cari $  \_  $kata.split(' '):  
-forarti $  \_  $kata in bhs $  \_  $inggris:    
+for arti $  \_  $kata in bhs $  \_  $inggris:    
  if arti $  \_  $kata["indonesia"] == bhs $  \_  $indonesia.replace(' ',''): 
  hasil = arti $  \_  $kata['inggris']  
  break 
