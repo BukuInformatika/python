@@ -208,12 +208,13 @@ Fitur-Fitur Python Python memiliki beberapa fitur yang menjadikan bahasa pemrogr
 \subsection{Pengujian}
 Cara pertama: ketik python untuk menjalankan Python Interpreter. Jika berhasil akan ditampilkan versi Python yang digunakan beserta interpreternya. Coba ketikkan print “hello world” untuk menampilkan teks hello world.
 
-C:>python
+C:$>$python
 Python 2.7.11 (v2.7.11:6d1b6a68f775, Dec  5 2015, 20:40:30) [MSC v.1500 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
->>> print "hello world"
-hello world
->>>
+
+$>$$>$$>$  print "hello world"
+
+$>$$>$$>$ hello world
 
 
 
@@ -227,19 +228,23 @@ Python memiliki konsep desain yang bagus dan sederhana, yang berfokus pada kemud
 
 Tipe data Number digunakan untuk menyimpan nilai-nilai numerik. Tipe ini merupakan tipe data immutable, yang artinya jika kita mengubah nilai dari sebuah data, maka kita akan mengalokasikan obyek baru. Sama seperti tipe data lainnya, obyek Number dibuat ketika kita memberikan sebuah nilai padanya. Contoh:
 
->>>data = 1
+$>$$>$$>$ data = 1
 
 Kita juga dapat mengubah nilai yang ada dalam variable data tersebut.
 
->>>data = data + 1
->>>data=3.50
->>>floatdat = 7.5
->>>data = floatdat
+$>$$>$$>$ data = data + 1
+
+$>$$>$$>$ data=3.50
+
+$>$$>$$>$ floatdat = 7.5
+
+$>$$>$$>$ data = floatdat
 
 Kita dapat menghapus sebuah obyek ataupun banyak obyek dengan menggunakan pernyataan del. Misalnya:
 
->>>del data
->>>del data, floatdat
+$>$$>$$>$ del data
+
+$>$$>$$>$ del data, floatdat
 
 Python mengelompokkan tipe Number dalam 4 macam, yaitu:
 
@@ -263,23 +268,36 @@ Sebuah bilangan kompleks biasanya ditunjukkan oleh bentuk a + bj, dimana a adala
 
 Bagian real dan imajiner dari bilangan kompleks dapat kita pisahkan menggunakan data atribut, yaitu menggunakan real dan imag. Sedangkan untuk mendapatkan konjugasi dari bilangan kompleks tersebut, kita dapat menggunakan metode conjugate().
 
->>> kompleks = 23.45-1.23J
->>> kompleks.real
+$>$$>$$>$ kompleks = 23.45-1.23J
+
+$>$$>$$>$  kompleks.real
+
 23.45
->>> kompleks.imag
+
+$>$$>$$>$  kompleks.imag
+
 -1.23
->>> kompleks.conjugate()
+
+$>$$>$$>$ kompleks.conjugate()
+
 (23.45+1.23j)
 
 String merupakan salah satu tipe data yang sering digunakan dalam pemrograman Python. Sebuah string dapat dinyatakan sebagai kumpulan karakter yang dibatasi oleh satu atau dua tanda petik. Inilah contohnya,
 
->>> nama = "Klinik Python Indonesia"
->>> nama
-'Klinik Python Indonesia'
->>> slm = 'Salam Python Dahsyat!'
->>> slm
+$>$$>$$>$ nama = "Rolly Maulana Awangga"
+
+$>$$>$$>$ nama
+
+'Rolly Maulana Awangga'
+
+$>$$>$$>$ slm = 'Salam Python Dahsyat!'
+
+$>$$>$$>$ slm
+
 'Salam Python Dahsyat!'
->>> print slm
+
+$>$$>$$>$ print slm
+
 Salam Python Dahsyat!
 
 Dari contoh di atas, ketika kita memanggil variabel secara langsung maka akan ditampilkan isi dari variabel tersebut dengan sebuah tanda petik. Namun jika kita menggunakan pernyataan print, maka tanda petik tersebut akan dihilangkan.
@@ -288,24 +306,32 @@ Menampilkan Tanda Petik Sebagai String
 
 Di dalam sebuah string tidak dapat berisi tanda petik yang sama dengan tanda petik yang digunakan oleh string tersebut. Misalkan, ketika kita menuliskan 'Py'thon' maka akan muncul pesan kesalahan (syntax error). Agar tidak muncul pesan kesalahan, kita bisa mengganti tanda petik luarnya dengan tanda petik ganda, misalnya "Py'thon". Tanda petik juga dapat ditulis setelah tanda backslash agar dapat ditampilkan sebagai string.
 
->>> str = "Py'thon"
->>> str
+$>$$>$$>$ str = "Py'thon"
+
+$>$$>$$>$ str
+
 "Py'thon"
->>> str2 = 'Py"thon'
->>> str2
+
+$>$$>$$>$  str2 = 'Py"thon'
+
+$>$$>$$>$ str2
+
 'Py"thon'
->>> "\"OK, \" sampai ketemu lagi."
+
+$>$$>$$>$ "\"OK, \" sampai ketemu lagi."
+
 '"OK, " sampai ketemu lagi.'
 
 Kode n atau Triple Quotes Juga Boleh!
 
 Jika kita ingin menuliskan string yang panjang dalam beberapa baris, maka kita perlu menambahkan tanda backslash diikuti huruf n (n) sebagai tanda baris baru.
 
->>> teks = "Python adalah bahasa pemrograman yang powerfull.nTerbukti Python bisa dijalankan di segala platform OS.nJadi, saatnya kita menggunakan Python sebagai bahasa permrograman nsehari-hari. Salam Python Dahsyat!"
+$>$$>$$>$ teks = "Python adalah bahasa pemrograman yang powerfull.nTerbukti Python bisa dijalankan di segala platform OS.nJadi, saatnya kita menggunakan Python sebagai bahasa permrograman nsehari-hari. Salam Python Dahsyat!"
 
 Tanda n akan memberikan perintah membuat baris baru jika kita memanggil teks dengan pernyataan print.
 
->>> print teks
+$>$$>$$>$ print teks
+
 Python adalah bahasa pemrograman yang powerfull.
 Terbukti Python bisa dijalankan di segala platform OS.
 Jadi, saatnya kita menggunakan Python sebagai bahasa permrograman
@@ -313,14 +339,14 @@ sehari-hari. Salam Python Dahsyat!
 
 Kita juga dapat menggunakan tanda petik tiga (triple quotes), """ atau ''', untuk menuliskan sebuah string yang panjang dalam beberapa baris.
 
->>> teks = """Python adalah bahasa pemrograman yang powerfull.
+$>$$>$$>$ teks = """Python adalah bahasa pemrograman yang powerfull.
 ... Terbukti Python bisa dijalankan di segala platform OS.
 ... Jadi, saatnya kita menggunakan Python sebagai bahasa pemrograman
 ... sehari-hari. Salam Python Dahsyat!"""
 
 Tampilan teks dengan pernyataan print seperti di bawah ini,
 
->>> print teks
+$>$$>$$>$ print teks
 Python adalah bahasa pemrograman yang powerfull.
 Terbukti Python bisa dijalankan di segala platform OS.
 Jadi, saatnya kita menggunakan Python sebagai bahasa pemrograman
@@ -330,41 +356,58 @@ Menggabungkan String
 
 Untuk menggabungkan dua buah string atau lebih, kita dapat menggunakan operator +. Sedangkan untuk menggandakan string, kita gunakan operator *.
 
->>> blog = 'Klinik' + 'Python'
->>> blog
-'KlinikPython'
->>> newblog = blog*5
->>> newblog
-'KlinikPythonKlinikPythonKlinikPythonKlinikPythonKlinikPython'
->>> blog *= 4
->>> print blog
-KlinikPythonKlinikPythonKlinikPythonKlinikPython
+$>$$>$$>$ Tampan = 'Rolly' + 'Ganteng'
+
+$>$$>$$>$ Tampan
+'RollyGanteng'
+
+$>$$>$$>$ newTampan = Tampan*5
+
+$>$$>$$>$ newTampan
+
+'RollyGantengRollyGantengRollyGantengRollyGantengRollyGanteng'
+
+$>$$>$$>$ Tampan *= 4
+
+$>$$>$$>$ print Tampan
+
+RollyGantengRollyGantengRollyGantengRollyGanteng
 
 Jika dua string ditulis secara berurutan, maka secara langsung kedua string tersebut akan digabungkan.
 
->>> blog = 'Klinik''Python'
->>> blog
-'KlinikPython'
+$>$$>$$>$ Tampan = 'Rolly''Ganteng'
+
+$>$$>$$>$ Tampan
+
+'RollyGanteng'
 
 Menentukan Panjang String
 
 Panjang dari sebuah string dapat kita temukan dengan menggunakan fungsi len().
 
->>> len(blog)
+$>$$>$$>$ len(blog)
 12
 
 Memecah String
 
 Tidak seperti bahasa lainnya, Python tidak mendukung tipe Karakter. Untuk mengambil satu karakter atau lebih dari sebuah string, kita dapat memecah string tersebut menggunakan indeks (disebut Metode Irisan). Irisan terdiri dari dua indeks yang dipisahkan tanda koma.
 
->>> buah = 'Nanas'
->>> buah[0]
+$>$$>$$>$ buah = 'Nanas'
+
+$>$$>$$>$ buah[0]
+
 'N'
->>> buah[0:2]
+
+$>$$>$$>$ buah[0:2]
+
 'Na'
->>> buah[0:4]
+
+$>$$>$$>$ buah[0:4]
+
 'Nana'
->>> buah[0:5]
+
+$>$$>$$>$ buah[0:5]
+
 'Nanas'
 
 Dari contoh di atas, panjang string buah adalah 5. Ketika kita menghitung maju, indeks bernilai 0 sampai (panjang-string – 1) dimulai dari kiri ke kanan. Maka dari itu, kita dapat mengakses setiap karakter dalam range 0 sampai 4.
@@ -373,51 +416,76 @@ Sebuah string juga dapat dihitung mundur, dengan indeks -1 sampai (negatif panja
 
 Contoh penggunaan penghitungan mundur,
 
->>> buah[-1]
+$>$$>$$>$ buah[-1]
+
 ‘s’
->>> buah[-5]
+
+$>$$>$$>$ buah[-5]
+
 ‘N’
->>> buah[-5:-1]
+
+$>$$>$$>$ buah[-5:-1]
+
 ‘Nana’
->>> buah[1:-1]
+
+$>$$>$$>$ buah[1:-1]
+
 ‘ana’
 
 Jika kita lupa berapa nilai indeks awala atau indeks akhir, kita dapat kosongkan indeks tersebut.
 
->>> buah[:3]
+$>$$>$$>$ buah[:3]
+
 ‘Nan’
->>> buah[2:]
+
+$>$$>$$>$ buah[2:]
+
 ‘nas’
+
 
 Pengosongan indeks akan menyebabkan semua string ditampilkan.
 
->>> buah[:]
+$>$$>$$>$ buah[:]
+
 ‘Nanas’
 
 String Bersifat Immutable
 
 Tipe data String pada Python bersifat immutable, yang artinya sekali dibuat maka tidak dapat diubah kembali. Ada pertanyaan bagus, jika string bersifat immutable, mengapa kita bisa mengubah nilai dari variabel string tersebut? Jawabannya sangat sederhana. Ketika kita memberikan nilai yang berbeda pada variabel string, sebuah obyek baru berhasil kita buat. Lihat contoh berikut,
 
->>> nama = "Klinik"
->>> nama
+$>$$>$$>$ nama = "Klinik"
+
+$>$$>$$>$ nama
+
 'Klinik'
->>> id(nama)
+
+$>$$>$$>$ id(nama)
+
 3076962016L
->>> nama = "Python"
->>> id(nama)
+
+$>$$>$$>$ nama = "Python"
+
+$>$$>$$>$ id(nama)
+
 3077289888L
 
 Catat bahwa ketika string nama telah kita buat, maka identitas dari variabel ini dapat kita ketahui dengan menggunakan fungsi id(). Jika kita ubah nilai dari variabel nama tersebut, maka identitasnya juga berubah. Hal ini menandakan bahwa obyek baru telah dibuat. Penggantian nilai pada string pada posisi indeks tertentu akan menghasilkan pesan kesalahan.
 
->>> nama[0] = 'K'
+$>$$>$$>$ nama[0] = 'K'
+
 Traceback (most recent call last):
+
 File "", line 1, in
+
 TypeError: 'str' object does not support item assignment
 
 Kita juga dapat menambahkan sebuah string baru pada string lama.
 
->>> 'Si' + nama[0]
+$>$$>$$>$ 'Si' + nama[0]
+
 'SiP'
->>> 'J' + nama[1:]
+
+$>$$>$$>$ 'J' + nama[1:]
+
 'Jython'
 
