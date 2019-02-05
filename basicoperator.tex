@@ -1,0 +1,305 @@
+% Nama Kelompok : 3
+% 1. Kezia Tirza Naramessakh (1154093)
+% 2. Dimas Mathovani (1154101)
+% 3. Mariani Rospilinda Siki (1154107)
+% 4. Doli Jonviter NT Simbolon (1154016)
+% 5. Benedictus Simatupang (1154116)
+
+\section{Python Basic Operator} 
+\section{Pengenalan Python Programming}
+Menurut Van Python adalah bahasa pemrograman yang menggabungkan kapabilitas, kemampuan, dengan sintaksis kode yang sangat jelas, dan dilengkapi dengan fungsionalitas pustaka standar yang besar serta komprehensif. Python mendukung multi paradigma pemrograman, utamanya namun tidak dibatasi pada pemrograman berorientasi objek, pemrograman imperatif, dan pemrograman fungsional. Salah satu fitur yang tersedia pada python adalah sebagai bahasa pemrograman dinamis yang dilengkapi dengan manajemen memori otomatis. Seperti halnya pada bahasa pemrograman dinamis lainnya, python umumnya digunakan sebagai bahasa skrip meski pada praktiknya penggunaan bahasa ini lebih luas mencakup konteks pemanfaatan yang umumnya tidak dilakukan dengan menggunakan bahasa skrip. Python dapat digunakan untuk berbagai keperluan pengembangan perangkat lunak dan dapat berjalan di berbagai platform sistem operasi. Manfaat besar dari sistem operasi seperti pyton adalah portabilitas aplikasi, setidaknya aplikasi yang dibuat dengan Python murni. Seluruh Sistem Operasi akan berjalan di mana pun dapat mengkompilasi Kernel Linux dan Python, dengan sedikit usaha daripada mengatakan bahwa porting seluruh Linux ke chipset yang berbeda. Aplikasi Python tidak perlu dikompilasi ulang untuk CPU target, dan jika sebagian besar Sistem Operasi dibuat dengan Python, port dibuat dengan mudah.Proses mengubah dari bentuk bahasa tingkat tinggi dalam bahasa pemograman ada dua tipe, yaitu interpreter dan compiler. Fungsi Interpreter yaitu membaca program berbahasa tingkat tinggi dan kemudian mengeksekusi program tersebut. Sedangkan fungsi compiler membaca program dan menerjemahkannya secara keseluruhan kemudian baru dieksekusi. Bisa juga mengkompile suatu program yang merupakan bagian program lain. Dalam kasus ini, program tingkat tinggi ini dinamakan kode sumber (source code) dan hasil terjemahannya sering dinamakan object code atau executable.  \cite{van2007python}
+
+\subsection{Python Basic Operator}
+Peran operator dalam proses perhitungan matematika sangatlah penting.
+Setiap bahasa pemrograman selalu memiliki sebuah operator. Walaupun kadang kala ada beberapa contoh operator yang memiliki perbedaan fungsi atau simbol. Namun hanya sebagian saja, bukan seluruhnya. Operator adalah konstruksi yang dapat memanipulasi nilai operan.
+Operator merupakan simbol khusus yang mempresentasikan perhitungan seperti penambahan dan perkalian. Nilai yang digunakan oleh opertor sering disebut operand. Ekspresi merupakan kombinasi dari operator dan operandnya. Dalam sebuah eksekusi program, suatu ekspresi akan di evaluasi sehingga menghasilkan suatu nilai tunggal. Di dalam bahasa pemograman Phython ada beberapa tipe oprator seperti operator Aritmatika, Perbandingan, Penugasan, Logika, Bitwise, Keanggotaan dan Identitas. Memasukkan data dan menampilkannya merupakan hal yang sering di lakukan dalam pemograman. Ada beberapa fungsi dasar dalam fasilitas I/O, yaitu print dan input. Intruksi print digunakan khusu untuk menampilkan sebuah karakter ke layar. Sedangkan input di gunakan untuk membaca sebuah karakter. Bentuk Umum intruksi print adalah: Print ("string kontrol"), argumen.
+
+Memberi nilai dari bagian kanan operator kebagian kiri operator. Operator penunjukan dalam bahasa phython menggunakan tanda sama dengan, termasuk dalam:
+\begin{equation}
++=, -=, *=, /=. 
+\end{equation}
+Instruksi \begin{equation} x = x+1 \end{equation} sama artinya dengan \begin{equation} x +=1 \end{equation}
+Operator membandingkan kesamaan dua nilai digunakan tanda == dan menghasilkan sebuah ekspresi boolean 
+Selain operator Aritmatika, Python juga mendukung operator berkondisi yang berfungsi untuk membandingkan suatu nilai dengan nilai yang lain. Operator-operator yang didukung oleh Python yaitu operator Unari ( + dan – ) dan operator Binari ( +, -, *, /). Pada ekspresi Aritmatika berikut:
+
+\begin{equation}
+x = y + z
+\end{equation}
+ 
+y dan z disebut sebagai operan dari operator +.  
+Sebagai contoh operasi \begin{equation} 3 + 2 = 5 \end{equation}. Disini 3 dan 2 adalah operan dan + adalah operator.
+
+Bahasa pemrograman Python mendukung berbagai macam operator, diantaranya :
+\begin{enumerate}
+	\item Operator Aritmatika(Arithmetic Operators)
+	\item Operator Perbandingan(Comparison Relational Operators)
+	\item Operator Logika (Logical Operators)
+	\item Operator Bitwise (Bitwise Operators)
+	\item Operator Identitas (Identity Operators)
+\end{enumerate}  
+
+\subsubsection{Operator Aritmatika}
+Operator Aritmatika sendiri merupakan operator yang dipergunakan dalam melakukan operasi matematika, seperti pengurangan, pembagian, penjumlahan, perkalian, pangkat, modulus dll.
+
+Di bawah ini adalah tabel \ref{tablearitmatika} yang terdapat pada bahasa pemrograman Python.
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=1\textwidth]{Plagiarisme/tablearitmatika.JPG}}
+	\caption{Table Operator Aritmatika.}
+	\label{tablearitmatika}
+\end{figure}
+
+Berikut contoh penggunaan operator aritmatika pada bahasa pemrograman python:
+\begin{enumerate}
+
+\item Penjumlahan
+	\begin{equation}
+	print(13 + 2)
+	apel = 7
+	jeruk = 9
+	buah = apel + jeruk
+	print(buah)
+	\end{equation}
+	
+\item Pengurangan
+       \begin{equation}
+	hutang = 10000
+	bayar = 5000
+	sisaHutang = hutang - bayar
+	print("Sisa hutang Anda adalah ", sisaHutang)
+	\end{equation}
+	
+\item Perkalian
+        \begin{equation}
+	panjang = 15
+	lebar = 8
+	luas = panjang * lebar
+	print(luas)
+	\end{equation}
+	
+\item Pembagian
+        \begin{equation}
+	kue = 16
+	anak = 4
+	kuePerAnak = kue / anak
+	print("Setiap anak akan mendapatkan bagian kue sebanyak ", kuePerAnak)
+	\end{equation}
+	
+\item Sisa Bagi / Modulus
+        \begin{equation}
+	bilangan1 = 14
+	bilangan2 = 5
+	hasil = bilangan1 \% bilangan2
+	print("Sisa bagi dari bilangan ", bilangan1, " dan ", bilangan2, " adalah ", hasil)
+	\end{equation}
+	
+\item Pangkat
+        \begin{equation}
+	bilangan3 = 8
+	bilangan4 = 2
+	hasilPangkat = bilangan3 ** bilangan4
+	print(hasilPangkat)
+\end{equation}
+	
+\item Pembagian Bulat
+        \begin{equation}
+	print(10//3) 
+	10 dibagi 3 adalah 3.3333. Karena dibulatkan maka akan menghasilkan nilai 3
+      \end{equation}
+	
+\item Perhitungan Maksimum dan Minimum Pada Operator Aritmatika
+	\begin{equation}
+	def \_ \_add\_\ _(x,y):
+	return  n: (x(n+2)+y(n+2)+2)/4
+	def \_ \_sqrt\_ \_(x):
+	return  n: sqrt(x(2∗ n))
+	def cmp(x,y):
+	n=0
+	while 1:
+	xn,yn=x(n),y(n)
+	if xn<yn−1: return −1  => x <y
+	if xn>yn+1: return 1  => x >y
+	n+ =1
+	def minmax(x,y):
+	s,d=x+y,abs(x−y)
+	return (s−d)/2,(s+d)/2
+	\end{equation}
+	
+	Contoh penggunaan operator aritmatika pada bahasa pemrograman python
+\end{enumerate}
+
+Perhatikan perintah pada baris pertama tanpa harus menuliskan tanda kurung pun python sudah melakukan operasi matematika sesuai dengan aturan prioritas matematika. Operator yang biasa dipergunakan pada aritmatika ini pun beberapa dapat dipergunakan dalam melakukan manipulasi string contohnya :
+\begin{verbatim}
+	print 'Pintarcoding.com! ' * 3
+	print 'hallo' + ' ' + 'Pintarcoding.com!'
+\end{verbatim}
+
+
+\subsubsection{Operator Perbandingan}
+Operator perbandingan adalah operator yang digunakan untuk membandingan nilai dari masing-masing operand. Operator ini juga dikenal dengan operator relasi dan sering digunakan untuk membuat sebuah logika atau kondisi. Operator perbandingakan akan mengembalikan sebuah nilai boolan yaitu true atau false. Operator ini juga dikenal dengan operator relasi dan sering digunakan untuk membuat sebuah logika atau kondisi.
+
+Di bawah ini adalah tabel \ref{tableperbandingan} macam-macam operator perbandingan yang terdapat pada bahasa pemrograman Python.
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=1\textwidth]{Plagiarisme/tableperbandingan.JPG}}
+	\caption{Table Operator Perbandingan.}
+	\label{tableperbandingan}
+\end{figure}
+
+Di bawah ini adalah contoh implementasi operator perbandingan pada program di Python:
+
+a = 20
+b = 10
+c = 0
+
+\begin{verbatim}
+print ("a = ",a)
+print ("b = ",b)
+
+if ( a == b ):
+   print ("Baris 1 - a sama dengan b")
+else:
+   print ("Baris 1 - a tidak sama dengan b")
+
+if ( a != b ):
+   print ("Baris 2 - a tidak sama dengan b")
+else:
+   print ("Baris 2 - a sama dengan b")
+
+if ( a < b ):
+   print ("Baris 4 - a kurang dari b") 
+else:
+   print ("Baris 4 - a lebih dari b")
+
+if ( a > b ):
+   print ("Baris 5 - a lebih dari b") 
+else:
+   print ("Baris 5 - a kurang dari b")
+
+if ( a >= b ):
+   print ("Baris 6 - a lebih besar dari atau sama dengan b") 
+else:
+   print ("Baris 6 - a tidak lebih besar dari atau sama dengan b") 
+
+if ( a <= b ):
+   print ("Baris 7 - a lebih kecil dari atau sama dengan b") 
+
+else:
+   print ("Baris 7 - a tidak lebih kecil dari atau sama dengan b")    
+   
+\end{verbatim}
+
+Jika program diatas dijalankan, maka akan menghasilkan output di bawah ini:
+
+a =  20
+b =  10
+Baris 1 - a tidak sama dengan b
+Baris 2 - a tidak sama dengan b
+Baris 4 - a lebih dari b
+Baris 5 - a lebih dari b
+Baris 6 - a lebih besar dari atau sama dengan b
+Baris 7 - a tidak lebih kecil dari atau sama dengan b
+
+\subsubsection{Bitwise Operator}
+Operator bitwise (Bitwise Operators) adalah operator khusus yang disediakan PHP untuk menangani proses logika untuk bilangan biner. Bilangan biner atau binary adalah jenis bilangan yang hanya terdiri dari 2 jenis angka, yakni 0 dan 1. Jika operand (sebuah objek yang ada pada operasi matematika yang dapat digunakan untuk melakukan operasi) yang digunakan bukan bilangan biner, maka akan dikonversi secara otomatis oleh PHP menjadi bilangan biner. Operator Bitwise adalah operator untuk melakukan operasi berdasarkan bit/biner. Konsepnya memang hampir sama dengan opeartor Logika. Namun, Bitwise digunakan untuk biner.
+\begin{verbatim}
+AND : &
+OR : |
+XOR : ^
+Negasi/kebalikan : ~
+Left Shift : <<
+Right Shift : >>
+\end{verbatim}
+
+Hasil operasi dari operator ini agak sulit dipahami, kalau kita belum paham operasi bilangan biner.
+Misalnya, kita punya variabel a = 60 dan b = 13.
+
+Bila dibuat dalam bentuk biner, akan menjadi seperti ini:
+a = 00111100
+b = 00001101
+Kemudian, dilakukan operasi bitwise
+
+\begin{enumerate}
+\item Operasi AND
+      a = 00111100
+      b = 00001101
+      a \& b = 00001100
+      
+\item Operasi OR
+      a = 00111100
+      b = 00001101
+      a | b = 00111101
+
+\item Operasi XOR
+      a = 00111100
+      b = 00001101
+      a \^ b = 00110001
+
+\item Opearsi NOT (Negasi/kebalikan)
+      a = 00111100
+      ~a  = 11000011
+      
+\end{enumerate}
+
+
+\subsubsection{Operator Logika}
+Opertaor logika merupakan opertaor yang akan menghasilkan sebuah output true atau false , di dalam python memberikan tiga opeartor logika yaitu, 'and', 'or ', dan 'not'. Operator 'and' dan 'or' memberikan hasil bukan boolean, kecuali merupakan operasi boolean. . Python memiliki sedikit perbedaan dalam mendeklarasikan opertaor logika , perbedaanya adalah angka yang bukan bilangan nol (0) dianggap sebagai kondisi true (benar) atau memiliki nilai satu (1) .
+Adapun cara penggunaan dari operator-operator tersebut adalah sebagai berikut:
+
+\begin{verbatim}
+print 10 > 2 and 10 > 5 # bernilai True
+print True or False # bernilai True
+print not False # bernilai True
+perintah diatas digunakan untuk ketika dijalankan maka akan menghasilkan nilai True pada semua baris perintah diatas.
+\end{verbatim}
+
+Perintah tersebut akan mengashilkan
+Pintarcoding.com! Pintarcoding.com! Pintarcoding.com! 
+hallo Pintarcoding.com!
+
+\subsubsection{Operator Identitas}
+operator identitas membandingkan lokasi memori dari dua benda. Ada dua operator Identitas seperti yang dijelaskan di bawah ini :
+
+\begin{enumerate}
+\item Operator is, Mengevaluasi ke true jika variabel di kedua sisi operator menunjuk ke objek yang sama dan salah sebaliknya
+      Contoh : x adalah y, berikut adalah hasil dalam 1 jika id(x)sama dengan id(y) .
+
+\item Operator is not, Mengevaluasi false jika variabel di kedua sisi operator menunjuk ke objek yang sama dan benar sebaliknya.
+      Contoh : x tidak y, di sini bukan hasil dalam 1 jika id(x)tidak sama dengan id(y) .
+\end{enumerate}
+
+Di bawah ini adalah contoh implementasi operator identitas pada program di Python:
+
+\begin{verbatim}
+#!/usr/bin/python
+
+a = 20
+b = 20
+
+if ( a is b ):
+   print "Line 1 - a and b have same identity"
+else:
+   print "Line 1 - a and b do not have same identity"
+
+if ( id(a) == id(b) ):
+   print "Line 2 - a and b have same identity"
+else:
+   print "Line 2 - a and b do not have same identity"
+
+b = 30
+if ( a is b ):
+   print "Line 3 - a and b have same identity"
+else:
+   print "Line 3 - a and b do not have same identity"
+
+if ( a is not b ):
+   print "Line 4 - a and b do not have same identity"
+else:
+   print "Line 4 - a and b have same identity"
+   
+\end{verbatim}
+
+Hasil dalam menjalankan program di atas menghasilkan hasil sebagai berikut: 
+
+Line 1 - a and b have same identity
+Line 2 - a and b have same identity
+Line 3 - a and b do not have same identity
+Line 4 - a and b do not have same identity
