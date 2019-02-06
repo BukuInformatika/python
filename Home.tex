@@ -8,11 +8,36 @@
 \end{figure}
 
 \section{python}
-Basaha pemrograman python adalah bahasa pemrograman terpopuler di tahun 2016 menurut tiobe\cite{https://www.tiobe.com/tiobe-index/}. Python juga memiliki sintak atau aturan penulisan \textit{code} pemrograman. Sintak elegan dan \textit{dynamic typing} yang dimiliki oleh python, bersama dengan \textit{interpreted nature} dari python, menjadikannya bahasa pemrograman yang ideal untuk melakukan \textit{'scripting'} dan pengembangan aplikasi yang sangat pesat dalam area pada kebanyakan platform.
+Python adalah bahasa pemrograman interpretatif multiguna. tidak seperti bahasa lainnya yang susah untuk dibaca dan dipahami, python lebih menekankan pada keterbacaan kode agar lebih mudah untuk memahami sintaks. hal ini membuat python sangat mudah dipelajari baik untuk pemula maupun untuk yang sudah menguasai bahasa pemrograman lain.
 
-Didalam salah satu bagian Home yang merupakan halaman pengantar untuk mempelajari python. Terlebih dahulu pembaca harus memahami apa itu python. Dan sebelum ketahapan yang baru selain home ini pembaca memerlukan pengertian yang lain yaitu seperti enverinmoment setup, syntax dan lain-lain. Pertama-tama yang akan penulis jelakan yaitu pengertian tentang class pada python untuk mengantarkan logika dan pengetahuan apa itu class.
 
-Class itu merupakan class yang didalamnya mempunyai metode yang sesuai dengan fungsinya. Contoh dikehidupan nyata yaitu; seperti kelas tempat belajar sebagai classnya, adapun isi dari kelas itu seperti bangku, sepidol, dan lain-lain, itu merupakan metode dari class dan metode itu berfungsi seperti fungsinya sendiri seperti spidol yang berfungsi untuk menulis, masing-masing dari benda tersebut disesuaikan dengan fungsi.
+\par
+Bahasa Python mendukung hampir semua sistem operasi, bahkan untuk sistem operasi Linux, hampir semua distronya sudah menyertakan Python didalamnya. Dengan kode yang simpel dan mudah diimplementasikan, seorang programmer dapat lebih mengutamakan pengembangan aplikasi yang dibuat, bukan malah sibuk mencari syntax error.
+\begin{verbatim}
+print("Python sangat simpel")
+\end{verbatim}
+
+Hanya dengan menuliskan kode \textit{print} seperti yang diatas, anda sudah bisa mencetak apapun yang anda inginkan didalam tanda kurung (). Dibagian akhir kode pun anda tidak harus mengakhirinya dengan tanda semicolon ;.
+
+\par 
+Python dapat digunakan secara bebas, bahkan untuk kepentingan komersial sekalipun. Python diklaim mampu memberikan kecepatan dan kualitas untuk membangun aplikasi bertingkat \textit{Rapid Application Development}. Hal ini didukung oleh adanya \textit{library} dengan modul-modul baik standar maupun tambahan misalnya NumPy, SciPy, dan lain-lain.
+
+\subsection{Beberapa aplikasi yang menggunakan Python}
+Python dapat digunakan diberbagai bidang untuk membangun aplikasi-aplikasi yang berjalan pada banyak fungsi. Diantaranya sebagai berikut :
+\begin{enumerate}
+\item Website dan Internet. dimana python dapat digunakan sebagai server side yang diintegrasikan dengan berbagai internet protokol misalnya HTML, JSON, Email Processing, FTP, dan IMAP. Selain itu, python juga mempunyai library untuk pengembangan internet.
+\item Penelitian Ilmiah dan Numerik, dimana python dapat digunakan untuk melakukan riset ilmiah untuk mempermudah perhitungan numerik. Misalnya penerapan algoritma KNN, Naive Bayes, Decision Tree, dan lain-lain.
+\item Data Science dan Big Data, dimana python dapat memungkinkan untuk melakukan analisis data dari database big data.
+\item Media Pembelajaran Pemrograman.
+\item Graphical User Interface (GUI).
+\item Pengembangan Software.
+\item Aplikasi Bisnis.
+\end{enumerate}
+
+\par
+Bahasa pemrograman python adalah bahasa pemrograman terpopuler di tahun 2016 menurut tiobe\cite{https://www.tiobe.com/tiobe-index/}. Python juga memiliki sintak atau aturan penulisan \textit{code} pemrograman. Sintak elegan dan \textit{dynamic typing} yang dimiliki oleh python, bersama dengan \textit{interpreted nature} dari python, menjadikannya bahasa pemrograman yang ideal untuk melakukan \textit{'scripting'} dan pengembangan aplikasi yang sangat pesat dalam area pada kebanyakan platform.
+
+\textit{Class} itu merupakan suatu kelas yang didalamnya mempunyai \textit{method} yang sesuai dengan fungsinya. Contoh dikehidupan nyata yaitu; seperti kelas tempat belajar yang diibaratkan sebagai \textit{class}-nya, dan adapun isi dari kelas itu seperti bangku, sepidol, dan lain-lain, isi dari kelas itu merupakan metode dari \textit{class} dan \textit{method} itu berfungsi seperti fungsinya sendiri seperti spidol yang berfungsi untuk menulis, masing-masing dari benda tersebut disesuaikan dengan fungsi.
 
 \subsection{Pembuatan class pada python}
 Kita awali dengan sebuah kata kunci. Yaitu ``class`` yang kemudian diikuti dengan ``nama class nya`` terakhir membuat kurung buka dan tutup serta membuat tanda titik dua  ``()`` dan ``:`` kalo synax nya, seperti :
@@ -29,6 +54,7 @@ penampung = namaClass()
 \begin{verbatim}
 penampung.namaMetode()
 \end{verbatim}
+
 Didalam sebuah class yang dibuat biasanya terdapat init itu disediakan langsung oleh pythonnya, seperti :
 
 
@@ -69,7 +95,7 @@ Ada beberapa hal yang harus diketahui seperti input, data operation dan lain-lai
 \end{itemize}
 
 Tahapan ini merupakan proses memasukan data kedalam proses komputer melalui peralatan input. Pada bahasa Python, untuk menerima masukan dari pengguna yaitu dengan menggunakan method input() dan raw $_$input().
-Data adalah bahan mentah yang akan diolah menjadi informasi sehingga dapat berguna dan dimanfaatkan oleh pengguna. Data dapat berupa variabel, konstanta, atau yang berisi bilangan, kalimat, dan lainnya. Tipe data berupa string, number, list, tuple, dan lainnya.  
+Data adalah bahan mentah yang akan diolah menjadi informasi sehingga dapat berguna dan dimanfaatkan oleh pengguna. Data dapat berupa variabel, konstanta, atau yang berisi bilangan, kalimat, dan lainnya. Tipe data berupa string, number, list, tuple, dan lainnya.
 
 \subsection {Operation}
 Operation adalah yang akan mengubah suatu nilai menjadi nilai lain. Yang termasuk operation atau yang biasa disebut dengan operator adalah operator aritmatika, operator assignment, dan lainnya.
@@ -85,7 +111,7 @@ Perintah yang akan berjalan beberapa kali, selama kondisi yang ditentukan atau k
 
 \subsection {Subroutine}
 Perintah yang bisa dijalankan dengan cara memanggil namanya. Sering disebut sebagai functionatau method. Pada bahasa pemrograman Python, untuk menggunakan function atau method yaitu dengan menggunakan pernyatan def nama _
-$function(). 
+$function().
 Fungsi def dalam python,
 Penggunaan fungsi tanpa parameter
 Command=fungsi()
@@ -104,7 +130,7 @@ Deklarasi command = def fungsi (**args)
 Itu adalah cara memanggil dalam code python pemrograman jadi ada nenerapa fungsi yang dibutuhkan penulisan dengan tepat maka sebab itu dengan sebab itu buaat lah penulisan yang mudah. Karena pemrograma python sangan sensitive bila ada kesalahan sedikit di penulisan atau symbol yang tertinggal.
 
 \subsection {Sejarah}
-Bahasa pemrograman Python adalah bahasa yang dibuat oleh seorang keturunan Belanda yaitu Guido van Rossum. Awalnya, pembuatan bahasa pemrograman ini adalah untuk membuat skrip bahasa tingkat tinggi pada sebuah sistem operasi yang terdistribusi Amoeba. Python telah digunakan oleh beberapa pengembang dan bahkan digunakan oleh beberapa perusahaan untuk pembuatan perangkat lunak komersial. Pemrograman bahasa python ini adalah pemrogram gratis atau freeware, sehingga dapat dikembangkan, dan tidak ada batasan dalam penyalinannya dan mendistribusikan.
+Bahasa pemrograman Python adalah bahasa yang dibuat oleh seorang keturunan Belanda yaitu Guido van Rossum. Sampai saat ini Python masih dikembangkan oleh \textit{Python Software Foundation}. Awalnya, pembuatan bahasa pemrograman ini adalah untuk membuat skrip bahasa tingkat tinggi pada sebuah sistem operasi yang terdistribusi Amoeba. Python telah digunakan oleh beberapa pengembang dan bahkan digunakan oleh beberapa perusahaan untuk pembuatan perangkat lunak komersial. Pemrograman bahasa python ini adalah pemrogram gratis atau freeware, sehingga dapat dikembangkan, dan tidak ada batasan dalam penyalinannya dan mendistribusikan.
 
 \subsection{Dukungan Komunitas yang Aktif}
 Python adalah salah satu pemrograman yang terus berkembang dan bertahan dikarenakan dukungan komunitas yang aktif diseluruh dunia. Banyak forum-forum ataupun blogger-blogger yang sering membagi pengalaman dalam menggunakan python. Hal ini memudahkan bagi pengguna pemula maupun pengembang untuk bertanya dan sharing tentang ilmu pemrograman ini.
