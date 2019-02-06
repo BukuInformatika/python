@@ -9,6 +9,324 @@ Ini adalah contohnya,
 \item Kalau dalam List diawali dan diakhiri dengan tanda kurung siku [], Tuple dimulai dan ditutup dengan tanda kurung \(\). 
 \end{enumerate}
 
+
+TUPLES \par
+Sebuah tupel adalah urutan objek Python yang tidak berubah. Tupel adalah urutan, seperti daftar. Perbedaan antara tupel dan daftar adalah, tupel tidak dapat diubah tidak seperti daftar dan tupel menggunakan tanda kurung, sedangkan daftar menggunakan tanda kurung siku. \par
+Membuat tuple semudah memasukkan nilai-nilai yang dipisahkan koma. Opsional Anda dapat memasukkan nilai-nilai yang dipisahkan koma ini di antara tanda kurung juga. Misalnya - \par
+\vspace{12pt}
+Tup1 = ('fisika', 'kimia', 1997, 2000); \par
+Tup2 = (1, 2, 3, 4, 5); \par
+Tup3 = "a", "b", "c", "d"; \par
+Tuple kosong ditulis sebagai dua tanda kurung yang tidak berisi apa - \par
+tup1 = (); \par
+Untuk menulis tupel yang berisi satu nilai, Anda harus menyertakan koma, meskipun hanya ada satu nilai - \par
+Tup1 = (50,); \par
+Seperti indeks string, indeks tuple mulai dari 0, dan mereka dapat diiris, digabungkan, dan seterusnya. \par
+Mengakses Nilai pada Tuples: \par
+Untuk mengakses nilai dalam tupel, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut. Misalnya - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Tup1 = ('fisika', 'kimia', 1997, 2000); \par
+Tup2 = (1, 2, 3, 4, 5, 6, 7); \par
+\vspace{12pt}
+Cetak "tup1 [0]:", tup1 [0] \par
+Cetak "tup2 [1: 5]:", tup2 [1: 5] \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+tup1 [0]: fisika \par
+Tup2 [1: 5]: [2, 3, 4, 5] \par
+Memperbarui Tupel \par
+Tupel tidak berubah yang berarti Anda tidak dapat memperbarui atau mengubah nilai elemen tupel. Anda dapat mengambil bagian dari tupel yang ada untuk membuat tupel baru seperti ditunjukkan oleh contoh berikut - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Tup1 = (12, 34.56); \par 
+Tup2 = ('abc', 'xyz'); \par
+\vspace{12pt}
+ $  \#  $ Tindakan berikut tidak berlaku untuk tupel \par
+ $  \#  $ Tup1 [0] = 100; \par
+\vspace{12pt}
+ $  \#  $ Jadi mari kita buat tupel baru sebagai berikut \par
+Tup3 = tup1 + tup2; \par
+Cetak tup3 \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+(12, 34.56, 'abc', 'xyz') \par
+Hapus Elemen Tuple \par
+Menghapus elemen tuple individual tidak mungkin dilakukan. Tentu saja, tidak ada yang salah dengan menggabungkan tuple lain dengan unsur-unsur yang tidak diinginkan dibuang. \par
+Untuk secara eksplisit menghapus keseluruhan tuple, cukup gunakan del statement. Sebagai contoh: \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+Tup = ('fisika', 'kimia', 1997, 2000); \par
+\vspace{12pt}
+Cetak tup \par
+Del tup; \par
+Cetak "Setelah menghapus tup:" \par
+Cetak tup \par
+Ini menghasilkan hasil berikut. Perhatikan pengecualian yang diangkat, ini karena setelah del tup tupel tidak ada lagi - \par
+('Fisika', 'kimia', 1997, 2000) \par
+Setelah menghapus tup: \par
+Traceback (panggilan terakhir): \par
+~ File "test.py", baris 9, di <module> \par
+~~~ Cetak tup; \par
+NameError: nama 'tup' tidak didefinisikan \par
+Operasi Tuple Dasar \par
+Tupel merespons operator + dan * seperti string; Mereka berarti penggabungan dan pengulangan di sini juga, kecuali hasilnya adalah tupel baru, bukan string. \par
+Sebenarnya, tupel menanggapi semua operasi urutan umum yang kami gunakan pada senar di bab sebelumnya - \par
+Python Expression \hspace*{0.5in} Results  \hspace*{0.5in} Description \par
+len((1, 2, 3)) \hspace*{0.5in} 3 \hspace*{0.5in} Length \par
+(1, 2, 3) + (4, 5, 6) \hspace*{0.5in} (1, 2, 3, 4, 5, 6) \hspace*{0.5in} Concatenation \par
+('Hi!',) * 4 \hspace*{0.5in} ('Hi!', 'Hi!', 'Hi!', 'Hi!') \hspace*{0.5in} Repetition \par
+3 in (1, 2, 3) \hspace*{0.5in} True \hspace*{0.5in} Membership \par
+for x in (1, 2, 3): print x, \hspace*{0.5in} 1 2 3 \hspace*{0.5in} Iteration \par
+Indexing, Slicing, dan Matrixes \par
+Karena tupel adalah urutan, pengindeksan dan pengiris bekerja dengan cara yang sama untuk tupel seperti yang mereka lakukan untuk string. Dengan asumsi masukan berikut - \par
+L = ('spam', 'Spam', 'SPAM!') \par
+  \par
+Python Expression \hspace*{0.5in} Results  \hspace*{0.5in} Description \par
+L[2] \hspace*{0.5in} 'SPAM!' \hspace*{0.5in} Offsets start at zero \par
+L[-2] \hspace*{0.5in} 'Spam' \hspace*{0.5in} Negative: count from the right \par
+L[1:] \hspace*{0.5in} ['Spam', 'SPAM!'] \hspace*{0.5in} Slicing fetches sections \par
+\vspace{12pt}
+Tidak melampirkan delimiters \par
+Setiap kumpulan beberapa objek, yang dipisahkan koma, ditulis tanpa mengidentifikasi simbol, yaitu tanda kurung untuk daftar, tanda kurung untuk tupel, dll., Default tupel, seperti yang ditunjukkan dalam contoh singkat ini - \par
+ $  \#  $! / Usr / bin / python \par
+\vspace{12pt}
+cetak 'abc', -4.24e93, 18 + 6.6j, 'xyz' \par
+x, y = 1, 2; \par
+Cetak "Nilai x, y:", x, y \par
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
+abc -4.24e + 93 (18 + 6.6j) xyz \par
+Nilai x, y: 1 2 \par
+Built-in Fungsi Tuple \par
+Python mencakup fungsi tupel berikut – \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+SN \hspace*{0.5in} Function with Description \par
+1 \hspace*{0.5in} cmp(tuple1, tuple2) \par
+\vspace{12pt}
+Compares elements of both tuples. \par
+2 \hspace*{0.5in} len(tuple) \par
+\vspace{12pt}
+Gives the total length of the tuple. \par
+3 \hspace*{0.5in} max(tuple) \par
+\vspace{12pt}
+Returns item from the tuple with max value. \par
+4 \hspace*{0.5in} min(tuple) \par
+\vspace{12pt}
+Returns item from the tuple with min value. \par
+5 \hspace*{0.5in} tuple(seq) \par
+\vspace{12pt}
+Converts a list into tuple. \par
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+\vspace{12pt}
+Dalam pemrograman Python, tuple mirip dengan daftar. Perbedaan antara keduanya adalah kita tidak bisa mengubah unsur tuple begitu diberikan sedangkan dalam daftar, elemen bisa diubah. \par
+Keuntungan Tuple over List \par
+\vspace{12pt}
+Karena, tupel sangat mirip dengan daftar, keduanya juga digunakan dalam situasi yang sama. \par
+\vspace{12pt}
+Namun, ada beberapa keuntungan dari penerapan tupel dari daftar. Di bawah ini tercantum beberapa keuntungan utama: \par
+\vspace{12pt}
+~~~ Kami umumnya menggunakan tuple untuk tipe data heterogen dan berbeda untuk tipe data homogen (sejenis). \par
+~~~ Karena tupel tidak dapat diubah, iterasi melalui tupel lebih cepat daripada daftar. Jadi ada sedikit peningkatan kinerja. \par
+~~~ Tupel yang mengandung unsur yang tidak berubah dapat digunakan sebagai kunci untuk kamus. Dengan daftar, ini tidak mungkin. \par
+~~~ Jika Anda memiliki data yang tidak berubah, menerapkannya sebagai tupel akan menjamin bahwa itu tetap dilindungi penulisan. \par
+\vspace{12pt}
+Dalam pemrograman Python, tuple mirip dengan daftar. Perbedaan antara keduanya adalah kita tidak bisa mengubah unsur tuple begitu diberikan sedangkan dalam daftar, elemen bisa diubah. \par
+Keuntungan Tuple over List \par
+\vspace{12pt}
+Karena, tupel sangat mirip dengan daftar, keduanya juga digunakan dalam situasi yang sama. \par
+\vspace{12pt}
+Namun, ada beberapa keuntungan dari penerapan tupel dari daftar. Di bawah ini tercantum beberapa keuntungan utama: \par
+\vspace{12pt}
+~~~ Kami umumnya menggunakan tuple untuk tipe data heterogen dan berbeda untuk tipe data homogen (sejenis). \par
+~~~ Karena tupel tidak dapat diubah, iterasi melalui tupel lebih cepat daripada daftar. Jadi ada sedikit peningkatan kinerja. \par
+~~~ Tupel yang mengandung unsur yang tidak berubah dapat digunakan sebagai kunci kamus. Dengan daftar, ini tidak mungkin. \par
+~~~ Jika Anda memiliki data yang tidak berubah, menerapkannya sebagai tupel akan menjamin bahwa itu tetap dilindungi penulisan. \par
+\vspace{12pt}
+Membuat Tuple \par
+\vspace{12pt}
+Sebuah tuple dibuat dengan menempatkan semua item (elemen) di dalam tanda kurung (), dipisahkan dengan koma. Tanda kurung bersifat opsional namun merupakan praktik yang baik untuk menuliskannya. \par
+\vspace{12pt}
+Sebuah tuple dapat memiliki sejumlah item dan mereka mungkin memiliki tipe yang berbeda (integer, float, list, string etc.). \par
+\vspace{12pt}
+\vspace{12pt}
+ $  \#  $ empty tuple \par
+ $  \#  $ Output: () \par
+my $  \_  $tuple = () \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ $  \#  $ tuple having integers \par
+ $  \#  $ Output: (1, 2, 3) \par
+my $  \_  $tuple = (1, 2, 3) \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ $  \#  $ tuple with mixed datatypes \par
+ $  \#  $ Output: (1, "Hello", 3.4) \par
+my $  \_  $tuple = (1, "Hello", 3.4) \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ $  \#  $ nested tuple \par
+ $  \#  $ Output: ("mouse", [8, 4, 6], (1, 2, 3)) \par
+my $  \_  $tuple = ("mouse", [8, 4, 6], (1, 2, 3)) \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ $  \#  $ tuple can be created without parentheses \par
+ $  \#  $ also called tuple packing \par
+ $  \#  $ Output: 3, 4.6, "dog" \par
+\vspace{12pt}
+my $  \_  $tuple = 3, 4.6, "dog" \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ $  \#  $ tuple unpacking is also possible \par
+ $  \#  $ Output: \par
+ $  \#  $ 3 \par
+ $  \#  $ 4.6 \par
+ $  \#  $ dog \par
+a, b, c = my $  \_  $tuple \par
+print(a) \par
+print(b) \par
+print(c) \par
+\vspace{12pt}
+Membuat tuple dengan satu elemen agak rumit. \par
+\vspace{12pt}
+Memiliki satu elemen dalam kurung saja tidak cukup. Kita membutuhkan koma trailing untuk menunjukkan bahwa sebenarnya ada tupel. \par
+\vspace{12pt}
+ $  \#  $ only parentheses is not enough \par
+ $  \#  $ Output: <class 'str'> \par
+my $  \_  $tuple = ("hello") \par
+print(type(my $  \_  $tuple)) \par
+\vspace{12pt}
+ $  \#  $ need a comma at the end \par
+ $  \#  $ Output: <class 'tuple'> \par
+my $  \_  $tuple~= ("hello",)   \par
+print(type(my $  \_  $tuple)) \par
+\vspace{12pt}
+ $  \#  $ parentheses is optional \par
+ $  \#  $ Output: <class 'tuple'> \par
+my $  \_  $tuple = "hello", \par
+print(type(my $  \_  $tuple)) \par
+\vspace{12pt}
+Mengakses Elemen dalam Tuple \par
+\vspace{12pt}
+Ada berbagai cara untuk mengakses elemen tuple. \par
+1. Pengindeksan \par
+\vspace{12pt}
+Kita bisa menggunakan operator indeks [] untuk mengakses item di tupel dimana indeks dimulai dari 0. \par
+\vspace{12pt}
+Jadi, tupel yang memiliki 6 elemen akan memiliki indeks dari 0 sampai 5. Mencoba mengakses elemen lain yang (6, 7, ...) akan menghasilkan IndexError. \par
+\vspace{12pt}
+Indeks harus berupa bilangan bulat, jadi kita tidak bisa menggunakan float atau jenis lainnya. Ini akan menghasilkan TypeError. \par
+\vspace{12pt}
+Demikian juga, tuple bersarang diakses menggunakan pengindeksan nested, seperti yang ditunjukkan pada contoh di bawah ini. \par
+my $  \_  $tuple = ('p','e','r','m','i','t') \par
+\vspace{12pt}
+ $  \#  $ Output: 'p' \par
+print(my $  \_  $tuple[0]) \par
+\vspace{12pt}
+ $  \#  $ Output: 't' \par
+print(my $  \_  $tuple[5]) \par
+\vspace{12pt}
+ $  \#  $ index must be in range \par
+ $  \#  $ If you uncomment line 14, \par
+ $  \#  $ you will get an error. \par
+ $  \#  $ IndexError: list index out of range \par
+\vspace{12pt}
+ $  \#  $print(my $  \_  $tuple[6]) \par
+\vspace{12pt}
+ $  \#  $ index must be an integer \par
+ $  \#  $ If you uncomment line 21, \par
+ $  \#  $ you will get an error. \par
+ $  \#  $ TypeError: list indices must be integers, not float \par
+\vspace{12pt}
+ $  \#  $my $  \_  $tuple[2.0] \par
+\vspace{12pt}
+ $  \#  $ nested tuple \par
+n $  \_  $tuple = ("mouse", [8, 4, 6], (1, 2, 3)) \par
+\vspace{12pt}
+ $  \#  $ nested index \par
+ $  \#  $ Output: 's' \par
+print(n $  \_  $tuple[0][3]) \par
+\vspace{12pt}
+ $  \#  $ nested index \par
+ $  \#  $ Output: 4 \par
+print(n $  \_  $tuple[1][1]) \par
+\vspace{12pt}
+Slicing \par
+\vspace{12pt}
+Kita bisa mengakses berbagai item dalam tupel dengan menggunakan operator pengiris - titik dua ":". \par
+\vspace{12pt}
+my $  \_  $tuple = ('p','r','o','g','r','a','m','i','z') \par
+\vspace{12pt}
+ $  \#  $ elements 2nd to 4th \par
+ $  \#  $ Output: ('r', 'o', 'g') \par
+print(my $  \_  $tuple[1:4]) \par
+\vspace{12pt}
+ $  \#  $ elements beginning to 2nd \par
+ $  \#  $ Output: ('p', 'r') \par
+print(my $  \_  $tuple[:-7]) \par
+\vspace{12pt}
+ $  \#  $ elements 8th to end \par
+ $  \#  $ Output: ('i', 'z') \par
+print(my $  \_  $tuple[7:]) \par
+\vspace{12pt}
+ $  \#  $ elements beginning to end \par
+ $  \#  $ Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z') \par
+print(my $  \_  $tuple[:]) \par
+\vspace{12pt}
+Mengubah Tuple \par
+\vspace{12pt}
+Tidak seperti daftar, tupel tidak dapat diubah. \par
+\vspace{12pt}
+Ini berarti elemen tupel tidak dapat diubah begitu telah ditetapkan. Tapi, jika elemen itu sendiri adalah datatype yang bisa berubah seperti daftar, item nested-nya bisa diubah. \par
+\vspace{12pt}
+Kita juga bisa menugaskan tuple ke nilai yang berbeda (reassignment). \par
+\vspace{12pt}
+my $  \_  $tuple = (4, 2, 3, [6, 5]) \par
+\vspace{12pt}
+ $  \#  $ we cannot change an element \par
+ $  \#  $ If you uncomment line 8 \par
+ $  \#  $ you will get an error: \par
+ $  \#  $ TypeError: 'tuple' object does not support item assignment \par
+\vspace{12pt}
+ $  \#  $my $  \_  $tuple[1] = 9 \par
+\vspace{12pt}
+ $  \#  $ but item of mutable element can be changed \par
+ $  \#  $ Output: (4, 2, 3, [9, 5]) \par
+my $  \_  $tuple[3][0] = 9 \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ $  \#  $ tuples can be reassigned \par
+ $  \#  $ Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z') \par
+my $  \_  $tuple = ('p','r','o','g','r','a','m','i','z') \par
+print(my $  \_  $tuple) \par
+\vspace{12pt}
+ \hspace*{0.5in} \vspace{12pt}
+Python Tuples \par
+Tutorial Tupai Python menjelaskan tupel dan bagaimana menggunakannya dengan Python. \par
+Dengan Python, tupel hampir sama dengan daftar. Jadi, mengapa kita harus menggunakannya? Satu perbedaan utama antara tupel dan daftar adalah bahwa tupel tidak dapat diubah. Artinya, Anda tidak dapat menambahkan, mengubah, atau menghapus elemen dari tuple. Tupel mungkin tampak aneh pada awalnya, tapi ada alasan bagus mengapa mereka tidak bisa berubah. Sebagai pemrogram, kita mengacaukan sesekali. Kami mengubah variabel yang tidak ingin kami ubah, dan terkadang, kami hanya ingin hal-hal menjadi konstan sehingga kami tidak sengaja mengubahnya nanti. Namun, jika kita mengubah pikiran kita, kita juga bisa mengubah tupel menjadi daftar atau daftar menjadi tupel. Faktanya adalah kita perlu membuat usaha sadar untuk mengatakan Python, saya ingin mengubah tupel ini menjadi sebuah daftar sehingga saya bisa memodifikasinya. Cukup mengoceh, mari kita lihat sebuah tuple beraksi! \par
+Otak Anda masih sakit dari pelajaran terakhir? Jangan khawatir, yang satu ini akan membutuhkan sedikit pemikiran. Kita akan kembali ke sesuatu yang sederhana - variabel - tapi sedikit lebih mendalam. \par
+\vspace{12pt}
+Pikirkanlah - variabel menyimpan satu bit informasi. Mereka mungkin muntah-muntah (tidak di karpet ...) informasi itu kapan saja, dan sedikit informasi mereka dapat berubah sewaktu-waktu. Variabel sangat bagus dengan apa yang mereka lakukan - menyimpan informasi yang mungkin berubah seiring berjalannya waktu. \par
+\vspace{12pt}
+Tapi bagaimana jika Anda perlu menyimpan daftar panjang informasi, yang tidak berubah dari waktu ke waktu? Katakanlah, misalnya, nama bulan dalam setahun. Atau mungkin daftar panjang informasi, itu memang berubah seiring berjalannya waktu? Katakanlah, misalnya, nama semua kucing Anda. Anda mungkin mendapatkan kucing baru, beberapa mungkin mati, beberapa mungkin menjadi makan malam Anda (kami harus menukar resep!). Bagaimana dengan buku telepon? Untuk itu Anda perlu melakukan sedikit referensi - Anda akan memiliki daftar nama, dan dilampirkan pada masing-masing nama tersebut, nomor teleponnya. Bagaimana Anda melakukannya? \par
+\vspace{12pt}
+Untuk ketiga masalah ini, Python menggunakan tiga solusi berbeda - daftar, tupel, dan kamus: \par
+\vspace{12pt}
+~~~ Daftar adalah apa yang mereka tampaknya - daftar nilai. Masing-masing diberi nomor, mulai dari nol - yang pertama diberi nomor nol, yang kedua 1, yang ketiga 2, dll. Anda dapat menghapus nilai dari daftar, dan menambahkan nilai baru sampai akhir. Contoh: nama kucing Anda banyak. \par
+~~~ Tupel sama seperti daftar, tapi Anda tidak dapat mengubah nilainya. Nilai yang Anda berikan terlebih dahulu, adalah nilai yang Anda pakai untuk sisa program. Sekali lagi, setiap nilai diberi nomor mulai dari nol, untuk referensi mudah. Contoh: nama bulan dalam setahun. \par
+~~~ Kamus serupa dengan apa yang namanya namanya - kamus. Dalam kamus, Anda memiliki 'indeks' kata-kata, dan untuk masing-masing definisi. Dengan kata Python, kata itu disebut 'kunci', dan definisi sebuah 'nilai'. Nilai dalam kamus tidak diberi nomor - keduanya tidak sesuai urutan tertentu, kuncinya adalah hal yang sama. (Setiap tombol harus unik, meskipun!) Anda dapat menambahkan, menghapus, dan memodifikasi nilai-nilai di kamus. Contoh: buku telepon \par
+jadi ada yang lebih hidup dari pada nama kucing Anda. Anda perlu menghubungi saudara perempuan, ibu, anak laki-laki, pria buah, dan orang lain yang perlu tahu bahwa kucing favorit mereka sudah meninggal. Untuk itu Anda membutuhkan buku telepon. \par
+\vspace{12pt}
+Sekarang, daftar yang telah kami gunakan di atas tidak sesuai untuk buku telepon. Anda perlu mengetahui nomor berdasarkan nama seseorang - bukan sebaliknya, seperti yang kami lakukan pada kucing. Dalam contoh bulan dan kucing, kami memberi nomor komputer, dan itu memberi kami sebuah nama. Kali ini kami ingin memberi nama komputer, dan ini memberi kami nomor. Untuk ini kita butuh kamus. \par
+\vspace{12pt}
+Jadi bagaimana kita membuat kamus? Letakkan peralatan pengikat Anda, bukan itu yang maju. \par
+\vspace{12pt}
+Ingat, kamus memiliki kunci, dan nilai. Dalam buku telepon, Anda punya nama orang, lalu nomor mereka. Melihat kesamaan? \par
+\vspace{12pt}
+Saat pertama kali membuat kamus, sangat mirip membuat tupel atau daftar. Tupel memiliki (dan) benda, daftar memiliki [dan] benda. Tebak apa! kamus memiliki  $  \{  $dan $  \}  $ hal - kurung kurawal. Berikut adalah contoh di bawah ini, menampilkan kamus dengan empat nomor telepon di dalamnya: \par
+=======
 Nilai-nilai pada Tuple yang sudah tentukan pada awal program tidak akan bisa diganti sampai akhir programnya. Dan tentunya index pada tuple selalu dimulai dari angka 0 
 
 Membuat Tuple sangatlah mudah, nilai-nilai dapat dipisahkan dengan tanda koma. Seperti contoh di bawah ini : 
@@ -381,3 +699,4 @@ Jadi bagaimana kita membuat kamus? Letakkan peralatan pengikat Anda, bukan itu y
 Selain List, Tuple juga merupakan tipe data urutan \(sequence data type\) yang secara fungsi sama dengan List. Namun Tuple berbeda sifatnya, yaitu Tuple bersifat immutable yang mana data di dalam Tuple tidak dapat kita ubah atau dihapuskan. Sebuah Tuple terdiri dari beberapa nilai yang dipisahkan oleh tanda koma (‘,’). Tidak seperti List, tipe data Tuple ditandai dengan tanda kurung \"()\".
 
 Tupel berguna untuk mewakili bahasa lain yang sering disebut catatan \- beberapa informasi terkait yang dimiliki bersama, seperti catatan siswa Anda. Tidak ada deskripsi tentang apa yang masing-masing bidang ini berarti, tapi kita bisa menebaknya. Sebuah tupel memungkinkan kita \"mengumpulkan\" informasi yang terkait dan menggunakannya sebagai satu hal.
+
