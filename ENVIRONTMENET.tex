@@ -209,8 +209,30 @@ sudo easy $  \_  $install virtualenv \\} \par
 {\fontsize{14pt}{14pt}\selectfont Kalau menggunakan ubuntu, bisa dengan:\vspace{\baselineskip}
 sudo apt-get install python-virtualenv \\} \par
 \noindent
-{\fontsize{14pt}{14pt}\selectfont Nah, untuk Windows ini agak berbelit-belit. \\} \par
+{\fontsize{14pt}{14pt}\selectfont Sedangkan untuk instalasi virtualenv pada windows kita harus memastikan pip sudah terinstal. Caranya bisa dilihat seperti pada gambar \ref{cek_pip} \\} \par
 \noindent
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{figures/cek_pip.PNG}}
+	\caption{Cek Pip}
+	\label{cek_pip}
+\end{figure}
+
+{\fontsize{14pt}{14pt}\selectfont Kemudian ketikkan pada cmd \verb|pip help| lalu akan muncul informasi seperti pada gambar \ref{pip_help} \\} \par
+\noindent
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{figures/pip_help.PNG}}
+	\caption{Pip Help}
+	\label{pip_help}
+\end{figure}
+
+{\fontsize{14pt}{14pt}\selectfont Setelah itu barulah kita instal dengan mengetikkan perintah \verb|pip install virtualenv| seperti pada gambar \ref{install_virtualenv} \\} \par
+\noindent
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{figures/install_virtualenv.PNG}}
+	\caption{Install Virtualenv Pip}
+	\label{install_virtualenv}
+\end{figure}
+
 {\fontsize{14pt}{14pt}\selectfont Setelah kita menginstall virtualenv, sekarang kita buka terminal/shell (atau command prompt bagi pengguna Windows), kemudian masuk ke folder microblog yang sudah dibuat tadi, kemudian kita jalankan virtualenv untuk membuat virtual environment di folder tersebut.\vspace{\baselineskip}
 virtualenv flask \\} \par
 \noindent
